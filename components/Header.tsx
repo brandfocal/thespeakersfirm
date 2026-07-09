@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, Search, X } from "lucide-react";
@@ -12,6 +13,37 @@ const COLORS = {
   gray: '#686869',
   borderGray: '#C7C7C8',
 };
+
+const FACULTY_LIST = [
+  {
+    id: 'phumzile-mlambo-ngcuka',
+    name: 'Dr. Phumzile Mlambo-Ngcuka',
+    designation: 'Global Stateswoman',
+    image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
+    trackId: 'systemic-transformation-equity-public-policy'
+  },
+  {
+    id: 'bonang-mohale',
+    name: 'Prof. Bonang Mohale',
+    designation: 'Corporate Statesman',
+    image: '/highlighted_faculty/prof-bonang-mohale.jpg',
+    trackId: 'corporate-governance-ethics-statesmanship'
+  },
+  {
+    id: 'khaya-sithole',
+    name: 'Khaya Sithole',
+    designation: 'Academic & Macro Analyst',
+    image: '/highlighted_faculty/Khaya-Sithole.jpg',
+    trackId: 'macroeconomics-geopolitics-policy-risk'
+  },
+  {
+    id: 'ralph-mathekga',
+    name: 'Dr. Ralph Mathekga',
+    designation: 'Political Strategist & Author',
+    image: '/highlighted_faculty/Dr-Ralph-Mathekga.jpg',
+    trackId: 'macroeconomics-geopolitics-policy-risk'
+  }
+];
 
 const HEADER_NAV_LINKS = [
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
@@ -36,6 +68,7 @@ export function Header() {
   const searchInputRef = React.useRef<HTMLInputElement | null>(null);
 
   const searchQuery = searchParams.get("search") || "";
+  const [inputValue, setInputValue] = React.useState(searchQuery);
 
   React.useEffect(() => {
     if (isSearchExpanded) {
@@ -43,28 +76,90 @@ export function Header() {
     }
   }, [isSearchExpanded]);
 
+  React.useEffect(() => {
+    const handleGlobalKeyDown = (event: KeyboardEvent) => {
+      const activeEl = document.activeElement;
+      const isInputFocused = activeEl && (
+        activeEl.tagName === 'INPUT' || 
+        activeEl.tagName === 'TEXTAREA' || 
+        activeEl.tagName === 'SELECT' ||
+        activeEl.getAttribute('contenteditable') === 'true'
+      );
+      
+      if (isInputFocused) return;
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      
+      // Auto-open and capture typing if user presses alphanumeric keys or "/" key
+      if (event.key === '/' || (event.key.length === 1 && /[a-zA-Z0-9]/.test(event.key))) {
+        event.preventDefault();
+        setIsSearchExpanded(true);
+        if (event.key !== '/') {
+          setInputValue(prev => {
+            const nextVal = prev + event.key;
+            window.dispatchEvent(new CustomEvent('tsf-search', { detail: nextVal }));
+            return nextVal;
+          });
+        }
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
   const handleSearchToggle = () => {
     setIsSearchExpanded(current => !current);
   };
 
-  const updateSearchQuery = (val: string) => {
-    const params = new URLSearchParams(window.location.search);
-    if (val) {
-      params.set("search", val);
-    } else {
-      params.delete("search");
-    }
-    // If not on home page, navigate to home page with query
-    if (window.location.pathname !== "/") {
-      router.push(`/?${params.toString()}`);
-    } else {
-      router.push(`/?${params.toString()}`, { scroll: false });
-    }
-  };
+  React.useEffect(() => {
+    setInputValue(searchQuery);
+  }, [searchQuery]);
+
+  // Sync state instantly when custom search event is triggered elsewhere
+  React.useEffect(() => {
+    const handleSearchEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      setInputValue(customEvent.detail);
+    };
+    window.addEventListener('tsf-search', handleSearchEvent);
+    return () => window.removeEventListener('tsf-search', handleSearchEvent);
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const currentQuery = params.get("search") || "";
+      if (inputValue === currentQuery) return;
+
+      if (inputValue) {
+        params.set("search", inputValue);
+      } else {
+        params.delete("search");
+      }
+      
+      if (window.location.pathname !== "/") {
+        router.push(`/?${params.toString()}`);
+      } else {
+        router.push(`/?${params.toString()}`, { scroll: false });
+      }
+    }, 250);
+
+    return () => clearTimeout(timer);
+  }, [inputValue, router]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    updateSearchQuery(event.target.value);
+    const val = event.target.value;
+    setInputValue(val);
+    window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
+
+  const filteredFaculty = inputValue.trim() === "" 
+    ? [] 
+    : FACULTY_LIST.filter(member => 
+        member.name.toLowerCase().includes(inputValue.toLowerCase()) ||
+        member.designation.toLowerCase().includes(inputValue.toLowerCase())
+      );
 
   const handleSearchKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Escape') {
@@ -81,10 +176,7 @@ export function Header() {
   };
 
   return (
-    <motion.nav 
-      initial={{ opacity: 0, y: -20 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ delay: 0.9, duration: 0.5 }} 
+    <nav 
       className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#F8F7F5]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
       style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
     >
@@ -110,37 +202,86 @@ export function Header() {
         ))}
       </div>
       <div className="ml-auto hidden items-center gap-3 lg:ml-0 lg:flex">
-        <div className="flex items-center gap-2 overflow-hidden">
-          <button 
-            type="button" 
-            aria-label={isSearchExpanded ? 'Collapse faculty search' : 'Expand faculty search'} 
-            aria-expanded={isSearchExpanded} 
-            onClick={handleSearchToggle} 
-            className="grid h-9 w-9 shrink-0 place-items-center rounded-full transition-colors duration-300" 
-            style={{ color: isSearchExpanded ? COLORS.red : COLORS.gray }}
-          >
-            <Search aria-hidden="true" className="h-5 w-5" />
-          </button>
-          <motion.div 
-            initial={false} 
-            animate={isSearchExpanded ? { width: 240, opacity: 1 } : { width: 0, opacity: 0 }} 
-            transition={{ duration: 0.3, ease: 'easeOut' }} 
-            className="overflow-hidden"
-          >
-            <label htmlFor="nav-faculty-search" className="sr-only">Search faculty</label>
-            <input 
-              ref={searchInputRef} 
-              id="nav-faculty-search" 
-              value={searchQuery} 
-              onChange={handleSearchChange} 
-              onKeyDown={handleSearchKeyDown} 
-              type="search" 
-              placeholder="Search faculty..." 
-              className="w-[240px] border-b bg-transparent pb-1 text-[14px] font-normal outline-none placeholder:text-[#686869]" 
-              style={{ borderColor: COLORS.borderGray, color: COLORS.black }} 
-            />
-          </motion.div>
+        <div className="relative flex items-center">
+          <div className="flex items-center gap-2 overflow-hidden">
+            <button 
+              type="button" 
+              aria-label={isSearchExpanded ? 'Collapse faculty search' : 'Expand faculty search'} 
+              aria-expanded={isSearchExpanded} 
+              onClick={handleSearchToggle} 
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full transition-colors duration-300" 
+              style={{ color: isSearchExpanded ? COLORS.red : COLORS.gray }}
+            >
+              <Search aria-hidden="true" className="h-5 w-5" />
+            </button>
+            <motion.div 
+              initial={false} 
+              animate={isSearchExpanded ? { width: 240, opacity: 1 } : { width: 0, opacity: 0 }} 
+              transition={{ duration: 0.3, ease: 'easeOut' }} 
+              className="overflow-hidden"
+            >
+              <label htmlFor="nav-faculty-search" className="sr-only">Search faculty</label>
+              <input 
+                ref={searchInputRef} 
+                id="nav-faculty-search" 
+                value={inputValue} 
+                onChange={handleSearchChange} 
+                onKeyDown={handleSearchKeyDown} 
+                type="search" 
+                placeholder="Search faculty..." 
+                className="w-[240px] border-b bg-transparent pb-1 text-[14px] font-normal outline-none placeholder:text-[#686869]" 
+                style={{ borderColor: COLORS.borderGray, color: COLORS.black }} 
+              />
+            </motion.div>
+          </div>
+
+          {/* Desktop Search Suggestions Dropdown */}
+          <AnimatePresence>
+            {isSearchExpanded && inputValue.trim().length > 0 && (
+              <motion.div 
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                className="absolute left-0 top-[48px] w-[340px] rounded-2xl border bg-white p-3 shadow-xl z-[100] max-h-[380px] overflow-y-auto" 
+                style={{ borderColor: COLORS.borderGray }}
+              >
+                {filteredFaculty.length > 0 ? (
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-[#686869] px-2 py-1">
+                      Matching Faculty
+                    </div>
+                    {filteredFaculty.map((member) => (
+                      <Link
+                        key={member.id}
+                        href={`/tracks/${member.trackId}/${member.id}`}
+                        onClick={() => {
+                          setIsSearchExpanded(false);
+                          setInputValue("");
+                        }}
+                        className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#F8F7F5] transition-colors group text-left"
+                      >
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-10 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all shrink-0" 
+                        />
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-xs font-bold text-[#212121] truncate">{member.name}</h4>
+                          <p className="text-[10px] text-[#686869] truncate">{member.designation}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-xs text-[#686869] p-4 text-center">
+                    No matching speakers found
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
+
         <a 
           href="/#brief-us" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" 
@@ -204,7 +345,7 @@ export function Header() {
                 <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{ color: COLORS.red }} />
                 <input 
                   id="mobile-nav-faculty-search" 
-                  value={searchQuery} 
+                  value={inputValue} 
                   onChange={handleSearchChange} 
                   type="search" 
                   placeholder="Search faculty..." 
@@ -212,10 +353,43 @@ export function Header() {
                   style={{ color: COLORS.black }} 
                 />
               </div>
+
+              {/* Mobile Search Suggestions List */}
+              {inputValue.trim().length > 0 && (
+                <div className="mt-3 max-h-[220px] overflow-y-auto divide-y divide-[#C7C7C8]/20 bg-white/70 rounded-2xl p-2 border border-[#C7C7C8]/20">
+                  {filteredFaculty.length > 0 ? (
+                    filteredFaculty.map((member) => (
+                      <Link
+                        key={`mobile-suggest-${member.id}`}
+                        href={`/tracks/${member.trackId}/${member.id}`}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setInputValue("");
+                        }}
+                        className="flex items-center gap-3 py-2 px-1 hover:bg-[#F8F7F5] transition-colors text-left"
+                      >
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-8 h-8 rounded-lg object-cover grayscale shrink-0" 
+                        />
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-xs font-bold text-[#212121] truncate">{member.name}</h4>
+                          <p className="text-[9px] text-[#686869] truncate">{member.designation}</p>
+                        </div>
+                      </Link>
+                    ))
+                  ) : (
+                    <div className="text-[11px] text-[#686869] p-3 text-center">
+                      No matching speakers found
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

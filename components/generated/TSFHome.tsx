@@ -1027,6 +1027,7 @@ export const TheSpeakersFirmHome = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const facultySearchQuery = searchParams.get("search") || "";
+  const [localSearch, setLocalSearch] = React.useState(facultySearchQuery);
   const prefersReducedMotion = usePrefersReducedMotion();
   const heroRef = React.useRef<HTMLElement | null>(null);
   const {
@@ -1037,19 +1038,50 @@ export const TheSpeakersFirmHome = () => {
   });
   const tickerRotation = useTransform(scrollYProgress, [0, 1], [-26, -2]);
   const tickerScale = useTransform(scrollYProgress, [0, 1], [1.35, 1.15]);
-  const normalizedFacultySearchQuery = facultySearchQuery.trim().toLowerCase();
+
+  // Sync local search state with URL parameters when changed elsewhere (e.g., navbar)
+  React.useEffect(() => {
+    setLocalSearch(facultySearchQuery);
+  }, [facultySearchQuery]);
+
+  // Sync state instantly when custom search event is triggered elsewhere
+  React.useEffect(() => {
+    const handleSearchEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      setLocalSearch(customEvent.detail);
+    };
+    window.addEventListener('tsf-search', handleSearchEvent);
+    return () => window.removeEventListener('tsf-search', handleSearchEvent);
+  }, []);
+
+  // Debounce pushing local search state changes back to the URL
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const currentQuery = params.get("search") || "";
+      if (localSearch === currentQuery) return;
+
+      if (localSearch) {
+        params.set("search", localSearch);
+      } else {
+        params.delete("search");
+      }
+      router.push(`/?${params.toString()}`, { scroll: false });
+    }, 250);
+
+    return () => clearTimeout(timer);
+  }, [localSearch, router]);
+
+  const normalizedFacultySearchQuery = localSearch.trim().toLowerCase();
   const displayedFaculty = normalizedFacultySearchQuery.length === 0 ? FACULTY : FACULTY.filter(member => {
     const haystack = `${member.name} ${member.designation} ${member.role} ${member.tags.map(tag => tag.label).join(' ')}`.toLowerCase();
     return haystack.includes(normalizedFacultySearchQuery);
   });
+  
   const handleFacultySearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const params = new URLSearchParams(window.location.search);
-    if (event.target.value) {
-      params.set("search", event.target.value);
-    } else {
-      params.delete("search");
-    }
-    router.push(`/?${params.toString()}`, { scroll: false });
+    const val = event.target.value;
+    setLocalSearch(val);
+    window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
   return <motion.div initial={prefersReducedMotion ? {
     opacity: 0
@@ -1327,12 +1359,9 @@ export const TheSpeakersFirmHome = () => {
                 backgroundColor: COLORS.black
               }}>Brief the Bureau <ArrowRight size={16} /></span>
               </motion.a>
-              <motion.a href="#faculty" whileHover={{
-              scale: 1.02
-            }} className="rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] sm:px-10 sm:py-4 sm:text-[13px]" style={{
-              borderColor: COLORS.borderGray,
-              color: COLORS.black
-            }}>Explore Faculty</motion.a>
+              <div className="rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] sm:px-10 sm:py-4 sm:text-[13px] text-[#686869] border-[#C7C7C8]/60 cursor-default select-none">
+                Explore Faculty
+              </div>
             </motion.div>
           </div>
           <div className="relative isolate mt-14 sm:mt-20 md:mt-28">
@@ -1513,10 +1542,10 @@ export const TheSpeakersFirmHome = () => {
             }} className="h-[2px] w-12 mt-5 origin-left lg:col-span-1 lg:mt-0" style={{
               backgroundColor: COLORS.red
             }} />
-                <a href={comp.ctaHref} className="tsf-competency-cta mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm md:px-5 md:py-2.5 md:text-[11px]">
-                  <span>{comp.ctaLabel}</span>
-                  <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                </a>
+                <div className="tsf-competency-cta mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#F8F7F5]/20 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5]/60 backdrop-blur-sm md:px-5 md:py-2.5 md:text-[11px] cursor-default select-none">
+                  <span>Explore Track</span>
+                  <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5 opacity-40" />
+                </div>
               </div>
             </motion.div>)}
         </div>
@@ -1568,7 +1597,7 @@ export const TheSpeakersFirmHome = () => {
                 <div className="relative border-b pb-3 transition-colors duration-300 focus-within:border-[#e30e04]" style={{
                 borderColor: COLORS.borderGray
               }}>
-                  <input id="faculty-search" value={facultySearchQuery} onChange={handleFacultySearchChange} type="search" placeholder="Search by name, topic, or expertise..." className="w-full bg-transparent pr-11 text-[18px] font-normal leading-none tracking-[-0.03em] outline-none placeholder:text-[#686869] md:text-right md:text-[20px]" style={{
+                  <input id="faculty-search" value={localSearch} onChange={handleFacultySearchChange} type="search" placeholder="Search by name, topic, or expertise..." className="w-full bg-transparent pr-11 text-[18px] font-normal leading-none tracking-[-0.03em] outline-none placeholder:text-[#686869] md:text-right md:text-[20px]" style={{
                   color: COLORS.black
                 }} />
                   <button type="submit" aria-label="Submit faculty search" className="absolute right-0 top-0 grid h-7 w-7 place-items-center transition-transform duration-300 hover:scale-105 active:scale-95" style={{
