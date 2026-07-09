@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
+import { AboutTeamSection } from "@/components/generated/BonangMohaleProfile";
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -8,6 +9,10 @@ interface PageProps {
 
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
+
+  if (trackId === "corporate-governance-ethics-statesmanship" && speakerId === "bonang-mohale") {
+    return <AboutTeamSection />;
+  }
 
   // Format parameters to readable names
   const trackName = trackId

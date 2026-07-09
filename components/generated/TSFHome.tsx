@@ -92,6 +92,7 @@ const FACULTY = [{
   designation: 'Global Stateswoman',
   role: 'Former Deputy President of South Africa & United Nations Under-Secretary-General',
   image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
+  trackId: 'systemic-transformation-equity-public-policy',
   tags: [{
     id: 'sustainable-development',
     label: 'Sustainable Development'
@@ -115,6 +116,7 @@ const FACULTY = [{
   designation: 'Corporate Statesman',
   role: 'Chancellor of the University of the Free State, Author & Corporate Leader',
   image: '/highlighted_faculty/prof-bonang-mohale.jpg',
+  trackId: 'corporate-governance-ethics-statesmanship',
   tags: [{
     id: 'economic-transformation',
     label: 'Economic Transformation'
@@ -135,6 +137,7 @@ const FACULTY = [{
   designation: 'Academic & Macro Analyst',
   role: 'Chartered Accountant, Academic & Political Analyst',
   image: '/highlighted_faculty/Khaya-Sithole.jpg',
+  trackId: 'macroeconomics-geopolitics-policy-risk',
   tags: [{
     id: 'public-finance',
     label: 'Public Finance'
@@ -155,6 +158,7 @@ const FACULTY = [{
   designation: 'Political Strategist & Author',
   role: 'Political Analyst, Author & Researcher',
   image: '/highlighted_faculty/Dr-Ralph-Mathekga.jpg',
+  trackId: 'macroeconomics-geopolitics-policy-risk',
   tags: [{
     id: 'south-african-politics',
     label: 'South African Politics'
@@ -1633,7 +1637,7 @@ export const TheSpeakersFirmHome = () => {
             duration: prefersReducedMotion ? 0.35 : 0.6,
             ease: HEADING_EASE,
             delay: prefersReducedMotion ? 0 : order * 0.1
-          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} className={cn(member.spanClassName, 'bg-[#212121] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#393939] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
+          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} onClick={() => router.push(`/tracks/${member.trackId}/${member.id}`)} className={cn(member.spanClassName, 'bg-[#212121] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#393939] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
                 <div className="w-full h-[clamp(340px,92vw,440px)] md:h-[520px] overflow-hidden relative bg-[#171717]">
                   <motion.div className="absolute inset-0 bg-[#212121] z-10 origin-top" initial={{
                 scaleY: 1

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageTransitionProvider } from "@/components/PageTransitionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ export default function RootLayout({
 
         {/* Page Content */}
         <main className="flex-1 w-full">
-          {children}
+          <PageTransitionProvider>
+            {children}
+          </PageTransitionProvider>
         </main>
 
         {/* Global Footer */}
