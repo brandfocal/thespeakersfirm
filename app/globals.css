@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://api.fontshare.com/v2/css?f[]=kontora@400,500,700&display=swap');
+
+:root {
+  --radius: 0.625rem;
+  --background: #F8F7F5;
+  --foreground: #212121;
+  --card: #ffffff;
+  --card-foreground: #212121;
+  --popover: #ffffff;
+  --popover-foreground: #212121;
+  --primary: #212121;
+  --primary-foreground: #F8F7F5;
+  --secondary: #F5F5F0;
+  --secondary-foreground: #212121;
+  --muted: #AFB0B0;
+  --muted-foreground: #686869;
+  --accent: #F5F5F0;
+  --accent-foreground: #212121;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #C7C7C8;
+  --input: #C7C7C8;
+  --ring: #AFB0B0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Kontora', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Institutional Minimalist Base Utilities */
+.line-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+}
+
+.border-sharp {
+  border-radius: 0px !important;
+}
+
+/* Broken Image Fallback Styles */
+img.broken-image-fallback {
+  position: relative;
+  display: inline-block;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  object-fit: none;
+  object-position: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
