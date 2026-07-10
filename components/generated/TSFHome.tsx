@@ -788,7 +788,7 @@ const AnimatedWordHeading = ({
       {lines.map(line => <span key={line.id} className={line.className ?? 'inline'}>
           {line.words.map(word => {
         wordOrder += 1;
-        return <span key={word.id} className="inline-block overflow-hidden pr-[0.05em] align-top">
+        return <span key={word.id} className="inline-block overflow-hidden pr-[0.05em] pb-[0.12em] -mb-[0.12em] align-top">
               <motion.span initial={prefersReducedMotion ? {
             opacity: 0
           } : {
@@ -1935,7 +1935,7 @@ export const TheSpeakersFirmHome = () => {
       borderColor: SOFT_RULE_COLOR
     }}>
         <VerticalBorderLines />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-20 sm:py-24 md:px-16 md:py-32">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-0 sm:pt-24 sm:pb-0 md:px-16 md:pt-32 md:pb-0">
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -2014,36 +2014,10 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
 
-        <motion.div initial={{
-          opacity: 0,
-          y: 24
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true,
-          amount: 0.18
-        }} transition={{
-          duration: prefersReducedMotion ? 0.35 : 0.72,
-          delay: 0.12,
-          ease: HEADING_EASE
-        }} className="relative w-full mt-10 overflow-hidden md:mt-12" onPointerEnter={() => setIsSpeakerCarouselHovering(true)} onPointerLeave={() => setIsSpeakerCarouselHovering(false)}>
+        <div className="relative w-full mt-6 overflow-hidden md:mt-8" onPointerEnter={() => setIsSpeakerCarouselHovering(true)} onPointerLeave={() => setIsSpeakerCarouselHovering(false)}>
             <div ref={speakerCarouselRef} className="scrollbar-none w-full overflow-x-hidden" aria-label="Auto-scrolling Signature Speakers carousel">
               <div className="flex w-max gap-0 py-3 pl-6 md:pl-16">
-                {carouselSpeakerCards.map((speaker, order) => <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} initial={{
-                opacity: 0,
-                y: 28
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                amount: 0.22
-              }} transition={{
-                duration: prefersReducedMotion ? 0.35 : 0.6,
-                ease: HEADING_EASE,
-                delay: prefersReducedMotion ? 0 : order % displayedFeaturedSpeakers.length * 0.08
-              }} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
+                {carouselSpeakerCards.map((speaker, order) => <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
                 backgroundColor: COLORS.black
               }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
