@@ -1463,24 +1463,37 @@ export const TheSpeakersFirmHome = () => {
   };
 
   const handleSpeakerCarouselAdvance = (direction: 'previous' | 'next') => {
-    const carousel = speakerCarouselRef.current;
-    if (!carousel) {
-      return;
-    }
-    const firstCard = carousel.querySelector<HTMLElement>('[data-speaker-card="true"]');
+    const c1 = speakerCarouselRef1.current;
+    const c2 = speakerCarouselRef2.current;
+    const c3 = speakerCarouselRef3.current;
+    
+    const firstCard = c1?.querySelector<HTMLElement>('[data-speaker-card="true"]');
     const cardTravel = firstCard?.offsetWidth ?? 340;
-    const seamlessLoopPoint = carousel.scrollWidth / 2;
+    
     setIsSpeakerCarouselInteracting(true);
-    if (direction === 'previous' && carousel.scrollLeft < cardTravel) {
-      carousel.scrollLeft += seamlessLoopPoint;
-    }
-    if (direction === 'next' && carousel.scrollLeft > seamlessLoopPoint - cardTravel) {
-      carousel.scrollLeft -= seamlessLoopPoint;
-    }
-    carousel.scrollBy({
-      left: direction === 'next' ? cardTravel : -cardTravel,
-      behavior: 'smooth'
-    });
+
+    const advanceRow = (carousel: HTMLDivElement | null, dirMultiplier: number) => {
+      if (!carousel) return;
+      const seamlessLoopPoint = carousel.scrollWidth / 2;
+      const amount = (direction === 'next' ? cardTravel : -cardTravel) * dirMultiplier;
+      
+      if (amount < 0 && carousel.scrollLeft < Math.abs(amount)) {
+        carousel.scrollLeft += seamlessLoopPoint;
+      }
+      if (amount > 0 && carousel.scrollLeft > seamlessLoopPoint - amount) {
+        carousel.scrollLeft -= seamlessLoopPoint;
+      }
+      
+      carousel.scrollBy({
+        left: amount,
+        behavior: 'smooth'
+      });
+    };
+
+    advanceRow(c1, 1);
+    advanceRow(c3, 1);
+    advanceRow(c2, -1);
+
     window.setTimeout(() => setIsSpeakerCarouselInteracting(false), 900);
   };
 
