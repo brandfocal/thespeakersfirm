@@ -2050,7 +2050,7 @@ export const TheSpeakersFirmHome = () => {
                   </motion.article>)}
               </div>
             </div>
-          </motion.div>
+          </div>
 
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 pb-20 sm:pb-24 md:pb-[120px]">
             <motion.div initial={{
