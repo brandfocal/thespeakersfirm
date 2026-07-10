@@ -727,6 +727,7 @@ type AnimatedWordHeadingProps = {
   className: string;
   style?: React.CSSProperties;
   wordClassName?: string;
+  id?: string;
 };
 type FloatingNavProps = {
   searchQuery: string;
@@ -777,12 +778,13 @@ const AnimatedWordHeading = ({
   lines,
   className,
   style,
-  wordClassName = 'mr-[0.18em]'
+  wordClassName = 'mr-[0.18em]',
+  id
 }: AnimatedWordHeadingProps) => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const [headingRef, isHeadingInView] = useOneShotInView<HTMLHeadingElement>(0.3);
   let wordOrder = -1;
-  return <HeadingTag ref={headingRef} className={className} style={style}>
+  return <HeadingTag ref={headingRef} id={id} className={className} style={style}>
       {lines.map(line => <span key={line.id} className={line.className ?? 'inline'}>
           {line.words.map(word => {
         wordOrder += 1;
