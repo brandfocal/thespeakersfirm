@@ -10,7 +10,7 @@ interface PageProps {
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
 
-  if (trackId === "leadership-governance-and-risk-intelligence" && speakerId === "bonang-mohale") {
+  if ((trackId === "leadership-governance-and-risk-intelligence" || trackId === "leadership-strategy-and-executive-performance") && speakerId === "bonang-mohale") {
     return <AboutTeamSection />;
   }
 

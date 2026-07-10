@@ -394,7 +394,7 @@ const FACULTY = [{
   designation: 'Global Stateswoman',
   role: 'Former Deputy President of South Africa & United Nations Under-Secretary-General',
   image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
-  trackId: 'leadership-governance-and-risk-intelligence',
+  trackId: 'leadership-strategy-and-executive-performance',
   tags: [{
     id: 'sustainable-development',
     label: 'Sustainable Development'
@@ -418,7 +418,7 @@ const FACULTY = [{
   designation: 'Corporate Statesman',
   role: 'Chancellor of the University of the Free State, Author & Corporate Leader',
   image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-  trackId: 'leadership-governance-and-risk-intelligence',
+  trackId: 'leadership-strategy-and-executive-performance',
   tags: [{
     id: 'economic-transformation',
     label: 'Economic Transformation'

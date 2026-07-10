@@ -20,14 +20,14 @@ const FACULTY_LIST = [
     name: 'Dr. Phumzile Mlambo-Ngcuka',
     designation: 'Global Stateswoman',
     image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
-    trackId: 'leadership-governance-and-risk-intelligence'
+    trackId: 'leadership-strategy-and-executive-performance'
   },
   {
     id: 'bonang-mohale',
     name: 'Prof. Bonang Mohale',
     designation: 'Corporate Statesman',
     image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-    trackId: 'leadership-governance-and-risk-intelligence'
+    trackId: 'leadership-strategy-and-executive-performance'
   },
   {
     id: 'khaya-sithole',
