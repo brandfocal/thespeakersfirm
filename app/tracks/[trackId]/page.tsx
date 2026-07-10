@@ -16,7 +16,7 @@ export default async function TrackPage({ params }: PageProps) {
     .join(" ");
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5] pt-32 pb-24 px-6 md:px-12 lg:px-24">
+    <div className="min-h-screen bg-[#ffffff] pt-32 pb-24 px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
         <Link 
           href="/" 
@@ -44,7 +44,7 @@ export default async function TrackPage({ params }: PageProps) {
             {/* Dynamic speakers list placeholder */}
             <div className="p-8 rounded-2xl border border-[#C7C7C8]/40 bg-white shadow-sm flex flex-col justify-between hover:border-[#e30e04] transition-colors group">
               <div>
-                <div className="w-12 h-12 rounded-full bg-[#F8F7F5] flex items-center justify-center text-[#686869] mb-6 group-hover:bg-[#e30e04] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-full bg-[#ffffff] flex items-center justify-center text-[#686869] mb-6 group-hover:bg-[#e30e04] group-hover:text-white transition-colors">
                   <User className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-[#212121] mb-2">Speaker Profile</h3>

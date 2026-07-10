@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col justify-between bg-[#F8F7F5] text-[#212121]">
+      <body className="min-h-screen flex flex-col justify-between bg-[#ffffff] text-[#212121]">
         {/* Global Header */}
         <Suspense fallback={
-          <div className="fixed top-4 left-1/2 -translate-x-1/2 h-[56px] w-[320px] rounded-full bg-[#F8F7F5]/90 border border-gray-200 animate-pulse z-50" />
+          <div className="fixed top-4 left-1/2 -translate-x-1/2 h-[56px] w-[320px] rounded-full bg-[#ffffff]/90 border border-gray-200 animate-pulse z-50" />
         }>
           <Header />
         </Suspense>

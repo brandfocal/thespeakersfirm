@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, Menu, Search, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
 const COLORS = {
@@ -14,7 +14,7 @@ const COLORS = {
   silverAlt: '#AFAFBA',
   borderGray: '#C7C7C8',
   darkGray: '#393939',
-  offWhite: '#F8F7F5'
+  offWhite: '#ffffff'
 };
 const SOFT_RULE_COLOR = 'rgba(33, 33, 33, 0.14)';
 const DARK_RULE_COLOR = 'rgba(248, 247, 245, 0.10)';
@@ -86,13 +86,312 @@ const COMPETENCIES = [{
   ctaLabel: 'Explore Track',
   ctaHref: '#faculty'
 }];
+const HERO_SLIDES = [{
+  id: 'bonang-mohale',
+  image: '/hero_backgrounds/bonang-mohale.jpg',
+  alt: 'Professor Bonang Mohale',
+  position: 'object-center'
+}, {
+  id: 'dr-phumzile-mlambo-ngcuka2',
+  image: '/hero_backgrounds/dr-phumzile-mlambo-ngcuka2.jpg',
+  alt: 'Dr. Phumzile Mlambo-Ngcuka',
+  position: 'object-center'
+}, {
+  id: 'khaya-sithole',
+  image: '/hero_backgrounds/khaya-sithole.jpg',
+  alt: 'Khaya Sithole',
+  position: 'object-center'
+}, {
+  id: 'sizwe-mpofu-walsh',
+  image: '/hero_backgrounds/sizwe-mpofu-walsh.jpg',
+  alt: 'Dr. Sizwe Mpofu-Walsh',
+  position: 'object-top'
+}, {
+  id: 'thuli-madonsela',
+  image: '/hero_backgrounds/thuli-madonsela.jpg',
+  alt: 'Professor Thuli Madonsela',
+  position: 'object-top'
+}];
+const HERO_SLIDE_DURATION_MS = 5000;
+
+const FEATURED_SPEAKERS = [{
+  id: 'abner-mariri',
+  name: 'Abner Mariri',
+  category: 'Keynote',
+  image: '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg',
+  alt: 'Abner Mariri',
+  quote: 'Unlock the performance velocity of your teams.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Inspirational Speaker, Transformation Architect & Leadership Catalyst</span>
+}, {
+  id: 'andisa-liba',
+  name: 'Andisa Liba',
+  category: 'Leadership',
+  image: '/image_marquee/Andisa-Liba-The-Speakers-Firm.jpg',
+  alt: 'Andisa Liba',
+  quote: 'Future-fit talent strategies drive African progress.',
+  youtubeId: 'arj7oStGLkU',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Human Capital Leader, Workforce Futurist & Inclusion Advocate</span>
+}, {
+  id: 'aubrey-masango',
+  name: 'Aubrey Masango',
+  category: "MC's",
+  image: '/image_marquee/Aubrey-Masango-The-Speakers-Firm.jpg',
+  alt: 'Aubrey Masango',
+  quote: 'Holding the narrative, facilitating the future.',
+  youtubeId: 'UF8uR6Z6KLc',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Broadcaster, Writer, Command-Level MC & Facilitator</span>
+}, {
+  id: 'bonang-mohale',
+  name: 'Prof. Bonang Mohale',
+  category: 'Keynote',
+  image: '/image_marquee/Bonang-Mohale-The-Speakers-Firm.jpg',
+  alt: 'Prof. Bonang Mohale',
+  quote: 'Servant leadership is the ultimate competitive edge.',
+  youtubeId: '2s5CXK-w0AQ',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.25)',
+  bio: <span>Corporate Statesman, Business Leader, Chancellor & Author</span>
+}, {
+  id: 'bridget-masinga',
+  name: 'Bridget Masinga',
+  category: 'Media',
+  image: '/image_marquee/Bridget-Masinga-The-Speakers-Firm.jpg',
+  alt: 'Bridget Masinga',
+  quote: 'Own the message, command the spotlight.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.25)',
+  bio: <span>Broadcaster, Media Personality, MC & Facilitator</span>
+}, {
+  id: 'clement-manyathela',
+  name: 'Clement Manyathela',
+  category: "MC's",
+  image: '/image_marquee/Clement-Manyathela-The-Speakers-Firm.jpg',
+  alt: 'Clement Manyathela',
+  quote: 'Conversations that shift minds and inspire outcomes.',
+  youtubeId: 'iG9CE55wbtY',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Broadcast Journalist, Host of The Clement Manyathela Show & MC</span>
+}, {
+  id: 'dr-billy-selekane',
+  name: 'Dr. Billy Selekane',
+  category: 'Keynote',
+  image: '/image_marquee/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
+  alt: 'Dr. Billy Selekane',
+  quote: 'Organisational culture defines legacy.',
+  youtubeId: 'RcGyVTAoXEU',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>International Keynote Speaker & Organisational Culture Specialist</span>
+}, {
+  id: 'dr-buyani-zwane',
+  name: 'Dr. Buyani Zwane',
+  category: 'Leadership',
+  image: '/image_marquee/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
+  alt: 'Dr. Buyani Zwane',
+  quote: 'Leadership is a conscious choice, not a title.',
+  youtubeId: '8CrOL-ydFMI',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.25)',
+  bio: <span>Leadership Consultant, Executive Coach & Academic</span>
+}, {
+  id: 'dr-david-molapo',
+  name: 'Dr. David Molapo',
+  category: 'Keynote',
+  image: '/image_marquee/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
+  alt: 'Dr. David Molapo',
+  quote: 'We don’t just train leaders, we inspire nation builders.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Leadership Icon, Author & International Keynote Speaker</span>
+}, {
+  id: 'dr-gugulethu-xaba',
+  name: 'Dr. Gugulethu Xaba',
+  category: 'Entrepreneurship',
+  image: '/image_marquee/Dr-Gugulethu-Xaba-The-Speakers-Firm.jpg',
+  alt: 'Dr. Gugulethu Xaba',
+  quote: 'Sustainable growth stems from economic transformation.',
+  youtubeId: 'arj7oStGLkU',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Governance Specialist & Local Government Strategist</span>
+}, {
+  id: 'dr-john-kani',
+  name: 'Dr. John Kani',
+  category: 'Keynote',
+  image: '/image_marquee/Dr-John-Kani-The-Speakers-Firm.jpg',
+  alt: 'Dr. John Kani',
+  quote: 'Heritage is the foundation of our future.',
+  youtubeId: 'UF8uR6Z6KLc',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Legendary Actor, Playwright, Director & Cultural Activist</span>
+}, {
+  id: 'dr-mpho-phalatse',
+  name: 'Dr. Mpho Phalatse Nxumalo',
+  category: 'Governance',
+  image: '/image_marquee/Dr-Mpho-Phalatse-Nxumalo-The-Speakers-Firm.jpg',
+  alt: 'Dr. Mpho Phalatse Nxumalo',
+  quote: 'Ethical governance is a fiduciaty duty.',
+  youtubeId: 'iG9CE55wbtY',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.25)',
+  bio: <span>Medical Doctor & Former Executive Mayor of Johannesburg</span>
+}, {
+  id: 'dr-puleng-mokhoalibe',
+  name: 'Dr. Puleng Mokhoalibe',
+  category: 'A.I.',
+  image: '/image_marquee/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
+  alt: 'Dr. Puleng Mokhoalibe',
+  quote: 'Design thinking unlocks exponential growth.',
+  youtubeId: 'RcGyVTAoXEU',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Innovation Catalyst, CEO of Alchemy Inspiration & Futurist</span>
+}, {
+  id: 'dr-somadoda-fikeni',
+  name: 'Dr. Somadoda Fikeni',
+  category: 'Leadership',
+  image: '/image_marquee/Dr-Somadoda-Fikeni-The-Speakers-Firm.jpg',
+  alt: 'Dr. Somadoda Fikeni',
+  quote: 'Understanding power dynamics dictates strategic execution.',
+  youtubeId: '8CrOL-ydFMI',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Renowned Political Analyst, Policy Architect & Governance Strategist</span>
+}, {
+  id: 'duma-gqubule',
+  name: 'Duma Gqubule',
+  category: 'Economics',
+  image: '/image_marquee/Duma-Gqubule-The-Speakers-Firm.jpg',
+  alt: 'Duma Gqubule',
+  quote: 'Economic models must serve society, not spreadsheets.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Financial Analyst, Macroeconomist & Policy Consultant</span>
+}, {
+  id: 'khaya-sithole',
+  name: 'Khaya Sithole',
+  category: 'Economics',
+  image: '/image_marquee/Khaya-Sithole-The-Speakers-Firm-2.jpg',
+  alt: 'Khaya Sithole',
+  quote: 'Decoding public finance with accountability and transparency.',
+  youtubeId: 'arj7oStGLkU',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Chartered Accountant, Academic & Macro Analyst</span>
+}, {
+  id: 'dr-victor-ramathesele',
+  name: 'Dr. Victor Ramathesele',
+  category: 'Workplace Wellness',
+  image: '/image_marquee/dr-victor-ramathesele-the-speakers-firm.jpg',
+  alt: 'Dr. Victor Ramathesele',
+  quote: 'Health is the first wealth of any enterprise.',
+  youtubeId: 'UF8uR6Z6KLc',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Sports Medicine Specialist, Broadcaster & Health Strategist</span>
+}, {
+  id: 'felicia-mabuza-suttle',
+  name: 'Felicia Mabuza Suttle',
+  category: 'Keynote',
+  image: '/image_marquee/felicia-mabuza-suttle-the-speakers-firm.jpg',
+  alt: 'Felicia Mabuza Suttle',
+  quote: 'Laughter, legacy, and talk show sovereignty.',
+  youtubeId: '8CrOL-ydFMI',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>"First Lady of Talk", Talk Show Hostess, Executive Coach & Author</span>
+}];
+
+const FEATURED_SPEAKERS_HEADING_LINES = [{
+  id: 'signature-speakers-heading',
+  words: [{
+    id: 'signature-word',
+    text: 'Signature'
+  }, {
+    id: 'speakers-word',
+    text: 'Speakers',
+    isRed: true
+  }]
+}];
+
+const FEATURED_SPEAKER_FILTERS = [{
+  id: 'all-speakers',
+  label: 'All'
+}, {
+  id: 'leadership',
+  label: 'Leadership'
+}, {
+  id: 'media',
+  label: 'Media'
+}, {
+  id: 'ai',
+  label: 'A.I.'
+}, {
+  id: 'mcs',
+  label: "MC's"
+}, {
+  id: 'comedy',
+  label: 'Comedy'
+}, {
+  id: 'keynote',
+  label: 'Keynote'
+}, {
+  id: 'spirituality',
+  label: 'Spirituality'
+}, {
+  id: 'economics',
+  label: 'Economics'
+}, {
+  id: 'diversity',
+  label: 'Diversity'
+}, {
+  id: 'neuroscience',
+  label: 'Neuroscience'
+}, {
+  id: 'future-of-work',
+  label: 'Future of Work'
+}, {
+  id: 'governance',
+  label: 'Governance'
+}, {
+  id: 'gender',
+  label: 'Gender'
+}, {
+  id: 'workplace-wellness',
+  label: 'Workplace Wellness'
+}, {
+  id: 'financial-inclusion',
+  label: 'Financial Inclusion'
+}, {
+  id: 'entrepreneurship',
+  label: 'Entrepreneurship'
+}, {
+  id: 'masculinity',
+  label: 'Masculinity'
+}, {
+  id: 'female-keynote-speakers',
+  label: 'Female Keynote Speakers'
+}];
+
 const FACULTY = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   designation: 'Global Stateswoman',
   role: 'Former Deputy President of South Africa & United Nations Under-Secretary-General',
   image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
-  trackId: 'systemic-transformation-equity-public-policy',
+  trackId: 'leadership-governance-and-risk-intelligence',
   tags: [{
     id: 'sustainable-development',
     label: 'Sustainable Development'
@@ -116,7 +415,7 @@ const FACULTY = [{
   designation: 'Corporate Statesman',
   role: 'Chancellor of the University of the Free State, Author & Corporate Leader',
   image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-  trackId: 'corporate-governance-ethics-statesmanship',
+  trackId: 'leadership-governance-and-risk-intelligence',
   tags: [{
     id: 'economic-transformation',
     label: 'Economic Transformation'
@@ -137,7 +436,7 @@ const FACULTY = [{
   designation: 'Academic & Macro Analyst',
   role: 'Chartered Accountant, Academic & Political Analyst',
   image: '/highlighted_faculty/Khaya-Sithole.jpg',
-  trackId: 'macroeconomics-geopolitics-policy-risk',
+  trackId: 'economics-and-politics',
   tags: [{
     id: 'public-finance',
     label: 'Public Finance'
@@ -158,7 +457,7 @@ const FACULTY = [{
   designation: 'Political Strategist & Author',
   role: 'Political Analyst, Author & Researcher',
   image: '/highlighted_faculty/Dr-Ralph-Mathekga.jpg',
-  trackId: 'macroeconomics-geopolitics-policy-risk',
+  trackId: 'economics-and-politics',
   tags: [{
     id: 'south-african-politics',
     label: 'South African Politics'
@@ -258,13 +557,17 @@ const HERO_HEADLINE_LINES = [{
     isRed: false
   }]
 }, {
-  id: 'strategic-bureau',
-  className: 'block max-w-none whitespace-nowrap text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  id: 'strategic',
+  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
     id: 'strategic-word',
     text: 'Strategic',
     isRed: false
-  }, {
+  }]
+}, {
+  id: 'bureau',
+  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  words: [{
     id: 'bureau-word',
     text: 'Bureau.',
     isRed: true
@@ -636,7 +939,7 @@ const FloatingNav = ({
   }} transition={{
     delay: 0.9,
     duration: 0.5
-  }} className="fixed top-4 left-1/2 z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] -translate-x-1/2 items-center rounded-[28px] border bg-[#F8F7F5]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-auto lg:rounded-full lg:px-6" style={{
+  }} className="fixed top-4 left-1/2 z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] -translate-x-1/2 items-center rounded-[28px] border bg-[#ffffff]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-auto lg:rounded-full lg:px-6" style={{
     borderColor: 'rgba(199, 199, 200, 0.6)'
   }}>
       <div className="flex items-center gap-3">
@@ -706,7 +1009,7 @@ const FloatingNav = ({
       }} transition={{
         duration: 0.24,
         ease: 'easeOut'
-      }} className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#F8F7F5]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" style={{
+      }} className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" style={{
         borderColor: 'rgba(199, 199, 200, 0.72)'
       }}>
             <div className="flex flex-col gap-1">
@@ -832,8 +1135,8 @@ const SocialProofStrip = () => {
           }} />
             </div>)}
         </motion.div>
-        <div aria-hidden="true" className="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#F8F7F5] to-transparent md:w-32" />
-        <div aria-hidden="true" className="absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#F8F7F5] to-transparent md:w-32" />
+        <div aria-hidden="true" className="absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#ffffff] to-transparent md:w-32" />
+        <div aria-hidden="true" className="absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#ffffff] to-transparent md:w-32" />
       </div>
     </section>;
 };
@@ -1028,6 +1331,16 @@ const BriefBureauFormSection = () => {
 };
 export const TheSpeakersFirmHome = () => {
   const [hoveredId, setHoveredId] = React.useState<string | null>(null);
+  const [activeHeroSlide, setActiveHeroSlide] = React.useState(0);
+  const [activeSpeakerCategory, setActiveSpeakerCategory] = React.useState('All');
+  const [isSpeakerCarouselHovering, setIsSpeakerCarouselHovering] = React.useState(false);
+  const [isSpeakerCarouselInteracting, setIsSpeakerCarouselInteracting] = React.useState(false);
+  const [activeClipSpeakerId, setActiveClipSpeakerId] = React.useState<string | null>(null);
+  const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
+
+  const speakerCarouselRef = React.useRef<HTMLDivElement | null>(null);
+  const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const facultySearchQuery = searchParams.get("search") || "";
@@ -1087,6 +1400,114 @@ export const TheSpeakersFirmHome = () => {
     setLocalSearch(val);
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
+
+  const displayedFeaturedSpeakers = FEATURED_SPEAKERS;
+  const carouselSpeakerCards = [...displayedFeaturedSpeakers.map(speaker => ({
+    ...speaker,
+    loopId: `first-${speaker.id}`
+  })), ...displayedFeaturedSpeakers.map(speaker => ({
+    ...speaker,
+    loopId: `second-${speaker.id}`
+  }))];
+  const activeClipSpeaker = activeClipSpeakerId ? FEATURED_SPEAKERS.find(speaker => speaker.id === activeClipSpeakerId) : undefined;
+  const isSpeakerCarouselPaused = isSpeakerCarouselHovering || isSpeakerCarouselInteracting || prefersReducedMotion;
+
+  const handleClipModalClose = React.useCallback(() => {
+    clipIframeRef.current?.setAttribute('src', '');
+    setActiveClipIframeSrc('');
+    setActiveClipSpeakerId(null);
+  }, []);
+
+  const handleWatchClipOpen = (speakerId: string, youtubeId: string) => {
+    setActiveClipSpeakerId(speakerId);
+    setActiveClipIframeSrc(`https://www.youtube.com/embed/${youtubeId}?autoplay=1`);
+  };
+
+  const handleHeroThumbnailClick = (slideIndex: number) => {
+    setActiveHeroSlide(slideIndex);
+  };
+
+  const handleFeaturedSpeakerFilterChange = (category: string) => {
+    setActiveSpeakerCategory(category);
+  };
+
+  const handleSpeakerCarouselAdvance = (direction: 'previous' | 'next') => {
+    const carousel = speakerCarouselRef.current;
+    if (!carousel) {
+      return;
+    }
+    const firstCard = carousel.querySelector<HTMLElement>('[data-speaker-card="true"]');
+    const cardTravel = firstCard?.offsetWidth ?? 340;
+    const seamlessLoopPoint = carousel.scrollWidth / 2;
+    setIsSpeakerCarouselInteracting(true);
+    if (direction === 'previous' && carousel.scrollLeft < cardTravel) {
+      carousel.scrollLeft += seamlessLoopPoint;
+    }
+    if (direction === 'next' && carousel.scrollLeft > seamlessLoopPoint - cardTravel) {
+      carousel.scrollLeft -= seamlessLoopPoint;
+    }
+    carousel.scrollBy({
+      left: direction === 'next' ? cardTravel : -cardTravel,
+      behavior: 'smooth'
+    });
+    window.setTimeout(() => setIsSpeakerCarouselInteracting(false), 900);
+  };
+
+  React.useEffect(() => {
+    if (!activeClipSpeakerId) {
+      return undefined;
+    }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        handleClipModalClose();
+      }
+    };
+    const originalBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = originalBodyOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeClipSpeakerId, handleClipModalClose]);
+
+  React.useEffect(() => {
+    const slideTimer = window.setTimeout(() => {
+      setActiveHeroSlide(currentSlide => (currentSlide + 1) % HERO_SLIDES.length);
+    }, HERO_SLIDE_DURATION_MS);
+    return () => window.clearTimeout(slideTimer);
+  }, [activeHeroSlide]);
+
+  React.useEffect(() => {
+    const carousel = speakerCarouselRef.current;
+    if (!carousel) {
+      return undefined;
+    }
+    carousel.scrollLeft = 0;
+    return undefined;
+  }, [activeSpeakerCategory]);
+
+  React.useEffect(() => {
+    const carousel = speakerCarouselRef.current;
+    if (!carousel || isSpeakerCarouselPaused || displayedFeaturedSpeakers.length <= 1) {
+      return undefined;
+    }
+    let animationFrame = 0;
+    let previousTimestamp = window.performance.now();
+    const scrollStep = (timestamp: number) => {
+      const deltaSeconds = (timestamp - previousTimestamp) / 1000;
+      previousTimestamp = timestamp;
+      const seamlessLoopPoint = carousel.scrollWidth / 2;
+      carousel.scrollLeft += 72 * deltaSeconds;
+      if (seamlessLoopPoint > 0 && carousel.scrollLeft >= seamlessLoopPoint) {
+        carousel.scrollLeft -= seamlessLoopPoint;
+      }
+      animationFrame = window.requestAnimationFrame(scrollStep);
+    };
+    animationFrame = window.requestAnimationFrame(scrollStep);
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [activeSpeakerCategory, displayedFeaturedSpeakers.length, isSpeakerCarouselPaused]);
+
   return <motion.div initial={prefersReducedMotion ? {
     opacity: 0
   } : {
@@ -1104,6 +1525,13 @@ export const TheSpeakersFirmHome = () => {
       <style>{`
         @import url('https://api.fontshare.com/v2/css?f[]=kontora@400,500,700&display=swap');
         body { font-family: 'Kontora', sans-serif; }
+        .scrollbar-none::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-none {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
         .tsf-competency-card {
           min-width: 0;
           min-height: 0;
@@ -1295,13 +1723,123 @@ export const TheSpeakersFirmHome = () => {
             radial-gradient(circle at 76% 64%, rgba(227, 14, 4, 0.32), transparent 30%),
             linear-gradient(128deg, #050505 0%, #15100f 46%, #020202 100%);
         }
+        .tsf-signature-speaker-card {
+          background-color: #212121;
+          transition: border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out, transform 0.35s ease-in-out;
+        }
+        .tsf-signature-speaker-card:hover .tsf-competency-visual {
+          filter: saturate(1.04) contrast(1.2);
+          transform: scale(1.035);
+        }
+        .tsf-signature-speaker-card:hover .tsf-competency-overlay {
+          background:
+            linear-gradient(180deg, rgba(5, 5, 5, 0.4) 0%, rgba(5, 5, 5, 0.78) 48%, rgba(5, 5, 5, 0.97) 100%),
+            radial-gradient(circle at 84% 18%, rgba(227, 14, 4, 0.34), transparent 42%);
+        }
+        .tsf-signature-speaker-name {
+          transition: letter-spacing 0.5s ease-in-out;
+        }
+        .tsf-signature-speaker-card:hover .tsf-signature-speaker-name {
+          letter-spacing: -0.055em;
+        }
+        .tsf-signature-speaker-card:hover .tsf-competency-cta {
+          opacity: 1;
+          transform: translateY(-2px);
+          background-color: #e30e04;
+          border-color: #e30e04;
+          color: #FFFFFF;
+        }
+        @keyframes tsf-hero-slide-progress {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+        .tsf-hero-progress-fill {
+          transform-origin: left center;
+          animation-name: tsf-hero-slide-progress;
+          animation-duration: 5000ms;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+        @media (max-width: 639px) {
+          .tsf-hero-progress-group {
+            width: min(100%, 272px);
+          }
+        }
       `}</style>
       <CurtainReveal />
       <ScrollProgressBar />
       <CustomCursor />
+      <AnimatePresence>
+        {activeClipSpeaker && <motion.div key="signature-speaker-video-modal" className="fixed inset-0 z-[500] flex items-center justify-center px-2 py-4 sm:px-6 sm:py-6" style={{
+        backgroundColor: 'rgba(0,0,0,0.85)'
+      }} initial={{
+        opacity: 0
+      }} animate={{
+        opacity: 1
+      }} exit={{
+        opacity: 0
+      }} transition={{
+        duration: prefersReducedMotion ? 0.18 : 0.28,
+        ease: 'easeOut'
+      }} onClick={event => {
+        if (event.target === event.currentTarget) {
+          handleClipModalClose();
+        }
+      }}>
+            <motion.div role="dialog" aria-modal="true" aria-labelledby="signature-speaker-video-title" className="relative w-full max-w-[calc(100vw-16px)] rounded-[18px] border border-white/15 bg-[#050505] p-1.5 shadow-[0_34px_110px_rgba(0,0,0,0.62)] sm:max-w-5xl sm:rounded-[30px] sm:p-3" initial={prefersReducedMotion ? {
+          opacity: 0
+        } : {
+          opacity: 0,
+          scale: 0.94
+        }} animate={{
+          opacity: 1,
+          scale: 1
+        }} exit={prefersReducedMotion ? {
+          opacity: 0
+        } : {
+          opacity: 0,
+          scale: 0.96
+        }} transition={{
+          duration: prefersReducedMotion ? 0.18 : 0.32,
+          ease: [0.22, 1, 0.36, 1]
+        }} onClick={event => event.stopPropagation()}>
+              <h2 id="signature-speaker-video-title" className="sr-only"><span>{activeClipSpeaker.name} video clip</span></h2>
+              <button type="button" aria-label="Close video modal" onClick={handleClipModalClose} className="absolute right-2 top-2 z-20 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/75 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md transition-colors duration-300 hover:border-[#e30e04] hover:bg-[#e30e04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e30e04] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:right-4 sm:top-4 sm:h-10 sm:w-10">
+                <X aria-hidden="true" className="h-5 w-5" />
+              </button>
+              <div className="relative aspect-video w-full overflow-hidden rounded-[18px] bg-black sm:rounded-[24px]">
+                <iframe ref={clipIframeRef} src={activeClipIframeSrc} title={`${activeClipSpeaker.name} YouTube video clip`} className="h-full w-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+              </div>
+            </motion.div>
+          </motion.div>}
+      </AnimatePresence>
 
-      <section ref={heroRef} className="relative w-full overflow-hidden">
-        <VerticalBorderLines />
+      <section ref={heroRef} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh]" style={{
+      backgroundColor: COLORS.black
+    }}>
+        <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
+          {HERO_SLIDES.map((slide, slideIndex) => <motion.img key={slide.id} src={slide.image} alt="" aria-hidden="true" className={cn("absolute inset-0 h-full w-full object-cover", slide.position || "object-center")} initial={false} animate={{
+          opacity: activeHeroSlide === slideIndex ? 1 : 0,
+          scale: activeHeroSlide === slideIndex ? 1 : 1.035
+        }} transition={{
+          opacity: {
+            duration: prefersReducedMotion ? 0.2 : 1.2,
+            ease: 'easeInOut'
+          },
+          scale: {
+            duration: prefersReducedMotion ? 0.2 : 6,
+            ease: 'easeOut'
+          }
+        }} />)}
+          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.3)_100%)]" />
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_36%,rgba(0,0,0,0.08),transparent_34%),linear-gradient(90deg,rgba(0,0,0,0.42)_0%,rgba(0,0,0,0.2)_42%,rgba(0,0,0,0.52)_100%)]" />
+          <div aria-hidden="true" className="absolute inset-0 opacity-[0.055]" style={{
+          backgroundImage: NOISE_TEXTURE,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '128px 128px'
+        }} />
+        </div>
+        <VerticalBorderLines isDark />
         <div className="absolute inset-0 pointer-events-none z-20 hidden sm:block">
           <div className="relative h-full mx-auto max-w-[1440px] px-6 md:px-10">
             <motion.p initial={{
@@ -1312,13 +1850,13 @@ export const TheSpeakersFirmHome = () => {
             delay: 1.55,
             duration: 0.8
           }} className="absolute left-6 md:left-10 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.22em]" style={{
-            color: COLORS.silver
+            color: COLORS.silverAlt
           }}>Johannesburg - Operating Globally</motion.p>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-32 sm:pt-40 md:pt-64 pb-16 sm:pb-20 md:pb-28 relative z-10">
-          <AnimatedWordHeading as="h1" lines={HERO_HEADLINE_LINES} className="font-bold uppercase max-w-full overflow-hidden" style={{
-          color: COLORS.black
+        <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-44 pt-24 sm:pb-36 sm:pt-28 md:px-16 md:pb-32 md:pt-36 lg:pb-28">
+          <AnimatedWordHeading as="h1" lines={HERO_HEADLINE_LINES} className="font-bold uppercase max-w-full overflow-hidden drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)]" style={{
+          color: COLORS.offWhite
         }} wordClassName="mr-[0.13em]" />
           <motion.div aria-hidden="true" initial={{
           scaleX: 0,
@@ -1333,7 +1871,7 @@ export const TheSpeakersFirmHome = () => {
         }} className="mt-5 h-[3px] w-28 origin-left md:mt-7 md:w-40" style={{
           backgroundColor: COLORS.red
         }} />
-          <div className="mt-8 flex max-w-[500px] flex-col gap-3">
+          <div className="mt-6 flex max-w-[500px] flex-col gap-3 sm:mt-8">
             <motion.p initial={{
             opacity: 0
           }} animate={{
@@ -1341,8 +1879,8 @@ export const TheSpeakersFirmHome = () => {
           }} transition={{
             delay: 1.5,
             duration: 0.8
-          }} className="text-[15px] font-normal leading-[1.6] md:text-[16px] md:leading-[1.65]" style={{
-            color: COLORS.gray
+          }} className="text-[15px] font-normal leading-[1.6] md:text-[16px] md:leading-[1.65] drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)]" style={{
+            color: COLORS.silverAlt
           }}>We deploy seismic thinkers to catalyse change and engineer institutional impact.</motion.p>
             <motion.div initial={{
             opacity: 0
@@ -1351,64 +1889,223 @@ export const TheSpeakersFirmHome = () => {
           }} transition={{
             delay: 1.7,
             duration: 0.8
-          }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <motion.a href="#brief-us" whileHover={{
               scale: 1.02
             }} whileTap={{
               scale: 0.98
-            }} className="flex items-center gap-2 p-1.5 rounded-full border bg-white" style={{
-              borderColor: 'rgba(33, 33, 33, 0.05)'
+            }} className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
+              borderColor: 'rgba(255, 255, 255, 0.18)'
             }}>
-                <span className="flex items-center gap-3 rounded-full px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:px-10 sm:py-4 sm:text-[13px]" style={{
+                <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
                 backgroundColor: COLORS.black
-              }}>Brief the Bureau <ArrowRight size={16} /></span>
+              }}><span>Brief the Bureau</span><ArrowRight aria-hidden="true" size={16} /></span>
               </motion.a>
-              <div className="rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] sm:px-10 sm:py-4 sm:text-[13px] text-[#686869] border-[#C7C7C8]/60 cursor-default select-none">
+              <div className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white/50 border-white/25 cursor-default select-none">
                 Explore Faculty
               </div>
             </motion.div>
           </div>
-          <div className="relative isolate mt-14 sm:mt-20 md:mt-28">
-            <div aria-hidden="true" className="absolute -inset-[240px] z-0 pointer-events-none" style={{
-            background: 'radial-gradient(circle at 50% 50%, rgba(227, 14, 4, 0.08) 0%, rgba(227, 14, 4, 0.055) 28%, rgba(227, 14, 4, 0) 68%)'
-          }} />
-            <motion.div initial={{
-            opacity: 0,
-            scale: 0.95
-          }} animate={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            delay: 1.5,
-            duration: 1.2
-          }} className="relative z-10 h-[clamp(360px,92vw,600px)] rounded-[24px] overflow-hidden md:h-[780px] md:rounded-[32px]" style={{
-            backgroundColor: COLORS.black,
-            boxShadow: '0 0 260px 70px rgba(227, 14, 4, 0.08)'
-          }}>
-              <div className="absolute inset-0 opacity-[0.035] pointer-events-none z-0" style={{
-              backgroundImage: NOISE_TEXTURE,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '128px 128px'
+        </div>
+        <div className="tsf-hero-progress-group absolute bottom-[102px] left-6 z-30 flex items-center gap-1.5 sm:bottom-[104px] sm:gap-2 md:left-16 lg:bottom-8" aria-label="Hero slide progress">
+          {HERO_SLIDES.map((slide, slideIndex) => <button key={`progress-${slide.id}`} type="button" aria-label={`Show slide ${slideIndex + 1}: ${slide.alt}`} aria-current={activeHeroSlide === slideIndex ? 'true' : undefined} onClick={() => handleHeroThumbnailClick(slideIndex)} className={cn('group h-5 w-9 shrink-0 rounded-full px-0 py-2 transition-opacity duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e30e04] focus-visible:ring-offset-2 focus-visible:ring-offset-black min-[360px]:w-10 sm:w-12 md:w-14', activeHeroSlide === slideIndex ? 'opacity-100' : 'opacity-55 hover:opacity-85')}>
+              <span className="block h-[2px] overflow-hidden rounded-full bg-white/30">
+                <span key={activeHeroSlide === slideIndex ? `active-${slide.id}-${activeHeroSlide}` : `idle-${slide.id}`} className={cn('block h-full w-full rounded-full', activeHeroSlide === slideIndex ? 'tsf-hero-progress-fill bg-[#e30e04]' : 'bg-white/55')} style={{
+              animationName: activeHeroSlide === slideIndex && prefersReducedMotion ? 'none' : undefined,
+              transform: activeHeroSlide === slideIndex && prefersReducedMotion ? 'scaleX(1)' : undefined
             }} />
-              <motion.div className="relative w-full h-full flex justify-center gap-3 sm:gap-5 md:gap-6" style={{
-              rotate: tickerRotation,
-              scale: tickerScale
-            }}>
-                <div className="w-1/4"><TickerColumn images={TICKER_IMAGES.col1} direction="up" duration={38} parallaxRate={0.15} /></div>
-                <div className="w-1/4"><TickerColumn images={TICKER_IMAGES.col2} direction="down" duration={48} parallaxRate={0.4} /></div>
-                <div className="w-1/4"><TickerColumn images={TICKER_IMAGES.col3} direction="up" duration={34} parallaxRate={0.65} /></div>
-                <div className="w-1/4"><TickerColumn images={TICKER_IMAGES.col4} direction="down" duration={42} parallaxRate={0.9} /></div>
-              </motion.div>
-              <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#212121] to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#212121] to-transparent pointer-events-none" />
-              <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-[#212121] to-transparent pointer-events-none" />
-              <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-[#212121] to-transparent pointer-events-none" />
-            </motion.div>
+              </span>
+            </button>)}
+        </div>
+        <div className="absolute bottom-5 left-6 right-6 z-30 max-w-none overflow-x-auto rounded-[18px] border border-white/10 bg-black/38 p-1.5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:bottom-6 sm:rounded-[22px] sm:p-2 md:bottom-8 md:left-auto md:right-10 md:max-w-[calc(100vw-40px)]" aria-label="Hero image slides">
+          <div className="flex w-max items-center gap-1 sm:gap-2">
+            {HERO_SLIDES.map((slide, slideIndex) => <button key={`thumb-${slide.id}`} type="button" aria-label={`Show slide ${slideIndex + 1}: ${slide.alt}`} aria-current={activeHeroSlide === slideIndex ? 'true' : undefined} onClick={() => handleHeroThumbnailClick(slideIndex)} className={cn('h-[30px] w-[46px] shrink-0 overflow-hidden rounded-[9px] border transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e30e04] focus-visible:ring-offset-2 focus-visible:ring-offset-black min-[360px]:h-[34px] min-[360px]:w-[52px] sm:h-[40px] sm:w-[64px] sm:rounded-[12px] md:h-[46px] md:w-[74px] lg:h-[50px] lg:w-[80px] lg:rounded-[14px]', activeHeroSlide === slideIndex ? 'scale-[1.06] border-[#e30e04]' : 'border-white/10 opacity-70 hover:opacity-100')}>
+                <img src={slide.image} alt={`${slide.alt} thumbnail`} className="h-full w-full object-cover object-center" />
+              </button>)}
           </div>
         </div>
       </section>
 
       <SocialProofStrip />
+
+      <section aria-labelledby="featured-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
+      backgroundColor: COLORS.offWhite,
+      borderColor: SOFT_RULE_COLOR
+    }}>
+        <VerticalBorderLines />
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-20 sm:py-24 md:px-16 md:py-32">
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: prefersReducedMotion ? 0.35 : 0.6,
+          ease: HEADING_EASE
+        }} className="grid grid-cols-1 gap-7 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-7">
+              <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
+                <span>Spotlight</span>
+              </div>
+              <AnimatedWordHeading as="h2" id="featured-speakers-heading" lines={FEATURED_SPEAKERS_HEADING_LINES} className="mt-6 max-w-[780px] text-[clamp(3rem,12vw,6.75rem)] font-bold uppercase leading-[0.86] tracking-[-0.075em]" style={{
+              color: COLORS.black
+            }} wordClassName="mr-[0.11em]" />
+            </div>
+            <div className="block lg:col-span-1 lg:self-stretch">
+              <div className="h-[1px] w-full lg:h-full lg:w-[1px]" style={{
+              backgroundColor: COLORS.borderGray
+            }} />
+            </div>
+            <div className="flex flex-col justify-end lg:col-span-4">
+              <p aria-hidden="true" className="mb-3 font-serif text-[28px] italic leading-none tracking-[-0.06em] sm:text-[34px] lg:mb-5" style={{
+              color: COLORS.silver
+            }}>
+                <span>Voices of Authority</span>
+              </p>
+              <p className="max-w-[520px] text-[17px] font-normal leading-[1.55] md:text-[22px]" style={{
+              color: COLORS.gray
+            }}>
+                <span>Keynote voices shaping the global discourse on artificial intelligence, systemic change, and leadership.</span>
+              </p>
+            </div>
+          </motion.div>
+          <motion.div initial={{
+          scaleX: 0,
+          opacity: 0
+        }} whileInView={{
+          scaleX: 1,
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: prefersReducedMotion ? 0.35 : 0.85,
+          delay: 0.08,
+          ease: HEADING_EASE
+        }} className="mt-10 h-[1px] w-full origin-left md:mt-12" style={{
+          backgroundColor: COLORS.borderGray
+        }} />
+          <div className="mt-8 flex flex-col gap-5 md:mt-10 md:flex-row md:items-center md:justify-between">
+            <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0" aria-label="Filter Signature Speakers by category">
+              <div className="flex w-max gap-2 md:w-auto md:flex-wrap">
+                {FEATURED_SPEAKER_FILTERS.map(filter => <button key={filter.id} type="button" aria-pressed={activeSpeakerCategory === filter.label} onClick={() => handleFeaturedSpeakerFilterChange(filter.label)} className={cn('shrink-0 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all duration-300', activeSpeakerCategory === filter.label ? 'border-[#e30e04] bg-[#e30e04] text-white shadow-[0_12px_32px_rgba(227,14,4,0.16)]' : 'border-[#C7C7C8] text-[#686869] hover:border-[#212121] hover:text-[#212121]')}>
+                    <span>{filter.label}</span>
+                  </button>)}
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <button type="button" aria-label="Show previous Signature Speaker" onClick={() => handleSpeakerCarouselAdvance('previous')} className="grid h-11 w-11 place-items-center rounded-full border transition-colors duration-300 hover:bg-[#212121] hover:text-white" style={{
+              borderColor: COLORS.borderGray,
+              color: COLORS.black
+            }}>
+                <ChevronLeft aria-hidden="true" className="h-5 w-5" />
+              </button>
+              <button type="button" aria-label="Show next Signature Speaker" onClick={() => handleSpeakerCarouselAdvance('next')} className="grid h-11 w-11 place-items-center rounded-full border transition-colors duration-300 hover:bg-[#212121] hover:text-white" style={{
+              borderColor: COLORS.borderGray,
+              color: COLORS.black
+            }}>
+                <ChevronRight aria-hidden="true" className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <motion.div initial={{
+          opacity: 0,
+          y: 24
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true,
+          amount: 0.18
+        }} transition={{
+          duration: prefersReducedMotion ? 0.35 : 0.72,
+          delay: 0.12,
+          ease: HEADING_EASE
+        }} className="relative w-full mt-10 overflow-hidden md:mt-12" onPointerEnter={() => setIsSpeakerCarouselHovering(true)} onPointerLeave={() => setIsSpeakerCarouselHovering(false)}>
+            <div ref={speakerCarouselRef} className="scrollbar-none w-full overflow-x-hidden" aria-label="Auto-scrolling Signature Speakers carousel">
+              <div className="flex w-max gap-0 py-3 pl-6 md:pl-16">
+                {carouselSpeakerCards.map((speaker, order) => <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} initial={{
+                opacity: 0,
+                y: 28
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                amount: 0.22
+              }} transition={{
+                duration: prefersReducedMotion ? 0.35 : 0.6,
+                ease: HEADING_EASE,
+                delay: prefersReducedMotion ? 0 : order % displayedFeaturedSpeakers.length * 0.08
+              }} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
+                backgroundColor: COLORS.black
+              }}>
+                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                  background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                }} />
+                    <div aria-hidden="true" className="absolute inset-0 z-[12] bg-[radial-gradient(circle_at_78%_14%,rgba(227,14,4,0.18),transparent_34%)] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" />
+                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+
+                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                        <span>{speaker.name}</span>
+                      </h3>
+                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                        {speaker.bio}
+                      </p>
+
+                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                          <span>Book Speaker</span>
+                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                        </a>
+                        <button type="button" aria-label={`Watch a clip from ${speaker.name}`} onClick={() => handleWatchClipOpen(speaker.id, speaker.youtubeId)} className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/35 bg-black/44 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-md transition-all duration-[360ms] ease-in-out hover:border-[#e30e04] hover:bg-[#e30e04] md:w-fit">
+                          <Play aria-hidden="true" className="h-3.5 w-3.5 fill-current" />
+                          <span>Watch a Clip</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-5 z-20 h-[2px] w-0 bg-[#e30e04] transition-all duration-500 group-hover:w-12 md:left-7" aria-hidden="true" />
+                  </motion.article>)}
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 pb-20 sm:pb-24 md:pb-[120px]">
+            <motion.div initial={{
+          opacity: 0,
+          y: 18
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.18
+        }} className="mt-12 flex w-full justify-center md:mt-16">
+            <a href="#faculty" className="flex w-full justify-center rounded-full border px-8 py-4 text-[12px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 hover:text-white sm:w-auto sm:px-10 sm:text-[13px]" style={{
+            borderColor: COLORS.borderGray,
+            color: COLORS.black,
+            backgroundColor: 'transparent'
+          }} onMouseEnter={event => {
+            event.currentTarget.style.backgroundColor = COLORS.red;
+            event.currentTarget.style.borderColor = COLORS.red;
+            event.currentTarget.style.color = '#FFFFFF';
+          }} onMouseLeave={event => {
+            event.currentTarget.style.backgroundColor = 'transparent';
+            event.currentTarget.style.borderColor = COLORS.borderGray;
+            event.currentTarget.style.color = COLORS.black;
+          }}>
+              <span>View All Speakers</span>
+            </a>
+          </motion.div>
+        </div>
+      </section>
 
       <section id="methodology" className="relative w-full" style={{
       backgroundColor: COLORS.black,
@@ -1487,6 +2184,7 @@ export const TheSpeakersFirmHome = () => {
         </div>
       </section>
 
+      {/*
       <section className="relative w-full" style={{
       borderColor: SOFT_RULE_COLOR
     }}>
@@ -1555,7 +2253,9 @@ export const TheSpeakersFirmHome = () => {
         </div>
         <div className="pb-20 sm:pb-24 md:pb-32" />
       </section>
+      */}
 
+      {/*
       <section id="faculty" className="relative w-full overflow-hidden" style={{
       borderColor: SOFT_RULE_COLOR
     }}>
@@ -1695,6 +2395,7 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
       </section>
+      */}
 
       <section aria-label="Placement principle" className="relative w-full" style={{
       backgroundColor: COLORS.offWhite

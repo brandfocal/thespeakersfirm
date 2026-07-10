@@ -20,28 +20,28 @@ const FACULTY_LIST = [
     name: 'Dr. Phumzile Mlambo-Ngcuka',
     designation: 'Global Stateswoman',
     image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
-    trackId: 'systemic-transformation-equity-public-policy'
+    trackId: 'leadership-governance-and-risk-intelligence'
   },
   {
     id: 'bonang-mohale',
     name: 'Prof. Bonang Mohale',
     designation: 'Corporate Statesman',
     image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-    trackId: 'corporate-governance-ethics-statesmanship'
+    trackId: 'leadership-governance-and-risk-intelligence'
   },
   {
     id: 'khaya-sithole',
     name: 'Khaya Sithole',
     designation: 'Academic & Macro Analyst',
     image: '/highlighted_faculty/Khaya-Sithole.jpg',
-    trackId: 'macroeconomics-geopolitics-policy-risk'
+    trackId: 'economics-and-politics'
   },
   {
     id: 'ralph-mathekga',
     name: 'Dr. Ralph Mathekga',
     designation: 'Political Strategist & Author',
     image: '/highlighted_faculty/Dr-Ralph-Mathekga.jpg',
-    trackId: 'macroeconomics-geopolitics-policy-risk'
+    trackId: 'economics-and-politics'
   }
 ];
 
@@ -177,7 +177,7 @@ export function Header() {
 
   return (
     <nav 
-      className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#F8F7F5]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
+      className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
       style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
     >
       <div className="flex items-center cursor-pointer" onClick={() => router.push("/")}>
@@ -258,7 +258,7 @@ export function Header() {
                           setIsSearchExpanded(false);
                           setInputValue("");
                         }}
-                        className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#F8F7F5] transition-colors group text-left"
+                        className="flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-colors group text-left"
                       >
                         <img 
                           src={member.image} 
@@ -316,7 +316,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }} 
             exit={{ opacity: 0, y: -8 }} 
             transition={{ duration: 0.24, ease: 'easeOut' }} 
-            className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#F8F7F5]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
+            className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
             <div className="flex flex-col gap-1">
@@ -366,7 +366,7 @@ export function Header() {
                           setIsMobileMenuOpen(false);
                           setInputValue("");
                         }}
-                        className="flex items-center gap-3 py-2 px-1 hover:bg-[#F8F7F5] transition-colors text-left"
+                        className="flex items-center gap-3 py-2 px-1 hover:bg-gray-100 transition-colors text-left"
                       >
                         <img 
                           src={member.image} 

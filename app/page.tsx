@@ -9,7 +9,7 @@ const TheSpeakersFirmHome = dynamic(
   { 
     ssr: false,
     loading: () => (
-      <div className="min-h-screen w-full flex items-center justify-center bg-[#F8F7F5]">
+      <div className="min-h-screen w-full flex items-center justify-center bg-[#ffffff]">
         <div className="text-sm font-mono tracking-widest uppercase animate-pulse text-[#686869]">
           Loading experience...
         </div>
@@ -21,7 +21,7 @@ const TheSpeakersFirmHome = dynamic(
 export default function Home() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen w-full flex items-center justify-center bg-[#F8F7F5]">
+      <div className="min-h-screen w-full flex items-center justify-center bg-[#ffffff]">
         <div className="text-sm font-mono tracking-widest uppercase animate-pulse text-[#686869]">
           Loading experience...
         </div>

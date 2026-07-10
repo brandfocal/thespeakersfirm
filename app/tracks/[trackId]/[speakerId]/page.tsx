@@ -10,7 +10,7 @@ interface PageProps {
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
 
-  if (trackId === "corporate-governance-ethics-statesmanship" && speakerId === "bonang-mohale") {
+  if (trackId === "leadership-governance-and-risk-intelligence" && speakerId === "bonang-mohale") {
     return <AboutTeamSection />;
   }
 
@@ -26,7 +26,7 @@ export default async function SpeakerPage({ params }: PageProps) {
     .join(" ");
 
   return (
-    <div className="min-h-screen bg-[#F8F7F5] pt-32 pb-24 px-6 md:px-12 lg:px-24">
+    <div className="min-h-screen bg-[#ffffff] pt-32 pb-24 px-6 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto">
         <Link 
           href={`/tracks/${trackId}`}
@@ -41,7 +41,7 @@ export default async function SpeakerPage({ params }: PageProps) {
           <div className="lg:col-span-4 space-y-6">
             <div className="aspect-[3/4] w-full rounded-2xl bg-white border border-[#C7C7C8]/40 shadow-sm overflow-hidden flex items-center justify-center relative group">
               <div className="text-center p-6">
-                <div className="w-20 h-20 rounded-full bg-[#F8F7F5] flex items-center justify-center text-[#686869] mx-auto mb-4">
+                <div className="w-20 h-20 rounded-full bg-[#ffffff] flex items-center justify-center text-[#686869] mx-auto mb-4">
                   <span className="font-serif text-3xl font-light italic">
                     {speakerName.charAt(0)}
                   </span>

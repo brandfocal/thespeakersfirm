@@ -32,7 +32,7 @@ const COLORS = {
   borderGray: "#C7C7C8",
   darkGray: "#393939",
   cardBorder: "#333333",
-  offWhite: "#F8F7F5",
+  offWhite: "#ffffff",
   deepBlack: "#0F0F0F"
 };
 
@@ -49,7 +49,7 @@ const CTA_TEXT_CLASS = "text-[11px] font-bold uppercase leading-none tracking-[0
 const SECTION_HEADING_CLASS = `${KONTORA_FONT_CLASS} max-w-[12ch] text-[clamp(2.15rem,12vw,5rem)] font-bold leading-[0.9] tracking-[-0.05em]`;
 const SUB_HEADING_CLASS = `${KONTORA_FONT_CLASS} text-[clamp(1.25rem,6vw,2.5rem)] font-bold leading-[0.95] tracking-[-0.05em]`;
 const SECTION_TAG_CLASS = "inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.12em] sm:px-4 sm:text-[12px]";
-const FIELD_CLASS = "peer h-14 w-full rounded-none border bg-[#F8F7F5] px-3 pb-2 pt-6 text-[18px] font-normal leading-[1.4] outline-none transition-colors focus:border-[#e30e04]";
+const FIELD_CLASS = "peer h-14 w-full rounded-none border bg-[#ffffff] px-3 pb-2 pt-6 text-[18px] font-normal leading-[1.4] outline-none transition-colors focus:border-[#e30e04]";
 
 const SECTION_TAG_STYLE: React.CSSProperties = {
   backgroundColor: COLORS.darkGray,
@@ -560,7 +560,7 @@ const BookingForm = () => {
         </label>
       </div>
       <label className="relative mt-3 block">
-        <textarea className="peer min-h-[96px] w-full resize-none rounded-none border bg-[#F8F7F5] px-3 pb-2 pt-7 text-[18px] font-normal leading-[1.4] outline-none transition-colors focus:border-[#e30e04] lg:min-h-[88px]" style={{
+        <textarea className="peer min-h-[96px] w-full resize-none rounded-none border bg-[#ffffff] px-3 pb-2 pt-7 text-[18px] font-normal leading-[1.4] outline-none transition-colors focus:border-[#e30e04] lg:min-h-[88px]" style={{
           borderColor: SOFT_RULE_COLOR,
           color: COLORS.black
         }} name="message" placeholder=" " />
