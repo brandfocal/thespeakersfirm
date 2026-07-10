@@ -1904,7 +1904,7 @@ export const TheSpeakersFirmHome = () => {
               }}><span>Brief the Bureau</span><ArrowRight aria-hidden="true" size={16} /></span>
               </motion.a>
               <div className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white/50 border-white/25 cursor-default select-none">
-                Explore Faculty
+                Explore Categories
               </div>
             </motion.div>
           </div>
