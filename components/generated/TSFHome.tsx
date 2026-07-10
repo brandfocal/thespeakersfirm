@@ -1857,7 +1857,7 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
         <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-44 pt-24 sm:pb-36 sm:pt-28 md:px-16 md:pb-32 md:pt-36 lg:pb-28">
-          <AnimatedWordHeading as="h1" lines={HERO_HEADLINE_LINES} className="font-bold uppercase max-w-full overflow-hidden drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)]" style={{
+          <AnimatedWordHeading as="h1" lines={HERO_HEADLINE_LINES} className="font-bold uppercase max-w-full drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)]" style={{
           color: COLORS.offWhite
         }} wordClassName="mr-[0.13em]" />
           <motion.div aria-hidden="true" initial={{
