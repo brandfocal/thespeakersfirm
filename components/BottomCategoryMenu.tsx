@@ -6,24 +6,25 @@ import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
 const CATEGORIES = [
-  "Leadership",
-  "Media",
-  "A.I.",
-  "MC's",
-  "Comedy",
   "Keynote",
-  "Spirituality",
-  "Economics",
-  "Diversity",
-  "Neuroscience",
-  "Future of Work",
+  "Leadership",
   "Governance",
-  "Gender",
-  "Workplace Wellness",
-  "Financial Inclusion",
-  "Entrepreneurship",
-  "Masculinity",
-  "Female Keynote Speakers"
+  "A.I.",
+  "Future of Work",
+  "Economics",
+  "Futurists",
+  "Geopolitics",
+  "Innovation",
+  "Organisational Agility",
+  "Media",
+  "Reputation",
+  "Branding",
+  "Sales",
+  "Neuroscience",
+  "High-Performance",
+  "Sports",
+  "Sustainability",
+  "MCs"
 ];
 
 export function BottomCategoryMenu() {

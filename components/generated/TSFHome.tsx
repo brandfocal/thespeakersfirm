@@ -139,7 +139,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'aubrey-masango',
   name: 'Aubrey Masango',
-  category: "MC's",
+  category: 'MCs',
   image: '/image_marquee/Aubrey-Masango-The-Speakers-Firm.jpg',
   alt: 'Aubrey Masango',
   quote: 'Holding the narrative, facilitating the future.',
@@ -172,7 +172,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'clement-manyathela',
   name: 'Clement Manyathela',
-  category: "MC's",
+  category: 'MCs',
   image: '/image_marquee/Clement-Manyathela-The-Speakers-Firm.jpg',
   alt: 'Clement Manyathela',
   quote: 'Conversations that shift minds and inspire outcomes.',
@@ -216,7 +216,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'dr-gugulethu-xaba',
   name: 'Dr. Gugulethu Xaba',
-  category: 'Entrepreneurship',
+  category: 'Innovation',
   image: '/image_marquee/Dr-Gugulethu-Xaba-The-Speakers-Firm.jpg',
   alt: 'Dr. Gugulethu Xaba',
   quote: 'Sustainable growth stems from economic transformation.',
@@ -293,7 +293,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'dr-victor-ramathesele',
   name: 'Dr. Victor Ramathesele',
-  category: 'Workplace Wellness',
+  category: 'High-Performance',
   image: '/image_marquee/dr-victor-ramathesele-the-speakers-firm.jpg',
   alt: 'Dr. Victor Ramathesele',
   quote: 'Health is the first wealth of any enterprise.',
@@ -330,59 +330,62 @@ const FEATURED_SPEAKER_FILTERS = [{
   id: 'all-speakers',
   label: 'All'
 }, {
-  id: 'leadership',
-  label: 'Leadership'
-}, {
-  id: 'media',
-  label: 'Media'
-}, {
-  id: 'ai',
-  label: 'A.I.'
-}, {
-  id: 'mcs',
-  label: "MC's"
-}, {
-  id: 'comedy',
-  label: 'Comedy'
-}, {
   id: 'keynote',
   label: 'Keynote'
 }, {
-  id: 'spirituality',
-  label: 'Spirituality'
-}, {
-  id: 'economics',
-  label: 'Economics'
-}, {
-  id: 'diversity',
-  label: 'Diversity'
-}, {
-  id: 'neuroscience',
-  label: 'Neuroscience'
-}, {
-  id: 'future-of-work',
-  label: 'Future of Work'
+  id: 'leadership',
+  label: 'Leadership'
 }, {
   id: 'governance',
   label: 'Governance'
 }, {
-  id: 'gender',
-  label: 'Gender'
+  id: 'ai',
+  label: 'A.I.'
 }, {
-  id: 'workplace-wellness',
-  label: 'Workplace Wellness'
+  id: 'future-of-work',
+  label: 'Future of Work'
 }, {
-  id: 'financial-inclusion',
-  label: 'Financial Inclusion'
+  id: 'economics',
+  label: 'Economics'
 }, {
-  id: 'entrepreneurship',
-  label: 'Entrepreneurship'
+  id: 'futurists',
+  label: 'Futurists'
 }, {
-  id: 'masculinity',
-  label: 'Masculinity'
+  id: 'geopolitics',
+  label: 'Geopolitics'
 }, {
-  id: 'female-keynote-speakers',
-  label: 'Female Keynote Speakers'
+  id: 'innovation',
+  label: 'Innovation'
+}, {
+  id: 'organisational-agility',
+  label: 'Organisational Agility'
+}, {
+  id: 'media',
+  label: 'Media'
+}, {
+  id: 'reputation',
+  label: 'Reputation'
+}, {
+  id: 'branding',
+  label: 'Branding'
+}, {
+  id: 'sales',
+  label: 'Sales'
+}, {
+  id: 'neuroscience',
+  label: 'Neuroscience'
+}, {
+  id: 'high-performance',
+  label: 'High-Performance'
+}, {
+  id: 'sports',
+  label: 'Sports'
+}, {
+  id: 'sustainability',
+  label: 'Sustainability'
+}, {
+  id: 'mcs',
+  label: 'MCs'
 }];
 
 const FACULTY = [{
