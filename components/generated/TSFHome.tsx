@@ -1343,7 +1343,12 @@ export const TheSpeakersFirmHome = () => {
   const [activeClipSpeakerId, setActiveClipSpeakerId] = React.useState<string | null>(null);
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
 
-  const speakerCarouselRef = React.useRef<HTMLDivElement | null>(null);
+  const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
+  const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
+  const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
+  const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
+  const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
+  const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
 
   const router = useRouter();
@@ -1407,13 +1412,34 @@ export const TheSpeakersFirmHome = () => {
   };
 
   const displayedFeaturedSpeakers = FEATURED_SPEAKERS;
-  const carouselSpeakerCards = [...displayedFeaturedSpeakers.map(speaker => ({
+  const row1Speakers = displayedFeaturedSpeakers.slice(0, 6);
+  const row2Speakers = displayedFeaturedSpeakers.slice(6, 12);
+  const row3Speakers = displayedFeaturedSpeakers.slice(12, 18);
+
+  const carouselRow1 = [...row1Speakers.map(speaker => ({
     ...speaker,
-    loopId: `first-${speaker.id}`
-  })), ...displayedFeaturedSpeakers.map(speaker => ({
+    loopId: `r1-first-${speaker.id}`
+  })), ...row1Speakers.map(speaker => ({
     ...speaker,
-    loopId: `second-${speaker.id}`
+    loopId: `r1-second-${speaker.id}`
   }))];
+  
+  const carouselRow2 = [...row2Speakers.map(speaker => ({
+    ...speaker,
+    loopId: `r2-first-${speaker.id}`
+  })), ...row2Speakers.map(speaker => ({
+    ...speaker,
+    loopId: `r2-second-${speaker.id}`
+  }))];
+
+  const carouselRow3 = [...row3Speakers.map(speaker => ({
+    ...speaker,
+    loopId: `r3-first-${speaker.id}`
+  })), ...row3Speakers.map(speaker => ({
+    ...speaker,
+    loopId: `r3-second-${speaker.id}`
+  }))];
+
   const activeClipSpeaker = activeClipSpeakerId ? FEATURED_SPEAKERS.find(speaker => speaker.id === activeClipSpeakerId) : undefined;
   const isSpeakerCarouselPaused = isSpeakerCarouselHovering || isSpeakerCarouselInteracting || prefersReducedMotion;
 
@@ -1484,34 +1510,65 @@ export const TheSpeakersFirmHome = () => {
   }, [activeHeroSlide]);
 
   React.useEffect(() => {
-    const carousel = speakerCarouselRef.current;
-    if (!carousel) {
-      return undefined;
-    }
-    carousel.scrollLeft = 0;
+    if (speakerCarouselRef1.current) speakerCarouselRef1.current.scrollLeft = 0;
+    if (speakerCarouselRef2.current) speakerCarouselRef2.current.scrollLeft = 0;
+    if (speakerCarouselRef3.current) speakerCarouselRef3.current.scrollLeft = 0;
     return undefined;
   }, [activeSpeakerCategory]);
 
   React.useEffect(() => {
-    const carousel = speakerCarouselRef.current;
-    if (!carousel || isSpeakerCarouselPaused || displayedFeaturedSpeakers.length <= 1) {
+    const c1 = speakerCarouselRef1.current;
+    const c2 = speakerCarouselRef2.current;
+    const c3 = speakerCarouselRef3.current;
+    if (isSpeakerCarouselPaused) {
       return undefined;
     }
+    
+    // Set initial scroll position for the reverse row to avoid starting at 0
+    if (c2 && c2.scrollLeft === 0) {
+      const loopPoint = c2.scrollWidth / 2;
+      if (loopPoint > 0) c2.scrollLeft = loopPoint;
+    }
+
     let animationFrame = 0;
     let previousTimestamp = window.performance.now();
     const scrollStep = (timestamp: number) => {
       const deltaSeconds = (timestamp - previousTimestamp) / 1000;
       previousTimestamp = timestamp;
-      const seamlessLoopPoint = carousel.scrollWidth / 2;
-      carousel.scrollLeft += 72 * deltaSeconds;
-      if (seamlessLoopPoint > 0 && carousel.scrollLeft >= seamlessLoopPoint) {
-        carousel.scrollLeft -= seamlessLoopPoint;
+      const speed = 40; // Pixels per second
+
+      // Row 1 (Left) - Pause only if row 1 is hovered
+      if (c1 && !isHoveredRow1) {
+        const seamlessLoopPoint = c1.scrollWidth / 2;
+        c1.scrollLeft += speed * deltaSeconds;
+        if (seamlessLoopPoint > 0 && c1.scrollLeft >= seamlessLoopPoint) {
+          c1.scrollLeft -= seamlessLoopPoint;
+        }
       }
+
+      // Row 2 (Right / Reverse) - Pause only if row 2 is hovered
+      if (c2 && !isHoveredRow2) {
+        const seamlessLoopPoint = c2.scrollWidth / 2;
+        c2.scrollLeft -= speed * deltaSeconds;
+        if (seamlessLoopPoint > 0 && c2.scrollLeft <= 0) {
+          c2.scrollLeft += seamlessLoopPoint;
+        }
+      }
+
+      // Row 3 (Left) - Pause only if row 3 is hovered
+      if (c3 && !isHoveredRow3) {
+        const seamlessLoopPoint = c3.scrollWidth / 2;
+        c3.scrollLeft += speed * deltaSeconds;
+        if (seamlessLoopPoint > 0 && c3.scrollLeft >= seamlessLoopPoint) {
+          c3.scrollLeft -= seamlessLoopPoint;
+        }
+      }
+
       animationFrame = window.requestAnimationFrame(scrollStep);
     };
     animationFrame = window.requestAnimationFrame(scrollStep);
     return () => window.cancelAnimationFrame(animationFrame);
-  }, [activeSpeakerCategory, displayedFeaturedSpeakers.length, isSpeakerCarouselPaused]);
+  }, [activeSpeakerCategory, isSpeakerCarouselPaused, isHoveredRow1, isHoveredRow2, isHoveredRow3]);
 
   return <motion.div initial={prefersReducedMotion ? {
     opacity: 0
@@ -1876,7 +1933,7 @@ export const TheSpeakersFirmHome = () => {
         }} className="mt-5 h-[3px] w-28 origin-left md:mt-7 md:w-40" style={{
           backgroundColor: COLORS.red
         }} />
-          <div className="mt-6 flex max-w-[500px] flex-col gap-3 sm:mt-8">
+          <div className="mt-6 flex max-w-[620px] flex-col gap-3 sm:mt-8">
             <motion.p initial={{
             opacity: 0
           }} animate={{
@@ -2017,40 +2074,109 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
 
-        <div className="relative w-full mt-6 overflow-hidden md:mt-8" onPointerEnter={() => setIsSpeakerCarouselHovering(true)} onPointerLeave={() => setIsSpeakerCarouselHovering(false)}>
-            <div ref={speakerCarouselRef} className="scrollbar-none w-full overflow-x-hidden" aria-label="Auto-scrolling Signature Speakers carousel">
-              <div className="flex w-max gap-0 py-3 pl-6 md:pl-16">
-                {carouselSpeakerCards.map((speaker, order) => <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
-                backgroundColor: COLORS.black
-              }}>
+        <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
+            {/* Row 1 */}
+            <div 
+              ref={speakerCarouselRef1} 
+              onPointerEnter={() => setIsHoveredRow1(true)} 
+              onPointerLeave={() => setIsHoveredRow1(false)}
+              className="scrollbar-none w-full overflow-x-hidden" 
+              aria-label="Auto-scrolling Signature Speakers carousel row 1"
+            >
+              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                {carouselRow1.map((speaker) => (
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
                     <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                     <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                  background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                }} />
-                    <div aria-hidden="true" className="absolute inset-0 z-[12] bg-[radial-gradient(circle_at_78%_14%,rgba(227,14,4,0.18),transparent_34%)] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" />
+                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                    }} />
                     <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-
                       <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                         <span>{speaker.name}</span>
                       </h3>
                       <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
                         {speaker.bio}
                       </p>
-
                       <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                         <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
                           <span>Book Speaker</span>
                           <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
                         </a>
-                        <button type="button" aria-label={`Watch a clip from ${speaker.name}`} onClick={() => handleWatchClipOpen(speaker.id, speaker.youtubeId)} className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/35 bg-black/44 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-md transition-all duration-[360ms] ease-in-out hover:border-[#e30e04] hover:bg-[#e30e04] md:w-fit">
-                          <Play aria-hidden="true" className="h-3.5 w-3.5 fill-current" />
-                          <span>Watch a Clip</span>
-                        </button>
                       </div>
                     </div>
-                    <div className="absolute bottom-0 left-5 z-20 h-[2px] w-0 bg-[#e30e04] transition-all duration-500 group-hover:w-12 md:left-7" aria-hidden="true" />
-                  </motion.article>)}
+                  </motion.article>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div 
+              ref={speakerCarouselRef2} 
+              onPointerEnter={() => setIsHoveredRow2(true)} 
+              onPointerLeave={() => setIsHoveredRow2(false)}
+              className="scrollbar-none w-full overflow-x-hidden" 
+              aria-label="Auto-scrolling Signature Speakers carousel row 2"
+            >
+              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                {carouselRow2.map((speaker) => (
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                    }} />
+                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                        <span>{speaker.name}</span>
+                      </h3>
+                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                        {speaker.bio}
+                      </p>
+                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                          <span>Book Speaker</span>
+                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                        </a>
+                      </div>
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 3 */}
+            <div 
+              ref={speakerCarouselRef3} 
+              onPointerEnter={() => setIsHoveredRow3(true)} 
+              onPointerLeave={() => setIsHoveredRow3(false)}
+              className="scrollbar-none w-full overflow-x-hidden" 
+              aria-label="Auto-scrolling Signature Speakers carousel row 3"
+            >
+              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                {carouselRow3.map((speaker) => (
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                    }} />
+                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                        <span>{speaker.name}</span>
+                      </h3>
+                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                        {speaker.bio}
+                      </p>
+                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                          <span>Book Speaker</span>
+                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                        </a>
+                      </div>
+                    </div>
+                  </motion.article>
+                ))}
               </div>
             </div>
           </div>
