@@ -1224,7 +1224,7 @@ const BriefBureauFormSection = () => {
               ease: [0.22, 1, 0.36, 1]
             }} onSubmit={handleSubmit} className="flex flex-col gap-10" aria-label="Brief the Bureau contact form">
                   <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.borderGray
+                borderColor: COLORS.black
               }}>
                     <input id="brief-name" name="name" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
                   color: COLORS.black
@@ -1237,7 +1237,7 @@ const BriefBureauFormSection = () => {
                 }} />
                   </div>
                   <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.borderGray
+                borderColor: COLORS.black
               }}>
                     <input id="brief-organisation" name="organisation" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
                   color: COLORS.black
@@ -1250,7 +1250,7 @@ const BriefBureauFormSection = () => {
                 }} />
                   </div>
                   <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.borderGray
+                borderColor: COLORS.black
               }}>
                     <select id="brief-engagement" name="engagement" required defaultValue="" className="peer w-full appearance-none bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
                   color: COLORS.black
@@ -1267,7 +1267,7 @@ const BriefBureauFormSection = () => {
                   </div>
                   <div>
                     <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                  borderColor: COLORS.borderGray
+                  borderColor: COLORS.black
                 }}>
                       <textarea id="brief-objective" name="objective" required maxLength={500} value={strategicObjective} onChange={handleObjectiveChange} placeholder=" " rows={6} className="peer min-h-[180px] w-full resize-none bg-transparent pb-4 text-[20px] leading-[1.45] outline-none" style={{
                     color: COLORS.black
@@ -1284,7 +1284,7 @@ const BriefBureauFormSection = () => {
                 }}><span>{strategicObjective.length} / 500</span></p>
                   </div>
                   <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.borderGray
+                borderColor: COLORS.black
               }}>
                     <input id="brief-date-location" name="date-location" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
                   color: COLORS.black
@@ -1298,7 +1298,7 @@ const BriefBureauFormSection = () => {
                   </div>
                   <div className="pt-2">
                     <button type="submit" className="rounded-full border px-10 py-4 text-[13px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 hover:text-white" style={{
-                  borderColor: COLORS.borderGray,
+                  borderColor: COLORS.black,
                   color: COLORS.black,
                   backgroundColor: 'transparent'
                 }} onMouseEnter={event => {
@@ -1307,7 +1307,7 @@ const BriefBureauFormSection = () => {
                   event.currentTarget.style.color = '#FFFFFF';
                 }} onMouseLeave={event => {
                   event.currentTarget.style.backgroundColor = 'transparent';
-                  event.currentTarget.style.borderColor = COLORS.borderGray;
+                  event.currentTarget.style.borderColor = COLORS.black;
                   event.currentTarget.style.color = COLORS.black;
                 }}>
                       <span>Send Brief</span>
