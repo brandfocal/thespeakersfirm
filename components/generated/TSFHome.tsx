@@ -7,13 +7,13 @@ import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
 const COLORS = {
-  black: '#212121',
+  black: '#000000',
   red: '#e30e04',
-  gray: '#686869',
-  silver: '#AFB0B0',
-  silverAlt: '#AFAFBA',
-  borderGray: '#C7C7C8',
-  darkGray: '#393939',
+  gray: '#000000',
+  silver: '#ffffff',
+  silverAlt: '#ffffff',
+  borderGray: '#ffffff',
+  darkGray: '#000000',
   offWhite: '#ffffff'
 };
 const SOFT_RULE_COLOR = 'rgba(33, 33, 33, 0.14)';
@@ -867,7 +867,7 @@ const ScrollProgressBar = () => {
   }} />;
 };
 const CurtainReveal = () => {
-  return <motion.div className="fixed inset-0 z-[200] bg-[#212121] origin-left" initial={{
+  return <motion.div className="fixed inset-0 z-[200] bg-[#000000] origin-left" initial={{
     scaleX: 1
   }} animate={{
     scaleX: 0
@@ -2098,7 +2098,7 @@ export const TheSpeakersFirmHome = () => {
             >
               <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
                 {carouselRow1.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
                     <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                     <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
@@ -2133,7 +2133,7 @@ export const TheSpeakersFirmHome = () => {
             >
               <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
                 {carouselRow2.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
                     <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                     <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
@@ -2168,7 +2168,7 @@ export const TheSpeakersFirmHome = () => {
             >
               <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
                 {carouselRow3.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
                     <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                     <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
@@ -2455,9 +2455,9 @@ export const TheSpeakersFirmHome = () => {
             duration: prefersReducedMotion ? 0.35 : 0.6,
             ease: HEADING_EASE,
             delay: prefersReducedMotion ? 0 : order * 0.1
-          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} onClick={() => router.push(`/tracks/${member.trackId}/${member.id}`)} className={cn(member.spanClassName, 'bg-[#212121] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#393939] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
-                <div className="w-full h-[clamp(340px,92vw,440px)] md:h-[520px] overflow-hidden relative bg-[#171717]">
-                  <motion.div className="absolute inset-0 bg-[#212121] z-10 origin-top" initial={{
+          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} onClick={() => router.push(`/tracks/${member.trackId}/${member.id}`)} className={cn(member.spanClassName, 'bg-[#000000] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#000000] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
+                <div className="w-full h-[clamp(340px,92vw,440px)] md:h-[520px] overflow-hidden relative bg-[#000000]">
+                  <motion.div className="absolute inset-0 bg-[#000000] z-10 origin-top" initial={{
                 scaleY: 1
               }} whileInView={{
                 scaleY: 0
@@ -2470,7 +2470,7 @@ export const TheSpeakersFirmHome = () => {
               }} />
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover object-center grayscale saturate-0 transition-[filter,transform] duration-[400ms] ease-out group-hover:grayscale-0 group-hover:saturate-100 group-hover:scale-[1.035]" />
                 </div>
-                <div className="mt-auto p-6 md:p-7 relative z-20 bg-[#212121] transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
+                <div className="mt-auto p-6 md:p-7 relative z-20 bg-[#000000] transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em]" style={{
                 color: COLORS.red
               }}>{member.designation}</p>

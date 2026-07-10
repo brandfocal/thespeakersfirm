@@ -8,10 +8,10 @@ import { ArrowUpRight, Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const COLORS = {
-  black: '#212121',
+  black: '#000000',
   red: '#e30e04',
-  gray: '#686869',
-  borderGray: '#C7C7C8',
+  gray: '#000000',
+  borderGray: '#ffffff',
 };
 
 const FACULTY_LIST = [
@@ -177,7 +177,7 @@ export function Header() {
 
   return (
     <nav 
-      className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff]/90 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
+      className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff] px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
       style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
     >
       <div className="flex items-center cursor-pointer" onClick={() => router.push("/")}>
@@ -316,7 +316,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }} 
             exit={{ opacity: 0, y: -8 }} 
             transition={{ duration: 0.24, ease: 'easeOut' }} 
-            className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
+            className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff] p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
             <div className="flex flex-col gap-1">
