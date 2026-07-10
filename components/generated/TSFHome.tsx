@@ -1856,7 +1856,7 @@ export const TheSpeakersFirmHome = () => {
           }}>Johannesburg - Operating Globally</motion.p>
           </div>
         </div>
-        <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-44 pt-24 sm:pb-36 sm:pt-28 md:px-16 md:pb-32 md:pt-36 lg:pb-28">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
           <AnimatedWordHeading as="h1" lines={HERO_HEADLINE_LINES} className="font-bold uppercase max-w-full drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)]" style={{
           color: COLORS.offWhite
         }} wordClassName="mr-[0.13em]" />
