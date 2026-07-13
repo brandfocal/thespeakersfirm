@@ -1812,6 +1812,14 @@ export const TheSpeakersFirmHome = () => {
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
   const [activeInviteImage, setActiveInviteImage] = React.useState<string | null>(null);
 
+  // Preload all speaker images to make category switches and image displays instant
+  React.useEffect(() => {
+    FEATURED_SPEAKERS.forEach(speaker => {
+      const img = new Image();
+      img.src = speaker.image;
+    });
+  }, []);
+
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
@@ -2667,9 +2675,6 @@ export const TheSpeakersFirmHome = () => {
                           className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
                         />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                        <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                          background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                        }} />
                         <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
                           <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                             <span>{speaker.name}</span>
@@ -2739,9 +2744,6 @@ export const TheSpeakersFirmHome = () => {
                           className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
                         />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                        <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                          background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                        }} />
                         <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
                           <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                             <span>{speaker.name}</span>
@@ -2811,9 +2813,6 @@ export const TheSpeakersFirmHome = () => {
                           className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
                         />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                        <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                          background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                        }} />
                         <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
                           <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                             <span>{speaker.name}</span>
