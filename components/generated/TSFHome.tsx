@@ -145,14 +145,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'nozipho-tshabalala',
   name: 'Nozipho Tshabalala',
-  category: 'Governance',
-  image: '/image_marquee/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
+  category: 'MCs',
+  image: '/speakers/MCs/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
   alt: 'Nozipho Tshabalala',
   quote: 'Facilitating conversations that matter for Africa’s development.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Conversation Facilitator, Broadcaster & Strategy Advisor</span>
+  bio: <span>Global Moderator, Conversation Architect & Broadcast Journalist</span>
 }, {
   id: 'prince-mashele',
   name: 'Prince Mashele',
@@ -168,13 +168,13 @@ const FEATURED_SPEAKERS = [{
   id: 'clement-manyathela',
   name: 'Clement Manyathela',
   category: 'MCs',
-  image: '/image_marquee/Clement-Manyathela-The-Speakers-Firm.jpg',
+  image: '/speakers/MCs/Clement-Manyathela-The-Speakers-Firm.jpg',
   alt: 'Clement Manyathela',
   quote: 'Conversations that shift minds and inspire outcomes.',
   youtubeId: 'iG9CE55wbtY',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Broadcast Journalist, Host of The Clement Manyathela Show & MC</span>
+  bio: <span>Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Public-Dialogue Facilitator</span>
 }, {
   id: 'sizwe-mpofu-walsh',
   name: 'Dr. Sizwe Mpofu-Walsh',
@@ -244,14 +244,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'cathy-mohlahlana',
   name: 'Cathy Mohlahlana',
-  category: 'Media',
-  image: '/image_marquee/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg',
+  category: 'MCs',
+  image: '/speakers/MCs/Cathy-Mohlahlana-The-Speakers-Firm-The-Speakers-Firm.jpg',
   alt: 'Cathy Mohlahlana',
   quote: 'Reporting with integrity, presenting with clarity.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Award-Winning Broadcast Journalist, Anchor & MC</span>
+  bio: <span>Award-Winning Broadcaster, News Anchor, Moderator & Strategic Communications Professional</span>
 }, {
   id: 'john-sanei',
   name: 'John Sanei',
@@ -365,14 +365,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'gerry-rantseli-elsdon',
   name: 'Gerry Rantseli-Elsdon',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
+  category: 'MCs',
+  image: '/speakers/MCs/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
   alt: 'Gerry Rantseli-Elsdon',
   quote: 'Inspirational broadcasting and global humanitarian leadership.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Business Executive, Humanitarian, Broadcaster & Speaker</span>
+  bio: <span>Business Executive, International Humanitarian, Television Personality & Master of Ceremonies</span>
 }, {
   id: 'nombasa-tsengwa',
   name: 'Dr Nombasa Tsengwa',
@@ -420,14 +420,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'azania-mosaka',
   name: 'Azania Mosaka',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Azania-Mosaka-The-Speakers-Firm.jpg',
+  category: 'MCs',
+  image: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg',
   alt: 'Azania Mosaka',
   quote: 'Strategic communications and media influence.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Broadcaster, Moderator, Strategic Communications Expert</span>
+  bio: <span>Broadcaster, Moderator, Strategic Communications Expert & Entrepreneur</span>
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',
@@ -494,6 +494,336 @@ const FEATURED_SPEAKERS = [{
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>Former Government Spokesperson, Public Policy Commentator</span>
+}, {
+  id: 'sindy-mabe',
+  name: 'Sindy Mabe',
+  category: 'MCs',
+  image: '/speakers/MCs/Sindy-Mabe-The-Speakers-Firm.jpg',
+  alt: 'Sindy Mabe',
+  quote: 'Anchoring and hosting events with journalistic precision.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Television News Anchor, Journalist, Moderator & Event Host</span>
+}, {
+  id: 'michelle-craig',
+  name: 'Michelle Craig',
+  category: 'MCs',
+  image: '/speakers/MCs/Michelle-Craig-The-Speakers-Firm.jpg',
+  alt: 'Michelle Craig',
+  quote: 'Guiding high-level dialogues and corporate conferences.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Broadcaster, Moderator, Conference Chairperson & Event Host</span>
+}, {
+  id: 'thami-ngubeni',
+  name: 'Thami Ngubeni',
+  category: 'MCs',
+  image: '/speakers/MCs/Thami-Ngubeni-The-Speakers-Firm.jpg',
+  alt: 'Thami Ngubeni',
+  quote: 'Inspiring thought leadership and media excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Media Personality, Author, Producer, Moderator & Thought Leader</span>
+}, {
+  id: 'thabo-mdluli',
+  name: 'Thabo Mdluli',
+  category: 'MCs',
+  image: '/speakers/MCs/Thabo-Mdluli-The-Speakers-Firm.jpg',
+  alt: 'Thabo Mdluli',
+  quote: 'Broadcasting and moderating events with clarity and poise.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Television Presenter, Broadcaster, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'victor-kgomoeswana',
+  name: 'Victor Kgomoeswana',
+  category: 'MCs',
+  image: '/speakers/MCs/Victor-Kgomoeswana-The-Speakers-Firm.jpg',
+  alt: 'Victor Kgomoeswana',
+  quote: 'African business insights and expert conference moderation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Africa Business Specialist, Author, Broadcaster & Conference Moderator</span>
+}, {
+  id: 'bongiwe-zwane',
+  name: 'Bongiwe Zwane',
+  category: 'MCs',
+  image: '/speakers/MCs/Bongiwe-Zwane-The-Speakers-Firm.jpg',
+  alt: 'Bongiwe Zwane',
+  quote: 'Facilitating critical conversations and news analysis.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>News Anchor, Television Host, Journalist & Facilitator</span>
+}, {
+  id: 'kgomotso-monyai',
+  name: 'Kgomotso Monyai',
+  category: 'MCs',
+  image: '/speakers/MCs/Kgomotso-Monyai-The-Speakers-Firm.jpg',
+  alt: 'Kgomotso Monyai',
+  quote: 'Hosting corporate events and panel discussions.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Television Broadcaster, Panel Moderator & Event Host</span>
+}, {
+  id: 'kayise-ngqula',
+  name: 'Kayise Ngqula',
+  category: 'MCs',
+  image: '/speakers/MCs/Kayise-Ngqula-The-Speakers-Firm2.jpg',
+  alt: 'Kayise Ngqula',
+  quote: 'Advocating for social impact and media production excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Media Executive, Executive Producer, Broadcaster, Speaker & Social-Impact Advocate</span>
+}, {
+  id: 'nqaba-mabece',
+  name: 'Nqaba Mabece',
+  category: 'MCs',
+  image: '/speakers/MCs/Nqaba-Mabece-The-Speakers-Firm.jpg',
+  alt: 'Nqaba Mabece',
+  quote: 'Legal insights and strategic stakeholder engagement.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Broadcaster, Legal and Policy Professional, Moderator & Strategic Stakeholder-Engagement Specialist</span>
+}, {
+  id: 'hulisani-ravele',
+  name: 'Hulisani Ravele',
+  category: 'MCs',
+  image: '/speakers/MCs/Hulisani-Ravele-The-Speakers-Firm.jpg',
+  alt: 'Hulisani Ravele',
+  quote: 'Media personality and seasoned event hosting.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Seasoned Broadcaster, Television Presenter, Moderator & Media Personality</span>
+}, {
+  id: 'penny-lebyane',
+  name: 'Penny Lebyane',
+  category: 'MCs',
+  image: '/speakers/MCs/Penny-Lebyane-The-Speakers-Firm.jpg',
+  alt: 'Penny Lebyane',
+  quote: 'Radio hosting and professional event facilitation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Radio Broadcaster, Media Facilitator, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'khaya-dlanga',
+  name: 'Khaya Dlanga',
+  category: 'MCs',
+  image: '/speakers/MCs/Khaya-Dlanga-The-Speakers-Firm.jpg',
+  alt: 'Khaya Dlanga',
+  quote: 'Creative storytelling and marketing leadership.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Author, Marketing Executive, Storyteller & Conference Facilitator</span>
+}, {
+  id: 'thembekile-mrototo',
+  name: 'Thembekile Mrototo',
+  category: 'MCs',
+  image: '/speakers/MCs/Thembekile-Mrototo-The-Speakers-Firm.jpg',
+  alt: 'Thembekile Mrototo',
+  quote: 'Delivering news and event hosting with precision.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>News Anchor, Broadcaster, Moderator & Event Host</span>
+}, {
+  id: 'rami-chuene',
+  name: 'Rami Chuene',
+  category: 'MCs',
+  image: '/speakers/MCs/Rami-Chuene-The-Speakers-Firm.jpg',
+  alt: 'Rami Chuene',
+  quote: 'Creative expression and dynamic public speaking.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Actress, Author, Public Speaker, Master of Ceremonies & Voice-Over Artist</span>
+}, {
+  id: 'naledi-moleo',
+  name: 'Naledi Moleo',
+  category: 'MCs',
+  image: '/speakers/MCs/Naledi-Moleo-The-Speakers-Firm.jpg',
+  alt: 'Naledi Moleo',
+  quote: 'News anchor and professional media presentation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>News Anchor, Radio Host, Television Presenter, Producer & Moderator</span>
+}, {
+  id: 'nimrod-nkosi',
+  name: 'Nimrod Nkosi',
+  category: 'MCs',
+  image: '/speakers/MCs/Nimrod-Nkosi-The-Speakers-Firm.jpg',
+  alt: 'Nimrod Nkosi',
+  quote: 'Professional acting and corporate master of ceremonies.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Television Presenter, Actor, Master of Ceremonies & Event Host</span>
+}, {
+  id: 'criselda-kananda',
+  name: 'Criselda Kananda',
+  category: 'MCs',
+  image: '/speakers/MCs/Criselda-Kananda-The-Speakers-Firm.jpg',
+  alt: 'Criselda Kananda',
+  quote: 'Advocating for health and humanitarian causes.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Broadcaster, Humanitarian, Health Advocate, Facilitator & Master of Ceremonies</span>
+}, {
+  id: 'putco-mafani',
+  name: 'Putco Mafani',
+  category: 'MCs',
+  image: '/speakers/MCs/Putco-Mafani-The-Speakers-Firm.jpg',
+  alt: 'Putco Mafani',
+  quote: 'Inspiring audiences and hosting corporate events.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Radio Broadcaster, Motivational Speaker & Master of Ceremonies</span>
+}, {
+  id: 'tbo-touch',
+  name: 'Thabo “Tbo Touch” Molefe',
+  category: 'MCs',
+  image: '/speakers/MCs/tbo-touch3.jpg',
+  alt: 'Thabo “Tbo Touch” Molefe',
+  quote: 'Media entrepreneurship and creative business leadership.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Media Entrepreneur, Broadcaster, Business Leader & Event Host</span>
+}, {
+  id: 'mpho-popps',
+  name: 'Mpho “Popps” Modikoane',
+  category: 'MCs',
+  image: '/speakers/MCs/Mpho-Popps-The-Speakers-Firm.jpg',
+  alt: 'Mpho “Popps” Modikoane',
+  quote: 'Injecting humor and charisma into premium events.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Award-Winning Comedian, Actor, Television Host & Master of Ceremonies</span>
+}, {
+  id: 'eugene-khoza',
+  name: 'Eugene Khoza',
+  category: 'MCs',
+  image: '/speakers/MCs/Eugene-Khoza-The-Speakers-Firm.jpg',
+  alt: 'Eugene Khoza',
+  quote: 'Writing, comedy, and media moderation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Comedian, Writer, Broadcaster, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'peter-ndoro',
+  name: 'Peter Ndoro',
+  category: 'MCs',
+  image: '/speakers/MCs/Peter-Ndoro-The-Speakers-Firm2.jpg',
+  alt: 'Peter Ndoro',
+  quote: 'Veteran broadcasting and global conference facilitation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Veteran Broadcast Journalist, Conference Facilitator, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'hector-motivator',
+  name: 'Hector Motivator',
+  category: 'MCs',
+  image: '/speakers/MCs/Hector-Motivator.jpg',
+  alt: 'Hector Motivator',
+  quote: 'Energizing audiences and hosting dynamic events.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Broadcaster, Author, Motivational Speaker & Master of Ceremonies</span>
+}, {
+  id: 'sibusiso-molimi',
+  name: 'Sibusiso Molimi',
+  category: 'MCs',
+  image: '/speakers/MCs/Sibusiso-Molimi-The-Speakers-Firm.jpg',
+  alt: 'Sibusiso Molimi',
+  quote: 'Shifting perspectives and managing corporate programmes.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Master of Ceremonies, Keynote Speaker, Entrepreneur & Perspective-Shifter</span>
+}, {
+  id: 'proverb',
+  name: 'Tebogo “ProVerb” Thekisho',
+  category: 'MCs',
+  image: '/speakers/MCs/Tebogo-ProVerb-Thekisho.jpg',
+  alt: 'Tebogo “ProVerb” Thekisho',
+  quote: 'Media entrepreneurship and hosting with distinction.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Media Personality, Author, Entrepreneur, Speaker & Master of Ceremonies</span>
+}, {
+  id: 'noni-khumalo',
+  name: 'Nonhlanhla “Noni” Khumalo',
+  category: 'MCs',
+  image: '/speakers/MCs/Noni-Khumalo-The-Speakers-Firm.jpg',
+  alt: 'Nonhlanhla “Noni” Khumalo',
+  quote: 'Producing and hosting premium corporate ceremonies.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Radio and Television Broadcaster, Producer & Corporate Events MC</span>
+}, {
+  id: 'thapelo-mokoena',
+  name: 'Thapelo Mokoena',
+  category: 'MCs',
+  image: '/speakers/MCs/Thapelo-Mokoena-The-Speakers-Firm.jpg',
+  alt: 'Thapelo Mokoena',
+  quote: 'Storytelling, entrepreneurship, and master of ceremonies.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Actor, Entrepreneur, Producer, Speaker, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'bridget-masinga-mc',
+  name: 'Bridget Masinga',
+  category: 'MCs',
+  image: '/speakers/MCs/Bridget-Masinga-The-Speakers-Firm.jpg',
+  alt: 'Bridget Masinga',
+  quote: 'Broadcasting and public speaking with elegance.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Radio Host, Television Personality, Producer, Public Speaker & Master of Ceremonies</span>
+}, {
+  id: 'aubrey-masango-mc',
+  name: 'Aubrey Masango',
+  category: 'MCs',
+  image: '/speakers/MCs/Aubrey-Masango-The-Speakers-Firm.jpg',
+  alt: 'Aubrey Masango',
+  quote: 'Intellectual dialogue and engaging event facilitation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Radio Personality, Broadcaster, Moderator & Master of Ceremonies</span>
+}, {
+  id: 'trudy-theledi',
+  name: 'Trudy Theledi',
+  category: 'MCs',
+  image: '/speakers/MCs/Trudy-Theledi-The-Speakers-Firm.jpg',
+  alt: 'Trudy Theledi',
+  quote: 'Directing programmes and hosting events with grace.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Broadcaster, Programme Director & Master of Ceremonies</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
@@ -2327,7 +2657,15 @@ export const TheSpeakersFirmHome = () => {
                   >
                     {carouselRow1.map((speaker) => (
                       <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                        <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                        <img 
+                          src={speaker.image} 
+                          onError={(e) => {
+                            e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                          }}
+                          alt="" 
+                          aria-hidden="true" 
+                          className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+                        />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                         <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
                           background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
@@ -2391,7 +2729,15 @@ export const TheSpeakersFirmHome = () => {
                   >
                     {carouselRow2.map((speaker) => (
                       <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                        <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                        <img 
+                          src={speaker.image} 
+                          onError={(e) => {
+                            e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                          }}
+                          alt="" 
+                          aria-hidden="true" 
+                          className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+                        />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                         <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
                           background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
@@ -2455,7 +2801,15 @@ export const TheSpeakersFirmHome = () => {
                   >
                     {carouselRow3.map((speaker) => (
                       <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                        <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                        <img 
+                          src={speaker.image} 
+                          onError={(e) => {
+                            e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                          }}
+                          alt="" 
+                          aria-hidden="true" 
+                          className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+                        />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                         <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
                           background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
