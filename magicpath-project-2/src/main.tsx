@@ -52,7 +52,7 @@ const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQuery.addEventListener('change', forceLightMode);
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App.tsx';
+import App from './App';
 createRoot(document.getElementById('root')!).render(<StrictMode>
     <App />
   </StrictMode>);
