@@ -5,27 +5,9 @@ import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
-const CATEGORIES = [
-  "Keynote",
-  "Leadership",
-  "Governance",
-  "A.I.",
-  "Future of Work",
-  "Economics",
-  "Futurists",
-  "Geopolitics",
-  "Innovation",
-  "Organisational Agility",
-  "Media",
-  "Reputation",
-  "Branding",
-  "Sales",
-  "Neuroscience",
-  "High-Performance",
-  "Sports",
-  "Sustainability",
-  "MCs"
-];
+import { CATEGORIES_CONFIG } from "@/lib/categories";
+
+const CATEGORIES = CATEGORIES_CONFIG.map(c => c.buttonLabel);
 
 export function BottomCategoryMenu() {
   const router = useRouter();

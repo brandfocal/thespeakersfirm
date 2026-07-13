@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScrol
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
+import { CATEGORIES_CONFIG } from '@/lib/categories';
 const COLORS = {
   black: '#000000',
   red: '#e30e04',
@@ -287,67 +288,10 @@ const FEATURED_SPEAKERS_HEADING_LINES = [{
   }]
 }];
 
-const FEATURED_SPEAKER_FILTERS = [{
-  id: 'all-speakers',
-  label: 'All'
-}, {
-  id: 'keynote',
-  label: 'Keynote'
-}, {
-  id: 'leadership',
-  label: 'Leadership'
-}, {
-  id: 'governance',
-  label: 'Governance'
-}, {
-  id: 'ai',
-  label: 'A.I.'
-}, {
-  id: 'future-of-work',
-  label: 'Future of Work'
-}, {
-  id: 'economics',
-  label: 'Economics'
-}, {
-  id: 'futurists',
-  label: 'Futurists'
-}, {
-  id: 'geopolitics',
-  label: 'Geopolitics'
-}, {
-  id: 'innovation',
-  label: 'Innovation'
-}, {
-  id: 'organisational-agility',
-  label: 'Organisational Agility'
-}, {
-  id: 'media',
-  label: 'Media'
-}, {
-  id: 'reputation',
-  label: 'Reputation'
-}, {
-  id: 'branding',
-  label: 'Branding'
-}, {
-  id: 'sales',
-  label: 'Sales'
-}, {
-  id: 'neuroscience',
-  label: 'Neuroscience'
-}, {
-  id: 'high-performance',
-  label: 'High-Performance'
-}, {
-  id: 'sports',
-  label: 'Sports'
-}, {
-  id: 'sustainability',
-  label: 'Sustainability'
-}, {
-  id: 'mcs',
-  label: 'MCs'
-}];
+const FEATURED_SPEAKER_FILTERS = [
+  { id: 'all-speakers', label: 'All' },
+  ...CATEGORIES_CONFIG.map(c => ({ id: c.id, label: c.buttonLabel }))
+];
 
 const ROUNDTABLE_INVITES = [
   { id: 'mohale', src: '/roundtable/mohale.jpg', alt: 'Prof. Bonang Mohale Roundtable Discussion' },
