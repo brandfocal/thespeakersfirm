@@ -134,7 +134,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
-  category: 'Keynote',
+  category: 'Governance',
   image: '/image_marquee/Bonang-Mohale-The-Speakers-Firm.jpg',
   alt: 'Prof. Bonang Mohale',
   quote: 'Servant leadership is the ultimate competitive edge.',
@@ -274,6 +274,226 @@ const FEATURED_SPEAKERS = [{
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
   bio: <span>Country Director of Google South Africa, Professor & Author</span>
+}, {
+  id: 'sylvester-chauke',
+  name: 'Sylvester Chauke',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Sylvester-Chauke-The-Speakers-Firm.jpg',
+  alt: 'Sylvester Chauke',
+  quote: 'Building brands that resonate with authentic African soul.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Founder and Chief Architect, DNA Brand Architects | Professor of Practice, UJ</span>
+}, {
+  id: 'mzamo-masito',
+  name: 'Dr Mzamo Masito',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Mzamo-Masito-The-Speakers-Firm.jpg',
+  alt: 'Dr Mzamo Masito',
+  quote: 'Transforming businesses, empowering communities.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Africa Regional Lead, Canva | Founder, African Men Care</span>
+}, {
+  id: 'muzi-kuzwayo',
+  name: 'Muzi Kuzwayo',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Muzi-Kuzwayo-The-Speakers-Firm.jpg',
+  alt: 'Muzi Kuzwayo',
+  quote: 'Unlocking promise, driving marketing excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Founder, Ignitive | Chairman, South Africa’s Promise | Author</span>
+}, {
+  id: 'mushambi-mutuma',
+  name: 'Mushambi Mutuma',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Mushambi-Mutuma-The-Speakers-Firm.jpg',
+  alt: 'Mushambi Mutuma',
+  quote: 'Leading technology transformation and executive strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Keynote Speaker | Author | Executive Adviser & Tech Leader</span>
+}, {
+  id: 'tshilidzi-marwala',
+  name: 'Prof. Tshilidzi Marwala',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg',
+  alt: 'Prof. Tshilidzi Marwala',
+  quote: 'Artificial intelligence is the engine of the modern world.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.25)',
+  bio: <span>Rector, United Nations University | Under-Secretary-General, UN</span>
+}, {
+  id: 'sipho-maseko',
+  name: 'Sipho Maseko',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Sipho-Maseko-The-Speakers-Firm.jpg',
+  alt: 'Sipho Maseko',
+  quote: 'Strategic corporate turnarounds for long-term growth.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Investor | Turnaround Strategist | Former Group CEO, Telkom SA</span>
+}, {
+  id: 'tryphosa-ramano',
+  name: 'Tryphosa Ramano',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Tryphosa-Ramano-The-Speakers-Firm.jpg',
+  alt: 'Tryphosa Ramano',
+  quote: 'Financial leadership that drives transformation.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Corporate Executive, Financial Services Leader & Speaker</span>
+}, {
+  id: 'zukie-siyotula',
+  name: 'Nozukiso “Zukie” Siyotula',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Zukie-Siyotula-The-Speakers-Firm.jpg',
+  alt: 'Nozukiso “Zukie” Siyotula',
+  quote: 'Empowering boardroom strategies and global investment.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Boardroom Power Broker, Inspirational Speaker & Executive</span>
+}, {
+  id: 'gerry-rantseli-elsdon',
+  name: 'Gerry Rantseli-Elsdon',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
+  alt: 'Gerry Rantseli-Elsdon',
+  quote: 'Inspirational broadcasting and global humanitarian leadership.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Business Executive, Humanitarian, Broadcaster & Speaker</span>
+}, {
+  id: 'nombasa-tsengwa',
+  name: 'Dr Nombasa Tsengwa',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
+  alt: 'Dr Nombasa Tsengwa',
+  quote: 'Sustainability and executive leadership in modern mining.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Mining Executive, Sustainability Leader & Advocate for Women</span>
+}, {
+  id: 'thuli-madonsela-keynote',
+  name: 'Prof. Thuli Madonsela',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
+  alt: 'Prof. Thuli Madonsela',
+  quote: 'Justice and integrity are the cornerstones of democracy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.25)',
+  bio: <span>Former Public Protector, Global Voice for Integrity & Governance</span>
+}, {
+  id: 'lene-molefi',
+  name: 'Lene Molefi',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Nene-Molefi-The-Speakers-Firm.jpg',
+  alt: 'Lene Molefi',
+  quote: 'Cultural transformation starts with equity and inclusion.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>The Inclusion Vanguard, Diversity & Cultural Specialist</span>
+}, {
+  id: 'vumile-msweli',
+  name: 'Dr Vumile Msweli',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
+  alt: 'Dr Vumile Msweli',
+  quote: 'Empowering global careers and organizational human capital.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Inspirational Speaker, Career Coach & Human Capital Strategist</span>
+}, {
+  id: 'azania-mosaka',
+  name: 'Azania Mosaka',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Azania-Mosaka-The-Speakers-Firm.jpg',
+  alt: 'Azania Mosaka',
+  quote: 'Strategic communications and media influence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Broadcaster, Moderator, Strategic Communications Expert</span>
+}, {
+  id: 'femi-adebanji',
+  name: 'Femi Adebanji',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Femi-Adebanji-The-Speakers-Firm.jpg',
+  alt: 'Femi Adebanji',
+  quote: 'Building global leadership and customer experience excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Leadership Speaker, Customer Experience Strategist & Expert</span>
+}, {
+  id: 'nyimpini-mabunda',
+  name: 'Nyimpini Mabunda',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  alt: 'Nyimpini Mabunda',
+  quote: 'Boardroom strategy and corporate leadership in action.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Boardroom Strategist, Chief Executive, Author & Global Leader</span>
+}, {
+  id: 'maanda-tshifularo',
+  name: 'Dr Maanda Tshifularo',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Maanda-Tshifularo-The-Speakers-Firm.jpg',
+  alt: 'Dr Maanda Tshifularo',
+  quote: 'Bridging leadership theory with boardroom execution.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Leadership Expert, Strategy Adviser & Practical Strategist</span>
+}, {
+  id: 'maurice-radebe',
+  name: 'Prof. Maurice Radebe',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Maurice-Radebe-The-Speakers-Firm.jpg',
+  alt: 'Prof. Maurice Radebe',
+  quote: 'Energy pioneering and corporate leadership excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>The Energy Pioneer, Corporate Leader & Academic Executive</span>
+}, {
+  id: 'andisa-liba',
+  name: 'Andisa Liba',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Andisa-Liba-The-Speakers-Firm.jpg',
+  alt: 'Andisa Liba',
+  quote: 'Fostering future of work cultures and human capital excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Human Capital Executive, Future of Work Leader & Strategist</span>
+}, {
+  id: 'themba-maseko',
+  name: 'Themba Maseko',
+  category: 'Keynote',
+  image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
+  alt: 'Themba Maseko',
+  quote: 'Public policy and strategic government communications.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Former Government Spokesperson, Public Policy Commentator</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
@@ -1329,9 +1549,17 @@ export const TheSpeakersFirmHome = () => {
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
 
-  const displayedFeaturedSpeakers = FEATURED_SPEAKERS;
-  const row1Speakers = displayedFeaturedSpeakers.slice(0, 7);
-  const row2Speakers = displayedFeaturedSpeakers.slice(7, 14);
+  const displayedFeaturedSpeakers = activeSpeakerCategory === 'All' 
+    ? FEATURED_SPEAKERS 
+    : FEATURED_SPEAKERS.filter(speaker => {
+        const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
+        const matchLabel = catConfig ? catConfig.buttonLabel : activeSpeakerCategory;
+        return speaker.category.toLowerCase() === matchLabel.toLowerCase();
+      });
+  
+  const halfLength = Math.max(1, Math.ceil(displayedFeaturedSpeakers.length / 2));
+  const row1Speakers = displayedFeaturedSpeakers.slice(0, halfLength);
+  const row2Speakers = displayedFeaturedSpeakers.slice(halfLength);
 
   const carouselRow1 = [...row1Speakers.map(speaker => ({
     ...speaker,
@@ -2010,6 +2238,37 @@ export const TheSpeakersFirmHome = () => {
         }} />
         </div>
 
+        {/* Category Filter Chips */}
+        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 flex flex-wrap gap-2.5 z-20 relative">
+          <button
+            type="button"
+            onClick={() => handleFeaturedSpeakerFilterChange('All')}
+            className={cn(
+              "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border",
+              activeSpeakerCategory === 'All'
+                ? "bg-[#e30e04] text-white border-[#e30e04]"
+                : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
+            )}
+          >
+            All
+          </button>
+          {CATEGORIES_CONFIG.map((cat) => (
+            <button
+              key={cat.id}
+              type="button"
+              onClick={() => handleFeaturedSpeakerFilterChange(cat.id)}
+              className={cn(
+                "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border",
+                activeSpeakerCategory === cat.id
+                  ? "bg-[#e30e04] text-white border-[#e30e04]"
+                  : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
+              )}
+            >
+              {cat.buttonLabel}
+            </button>
+          ))}
+        </div>
+
         <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
             {/* Row 1 */}
             <div className="relative group/row w-full">
@@ -2029,31 +2288,40 @@ export const TheSpeakersFirmHome = () => {
                 className="scrollbar-none w-full overflow-x-hidden" 
                 aria-label="Auto-scrolling Signature Speakers carousel row 1"
               >
-                <div className="flex w-max gap-0 py-0 pl-6 md:pl-16">
-                  {carouselRow1.map((speaker) => (
-                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                      }} />
-                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                          <span>{speaker.name}</span>
-                        </h3>
-                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                          {speaker.bio}
-                        </p>
-                        <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                            <span>Book Speaker</span>
-                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                          </a>
+                <AnimatePresence mode="wait">
+                  <motion.div 
+                    key={activeSpeakerCategory}
+                    initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex w-max gap-0 py-0 pl-6 md:pl-16"
+                  >
+                    {carouselRow1.map((speaker) => (
+                      <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                        <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                        <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                        <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                          background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                        }} />
+                        <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                          <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                            <span>{speaker.name}</span>
+                          </h3>
+                          <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                            {speaker.bio}
+                          </p>
+                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
+                            <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                              <span>Book Speaker</span>
+                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                    </motion.article>
-                  ))}
-                </div>
+                      </motion.article>
+                    ))}
+                  </motion.div>
+                </AnimatePresence>
               </div>
               <button 
                 type="button" 
@@ -2084,31 +2352,40 @@ export const TheSpeakersFirmHome = () => {
                 className="scrollbar-none w-full overflow-x-hidden" 
                 aria-label="Auto-scrolling Signature Speakers carousel row 2"
               >
-                <div className="flex w-max gap-0 py-0 pl-6 md:pl-16">
-                  {carouselRow2.map((speaker) => (
-                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                      }} />
-                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                          <span>{speaker.name}</span>
-                        </h3>
-                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                          {speaker.bio}
-                        </p>
-                        <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                            <span>Book Speaker</span>
-                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                          </a>
+                <AnimatePresence mode="wait">
+                  <motion.div 
+                    key={activeSpeakerCategory}
+                    initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex w-max gap-0 py-0 pl-6 md:pl-16"
+                  >
+                    {carouselRow2.map((speaker) => (
+                      <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                        <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                        <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                        <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                          background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                        }} />
+                        <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                          <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                            <span>{speaker.name}</span>
+                          </h3>
+                          <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                            {speaker.bio}
+                          </p>
+                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
+                            <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                              <span>Book Speaker</span>
+                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                    </motion.article>
-                  ))}
-                </div>
+                      </motion.article>
+                    ))}
+                  </motion.div>
+                </AnimatePresence>
               </div>
               <button 
                 type="button" 
