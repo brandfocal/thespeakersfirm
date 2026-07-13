@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
 import { CATEGORIES_CONFIG } from '@/lib/categories';
@@ -1264,6 +1264,7 @@ export const TheSpeakersFirmHome = () => {
 
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
+  const testimonialCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
@@ -1405,6 +1406,53 @@ export const TheSpeakersFirmHome = () => {
 
     window.setTimeout(() => setIsSpeakerCarouselInteracting(false), 900);
   };
+
+  const handleTestimonialCarouselAdvance = (direction: 'previous' | 'next') => {
+    const carousel = testimonialCarouselRef.current;
+    if (!carousel) return;
+    const card = carousel.querySelector<HTMLElement>('[data-testimonial-card="true"]');
+    const cardTravel = card ? (card.offsetWidth + 32) : 400; // width + gap
+    const amount = direction === 'next' ? cardTravel : -cardTravel;
+    carousel.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  };
+
+  React.useEffect(() => {
+    const carousel = testimonialCarouselRef.current;
+    if (!carousel) return;
+
+    let animationId: number;
+    let isPaused = false;
+
+    const scroll = () => {
+      if (!isPaused && carousel) {
+        carousel.scrollLeft += 0.8; // Smooth autoscroll speed
+        
+        const halfScrollWidth = carousel.scrollWidth / 2;
+        if (carousel.scrollLeft >= halfScrollWidth) {
+          carousel.scrollLeft = 0;
+        }
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    const handleMouseEnter = () => { isPaused = true; };
+    const handleMouseLeave = () => { isPaused = false; };
+
+    carousel.addEventListener('mouseenter', handleMouseEnter);
+    carousel.addEventListener('mouseleave', handleMouseLeave);
+    
+    // Start smooth autoscroll
+    animationId = requestAnimationFrame(scroll);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      carousel.removeEventListener('mouseenter', handleMouseEnter);
+      carousel.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   React.useEffect(() => {
     if (!activeClipSpeakerId) {
@@ -2460,6 +2508,200 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
 
+      </section>
+
+      {/* Section: Institutional Trust */}
+      <section id="institutional-trust" className="relative w-full border-t border-b overflow-hidden" style={{
+        backgroundColor: COLORS.black,
+        borderColor: '#212121'
+      }}>
+        <VerticalBorderLines isDark />
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-20 sm:pt-24 relative z-10">
+          <div className="flex flex-col">
+            <div className={cn(SECTION_TAG_CLASS, 'self-start')} style={{
+              ...SECTION_TAG_STYLE,
+              borderColor: 'rgba(255,255,255,0.3)',
+              color: '#F8F7F5'
+            }}>
+              <span>Institutional Trust</span>
+            </div>
+            
+            <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-bold tracking-[-0.04em] leading-none uppercase mt-6 text-[#F8F7F5]">
+              Why Leading Organisations Choose The Speakers Firm™
+            </h2>
+
+            {/* Corporate Brand Watermark Row */}
+            <div className="mt-8 flex flex-wrap items-center justify-start gap-x-10 gap-y-4 opacity-30 select-none">
+              {['Standard Bank', 'Bidvest Group', 'Anglo American', 'MTN Group', 'Shell', 'Deloitte'].map((brand, i) => (
+                <span key={i} className="text-[10px] font-bold uppercase tracking-[0.24em] text-white">{brand}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Scrollable Testimonial Carousel Track */}
+        <div className="relative group/testimonials w-full mt-12 pb-20 z-10">
+          {/* Left Arrow Button */}
+          <button 
+            type="button" 
+            aria-label="Show previous testimonials" 
+            onClick={() => handleTestimonialCarouselAdvance('previous')} 
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/testimonials:opacity-100 focus:opacity-100"
+            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          <div 
+            ref={testimonialCarouselRef}
+            className="scrollbar-none w-full overflow-x-auto scroll-smooth flex gap-8 px-6 md:px-16"
+          >
+            {[...Array(2)].flatMap((_, i) => [
+              {
+                id: 't1',
+                title: "Strategic Talent That Delivers Results",
+                quote: "The Speakers Firm did not simply secure a keynote speaker. They understood our strategy, audience and desired outcomes, then curated a voice that transformed our event into a powerful platform for insight, influence and action. If your organisation wants more than applause, brief The Speakers Firm.",
+                attribution: "Verified Executive Review"
+              },
+              {
+                id: 't2',
+                title: "One Brief. Exceptional Talent. Seamless Delivery.",
+                quote: "One brief gave us access to an exceptional selection of African and global speakers, MCs, facilitators and thought leaders. The process was fast, commercially focused and professionally managed from beginning to end. Make The Speakers Firm your first call when planning your next event.",
+                attribution: "Institutional Client Review"
+              },
+              {
+                id: 't3',
+                title: "Talent Beyond the Published Portfolio",
+                quote: "The Speakers Firm was not restricted by its existing portfolio. They searched the market, challenged conventional choices and secured the perfect talent for our audience and objectives. Give them your most demanding brief and allow them to find the voice your event deserves.",
+                attribution: "Verified Strategic Partner"
+              },
+              {
+                id: 't4',
+                title: "Curated Recommendations Within 24 Hours",
+                quote: "Within 24 hours, The Speakers Firm presented a carefully curated shortlist aligned with our strategy, audience, budget and brand. Their speed never compromised quality or relevance. Brief them today and accelerate your talent-booking decision.",
+                attribution: "Verified Executive Review"
+              },
+              {
+                id: 't5',
+                title: "Reduced Risk. Greater Value. Stronger Impact.",
+                quote: "The Speakers Firm saved our team valuable time, reduced booking risk and ensured that every commercial, contractual, and logistical detail was professionally managed. Their value extends far beyond securing talent. Partner with them for confidence from the first brief to the final applause.",
+                attribution: "Institutional Client Review"
+              },
+              {
+                id: 't6',
+                title: "Audience Fit Over Profile and Popularity",
+                quote: "Their recommendations were driven by strategic relevance, credibility and audience fit, not profile alone. The result was an authentic, compelling speaker who understood our context and delivered lasting value. Choose The Speakers Firm when impact matters more than celebrity.",
+                attribution: "Verified Executive Review"
+              },
+              {
+                id: 't7',
+                title: "A Strategic Partner, Not Merely a Booking Agency",
+                quote: "The Speakers Firm approached our engagement as a strategic talent partner. They interrogated the brief, strengthened our thinking and connected us with talent capable of advancing our leadership and organisational agenda. Bring them into the conversation early and let them shape the right solution.",
+                attribution: "Strategic Partner Feedback"
+              },
+              {
+                id: 't8',
+                title: "World-Class African and Global Talent",
+                quote: "The Speakers Firm combines a deep understanding of African audiences with access to leading African and global voices. They helped us deliver an experience that was locally relevant, globally credible, and commercially powerful. Partner with Africa’s leading speaker’s bureau for your next stage.",
+                attribution: "Verified Strategic Partner"
+              },
+              {
+                id: 't9',
+                title: "Talent That Strengthens Brands",
+                quote: "The talent secured by The Speakers Firm elevated our event, strengthened our brand positioning, and gave our audience ideas they could apply beyond the room. This was not simply a speaking engagement. It was a strategic investment in influence, reputation, and impact. Brief The Speakers Firm and turn your platform into a business asset.",
+                attribution: "Verified Executive Review"
+              },
+              {
+                id: 't10',
+                title: "Our Agency of Choice",
+                quote: "The right talent can change the energy of a room, sharpen a strategic conversation, and redefine the success of an event. The Speakers Firm delivered exactly that, with precision, professionalism, and measurable value. They remain our agency of choice for speakers, MCs, facilitators, and influential talent.",
+                attribution: "Institutional Client Review"
+              }
+            ].map((item, idx) => (
+              <div 
+                key={`${item.id}-${i}-${idx}`}
+                data-testimonial-card="true"
+                className="relative rounded-3xl border border-white/[0.06] bg-white/[0.02] p-8 md:p-10 backdrop-blur-md transition-all duration-500 hover:border-[#e30e04]/40 hover:bg-white/[0.04] group/card flex flex-col justify-between w-[300px] sm:w-[360px] md:w-[440px] shrink-0"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <Quote className="text-[#e30e04] h-8 w-8 opacity-80 transition-transform duration-300 group-hover/card:scale-110" />
+                    <span className="text-[10px] text-white/20 font-mono tracking-widest uppercase">Verified Review</span>
+                  </div>
+                  <h3 className="text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.02em] text-[#F8F7F5] mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-[14px] sm:text-[15px] font-light leading-[1.6] text-white/80">
+                    "{item.quote}"
+                  </p>
+                </div>
+                <div className="mt-8 border-t border-white/10 pt-4">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#AFB0B0]">
+                    — {item.attribution}
+                  </p>
+                </div>
+              </div>
+            )))}
+          </div>
+
+          {/* Right Arrow Button */}
+          <button 
+            type="button" 
+            aria-label="Show next testimonials" 
+            onClick={() => handleTestimonialCarouselAdvance('next')} 
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/testimonials:opacity-100 focus:opacity-100"
+            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+      </section>
+
+      {/* Pre-Footer Master CTA */}
+      <section id="master-cta" className="relative w-full border-b" style={{
+        backgroundColor: COLORS.black,
+        borderColor: '#212121',
+        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(227, 14, 4, 0.08) 0%, transparent 60%)'
+      }}>
+        <VerticalBorderLines isDark />
+        <div className="max-w-[1440px] mx-auto px-6 py-20 sm:py-24 md:py-32 relative z-10 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-[clamp(2.5rem,7vw,4.5rem)] font-bold tracking-[-0.04em] leading-[1.05] uppercase mx-auto max-w-[1080px] text-[#F8F7F5]"
+          >
+            The Right Talent Changes Everything.<br />Book Through The Speakers Firm.
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mx-auto mt-6 max-w-[720px] text-[16px] sm:text-[18px] md:text-[20px] font-light leading-[1.65] text-[#AFB0B0]"
+          >
+            Your next event deserves more than a recognised name. It deserves the right voice, strategically selected, and professionally delivered. Brief The Speakers Firm today and receive curated talent recommendations within 24 hours.
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="mt-10 flex justify-center"
+          >
+            <button 
+              type="button"
+              onClick={() => document.getElementById('brief-us')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-black hover:scale-[1.03]"
+            >
+              <span>Make Us Your Agency of Choice</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </motion.div>
+        </div>
       </section>
 
       <AnimatePresence>
