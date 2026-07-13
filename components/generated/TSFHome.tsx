@@ -120,38 +120,16 @@ const HERO_SLIDES = [{
 const HERO_SLIDE_DURATION_MS = 5000;
 
 const FEATURED_SPEAKERS = [{
-  id: 'abner-mariri',
-  name: 'Abner Mariri',
-  category: 'Keynote',
-  image: '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg',
-  alt: 'Abner Mariri',
-  quote: 'Unlock the performance velocity of your teams.',
+  id: 'phumzile-mlambo-ngcuka',
+  name: 'Dr. Phumzile Mlambo-Ngcuka',
+  category: 'Leadership',
+  image: '/image_marquee/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  alt: 'Dr. Phumzile Mlambo-Ngcuka',
+  quote: 'Education and equality are the cornerstones of progress.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Inspirational Speaker, Transformation Architect & Leadership Catalyst</span>
-}, {
-  id: 'andisa-liba',
-  name: 'Andisa Liba',
-  category: 'Leadership',
-  image: '/image_marquee/Andisa-Liba-The-Speakers-Firm.jpg',
-  alt: 'Andisa Liba',
-  quote: 'Future-fit talent strategies drive African progress.',
-  youtubeId: 'arj7oStGLkU',
-  topics: [],
-  tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Human Capital Leader, Workforce Futurist & Inclusion Advocate</span>
-}, {
-  id: 'aubrey-masango',
-  name: 'Aubrey Masango',
-  category: 'MCs',
-  image: '/image_marquee/Aubrey-Masango-The-Speakers-Firm.jpg',
-  alt: 'Aubrey Masango',
-  quote: 'Holding the narrative, facilitating the future.',
-  youtubeId: 'UF8uR6Z6KLc',
-  topics: [],
-  tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Broadcaster, Writer, Command-Level MC & Facilitator</span>
+  bio: <span>Global Stateswoman, Former UN Under-Secretary-General & Deputy President</span>
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
@@ -162,18 +140,29 @@ const FEATURED_SPEAKERS = [{
   youtubeId: '2s5CXK-w0AQ',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.25)',
-  bio: <span>Corporate Statesman, Business Leader, Chancellor & Author</span>
+  bio: <span>Corporate Statesman, Business Leader & Author</span>
 }, {
-  id: 'bridget-masinga',
-  name: 'Bridget Masinga',
-  category: 'Media',
-  image: '/image_marquee/Bridget-Masinga-The-Speakers-Firm.jpg',
-  alt: 'Bridget Masinga',
-  quote: 'Own the message, command the spotlight.',
+  id: 'nozipho-tshabalala',
+  name: 'Nozipho Tshabalala',
+  category: 'Governance',
+  image: '/image_marquee/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
+  alt: 'Nozipho Tshabalala',
+  quote: 'Facilitating conversations that matter for Africa’s development.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Conversation Facilitator, Broadcaster & Strategy Advisor</span>
+}, {
+  id: 'prince-mashele',
+  name: 'Prince Mashele',
+  category: 'Geopolitics',
+  image: '/image_marquee/Prince-Mashele-The-Speakers-Firm.jpg',
+  alt: 'Prince Mashele',
+  quote: 'Understanding political dynamics is key to future stability.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Broadcaster, Media Personality, MC & Facilitator</span>
+  bio: <span>Political Analyst, Researcher & Author</span>
 }, {
   id: 'clement-manyathela',
   name: 'Clement Manyathela',
@@ -186,109 +175,21 @@ const FEATURED_SPEAKERS = [{
   tint: 'rgba(72, 112, 166, 0.26)',
   bio: <span>Broadcast Journalist, Host of The Clement Manyathela Show & MC</span>
 }, {
-  id: 'dr-billy-selekane',
-  name: 'Dr. Billy Selekane',
-  category: 'Keynote',
-  image: '/image_marquee/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
-  alt: 'Dr. Billy Selekane',
-  quote: 'Organisational culture defines legacy.',
-  youtubeId: 'RcGyVTAoXEU',
-  topics: [],
-  tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>International Keynote Speaker & Organisational Culture Specialist</span>
-}, {
-  id: 'dr-buyani-zwane',
-  name: 'Dr. Buyani Zwane',
-  category: 'Leadership',
-  image: '/image_marquee/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
-  alt: 'Dr. Buyani Zwane',
-  quote: 'Leadership is a conscious choice, not a title.',
-  youtubeId: '8CrOL-ydFMI',
-  topics: [],
-  tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Leadership Consultant, Executive Coach & Academic</span>
-}, {
-  id: 'dr-david-molapo',
-  name: 'Dr. David Molapo',
-  category: 'Keynote',
-  image: '/image_marquee/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
-  alt: 'Dr. David Molapo',
-  quote: 'We don’t just train leaders, we inspire nation builders.',
+  id: 'sizwe-mpofu-walsh',
+  name: 'Dr. Sizwe Mpofu-Walsh',
+  category: 'Future of Work',
+  image: '/faculty/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
+  alt: 'Dr. Sizwe Mpofu-Walsh',
+  quote: 'Dismantling old paradigms to rebuild robust institutions.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
-  tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Leadership Icon, Author & International Keynote Speaker</span>
-}, {
-  id: 'dr-gugulethu-xaba',
-  name: 'Dr. Gugulethu Xaba',
-  category: 'Innovation',
-  image: '/image_marquee/Dr-Gugulethu-Xaba-The-Speakers-Firm.jpg',
-  alt: 'Dr. Gugulethu Xaba',
-  quote: 'Sustainable growth stems from economic transformation.',
-  youtubeId: 'arj7oStGLkU',
-  topics: [],
-  tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Governance Specialist & Local Government Strategist</span>
-}, {
-  id: 'dr-john-kani',
-  name: 'Dr. John Kani',
-  category: 'Keynote',
-  image: '/image_marquee/Dr-John-Kani-The-Speakers-Firm.jpg',
-  alt: 'Dr. John Kani',
-  quote: 'Heritage is the foundation of our future.',
-  youtubeId: 'UF8uR6Z6KLc',
-  topics: [],
   tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Legendary Actor, Playwright, Director & Cultural Activist</span>
-}, {
-  id: 'dr-mpho-phalatse',
-  name: 'Dr. Mpho Phalatse Nxumalo',
-  category: 'Governance',
-  image: '/image_marquee/Dr-Mpho-Phalatse-Nxumalo-The-Speakers-Firm.jpg',
-  alt: 'Dr. Mpho Phalatse Nxumalo',
-  quote: 'Ethical governance is a fiduciaty duty.',
-  youtubeId: 'iG9CE55wbtY',
-  topics: [],
-  tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Medical Doctor & Former Executive Mayor of Johannesburg</span>
-}, {
-  id: 'dr-puleng-mokhoalibe',
-  name: 'Dr. Puleng Mokhoalibe',
-  category: 'A.I.',
-  image: '/image_marquee/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
-  alt: 'Dr. Puleng Mokhoalibe',
-  quote: 'Design thinking unlocks exponential growth.',
-  youtubeId: 'RcGyVTAoXEU',
-  topics: [],
-  tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Innovation Catalyst, CEO of Alchemy Inspiration & Futurist</span>
-}, {
-  id: 'dr-somadoda-fikeni',
-  name: 'Dr. Somadoda Fikeni',
-  category: 'Leadership',
-  image: '/image_marquee/Dr-Somadoda-Fikeni-The-Speakers-Firm.jpg',
-  alt: 'Dr. Somadoda Fikeni',
-  quote: 'Understanding power dynamics dictates strategic execution.',
-  youtubeId: '8CrOL-ydFMI',
-  topics: [],
-  tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Renowned Political Analyst, Policy Architect & Governance Strategist</span>
-}, {
-  id: 'duma-gqubule',
-  name: 'Duma Gqubule',
-  category: 'Economics',
-  image: '/image_marquee/Duma-Gqubule-The-Speakers-Firm.jpg',
-  alt: 'Duma Gqubule',
-  quote: 'Economic models must serve society, not spreadsheets.',
-  youtubeId: 'qp0HIF3SfI4',
-  topics: [],
-  tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Financial Analyst, Macroeconomist & Policy Consultant</span>
+  bio: <span>Author, Academic & Host of SMWX</span>
 }, {
   id: 'khaya-sithole',
   name: 'Khaya Sithole',
   category: 'Economics',
-  image: '/image_marquee/Khaya-Sithole-The-Speakers-Firm-2.jpg',
+  image: '/image_marquee/Khaya-Sithole-The-Speakers-Firm.jpg',
   alt: 'Khaya Sithole',
   quote: 'Decoding public finance with accountability and transparency.',
   youtubeId: 'arj7oStGLkU',
@@ -296,27 +197,82 @@ const FEATURED_SPEAKERS = [{
   tint: 'rgba(72, 112, 166, 0.26)',
   bio: <span>Chartered Accountant, Academic & Macro Analyst</span>
 }, {
-  id: 'dr-victor-ramathesele',
-  name: 'Dr. Victor Ramathesele',
+  id: 'siphiwe-moyo',
+  name: 'Siphiwe Moyo',
   category: 'High-Performance',
-  image: '/image_marquee/dr-victor-ramathesele-the-speakers-firm.jpg',
-  alt: 'Dr. Victor Ramathesele',
-  quote: 'Health is the first wealth of any enterprise.',
-  youtubeId: 'UF8uR6Z6KLc',
+  image: '/image_marquee/leadership/Siphiwe-Moyo-The-Speakers-Firm.jpg',
+  alt: 'Siphiwe Moyo',
+  quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
+  youtubeId: 'qp0HIF3SfI4',
   topics: [],
-  tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Sports Medicine Specialist, Broadcaster & Health Strategist</span>
+  tint: 'rgba(84, 133, 96, 0.25)',
+  bio: <span>Global Speaker, Author & Organisational Development Specialist</span>
 }, {
-  id: 'felicia-mabuza-suttle',
-  name: 'Felicia Mabuza Suttle',
-  category: 'Keynote',
-  image: '/image_marquee/felicia-mabuza-suttle-the-speakers-firm.jpg',
-  alt: 'Felicia Mabuza Suttle',
-  quote: 'Laughter, legacy, and talk show sovereignty.',
-  youtubeId: '8CrOL-ydFMI',
+  id: 'lincoln-mali',
+  name: 'Lincoln Mali',
+  category: 'Leadership',
+  image: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg',
+  alt: 'Lincoln Mali',
+  quote: 'Leadership is a journey of influence, integrity, and impact.',
+  youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>"First Lady of Talk", Talk Show Hostess, Executive Coach & Author</span>
+  bio: <span>Corporate Executive, Leadership Writer & CEO</span>
+}, {
+  id: 'stafford-masie',
+  name: 'Stafford Masie',
+  category: 'A.I.',
+  image: '/image_marquee/stafford-masie-the-speakers-firm.jpg',
+  alt: 'Stafford Masie',
+  quote: 'Technology is not about gadgets, it is about human empowerment.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Technology Futurist, Former CEO of Google SA & Angel Investor</span>
+}, {
+  id: 'abdullah-verachia',
+  name: 'Abdullah Verachia',
+  category: 'Future of Work',
+  image: '/image_marquee/leadership/Abdullah-Verachia-The-Speakers-Firm.jpg',
+  alt: 'Abdullah Verachia',
+  quote: 'Navigating disruption requires cognitive flexibility and strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.25)',
+  bio: <span>Global Strategist, Author & Executive Director</span>
+}, {
+  id: 'cathy-mohlahlana',
+  name: 'Cathy Mohlahlana',
+  category: 'Media',
+  image: '/image_marquee/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg',
+  alt: 'Cathy Mohlahlana',
+  quote: 'Reporting with integrity, presenting with clarity.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.25)',
+  bio: <span>Award-Winning Broadcast Journalist, Anchor & MC</span>
+}, {
+  id: 'john-sanei',
+  name: 'John Sanei',
+  category: 'Futurists',
+  image: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg',
+  alt: 'John Sanei',
+  quote: 'We need to prepare for the future, not just react to it.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Global Futurist, Best-Selling Author & Transformation Specialist</span>
+}, {
+  id: 'alistair-mokoena',
+  name: 'Dr Alistair Mokoena',
+  category: 'Branding',
+  image: '/image_marquee/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
+  alt: 'Dr Alistair Mokoena',
+  quote: 'Strong brands are built on authentic human connections.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.26)',
+  bio: <span>Country Director of Google South Africa, Professor & Author</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
@@ -1364,10 +1320,8 @@ export const TheSpeakersFirmHome = () => {
 
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
-  const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
-  const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
 
   const router = useRouter();
@@ -1431,9 +1385,8 @@ export const TheSpeakersFirmHome = () => {
   };
 
   const displayedFeaturedSpeakers = FEATURED_SPEAKERS;
-  const row1Speakers = displayedFeaturedSpeakers.slice(0, 6);
-  const row2Speakers = displayedFeaturedSpeakers.slice(6, 12);
-  const row3Speakers = displayedFeaturedSpeakers.slice(12, 18);
+  const row1Speakers = displayedFeaturedSpeakers.slice(0, 7);
+  const row2Speakers = displayedFeaturedSpeakers.slice(7, 14);
 
   const carouselRow1 = [...row1Speakers.map(speaker => ({
     ...speaker,
@@ -1449,14 +1402,6 @@ export const TheSpeakersFirmHome = () => {
   })), ...row2Speakers.map(speaker => ({
     ...speaker,
     loopId: `r2-second-${speaker.id}`
-  }))];
-
-  const carouselRow3 = [...row3Speakers.map(speaker => ({
-    ...speaker,
-    loopId: `r3-first-${speaker.id}`
-  })), ...row3Speakers.map(speaker => ({
-    ...speaker,
-    loopId: `r3-second-${speaker.id}`
   }))];
 
   const activeClipSpeaker = activeClipSpeakerId ? FEATURED_SPEAKERS.find(speaker => speaker.id === activeClipSpeakerId) : undefined;
@@ -1490,8 +1435,6 @@ export const TheSpeakersFirmHome = () => {
     } else if (rowNum === 2) {
       carousel = speakerCarouselRef2.current;
       dirMultiplier = -1; // Reverse scroll direction
-    } else if (rowNum === 3) {
-      carousel = speakerCarouselRef3.current;
     }
     
     if (!carousel) return;
@@ -1547,14 +1490,12 @@ export const TheSpeakersFirmHome = () => {
   React.useEffect(() => {
     if (speakerCarouselRef1.current) speakerCarouselRef1.current.scrollLeft = 0;
     if (speakerCarouselRef2.current) speakerCarouselRef2.current.scrollLeft = 0;
-    if (speakerCarouselRef3.current) speakerCarouselRef3.current.scrollLeft = 0;
     return undefined;
   }, [activeSpeakerCategory]);
 
   React.useEffect(() => {
     const c1 = speakerCarouselRef1.current;
     const c2 = speakerCarouselRef2.current;
-    const c3 = speakerCarouselRef3.current;
     if (isSpeakerCarouselPaused) {
       return undefined;
     }
@@ -1590,20 +1531,11 @@ export const TheSpeakersFirmHome = () => {
         }
       }
 
-      // Row 3 (Left) - Pause only if row 3 is hovered
-      if (c3 && !isHoveredRow3) {
-        const seamlessLoopPoint = c3.scrollWidth / 2;
-        c3.scrollLeft += speed * deltaSeconds;
-        if (seamlessLoopPoint > 0 && c3.scrollLeft >= seamlessLoopPoint) {
-          c3.scrollLeft -= seamlessLoopPoint;
-        }
-      }
-
       animationFrame = window.requestAnimationFrame(scrollStep);
     };
     animationFrame = window.requestAnimationFrame(scrollStep);
     return () => window.cancelAnimationFrame(animationFrame);
-  }, [activeSpeakerCategory, isSpeakerCarouselPaused, isHoveredRow1, isHoveredRow2, isHoveredRow3]);
+  }, [activeSpeakerCategory, isSpeakerCarouselPaused, isHoveredRow1, isHoveredRow2]);
 
   return <motion.div initial={prefersReducedMotion ? {
     opacity: 0
@@ -2084,15 +2016,6 @@ export const TheSpeakersFirmHome = () => {
         }} className="mt-10 h-[1px] w-full origin-left md:mt-12" style={{
           backgroundColor: COLORS.borderGray
         }} />
-          <div className="mt-8 flex flex-col gap-5 md:mt-10 md:flex-row md:items-center">
-            <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0" aria-label="Filter Signature Speakers by category">
-              <div className="flex w-max gap-2 md:w-auto md:flex-wrap">
-                {FEATURED_SPEAKER_FILTERS.map(filter => <button key={filter.id} type="button" aria-pressed={activeSpeakerCategory === filter.label} onClick={() => handleFeaturedSpeakerFilterChange(filter.label)} className={cn('shrink-0 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all duration-300', activeSpeakerCategory === filter.label ? 'border-[#e30e04] bg-[#e30e04] text-white shadow-[0_12px_32px_rgba(227,14,4,0.16)]' : 'border-black text-black hover:bg-black hover:text-white')}>
-                    <span>{filter.label}</span>
-                  </button>)}
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
@@ -2114,10 +2037,10 @@ export const TheSpeakersFirmHome = () => {
                 className="scrollbar-none w-full overflow-x-hidden" 
                 aria-label="Auto-scrolling Signature Speakers carousel row 1"
               >
-                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                <div className="flex w-max gap-0 py-0 pl-6 md:pl-16">
                   {carouselRow1.map((speaker) => (
-                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                       <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                       <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
                         background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
@@ -2129,7 +2052,7 @@ export const TheSpeakersFirmHome = () => {
                         <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
                           {speaker.bio}
                         </p>
-                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                        <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
                           <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
                             <span>Book Speaker</span>
                             <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
@@ -2169,10 +2092,10 @@ export const TheSpeakersFirmHome = () => {
                 className="scrollbar-none w-full overflow-x-hidden" 
                 aria-label="Auto-scrolling Signature Speakers carousel row 2"
               >
-                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                <div className="flex w-max gap-0 py-0 pl-6 md:pl-16">
                   {carouselRow2.map((speaker) => (
-                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
                       <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                       <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
                         background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
@@ -2184,7 +2107,7 @@ export const TheSpeakersFirmHome = () => {
                         <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
                           {speaker.bio}
                         </p>
-                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                        <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
                           <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
                             <span>Book Speaker</span>
                             <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
@@ -2199,61 +2122,6 @@ export const TheSpeakersFirmHome = () => {
                 type="button" 
                 aria-label="Show next speakers" 
                 onClick={() => handleSpeakerCarouselAdvance(2, 'next')} 
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
-
-            {/* Row 3 */}
-            <div className="relative group/row w-full">
-              <button 
-                type="button" 
-                aria-label="Show previous speakers" 
-                onClick={() => handleSpeakerCarouselAdvance(3, 'previous')} 
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <div 
-                ref={speakerCarouselRef3} 
-                onPointerEnter={() => setIsHoveredRow3(true)} 
-                onPointerLeave={() => setIsHoveredRow3(false)}
-                className="scrollbar-none w-full overflow-x-hidden" 
-                aria-label="Auto-scrolling Signature Speakers carousel row 3"
-              >
-                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
-                  {carouselRow3.map((speaker) => (
-                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
-                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                      }} />
-                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                          <span>{speaker.name}</span>
-                        </h3>
-                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                          {speaker.bio}
-                        </p>
-                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                            <span>Book Speaker</span>
-                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                          </a>
-                        </div>
-                      </div>
-                    </motion.article>
-                  ))}
-                </div>
-              </div>
-              <button 
-                type="button" 
-                aria-label="Show next speakers" 
-                onClick={() => handleSpeakerCarouselAdvance(3, 'next')} 
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
                 style={{ borderColor: 'rgba(0,0,0,0.1)' }}
               >
