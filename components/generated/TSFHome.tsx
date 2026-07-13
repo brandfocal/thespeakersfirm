@@ -111,6 +111,11 @@ const HERO_SLIDES = [{
   image: '/hero_backgrounds/thuli-madonsela.jpg',
   alt: 'Professor Thuli Madonsela',
   position: 'object-top'
+}, {
+  id: 'prince-mashele',
+  image: '/hero_backgrounds/Prince-Mashele.jpg',
+  alt: 'Prince Mashele',
+  position: 'object-center'
 }];
 const HERO_SLIDE_DURATION_MS = 5000;
 
