@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { 
   ArrowRight, 
   BookOpen, 
@@ -22,18 +22,18 @@ import {
 import { CallToActionSection } from "./CallToActionSection";
 
 const COLORS = {
-  black: "#212121",
+  black: "#000000",
   red: "#e30e04",
   redHover: "#c00b03",
-  gray: "#686869",
-  mutedGray: "#AAAAAA",
-  silver: "#AFB0B0",
-  silverAlt: "#AFAFBA",
-  borderGray: "#C7C7C8",
-  darkGray: "#393939",
-  cardBorder: "#333333",
+  gray: "#000000",
+  mutedGray: "#ffffff",
+  silver: "#ffffff",
+  silverAlt: "#ffffff",
+  borderGray: "#ffffff",
+  darkGray: "#000000",
+  cardBorder: "#000000",
   offWhite: "#ffffff",
-  deepBlack: "#0F0F0F"
+  deepBlack: "#000000"
 };
 
 const SOFT_RULE_COLOR = COLORS.borderGray;
@@ -1201,12 +1201,26 @@ const SpeakerEnquirySection = () => {
   );
 };
 
+const HERO_SLIDES = [
+  { id: "banner", image: "/speakers/Bonang Mohale/bonang-mohale-banner.jpg" },
+  { id: "banner-third", image: "/speakers/Bonang Mohale/bonang-mohale-banner-third.jpg" },
+  { id: "fourth", image: "/speakers/Bonang Mohale/bonang-mohale-fourth.jpg" }
+];
+
 export const AboutTeamSection = () => {
   const [isBioExpanded, setIsBioExpanded] = React.useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
   const [activeStrategicThemeIndex, setActiveStrategicThemeIndex] = React.useState<number | null>(0);
   const [activeVideoIndex, setActiveVideoIndex] = React.useState(0);
   const [isPlayingVideo, setIsPlayingVideo] = React.useState(false);
+  const [activeHeroSlide, setActiveHeroSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveHeroSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
   
   const scrollToSection = (sectionId: string) => {
     setIsMobileNavOpen(false);
@@ -1219,17 +1233,42 @@ export const AboutTeamSection = () => {
   return (
     <div className="w-full overflow-x-hidden font-['Kontora',sans-serif]">
       <section className="relative flex min-h-screen w-full flex-col items-center overflow-hidden px-4 py-0 font-['Kontora',sans-serif] sm:px-6 lg:px-16 xl:px-0" style={{
-        backgroundColor: COLORS.offWhite,
-        borderColor: SOFT_RULE_COLOR
+        backgroundColor: COLORS.black,
+        borderColor: "#212121"
       }} aria-labelledby="speaker-profile-heading">
         <style>{FONT_IMPORT}</style>
+
+        {/* Hero Background Scrolling Slideshow */}
+        <div className="absolute inset-0 z-0">
+          {HERO_SLIDES.map((slide, slideIndex) => (
+            <motion.img
+              key={slide.id}
+              src={slide.image}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              initial={false}
+              animate={{
+                opacity: activeHeroSlide === slideIndex ? 1 : 0,
+                scale: activeHeroSlide === slideIndex ? 1 : 1.035
+              }}
+              transition={{
+                opacity: { duration: 1.2, ease: "easeInOut" },
+                scale: { duration: 6, ease: "easeOut" }
+              }}
+            />
+          ))}
+          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.45)_46%,rgba(0,0,0,0.4)_100%)] z-[1]" />
+          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_36%,rgba(0,0,0,0.08),transparent_34%),linear-gradient(90deg,rgba(0,0,0,0.52)_0%,rgba(0,0,0,0.2)_42%,rgba(0,0,0,0.6)_100%)] z-[1]" />
+        </div>
+
         <div className="absolute inset-0 z-0 opacity-[0.035]" style={{
           backgroundImage: NOISE_TEXTURE,
           backgroundRepeat: "repeat",
           backgroundSize: "128px 128px"
         }} aria-hidden="true" />
 
-        <div className="absolute inset-0 mx-auto max-w-[1440px] pointer-events-none">
+        <div className="absolute inset-0 mx-auto max-w-[1440px] pointer-events-none z-20">
           <BorderLine side="left" />
           <BorderLine side="right" />
         </div>
@@ -1247,7 +1286,7 @@ export const AboutTeamSection = () => {
                 duration: 0.6,
                 ease: [0.22, 1, 0.36, 1]
               }} 
-              className="flex flex-col justify-center space-y-4 pt-0 lg:col-span-7 lg:h-full"
+              className="flex flex-col justify-center space-y-4 pt-0 lg:col-span-12 lg:h-full"
             >
               <div>
                 <motion.div 
@@ -1259,18 +1298,22 @@ export const AboutTeamSection = () => {
                     duration: 0.4
                   }} 
                   className={SECTION_TAG_CLASS} 
-                  style={SECTION_TAG_STYLE}
+                  style={{
+                    ...SECTION_TAG_STYLE,
+                    borderColor: "rgba(255, 255, 255, 0.3)",
+                    color: "#F8F7F5"
+                  }}
                 >
                   <span>Track 01: Corporate Governance, Ethics and Statesmanship</span>
                 </motion.div>
                 <div className="mt-3 h-[1px] w-full max-w-[440px]" style={{
-                  backgroundColor: COLORS.borderGray
+                  backgroundColor: "rgba(255, 255, 255, 0.15)"
                 }} aria-hidden="true" />
               </div>
 
               <div className="space-y-4">
                 <h1 id="speaker-profile-heading" className="max-w-4xl text-[clamp(2.45rem,15vw,4.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.065em]" style={{
-                  color: COLORS.black
+                  color: "#F8F7F5"
                 }}>
                   <span>Professor</span>
                   <br />
@@ -1293,19 +1336,19 @@ export const AboutTeamSection = () => {
 
               <div className="max-w-[65ch] space-y-4">
                 <ul className="space-y-0 border-y" style={{
-                  borderColor: COLORS.borderGray
+                  borderColor: "rgba(255, 255, 255, 0.15)"
                 }} aria-label="Professor Bonang Mohale leadership roles">
                   {CURRENT_ROLES.map(role => (
                     <li 
                       key={role.id} 
                       className="flex items-start gap-4 border-b py-2.5 last:border-b-0 md:items-center lg:py-2" 
-                      style={{ borderColor: SOFT_RULE_COLOR }}
+                      style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}
                     >
                       <span className="mt-[0.75rem] h-[2px] w-8 shrink-0 md:mt-0 md:w-10" style={{
                         backgroundColor: COLORS.red
                       }} aria-hidden="true" />
                       <span className="text-[12px] font-bold uppercase leading-[1.35] tracking-[0.12em]" style={{
-                        color: COLORS.black
+                        color: "#F8F7F5"
                       }}>{role.label}</span>
                     </li>
                   ))}
@@ -1320,50 +1363,26 @@ export const AboutTeamSection = () => {
                   viewport={{ once: true }} 
                   className="flex flex-col gap-3 sm:flex-row sm:gap-4"
                 >
-                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-md transition-opacity duration-200 hover:opacity-90 sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("enquiry-form")} aria-label="Book the Speaker">
+                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-md transition-opacity duration-200 hover:opacity-90 sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("enquiry-form")} aria-label="Book the Speaker">
                     <CalendarDays className="h-5 w-5" aria-hidden="true" />
                     <span>Book the Speaker</span>
                   </button>
-                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-[#212121] bg-transparent px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#212121] transition-colors duration-200 hover:bg-[#212121] hover:text-white sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("the-brief")} aria-label="About Professor Mohale">
+                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-white/30 bg-transparent px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-white hover:text-black sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("the-brief")} aria-label="About Professor Mohale">
                     <ChevronDown className="h-5 w-5" aria-hidden="true" />
                     <span>About Prof. Mohale</span>
                   </button>
                 </motion.div>
               </div>
             </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.22, 1, 0.36, 1]
-              }} 
-              className="flex w-full justify-center lg:col-span-5 lg:h-full lg:items-center lg:justify-end"
-            >
-              <figure className="group relative isolate flex min-h-[280px] w-full max-w-[440px] flex-col overflow-hidden rounded-[22px] border transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70 lg:h-full lg:max-h-[480px] aspect-[4/5]" style={{
-                backgroundColor: COLORS.deepBlack,
-                borderColor: COLORS.darkGray,
-                boxShadow: "0 24px 70px rgba(33, 33, 33, 0.18)"
-              }} aria-label="Portrait for Professor Bonang Mohale">
-                <img className="absolute inset-0 h-full w-full object-cover object-center" src="/highlighted_faculty/prof-bonang-mohale.jpg" alt="Professor Bonang Mohale speaker profile" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" aria-hidden="true" />
-                <div className="absolute left-8 top-8 h-20 w-20 border-l border-t" style={{
-                  borderColor: "rgba(248,247,245,0.22)"
-                }} aria-hidden="true" />
-                <div className="absolute bottom-8 right-8 h-24 w-24 border-b border-r" style={{
-                  borderColor: "rgba(227,14,4,0.54)"
-                }} aria-hidden="true" />
-                <div className="absolute left-1/2 top-1/2 h-[58%] w-[58%] -translate-x-1/2 -translate-y-1/2 rounded-full border" style={{
-                  borderColor: "rgba(248,247,245,0.12)",
-                  backgroundColor: "rgba(248,247,245,0.035)"
-                }} aria-hidden="true" />
-              </figure>
-            </motion.div>
           </div>
+        </div>
+      </section>
 
+      <section id="the-brief" className="relative w-full py-12 md:py-20 border-b" style={{
+        backgroundColor: COLORS.offWhite,
+        borderColor: SOFT_RULE_COLOR
+      }}>
+        <div className="relative z-10 mx-auto w-full max-w-[1312px] px-4 sm:px-6 lg:px-16 xl:px-0">
           <motion.div 
             initial={{ opacity: 0, y: 24 }} 
             whileInView={{ opacity: 1, y: 0 }} 
@@ -1372,8 +1391,7 @@ export const AboutTeamSection = () => {
               duration: 0.65,
               ease: [0.22, 1, 0.36, 1]
             }} 
-            className="grid gap-10 py-12 md:py-20 lg:grid-cols-12 lg:gap-16" 
-            id="the-brief"
+            className="grid gap-10 lg:grid-cols-12 lg:gap-16" 
           >
             <div className="lg:col-span-4">
               <h2 className={SECTION_HEADING_CLASS}>
@@ -1427,11 +1445,8 @@ export const AboutTeamSection = () => {
               </div>
             </div>
           </motion.div>
-
-          <div className="h-[1px] w-full" style={{
-            backgroundColor: COLORS.borderGray
-          }} aria-hidden="true" />
         </div>
+      </section>
 
         <motion.section 
           initial={{ opacity: 0, y: 24 }} 
@@ -1674,7 +1689,6 @@ export const AboutTeamSection = () => {
         <div className="absolute bottom-0 left-0 h-px w-full" style={{
           backgroundColor: COLORS.borderGray
         }} aria-hidden="true" />
-      </section>
       <BookingSection />
       <SpeakerEnquirySection />
       <CallToActionSection />
