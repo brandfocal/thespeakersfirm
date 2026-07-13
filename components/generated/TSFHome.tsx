@@ -2614,7 +2614,7 @@ export const TheSpeakersFirmHome = () => {
             <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-bold tracking-[-0.04em] leading-none uppercase mt-4" style={{
               color: COLORS.black
             }}>
-              Roundtable Discussions
+              Roundtable Conversations
             </h2>
             <p className="max-w-[620px] text-[16px] sm:text-[18px] md:text-[20px] font-normal leading-[1.55]" style={{
               color: COLORS.gray
