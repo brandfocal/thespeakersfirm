@@ -388,6 +388,19 @@ const FEATURED_SPEAKER_FILTERS = [{
   label: 'MCs'
 }];
 
+const ROUNDTABLE_INVITES = [
+  { id: 'mohale', src: '/roundtable/mohale.jpg', alt: 'Prof. Bonang Mohale Roundtable Discussion' },
+  { id: 'invite3', src: '/roundtable/invite3.jpg', alt: 'Executive Dialogue Session' },
+  { id: 'lincoln', src: '/roundtable/lincoln.jpg', alt: 'Lincoln Roundtable Discussion' },
+  { id: 'mmamoloko', src: '/roundtable/mmamoloko.jpg', alt: 'Mmamoloko Roundtable Discussion' },
+  { id: 'mzamo', src: '/roundtable/mzamo.jpg', alt: 'Mzamo Roundtable Discussion' },
+  { id: 'nozipho2', src: '/roundtable/nozipho2.jpg', alt: 'Nozipho Roundtable Discussion' },
+  { id: 'reuel2', src: '/roundtable/reuel2.jpg', alt: 'Reuel Roundtable Discussion' },
+  { id: 'siphiwe', src: '/roundtable/siphiwe invite.jpg', alt: 'Siphiwe Roundtable Discussion' },
+  { id: 'thebe', src: '/roundtable/thebe.jpg', alt: 'Thebe Roundtable Discussion' },
+  { id: 'tinyiko', src: '/roundtable/tinyiko.jpg', alt: 'Tinyiko Roundtable Discussion' }
+];
+
 const FACULTY = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
@@ -1342,6 +1355,7 @@ export const TheSpeakersFirmHome = () => {
   const [isSpeakerCarouselInteracting, setIsSpeakerCarouselInteracting] = React.useState(false);
   const [activeClipSpeakerId, setActiveClipSpeakerId] = React.useState<string | null>(null);
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
+  const [activeInviteImage, setActiveInviteImage] = React.useState<string | null>(null);
 
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
@@ -1462,37 +1476,40 @@ export const TheSpeakersFirmHome = () => {
     setActiveSpeakerCategory(category);
   };
 
-  const handleSpeakerCarouselAdvance = (direction: 'previous' | 'next') => {
-    const c1 = speakerCarouselRef1.current;
-    const c2 = speakerCarouselRef2.current;
-    const c3 = speakerCarouselRef3.current;
+  const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
+    let carousel: HTMLDivElement | null = null;
+    let dirMultiplier = 1;
     
-    const firstCard = c1?.querySelector<HTMLElement>('[data-speaker-card="true"]');
+    if (rowNum === 1) {
+      carousel = speakerCarouselRef1.current;
+    } else if (rowNum === 2) {
+      carousel = speakerCarouselRef2.current;
+      dirMultiplier = -1; // Reverse scroll direction
+    } else if (rowNum === 3) {
+      carousel = speakerCarouselRef3.current;
+    }
+    
+    if (!carousel) return;
+    
+    const firstCard = carousel.querySelector<HTMLElement>('[data-speaker-card="true"]');
     const cardTravel = firstCard?.offsetWidth ?? 340;
     
     setIsSpeakerCarouselInteracting(true);
 
-    const advanceRow = (carousel: HTMLDivElement | null, dirMultiplier: number) => {
-      if (!carousel) return;
-      const seamlessLoopPoint = carousel.scrollWidth / 2;
-      const amount = (direction === 'next' ? cardTravel : -cardTravel) * dirMultiplier;
-      
-      if (amount < 0 && carousel.scrollLeft < Math.abs(amount)) {
-        carousel.scrollLeft += seamlessLoopPoint;
-      }
-      if (amount > 0 && carousel.scrollLeft > seamlessLoopPoint - amount) {
-        carousel.scrollLeft -= seamlessLoopPoint;
-      }
-      
-      carousel.scrollBy({
-        left: amount,
-        behavior: 'smooth'
-      });
-    };
-
-    advanceRow(c1, 1);
-    advanceRow(c3, 1);
-    advanceRow(c2, -1);
+    const seamlessLoopPoint = carousel.scrollWidth / 2;
+    const amount = (direction === 'next' ? cardTravel : -cardTravel) * dirMultiplier;
+    
+    if (amount < 0 && carousel.scrollLeft < Math.abs(amount)) {
+      carousel.scrollLeft += seamlessLoopPoint;
+    }
+    if (amount > 0 && carousel.scrollLeft > seamlessLoopPoint - amount) {
+      carousel.scrollLeft -= seamlessLoopPoint;
+    }
+    
+    carousel.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
 
     window.setTimeout(() => setIsSpeakerCarouselInteracting(false), 900);
   };
@@ -2062,135 +2079,181 @@ export const TheSpeakersFirmHome = () => {
         }} className="mt-10 h-[1px] w-full origin-left md:mt-12" style={{
           backgroundColor: COLORS.borderGray
         }} />
-          <div className="mt-8 flex flex-col gap-5 md:mt-10 md:flex-row md:items-center md:justify-between">
+          <div className="mt-8 flex flex-col gap-5 md:mt-10 md:flex-row md:items-center">
             <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0" aria-label="Filter Signature Speakers by category">
               <div className="flex w-max gap-2 md:w-auto md:flex-wrap">
-                {FEATURED_SPEAKER_FILTERS.map(filter => <button key={filter.id} type="button" aria-pressed={activeSpeakerCategory === filter.label} onClick={() => handleFeaturedSpeakerFilterChange(filter.label)} className={cn('shrink-0 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all duration-300', activeSpeakerCategory === filter.label ? 'border-[#e30e04] bg-[#e30e04] text-white shadow-[0_12px_32px_rgba(227,14,4,0.16)]' : 'border-[#C7C7C8] text-[#686869] hover:border-[#212121] hover:text-[#212121]')}>
+                {FEATURED_SPEAKER_FILTERS.map(filter => <button key={filter.id} type="button" aria-pressed={activeSpeakerCategory === filter.label} onClick={() => handleFeaturedSpeakerFilterChange(filter.label)} className={cn('shrink-0 rounded-full border px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] transition-all duration-300', activeSpeakerCategory === filter.label ? 'border-[#e30e04] bg-[#e30e04] text-white shadow-[0_12px_32px_rgba(227,14,4,0.16)]' : 'border-black text-black hover:bg-black hover:text-white')}>
                     <span>{filter.label}</span>
                   </button>)}
               </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <button type="button" aria-label="Show previous Signature Speaker" onClick={() => handleSpeakerCarouselAdvance('previous')} className="grid h-11 w-11 place-items-center rounded-full border transition-colors duration-300 hover:bg-[#212121] hover:text-white" style={{
-              borderColor: COLORS.borderGray,
-              color: COLORS.black
-            }}>
-                <ChevronLeft aria-hidden="true" className="h-5 w-5" />
-              </button>
-              <button type="button" aria-label="Show next Signature Speaker" onClick={() => handleSpeakerCarouselAdvance('next')} className="grid h-11 w-11 place-items-center rounded-full border transition-colors duration-300 hover:bg-[#212121] hover:text-white" style={{
-              borderColor: COLORS.borderGray,
-              color: COLORS.black
-            }}>
-                <ChevronRight aria-hidden="true" className="h-5 w-5" />
-              </button>
             </div>
           </div>
         </div>
 
         <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
             {/* Row 1 */}
-            <div 
-              ref={speakerCarouselRef1} 
-              onPointerEnter={() => setIsHoveredRow1(true)} 
-              onPointerLeave={() => setIsHoveredRow1(false)}
-              className="scrollbar-none w-full overflow-x-hidden" 
-              aria-label="Auto-scrolling Signature Speakers carousel row 1"
-            >
-              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
-                {carouselRow1.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
-                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                    }} />
-                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                        <span>{speaker.name}</span>
-                      </h3>
-                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                        {speaker.bio}
-                      </p>
-                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                          <span>Book Speaker</span>
-                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                        </a>
+            <div className="relative group/row w-full">
+              <button 
+                type="button" 
+                aria-label="Show previous speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(1, 'previous')} 
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <div 
+                ref={speakerCarouselRef1} 
+                onPointerEnter={() => setIsHoveredRow1(true)} 
+                onPointerLeave={() => setIsHoveredRow1(false)}
+                className="scrollbar-none w-full overflow-x-hidden" 
+                aria-label="Auto-scrolling Signature Speakers carousel row 1"
+              >
+                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                  {carouselRow1.map((speaker) => (
+                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                      }} />
+                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                          <span>{speaker.name}</span>
+                        </h3>
+                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                          {speaker.bio}
+                        </p>
+                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                            <span>Book Speaker</span>
+                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </motion.article>
-                ))}
+                    </motion.article>
+                  ))}
+                </div>
               </div>
+              <button 
+                type="button" 
+                aria-label="Show next speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(1, 'next')} 
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
             </div>
 
             {/* Row 2 */}
-            <div 
-              ref={speakerCarouselRef2} 
-              onPointerEnter={() => setIsHoveredRow2(true)} 
-              onPointerLeave={() => setIsHoveredRow2(false)}
-              className="scrollbar-none w-full overflow-x-hidden" 
-              aria-label="Auto-scrolling Signature Speakers carousel row 2"
-            >
-              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
-                {carouselRow2.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
-                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                    }} />
-                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                        <span>{speaker.name}</span>
-                      </h3>
-                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                        {speaker.bio}
-                      </p>
-                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                          <span>Book Speaker</span>
-                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                        </a>
+            <div className="relative group/row w-full">
+              <button 
+                type="button" 
+                aria-label="Show previous speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(2, 'previous')} 
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <div 
+                ref={speakerCarouselRef2} 
+                onPointerEnter={() => setIsHoveredRow2(true)} 
+                onPointerLeave={() => setIsHoveredRow2(false)}
+                className="scrollbar-none w-full overflow-x-hidden" 
+                aria-label="Auto-scrolling Signature Speakers carousel row 2"
+              >
+                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                  {carouselRow2.map((speaker) => (
+                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                      }} />
+                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                          <span>{speaker.name}</span>
+                        </h3>
+                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                          {speaker.bio}
+                        </p>
+                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                            <span>Book Speaker</span>
+                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </motion.article>
-                ))}
+                    </motion.article>
+                  ))}
+                </div>
               </div>
+              <button 
+                type="button" 
+                aria-label="Show next speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(2, 'next')} 
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
             </div>
 
             {/* Row 3 */}
-            <div 
-              ref={speakerCarouselRef3} 
-              onPointerEnter={() => setIsHoveredRow3(true)} 
-              onPointerLeave={() => setIsHoveredRow3(false)}
-              className="scrollbar-none w-full overflow-x-hidden" 
-              aria-label="Auto-scrolling Signature Speakers carousel row 3"
-            >
-              <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
-                {carouselRow3.map((speaker) => (
-                  <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
-                    <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
-                    <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                    <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
-                      background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
-                    }} />
-                    <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                      <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                        <span>{speaker.name}</span>
-                      </h3>
-                      <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                        {speaker.bio}
-                      </p>
-                      <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                        <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                          <span>Book Speaker</span>
-                          <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                        </a>
+            <div className="relative group/row w-full">
+              <button 
+                type="button" 
+                aria-label="Show previous speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(3, 'previous')} 
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <div 
+                ref={speakerCarouselRef3} 
+                onPointerEnter={() => setIsHoveredRow3(true)} 
+                onPointerLeave={() => setIsHoveredRow3(false)}
+                className="scrollbar-none w-full overflow-x-hidden" 
+                aria-label="Auto-scrolling Signature Speakers carousel row 3"
+              >
+                <div className="flex w-max gap-0 py-2 pl-6 md:pl-16">
+                  {carouselRow3.map((speaker) => (
+                    <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
+                      <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
+                      <div aria-hidden="true" className="absolute inset-0 z-[11] opacity-0 transition-opacity duration-[420ms] group-hover:opacity-100" style={{
+                        background: `linear-gradient(180deg, transparent 0%, ${speaker.tint} 48%, rgba(0,0,0,0.18) 100%)`
+                      }} />
+                      <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
+                        <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                          <span>{speaker.name}</span>
+                        </h3>
+                        <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
+                          {speaker.bio}
+                        </p>
+                        <div className="mt-5 flex translate-y-0 flex-col items-stretch gap-2 opacity-100 transition-all duration-[360ms] ease-in-out md:mt-6 md:flex-row md:items-center md:opacity-0 md:translate-y-3 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                          <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                            <span>Book Speaker</span>
+                            <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </motion.article>
-                ))}
+                    </motion.article>
+                  ))}
+                </div>
               </div>
+              <button 
+                type="button" 
+                aria-label="Show next speakers" 
+                onClick={() => handleSpeakerCarouselAdvance(3, 'next')} 
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
+                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
             </div>
           </div>
 
@@ -2532,6 +2595,88 @@ export const TheSpeakersFirmHome = () => {
       <div id="dialogues" className="overflow-hidden">
         <BeyondThePodium />
       </div>
+
+      <section id="roundtable" className="relative w-full border-t border-b" style={{
+        backgroundColor: COLORS.offWhite,
+        borderColor: SOFT_RULE_COLOR
+      }}>
+        <VerticalBorderLines />
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-20 sm:pt-24 md:pt-[120px] pb-10 relative z-10">
+          <div className="flex flex-col gap-6">
+            <div className={cn(SECTION_TAG_CLASS, 'self-start')} style={SECTION_TAG_STYLE}>
+              <span>Roundtables</span>
+            </div>
+            <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-bold tracking-[-0.04em] leading-none uppercase mt-4" style={{
+              color: COLORS.black
+            }}>
+              Roundtable Discussions
+            </h2>
+            <p className="max-w-[620px] text-[16px] sm:text-[18px] md:text-[20px] font-normal leading-[1.55]" style={{
+              color: COLORS.gray
+            }}>
+              Authoritative dialogue series gathering corporate statesmen, key intellectuals, and leaders to address strategic and transformation challenges.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full px-6 md:px-16 pb-20 sm:pb-24 md:pb-[120px] relative z-10">
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-6 space-y-6">
+            {ROUNDTABLE_INVITES.map((invite) => (
+              <div 
+                key={invite.id} 
+                className="break-inside-avoid relative overflow-hidden rounded-2xl border border-black/10 bg-white group cursor-pointer transition-all duration-500 hover:border-[#e30e04]/50 hover:shadow-2xl"
+                onClick={() => setActiveInviteImage(invite.src)}
+              >
+                <img 
+                  src={invite.src} 
+                  alt={invite.alt} 
+                  className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-6">
+                  <div className="text-white">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-[#e30e04]">Discussion Invite</p>
+                    <h3 className="text-sm font-bold uppercase tracking-[0.05em] mt-1">{invite.alt}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      <AnimatePresence>
+        {activeInviteImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveInviteImage(null)}
+            className="fixed inset-0 z-[300] flex items-center justify-center bg-black/95 p-4 cursor-zoom-out"
+          >
+            <button 
+              type="button" 
+              className="absolute right-6 top-6 z-50 text-white hover:text-[#e30e04] transition-colors"
+              onClick={() => setActiveInviteImage(null)}
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <motion.div 
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              className="relative max-w-4xl max-h-[90vh] overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img 
+                src={activeInviteImage} 
+                alt="Enlarged Roundtable invite" 
+                className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <BriefBureauFormSection />
     </motion.div>;
