@@ -2770,9 +2770,12 @@ export const TheSpeakersFirmHome = () => {
       if (speaker.bio) {
         if (typeof speaker.bio === 'string') {
           bioText = speaker.bio;
-        } else if (React.isValidElement(speaker.bio) && speaker.bio.props && speaker.bio.props.children) {
-          const children = speaker.bio.props.children;
-          bioText = Array.isArray(children) ? children.join(" ") : String(children);
+        } else if (React.isValidElement(speaker.bio) && speaker.bio.props) {
+          const props = speaker.bio.props as any;
+          if (props.children) {
+            const children = props.children;
+            bioText = Array.isArray(children) ? children.join(" ") : String(children);
+          }
         }
       }
       const bioMatch = bioText.toLowerCase().includes(q);
