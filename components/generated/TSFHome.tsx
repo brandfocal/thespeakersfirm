@@ -211,7 +211,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
-  category: ['Leadership', 'Governance', 'Organisational Agility'],
+  category: ['Leadership', 'Governance', 'Organisational Agility', 'Neuroscience'],
   image: '/speakers/Governance/Siphiwe-Moyo-The-Speakers-Firm.jpg',
   alt: 'Siphiwe Moyo',
   quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
@@ -838,7 +838,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'boniwe-dunster',
   name: 'Boniwe Dunster',
-  category: ['Future of Work', 'Organisational Agility'],
+  category: ['Future of Work', 'Organisational Agility', 'Neuroscience'],
   image: '/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg',
   alt: 'Boniwe Dunster',
   quote: 'Nurturing leadership capability and corporate agility.',
@@ -849,7 +849,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'callan-abrahams',
   name: 'Callan Abrahams',
-  category: ['Future of Work', 'A.I.', 'Organisational Agility'],
+  category: ['Future of Work', 'A.I.', 'Organisational Agility', 'Neuroscience'],
   image: '/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg',
   alt: 'Callan Abrahams',
   quote: 'Fostering mental resilience and strategic workplace leadership.',
@@ -926,7 +926,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'buyani-zwane',
   name: 'Dr Buyani Zwane',
-  category: ['Governance', 'Organisational Agility'],
+  category: ['Governance', 'Organisational Agility', 'Neuroscience'],
   image: '/speakers/Governance/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
   alt: 'Dr Buyani Zwane',
   quote: 'Building people, culture, and alignment in resilient organizations.',
@@ -937,7 +937,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'david-molapo',
   name: 'Dr David Molapo',
-  category: ['Governance', 'Organisational Agility'],
+  category: ['Governance', 'Organisational Agility', 'Neuroscience'],
   image: '/speakers/Governance/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
   alt: 'Dr David Molapo',
   quote: 'Empowering leadership through transformation, mentoring and inspiration.',
@@ -1429,6 +1429,61 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Entrepreneur, Business Strategist & Empowerment Speaker</span>
+}, {
+  id: 'zamo-mbele',
+  name: 'Zamo Mbele',
+  category: 'Neuroscience',
+  image: '/speakers/Neuroscience/Zamo-Mbele-The-Speakers-Firm.jpg',
+  alt: 'Zamo Mbele',
+  quote: 'Sustaining mental fitness and composure under board-level pressure.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Clinical Psychologist, Mental Health Advocate & Speaker</span>
+}, {
+  id: 'timothy-maurice-webster',
+  name: 'Timothy Maurice Webster',
+  category: 'Neuroscience',
+  image: '/speakers/Neuroscience/Timothy-Maurice-Webster-The-Speakers-Firm.jpg',
+  alt: 'Timothy Maurice Webster',
+  quote: 'Applying brain science to sharpen brand influence and personal power.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Behavioural Psychology Author & Brand Influence Strategist</span>
+}, {
+  id: 'veli-ndaba',
+  name: 'Veli Ndaba',
+  category: 'Neuroscience',
+  image: '/speakers/Neuroscience/Veli-Ndaba-The-Speakers-Firm.jpg',
+  alt: 'Veli Ndaba',
+  quote: 'Rewiring the brain for neuroleadership and composture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>NeuroLeadership Coach, NeuroSpeaker and Author</span>
+}, {
+  id: 'richie-achukwu',
+  name: 'Dr Richie Achukwu',
+  category: 'Neuroscience',
+  image: '/speakers/Neuroscience/Dr-Richie-Achukwu-The-Speakers-Firm.jpg',
+  alt: 'Dr Richie Achukwu',
+  quote: 'Integrating neuroscience and psychology to lead organizational growth.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Author, Executive & Leadership Coach, Leadership Trainer</span>
+}, {
+  id: 'lauren-davis',
+  name: 'Lauren Davis',
+  category: 'Neuroscience',
+  image: '/speakers/Neuroscience/Lauren-Davis-The-Speakers-Firm.jpg',
+  alt: 'Lauren Davis',
+  quote: 'Hardwiring workplace resilience and psychological safety.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Clinical Psychologist, Workplace Mental Health Coach, Keynote Speaker</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
