@@ -2739,6 +2739,20 @@ export const TheSpeakersFirmHome = () => {
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
 
+  const getTextFromNode = (node: any): string => {
+    if (!node) return "";
+    if (typeof node === 'string' || typeof node === 'number') {
+      return String(node);
+    }
+    if (Array.isArray(node)) {
+      return node.map(getTextFromNode).join(" ");
+    }
+    if (node.props && node.props.children) {
+      return getTextFromNode(node.props.children);
+    }
+    return "";
+  };
+
   const displayedFeaturedSpeakers = FEATURED_SPEAKERS.filter(speaker => {
     // 1. Category Filter
     if (activeSpeakerCategory !== 'All') {
@@ -2765,19 +2779,8 @@ export const TheSpeakersFirmHome = () => {
         ? speaker.category.some(cat => cat.toLowerCase().includes(q))
         : speaker.category.toLowerCase().includes(q);
 
-      // Match Bio/Title text content
-      let bioText = "";
-      if (speaker.bio) {
-        if (typeof speaker.bio === 'string') {
-          bioText = speaker.bio;
-        } else if (React.isValidElement(speaker.bio) && speaker.bio.props) {
-          const props = speaker.bio.props as any;
-          if (props.children) {
-            const children = props.children;
-            bioText = Array.isArray(children) ? children.join(" ") : String(children);
-          }
-        }
-      }
+      // Match Bio/Title text content using recursive extractor
+      const bioText = getTextFromNode(speaker.bio);
       const bioMatch = bioText.toLowerCase().includes(q);
 
       return nameMatch || quoteMatch || categoryStringMatch || bioMatch;
