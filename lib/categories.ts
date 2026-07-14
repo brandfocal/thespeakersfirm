@@ -110,7 +110,7 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
   },
   {
     id: "sports-coaching-and-the-winning-mindset",
-    buttonLabel: "Sports",
+    buttonLabel: "Winning Mindset",
     fullTitle: "Sports, Coaching and the Winning Mindset",
     description: "Elite athletes, championship coaches and sporting icons translating lessons from world-class competition into compelling leadership and business insights."
   },

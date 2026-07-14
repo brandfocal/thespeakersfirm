@@ -926,7 +926,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'buyani-zwane',
   name: 'Dr Buyani Zwane',
-  category: ['Governance', 'Organisational Agility', 'Neuroscience'],
+  category: ['Governance', 'Organisational Agility', 'Neuroscience', 'Sustainability'],
   image: '/speakers/Governance/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
   alt: 'Dr Buyani Zwane',
   quote: 'Building people, culture, and alignment in resilient organizations.',
@@ -1410,7 +1410,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'musa-sono',
   name: 'Musa Sono',
-  category: ['Entrepreneurship', 'Sales'],
+  category: ['Entrepreneurship', 'Sales', 'Winning Mindset'],
   image: '/speakers/Entrepreneurship/Musa-Sono-The-Speakers-Firm.jpg',
   alt: 'Musa Sono',
   quote: 'Overcoming adversity and leading change with purpose.',
@@ -1432,7 +1432,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'zamo-mbele',
   name: 'Zamo Mbele',
-  category: 'Neuroscience',
+  category: ['Neuroscience', 'Sustainability'],
   image: '/speakers/Neuroscience/Zamo-Mbele-The-Speakers-Firm.jpg',
   alt: 'Zamo Mbele',
   quote: 'Sustaining mental fitness and composure under board-level pressure.',
@@ -1454,7 +1454,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'veli-ndaba',
   name: 'Veli Ndaba',
-  category: 'Neuroscience',
+  category: ['Neuroscience', 'Winning Mindset'],
   image: '/speakers/Neuroscience/Veli-Ndaba-The-Speakers-Firm.jpg',
   alt: 'Veli Ndaba',
   quote: 'Rewiring the brain for neuroleadership and composture.',
@@ -1465,7 +1465,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'richie-achukwu',
   name: 'Dr Richie Achukwu',
-  category: 'Neuroscience',
+  category: ['Neuroscience', 'Winning Mindset'],
   image: '/speakers/Neuroscience/Dr-Richie-Achukwu-The-Speakers-Firm.jpg',
   alt: 'Dr Richie Achukwu',
   quote: 'Integrating neuroscience and psychology to lead organizational growth.',
@@ -1476,7 +1476,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'lauren-davis',
   name: 'Lauren Davis',
-  category: 'Neuroscience',
+  category: ['Neuroscience', 'Sustainability'],
   image: '/speakers/Neuroscience/Lauren-Davis-The-Speakers-Firm.jpg',
   alt: 'Lauren Davis',
   quote: 'Hardwiring workplace resilience and psychological safety.',
@@ -1495,6 +1495,61 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Leadership Alignment Coach, Organisational Culture Strategist & Speaker</span>
+}, {
+  id: 'khanyi-chaba',
+  name: 'Khanyi Chaba',
+  category: 'Sustainability',
+  image: '/image_marquee/leadership/Khanyi-Chaba-The-Speakers-Firm.jpg',
+  alt: 'Khanyi Chaba',
+  quote: 'Integrating sustainable Old Mutual responsible business metrics.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Head of Responsible Business, Old Mutual | Sustainability & Corporate Citizenship Strategist</span>
+}, {
+  id: 'victor-ramathesele',
+  name: 'Dr. Victor Ramathesele',
+  category: 'Sustainability',
+  image: '/image_marquee/dr-victor-ramathesele-the-speakers-firm.jpg',
+  alt: 'Dr. Victor Ramathesele',
+  quote: 'Hardwiring corporate health, wellness strategy, and ESG longevity.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>CEO, Medipost Holdings | Sports Physician & Workplace Wellness Strategist</span>
+}, {
+  id: 'somadoda-fikeni',
+  name: 'Dr Somadoda Fikeni',
+  category: ['Governance', 'Geopolitics', 'Sustainability'],
+  image: '/speakers/Governance/Dr-Somadoda-Fikeni-The-Speakers-Firm.jpg',
+  alt: 'Dr Somadoda Fikeni',
+  quote: 'Structuring national governance and sustainable policy architecture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Public Policy Analyst & Governance Strategist</span>
+}, {
+  id: 'neil-tovey',
+  name: 'Neil Tovey',
+  category: 'Winning Mindset',
+  image: '/speakers/WinningMindset/Neil-Tovey-The-Speakers-Firm.jpg',
+  alt: 'Neil Tovey',
+  quote: 'Leading Bafana Bafana AFCON win and structuring high performance.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Bafana Bafana Captain & Soccer Legend, Coach and former Technical Director</span>
+}, {
+  id: 'doctor-khumalo',
+  name: 'Doctor Khumalo',
+  category: 'Winning Mindset',
+  image: '/speakers/WinningMindset/Doctor-Khumalo.jpg',
+  alt: 'Doctor Khumalo',
+  quote: 'Harnessing sporting distinction and strategic tactical leadership.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>South African Soccer Legend, Kaizer Chiefs Icon, Coach & Media Analyst</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
