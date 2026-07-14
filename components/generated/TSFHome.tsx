@@ -2739,16 +2739,49 @@ export const TheSpeakersFirmHome = () => {
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
 
-  const displayedFeaturedSpeakers = activeSpeakerCategory === 'All' 
-    ? FEATURED_SPEAKERS 
-    : FEATURED_SPEAKERS.filter(speaker => {
-        const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
-        const matchLabel = catConfig ? catConfig.buttonLabel : activeSpeakerCategory;
-        if (Array.isArray(speaker.category)) {
-          return speaker.category.some(cat => cat.toLowerCase() === matchLabel.toLowerCase());
+  const displayedFeaturedSpeakers = FEATURED_SPEAKERS.filter(speaker => {
+    // 1. Category Filter
+    if (activeSpeakerCategory !== 'All') {
+      const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
+      const matchLabel = catConfig ? catConfig.buttonLabel : activeSpeakerCategory;
+      const categoryMatches = Array.isArray(speaker.category)
+        ? speaker.category.some(cat => cat.toLowerCase() === matchLabel.toLowerCase())
+        : speaker.category.toLowerCase() === matchLabel.toLowerCase();
+      if (!categoryMatches) return false;
+    }
+
+    // 2. Search Query Filter
+    if (facultySearchQuery.trim() !== '') {
+      const q = facultySearchQuery.toLowerCase();
+      
+      // Match Name
+      const nameMatch = speaker.name.toLowerCase().includes(q);
+      
+      // Match Quote
+      const quoteMatch = speaker.quote.toLowerCase().includes(q);
+      
+      // Match Category strings
+      const categoryStringMatch = Array.isArray(speaker.category)
+        ? speaker.category.some(cat => cat.toLowerCase().includes(q))
+        : speaker.category.toLowerCase().includes(q);
+
+      // Match Bio/Title text content
+      let bioText = "";
+      if (speaker.bio) {
+        if (typeof speaker.bio === 'string') {
+          bioText = speaker.bio;
+        } else if (React.isValidElement(speaker.bio) && speaker.bio.props && speaker.bio.props.children) {
+          const children = speaker.bio.props.children;
+          bioText = Array.isArray(children) ? children.join(" ") : String(children);
         }
-        return speaker.category.toLowerCase() === matchLabel.toLowerCase();
-      });
+      }
+      const bioMatch = bioText.toLowerCase().includes(q);
+
+      return nameMatch || quoteMatch || categoryStringMatch || bioMatch;
+    }
+
+    return true;
+  });
 
   const numRows = displayedFeaturedSpeakers.length <= 8 ? 1 : (displayedFeaturedSpeakers.length <= 16 ? 2 : 3);
   const row1Speakers: typeof FEATURED_SPEAKERS = [];
