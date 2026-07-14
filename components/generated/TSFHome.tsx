@@ -222,7 +222,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'lincoln-mali',
   name: 'Lincoln Mali',
-  category: 'Leadership',
+  category: ['Leadership', 'Organisational Agility'],
   image: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg',
   alt: 'Lincoln Mali',
   quote: 'Leadership is a journey of influence, integrity, and impact.',
@@ -926,7 +926,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'buyani-zwane',
   name: 'Dr Buyani Zwane',
-  category: 'Governance',
+  category: ['Governance', 'Organisational Agility'],
   image: '/speakers/Governance/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
   alt: 'Dr Buyani Zwane',
   quote: 'Building people, culture, and alignment in resilient organizations.',
@@ -937,7 +937,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'david-molapo',
   name: 'Dr David Molapo',
-  category: 'Governance',
+  category: ['Governance', 'Organisational Agility'],
   image: '/speakers/Governance/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
   alt: 'Dr David Molapo',
   quote: 'Empowering leadership through transformation, mentoring and inspiration.',
