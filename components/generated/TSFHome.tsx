@@ -431,7 +431,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'azania-mosaka',
   name: 'Azania Mosaka',
-  category: ['Keynote', 'MCs', 'Reputation'],
+  category: ['Keynote', 'MCs', 'Reputation', 'Sales'],
   image: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg',
   alt: 'Azania Mosaka',
   quote: 'Strategic communications and media influence.',
@@ -453,7 +453,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'nyimpini-mabunda',
   name: 'Nyimpini Mabunda',
-  category: ['Keynote', 'Governance'],
+  category: ['Keynote', 'Governance', 'Sales'],
   image: '/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
   alt: 'Nyimpini Mabunda',
   quote: 'Boardroom strategy and corporate leadership in action.',
@@ -893,7 +893,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mncane-mthunzi',
   name: 'Dr Mncane Mthunzi',
-  category: ['Future of Work', 'Economics', 'Business Transformation'],
+  category: ['Future of Work', 'Economics', 'Business Transformation', 'Sales'],
   image: '/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg',
   alt: 'Dr Mncane Mthunzi',
   quote: 'Driving business turnaround and operational excellence.',
@@ -1289,7 +1289,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'rams-mabote',
   name: 'Rams Mabote',
-  category: ['Media', 'Reputation'],
+  category: ['Media', 'Reputation', 'Sales'],
   image: '/speakers/Media/Rams-Mabote-The-Speakers-Firm.jpg',
   alt: 'Rams Mabote',
   quote: 'Coaching C-suite reputation and leading public relations.',
@@ -1410,7 +1410,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'musa-sono',
   name: 'Musa Sono',
-  category: 'Entrepreneurship',
+  category: ['Entrepreneurship', 'Sales'],
   image: '/speakers/Entrepreneurship/Musa-Sono-The-Speakers-Firm.jpg',
   alt: 'Musa Sono',
   quote: 'Overcoming adversity and leading change with purpose.',
