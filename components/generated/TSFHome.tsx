@@ -211,7 +211,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
-  category: ['Leadership', 'Governance', 'Organisational Agility', 'Neuroscience'],
+  category: ['Leadership', 'Governance', 'Organisational Agility', 'Neuroscience', 'Team-Building'],
   image: '/speakers/Governance/Siphiwe-Moyo-The-Speakers-Firm.jpg',
   alt: 'Siphiwe Moyo',
   quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
@@ -673,7 +673,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'nimrod-nkosi',
   name: 'Nimrod Nkosi',
-  category: 'MCs',
+  category: ['MCs', 'Team-Building'],
   image: '/speakers/MCs/Nimrod-Nkosi-The-Speakers-Firm.jpg',
   alt: 'Nimrod Nkosi',
   quote: 'Professional acting and corporate master of ceremonies.',
@@ -750,7 +750,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'hector-motivator',
   name: 'Hector Motivator',
-  category: 'MCs',
+  category: ['MCs', 'Team-Building'],
   image: '/speakers/MCs/Hector-Motivator.jpg',
   alt: 'Hector Motivator',
   quote: 'Energizing audiences and hosting dynamic events.',
@@ -838,7 +838,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'boniwe-dunster',
   name: 'Boniwe Dunster',
-  category: ['Future of Work', 'Organisational Agility', 'Neuroscience'],
+  category: ['Future of Work', 'Organisational Agility', 'Neuroscience', 'Team-Building'],
   image: '/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg',
   alt: 'Boniwe Dunster',
   quote: 'Nurturing leadership capability and corporate agility.',
@@ -937,7 +937,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'david-molapo',
   name: 'Dr David Molapo',
-  category: ['Governance', 'Organisational Agility', 'Neuroscience'],
+  category: ['Governance', 'Organisational Agility', 'Neuroscience', 'Team-Building'],
   image: '/speakers/Governance/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
   alt: 'Dr David Molapo',
   quote: 'Empowering leadership through transformation, mentoring and inspiration.',
@@ -1036,7 +1036,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'abner-mariri',
   name: 'Abner Mariri',
-  category: ['Governance', 'Organisational Agility'],
+  category: ['Governance', 'Organisational Agility', 'Team-Building'],
   image: '/speakers/Governance/Abner-Mariri-The-Speakers-Firm.jpg',
   alt: 'Abner Mariri',
   quote: 'Motivating team performance and catalytic business growth.',
@@ -1484,6 +1484,17 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>Clinical Psychologist, Workplace Mental Health Coach, Keynote Speaker</span>
+}, {
+  id: 'queen-ramotsehoa',
+  name: 'Queen Ramotsehoa',
+  category: ['Leadership', 'Team-Building'],
+  image: '/image_marquee/leadership/Queen-Ramotsehoa-The-Speakers-Firm.jpg',
+  alt: 'Queen Ramotsehoa',
+  quote: 'Shaping team alignment and high-performance leadership culture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Leadership Alignment Coach, Organisational Culture Strategist & Speaker</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
