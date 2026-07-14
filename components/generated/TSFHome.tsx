@@ -2499,7 +2499,9 @@ export const TheSpeakersFirmHome = () => {
     const urlCategory = searchParams.get("category");
     if (urlCategory) {
       const match = CATEGORIES_CONFIG.find(
-        c => c.buttonLabel.toLowerCase() === urlCategory.toLowerCase() || c.id.toLowerCase() === urlCategory.toLowerCase()
+        c => c.buttonLabel.toLowerCase() === urlCategory.toLowerCase() || 
+             c.id.toLowerCase() === urlCategory.toLowerCase() ||
+             c.id.toLowerCase().startsWith(urlCategory.toLowerCase())
       );
       if (match) {
         setActiveSpeakerCategory(match.id);
@@ -2514,7 +2516,9 @@ export const TheSpeakersFirmHome = () => {
     const handleCategorySelect = (e: Event) => {
       const customEvent = e as CustomEvent<string>;
       const match = CATEGORIES_CONFIG.find(
-        c => c.buttonLabel.toLowerCase() === customEvent.detail.toLowerCase() || c.id.toLowerCase() === customEvent.detail.toLowerCase()
+        c => c.buttonLabel.toLowerCase() === customEvent.detail.toLowerCase() || 
+             c.id.toLowerCase() === customEvent.detail.toLowerCase() ||
+             c.id.toLowerCase().startsWith(customEvent.detail.toLowerCase())
       );
       if (match) {
         setActiveSpeakerCategory(match.id);
