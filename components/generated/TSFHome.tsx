@@ -168,13 +168,13 @@ const FEATURED_SPEAKERS: Array<{
   id: 'prince-mashele',
   name: 'Prince Mashele',
   category: 'Geopolitics',
-  image: '/image_marquee/Prince-Mashele-The-Speakers-Firm.jpg',
+  image: '/speakers/Geopolitics/Prince-Mashele-The-Speakers-Firm.jpg',
   alt: 'Prince Mashele',
   quote: 'Understanding political dynamics is key to future stability.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Political Analyst, Researcher & Author</span>
+  bio: <span>Political Analyst, Columnist & Public Intellectual</span>
 }, {
   id: 'clement-manyathela',
   name: 'Clement Manyathela',
@@ -201,13 +201,13 @@ const FEATURED_SPEAKERS: Array<{
   id: 'khaya-sithole',
   name: 'Khaya Sithole',
   category: 'Economics',
-  image: '/image_marquee/Khaya-Sithole-The-Speakers-Firm.jpg',
+  image: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg',
   alt: 'Khaya Sithole',
   quote: 'Decoding public finance with accountability and transparency.',
   youtubeId: 'arj7oStGLkU',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Chartered Accountant, Academic & Macro Analyst</span>
+  bio: <span>Accountant, Broadcaster & Economic Analyst</span>
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
@@ -893,7 +893,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mncane-mthunzi',
   name: 'Dr Mncane Mthunzi',
-  category: 'Future of Work',
+  category: ['Future of Work', 'Economics'],
   image: '/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg',
   alt: 'Dr Mncane Mthunzi',
   quote: 'Driving business turnaround and operational excellence.',
@@ -1110,6 +1110,105 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Unapologetic Truth-Teller & Disruption Artist</span>
+}, {
+  id: 'duma-gqubule',
+  name: 'Duma Gqubule',
+  category: 'Economics',
+  image: '/speakers/Economics/Duma-Gqubule-The-Speakers-Firm.jpg',
+  alt: 'Duma Gqubule',
+  quote: 'Advocating radical transformation and macroeconomic reform.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Economist, Financial Commentator & Transformation Strategist</span>
+}, {
+  id: 'pali-lehohla',
+  name: 'Dr. Pali Lehohla',
+  category: 'Economics',
+  image: '/speakers/Economics/Dr-Pali-Lehohla-The-Speakers-Firm.jpg',
+  alt: 'Dr. Pali Lehohla',
+  quote: 'Strengthening nation building through development economics and statistics.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Former Statistician-General & Development Economist</span>
+}, {
+  id: 'elias-masilela',
+  name: 'Elias Masilela',
+  category: 'Economics',
+  image: '/speakers/Economics/Elias-Masilela-The-Speakers-Firm.jpg',
+  alt: 'Elias Masilela',
+  quote: 'Designing social security policies and corporate governance structures.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Economist, Former PIC CEO & Policy Architect</span>
+}, {
+  id: 'sifiso-skenjana',
+  name: 'Sifiso Skenjana',
+  category: 'Economics',
+  image: '/speakers/Economics/Sifiso-Skenjana-The-Speakers-Firm.jpg',
+  alt: 'Sifiso Skenjana',
+  quote: 'Driving inclusive financial growth and developmental advisory.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Economist, Entrepreneur & Inclusive Growth Strategist</span>
+}, {
+  id: 'thembisa-fakude',
+  name: 'Thembisa Fakude',
+  category: 'Geopolitics',
+  image: '/speakers/Geopolitics/Thembisa-Fakude-The-Speakers-Firm.jpg',
+  alt: 'Thembisa Fakude',
+  quote: 'Decoding global relations and Africa-Middle East policy risks.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Political Analyst, Author & Middle East–Africa Relations Specialist</span>
+}, {
+  id: 'mcebisi-ndletyana',
+  name: 'Prof. Mcebisi Ndletyana',
+  category: 'Geopolitics',
+  image: '/speakers/Geopolitics/Prof-Mcebisi-Ndletyana-The-Speakers-Firm.jpg',
+  alt: 'Prof. Mcebisi Ndletyana',
+  quote: 'Reflecting historical context and political analysis on democracy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Academic, Historian & Political Commentator</span>
+}, {
+  id: 'ralph-mathekga',
+  name: 'Dr. Ralph Mathekga',
+  category: 'Geopolitics',
+  image: '/speakers/Geopolitics/Dr-Ralph-Mathekga-The-Speakers-Firm.jpg',
+  alt: 'Dr. Ralph Mathekga',
+  quote: 'Analyzing democratic institutional health and governance dynamics.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Political Analyst, Author & Democracy Specialist</span>
+}, {
+  id: 'ebrahim-fakir',
+  name: 'Ebrahim Fakir',
+  category: 'Geopolitics',
+  image: '/speakers/Geopolitics/Ebrahim-Fakir-The-Speakers-Firm.jpg',
+  alt: 'Ebrahim Fakir',
+  quote: 'Strengthening citizen engagement and public policy review.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Political Analyst & Democracy Governance Specialist</span>
+}, {
+  id: 'siphamandla-zondi',
+  name: 'Dr. Siphamandla Zondi',
+  category: 'Geopolitics',
+  image: '/speakers/Geopolitics/Dr-Siphamandla-Zondi-The-Speakers-Firm.jpg',
+  alt: 'Dr. Siphamandla Zondi',
+  quote: 'Shaping Global South diplomacy and foreign policy strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Political Scientist & Global South Policy Strategist</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
