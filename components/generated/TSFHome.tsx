@@ -552,7 +552,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'victor-kgomoeswana',
   name: 'Victor Kgomoeswana',
-  category: 'MCs',
+  category: ['MCs', 'Economics', 'Business Transformation'],
   image: '/speakers/MCs/Victor-Kgomoeswana-The-Speakers-Firm.jpg',
   alt: 'Victor Kgomoeswana',
   quote: 'African business insights and expert conference moderation.',
