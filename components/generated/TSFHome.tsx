@@ -120,7 +120,7 @@ const HERO_SLIDES = [{
 }];
 const HERO_SLIDE_DURATION_MS = 5000;
 
-const FEATURED_SPEAKERS: Array<{
+export const FEATURED_SPEAKERS: Array<{
   id: string;
   name: string;
   category: string | string[];
@@ -2770,8 +2770,8 @@ export const TheSpeakersFirmHome = () => {
     }
 
     // 2. Search Query Filter
-    if (facultySearchQuery.trim() !== '') {
-      const q = facultySearchQuery.toLowerCase();
+    if (normalizedFacultySearchQuery !== '') {
+      const q = normalizedFacultySearchQuery;
       
       // Match Name
       const nameMatch = speaker.name.toLowerCase().includes(q);
@@ -3303,7 +3303,6 @@ export const TheSpeakersFirmHome = () => {
       <CurtainReveal />
       <ScrollProgressBar />
       <CustomCursor />
-      <FloatingNav searchQuery={localSearch} onSearchQueryChange={handleNavFacultySearchChange} />
       <AnimatePresence>
         {activeClipSpeaker && <motion.div key="signature-speaker-video-modal" className="fixed inset-0 z-[500] flex items-center justify-center px-2 py-4 sm:px-6 sm:py-6" style={{
         backgroundColor: 'rgba(0,0,0,0.85)'

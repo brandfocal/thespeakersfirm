@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import { FEATURED_SPEAKERS } from "./generated/TSFHome";
+
 const COLORS = {
   black: '#000000',
   red: '#e30e04',
@@ -14,36 +16,30 @@ const COLORS = {
   borderGray: '#ffffff',
 };
 
-const FACULTY_LIST = [
-  {
-    id: 'phumzile-mlambo-ngcuka',
-    name: 'Dr. Phumzile Mlambo-Ngcuka',
-    designation: 'Global Stateswoman',
-    image: '/highlighted_faculty/Dr-Phumzile-Mlambo-Ngcuka.jpg',
-    trackId: 'leadership-strategy-and-executive-performance'
-  },
-  {
-    id: 'bonang-mohale',
-    name: 'Prof. Bonang Mohale',
-    designation: 'Corporate Statesman',
-    image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-    trackId: 'leadership-strategy-and-executive-performance'
-  },
-  {
-    id: 'khaya-sithole',
-    name: 'Khaya Sithole',
-    designation: 'Academic & Macro Analyst',
-    image: '/highlighted_faculty/Khaya-Sithole.jpg',
-    trackId: 'economics-and-politics'
-  },
-  {
-    id: 'ralph-mathekga',
-    name: 'Dr. Ralph Mathekga',
-    designation: 'Political Strategist & Author',
-    image: '/highlighted_faculty/Dr-Ralph-Mathekga.jpg',
-    trackId: 'economics-and-politics'
+const getTextFromNode = (node: any): string => {
+  if (!node) return "";
+  if (typeof node === 'string' || typeof node === 'number') {
+    return String(node);
   }
-];
+  if (Array.isArray(node)) {
+    return node.map(getTextFromNode).join(" ");
+  }
+  if (node.props && node.props.children) {
+    return getTextFromNode(node.props.children);
+  }
+  return "";
+};
+
+const FACULTY_LIST = FEATURED_SPEAKERS.map(s => {
+  const bioText = getTextFromNode(s.bio);
+  return {
+    id: s.id,
+    name: s.name,
+    designation: bioText,
+    image: s.image,
+    trackId: Array.isArray(s.category) ? s.category[0] : s.category
+  };
+});
 
 const HEADER_NAV_LINKS = [
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
