@@ -120,11 +120,22 @@ const HERO_SLIDES = [{
 }];
 const HERO_SLIDE_DURATION_MS = 5000;
 
-const FEATURED_SPEAKERS = [{
+const FEATURED_SPEAKERS: Array<{
+  id: string;
+  name: string;
+  category: string | string[];
+  image: string;
+  alt: string;
+  quote: string;
+  youtubeId: string;
+  topics: string[];
+  tint: string;
+  bio: React.ReactNode;
+}> = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
-  category: 'Leadership',
-  image: '/image_marquee/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  category: ['Leadership', 'Governance'],
+  image: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
   alt: 'Dr. Phumzile Mlambo-Ngcuka',
   quote: 'Education and equality are the cornerstones of progress.',
   youtubeId: 'qp0HIF3SfI4',
@@ -135,7 +146,7 @@ const FEATURED_SPEAKERS = [{
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
   category: 'Governance',
-  image: '/image_marquee/Bonang-Mohale-The-Speakers-Firm.jpg',
+  image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
   alt: 'Prof. Bonang Mohale',
   quote: 'Servant leadership is the ultimate competitive edge.',
   youtubeId: '2s5CXK-w0AQ',
@@ -145,7 +156,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'nozipho-tshabalala',
   name: 'Nozipho Tshabalala',
-  category: 'MCs',
+  category: ['Keynote', 'MCs'],
   image: '/speakers/MCs/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
   alt: 'Nozipho Tshabalala',
   quote: 'Facilitating conversations that matter for Africa’s development.',
@@ -179,13 +190,13 @@ const FEATURED_SPEAKERS = [{
   id: 'sizwe-mpofu-walsh',
   name: 'Dr. Sizwe Mpofu-Walsh',
   category: 'Future of Work',
-  image: '/faculty/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
+  image: '/speakers/FutureOfWork/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
   alt: 'Dr. Sizwe Mpofu-Walsh',
   quote: 'Dismantling old paradigms to rebuild robust institutions.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Author, Academic & Host of SMWX</span>
+  bio: <span>Lecturer in the Department of International Relations at Wits University, Podcaster, Author, Musician and Activist</span>
 }, {
   id: 'khaya-sithole',
   name: 'Khaya Sithole',
@@ -200,8 +211,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
-  category: 'High-Performance',
-  image: '/image_marquee/leadership/Siphiwe-Moyo-The-Speakers-Firm.jpg',
+  category: ['Leadership', 'Governance'],
+  image: '/speakers/Governance/Siphiwe-Moyo-The-Speakers-Firm.jpg',
   alt: 'Siphiwe Moyo',
   quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
   youtubeId: 'qp0HIF3SfI4',
@@ -266,14 +277,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'alistair-mokoena',
   name: 'Dr Alistair Mokoena',
-  category: 'Branding',
-  image: '/image_marquee/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
+  category: ['Branding', 'Future of Work'],
+  image: '/speakers/FutureOfWork/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
   alt: 'Dr Alistair Mokoena',
   quote: 'Strong brands are built on authentic human connections.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Country Director of Google South Africa, Professor & Author</span>
+  bio: <span>The Architect of Digital Futures, Country Director: Google South Africa</span>
 }, {
   id: 'sylvester-chauke',
   name: 'Sylvester Chauke',
@@ -365,7 +376,7 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'gerry-rantseli-elsdon',
   name: 'Gerry Rantseli-Elsdon',
-  category: 'MCs',
+  category: ['Keynote', 'MCs'],
   image: '/speakers/MCs/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
   alt: 'Gerry Rantseli-Elsdon',
   quote: 'Inspirational broadcasting and global humanitarian leadership.',
@@ -387,8 +398,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'thuli-madonsela-keynote',
   name: 'Prof. Thuli Madonsela',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
   alt: 'Prof. Thuli Madonsela',
   quote: 'Justice and integrity are the cornerstones of democracy.',
   youtubeId: 'qp0HIF3SfI4',
@@ -398,8 +409,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'lene-molefi',
   name: 'Lene Molefi',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Nene-Molefi-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
   alt: 'Lene Molefi',
   quote: 'Cultural transformation starts with equity and inclusion.',
   youtubeId: 'qp0HIF3SfI4',
@@ -409,18 +420,18 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'vumile-msweli',
   name: 'Dr Vumile Msweli',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Future of Work'],
+  image: '/speakers/FutureOfWork/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
   alt: 'Dr Vumile Msweli',
   quote: 'Empowering global careers and organizational human capital.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
-  bio: <span>Inspirational Speaker, Career Coach & Human Capital Strategist</span>
+  bio: <span>Chief Executive Officer, Hesed Consulting, International Keynote Speaker, Redefining People, Leadership & the Future of Work</span>
 }, {
   id: 'azania-mosaka',
   name: 'Azania Mosaka',
-  category: 'MCs',
+  category: ['Keynote', 'MCs'],
   image: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg',
   alt: 'Azania Mosaka',
   quote: 'Strategic communications and media influence.',
@@ -431,8 +442,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Femi-Adebanji-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Femi-Adebanji-The-Speakers-Firm.jpg',
   alt: 'Femi Adebanji',
   quote: 'Building global leadership and customer experience excellence.',
   youtubeId: 'qp0HIF3SfI4',
@@ -442,8 +453,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'nyimpini-mabunda',
   name: 'Nyimpini Mabunda',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
   alt: 'Nyimpini Mabunda',
   quote: 'Boardroom strategy and corporate leadership in action.',
   youtubeId: 'qp0HIF3SfI4',
@@ -453,8 +464,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'maanda-tshifularo',
   name: 'Dr Maanda Tshifularo',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Maanda-Tshifularo-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Maanda-Tshifularo-The-Speakers-Firm.jpg',
   alt: 'Dr Maanda Tshifularo',
   quote: 'Bridging leadership theory with boardroom execution.',
   youtubeId: 'qp0HIF3SfI4',
@@ -464,8 +475,8 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'maurice-radebe',
   name: 'Prof. Maurice Radebe',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Maurice-Radebe-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Governance'],
+  image: '/speakers/Governance/Maurice-Radebe-The-Speakers-Firm.jpg',
   alt: 'Prof. Maurice Radebe',
   quote: 'Energy pioneering and corporate leadership excellence.',
   youtubeId: 'qp0HIF3SfI4',
@@ -475,14 +486,14 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'andisa-liba',
   name: 'Andisa Liba',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Andisa-Liba-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'Future of Work'],
+  image: '/speakers/FutureOfWork/Andisa-Liba-The-Speakers-Firm.jpg',
   alt: 'Andisa Liba',
   quote: 'Fostering future of work cultures and human capital excellence.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
-  bio: <span>Human Capital Executive, Future of Work Leader & Strategist</span>
+  bio: <span>Chief People Officer, FloatPays, Award-Winning HR Executive & Conference Speaker</span>
 }, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
@@ -816,14 +827,223 @@ const FEATURED_SPEAKERS = [{
 }, {
   id: 'trudy-theledi',
   name: 'Trudy Theledi',
-  category: 'MCs',
-  image: '/speakers/MCs/Trudy-Theledi-The-Speakers-Firm.jpg',
+  category: ['MCs', 'Future of Work'],
+  image: '/speakers/FutureOfWork/Trudy-Theledi-The-Speakers-Firm.jpg',
   alt: 'Trudy Theledi',
   quote: 'Directing programmes and hosting events with grace.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
-  bio: <span>Broadcaster, Programme Director & Master of Ceremonies</span>
+  bio: <span>MC, Broadcaster</span>
+}, {
+  id: 'boniwe-dunster',
+  name: 'Boniwe Dunster',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg',
+  alt: 'Boniwe Dunster',
+  quote: 'Nurturing leadership capability and corporate agility.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Executive Manager, Finalist, 2022 IPM HR Practitioner of the Year, Acclaimed Speaker, Facilitator</span>
+}, {
+  id: 'callan-abrahams',
+  name: 'Callan Abrahams',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg',
+  alt: 'Callan Abrahams',
+  quote: 'Fostering mental resilience and strategic workplace leadership.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>The Voice of Resilience, Mental Health & Leadership Strategist</span>
+}, {
+  id: 'puleng-mokhoalibe',
+  name: 'Dr Puleng Mokhoalibe',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
+  alt: 'Dr Puleng Mokhoalibe',
+  quote: 'Catalysing innovation through design thinking and future strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>The Innovation Catalyst, Design Thinking & Future Strategy Specialist</span>
+}, {
+  id: 'kgomotso-mamello-motshidi',
+  name: 'Kgomotso Mamello Motshidi',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg',
+  alt: 'Kgomotso Mamello Motshidi',
+  quote: 'Leveraging capital, investment, and technology for Africa’s growth.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>The Capital Maven, Investment Entrepreneur & Wealth Builder</span>
+}, {
+  id: 'manqoba-zungu',
+  name: 'Manqoba Zungu',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Manqoba-Zungu-The-Speakers-Firm.jpg',
+  alt: 'Manqoba Zungu',
+  quote: 'Shaping future-ready skills and leading youth employability.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>TEDx Speaker, WEF Young Global Leader, Part-Time Faculty at GIBS & AmazuluFC Business College, CEO, GetReadySkills & Business Executive, SoluGrowth</span>
+}, {
+  id: 'mncane-mthunzi',
+  name: 'Dr Mncane Mthunzi',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg',
+  alt: 'Dr Mncane Mthunzi',
+  quote: 'Driving business turnaround and operational excellence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Business Turnaround Strategist, Operational Excellence Practitioner and Scholar</span>
+}, {
+  id: 'ntandoyenkosi-kunene-radzuma',
+  name: 'Ntandoyenkosi Kunene-Radzuma',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Ntandoyenkosi-Kunene-Radzuma-The-Speakers-Firm.jpg',
+  alt: 'Ntandoyenkosi Kunene-Radzuma',
+  quote: 'Empowering future leaders and advocating for educational reform.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Miss South Africa 2016, Programme Lead, Author & Speaker, Coach & Education Activist Shaping Leadership, Culture & People Futures</span>
+}, {
+  id: 'tseliso-mohlomi',
+  name: 'Tseliso Mohlomi',
+  category: 'Future of Work',
+  image: '/speakers/FutureOfWork/Tseliso-Mohlomi-The-Speakers-Firm.jpg',
+  alt: 'Tseliso Mohlomi',
+  quote: 'Architecting intercultural communication and ethical organizational futures.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Senior Director, Institute for the Future of Work at TUT, Architect of Culture, Storytelling, and Ethical Futures</span>
+}, {
+  id: 'buyani-zwane',
+  name: 'Dr Buyani Zwane',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-Buyani-Zwane-The-Speakers-Firm.jpg',
+  alt: 'Dr Buyani Zwane',
+  quote: 'Building people, culture, and alignment in resilient organizations.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>The People & Culture Builder, Leadership Coach & Organisational Strategist</span>
+}, {
+  id: 'david-molapo',
+  name: 'Dr David Molapo',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
+  alt: 'Dr David Molapo',
+  quote: 'Empowering leadership through transformation, mentoring and inspiration.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>The Leadership Mentor, Inspirational Speaker & Transformation Strategist</span>
+}, {
+  id: 'eunice-cross',
+  name: 'Dr Eunice Cross',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-Eunice-Cross-The-Speakers-Firm.jpg',
+  alt: 'Dr Eunice Cross',
+  quote: 'Legal advising, entrepreneurship and boardroom agility.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Attorney, Entrepreneur, and Founder of EC Advisory</span>
+}, {
+  id: 'john-kani',
+  name: 'Dr John Kani',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-John-Kani-The-Speakers-Firm.jpg',
+  alt: 'Dr John Kani',
+  quote: 'Telling stories that shape cultural heritage and boardroom dynamics.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>The Living Legend, Actor, Playwright & Cultural Icon</span>
+}, {
+  id: 'maureen-tong',
+  name: 'Dr Maureen Tong',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-Maureen-Tong-The-Speakers-Firm.jpg',
+  alt: 'Dr Maureen Tong',
+  quote: 'Advocating gender power and leadership in institutional reform.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>The Governance & Gender Powerhouse, Leadership Coach & Institutional Reform Specialist</span>
+}, {
+  id: 'dudu-msomi',
+  name: 'Dudu Msomi',
+  category: 'Governance',
+  image: '/speakers/Governance/Dudu-Msomi-The-Speakers-Firm.jpg',
+  alt: 'Dudu Msomi',
+  quote: 'Bridging strategic board advisory and ethical corporate governance.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>The Governance Architect, Board Advisor & Strategy Specialist</span>
+}, {
+  id: 'lerato-sithole',
+  name: 'Lerato Sithole',
+  category: 'Governance',
+  image: '/speakers/Governance/Lerato-Sithole-The-Speakers-Firm.jpg',
+  alt: 'Lerato Sithole',
+  quote: 'Architecting brand visibility, influence and marketing strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>The Brand & Influence Architect | Marketing, Media & Leadership Specialist</span>
+}, {
+  id: 'luthando-daniels',
+  name: 'Luthando Daniels',
+  category: 'Governance',
+  image: '/speakers/Governance/Luthando-Daniels-The-Speakers-Firm.jpg',
+  alt: 'Luthando Daniels',
+  quote: 'Designing emerging leadership and youth advocate networks.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>The Emerging Voices Architect, Youth Development & Leadership Advocate</span>
+}, {
+  id: 'mazwe-majola',
+  name: 'Prof Mazwe Majola',
+  category: 'Governance',
+  image: '/speakers/Governance/Prof-Mazwe-Majola-The-Speakers-Firm.jpg',
+  alt: 'Prof Mazwe Majola',
+  quote: 'Strengthening gender development and national policy advisors.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>The Governance & Gender Powerhouse, Leadership Coach & Institutional Reform Specialist</span>
+}, {
+  id: 'sthembiso-phakathi',
+  name: 'Sthembiso Phakathi',
+  category: 'Governance',
+  image: '/speakers/Governance/sthembiso-phakathi-The-Speakers-Firm.jpg',
+  alt: 'Sthembiso Phakathi',
+  quote: 'Analyzing organizational dynamics, change, and corporate strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>The Organisational Dynamics Analyst, Culture, Change & Strategy Advisor</span>
+}, {
+  id: 'abner-mariri',
+  name: 'Abner Mariri',
+  category: 'Governance',
+  image: '/speakers/Governance/Abner-Mariri-The-Speakers-Firm.jpg',
+  alt: 'Abner Mariri',
+  quote: 'Motivating team performance and catalytic business growth.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>The Performance Catalyst, Leadership, Motivation & Growth Specialist</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
@@ -1812,12 +2032,47 @@ export const TheSpeakersFirmHome = () => {
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
   const [activeInviteImage, setActiveInviteImage] = React.useState<string | null>(null);
 
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   // Preload all speaker images to make category switches and image displays instant
   React.useEffect(() => {
     FEATURED_SPEAKERS.forEach(speaker => {
       const img = new Image();
       img.src = speaker.image;
     });
+  }, []);
+
+  // Sync category state from URL query parameters
+  React.useEffect(() => {
+    const urlCategory = searchParams.get("category");
+    if (urlCategory) {
+      const match = CATEGORIES_CONFIG.find(
+        c => c.buttonLabel.toLowerCase() === urlCategory.toLowerCase() || c.id.toLowerCase() === urlCategory.toLowerCase()
+      );
+      if (match) {
+        setActiveSpeakerCategory(match.id);
+      } else if (urlCategory.toLowerCase() === 'all') {
+        setActiveSpeakerCategory('All');
+      }
+    }
+  }, [searchParams]);
+
+  // Sync category state from sticky bottom menu custom events
+  React.useEffect(() => {
+    const handleCategorySelect = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      const match = CATEGORIES_CONFIG.find(
+        c => c.buttonLabel.toLowerCase() === customEvent.detail.toLowerCase() || c.id.toLowerCase() === customEvent.detail.toLowerCase()
+      );
+      if (match) {
+        setActiveSpeakerCategory(match.id);
+      } else if (customEvent.detail.toLowerCase() === 'all') {
+        setActiveSpeakerCategory('All');
+      }
+    };
+    window.addEventListener('tsf-select-category', handleCategorySelect);
+    return () => window.removeEventListener('tsf-select-category', handleCategorySelect);
   }, []);
 
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
@@ -1828,9 +2083,6 @@ export const TheSpeakersFirmHome = () => {
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
-
-  const router = useRouter();
-  const searchParams = useSearchParams();
   const facultySearchQuery = searchParams.get("search") || "";
   const [localSearch, setLocalSearch] = React.useState(facultySearchQuery);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -1894,6 +2146,9 @@ export const TheSpeakersFirmHome = () => {
     : FEATURED_SPEAKERS.filter(speaker => {
         const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
         const matchLabel = catConfig ? catConfig.buttonLabel : activeSpeakerCategory;
+        if (Array.isArray(speaker.category)) {
+          return speaker.category.some(cat => cat.toLowerCase() === matchLabel.toLowerCase());
+        }
         return speaker.category.toLowerCase() === matchLabel.toLowerCase();
       });
 
@@ -1950,6 +2205,20 @@ export const TheSpeakersFirmHome = () => {
 
   const handleFeaturedSpeakerFilterChange = (category: string) => {
     setActiveSpeakerCategory(category);
+    const catConfig = CATEGORIES_CONFIG.find(c => c.id === category);
+    const label = catConfig ? catConfig.buttonLabel : category;
+    
+    // Sync sticky bottom menu
+    window.dispatchEvent(new CustomEvent('tsf-select-category', { detail: label }));
+    
+    // Sync URL search parameters
+    const params = new URLSearchParams(window.location.search);
+    if (category === 'All') {
+      params.delete('category');
+    } else {
+      params.set('category', label);
+    }
+    router.push(`/?${params.toString()}`, { scroll: false });
   };
 
   const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
@@ -2618,7 +2887,14 @@ export const TheSpeakersFirmHome = () => {
           >
             All
           </button>
-          {CATEGORIES_CONFIG.map((cat) => (
+          {CATEGORIES_CONFIG.filter((cat) =>
+            FEATURED_SPEAKERS.some((s) => {
+              if (Array.isArray(s.category)) {
+                return s.category.some(c => c.toLowerCase() === cat.buttonLabel.toLowerCase());
+              }
+              return s.category.toLowerCase() === cat.buttonLabel.toLowerCase();
+            })
+          ).map((cat) => (
             <button
               key={cat.id}
               type="button"
