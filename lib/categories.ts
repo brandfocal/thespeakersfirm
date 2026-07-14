@@ -104,7 +104,7 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
   },
   {
     id: "high-performance-teams-and-team-building-experiences",
-    buttonLabel: "High-Performance",
+    buttonLabel: "Team-Building",
     fullTitle: "High-Performance Teams and Team-Building Experiences",
     description: "Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions."
   },
@@ -125,12 +125,6 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
     buttonLabel: "MCs",
     fullTitle: "Celebrity Speakers, MCs, Comedy and Entertainment",
     description: "Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event."
-  },
-  {
-    id: "high-performance-teams-and-team-building-experiences",
-    buttonLabel: "Team-Building",
-    fullTitle: "High-Performance Teams and Team-Building Experiences",
-    description: "Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions."
   }
 ];
 
