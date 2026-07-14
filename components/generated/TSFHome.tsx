@@ -431,7 +431,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'azania-mosaka',
   name: 'Azania Mosaka',
-  category: ['Keynote', 'MCs'],
+  category: ['Keynote', 'MCs', 'Reputation'],
   image: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg',
   alt: 'Azania Mosaka',
   quote: 'Strategic communications and media influence.',
