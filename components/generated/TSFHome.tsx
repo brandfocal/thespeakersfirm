@@ -233,7 +233,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'stafford-masie',
   name: 'Stafford Masie',
-  category: ['A.I.', 'Futurists'],
+  category: ['A.I.', 'Futurists', 'Business Transformation'],
   image: '/image_marquee/stafford-masie-the-speakers-firm.jpg',
   alt: 'Stafford Masie',
   quote: 'Technology is not about gadgets, it is about human empowerment.',
@@ -893,7 +893,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mncane-mthunzi',
   name: 'Dr Mncane Mthunzi',
-  category: ['Future of Work', 'Economics'],
+  category: ['Future of Work', 'Economics', 'Business Transformation'],
   image: '/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg',
   alt: 'Dr Mncane Mthunzi',
   quote: 'Driving business turnaround and operational excellence.',
@@ -1025,7 +1025,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'sthembiso-phakathi',
   name: 'Sthembiso Phakathi',
-  category: 'Governance',
+  category: ['Governance', 'Business Transformation'],
   image: '/speakers/Governance/sthembiso-phakathi-The-Speakers-Firm.jpg',
   alt: 'Sthembiso Phakathi',
   quote: 'Analyzing organizational dynamics, change, and corporate strategy.',
@@ -1223,7 +1223,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mushambi-mutuma',
   name: 'Mushambi Mutuma',
-  category: 'A.I.',
+  category: ['A.I.', 'Business Transformation'],
   image: '/speakers/AI/Mushambi-Mutuma-The-Speakers-Firm.jpg',
   alt: 'Mushambi Mutuma',
   quote: 'Unlocking tech entrepreneurship and corporate acceleration.',
@@ -1234,7 +1234,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'sid-peimer',
   name: 'Sid Peimer',
-  category: 'A.I.',
+  category: ['A.I.', 'Business Transformation'],
   image: '/speakers/AI/Sid-Peimer-The-Speakers-Firm.jpg',
   alt: 'Sid Peimer',
   quote: 'Exploring human potential and creative strategy in a digital era.',
@@ -1245,7 +1245,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'molefe-pooe',
   name: 'Molefe Pooe',
-  category: 'A.I.',
+  category: ['A.I.', 'Business Transformation'],
   image: '/speakers/AI/Molefe-Pooe-The-Speakers-Firm.jpg',
   alt: 'Molefe Pooe',
   quote: 'Coaching executive leadership through entrepreneurial growth.',
