@@ -772,8 +772,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'proverb',
   name: 'Tebogo “ProVerb” Thekisho',
-  category: ['MCs', 'Media'],
-  image: '/speakers/Media/Tebogo-ProVerb-Thekisho.jpg',
+  category: ['MCs', 'Media', 'Entrepreneurship'],
+  image: '/speakers/Entrepreneurship/Tebogo-ProVerb-Thekisho.jpg',
   alt: 'Tebogo “ProVerb” Thekisho',
   quote: 'Media entrepreneurship and hosting with distinction.',
   youtubeId: 'qp0HIF3SfI4',
@@ -794,8 +794,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'thapelo-mokoena',
   name: 'Thapelo Mokoena',
-  category: ['MCs', 'Media'],
-  image: '/speakers/Media/Thapelo-Mokoena-The-Speakers-Firm.jpg',
+  category: ['MCs', 'Media', 'Entrepreneurship'],
+  image: '/speakers/Entrepreneurship/Thapelo-Mokoena-The-Speakers-Firm.jpg',
   alt: 'Thapelo Mokoena',
   quote: 'Storytelling, entrepreneurship, and master of ceremonies.',
   youtubeId: 'qp0HIF3SfI4',
@@ -827,8 +827,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'trudy-theledi',
   name: 'Trudy Theledi',
-  category: ['MCs', 'Future of Work'],
-  image: '/speakers/FutureOfWork/Trudy-Theledi-The-Speakers-Firm.jpg',
+  category: ['MCs', 'Future of Work', 'Entrepreneurship'],
+  image: '/speakers/Entrepreneurship/Trudy-Theledi-The-Speakers-Firm.jpg',
   alt: 'Trudy Theledi',
   quote: 'Directing programmes and hosting events with grace.',
   youtubeId: 'qp0HIF3SfI4',
@@ -948,8 +948,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'eunice-cross',
   name: 'Dr Eunice Cross',
-  category: 'Governance',
-  image: '/speakers/Governance/Dr-Eunice-Cross-The-Speakers-Firm.jpg',
+  category: ['Governance', 'Entrepreneurship'],
+  image: '/speakers/Entrepreneurship/Dr-Eunice-Cross-The-Speakers-Firm.jpg',
   alt: 'Dr Eunice Cross',
   quote: 'Legal advising, entrepreneurship and boardroom agility.',
   youtubeId: 'qp0HIF3SfI4',
@@ -1245,8 +1245,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'molefe-pooe',
   name: 'Molefe Pooe',
-  category: ['A.I.', 'Business Transformation'],
-  image: '/speakers/AI/Molefe-Pooe-The-Speakers-Firm.jpg',
+  category: ['A.I.', 'Business Transformation', 'Entrepreneurship'],
+  image: '/speakers/Entrepreneurship/Molefe-Pooe-The-Speakers-Firm.jpg',
   alt: 'Molefe Pooe',
   quote: 'Coaching executive leadership through entrepreneurial growth.',
   youtubeId: 'qp0HIF3SfI4',
@@ -1341,6 +1341,94 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator</span>
+}, {
+  id: 'joshua-maluleke',
+  name: 'Joshua Maluleke',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Joshua-Maluleke-The-Speakers-Firm.jpg',
+  alt: 'Joshua Maluleke',
+  quote: 'Building sustainable businesses and scaling informal trade models.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Chief Executive Officer at Mayeke Holdings</span>
+}, {
+  id: 'bulelani-balabala',
+  name: 'Bulelani Balabala',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Bulelani-Balabala-The-Speakers-Firm.jpg',
+  alt: 'Bulelani Balabala',
+  quote: 'Fostering local economic ecosystems and grassroots ventures.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Founder of TEA</span>
+}, {
+  id: 'rekgotsofetse-chikane',
+  name: 'Rekgotsofetse Chikane',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Rekgotsofetse-Chikane-The-Speakers-Firm.jpg',
+  alt: 'Rekgotsofetse Chikane',
+  quote: 'Integrating technology, policy, and entrepreneurial development.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Lecturer: Wits School of Governance & Research Associate: Wits Institute of Socio-Economic Research</span>
+}, {
+  id: 'lebo-gunguluza',
+  name: 'Lebo Gunguluza',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Lebo-Gunguluza-The-Speakers-Firm.jpg',
+  alt: 'Lebo Gunguluza',
+  quote: 'Unlocking capital and scaling scaled black industrialists.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Entrepreneur, Turnaround Strategist, Business Speaker and Dragon Investor on SA’s Dragons Den TV Show</span>
+}, {
+  id: 'thokozani-nkosi',
+  name: 'Thokozani Nkosi',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Thokozani-Nkosi-The-Speakers-Firm.jpg',
+  alt: 'Thokozani Nkosi',
+  quote: 'Shaping television broadcast models and industrial media assets.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Co-Founder and Chairman of Newzroom Afrika</span>
+}, {
+  id: 'anael-granoux',
+  name: 'Anael Granoux',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Anael-Granoux-The-Speakers-Firm.jpg',
+  alt: 'Anael Granoux',
+  quote: 'Strategic advisory and business expansion in complex economies.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Strategy Advisor, Lecturer & Speaker</span>
+}, {
+  id: 'musa-sono',
+  name: 'Musa Sono',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/Musa-Sono-The-Speakers-Firm.jpg',
+  alt: 'Musa Sono',
+  quote: 'Overcoming adversity and leading change with purpose.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Inspirational Speaker, Entrepreneur & Disruption Catalyst</span>
+}, {
+  id: 'thuli-magubane',
+  name: 'Thuli Magubane',
+  category: 'Entrepreneurship',
+  image: '/speakers/Entrepreneurship/thuli-magubane-the-speakers-firm.jpg',
+  alt: 'Thuli Magubane',
+  quote: 'Empowering women-led enterprises and circular ecosystems.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Entrepreneur, Business Strategist & Empowerment Speaker</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
