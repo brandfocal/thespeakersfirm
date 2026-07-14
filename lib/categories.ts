@@ -125,6 +125,12 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
     buttonLabel: "MCs",
     fullTitle: "Celebrity Speakers, MCs, Comedy and Entertainment",
     description: "Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event."
+  },
+  {
+    id: "comedy",
+    buttonLabel: "Comedy",
+    fullTitle: "Comedy, Satire and Strategic Disruption",
+    description: "Acclaimed public figures, comedians, satirists and entertainment architects bringing perspective-shifting humor, energy and cultural commentary."
   }
 ];
 
