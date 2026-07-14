@@ -497,7 +497,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
-  category: 'Keynote',
+  category: ['Keynote', 'Reputation'],
   image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
   alt: 'Themba Maseko',
   quote: 'Public policy and strategic government communications.',
@@ -1256,7 +1256,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'lorato-tshenkeng',
   name: 'Lorato Tshenkeng',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Lorato-Tshenkeng--The-Speakers-Firm.jpg',
   alt: 'Lorato Tshenkeng',
   quote: 'Defending reputation sovereignty and managing risk.',
@@ -1267,7 +1267,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mandla-radebe',
   name: 'Mandla J. Radebe',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Mandla-J-Radebe-The-Speakers-Firm.jpg',
   alt: 'Mandla J. Radebe',
   quote: 'Reframing media dynamics and strategic public discourse.',
@@ -1278,7 +1278,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'milton-nkosi',
   name: 'Milton Nkosi',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Milton-Nkosi-The-Speakers-Firm.jpg',
   alt: 'Milton Nkosi',
   quote: 'Translating global media relations into narrative sovereignty.',
@@ -1289,7 +1289,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'rams-mabote',
   name: 'Rams Mabote',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Rams-Mabote-The-Speakers-Firm.jpg',
   alt: 'Rams Mabote',
   quote: 'Coaching C-suite reputation and leading public relations.',
@@ -1300,7 +1300,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'jj-tabane',
   name: 'Prof JJ Tabane',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Prof-JJ-Tabane--The-Speakers-Firm.jpg',
   alt: 'Prof JJ Tabane',
   quote: 'Influencing governance through independent political commentary.',
@@ -1311,7 +1311,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'phathiswa-magopeni',
   name: 'Phathiswa Magopeni',
-  category: 'Media',
+  category: ['Media', 'Reputation'],
   image: '/speakers/Media/Phathiswa-Magopeni--The-Speakers-Firm.jpg',
   alt: 'Phathiswa Magopeni',
   quote: 'Advocating independent broadcasting and editorial resilience.',
