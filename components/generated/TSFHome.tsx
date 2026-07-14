@@ -233,7 +233,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'stafford-masie',
   name: 'Stafford Masie',
-  category: 'A.I.',
+  category: ['A.I.', 'Futurists'],
   image: '/image_marquee/stafford-masie-the-speakers-firm.jpg',
   alt: 'Stafford Masie',
   quote: 'Technology is not about gadgets, it is about human empowerment.',
@@ -244,7 +244,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'abdullah-verachia',
   name: 'Abdullah Verachia',
-  category: 'Future of Work',
+  category: ['Future of Work', 'Futurists'],
   image: '/image_marquee/leadership/Abdullah-Verachia-The-Speakers-Firm.jpg',
   alt: 'Abdullah Verachia',
   quote: 'Navigating disruption requires cognitive flexibility and strategy.',
