@@ -1550,6 +1550,94 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>South African Soccer Legend, Kaizer Chiefs Icon, Coach & Media Analyst</span>
+}, {
+  id: 'paul-nzimande',
+  name: 'Paul Nzimande',
+  category: ['Governance', 'Organisational Agility', 'Team-Building'],
+  image: '/speakers/Governance/Paul-Nzimande-The-Speakers-Firm.jpg',
+  alt: 'Paul Nzimande',
+  quote: 'Addressing masculinity and equity to transform workplace leadership culture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Transformational Leadership Strategist, Executive Coach & Author</span>
+}, {
+  id: 'ndileka-mandela',
+  name: 'Ndileka Mandela',
+  category: ['Governance', 'MCs'],
+  image: '/speakers/Governance/Ndileka-Mandela-The-Speakers-Firm.jpg',
+  alt: 'Ndileka Mandela',
+  quote: 'Advocating for women, youth development, and social justice.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Social Activist, Author & Founder of The Thembelihle Mandela Foundation</span>
+}, {
+  id: 'linda-ntuli',
+  name: 'Linda Ntuli',
+  category: ['Organisational Agility', 'Entrepreneurship', 'Team-Building'],
+  image: '/speakers/Organisational Agility/Linda-Ntuli-The-Speakers-Firm.jpg',
+  alt: 'Linda Ntuli',
+  quote: 'Structuring high-performance teams and personal wellness blueprints.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Management Consultant, Motivational Speaker, Trainer & Life Coach</span>
+}, {
+  id: 'gugulethu-xaba',
+  name: 'Dr. Gugulethu Xaba',
+  category: 'Governance',
+  image: '/speakers/Governance/Dr-Gugulethu-Xaba-The-Speakers-Firm.jpg',
+  alt: 'Dr. Gugulethu Xaba',
+  quote: 'Fostering ethical leadership, governance, and institutional alignment.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Leadership Expert & Director in Student Governance</span>
+}, {
+  id: 'shingai-mutambirwa',
+  name: 'Prof. Shingai Mutambirwa',
+  category: 'Sustainability',
+  image: '/speakers/Sustainability/Dr-Shingai-Mutambirwa-The-Speakers-Firm.jpg',
+  alt: 'Prof. Shingai Mutambirwa',
+  quote: 'Driving wellness strategy and cognitive longevity in high-performance cultures.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Specialist in Urology & Academic Health Leadership</span>
+}, {
+  id: 'joy-machoene-kaapu',
+  name: 'Joy Machoene Kaapu',
+  category: ['Governance', 'Organisational Agility', 'Team-Building'],
+  image: '/speakers/Governance/Joy-Kaapu-The-Speakers-Firm-.jpg',
+  alt: 'Joy Machoene Kaapu',
+  quote: 'Aligning governance structures with high-performance culture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Leadership Alignment, Culture Strategist & Legal Consultant</span>
+}, {
+  id: 'delia-ndlovu',
+  name: 'Delia Ndlovu',
+  category: ['Business Transformation', 'Governance'],
+  image: '/speakers/Governance/Delia-Ndlovu-The-Speakers-Firm.jpg',
+  alt: 'Delia Ndlovu',
+  quote: 'Navigating market disruption and corporate growth strategies.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Strategic Business Transformation Leader & C-Suite Advisor</span>
+}, {
+  id: 'mary-bomela',
+  name: 'Mary Bomela',
+  category: ['Governance', 'Economics'],
+  image: '/speakers/Governance/Mary-Bomela-The-Speakers-Firm.jpg',
+  alt: 'Mary Bomela',
+  quote: 'Championing corporate governance, investment growth, and economic value.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Business Executive & Corporate Leader</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
