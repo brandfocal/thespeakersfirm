@@ -266,7 +266,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'john-sanei',
   name: 'John Sanei',
-  category: 'Futurists',
+  category: ['Futurists', 'A.I.'],
   image: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg',
   alt: 'John Sanei',
   quote: 'We need to prepare for the future, not just react to it.',
@@ -277,7 +277,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'alistair-mokoena',
   name: 'Dr Alistair Mokoena',
-  category: ['Branding', 'Future of Work'],
+  category: ['Branding', 'Future of Work', 'A.I.'],
   image: '/speakers/FutureOfWork/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
   alt: 'Dr Alistair Mokoena',
   quote: 'Strong brands are built on authentic human connections.',
@@ -288,7 +288,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'sylvester-chauke',
   name: 'Sylvester Chauke',
-  category: 'Keynote',
+  category: ['Keynote', 'Branding'],
   image: '/speakers/Keynote/Sylvester-Chauke-The-Speakers-Firm.jpg',
   alt: 'Sylvester Chauke',
   quote: 'Building brands that resonate with authentic African soul.',
@@ -299,7 +299,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mzamo-masito',
   name: 'Dr Mzamo Masito',
-  category: 'Keynote',
+  category: ['Keynote', 'Branding'],
   image: '/speakers/Keynote/Mzamo-Masito-The-Speakers-Firm.jpg',
   alt: 'Dr Mzamo Masito',
   quote: 'Transforming businesses, empowering communities.',
@@ -332,8 +332,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'tshilidzi-marwala',
   name: 'Prof. Tshilidzi Marwala',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'A.I.'],
+  image: '/speakers/AI/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg',
   alt: 'Prof. Tshilidzi Marwala',
   quote: 'Artificial intelligence is the engine of the modern world.',
   youtubeId: 'qp0HIF3SfI4',
@@ -343,8 +343,8 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'sipho-maseko',
   name: 'Sipho Maseko',
-  category: 'Keynote',
-  image: '/speakers/Keynote/Sipho-Maseko-The-Speakers-Firm.jpg',
+  category: ['Keynote', 'A.I.'],
+  image: '/speakers/AI/Sipho-Maseko-The-Speakers-Firm.jpg',
   alt: 'Sipho Maseko',
   quote: 'Strategic corporate turnarounds for long-term growth.',
   youtubeId: 'qp0HIF3SfI4',
@@ -772,7 +772,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'proverb',
   name: 'Tebogo “ProVerb” Thekisho',
-  category: 'MCs',
+  category: ['MCs', 'Media'],
   image: '/speakers/MCs/Tebogo-ProVerb-Thekisho.jpg',
   alt: 'Tebogo “ProVerb” Thekisho',
   quote: 'Media entrepreneurship and hosting with distinction.',
@@ -794,7 +794,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'thapelo-mokoena',
   name: 'Thapelo Mokoena',
-  category: 'MCs',
+  category: ['MCs', 'Media'],
   image: '/speakers/MCs/Thapelo-Mokoena-The-Speakers-Firm.jpg',
   alt: 'Thapelo Mokoena',
   quote: 'Storytelling, entrepreneurship, and master of ceremonies.',
@@ -849,7 +849,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'callan-abrahams',
   name: 'Callan Abrahams',
-  category: 'Future of Work',
+  category: ['Future of Work', 'A.I.'],
   image: '/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg',
   alt: 'Callan Abrahams',
   quote: 'Fostering mental resilience and strategic workplace leadership.',
@@ -860,7 +860,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'puleng-mokhoalibe',
   name: 'Dr Puleng Mokhoalibe',
-  category: 'Future of Work',
+  category: ['Future of Work', 'A.I.'],
   image: '/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
   alt: 'Dr Puleng Mokhoalibe',
   quote: 'Catalysing innovation through design thinking and future strategy.',
@@ -871,7 +871,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'kgomotso-mamello-motshidi',
   name: 'Kgomotso Mamello Motshidi',
-  category: 'Future of Work',
+  category: ['Future of Work', 'A.I.'],
   image: '/speakers/FutureOfWork/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg',
   alt: 'Kgomotso Mamello Motshidi',
   quote: 'Leveraging capital, investment, and technology for Africa’s growth.',
@@ -1209,6 +1209,138 @@ const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>Political Scientist & Global South Policy Strategist</span>
+}, {
+  id: 'tumi-ramonotsi',
+  name: 'Tumi Ramonotsi',
+  category: 'A.I.',
+  image: '/speakers/AI/Tumi-Ramonotsi-The-Speakers-Firm.jpg',
+  alt: 'Tumi Ramonotsi',
+  quote: 'Strengthening digital financial stewardship and governance.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Financial Steward, Risk, Governance & Leadership Strategist</span>
+}, {
+  id: 'mushambi-mutuma',
+  name: 'Mushambi Mutuma',
+  category: 'A.I.',
+  image: '/speakers/AI/Mushambi-Mutuma-The-Speakers-Firm.jpg',
+  alt: 'Mushambi Mutuma',
+  quote: 'Unlocking tech entrepreneurship and corporate acceleration.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Author, Speaker, Tech Leader</span>
+}, {
+  id: 'sid-peimer',
+  name: 'Sid Peimer',
+  category: 'A.I.',
+  image: '/speakers/AI/Sid-Peimer-The-Speakers-Firm.jpg',
+  alt: 'Sid Peimer',
+  quote: 'Exploring human potential and creative strategy in a digital era.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Strategic Thinker, Creative Leader, Insights Explorer, and Proponent of Human Potential</span>
+}, {
+  id: 'molefe-pooe',
+  name: 'Molefe Pooe',
+  category: 'A.I.',
+  image: '/speakers/AI/Molefe-Pooe-The-Speakers-Firm.jpg',
+  alt: 'Molefe Pooe',
+  quote: 'Coaching executive leadership through entrepreneurial growth.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Accomplished Corporate Executive, Entrepreneur, Author, and Certified Business Coach</span>
+}, {
+  id: 'lorato-tshenkeng',
+  name: 'Lorato Tshenkeng',
+  category: 'Media',
+  image: '/speakers/Media/Lorato-Tshenkeng-The-Speakers-Firm.jpg',
+  alt: 'Lorato Tshenkeng',
+  quote: 'Defending reputation sovereignty and managing risk.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert</span>
+}, {
+  id: 'mandla-radebe',
+  name: 'Mandla J. Radebe',
+  category: 'Media',
+  image: '/speakers/Media/Mandla-J-Radebe-The-Speakers-Firm.jpg',
+  alt: 'Mandla J. Radebe',
+  quote: 'Reframing media dynamics and strategic public discourse.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Strategic Communication Professor, Author, Media Theorist</span>
+}, {
+  id: 'milton-nkosi',
+  name: 'Milton Nkosi',
+  category: 'Media',
+  image: '/speakers/Media/Milton-Nkosi-The-Speakers-Firm.jpg',
+  alt: 'Milton Nkosi',
+  quote: 'Translating global media relations into narrative sovereignty.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Former BBC Africa Bureau Chief, Global Correspondent, Media Relations Specialist</span>
+}, {
+  id: 'rams-mabote',
+  name: 'Rams Mabote',
+  category: 'Media',
+  image: '/speakers/Media/Rams-Mabote-The-Speakers-Firm.jpg',
+  alt: 'Rams Mabote',
+  quote: 'Coaching C-suite reputation and leading public relations.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Media Personality, Reputation Coach, Host & Facilitator</span>
+}, {
+  id: 'jj-tabane',
+  name: 'Prof JJ Tabane',
+  category: 'Media',
+  image: '/speakers/Media/Professor-JJ-Tabane-The-Speakers-Firm.jpg',
+  alt: 'Prof JJ Tabane',
+  quote: 'Influencing governance through independent political commentary.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Political Commentator, Media Owner, Narrative Influencer</span>
+}, {
+  id: 'phathiswa-magopeni',
+  name: 'Phathiswa Magopeni',
+  category: 'Media',
+  image: '/speakers/Media/Phathiswa-Magopeni-The-Speakers-Firm.jpg',
+  alt: 'Phathiswa Magopeni',
+  quote: 'Advocating independent broadcasting and editorial resilience.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Veteran Media Executive, Editorial Strategist, Public Broadcasting Advocate</span>
+}, {
+  id: 'muzi-kuzwayo',
+  name: 'Muzi Kuzwayo',
+  category: 'Branding',
+  image: '/speakers/Branding/Muzi-Kuzwayo-The-Speakers-Firm.jpg',
+  alt: 'Muzi Kuzwayo',
+  quote: 'Disrupting traditional marketing to build authentic consumer trust.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Founder: Ignitive, Former CEO: TBWA Hunt Lascaris, Marketing Disruptor</span>
+}, {
+  id: 'sechaba-motsieloa',
+  name: 'Sechaba Motsieloa',
+  category: 'Branding',
+  image: '/speakers/Branding/Sechaba-Motsieloa-The-Speakers-Firm.jpg',
+  alt: 'Sechaba Motsieloa',
+  quote: 'Structuring brand sovereignty and strategic C-suite communications.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator</span>
 }];
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
