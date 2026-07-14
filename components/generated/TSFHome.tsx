@@ -2739,6 +2739,11 @@ export const TheSpeakersFirmHome = () => {
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
 
+  const handleNavFacultySearchChange = (value: string) => {
+    setLocalSearch(value);
+    window.dispatchEvent(new CustomEvent('tsf-search', { detail: value }));
+  };
+
   const getTextFromNode = (node: any): string => {
     if (!node) return "";
     if (typeof node === 'string' || typeof node === 'number') {
@@ -3298,6 +3303,7 @@ export const TheSpeakersFirmHome = () => {
       <CurtainReveal />
       <ScrollProgressBar />
       <CustomCursor />
+      <FloatingNav searchQuery={localSearch} onSearchQueryChange={handleNavFacultySearchChange} />
       <AnimatePresence>
         {activeClipSpeaker && <motion.div key="signature-speaker-video-modal" className="fixed inset-0 z-[500] flex items-center justify-center px-2 py-4 sm:px-6 sm:py-6" style={{
         backgroundColor: 'rgba(0,0,0,0.85)'
