@@ -211,7 +211,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
-  category: ['Leadership', 'Governance'],
+  category: ['Leadership', 'Governance', 'Organisational Agility'],
   image: '/speakers/Governance/Siphiwe-Moyo-The-Speakers-Firm.jpg',
   alt: 'Siphiwe Moyo',
   quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
@@ -794,7 +794,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'thapelo-mokoena',
   name: 'Thapelo Mokoena',
-  category: ['MCs', 'Media', 'Entrepreneurship'],
+  category: ['MCs', 'Media', 'Entrepreneurship', 'Organisational Agility'],
   image: '/speakers/Entrepreneurship/Thapelo-Mokoena-The-Speakers-Firm.jpg',
   alt: 'Thapelo Mokoena',
   quote: 'Storytelling, entrepreneurship, and master of ceremonies.',
@@ -827,7 +827,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'trudy-theledi',
   name: 'Trudy Theledi',
-  category: ['MCs', 'Future of Work', 'Entrepreneurship'],
+  category: ['MCs', 'Future of Work', 'Entrepreneurship', 'Organisational Agility'],
   image: '/speakers/Entrepreneurship/Trudy-Theledi-The-Speakers-Firm.jpg',
   alt: 'Trudy Theledi',
   quote: 'Directing programmes and hosting events with grace.',
@@ -838,7 +838,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'boniwe-dunster',
   name: 'Boniwe Dunster',
-  category: 'Future of Work',
+  category: ['Future of Work', 'Organisational Agility'],
   image: '/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg',
   alt: 'Boniwe Dunster',
   quote: 'Nurturing leadership capability and corporate agility.',
@@ -849,7 +849,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'callan-abrahams',
   name: 'Callan Abrahams',
-  category: ['Future of Work', 'A.I.'],
+  category: ['Future of Work', 'A.I.', 'Organisational Agility'],
   image: '/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg',
   alt: 'Callan Abrahams',
   quote: 'Fostering mental resilience and strategic workplace leadership.',
@@ -1036,7 +1036,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'abner-mariri',
   name: 'Abner Mariri',
-  category: 'Governance',
+  category: ['Governance', 'Organisational Agility'],
   image: '/speakers/Governance/Abner-Mariri-The-Speakers-Firm.jpg',
   alt: 'Abner Mariri',
   quote: 'Motivating team performance and catalytic business growth.',
@@ -1223,7 +1223,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mushambi-mutuma',
   name: 'Mushambi Mutuma',
-  category: ['A.I.', 'Business Transformation'],
+  category: ['A.I.', 'Business Transformation', 'Organisational Agility'],
   image: '/speakers/AI/Mushambi-Mutuma-The-Speakers-Firm.jpg',
   alt: 'Mushambi Mutuma',
   quote: 'Unlocking tech entrepreneurship and corporate acceleration.',
@@ -1245,7 +1245,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'molefe-pooe',
   name: 'Molefe Pooe',
-  category: ['A.I.', 'Business Transformation', 'Entrepreneurship'],
+  category: ['A.I.', 'Business Transformation', 'Entrepreneurship', 'Organisational Agility'],
   image: '/speakers/Entrepreneurship/Molefe-Pooe-The-Speakers-Firm.jpg',
   alt: 'Molefe Pooe',
   quote: 'Coaching executive leadership through entrepreneurial growth.',
