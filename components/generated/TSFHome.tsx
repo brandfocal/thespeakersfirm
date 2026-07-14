@@ -266,7 +266,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'john-sanei',
   name: 'John Sanei',
-  category: ['Futurists', 'A.I.'],
+  category: ['Futurists', 'A.I.', 'Business Transformation'],
   image: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg',
   alt: 'John Sanei',
   quote: 'We need to prepare for the future, not just react to it.',
@@ -860,7 +860,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'puleng-mokhoalibe',
   name: 'Dr Puleng Mokhoalibe',
-  category: ['Future of Work', 'A.I.'],
+  category: ['Future of Work', 'A.I.', 'Business Transformation'],
   image: '/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
   alt: 'Dr Puleng Mokhoalibe',
   quote: 'Catalysing innovation through design thinking and future strategy.',

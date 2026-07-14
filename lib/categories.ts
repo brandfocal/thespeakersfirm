@@ -56,7 +56,7 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
   },
   {
     id: "innovation-disruption-and-business-transformation",
-    buttonLabel: "Innovation",
+    buttonLabel: "Business Transformation",
     fullTitle: "Innovation, Disruption and Business Transformation",
     description: "Proven innovators equipping organisations to challenge established models, unlock new value and build future-ready enterprises."
   },
