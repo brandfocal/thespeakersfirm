@@ -717,7 +717,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'mpho-popps',
   name: 'Mpho “Popps” Modikoane',
-  category: ['MCs', 'Comedy'],
+  category: 'MCs',
   image: '/speakers/Comedy/Mpho-Popps-The-Speakers-Firm.jpg',
   alt: 'Mpho “Popps” Modikoane',
   quote: 'Injecting humor and charisma into premium events.',
@@ -728,7 +728,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'eugene-khoza',
   name: 'Eugene Khoza',
-  category: ['MCs', 'Comedy'],
+  category: 'MCs',
   image: '/speakers/Comedy/Eugene-Khoza-The-Speakers-Firm.jpg',
   alt: 'Eugene Khoza',
   quote: 'Writing, comedy, and media moderation.',
@@ -1047,7 +1047,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'ntosh-madlingozi',
   name: 'Ntobeko “Ntosh” Madlingozi',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Ntosh-Madlingozi-The-Speakers-Firm.jpg',
   alt: 'Ntobeko “Ntosh” Madlingozi',
   quote: 'Shifting cultural paradigms through sharp, insightful comedy.',
@@ -1058,7 +1058,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'ndumiso-lindi',
   name: 'Ndumiso Lindi',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Ndumiso-Lindi-The-Speakers-Firm.jpg',
   alt: 'Ndumiso Lindi',
   quote: 'Authentic storytelling that brings people together through laughter.',
@@ -1069,7 +1069,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'kagiso-kg-mokgadi',
   name: 'Kagiso “KG” Mokgadi',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Kagiso-KG-Mokgadi-The-Speakers-Firm.jpg',
   alt: 'Kagiso “KG” Mokgadi',
   quote: 'Satirizing cultural dynamics and sharing compelling narratives.',
@@ -1080,7 +1080,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'kagiso-lediga',
   name: 'Kagiso Lediga',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Kagiso-Lediga-The-Speakers-Firm.jpg',
   alt: 'Kagiso Lediga',
   quote: 'Pioneering satirical representation in film and live storytelling.',
@@ -1091,7 +1091,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'isaac-gampu',
   name: 'Isaac Gampu',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Isaac-Gampu-The-Speakers-Firm.jpg',
   alt: 'Isaac Gampu',
   quote: 'Wielding wit as social commentary to connect generations.',
@@ -1102,7 +1102,7 @@ const FEATURED_SPEAKERS: Array<{
 }, {
   id: 'tol-ass-mo',
   name: 'Tol Ass Mo',
-  category: 'Comedy',
+  category: 'MCs',
   image: '/speakers/Comedy/Tol-As-Mo-The-Speakers-Firm.jpg',
   alt: 'Tol Ass Mo',
   quote: 'Unapologetic truth-telling that disrupts corporate complacency.',
@@ -2537,7 +2537,7 @@ export const TheSpeakersFirmHome = () => {
         return speaker.category.toLowerCase() === matchLabel.toLowerCase();
       });
 
-  const numRows = displayedFeaturedSpeakers.length <= 8 ? 1 : (displayedFeaturedSpeakers.length <= 12 ? 2 : 3);
+  const numRows = displayedFeaturedSpeakers.length <= 8 ? 1 : (displayedFeaturedSpeakers.length <= 16 ? 2 : 3);
   const row1Speakers: typeof FEATURED_SPEAKERS = [];
   const row2Speakers: typeof FEATURED_SPEAKERS = [];
   const row3Speakers: typeof FEATURED_SPEAKERS = [];
