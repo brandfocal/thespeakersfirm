@@ -37,7 +37,9 @@ const FACULTY_LIST = FEATURED_SPEAKERS.map(s => {
     name: s.name,
     designation: bioText,
     image: s.image,
-    trackId: Array.isArray(s.category) ? s.category[0] : s.category
+    trackId: Array.isArray(s.category) ? s.category[0] : s.category,
+    category: s.category,
+    topics: s.topics
   };
 });
 
@@ -58,6 +60,7 @@ const FOOTER_NAV_LINKS = [
 
 export function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -104,6 +107,24 @@ export function Header() {
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
   }, []);
 
+  React.useEffect(() => {
+    const handleCategoryEvent = (e: Event) => {
+      const customEvent = e as CustomEvent<string>;
+      // If a category was chosen, expand search and focus on search input
+      const match = true; // Placeholder for logic: getCategoryByLabel(customEvent.detail)
+      if (match) {
+        setIsSearchExpanded(true);
+        setInputValue(customEvent.detail);
+        // Force focus on next tick
+        setTimeout(() => {
+          searchInputRef.current?.focus();
+        }, 50);
+      }
+    };
+    window.addEventListener("tsf-select-category", handleCategoryEvent);
+    return () => window.removeEventListener("tsf-select-category", handleCategoryEvent);
+  }, []);
+
   const handleSearchToggle = () => {
     setIsSearchExpanded(current => !current);
   };
@@ -134,11 +155,7 @@ export function Header() {
         params.delete("search");
       }
       
-      if (window.location.pathname !== "/") {
-        router.push(`/?${params.toString()}`);
-      } else {
-        router.push(`/?${params.toString()}`, { scroll: false });
-      }
+      router.push(`/?${params.toString()}`, { scroll: false });
     }, 250);
 
     return () => clearTimeout(timer);
@@ -152,10 +169,21 @@ export function Header() {
 
   const filteredFaculty = inputValue.trim() === "" 
     ? [] 
-    : FACULTY_LIST.filter(member => 
-        member.name.toLowerCase().includes(inputValue.toLowerCase()) ||
-        member.designation.toLowerCase().includes(inputValue.toLowerCase())
-      );
+    : FACULTY_LIST.filter(member => {
+        const q = inputValue.toLowerCase();
+        const nameMatch = member.name.toLowerCase().includes(q);
+        const designationMatch = member.designation.toLowerCase().includes(q);
+        
+        const categoryMatch = Array.isArray(member.category)
+          ? member.category.some(cat => cat.toLowerCase().includes(q))
+          : member.category.toLowerCase().includes(q);
+          
+        const topicsMatch = Array.isArray(member.topics)
+          ? member.topics.some(topic => topic.toLowerCase().includes(q))
+          : false;
+          
+        return nameMatch || designationMatch || categoryMatch || topicsMatch;
+      });
 
   const handleSearchKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Escape') {
