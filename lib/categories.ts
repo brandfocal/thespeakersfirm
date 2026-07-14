@@ -125,12 +125,6 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
     buttonLabel: "MCs",
     fullTitle: "Celebrity Speakers, MCs, Comedy and Entertainment",
     description: "Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event."
-  },
-  {
-    id: "sales-negotiation-and-commercial-performance",
-    buttonLabel: "Sales",
-    fullTitle: "Sales, Negotiation and Commercial Performance",
-    description: "High-performing commercial leaders equipping teams to win clients, negotiate effectively and accelerate sustainable revenue growth."
   }
 ];
 
