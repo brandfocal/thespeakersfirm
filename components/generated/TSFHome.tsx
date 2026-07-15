@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScrol
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
-import { CATEGORIES_CONFIG } from '@/lib/categories';
+import { CATEGORIES_CONFIG, CATEGORY_SPEAKERS_MAP } from '@/lib/categories';
 const COLORS = {
   black: '#000000',
   red: '#e30e04',
@@ -2657,15 +2657,19 @@ export const TheSpeakersFirmHome = () => {
   // Sync category state from sticky bottom menu custom events
   React.useEffect(() => {
     const handleCategorySelect = (e: Event) => {
-      const customEvent = e as CustomEvent<string>;
+      const customEvent = e as CustomEvent<any>;
+      const detail = customEvent.detail;
+      const label = typeof detail === 'string' ? detail : detail?.label;
+      if (!label) return;
+
       const match = CATEGORIES_CONFIG.find(
-        c => c.buttonLabel.toLowerCase() === customEvent.detail.toLowerCase() || 
-             c.id.toLowerCase() === customEvent.detail.toLowerCase() ||
-             c.id.toLowerCase().startsWith(customEvent.detail.toLowerCase())
+        c => c.buttonLabel.toLowerCase() === label.toLowerCase() || 
+             c.id.toLowerCase() === label.toLowerCase() ||
+             c.id.toLowerCase().startsWith(label.toLowerCase())
       );
       if (match) {
         setActiveSpeakerCategory(match.id);
-      } else if (customEvent.detail.toLowerCase() === 'all') {
+      } else if (label.toLowerCase() === 'all') {
         setActiveSpeakerCategory('All');
       }
     };
@@ -2761,12 +2765,33 @@ export const TheSpeakersFirmHome = () => {
   const displayedFeaturedSpeakers = FEATURED_SPEAKERS.filter(speaker => {
     // 1. Category Filter
     if (activeSpeakerCategory !== 'All') {
-      const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
-      const matchLabel = catConfig ? catConfig.buttonLabel : activeSpeakerCategory;
-      const categoryMatches = Array.isArray(speaker.category)
-        ? speaker.category.some(cat => cat.toLowerCase() === matchLabel.toLowerCase())
-        : speaker.category.toLowerCase() === matchLabel.toLowerCase();
-      if (!categoryMatches) return false;
+      const allowedSpeakers = CATEGORY_SPEAKERS_MAP[activeSpeakerCategory];
+      if (allowedSpeakers) {
+        if (!allowedSpeakers.includes(speaker.id)) {
+          return false;
+        }
+      } else {
+        // Fallback to legacy matching if not in mapped categories
+        const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
+        if (!catConfig) return false;
+        
+        const targetLabel = catConfig.buttonLabel.toLowerCase();
+        const speakerCategories = Array.isArray(speaker.category) ? speaker.category : [speaker.category];
+        
+        const categoryMatches = speakerCategories.some(cat => {
+          let normalized = cat.toLowerCase();
+          if (normalized === "mcs") normalized = "mc's";
+          else if (normalized === "geopolitics") normalized = "economics";
+          else if (normalized === "organisational agility" || normalized === "team-building" || normalized === "winning mindset") normalized = "leadership";
+          else if (normalized === "futurists" || normalized === "business transformation") normalized = "a.i.";
+          else if (normalized === "sustainability") normalized = "governance";
+          else if (normalized === "reputation" || normalized === "branding") normalized = "media";
+          else if (normalized === "sales") normalized = "entrepreneurship";
+          return normalized === targetLabel;
+        });
+        
+        if (!categoryMatches) return false;
+      }
     }
 
     // 2. Search Query Filter
@@ -2858,8 +2883,10 @@ export const TheSpeakersFirmHome = () => {
     const catConfig = CATEGORIES_CONFIG.find(c => c.id === category);
     const label = catConfig ? catConfig.buttonLabel : category;
     
-    // Sync sticky bottom menu
-    window.dispatchEvent(new CustomEvent('tsf-select-category', { detail: label }));
+    // Sync sticky bottom menu without triggering global search expansion
+    window.dispatchEvent(new CustomEvent('tsf-select-category', { 
+      detail: { label: label, syncSearch: false } 
+    }));
     
     // Sync URL search parameters
     const params = new URLSearchParams(window.location.search);
@@ -3537,14 +3564,7 @@ export const TheSpeakersFirmHome = () => {
           >
             All
           </button>
-          {CATEGORIES_CONFIG.filter((cat) =>
-            FEATURED_SPEAKERS.some((s) => {
-              if (Array.isArray(s.category)) {
-                return s.category.some(c => c.toLowerCase() === cat.buttonLabel.toLowerCase());
-              }
-              return s.category.toLowerCase() === cat.buttonLabel.toLowerCase();
-            })
-          ).map((cat) => (
+          {CATEGORIES_CONFIG.map((cat) => (
             <button
               key={cat.id}
               type="button"

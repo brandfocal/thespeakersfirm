@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
@@ -12,14 +12,26 @@ const CATEGORIES = CATEGORIES_CONFIG.map(c => c.buttonLabel);
 export function BottomCategoryMenu() {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = React.useState<string>("");
   const [isVisible, setIsVisible] = React.useState<boolean>(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat) {
+      setActiveCategory(cat);
+    }
+  }, [searchParams]);
+
+  React.useEffect(() => {
     const handleCategoryEvent = (e: Event) => {
-      const customEvent = e as CustomEvent<string>;
-      setActiveCategory(customEvent.detail);
+      const customEvent = e as CustomEvent<any>;
+      const detail = customEvent.detail;
+      const label = typeof detail === 'string' ? detail : detail?.label;
+      if (label) {
+        setActiveCategory(label);
+      }
     };
     window.addEventListener("tsf-select-category", handleCategoryEvent);
     return () => window.removeEventListener("tsf-select-category", handleCategoryEvent);

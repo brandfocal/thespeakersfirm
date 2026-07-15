@@ -2,12 +2,13 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Menu, Search, X } from "lucide-react";
+import { ArrowUpRight, Menu, Search, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { FEATURED_SPEAKERS } from "./generated/TSFHome";
+
 
 const COLORS = {
   black: '#000000',
@@ -30,25 +31,36 @@ const getTextFromNode = (node: any): string => {
   return "";
 };
 
+import { CATEGORIES_CONFIG, getCategoryByLabel, CATEGORY_SPEAKERS_MAP } from "@/lib/categories";
+
+const getTrackIdForSpeaker = (speakerId: string): string => {
+  for (const [catId, speakerIds] of Object.entries(CATEGORY_SPEAKERS_MAP)) {
+    if (speakerIds.includes(speakerId)) {
+      return catId;
+    }
+  }
+  return "leadership-governance-and-risk-intelligence";
+};
+
 const FACULTY_LIST = FEATURED_SPEAKERS.map(s => {
   const bioText = getTextFromNode(s.bio);
+  const trackId = getTrackIdForSpeaker(s.id);
   return {
     id: s.id,
     name: s.name,
     designation: bioText,
     image: s.image,
-    trackId: Array.isArray(s.category) ? s.category[0] : s.category,
+    trackId: trackId,
     category: s.category,
     topics: s.topics
   };
 });
 
-const HEADER_NAV_LINKS = [
-  { id: 'faculty', label: 'Faculty', href: '/#faculty' },
-  { id: 'methodology', label: 'Our Process', href: '/#methodology' },
-  { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/#dialogues' },
-  { id: 'contact', label: 'Contact Us', href: '/#brief-us' }
-];
+
+// We split categories into 11 main ones and 7 submenu ones
+const MAIN_CATEGORIES = CATEGORIES_CONFIG.slice(0, 11);
+const SUBMENU_CATEGORIES = CATEGORIES_CONFIG.slice(11);
+
 
 const FOOTER_NAV_LINKS = [
   { id: 'home', label: 'Home', href: '/' },
@@ -68,6 +80,10 @@ export function Header() {
 
   const searchQuery = searchParams.get("search") || "";
   const [inputValue, setInputValue] = React.useState(searchQuery);
+  const [isMoreCategoriesOpen, setIsMoreCategoriesOpen] = React.useState(false);
+  const [isMobileCategoriesOpen, setIsMobileCategoriesOpen] = React.useState(false);
+  const [isMobileMoreOpen, setIsMobileMoreOpen] = React.useState(false);
+
 
   React.useEffect(() => {
     if (isSearchExpanded) {
@@ -109,12 +125,14 @@ export function Header() {
 
   React.useEffect(() => {
     const handleCategoryEvent = (e: Event) => {
-      const customEvent = e as CustomEvent<string>;
-      // If a category was chosen, expand search and focus on search input
-      const match = true; // Placeholder for logic: getCategoryByLabel(customEvent.detail)
-      if (match) {
+      const customEvent = e as CustomEvent<any>;
+      const detail = customEvent.detail;
+      const label = typeof detail === 'string' ? detail : detail?.label;
+      const syncSearch = typeof detail === 'string' ? true : (detail?.syncSearch !== false);
+      
+      if (label && syncSearch) {
         setIsSearchExpanded(true);
-        setInputValue(customEvent.detail);
+        setInputValue(label);
         // Force focus on next tick
         setTimeout(() => {
           searchInputRef.current?.focus();
@@ -204,27 +222,85 @@ export function Header() {
       className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff] px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
       style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
     >
-      <div className="flex items-center cursor-pointer" onClick={() => router.push("/")}>
+      <div className="flex items-center cursor-pointer shrink-0" onClick={() => router.push("/")}>
         <img 
           src="/the-speakers-firm-logo.png" 
           alt="The Speakers Firm Logo" 
           className="h-10 w-auto object-contain"
         />
       </div>
+      
+      {/* Desktop categories nav bar */}
       <div className="hidden lg:flex items-center gap-6 mx-8">
-        {HEADER_NAV_LINKS.map(item => (
-          <a 
-            key={`nav-${item.id}`} 
-            href={item.href} 
-            className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors" 
-            style={{ color: COLORS.gray }}
-            onMouseEnter={event => event.currentTarget.style.color = COLORS.black} 
-            onMouseLeave={event => event.currentTarget.style.color = COLORS.gray}
+        
+        {/* Categories Menu Item with Mega Dropdown */}
+        <div 
+          className="relative"
+          onMouseEnter={() => setIsMoreCategoriesOpen(true)}
+          onMouseLeave={() => setIsMoreCategoriesOpen(false)}
+        >
+          <button 
+            onClick={() => setIsMoreCategoriesOpen(!isMoreCategoriesOpen)}
+            className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]"
           >
-            {item.label}
-          </a>
-        ))}
+            <span>Categories</span>
+            <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
+          </button>
+
+          <AnimatePresence>
+            {isMoreCategoriesOpen && (
+              <motion.div 
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 12 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[560px] rounded-3xl border border-gray-200 bg-white/95 p-6 shadow-2xl backdrop-blur-md z-[100]"
+              >
+                <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left">
+                  {CATEGORIES_CONFIG.map(cat => (
+                    <button
+                      key={cat.id}
+                      onClick={() => {
+                        window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                        router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                        setIsMoreCategoriesOpen(false);
+                      }}
+                      className="w-full text-left rounded-xl px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#686869] hover:bg-gray-50 hover:text-[#e30e04] transition-all"
+                    >
+                      {cat.buttonLabel}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Booking Process Link */}
+        <a 
+          href="/#methodology" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Booking Process
+        </a>
+
+        {/* Executive Dialogues Link */}
+        <a 
+          href="/#dialogues" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Executive Dialogues
+        </a>
+
+        {/* Contact Us Link */}
+        <a 
+          href="/#brief-us" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Contact Us
+        </a>
       </div>
+
       <div className="ml-auto hidden items-center gap-3 lg:ml-0 lg:flex">
         <div className="relative flex items-center">
           <div className="flex items-center gap-2 overflow-hidden">
@@ -343,20 +419,105 @@ export function Header() {
             className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff] p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
-            <div className="flex flex-col gap-1">
-              {HEADER_NAV_LINKS.map(item => (
-                <a 
-                  key={`mobile-nav-${item.id}`} 
-                  href={item.href} 
-                  onClick={handleMobileMenuClose} 
-                  className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-colors active:text-[#e30e04]" 
-                  style={{ color: COLORS.black }}
-                >
-                  <span>{item.label}</span>
-                  <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-                </a>
-              ))}
+            <div className="flex flex-col gap-1 max-h-[300px] overflow-y-auto pr-1">
+              <button 
+                onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Categories</span>
+                <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isMobileCategoriesOpen && "rotate-180")} />
+              </button>
+
+              <AnimatePresence>
+                {isMobileCategoriesOpen && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
+                  >
+                    {MAIN_CATEGORIES.map(cat => (
+                      <button
+                        key={cat.id}
+                        onClick={() => {
+                          window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                          router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                      >
+                        {cat.buttonLabel}
+                      </button>
+                    ))}
+                    
+                    <button 
+                      onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
+                      className="flex items-center justify-between rounded-2xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#212121]"
+                    >
+                      <span>More Categories</span>
+                      <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMobileMoreOpen && "rotate-180")} />
+                    </button>
+
+                    <AnimatePresence>
+                      {isMobileMoreOpen && (
+                        <motion.div 
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
+                        >
+                          {SUBMENU_CATEGORIES.map(cat => (
+                            <button
+                              key={cat.id}
+                              onClick={() => {
+                                window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                                router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                                setIsMobileMenuOpen(false);
+                              }}
+                              className="w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                            >
+                              {cat.buttonLabel}
+                            </button>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Booking Process */}
+              <a 
+                href="/#methodology" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Booking Process</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </a>
+
+              {/* Executive Dialogues */}
+              <a 
+                href="/#dialogues" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Executive Dialogues</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </a>
+
+              {/* Contact Us */}
+              <a 
+                href="/#brief-us" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Contact Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </a>
             </div>
+
+
             <div 
               className="mt-4 border-t pt-5" 
               style={{ borderColor: COLORS.borderGray }}
