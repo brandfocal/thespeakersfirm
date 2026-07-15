@@ -40,7 +40,9 @@ export default function RootLayout({
         <Footer />
 
         {/* Global Bottom Category Menu */}
-        <BottomCategoryMenu />
+        <Suspense fallback={null}>
+          <BottomCategoryMenu />
+        </Suspense>
       </body>
     </html>
   );
