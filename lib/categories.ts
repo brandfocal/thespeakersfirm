@@ -144,9 +144,9 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "monde-ndlovu", "aubrey-masango-mc", "molefe-pooe"
   ],
   "digital-identity-cybersecurity-and-data-sovereignty": [
-    "alistair-mokoena", "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
-    "puleng-mokhoalibe", "tshilidzi-marwala", "tumi-ramonotsi", "mushambi-mutuma", "sid-peimer",
-    "molefe-pooe"
+    "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
+    "tshilidzi-marwala", "puleng-mokhoalibe", "alistair-mokoena", "tumi-ramonotsi",
+    "mushambi-mutuma", "sid-peimer", "molefe-pooe"
   ],
   "mc-and-facilitators": [
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
