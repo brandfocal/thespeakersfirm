@@ -165,7 +165,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "inspirational-keynote-speakers": [
     "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
-    "max-moyo", "siphiwe-moyo", "hector-motivator", "dr-richie-achukwu", "saray-khumalo"
+    "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "muzi-kuzwayo", "ndileka-mandela"
@@ -180,7 +180,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
     "victor-ramathesele", "zamo-mbele", "khaya-dlanga", "billy-selekane", "siphiwe-moyo",
-    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "dr-richie-achukwu", "lauren-davis"
+    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis"
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
