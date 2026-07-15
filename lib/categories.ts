@@ -172,9 +172,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "economics-and-politics": [
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",
-    "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo", "duma-gqubule",
-    "pali-lehohla", "elias-masilela", "sifiso-skenjana", "thembisa-fakude", "mcebisi-ndletyana",
-    "ralph-mathekga", "ebrahim-fakir", "siphamandla-zondi"
+    "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo"
   ],
   "diversity": [
     "ndileka-mandela", "lene-molefi", "rikky-minyuku", "brian-mhlanga"
@@ -182,7 +180,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
     "victor-ramathesele", "zamo-mbele", "khaya-dlanga", "billy-selekane", "siphiwe-moyo",
-    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "dr-richie-achukwu", "lauren-data"
+    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "dr-richie-achukwu", "lauren-davis"
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
@@ -197,7 +195,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mpho-phalatse-nxumalo", "criselda-kananda", "ndileka-mandela", "boniwe-dunster",
     "victor-ramathesele", "gugulethu-xaba", "sibulele-sibaca", "olwethu-leshabane",
     "mothomang-diaho", "zizipho-nyanga", "brenda-kubheka", "lerato-makhetha", "shingai-mutambirwa",
-    "lauren-data", "malebo-mashaba"
+    "lauren-davis", "malebo-mashaba"
   ],
   "financial-inclusion": [
     "ndumi-hadebe", "nkateko-khoza", "samke-mhlongo", "mlamuli-mbambo", "viwe-tini",
