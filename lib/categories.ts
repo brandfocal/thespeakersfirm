@@ -132,7 +132,8 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "media-brand-reputation": [
     "sylvester-chauke", "mandla-radebe", "sechaba-motsieloa", "milton-nkosi", "rams-mabote",
-    "jj-tabane", "phathiswa-magopeni", "proverb", "lorato-tshenkeng"
+    "jj-tabane", "phathiswa-magopeni", "proverb", "lorato-tshenkeng", "mzamo-masito",
+    "muzi-kuzwayo", "thapelo-mokoena"
   ],
   "leadership-governance-and-risk-intelligence": [
     "lincoln-mali", "abdullah-verachia", "stafford-masie", "saray-khumalo", "somadoda-fikeni",
