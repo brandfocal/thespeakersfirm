@@ -136,11 +136,12 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "muzi-kuzwayo", "thapelo-mokoena"
   ],
   "leadership-governance-and-risk-intelligence": [
-    "lincoln-mali", "abdullah-verachia", "stafford-masie", "saray-khumalo", "somadoda-fikeni",
-    "andisa-liba", "themba-maseko", "sthembiso-phakathi", "maanda-tshifularo", "eric-mafuna",
-    "mncane-mthunzi", "khanyisile-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
+    "stafford-masie", "themba-maseko", "lincoln-mali", "saray-khumalo", "somadoda-fikeni",
+    "andisa-liba", "abdullah-verachia", "sthembiso-phakathi", "maanda-tshifularo", "eric-mafuna",
+    "mncane-mthunzi", "khanyi-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
     "luthando-daniels", "maurice-radebe", "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
-    "tebogo-mekgoe", "queen-ramotsehoa"
+    "tebogo-mekgoe", "queen-ramotsehoa", "yolisa-kani", "anael-granoux", "lauren-davis",
+    "monde-ndlovu", "aubrey-masango-mc", "molefe-pooe"
   ],
   "digital-identity-cybersecurity-and-data-sovereignty": [
     "alistair-mokoena", "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
