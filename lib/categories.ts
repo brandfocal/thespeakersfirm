@@ -152,12 +152,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "luthando-daniels", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb",
-    "sindy-mabe", "michelle-craig", "thami-ngubeni", "thabo-mdluli", "victor-kgomoeswana",
-    "bongiwe-zwane", "kgomotso-monyai", "kayise-ngqula", "nqaba-mabece", "hulisani-ravele",
-    "penny-lebyane", "khaya-dlanga", "thembekile-mrototo", "rami-chuene", "naledi-moleo",
-    "nimrod-nkosi", "criselda-kananda", "putco-mafani", "tbo-touch", "peter-ndoro",
-    "hector-motivator", "noni-khumalo", "thapelo-mokoena", "bridget-masinga-mc", "aubrey-masango-mc"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb"
   ],
   "comedy": [
     "thenjiwe-moseley", "celeste-ntuli", "skhumba-hlophe", "david-kau", "loyiso-gola",
