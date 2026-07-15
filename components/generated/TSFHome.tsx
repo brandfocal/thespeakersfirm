@@ -120,7 +120,7 @@ const HERO_SLIDES = [{
 }];
 const HERO_SLIDE_DURATION_MS = 5000;
 
-export const FEATURED_SPEAKERS: Array<{
+const FEATURED_SPEAKERS_RAW: Array<{
   id: string;
   name: string;
   category: string | string[];
@@ -1638,7 +1638,48 @@ export const FEATURED_SPEAKERS: Array<{
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>Business Executive & Corporate Leader</span>
+}, {
+  id: 'pastor-tebogo-moema',
+  name: 'Pastor Tebogo Moema',
+  category: 'Gender',
+  image: '/speaker_thumbnails/Tebogo-Moema-The-Speakers-Firm.jpg',
+  alt: 'Pastor Tebogo Moema',
+  quote: 'Preaching the gospel of love, unity, and family support.',
+  youtubeId: 'A8U-QILsK_M',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Pastor, TV Host & Gender Equality Advocate</span>
+}, {
+  id: 'zanele-luvuno',
+  name: 'Zanele Luvuno',
+  category: 'Gender',
+  image: '/speaker_thumbnails/Zanele-Luvuno-The-Speakers-Firm.jpg',
+  alt: 'Zanele Luvuno',
+  quote: 'Establishing and promoting the future of female leaders.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Thought Leader, Transformation and Gender Equality Advocate</span>
+}, {
+  id: 'josina-machel',
+  name: 'Josina Z. Machel',
+  category: 'Gender',
+  image: '/speaker_thumbnails/Josina-Machel-The-Speakers-Firm3.jpg',
+  alt: 'Josina Z. Machel',
+  quote: 'Redefining the global fight against gender-based violence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Gender Equality and Human Rights Advocate, Founder of Kuhluka Movement</span>
 }];
+
+export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
+  const filename = speaker.image.split('/').pop();
+  return {
+    ...speaker,
+    image: `/speaker_thumbnails/${filename}`
+  };
+});
 
 const FEATURED_SPEAKERS_HEADING_LINES = [{
   id: 'signature-speakers-heading',
