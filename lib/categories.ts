@@ -155,8 +155,8 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb"
   ],
   "comedy": [
-    "thenjiwe-moseley", "celeste-ntuli", "skhumba-hlophe", "david-kau", "loyiso-gola",
-    "tumi-morake", "riaad-moosa", "marc-lottering", "mashabela-galane", "schalk-bezuidenhout"
+    "mpho-popps", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
+    "kagiso-kg-mokgadi", "kagiso-lediga", "isaac-gampu", "tol-ass-mo"
   ],
   "inspirational-keynote-speakers": [
     "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
