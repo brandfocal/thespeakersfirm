@@ -78,12 +78,12 @@ export const WhyChooseUs = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const }
     }
   };
 
   return (
-    <section ref={containerRef} aria-labelledby="why-speakers-firm-heading" className="relative w-full overflow-x-hidden bg-[#181818] text-[#F8F7F5] border-t border-white/[0.05]" style={{
+    <section ref={containerRef} aria-labelledby="why-speakers-firm-heading" className="relative w-full overflow-x-hidden bg-[#000000] text-[#F8F7F5] border-t border-white/[0.05]" style={{
       fontFamily: 'Kontora, Arial, sans-serif'
     }}>
       {/* Cinematic noise motif */}
@@ -124,7 +124,7 @@ export const WhyChooseUs = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.28 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
             className="flex flex-col justify-start"
           >
             <div className="self-start inline-flex items-center border border-l-[4px] border-[#393939] border-l-[#e30e04] bg-[#393939] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-[#F8F7F5]">
