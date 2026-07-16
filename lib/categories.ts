@@ -113,6 +113,66 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
     buttonLabel: "Female Keynote Speakers",
     fullTitle: "Best Female Keynote Speakers",
     description: "Celebrating and highlighting prominent female executives, visionaries, policy makers, and pioneers commanding global stages."
+  },
+  {
+    id: "futurists",
+    buttonLabel: "Futurists",
+    fullTitle: "Futurists & Exponential Future Strategists",
+    description: "Pioneers mapping out artificial intelligence, tech disruption, future trends, and exponential strategy."
+  },
+  {
+    id: "sales",
+    buttonLabel: "Sales",
+    fullTitle: "Sales Excellence & Revenue Architecture",
+    description: "Leading authorities on conversion strategies, commercial growth, revenue optimization, and high-performance sales culture."
+  },
+  {
+    id: "marketing",
+    buttonLabel: "Marketing",
+    fullTitle: "Marketing, Branding & Influence Strategy",
+    description: "Creative visionaries and corporate strategists unpacking brand architecting, digital visibility, consumer trust, and marketing disruption."
+  },
+  {
+    id: "sustainability",
+    buttonLabel: "Sustainability",
+    fullTitle: "Sustainability, ESG & Circular Economy",
+    description: "Leading sustainability and ESG strategists helping organizations hardwire responsible business, green transition, and circular practices."
+  },
+  {
+    id: "education",
+    buttonLabel: "Education",
+    fullTitle: "Education Activism & Futures",
+    description: "Educational reformers and coaches shaping institutional culture, leadership training, and learning futures."
+  },
+  {
+    id: "citizenship",
+    buttonLabel: "Citizenship",
+    fullTitle: "Active Citizenship & Corporate Social Responsibility",
+    description: "Advocates for civic engagement, community development, constitutional values, and positive social impact."
+  },
+  {
+    id: "motivation",
+    buttonLabel: "Motivation",
+    fullTitle: "Motivation, Peak Performance & Mindset",
+    description: "Keynote speakers unlocking human potential, resilience, peak performance under pressure, and courageous vision."
+  },
+  {
+    id: "strategy-facilitators",
+    buttonLabel: "Strategy Facilitators",
+    fullTitle: "Strategy Facilitators & Board Advisors",
+    description: "Specialists in board alignment, systemic innovation, executive advisory, and strategic dialogue facilitation."
+  },
+  {
+    id: "respectful-workplaces",
+    buttonLabel: "Respectful Workplaces",
+    fullTitle: "Respectful Workplaces & Inclusive Culture",
+    description: "Experts guiding organizations towards psychological safety, conflict resolution, equity, and dignity at work."
+  },
+  {
+    id: "celebrity-speakers",
+    buttonLabel: "Celebrity Speakers",
+    fullTitle: "Celebrity Keynotes & High-Profile Voices",
+    description: "Household names, icons of culture, media legends, and high-profile figures commanding event stages."
   }
 ];
 
@@ -215,5 +275,35 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "lene-molefi",
     "vumile-msweli", "linda-maqoma", "samke-mhlongo", "joy-machoene-kaapu", "delia-ndlovu",
     "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse"
+  ],
+  "futurists": [
+    "mushambi-mutuma", "stafford-masie", "john-sanei", "tseliso-mohlomi", "puleng-mokhoalibe", "alistair-mokoena"
+  ],
+  "sales": [
+    "gaisang-moloabi", "femi-adebanji", "alistair-mokoena", "rams-mabote", "veli-ndaba"
+  ],
+  "marketing": [
+    "sylvester-chauke", "mzamo-masito", "muzi-kuzwayo", "lorato-tshenkeng", "gerry-rantseli-elsdon"
+  ],
+  "sustainability": [
+    "khanyi-chaba", "victor-ramathesele", "somadoda-fikeni", "shingai-mutambirwa"
+  ],
+  "education": [
+    "ntandoyenkosi-kunene-radzuma", "linda-yalezo", "veli-ndaba"
+  ],
+  "citizenship": [
+    "khanyi-chaba", "thuli-madonsela-keynote", "ndileka-mandela"
+  ],
+  "motivation": [
+    "veli-ndaba", "hector-motivator", "richie-achukwu", "siphiwe-moyo", "saray-khumalo", "billy-selekane"
+  ],
+  "strategy-facilitators": [
+    "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "lincoln-mali", "stafford-masie"
+  ],
+  "respectful-workplaces": [
+    "martin-pelders", "bafana-khumalo", "lene-molefi", "brenda-kubheka"
+  ],
+  "celebrity-speakers": [
+    "proverb", "john-kani", "doctor-khumalo", "leanne-manas", "bongani-bingwa"
   ]
 };
