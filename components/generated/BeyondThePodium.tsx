@@ -17,29 +17,139 @@ interface DialogueSeries {
   youtubeId: string;
 }
 
-const DIALOGUE_SERIES_DATA: DialogueSeries[] = [{
-  id: "bonang-mohale",
-  title: "4th Annual TUT Future of Work Keynote Address",
-  speakerName: "Prof. Bonang Mohale",
-  youtubeId: "2s5CXK-w0AQ",
-  description: "Unpacking ethical corporate leadership, human-centric strategies, and socio-economic transformation for the future of work."
-}, {
-  id: "lincoln-mali",
-  title: "Lincoln Mali Leadership Dialogue Series",
-  speakerName: "Lincoln Mali",
-  youtubeId: "bjcHrXaccTY",
-  description: "Debating structural integrity, accountability, and the demands of ethical servant leadership in corporate governance."
-}, {
-  id: "reuel-khoza",
-  title: "The 2025 Book Roundtable Series - Legacy Beyond Leadership",
-  speakerName: "Dr. Reuel Khoza",
-  youtubeId: "0ij-23dNHvM",
-  description: "A deep dive roundtable dialogue into Dr. Reuel Khoza's perspective on legacy beyond leadership, ethics, and corporate governance."
-}];
+const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
+  {
+    id: "sifiso-nene",
+    title: "Sifiso Nene | Stand Up Comedian",
+    speakerName: "Sifiso Nene",
+    youtubeId: "fI2uQHu8C3A",
+    description: "Hilarious stand-up comedy and storytelling capturing everyday experiences."
+  },
+  {
+    id: "tumi-ramonotsi",
+    title: "Tumi Ramonotsi - Oracle",
+    speakerName: "Tumi Ramonotsi",
+    youtubeId: "Xb2VPORlJ5U",
+    description: "Insightful keynote on cloud technology, digital transformation, and business strategy."
+  },
+  {
+    id: "lincoln-mali-blazing-a-trail",
+    title: "Author of 'Blazing A Trail' Book Roundtable",
+    speakerName: "Lincoln Mali",
+    youtubeId: "KaDKu8ChKYs",
+    description: "Lesaka Technologies CEO discussing his book 'Blazing A Trail' and executive leadership."
+  },
+  {
+    id: "lincoln-mali-leadership",
+    title: "Lincoln Mali Leadership Dialogue Series",
+    speakerName: "Lincoln Mali",
+    youtubeId: "bjcHrXaccTY",
+    description: "Debating structural integrity, accountability, and the demands of ethical servant leadership in corporate governance."
+  },
+  {
+    id: "mteto-nyati",
+    title: "Chairman of Eskom at the 'Blazing A Trail' Book Roundtable",
+    speakerName: "Mteto Nyati",
+    youtubeId: "9GQaaOlowW0",
+    description: "Discussing institutional turnarounds, corporate governance, and leadership during energy crises."
+  },
+  {
+    id: "blazing-a-trail-experience",
+    title: "Official Experience Reel | 'Blazing a Trail' Exclusive Book Roundtable",
+    speakerName: "Roundtable Reel",
+    youtubeId: "UcACoBam75o",
+    description: "A premium overview of the exclusive 2025 book roundtable with industry captains."
+  },
+  {
+    id: "bonang-mohale-autobiography",
+    title: "‘Coming in From the Cold - An Autobiography’ Book Launch",
+    speakerName: "Prof. Bonang Mohale",
+    youtubeId: "O6_1XH3MMcE",
+    description: "Reflections on his autobiography, detailing the struggles and triumphs of black leadership in corporate South Africa."
+  },
+  {
+    id: "tebogo-mekgoe",
+    title: "EmpowaGrowth Workshop | Business Model Innovation",
+    speakerName: "Tebogo Mekgoe",
+    youtubeId: "dn4DuJtt7mI",
+    description: "Exploring systemic alignment, organizational health, and leadership performance in business strategy."
+  },
+  {
+    id: "mary-bomela",
+    title: "CEO and Director of Companies at TUT’s IFOW 4th Annual Dialogue",
+    speakerName: "Mary Bomela",
+    youtubeId: "INOSSwpIlv8",
+    description: "Insights on female leadership, board strategy, and driving value across diverse investment portfolios."
+  },
+  {
+    id: "bonang-mohale-tut",
+    title: "4th Annual TUT Future of Work Keynote Address",
+    speakerName: "Prof. Bonang Mohale",
+    youtubeId: "2s5CXK-w0AQ",
+    description: "Unpacking ethical corporate leadership, human-centric strategies, and socio-economic transformation for the future of work."
+  },
+  {
+    id: "reuel-khoza-roundtable",
+    title: "The 2025 Book Roundtable Series - Legacy Beyond Leadership",
+    speakerName: "Dr. Reuel Khoza",
+    youtubeId: "0ij-23dNHvM",
+    description: "A deep dive roundtable dialogue into Dr. Reuel Khoza's perspective on legacy beyond leadership, ethics, and corporate governance."
+  },
+  {
+    id: "zola-mbatha",
+    title: "Orange Farm EmpowaMen Experience",
+    speakerName: "Zola Mbatha",
+    youtubeId: "yA5_vrN2vM0",
+    description: "Addressing positive masculinity, community development, and leadership in social change spaces."
+  },
+  {
+    id: "john-kani",
+    title: "Dr Bonisile John Kani OIS OBE Keynote",
+    speakerName: "Dr. John Kani",
+    youtubeId: "4pwj3RCt2RI",
+    description: "Acclaimed actor and playwright sharing insights on cultural identity, heritage, and the power of storytelling."
+  },
+  {
+    id: "bonang-mohale-transnet",
+    title: "Professor Bonang Mohale - Transnet Keynote",
+    speakerName: "Prof. Bonang Mohale",
+    youtubeId: "z20ciVNtc8A",
+    description: "Strategic insights on economic development, corporate governance, and state-owned enterprise transformation."
+  },
+  {
+    id: "muzi-kuzwayo",
+    title: "Muzi Kuzwayo - Orange Farm EmpowaMen Programme",
+    speakerName: "Muzi Kuzwayo",
+    youtubeId: "3xJJ0IQQFCw",
+    description: "Speaking on brand strategy, socio-economic empowerment, and positive role models in society."
+  },
+  {
+    id: "bonang-mohale-empowamen",
+    title: "Bonang Mohale - Orange Farm EmpowaMen Programme",
+    speakerName: "Prof. Bonang Mohale",
+    youtubeId: "Txr0O_M6bb0",
+    description: "Addressing leadership accountability, community mentorship, and empowering the next generation."
+  },
+  {
+    id: "empowamen-experience",
+    title: "Experience Reel - Orange Farm EmpowaMen Programme",
+    speakerName: "EmpowaMen Reel",
+    youtubeId: "tZ-ick_bEGw",
+    description: "Visual highlights of the community dialogue, mentorship workshops, and leadership interventions."
+  },
+  {
+    id: "maurice-radebe",
+    title: "Head & Director: Wits Business School (WBS) Keynote",
+    speakerName: "Prof. Maurice Radebe",
+    youtubeId: "7iUZ-E1OZ0U",
+    description: "Focusing on corporate energy transformation, leadership agility, and academic excellence in Africa."
+  }
+];
 
 export const BeyondThePodium: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
+  const [showAll, setShowAll] = React.useState<boolean>(false);
   
   const isInView = useInView(containerRef, {
     once: true,
@@ -85,10 +195,12 @@ export const BeyondThePodium: React.FC = () => {
       transition: {
         duration: 0.8,
         ease: "easeOut",
-        delay: 1 + i * 0.2
+        delay: 0.2 + (i % 6) * 0.1
       }
     })
   };
+
+  const displayedVideos = showAll ? DIALOGUE_SERIES_DATA : DIALOGUE_SERIES_DATA.slice(0, 6);
 
   return (
     <section ref={containerRef} className="relative w-full min-h-screen bg-[#0F0F0F] text-[#F5F5F0] overflow-hidden" aria-labelledby="beyond-the-podium-heading">
@@ -183,7 +295,7 @@ export const BeyondThePodium: React.FC = () => {
 
         {/* Dialogue Series Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
-          {DIALOGUE_SERIES_DATA.map((series, index) => (
+          {displayedVideos.map((series, index) => (
             <motion.article 
               key={series.id} 
               custom={index} 
@@ -248,14 +360,14 @@ export const BeyondThePodium: React.FC = () => {
           y: 20
         }} transition={{
           duration: 0.8,
-          delay: 2
+          delay: 1.5
         }} className="mt-16 md:mt-24 lg:mt-32">
           <button 
-            onClick={() => setActiveVideoId(DIALOGUE_SERIES_DATA[0].youtubeId)}
+            onClick={() => setShowAll(!showAll)}
             className="group relative flex items-center gap-3 px-7 py-4 sm:px-8 border border-[#F5F5F0] rounded-full text-[#F5F5F0] transition-all duration-300 hover:bg-[#F5F5F0] hover:text-[#0F0F0F] font-sans font-medium uppercase tracking-widest text-xs"
           >
-            <span>View Strategic Dialogues</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <span>{showAll ? "Show Less Interventions" : "View All Strategic Interventions"}</span>
+            <ArrowRight className={cn("w-4 h-4 transition-transform", showAll ? "-rotate-90" : "group-hover:translate-x-1")} />
           </button>
         </motion.div>
       </div>

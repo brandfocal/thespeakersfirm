@@ -276,6 +276,14 @@ export function Header() {
           </AnimatePresence>
         </div>
 
+        {/* About Us Link */}
+        <Link 
+          href="/about" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          About Us
+        </Link>
+
         {/* Booking Process Link */}
         <a 
           href="/#methodology" 
@@ -291,6 +299,30 @@ export function Header() {
         >
           Executive Dialogues
         </a>
+
+        {/* Upcoming Events Link */}
+        <Link 
+          href="/upcoming-events" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Upcoming Events
+        </Link>
+
+        {/* Gallery Link */}
+        <Link 
+          href="/gallery" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Gallery
+        </Link>
+
+        {/* Media Link */}
+        <Link 
+          href="/media" 
+          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        >
+          Media
+        </Link>
 
         {/* Contact Us Link */}
         <a 
@@ -486,6 +518,16 @@ export function Header() {
                 )}
               </AnimatePresence>
 
+              {/* About Us */}
+              <Link 
+                href="/about" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>About Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
               {/* Booking Process */}
               <a 
                 href="/#methodology" 
@@ -505,6 +547,36 @@ export function Header() {
                 <span>Executive Dialogues</span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
               </a>
+
+              {/* Upcoming Events */}
+              <Link 
+                href="/upcoming-events" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Upcoming Events</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Gallery */}
+              <Link 
+                href="/gallery" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Gallery</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Media */}
+              <Link 
+                href="/media" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Media</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
 
               {/* Contact Us */}
               <a 
