@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
 import { WhyChooseUs } from './WhyChooseUs';
+import { RecommendedSpeakers } from './RecommendedSpeakers';
 const COLORS = {
   black: '#212121',
   red: '#e30e04',
@@ -1701,6 +1702,8 @@ export const TheSpeakersFirmHome = () => {
       </section>
 
       <SocialProofStrip />
+
+      <RecommendedSpeakers />
 
       <section aria-labelledby="featured-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
       backgroundColor: COLORS.offWhite,
