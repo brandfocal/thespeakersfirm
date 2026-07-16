@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScrol
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
+import { WhyChooseUs } from './WhyChooseUs';
 import { CATEGORIES_CONFIG, CATEGORY_SPEAKERS_MAP } from '@/lib/categories';
 const COLORS = {
   black: '#000000',
@@ -3942,6 +3943,8 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
       </section>
+
+      <WhyChooseUs />
 
       {/*
       <section className="relative w-full" style={{

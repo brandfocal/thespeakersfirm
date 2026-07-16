@@ -3,6 +3,7 @@ import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScrol
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
+import { WhyChooseUs } from './WhyChooseUs';
 const COLORS = {
   black: '#212121',
   red: '#e30e04',
@@ -1958,6 +1959,8 @@ export const TheSpeakersFirmHome = () => {
           </div>
         </div>
       </section>
+
+      <WhyChooseUs />
 
       <section className="relative w-full" style={{
       borderColor: SOFT_RULE_COLOR
