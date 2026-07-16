@@ -1351,7 +1351,7 @@ export const TheSpeakersFirmHome = () => {
           color: #FFFFFF;
         }
         .tsf-signature-speaker-card {
-          background-color: #212121;
+          background-color: #e5e5e5;
           transition: border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out, transform 0.35s ease-in-out;
         }
         .tsf-signature-speaker-card:hover .tsf-competency-visual {
@@ -1816,8 +1816,8 @@ export const TheSpeakersFirmHome = () => {
                 duration: prefersReducedMotion ? 0.35 : 0.6,
                 ease: HEADING_EASE,
                 delay: prefersReducedMotion ? 0 : order % displayedFeaturedSpeakers.length * 0.08
-              }} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#212121] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
-                backgroundColor: COLORS.black
+              }} className="tsf-signature-speaker-card group relative isolate flex h-[500px] w-[min(86vw,300px)] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow,transform] duration-[350ms] ease-in-out hover:z-30 hover:scale-[1.045] hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[520px] sm:w-[330px] md:h-[540px] md:w-[360px] lg:w-[390px]" style={{
+                backgroundColor: '#e5e5e5'
               }}>
                     <img src={speaker.image} alt="" aria-hidden="true" className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center" />
                     <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />

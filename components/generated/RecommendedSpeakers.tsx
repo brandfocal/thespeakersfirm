@@ -247,7 +247,7 @@ export const RecommendedSpeakers = () => {
               </div>
 
               {/* Info Area */}
-              <div className="p-6 md:p-8 flex flex-col justify-between min-h-[270px]">
+              <div className="p-6 md:p-8 flex flex-col justify-between min-h-[190px]">
                 <div>
                   <h3 className="text-lg font-bold text-[#F8F7F5] group-hover:text-[#e30e04] transition-colors duration-300">
                     {speaker.name}
@@ -256,10 +256,6 @@ export const RecommendedSpeakers = () => {
                     {speaker.bio}
                   </p>
                   
-                  <div className="mt-4 flex gap-2 items-start text-xs text-[#AFB0B0] italic bg-white/[0.02] p-3 rounded-lg border border-white/[0.03]">
-                    <Quote className="h-3 w-3 shrink-0 text-[#e30e04] rotate-180 mt-0.5" />
-                    <p className="line-clamp-2 leading-relaxed">&ldquo;{speaker.quote}&rdquo;</p>
-                  </div>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/[0.04] flex items-center justify-between">

@@ -3328,7 +3328,7 @@ export const TheSpeakersFirmHome = () => {
             linear-gradient(128deg, #050505 0%, #15100f 46%, #020202 100%);
         }
         .tsf-signature-speaker-card {
-          background-color: #212121;
+          background-color: #e5e5e5;
           transition: border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out, transform 0.35s ease-in-out;
         }
         .tsf-signature-speaker-card:hover .tsf-competency-visual {
@@ -3655,7 +3655,7 @@ export const TheSpeakersFirmHome = () => {
                     className="flex w-max gap-0 py-0 pl-6 md:pl-16"
                   >
                     {carouselRow1.map((speaker) => (
-                      <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                      <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
                         <img 
                           src={speaker.image} 
                           onError={(e) => {
@@ -3725,7 +3725,7 @@ export const TheSpeakersFirmHome = () => {
                       className="flex w-max gap-0 py-0 pl-6 md:pl-16"
                     >
                       {carouselRow2.map((speaker) => (
-                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
                           <img 
                             src={speaker.image} 
                             onError={(e) => {
@@ -3796,7 +3796,7 @@ export const TheSpeakersFirmHome = () => {
                       className="flex w-max gap-0 py-0 pl-6 md:pl-16"
                     >
                       {carouselRow3.map((speaker) => (
-                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#000000] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: COLORS.black }}>
+                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
                           <img 
                             src={speaker.image} 
                             onError={(e) => {
