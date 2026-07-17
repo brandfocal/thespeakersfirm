@@ -1743,7 +1743,7 @@ const FACULTY = [{
   designation: 'Corporate Statesman',
   role: 'Chancellor of the University of the Free State, Author & Corporate Leader',
   image: '/highlighted_faculty/prof-bonang-mohale.jpg',
-  trackId: 'leadership-strategy-and-executive-performance',
+  trackId: 'governance',
   tags: [{
     id: 'economic-transformation',
     label: 'Economic Transformation'

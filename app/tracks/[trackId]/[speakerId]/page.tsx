@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
-import { AboutTeamSection } from "@/components/generated/BonangMohaleProfile";
+import { AboutTeamSection } from "@/components/generated/BonangMohaleProfileNew";
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -10,7 +10,7 @@ interface PageProps {
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
 
-  if ((trackId === "leadership-governance-and-risk-intelligence" || trackId === "leadership-strategy-and-executive-performance") && speakerId === "bonang-mohale") {
+  if ((trackId === "leadership-governance-and-risk-intelligence" || trackId === "leadership-strategy-and-executive-performance" || trackId === "governance") && (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate")) {
     return <AboutTeamSection />;
   }
 
