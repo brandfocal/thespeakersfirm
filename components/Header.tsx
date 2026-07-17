@@ -67,7 +67,7 @@ const FOOTER_NAV_LINKS = [
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
   { id: 'methodology', label: 'Methodology', href: '/#methodology' },
   { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/#dialogues' },
-  { id: 'brief-bureau', label: 'Brief the Bureau', href: '/#brief-us' }
+  { id: 'find-speaker', label: 'Find a Speaker', href: '/#faculty' }
 ];
 
 export function Header() {
@@ -241,7 +241,7 @@ export function Header() {
         >
           <button 
             onClick={() => setIsMoreCategoriesOpen(!isMoreCategoriesOpen)}
-            className="flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]"
+            className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]"
           >
             <span>Categories</span>
             <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
@@ -279,23 +279,15 @@ export function Header() {
         {/* About Us Link */}
         <Link 
           href="/about" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           About Us
         </Link>
 
-        {/* Booking Process Link */}
-        <a 
-          href="/#methodology" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
-        >
-          Booking Process
-        </a>
-
         {/* Executive Dialogues Link */}
         <a 
           href="/#dialogues" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           Executive Dialogues
         </a>
@@ -303,7 +295,7 @@ export function Header() {
         {/* Upcoming Events Link */}
         <Link 
           href="/upcoming-events" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           Upcoming Events
         </Link>
@@ -311,7 +303,7 @@ export function Header() {
         {/* Gallery Link */}
         <Link 
           href="/gallery" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           Gallery
         </Link>
@@ -319,7 +311,7 @@ export function Header() {
         {/* Media Link */}
         <Link 
           href="/media" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           Media
         </Link>
@@ -327,7 +319,7 @@ export function Header() {
         {/* Contact Us Link */}
         <a 
           href="/#brief-us" 
-          className="text-[12px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
         >
           Contact Us
         </a>
@@ -416,17 +408,17 @@ export function Header() {
 
         <a 
           href="/#brief-us" 
-          className="whitespace-nowrap rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" 
+          className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" 
           style={{ backgroundColor: COLORS.red }}
         >
           Book A Speaker
         </a>
         <a 
-          href="/#brief-us" 
-          className="whitespace-nowrap rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
+          href="/#faculty" 
+          className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
           style={{ backgroundColor: COLORS.black }}
         >
-          Brief the Bureau
+          Find a Speaker
         </a>
       </div>
       <button 
@@ -528,15 +520,7 @@ export function Header() {
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
               </Link>
 
-              {/* Booking Process */}
-              <a 
-                href="/#methodology" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-              >
-                <span>Booking Process</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </a>
+
 
               {/* Executive Dialogues */}
               <a 
