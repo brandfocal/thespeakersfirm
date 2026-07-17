@@ -14,7 +14,7 @@ const COLORS = {
   deepBlack: "#0A0A0A"
 };
 const SECTION_HEADING_CLASS = "font-['Kontora',sans-serif] max-w-[12ch] text-2xl font-bold uppercase leading-[0.9] tracking-[-0.05em] sm:text-3xl md:text-4xl lg:text-5xl";
-const SUB_HEADING_CLASS = "font-['Kontora',sans-serif] text-xl font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-2xl md:text-3xl";
+const SUB_HEADING_CLASS = "font-['Kontora',sans-serif] text-lg font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-xl md:text-2xl";
 const SECTION_TAG_CLASS = "inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-widest sm:px-4 sm:text-xs";
 const CTA_TEXT_CLASS = "text-[10px] font-bold uppercase leading-none tracking-widest sm:text-xs";
 const BODY_TEXT_CLASS = "max-w-[65ch] text-sm font-normal leading-relaxed sm:text-base";
@@ -687,7 +687,7 @@ export const ProfileAdditionalSections = () => {
                   <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-[#e30e04] text-white">
                     {renderTopicIcon(topic.icon)}
                   </div>
-                  <h3 className="text-xl font-bold leading-none tracking-[-0.045em] text-white sm:text-2xl md:text-3xl"><span>{topic.title}</span></h3>
+                  <h3 className="text-lg font-bold leading-none tracking-[-0.045em] text-white sm:text-xl md:text-2xl"><span>{topic.title}</span></h3>
                   <p className="mt-4 text-sm leading-relaxed text-[#9A9A9A] sm:text-base"><span>{topic.description}</span></p>
                 </article>)}
             </div> : null}
@@ -699,7 +699,7 @@ export const ProfileAdditionalSections = () => {
                   <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-full bg-[#e30e04] text-white">
                     {renderFormatIcon(format.icon)}
                   </div>
-                  <h3 className="text-xl font-bold leading-none tracking-[-0.045em] text-white sm:text-2xl md:text-3xl lg:text-xl"><span>{format.name}</span></h3>
+                  <h3 className="text-lg font-bold leading-none tracking-[-0.045em] text-white sm:text-xl md:text-2xl lg:text-lg"><span>{format.name}</span></h3>
                   <p className="mt-4 text-sm leading-relaxed text-[#9A9A9A] sm:text-base"><span>{format.description}</span></p>
                   <p className="mt-6 border-t border-[#1E1E1E] pt-4 text-[10px] font-bold uppercase tracking-widest text-[#e30e04] sm:text-xs"><span>{format.duration}</span></p>
                 </article>)}
@@ -724,7 +724,7 @@ export const ProfileAdditionalSections = () => {
                   <div className="relative mb-6 aspect-video overflow-hidden rounded-[14px] border border-[#1E1E1E] bg-[#0A0A0A]">
                     <img src={item.image} alt={item.headline} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
                   </div>
-                  <h3 className="max-w-md text-xl font-bold leading-tight tracking-[-0.04em] text-white sm:text-2xl md:text-3xl"><span>{item.headline}</span></h3>
+                  <h3 className="max-w-md text-lg font-bold leading-tight tracking-[-0.04em] text-white sm:text-xl md:text-2xl"><span>{item.headline}</span></h3>
                 </div>
                 <div className="mt-8 border-t border-[#1E1E1E] pt-5">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] sm:text-xs"><span>{item.publication} · {item.date}</span></p>
