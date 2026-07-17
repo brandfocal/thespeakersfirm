@@ -1877,11 +1877,11 @@ const TICKER_IMAGES = {
   ]
 };
 const HERO_HEADLINE_LINES = [{
-  id: 'africas',
+  id: 'africas-1',
   className: 'block text-[clamp(54px,18vw,72px)] md:text-[106px] lg:text-[138px] leading-[0.9] tracking-[-0.065em]',
   words: [{
-    id: 'africas-word',
-    text: "Africa's",
+    id: 'africas-1-word',
+    text: "Africa’s #1",
     isRed: false
   }]
 }, {
@@ -1893,9 +1893,13 @@ const HERO_HEADLINE_LINES = [{
     isRed: false
   }]
 }, {
-  id: 'bureau',
+  id: 'speakers-bureau',
   className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
+    id: 'speakers-word',
+    text: 'Speakers',
+    isRed: false
+  }, {
     id: 'bureau-word',
     text: 'Bureau.',
     isRed: true
@@ -3494,7 +3498,7 @@ export const TheSpeakersFirmHome = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <motion.a href="#brief-us" whileHover={{
+              <motion.a href="#faculty" whileHover={{
               scale: 1.02
             }} whileTap={{
               scale: 0.98
@@ -3503,11 +3507,15 @@ export const TheSpeakersFirmHome = () => {
             }}>
                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
                 backgroundColor: COLORS.black
-              }}><span>Brief the Bureau</span><ArrowRight aria-hidden="true" size={16} /></span>
+              }}><span>Find a Speaker</span><ArrowRight aria-hidden="true" size={16} /></span>
               </motion.a>
-              <div className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white/50 border-white/25 cursor-default select-none">
-                Explore Categories
-              </div>
+              <motion.a href="#brief-us" whileHover={{
+              scale: 1.02
+            }} whileTap={{
+              scale: 0.98
+            }} className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">
+                Book a Speaker
+              </motion.a>
             </motion.div>
           </div>
         </div>

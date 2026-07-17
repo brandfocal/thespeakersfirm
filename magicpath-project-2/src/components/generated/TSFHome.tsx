@@ -376,19 +376,27 @@ const HERO_SLIDES = [{
 }];
 const HERO_SLIDE_DURATION_MS = 5000;
 const HERO_HEADLINE_LINES = [{
-  id: 'africas',
+  id: 'africas-1',
   className: 'block text-[clamp(54px,18vw,72px)] md:text-[106px] lg:text-[138px] leading-[0.9] tracking-[-0.065em]',
   words: [{
-    id: 'africas-word',
-    text: "Africa's",
+    id: 'africas-1-word',
+    text: "Africa’s #1",
     isRed: false
   }]
 }, {
-  id: 'strategic-bureau',
-  className: 'block max-w-none whitespace-nowrap text-[clamp(28px,8.8vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  id: 'strategic',
+  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
     id: 'strategic-word',
     text: 'Strategic',
+    isRed: false
+  }]
+}, {
+  id: 'speakers-bureau',
+  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  words: [{
+    id: 'speakers-word',
+    text: 'Speakers',
     isRed: false
   }, {
     id: 'bureau-word',
@@ -1662,23 +1670,24 @@ export const TheSpeakersFirmHome = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <motion.a href="#brief-us" whileHover={{
-              scale: 1.02
-            }} whileTap={{
-              scale: 0.98
-            }} className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
-              borderColor: 'rgba(255, 255, 255, 0.18)'
-            }}>
-                <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
-                backgroundColor: COLORS.black
-              }}><span>Brief the Bureau</span><ArrowRight aria-hidden="true" size={16} /></span>
-              </motion.a>
               <motion.a href="#faculty" whileHover={{
               scale: 1.02
-            }} className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px]" style={{
-              borderColor: 'rgba(248, 247, 245, 0.42)',
-              color: COLORS.offWhite
-            }}>Explore Faculty</motion.a>
+             }} whileTap={{
+               scale: 0.98
+             }} className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
+               borderColor: 'rgba(255, 255, 255, 0.18)'
+             }}>
+                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
+                 backgroundColor: COLORS.black
+               }}><span>Find a Speaker</span><ArrowRight aria-hidden="true" size={16} /></span>
+               </motion.a>
+               <motion.a href="#brief-us" whileHover={{
+               scale: 1.02
+             }} whileTap={{
+               scale: 0.98
+             }} className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">
+                 Book a Speaker
+               </motion.a>
             </motion.div>
           </div>
         </div>
