@@ -94,7 +94,7 @@ const GALLERY_IMAGES: GalleryImage[] = [{
   src: "/speakers/Bonang Mohale/gallery/bonang-mohale.jpg",
   alt: "Professor Bonang Mohale",
   caption: "Professor Bonang Mohale",
-  className: "md:row-span-2"
+  className: ""
 }, {
   id: "bonang-mohale-banner",
   src: "/speakers/Bonang Mohale/gallery/bonang-mohale-banner.jpg",
@@ -118,7 +118,7 @@ const GALLERY_IMAGES: GalleryImage[] = [{
   src: "/speakers/Bonang Mohale/gallery/bonang-mohale-sixth.jpg",
   alt: "Professor Bonang Mohale",
   caption: "Leadership roundtable",
-  className: "md:row-span-2"
+  className: ""
 }, {
   id: "bonang-mohale-seventh",
   src: "/speakers/Bonang Mohale/gallery/bonang-mohale-seventh.jpg",
