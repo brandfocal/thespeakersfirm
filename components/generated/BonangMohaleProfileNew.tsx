@@ -1440,7 +1440,7 @@ const CalendarMock = () => {
       {/* Contact info for urgent enquiries */}
       <div className="mt-6 border-t border-[#1E1E1E] pt-4 text-center">
         <p className="text-xs text-[#9A9A9A]">
-          Have an urgent enquiry? Contact us via telephone or WhatsApp at <a href="tel:+27110000000" className="text-white hover:text-[#e30e04] font-bold">+27 11 000 0000</a>.
+          Have an urgent enquiry? Contact us via telephone or WhatsApp at <a href="tel:+27114827256" className="text-white hover:text-[#e30e04] font-bold">+27(0) 11 482 7256/7257</a>.
         </p>
       </div>
     </div>
@@ -1461,7 +1461,7 @@ const BookingSection = () => {
         <path d="M0 34C260 92 520 100 792 44C1032 -6 1240 -7 1440 34V0H0V34Z" fill="currentColor" opacity="0.06" />
       </svg>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-6 sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12">
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -1723,7 +1723,7 @@ export const AboutTeamSection = () => {
         }} transition={{
           duration: 0.65,
           ease: [0.22, 1, 0.36, 1]
-        }} className="relative w-full overflow-hidden bg-[#0A0A0A] px-4 py-12 text-white sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="boardroom-section-heading" id="boardroom-interventions">
+        }} className="relative w-full overflow-hidden bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="boardroom-section-heading" id="boardroom-interventions">
         <div className="pointer-events-none absolute inset-0 hidden justify-center xl:flex" aria-hidden="true">
           <div className="relative h-full w-full max-w-[1440px] border-x border-[#1E1E1E]">
             <div className="absolute top-0 -left-[3.5px] h-[7px] w-[7px] bg-white" />
@@ -1791,7 +1791,7 @@ export const AboutTeamSection = () => {
         ease: [0.22, 1, 0.36, 1]
       }} style={{
         display: "none"
-      }} className="relative grid grid-cols-1 gap-8 py-12 sm:gap-10 sm:py-16 md:py-20 lg:grid-cols-12 lg:gap-16 lg:py-24">
+      }} className="relative grid grid-cols-1 gap-8 py-6 sm:gap-10 sm:py-8 md:py-10 lg:grid-cols-12 lg:gap-16 lg:py-12">
         <div className="col-span-1 bg-[inherit] py-2 lg:sticky lg:top-0 lg:z-10 lg:col-span-4 lg:px-8 lg:py-6">
           <h2 className={SECTION_HEADING_CLASS}>
             <span className="block text-[#0A0A0A]">Evidence Of</span>

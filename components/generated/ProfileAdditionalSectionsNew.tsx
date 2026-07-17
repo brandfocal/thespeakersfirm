@@ -388,7 +388,7 @@ const renderFormatIcon = (icon: EngagementFormat["icon"]) => {
   return <CalendarDays className="h-5 w-5" aria-hidden="true" />;
 };
 export const BiographySection = () => {
-  return <section id="biography" className="relative bg-[#FFFFFF] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="biography-heading">
+  return <section id="biography" className="relative bg-[#FFFFFF] px-4 py-6 sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="biography-heading">
       <div className="mx-auto grid max-w-[1312px] grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="col-span-1 lg:col-span-5">
           <figure className="sticky top-8 overflow-hidden rounded-[28px] border border-[#1E1E1E] bg-[#0A0A0A] shadow-[0_24px_70px_rgba(10,10,10,0.16)]">
@@ -498,7 +498,7 @@ export const ProfileAdditionalSections = () => {
         )}
       </AnimatePresence>
 
-      <section id="gallery" className="relative bg-[#0A0A0A] px-4 py-12 text-white sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="gallery-heading">
+      <section id="gallery" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="gallery-heading">
         <svg className="pointer-events-none absolute left-0 top-0 h-14 w-full text-[#FFFFFF]" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 0H1440V30C1018 88 617 93 0 24V0Z" fill="currentColor" opacity="0.08" />
         </svg>
@@ -521,7 +521,7 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
-      <section id="experience-reel" className="relative bg-[#0A0A0A] px-4 py-12 text-white sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="experience-reel-heading">
+      <section id="experience-reel" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="experience-reel-heading">
         <div className="mx-auto max-w-[1312px]">
           <div className="mb-10 grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
             <div className="col-span-1 lg:col-span-7">
@@ -570,7 +570,7 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
-      <section id="client-testimonials" className="relative bg-[#FFFFFF] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" style={{
+      <section id="client-testimonials" className="relative bg-[#FFFFFF] px-4 py-6 sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" style={{
       overflow: "visible"
     }} aria-labelledby="client-testimonials-heading">
         <div className="mx-auto max-w-[1312px]">
@@ -630,7 +630,7 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
-      <section id="books-publications" className="relative bg-[#FFFFFF] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="books-publications-heading">
+      <section id="books-publications" className="relative bg-[#FFFFFF] px-4 py-6 sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="books-publications-heading">
         <div className="mx-auto max-w-[1312px]">
           <div className="mb-10 max-w-3xl">
             <p className={`${SECTION_TAG_CLASS} mb-6 w-fit mp-reveal`} style={SECTION_TAG_STYLE}><span>Books & Publications</span></p>
@@ -659,7 +659,7 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
-      <section id="keynote-topics" className="relative bg-[#0A0A0A] px-4 py-12 text-white sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="offers-heading">
+      <section id="keynote-topics" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="offers-heading">
         <svg className="pointer-events-none absolute left-0 top-0 h-14 w-full text-[#FFFFFF]" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 0H1440V26C1100 76 730 80 0 30V0Z" fill="currentColor" opacity="0.08" />
         </svg>
@@ -707,7 +707,7 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
-      <section id="media-coverage" className="relative bg-[#0A0A0A] px-4 py-12 text-white sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24" aria-labelledby="media-coverage-heading">
+      <section id="media-coverage" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="media-coverage-heading">
         <div className="mx-auto max-w-[1312px]">
           <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
