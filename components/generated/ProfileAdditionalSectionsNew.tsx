@@ -60,6 +60,7 @@ interface BookPublication {
   description: string;
   accentClassName: string;
   image: string;
+  url: string;
 }
 interface TopicCard {
   id: string;
