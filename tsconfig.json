@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "magicpath-project", "magicpath-project-2"]
+  "exclude": ["node_modules", "magicpath-project", "magicpath-project-2", "magicpath-project-3", "magicpath-project-4"]
 }
