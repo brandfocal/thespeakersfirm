@@ -241,10 +241,11 @@ export function Header() {
         >
           <button 
             onClick={() => setIsMoreCategoriesOpen(!isMoreCategoriesOpen)}
-            className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]"
+            className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04] relative py-1 group"
           >
             <span>Categories</span>
             <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
           </button>
 
           <AnimatePresence>
@@ -279,49 +280,105 @@ export function Header() {
         {/* About Us Link */}
         <Link 
           href="/about" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/about" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
-          About Us
+          <span>About Us</span>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/about" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
         </Link>
 
         {/* Executive Dialogues Link */}
-        <a 
-          href="/#dialogues" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+        <Link 
+          href="/executive-dialogues" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/executive-dialogues" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
-          Executive Dialogues
-        </a>
+          <span>Executive Dialogues</span>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/executive-dialogues" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
+        </Link>
 
         {/* Upcoming Events Link */}
         <Link 
           href="/upcoming-events" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/upcoming-events" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
-          Upcoming Events
+          <span>Upcoming Events</span>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/upcoming-events" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
         </Link>
 
         {/* Gallery Link */}
         <Link 
           href="/gallery" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/gallery" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
-          Gallery
+          <span>Gallery</span>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/gallery" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
         </Link>
 
         {/* Media Link */}
         <Link 
           href="/media" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/media" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
-          Media
+          <span>Media</span>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/media" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
         </Link>
 
         {/* Contact Us Link */}
         <a 
           href="/#brief-us" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04]" 
+          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04] relative py-1 group" 
         >
-          Contact Us
+          <span>Contact Us</span>
+          <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
         </a>
       </div>
 
@@ -523,14 +580,14 @@ export function Header() {
 
 
               {/* Executive Dialogues */}
-              <a 
-                href="/#dialogues" 
+              <Link 
+                href="/executive-dialogues" 
                 onClick={handleMobileMenuClose}
                 className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
               >
                 <span>Executive Dialogues</span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </a>
+              </Link>
 
               {/* Upcoming Events */}
               <Link 

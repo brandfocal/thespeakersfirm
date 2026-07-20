@@ -1,4 +1,4 @@
-import * as React from 'react';
+import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const COLORS = {
@@ -9,7 +9,7 @@ const FOOTER_NAV_LINKS = [
   { id: 'home', label: 'Home', href: '/' },
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
   { id: 'methodology', label: 'Methodology', href: '/#methodology' },
-  { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/#dialogues' },
+  { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/executive-dialogues' },
   { id: 'brief-bureau', label: 'Brief the Bureau', href: '/#brief-us' },
   { id: 'what-sets-us-apart', label: 'What Sets Us Apart', href: '/#methodology' },
   { id: 'why-engagements-stand-apart', label: 'Why Our Engagements Stand Apart', href: '/#methodology' },
@@ -43,13 +43,13 @@ export function Footer() {
             </h3>
             <div className="mt-5 flex flex-col items-start gap-3">
               {FOOTER_NAV_LINKS.map(item => (
-                <a 
+                <Link 
                   key={`footer-${item.id}`} 
                   href={item.href} 
                   className="text-[15px] font-bold uppercase tracking-[0.08em] transition-colors duration-300 hover:text-[#e30e04]"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>
