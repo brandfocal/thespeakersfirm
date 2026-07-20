@@ -225,9 +225,6 @@ export const TSFAboutUsRedesign = () => <div style={{
     }} aria-hidden="true" />
     <VerticalBorderLines isDark />
     <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
-      <div>
-        <SectionTag className="mb-6 sm:mb-8">About The Speakers Firm</SectionTag>
-      </div>
       <AnimatedHeading lines={HERO_LINES} as="h1" className="font-bold uppercase max-w-full drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] text-[#ffffff] text-[clamp(3.5rem,11vw,6.5rem)] leading-[0.9] tracking-[-0.055em]" />
       <motion.div aria-hidden="true" initial={{
         scaleX: 0,
@@ -375,12 +372,12 @@ export const TSFAboutUsRedesign = () => <div style={{
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
             delay: order * 0.1
-          }} className="group relative isolate grid min-h-0 overflow-hidden rounded-[22px] border border-[rgba(248,247,245,0.08)] bg-[linear-gradient(135deg,#333333_0%,#292929_54%,#1f1f1f_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:rounded-[28px] md:min-h-[420px] md:grid-cols-2 lg:min-h-[520px]">
+          }} className="group relative isolate grid min-h-0 overflow-hidden rounded-[22px] border border-[rgba(248,247,245,0.08)] bg-[linear-gradient(135deg,#333333_0%,#292929_54%,#1f1f1f_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:rounded-[28px] md:min-h-[340px] md:grid-cols-2 lg:min-h-[380px]">
           <div className={`${imageFirst ? 'md:order-2' : 'md:order-1'} relative z-10 aspect-[4/3] w-full overflow-hidden bg-[#000000] md:aspect-auto md:min-h-full`}>
             <img src={leader.image} alt={`${leader.name}, ${leader.role}`} className="block h-full w-full object-cover object-top grayscale transition duration-700 ease-out group-hover:scale-[1.04] group-hover:grayscale-0" />
           </div>
 
-          <div className={`${imageFirst ? 'md:order-1' : 'md:order-2'} relative z-10 flex min-h-[250px] flex-col justify-between overflow-hidden px-5 py-6 sm:min-h-[270px] sm:px-8 sm:py-8 md:min-h-full lg:p-10`}>
+          <div className={`${imageFirst ? 'md:order-1' : 'md:order-2'} relative z-10 flex min-h-[220px] flex-col justify-between overflow-hidden px-5 py-6 sm:min-h-[240px] sm:px-8 sm:py-8 md:min-h-full lg:p-10`}>
             <span className="pointer-events-none absolute bottom-0 left-0 z-0 text-[96px] font-bold leading-none tracking-[-0.08em] text-[#ffffff]/[0.035] sm:text-[132px] md:text-[150px] lg:text-[176px]">
               {leader.ordinal}
             </span>
