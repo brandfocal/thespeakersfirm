@@ -292,14 +292,24 @@ export const TSFGallery = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const filteredItems = activeFilter === 'All' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   return <main className="min-h-screen bg-[#ffffff] font-[Kontora,sans-serif] text-[#212121]">
-      <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-[#111111] sm:min-h-[640px] lg:h-[100vh]">
+      <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-[#111111] lg:h-[100vh]">
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
           <img src="/galleries/ralph-mathekga/ralph-mathekga.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_42px)] opacity-[0.16]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
         </div>
         <VerticalBorderLines isDark />
-        <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-28 pt-24 sm:pb-36 md:px-16 lg:pb-44">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
+          <motion.div initial={{
+          opacity: 0,
+          y: 12
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.3
+        }} className="mb-6"><SectionTag>GALLERY</SectionTag></motion.div>
           <AnimatedWordHeading lines={heroHeadingLines} className="max-w-full overflow-hidden text-[clamp(3rem,15vw,7rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#F8F7F5] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] sm:text-[clamp(4rem,12vw,7rem)]" />
           <motion.div aria-hidden="true" initial={{
           scaleX: 0,
