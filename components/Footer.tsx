@@ -14,10 +14,6 @@ const FOOTER_NAV_LINKS = [
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'media', label: 'Media', href: '/media' },
   { id: 'brief-bureau', label: 'Brief the Bureau', href: '/#brief-us' },
-  { id: 'what-sets-us-apart', label: 'What Sets Us Apart', href: '/#methodology' },
-  { id: 'why-engagements-stand-apart', label: 'Why Our Engagements Stand Apart', href: '/#methodology' },
-  { id: 'booking-process', label: 'Our Booking Process Is Built for Impact', href: '/#brief-us' },
-  { id: 'deployment-formats', label: 'Deployment Formats', href: '/#brief-us' },
   { id: 'join', label: 'Join The Speakers Firm', href: '/#brief-us' }
 ];
 
