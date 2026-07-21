@@ -292,7 +292,9 @@ export const TSFGallery = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const filteredItems = activeFilter === 'All' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   return <main className="min-h-screen bg-[#ffffff] font-[Kontora,sans-serif] text-[#212121]">
-      <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-[#111111] lg:h-[100vh]">
+      <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#111111]" style={{
+      backgroundColor: '#000000'
+    }}>
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
           <img src="/galleries/ralph-mathekga/ralph-mathekga.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_42px)] opacity-[0.16]" />
