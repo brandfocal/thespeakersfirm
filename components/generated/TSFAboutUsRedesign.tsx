@@ -57,7 +57,7 @@ const leaders: Leader[] = [{
   name: 'Boitumelo Mmakou',
   role: 'Digital Social Media and PR Specialist',
   bio: 'Boitumelo drives the firm\'s digital presence and brand storytelling across social and media channels. She ensures the firm\'s work reaches the clients and audiences who need it most.',
-  image: '/Team/Carshiefa-Sissing.jpg'
+  image: '/Team/Boitumelo-Mmakou.jpg'
 }, {
   ordinal: '04',
   name: 'Bonnie Maponya',
