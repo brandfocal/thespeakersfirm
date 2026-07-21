@@ -150,15 +150,15 @@ const VerticalBorderLines = ({
   const borderColor = isDark ? '#393939' : '#C7C7C8';
   const capColor = isDark ? '#FFFFFF' : '#212121';
   return <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-20">
-      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-16">
-        <div className="absolute left-6 md:left-16 top-0 bottom-0 w-[1px]" style={{
+      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-10">
+        <div className="absolute left-6 md:left-10 top-0 bottom-0 w-[1px]" style={{
         backgroundColor: borderColor
       }}>
           <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
           backgroundColor: capColor
         }} />
         </div>
-        <div className="absolute right-6 md:right-16 top-0 bottom-0 w-[1px]" style={{
+        <div className="absolute right-6 md:right-10 top-0 bottom-0 w-[1px]" style={{
         backgroundColor: borderColor
       }}>
           <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
@@ -207,13 +207,13 @@ export function BookASpeaker() {
 
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000]">
       <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000]">
-        <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          <img src="/galleries/bonang-mohale/bonang-mohale.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-40" />
-          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.3)_100%)]" />
-          <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_36%,rgba(0,0,0,0.08),transparent_34%),linear-gradient(90deg,rgba(0,0,0,0.42)_0%,rgba(0,0,0,0.2)_42%,rgba(0,0,0,0.52)_100%)]" />
-        </div>
+        <img src="/galleries/bonang-mohale/bonang-mohale.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
+        }} aria-hidden="true" />
         <VerticalBorderLines isDark={true} />
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-10">
           <Reveal>
             <SectionTag>BOOK A SPEAKER</SectionTag>
           </Reveal>
@@ -246,7 +246,7 @@ export function BookASpeaker() {
 
       <section id="brief" className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.offWhite }}>
         <VerticalBorderLines isDark={false} />
-        <div className="relative z-10 mx-auto max-w-[1440px]">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-20">
             <div>
               <SectionTag>STRATEGIC MATCHING</SectionTag>
@@ -384,7 +384,7 @@ export function BookASpeaker() {
 
       <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16 border-t border-black/10" style={{ backgroundColor: COLORS.offWhite }}>
         <VerticalBorderLines isDark={false} />
-        <div className="relative z-10 mx-auto max-w-[1440px] grid grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 gap-12 md:grid-cols-2">
           <Reveal>
             <blockquote className="border-l-4 border-[#e30e04] pl-6 py-2">
               <span className="block text-[11px] font-bold uppercase tracking-widest text-[#e30e04] mb-3">CURATED RECOMMENDATIONS</span>
