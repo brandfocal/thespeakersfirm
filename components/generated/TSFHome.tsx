@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -3509,13 +3510,9 @@ export const TheSpeakersFirmHome = () => {
                 backgroundColor: COLORS.black
               }}><span>Find a Speaker</span><ArrowRight aria-hidden="true" size={16} /></span>
               </motion.a>
-              <motion.a href="#brief-us" whileHover={{
-              scale: 1.02
-            }} whileTap={{
-              scale: 0.98
-            }} className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">
+              <Link href="/book-a-speaker" className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">
                 Book a Speaker
-              </motion.a>
+              </Link>
             </motion.div>
           </div>
         </div>
