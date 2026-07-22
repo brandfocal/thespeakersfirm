@@ -17,102 +17,102 @@ const categories: Category[] = [{
   number: '01',
   name: 'Keynote and Motivational Speakers',
   description: 'Influential global voices, accomplished leaders, inspiring change-makers and exceptional storytellers who challenge conventional thinking, energise audiences and turn inspiration into meaningful action.',
-  seed: 'tsf-stage'
+  seed: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg'
 }, {
   number: '02',
   name: 'Leadership, Strategy and Executive Performance',
   description: 'World-class CEOs, board chairs and executive leaders offering decisive insights into courageous leadership, strategy execution, organisational performance and leading through complexity.',
-  seed: 'tsf-leadership'
+  seed: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg'
 }, {
   number: '03',
   name: 'Boards, Governance and Boardroom Influence',
   description: 'Distinguished directors and governance authorities strengthening board effectiveness, ethical stewardship, executive accountability and institutional sustainability.',
-  seed: 'tsf-boardroom'
+  seed: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg'
 }, {
   number: '04',
   name: 'Artificial Intelligence and Intelligent Enterprise',
   description: 'AI pioneers and transformation leaders helping organisations move from experimentation to responsible, enterprise-wide adoption and measurable commercial value.',
-  seed: 'tsf-ai'
+  seed: '/image_marquee/stafford-masie-the-speakers-firm.jpg'
 }, {
   number: '05',
   name: 'Future of Work, Talent and Workforce Transformation',
   description: 'Leading authorities preparing organisations and people for rapidly changing technologies, skills requirements, employee expectations and workplace models.',
-  seed: 'tsf-future'
+  seed: '/speakers/FutureOfWork/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg'
 }, {
   number: '06',
   name: 'Economics, Markets and the Global Economy',
   description: 'Respected economists and financial strategists translating complex economic developments into clear implications for boards, investors, governments and business leaders.',
-  seed: 'tsf-economy'
+  seed: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg'
 }, {
   number: '07',
   name: 'Futurists, Trends and Strategic Foresight',
   description: 'Futurists and trend specialists identifying the technological, demographic, economic and social forces that will reshape industries, consumers and societies.',
-  seed: 'tsf-future-sight'
+  seed: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg'
 }, {
   number: '08',
   name: 'Geopolitics, Policy and Global Affairs',
   description: 'Diplomats, political leaders, journalists and analysts helping decision-makers understand geopolitical risk, policy shifts and the evolving global order.',
-  seed: 'tsf-global'
+  seed: '/speakers/Geopolitics/Prince-Mashele-The-Speakers-Firm.jpg'
 }, {
   number: '09',
   name: 'Innovation, Disruption and Business Transformation',
   description: 'Proven innovators equipping organisations to challenge established models, unlock new value and build future-ready enterprises.',
-  seed: 'tsf-innovation'
+  seed: '/faculty/dr-victor-ramathesele-the-speakers-firm.jpg'
 }, {
   number: '10',
   name: 'Entrepreneurship, Investment and Business Growth',
   description: 'Accomplished founders, investors and enterprise leaders sharing practical strategies for funding, scaling and sustaining high-growth businesses.',
-  seed: 'tsf-growth'
+  seed: '/image_marquee/leadership/Abdullah-Verachia-The-Speakers-Firm.jpg'
 }, {
   number: '11',
   name: 'Change, Resilience and Organisational Agility',
   description: 'Change specialists helping leaders mobilise people, overcome resistance and sustain organisational performance through disruption and uncertainty.',
-  seed: 'tsf-change'
+  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
 }, {
   number: '12',
   name: 'Media, Communication and Executive Visibility',
   description: 'Broadcasters, journalists and communication strategists empowering leaders to communicate with authority, clarity and influence across every platform.',
-  seed: 'tsf-media'
+  seed: '/speaker_thumbnails/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg'
 }, {
   number: '13',
   name: 'Reputation, Crisis and Trust Leadership',
   description: 'Reputation and crisis specialists helping organisations protect institutional trust, navigate scrutiny and lead decisively when credibility is at stake.',
-  seed: 'tsf-trust'
+  seed: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg'
 }, {
   number: '14',
   name: 'Marketing, Branding and Customer Growth',
   description: 'Visionary marketers and consumer authorities demonstrating how organisations can build distinctive brands, deepen customer relationships and convert relevance into revenue.',
-  seed: 'tsf-brand'
+  seed: '/speakers/Branding/Sylvester-Chauke--The-Speakers-Firm.jpg'
 }, {
   number: '15',
   name: 'Sales, Negotiation and Commercial Performance',
   description: 'High-performing commercial leaders equipping teams to win clients, negotiate effectively and accelerate sustainable revenue growth.',
-  seed: 'tsf-sales'
+  seed: '/speakers/Branding/Mzamo-Masito-The-Speakers-Firm.jpg'
 }, {
   number: '16',
   name: 'Neuroscience, Psychology and Human Behaviour',
   description: 'Neuroscientists, psychologists and behavioural experts translating science into practical strategies for leadership, learning, decision-making and performance.',
-  seed: 'tsf-mind'
+  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
 }, {
   number: '17',
   name: 'High-Performance Teams and Team-Building Experiences',
   description: 'Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions.',
-  seed: 'tsf-team'
+  seed: '/faculty/dr-victor-ramathesele-the-speakers-firm.jpg'
 }, {
   number: '18',
   name: 'Sports, Coaching and the Winning Mindset',
   description: 'Elite athletes, championship coaches and sporting icons translating lessons from world-class competition into compelling leadership and business insights.',
-  seed: 'tsf-sport'
+  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
 }, {
   number: '19',
   name: 'Sustainability, ESG, Health and Human Performance',
   description: 'Sustainability, climate, health and wellbeing authorities helping organisations build resilient businesses, healthier cultures and sustainable performance.',
-  seed: 'tsf-health'
+  seed: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg'
 }, {
   number: '20',
   name: 'Celebrity Speakers, MCs, Comedy and Entertainment',
   description: 'Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.',
-  seed: 'tsf-entertainment'
+  seed: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg'
 }];
 
 const marqueeNames = categories.map(category => category.name);
@@ -175,6 +175,7 @@ const VerticalBorderLines = ({
 
 export function SpeakerCategoriesPage() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#212121] text-[#F8F7F5]">
       
@@ -202,75 +203,115 @@ export function SpeakerCategoriesPage() {
         </div>
       </section>
 
-      {/* Categories Filter list section */}
-      <section className="sticky top-0 z-30 border-b border-white/[0.08] bg-[#161616] px-6 md:px-16 py-4">
-        <VerticalBorderLines isDark={true} />
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 relative z-10">
-          <div className="flex items-center gap-3 md:gap-5 flex-1 min-w-0">
-            <span className="hidden shrink-0 text-[10px] font-bold tracking-[0.18em] text-white/45 md:block">BROWSE BY</span>
-            <div className="flex min-w-0 gap-2 overflow-x-auto pb-1 [scrollbar-width:none]">
-              {filters.map(filter => (
-                <button key={filter} onClick={() => setActiveFilter(filter)} className={`min-h-10 shrink-0 rounded-full border px-5 py-2 text-[11px] transition-colors ${activeFilter === filter ? 'border-[#e30e04] bg-[#e30e04] text-white' : 'border-white/10 bg-[#242424] text-[#AFB0B0] hover:border-[#e30e04]/60'}`}>
-                  {filter}
-                </button>
-              ))}
-            </div>
-          </div>
-          <label className="hidden shrink-0 items-center gap-2 border-b border-white/20 pb-2 text-white/45 xl:flex">
-            <Search size={15} />
-            <input className="w-32 bg-transparent text-xs text-white outline-none placeholder:text-white/40" placeholder="Search" aria-label="Search categories" />
-          </label>
-        </div>
-      </section>
-
       {/* Grid of categories */}
-      <section id="categories" className="relative px-6 md:px-16 py-14 md:py-20 xl:py-28 bg-[#1e1e1e]">
+      <section id="categories" className="relative py-14 md:py-20 xl:py-28 bg-[#1e1e1e]">
         <VerticalBorderLines isDark={true} />
-        <div className="mx-auto max-w-[1440px] relative z-10">
+        <div className="mx-auto max-w-[1440px] relative z-10 px-6 md:px-16">
           <header className="mb-9 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end md:gap-8 border-b border-white/10 pb-6">
             <div>
               <span className="mb-4 inline-flex border-l-4 border-[#e30e04] bg-[#2a2a2a] px-4 py-2 text-[10px] font-bold tracking-[0.2em]">ALL CATEGORIES</span>
               <h2 className="mt-3 text-[clamp(2.75rem,12vw,4.5rem)] font-black uppercase leading-none tracking-[-0.07em] md:text-7xl">Explore By<br /><span className="text-[#e30e04]">Theme</span></h2>
             </div>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">20 Categories <span className="mx-2 text-[#e30e04]">/</span> Global Reach</p>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">{(activeFilter === 'All' ? categories : categories.filter(c => c.name.toLowerCase().includes(activeFilter.toLowerCase()) || activeFilter === 'All')).length} Categories <span className="mx-2 text-[#e30e04]">/</span> Global Reach</p>
           </header>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-            {categories.map((category, categoryIndex) => (
-              <div key={category.number} className="group grid min-h-[340px] overflow-hidden border border-white/[0.08] bg-[#161616] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#e30e04]/40 hover:shadow-[0_24px_56px_rgba(0,0,0,0.5)] sm:min-h-[365px]" style={{
-                gridTemplateRows: '1fr auto'
-              }}>
-                <div className="relative grid min-h-[250px] overflow-hidden bg-cover bg-center sm:min-h-[280px]" style={{
-                  backgroundImage: `url('https://picsum.photos/seed/${category.seed}/600/800')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                  <div className="relative z-10 self-end p-5 sm:p-6 lg:p-5">
-                    <p className="mb-2 text-[clamp(2rem,10vw,2.25rem)] font-black tracking-[-0.08em] text-[#e30e04]">{category.number}</p>
-                    <h3 className="max-w-[260px] text-[clamp(1.05rem,5vw,1.125rem)] font-black uppercase leading-[0.94] tracking-[-0.045em]">{category.name}</h3>
-                  </div>
-                  <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
-                    <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
-                    <a href="/contact" className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
-                      Explore Speakers <ArrowUpRight size={15} />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d]">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/45">Category {categoryIndex + 1}</span>
-                  <ArrowUpRight size={16} className="text-[#e30e04]" />
-                </div>
+          {/* Categories Filter list section situated below header */}
+          <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between border-b border-white/[0.08] pb-6">
+            <div className="flex items-center gap-3 md:gap-5 flex-1 min-w-0">
+              <span className="hidden shrink-0 text-[10px] font-bold tracking-[0.18em] text-white/45 md:block">BROWSE BY</span>
+              <div className="flex min-w-0 gap-2 overflow-x-auto pb-1 [scrollbar-width:none]">
+                {filters.map(filter => (
+                  <button key={filter} onClick={() => {
+                    setActiveFilter(filter);
+                  }} className={`min-h-10 shrink-0 rounded-full border px-5 py-2 text-[11px] transition-colors ${activeFilter === filter ? 'border-[#e30e04] bg-[#e30e04] text-white' : 'border-white/10 bg-[#242424] text-[#AFB0B0] hover:border-[#e30e04]/60'}`}>
+                    {filter}
+                  </button>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            {/* Inline search field */}
+            <div className="flex shrink-0 items-center gap-2 border-b border-white/20 pb-2 text-white/45 min-w-[200px]">
+              <Search size={15} />
+              <input 
+                type="text" 
+                value={searchQuery} 
+                onChange={(e) => setSearchQuery(e.target.value)} 
+                className="w-full bg-transparent text-xs text-white outline-none placeholder:text-white/40" 
+                placeholder="Search categories..." 
+                aria-label="Search categories" 
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            {categories
+              .filter(category => {
+                // Filter by theme selection
+                let matchesTheme = true;
+                if (activeFilter !== 'All') {
+                  if (activeFilter === 'AI & Tech') {
+                    matchesTheme = category.name.toLowerCase().includes('intelligence') || category.name.toLowerCase().includes('futurists') || category.name.toLowerCase().includes('innovation');
+                  } else if (activeFilter === 'Future of Work') {
+                    matchesTheme = category.name.toLowerCase().includes('future') || category.name.toLowerCase().includes('change') || category.name.toLowerCase().includes('neuroscience') || category.name.toLowerCase().includes('teams');
+                  } else if (activeFilter === 'Economics') {
+                    matchesTheme = category.name.toLowerCase().includes('economics') || category.name.toLowerCase().includes('governance');
+                  } else if (activeFilter === 'Innovation') {
+                    matchesTheme = category.name.toLowerCase().includes('innovation') || category.name.toLowerCase().includes('marketing') || category.name.toLowerCase().includes('branding');
+                  } else if (activeFilter === 'Entrepreneurship') {
+                    matchesTheme = category.name.toLowerCase().includes('entrepreneurship') || category.name.toLowerCase().includes('sales');
+                  } else if (activeFilter === 'Wellbeing') {
+                    matchesTheme = category.name.toLowerCase().includes('sustainability') || category.name.toLowerCase().includes('performance') || category.name.toLowerCase().includes('neuroscience');
+                  } else if (activeFilter === 'Sports') {
+                    matchesTheme = category.name.toLowerCase().includes('sports');
+                  } else if (activeFilter === 'Entertainment') {
+                    matchesTheme = category.name.toLowerCase().includes('celebrity') || category.name.toLowerCase().includes('media');
+                  } else {
+                    matchesTheme = category.name.toLowerCase().includes(activeFilter.toLowerCase());
+                  }
+                }
+                
+                // Filter by search query
+                const matchesSearch = category.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                     category.description.toLowerCase().includes(searchQuery.toLowerCase());
+                                     
+                return matchesTheme && matchesSearch;
+              })
+              .map((category, categoryIndex) => (
+                <div key={category.number} className="group grid min-h-[340px] overflow-hidden border border-white/[0.08] bg-[#161616] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#e30e04]/40 hover:shadow-[0_24px_56px_rgba(0,0,0,0.5)] sm:min-h-[365px]" style={{
+                  gridTemplateRows: '1fr auto'
+                }}>
+                  <div className="relative grid min-h-[250px] overflow-hidden bg-cover bg-center sm:min-h-[280px]" style={{
+                    backgroundImage: `url('${category.seed}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                    <div className="relative z-10 self-end p-5 sm:p-6 lg:p-5">
+                      <p className="mb-2 text-[clamp(2rem,10vw,2.25rem)] font-black tracking-[-0.08em] text-[#e30e04]">{category.number}</p>
+                      <h3 className="max-w-[260px] text-[clamp(1.05rem,5vw,1.125rem)] font-black uppercase leading-[0.94] tracking-[-0.045em]">{category.name}</h3>
+                    </div>
+                    <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
+                      <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
+                      <a href="/contact" className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
+                        Explore Speakers <ArrowUpRight size={15} />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d]">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/45">Category {categoryIndex + 1}</span>
+                    <ArrowUpRight size={16} className="text-[#e30e04]" />
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials quotes */}
-      <section className="relative border-y border-white/[0.06] bg-[#0d0d0d] px-6 md:px-16 py-14 md:py-20 xl:py-24">
+      <section className="relative border-y border-white/[0.06] bg-[#0d0d0d] py-14 md:py-20 xl:py-24">
         <VerticalBorderLines isDark={true} />
-        <div className="mx-auto grid max-w-[1440px] gap-10 md:grid-cols-2 md:gap-12 lg:gap-20 relative z-10">
+        <div className="mx-auto grid max-w-[1440px] gap-10 md:grid-cols-2 md:gap-12 lg:gap-20 relative z-10 px-6 md:px-16">
           <blockquote className="m-0">
             <span className="text-5xl leading-none text-[#e30e04] md:text-6xl">“</span>
             <p className="mt-2 text-lg italic leading-7 text-[#f8f7f5]/85 md:text-xl md:leading-8">The Speakers Firm was not restricted by its existing portfolio. They searched the market, challenged conventional choices and secured the perfect talent for our audience and objectives. Give them your most demanding brief and allow them to find the voice your event deserves.</p>
@@ -297,9 +338,9 @@ export function SpeakerCategoriesPage() {
       </section>
 
       {/* Inline brief submit form */}
-      <section id="brief" className="relative bg-[#161616] px-6 md:px-16 py-14 md:py-20 xl:py-24">
+      <section id="brief" className="relative bg-[#161616] py-14 md:py-20 xl:py-24">
         <VerticalBorderLines isDark={true} />
-        <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-9 md:flex-row md:items-end md:gap-10 relative z-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-9 md:flex-row md:items-end md:gap-10 relative z-10 px-6 md:px-16">
           <div>
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#e30e04]">START A CONVERSATION</span>
             <h2 className="mt-4 max-w-[680px] text-[clamp(2.45rem,10vw,3.75rem)] font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-6xl">Find The Right Voice<br /><span className="text-[#e30e04]">For Your Event</span></h2>
