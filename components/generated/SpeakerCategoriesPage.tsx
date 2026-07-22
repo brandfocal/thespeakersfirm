@@ -154,15 +154,15 @@ const VerticalBorderLines = ({
   const borderColor = isDark ? '#393939' : '#C7C7C8';
   const capColor = isDark ? '#FFFFFF' : '#212121';
   return <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-20">
-      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-10">
-        <div className="absolute left-6 md:left-10 top-0 bottom-0 w-[1px]" style={{
+      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-16">
+        <div className="absolute left-6 md:left-16 top-0 bottom-0 w-[1px]" style={{
         backgroundColor: borderColor
       }}>
           <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
           backgroundColor: capColor
         }} />
         </div>
-        <div className="absolute right-6 md:right-10 top-0 bottom-0 w-[1px]" style={{
+        <div className="absolute right-6 md:right-16 top-0 bottom-0 w-[1px]" style={{
         backgroundColor: borderColor
       }}>
           <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
@@ -185,7 +185,7 @@ export function SpeakerCategoriesPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
         </div>
         <VerticalBorderLines isDark={true} />
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
           <motion.div initial="hidden" animate="visible" variants={reveal}>
             <SectionTag>THE GLOBAL PORTFOLIO</SectionTag>
           </motion.div>
