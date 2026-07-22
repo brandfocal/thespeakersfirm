@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, ArrowRight, CalendarDays, Mail, MapPin, Search } from 'lucide-react';
 
 const events = [{
@@ -124,9 +124,30 @@ const VerticalBorderLines = ({
     </div>;
 };
 
+const slideImages = [
+  { 
+    src: '/upcoming_events/empowawomen-desktop.jpg', 
+    alt: 'EmpowaWomen Initiative', 
+    link: 'https://www.quicket.co.za/events/344315-empowawomen-leadership-summit-2026/#/' 
+  },
+  { 
+    src: '/upcoming_events/empowamen-banner.jpg', 
+    alt: 'EmpowaMen Initiative', 
+    link: 'https://www.quicket.co.za/events/370734-empowamen-2026/' 
+  }
+];
+
 export const TSFUpcomingEvents = () => {
   const [active, setActive] = React.useState('All Events');
   const [query, setQuery] = React.useState('');
+  const [activeSlide, setActiveSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide(prev => (prev + 1) % slideImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
   
   const filteredEvents = events.filter(event => {
     // Exact plural mapping check
@@ -204,53 +225,55 @@ export const TSFUpcomingEvents = () => {
       </div>
     </section>
 
-    {/* Featured Event */}
-    {filteredEvents.length > 0 && (
-      <section className="relative z-10 mx-auto max-w-[1440px] px-6 py-20 md:px-16">
-        <VerticalBorderLines />
-        <motion.article 
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true, amount: 0.2 }} 
-          variants={reveal} 
-          className="group relative overflow-hidden rounded-[28px] border border-black/5 bg-neutral-50 p-6 md:p-10 flex flex-col lg:flex-row gap-8 items-center"
-        >
-          <div className="relative w-full lg:w-1/2 aspect-video overflow-hidden rounded-2xl bg-neutral-900 shadow-md">
-            <img 
-              src={filteredEvents[0].image} 
-              alt={filteredEvents[0].title} 
-              className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-700"
-            />
-            <span className="absolute top-4 left-4 rounded-full bg-[#e30e04] px-4 py-1.5 text-[9px] font-bold uppercase tracking-widest text-white">
-              {filteredEvents[0].category.slice(0, -1)} {/* Singular form */}
-            </span>
-          </div>
-          <div className="w-full lg:w-1/2 flex flex-col items-start">
-            <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-[#e30e04] mb-4">
-              <span className="flex items-center gap-1.5 text-black/60"><MapPin size={14} /> {filteredEvents[0].city}</span>
-              <span>•</span>
-              <span>{filteredEvents[0].day} {filteredEvents[0].month} {filteredEvents[0].year}</span>
-            </div>
-            <h2 className="text-[28px] md:text-[38px] leading-[1.1] font-bold uppercase text-black mb-4">{filteredEvents[0].title}</h2>
-            <p className="text-[#686869] text-base leading-relaxed mb-6">
-              {filteredEvents[0].description}
-            </p>
-            <div className="flex items-center gap-3 border-t border-black/5 pt-4 w-full mb-6">
-              <div className="w-9 h-9 rounded-full bg-black flex items-center justify-center text-white text-[10px] font-bold">
-                {filteredEvents[0].speaker.slice(0, 2).toUpperCase()}
-              </div>
-              <div className="text-[12px] text-black">With <strong>{filteredEvents[0].speaker}</strong></div>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a href="mailto:brief@thespeakersfirm.com" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#e30e04] px-6 py-3.5 text-[11px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-black">
-                <span>Register Now</span>
-                <ArrowRight size={14} />
+    {/* Image Slider Feature (Banner showcase) */}
+    <section className="relative z-10 mx-auto max-w-[1440px] px-6 py-20 md:px-16">
+      <VerticalBorderLines />
+      <div className="relative z-10 px-6 md:px-16">
+        <div className="mb-8">
+          <SectionTag>Highlights & Initiatives</SectionTag>
+        </div>
+        
+        {/* Slider Frame */}
+        <div className="relative overflow-hidden w-full">
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={activeSlide}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: 'easeInOut' }}
+              className="w-full"
+            >
+              <a 
+                href={slideImages[activeSlide].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block cursor-pointer hover:opacity-95 transition-opacity"
+              >
+                <img 
+                  src={slideImages[activeSlide].src} 
+                  alt={slideImages[activeSlide].alt} 
+                  className="w-full h-auto block"
+                />
               </a>
-            </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Slide Indicator Dots */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+            {slideImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => setActiveSlide(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === i ? 'w-8 bg-[#e30e04]' : 'w-2.5 bg-black/40 hover:bg-black/60'}`}
+              />
+            ))}
           </div>
-        </motion.article>
-      </section>
-    )}
+        </div>
+      </div>
+    </section>
 
     {/* All Events list */}
     <section className="relative z-10 bg-black text-white py-20 lg:py-32" id="events">
