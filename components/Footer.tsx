@@ -15,7 +15,7 @@ const FOOTER_NAV_LINKS = [
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'media', label: 'Media', href: '/media' },
   { id: 'brief-bureau', label: 'Brief the Bureau', href: '/contact' },
-  { id: 'join', label: 'Join The Speakers Firm', href: '/#brief-us' }
+  { id: 'join', label: 'Join The Speakers Firm', href: '/contact' }
 ];
 
 export function Footer() {

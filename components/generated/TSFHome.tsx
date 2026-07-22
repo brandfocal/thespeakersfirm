@@ -1925,7 +1925,7 @@ const FOOTER_NAV_LINKS = [{
 }, {
   id: 'brief-bureau',
   label: 'Brief the Bureau',
-  href: '#brief-us'
+  href: '/contact'
 }];
 const ENGAGEMENT_OPTIONS = [{
   id: 'boardroom-strategy',
@@ -2319,7 +2319,7 @@ const FloatingNav = ({
           }} />
           </motion.div>
         </div>
-        <a href="#brief-us" className="whitespace-nowrap rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" style={{
+        <a href="/contact" className="whitespace-nowrap rounded-full px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" style={{
         backgroundColor: COLORS.red
       }}>
           Brief the Bureau

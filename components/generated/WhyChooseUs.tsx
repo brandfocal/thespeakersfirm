@@ -180,7 +180,7 @@ export const WhyChooseUs = () => {
               className="mt-14 pt-8 border-t border-white/[0.08]"
             >
               <a 
-                href="/#brief-us" 
+                href="/contact" 
                 className="group relative inline-flex items-center gap-3 rounded-full bg-[#e30e04] hover:bg-white text-white hover:text-[#181818] px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-[0_12px_32px_rgba(227,14,4,0.18)] hover:shadow-none active:scale-98"
               >
                 <span>Start a Brief</span>
