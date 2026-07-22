@@ -2,74 +2,119 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { ArrowDown, ArrowRight, CalendarDays, Mail, MapPin, Search } from 'lucide-react';
 
 const events = [{
-  id: 'disruption',
-  day: '15',
-  month: 'MAR',
-  year: '2025',
+  id: 'roundtable-mohale',
+  day: '03',
+  month: 'DEC',
+  year: '2024',
   city: 'Johannesburg',
-  category: 'Keynotes',
-  title: 'Navigating Disruption',
-  description: 'A clear-eyed conversation about leading with confidence through uncertainty.',
-  speaker: 'Prof. Bonang Mohale',
-  image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600'
-}, {
-  id: 'women',
-  day: '28',
-  month: 'MAR',
-  year: '2025',
-  city: 'Cape Town',
   category: 'Roundtables',
-  title: 'Women in Leadership Roundtable',
-  description: 'A candid exchange on power, progress, and the next generation of leaders.',
+  title: 'Corporate Governance Dialogues',
+  description: 'Redefining ethical foundations and performance for modern businesses.',
+  speaker: 'Prof. Bonang Mohale',
+  image: '/roundtable/mohale.jpg'
+}, {
+  id: 'roundtable-invite3',
+  day: '08',
+  month: 'DEC',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Executive Dialogue Session',
+  description: 'Intimate private sector governance and accountability conversations.',
   speaker: 'The Speakers Firm',
-  image: 'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=600'
+  image: '/roundtable/invite3.jpg'
 }, {
-  id: 'ai',
+  id: 'roundtable-lincoln',
+  day: '26',
+  month: 'NOV',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Leadership & Accountability Seminar',
+  description: 'An executive dialogue on trust, integrity, and sustainable leadership.',
+  speaker: 'Lincoln Mali',
+  image: '/roundtable/lincoln.jpg'
+}, {
+  id: 'roundtable-mmamoloko',
+  day: '14',
+  month: 'DEC',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Public Policy Roundtable',
+  description: 'Unpacking development strategies and socio-economic transformation.',
+  speaker: 'Mmamoloko Kubayi',
+  image: '/roundtable/mmamoloko.jpg'
+}, {
+  id: 'roundtable-mzamo',
   day: '10',
-  month: 'APR',
-  year: '2025',
-  city: 'Sandton',
-  category: 'Executive Dialogues',
-  title: 'The AI Economy',
-  description: 'How leaders can turn intelligent technology into meaningful advantage.',
-  speaker: 'Dr. Njeri Rionge',
-  image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600'
+  month: 'DEC',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Brand Innovation Forum',
+  description: 'Navigating consumer shifts and disruptive market realities in Africa.',
+  speaker: 'Mzamo Masito',
+  image: '/roundtable/mzamo.jpg'
 }, {
-  id: 'teams',
+  id: 'roundtable-nozipho2',
+  day: '18',
+  month: 'DEC',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Global Conversation Architecture',
+  description: 'Facilitating consequence-driven debates for organizational shifting.',
+  speaker: 'Nozipho Tshabalala',
+  image: '/roundtable/nozipho2.jpg'
+}, {
+  id: 'roundtable-reuel2',
   day: '22',
-  month: 'APR',
-  year: '2025',
-  city: 'Durban',
-  category: 'Workshops',
-  title: 'Building Resilient Teams',
-  description: 'Practical tools for creating cultures that adapt, endure, and thrive.',
-  speaker: 'Lesego Semenya',
-  image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600'
-}, {
-  id: 'growth',
-  day: '06',
-  month: 'MAY',
-  year: '2025',
-  city: 'Pretoria',
-  category: 'Keynotes',
-  title: "Africa's Growth Story",
-  description: 'A provocative look at the choices shaping the continent’s future.',
-  speaker: 'Bonang Mohale',
-  image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600'
-}, {
-  id: 'mindset',
-  day: '20',
-  month: 'MAY',
+  month: 'JAN',
   year: '2025',
   city: 'Johannesburg',
-  category: 'Workshops',
-  title: 'Executive Mindset Masterclass',
-  description: 'Shift perspective, sharpen decision-making, and lead from the front.',
-  speaker: 'Vusi Thembekwayo',
-  image: 'https://images.unsplash.com/photo-1605648916319-cf082f7524a1?q=80&w=600'
+  category: 'Roundtables',
+  title: 'Legacy Beyond Leadership',
+  description: 'An exclusive dialogue on board dynamics, ethics, and statesmanship.',
+  speaker: 'Dr. Reuel Khoza',
+  image: '/roundtable/reuel2.jpg'
+}, {
+  id: 'roundtable-siphiwe',
+  day: '12',
+  month: 'NOV',
+  year: '2024',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Strategic Talent Roundtable',
+  description: 'Building agile and resilient workforce strategies to adapt and grow.',
+  speaker: 'Siphiwe Moyo',
+  image: '/roundtable/siphiwe invite.jpg'
+}, {
+  id: 'roundtable-thebe',
+  day: '14',
+  month: 'JAN',
+  year: '2025',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'African Identity & Leadership',
+  description: 'Deploying continental narratives and cultural relevance for impact.',
+  speaker: 'Thebe Ikalafeng',
+  image: '/roundtable/thebe.jpg'
+}, {
+  id: 'roundtable-tinyiko',
+  day: '28',
+  month: 'JAN',
+  year: '2025',
+  city: 'Johannesburg',
+  category: 'Roundtables',
+  title: 'Institutional Evolution Seminar',
+  description: 'Transforming public and private sector structures for governance excellence.',
+  speaker: 'Prof. Tinyiko Maluleke',
+  image: '/roundtable/tinyiko.jpg'
 }] as const;
 
 const categories = ['All Events', 'Keynotes', 'Roundtables', 'Executive Dialogues', 'Workshops'];
@@ -141,6 +186,7 @@ export const TSFUpcomingEvents = () => {
   const [active, setActive] = React.useState('All Events');
   const [query, setQuery] = React.useState('');
   const [activeSlide, setActiveSlide] = React.useState(0);
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -275,58 +321,85 @@ export const TSFUpcomingEvents = () => {
       </div>
     </section>
 
-    {/* All Events list */}
+    {/* Past Events list */}
     <section className="relative z-10 bg-black text-white py-20 lg:py-32" id="events">
       <VerticalBorderLines isDark={true} />
       <div className="mx-auto max-w-[1440px] px-6 md:px-16">
         <div className="mb-14">
           <div className="mb-4">
-            <SectionTag>All Events</SectionTag>
+            <SectionTag>Past Events</SectionTag>
           </div>
-          <h2 className="text-[32px] md:text-[48px] leading-[1.05] font-bold uppercase">What's on</h2>
-          <p className="text-white/60 text-[15px] sm:text-[18px] max-w-[480px] mt-4 font-light">Curated encounters for leaders who are ready to move.</p>
+          <h2 className="text-[32px] md:text-[48px] leading-[1.05] font-bold uppercase">Past Roundtables</h2>
+          <p className="text-white/60 text-[15px] sm:text-[18px] max-w-[480px] mt-4 font-light">Authoritative boardroom dialogue archives from our historical portfolio.</p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {filteredEvents.map(event => (
-            <motion.article 
+            <motion.div 
               key={event.id} 
               initial="hidden" 
               whileInView="visible" 
               viewport={{ once: true, amount: 0.15 }} 
               variants={reveal} 
-              className="group flex flex-col justify-between overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.02] p-6 backdrop-blur-md transition-all duration-500 hover:border-[#e30e04]/40 hover:bg-white/[0.04]"
+              onClick={() => setSelectedImage(event.image)}
+              className="group cursor-pointer overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.02] backdrop-blur-md transition-all duration-500 hover:border-[#e30e04]/40 hover:bg-white/[0.04]"
             >
-              <div>
-                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-900 mb-6">
-                  <img src={event.image} alt={`${event.title} event`} className="h-full w-full object-cover opacity-60 group-hover:scale-102 transition-transform duration-500" />
-                  <span className="absolute top-3 right-3 rounded-full bg-black/60 px-2 py-0.5 text-[9px] font-mono text-white/65">{event.day} {event.month} {event.year}</span>
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <img 
+                  src={event.image} 
+                  alt={event.title} 
+                  className="h-full w-full object-cover group-hover:scale-102 transition-transform duration-500" 
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="rounded-full bg-[#e30e04] px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-white shadow-lg">
+                    View Artwork
+                  </span>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] font-bold tracking-wider text-[#e30e04] uppercase">
-                  <span className="flex items-center gap-1"><MapPin size={12} /> {event.city}</span>
-                  <span>•</span>
-                  <span>{event.category}</span>
-                </div>
-                <h3 className="mt-4 text-[18px] font-bold uppercase text-white tracking-tight leading-snug">{event.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">{event.description}</p>
               </div>
-              <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-white text-[8px] font-bold">{event.speaker.slice(0, 2).toUpperCase()}</div>
-                  <span className="text-[11px] text-white/50">{event.speaker}</span>
-                </div>
-                <a href="mailto:brief@thespeakersfirm.com" aria-label={`Register for ${event.title}`} className="text-[11px] font-bold tracking-widest text-[#e30e04] uppercase group-hover:translate-x-1 transition-transform flex items-center gap-1">
-                  <span>Register</span>
-                  <ArrowRight size={12} />
-                </a>
-              </div>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
         {filteredEvents.length === 0 && (
           <p className="text-center text-white/40 py-12">No events match your search.</p>
         )}
       </div>
+
+      {/* Lightbox / Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 cursor-zoom-out"
+          >
+            <motion.div 
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              className="relative max-w-[90vw] max-h-[90vh] overflow-hidden rounded-2xl"
+              onClick={e => e.stopPropagation()}
+            >
+              <img 
+                src={selectedImage} 
+                alt="Enlarged Roundtable Invite" 
+                className="max-w-full max-h-[90vh] object-contain rounded-xl"
+              />
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 rounded-full bg-black/60 hover:bg-black/90 p-2.5 text-white transition-colors"
+                type="button"
+                aria-label="Close modal"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
 
     {/* Ticker */}
