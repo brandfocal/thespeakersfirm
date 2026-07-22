@@ -203,14 +203,14 @@ export function SpeakerCategoriesPage() {
       </section>
 
       {/* Categories Filter list section */}
-      <section className="sticky top-0 z-30 border-b border-white/[0.08] bg-[#161616] px-6 py-4 md:px-10">
+      <section className="sticky top-0 z-30 border-b border-white/[0.08] bg-[#161616] px-6 md:px-16 py-4">
         <VerticalBorderLines isDark={true} />
         <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 relative z-10">
           <div className="flex items-center gap-3 md:gap-5 flex-1 min-w-0">
             <span className="hidden shrink-0 text-[10px] font-bold tracking-[0.18em] text-white/45 md:block">BROWSE BY</span>
             <div className="flex min-w-0 gap-2 overflow-x-auto pb-1 [scrollbar-width:none]">
               {filters.map(filter => (
-                <button key={filter} onClick={() => setActiveFilter(filter)} className={`min-h-10 shrink-0 rounded-full border px-5 py-2 text-[11px] transition-colors ${activeFilter === filter ? 'border-[#e30e04] bg-[#e30e04] text-white' : 'border-white/10 bg-[#242424] text-white/70 hover:border-[#e30e04]/60'}`}>
+                <button key={filter} onClick={() => setActiveFilter(filter)} className={`min-h-10 shrink-0 rounded-full border px-5 py-2 text-[11px] transition-colors ${activeFilter === filter ? 'border-[#e30e04] bg-[#e30e04] text-white' : 'border-white/10 bg-[#242424] text-[#AFB0B0] hover:border-[#e30e04]/60'}`}>
                   {filter}
                 </button>
               ))}
@@ -224,7 +224,7 @@ export function SpeakerCategoriesPage() {
       </section>
 
       {/* Grid of categories */}
-      <section id="categories" className="relative px-6 py-14 md:px-10 md:py-20 xl:py-28 bg-[#1e1e1e]">
+      <section id="categories" className="relative px-6 md:px-16 py-14 md:py-20 xl:py-28 bg-[#1e1e1e]">
         <VerticalBorderLines isDark={true} />
         <div className="mx-auto max-w-[1440px] relative z-10">
           <header className="mb-9 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end md:gap-8 border-b border-white/10 pb-6">
@@ -268,7 +268,7 @@ export function SpeakerCategoriesPage() {
       </section>
 
       {/* Testimonials quotes */}
-      <section className="relative border-y border-white/[0.06] bg-[#0d0d0d] px-6 py-14 md:px-10 md:py-20 xl:py-24">
+      <section className="relative border-y border-white/[0.06] bg-[#0d0d0d] px-6 md:px-16 py-14 md:py-20 xl:py-24">
         <VerticalBorderLines isDark={true} />
         <div className="mx-auto grid max-w-[1440px] gap-10 md:grid-cols-2 md:gap-12 lg:gap-20 relative z-10">
           <blockquote className="m-0">
@@ -297,7 +297,7 @@ export function SpeakerCategoriesPage() {
       </section>
 
       {/* Inline brief submit form */}
-      <section id="brief" className="relative bg-[#161616] px-6 py-14 md:px-10 md:py-20 xl:py-24">
+      <section id="brief" className="relative bg-[#161616] px-6 md:px-16 py-14 md:py-20 xl:py-24">
         <VerticalBorderLines isDark={true} />
         <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-9 md:flex-row md:items-end md:gap-10 relative z-10">
           <div>
