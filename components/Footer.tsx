@@ -7,13 +7,14 @@ const COLORS = {
 
 const FOOTER_NAV_LINKS = [
   { id: 'home', label: 'Home', href: '/' },
+  { id: 'categories', label: 'Categories', href: '/categories' },
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
   { id: 'methodology', label: 'Methodology', href: '/#methodology' },
   { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/executive-dialogues' },
   { id: 'upcoming-events', label: 'Upcoming Events', href: '/upcoming-events' },
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'media', label: 'Media', href: '/media' },
-  { id: 'brief-bureau', label: 'Brief the Bureau', href: '/#brief-us' },
+  { id: 'brief-bureau', label: 'Brief the Bureau', href: '/contact' },
   { id: 'join', label: 'Join The Speakers Firm', href: '/#brief-us' }
 ];
 

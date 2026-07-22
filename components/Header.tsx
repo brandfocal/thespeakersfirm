@@ -239,14 +239,24 @@ export function Header() {
           onMouseEnter={() => setIsMoreCategoriesOpen(true)}
           onMouseLeave={() => setIsMoreCategoriesOpen(false)}
         >
-          <button 
-            onClick={() => setIsMoreCategoriesOpen(!isMoreCategoriesOpen)}
-            className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04] relative py-1 group"
+          <Link 
+            href="/categories"
+            className={cn(
+              "flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+              pathname === "/categories" 
+                ? "text-[#e30e04]" 
+                : "text-[#686869] hover:text-[#e30e04]"
+            )}
           >
             <span>Categories</span>
             <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
-            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
-          </button>
+            <span className={cn(
+              "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+              pathname === "/categories" 
+                ? "scale-x-100" 
+                : "scale-x-0 origin-left group-hover:scale-x-100"
+            )} />
+          </Link>
 
           <AnimatePresence>
             {isMoreCategoriesOpen && (
@@ -373,13 +383,23 @@ export function Header() {
         </Link>
 
         {/* Contact Us Link */}
-        <a 
-          href="/#brief-us" 
-          className="text-[10px] font-bold uppercase tracking-[0.1em] transition-colors text-[#686869] hover:text-[#e30e04] relative py-1 group" 
+        <Link 
+          href="/contact" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/contact" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
         >
           <span>Contact Us</span>
-          <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
-        </a>
+          <span className={cn(
+            "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
+            pathname === "/contact" 
+              ? "scale-x-100" 
+              : "scale-x-0 origin-left group-hover:scale-x-100"
+          )} />
+        </Link>
       </div>
 
       <div className="ml-auto hidden items-center gap-3 lg:ml-0 lg:flex">
@@ -463,13 +483,13 @@ export function Header() {
           </AnimatePresence>
         </div>
 
-        <a 
-          href="/#brief-us" 
+        <Link 
+          href="/book-a-speaker" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" 
           style={{ backgroundColor: COLORS.red }}
         >
           Book A Speaker
-        </a>
+        </Link>
         <a 
           href="/#faculty" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
@@ -620,14 +640,14 @@ export function Header() {
               </Link>
 
               {/* Contact Us */}
-              <a 
-                href="/#brief-us" 
+              <Link 
+                href="/contact" 
                 onClick={handleMobileMenuClose}
                 className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
               >
                 <span>Contact Us</span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
 
