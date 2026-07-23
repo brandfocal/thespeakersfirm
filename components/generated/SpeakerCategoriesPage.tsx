@@ -9,6 +9,7 @@ type Category = {
   name: string;
   description: string;
   seed: string;
+  path?: string;
 };
 
 const filters = ['All', 'Leadership', 'AI & Tech', 'Future of Work', 'Economics', 'Innovation', 'Entrepreneurship', 'Wellbeing', 'Sports', 'Entertainment'];
@@ -17,7 +18,8 @@ const categories: Category[] = [{
   number: '01',
   name: 'Keynote and Motivational Speakers',
   description: 'Influential global voices, accomplished leaders, inspiring change-makers and exceptional storytellers who challenge conventional thinking, energise audiences and turn inspiration into meaningful action.',
-  seed: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg'
+  seed: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  path: '/categories/inspirational-keynote-speakers'
 }, {
   number: '02',
   name: 'Leadership, Strategy and Executive Performance',
@@ -293,15 +295,15 @@ export function SpeakerCategoriesPage() {
                     </div>
                     <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
                       <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
-                      <a href="/contact" className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
+                      <a href={category.path || "/contact"} className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
                         Explore Speakers <ArrowUpRight size={15} />
                       </a>
                     </div>
                   </div>
-                  <div className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d]">
+                  <a href={category.path || "/contact"} className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d] hover:bg-[#0f0f0f] transition-colors cursor-pointer">
                     <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/45">Category {categoryIndex + 1}</span>
                     <ArrowUpRight size={16} className="text-[#e30e04]" />
-                  </div>
+                  </a>
                 </div>
               ))}
           </div>

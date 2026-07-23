@@ -268,19 +268,26 @@ export function Header() {
                 className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[560px] rounded-3xl border border-gray-200 bg-white/95 p-6 shadow-2xl backdrop-blur-md z-[100]"
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left">
-                  {CATEGORIES_CONFIG.map(cat => (
-                    <button
-                      key={cat.id}
-                      onClick={() => {
-                        window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
-                        router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
-                        setIsMoreCategoriesOpen(false);
-                      }}
-                      className="w-full text-left rounded-xl px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#686869] hover:bg-gray-50 hover:text-[#e30e04] transition-all"
-                    >
-                      {cat.buttonLabel}
-                    </button>
-                  ))}
+                  {CATEGORIES_CONFIG.map(cat => {
+                    const isKeynote = cat.id === "inspirational-keynote-speakers";
+                    return (
+                      <button
+                        key={cat.id}
+                        onClick={() => {
+                          if (isKeynote) {
+                            router.push('/categories/inspirational-keynote-speakers');
+                          } else {
+                            window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                            router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                          }
+                          setIsMoreCategoriesOpen(false);
+                        }}
+                        className="w-full text-left rounded-xl px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#686869] hover:bg-gray-50 hover:text-[#e30e04] transition-all"
+                      >
+                        {cat.buttonLabel}
+                      </button>
+                    );
+                  })}
                 </div>
               </motion.div>
             )}
@@ -537,19 +544,26 @@ export function Header() {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                   >
-                    {MAIN_CATEGORIES.map(cat => (
-                      <button
-                        key={cat.id}
-                        onClick={() => {
-                          window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
-                          router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
-                      >
-                        {cat.buttonLabel}
-                      </button>
-                    ))}
+                    {MAIN_CATEGORIES.map(cat => {
+                      const isKeynote = cat.id === "inspirational-keynote-speakers";
+                      return (
+                        <button
+                          key={cat.id}
+                          onClick={() => {
+                            if (isKeynote) {
+                              router.push('/categories/inspirational-keynote-speakers');
+                            } else {
+                              window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                              router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                            }
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className="w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                        >
+                          {cat.buttonLabel}
+                        </button>
+                      );
+                    })}
                     
                     <button 
                       onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
@@ -567,19 +581,26 @@ export function Header() {
                           exit={{ height: 0, opacity: 0 }}
                           className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                         >
-                          {SUBMENU_CATEGORIES.map(cat => (
-                            <button
-                              key={cat.id}
-                              onClick={() => {
-                                window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
-                                router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
-                                setIsMobileMenuOpen(false);
-                              }}
-                              className="w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
-                            >
-                              {cat.buttonLabel}
-                            </button>
-                          ))}
+                          {SUBMENU_CATEGORIES.map(cat => {
+                            const isKeynote = cat.id === "inspirational-keynote-speakers";
+                            return (
+                              <button
+                                key={cat.id}
+                                onClick={() => {
+                                  if (isKeynote) {
+                                    router.push('/categories/inspirational-keynote-speakers');
+                                  } else {
+                                    window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                                    router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                                  }
+                                  setIsMobileMenuOpen(false);
+                                }}
+                                className="w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                              >
+                                {cat.buttonLabel}
+                              </button>
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>
