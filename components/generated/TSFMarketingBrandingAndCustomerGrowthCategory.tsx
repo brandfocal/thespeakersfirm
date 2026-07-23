@@ -189,7 +189,7 @@ export function TSFMarketingBrandingAndCustomerGrowthCategory() {
 
       <section id="speakers" className="relative overflow-visible bg-[#000000] px-6 md:px-16 py-20">
         <VerticalBorderLines isDark={true} isOutside={true} />
-        <div className="relative z-10 mx-auto max-w-[1440px]">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
           <div className="mb-6">
             <span className="inline-flex border-l-4 border-[#e30e04] bg-[#2a2a2a] px-4 py-2 text-[10px] font-bold tracking-[0.2em] text-white">OUR FACULTY</span>
           </div>
@@ -245,7 +245,7 @@ export function TSFMarketingBrandingAndCustomerGrowthCategory() {
 
       <section className="relative overflow-hidden border-y border-white/[0.06] bg-[#0A0A0A] px-6 md:px-16 py-14">
         <VerticalBorderLines isDark={true} isOutside={true} />
-        <div className="relative z-10 mx-auto max-w-[1440px]">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
           <blockquote className="m-0">
             <span className="text-4xl leading-none text-[#e30e04] sm:text-6xl font-serif">“</span>
             <p className="mt-2 max-w-[800px] text-base italic leading-8 text-[#f8f7f5]/85 sm:text-lg">
@@ -258,7 +258,7 @@ export function TSFMarketingBrandingAndCustomerGrowthCategory() {
 
       <section className="relative overflow-hidden bg-[#000000] px-6 md:px-16 py-20">
         <VerticalBorderLines isDark={true} isOutside={true} />
-        <div className="relative z-10 mx-auto max-w-[1440px]">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
           <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#e30e04] uppercase">START THE SEARCH</span>
