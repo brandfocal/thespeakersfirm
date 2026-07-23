@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Search } from 'lucide-react';
 
+import Link from 'next/link';
+
 type Category = {
   number: string;
   name: string;
@@ -18,104 +20,123 @@ const categories: Category[] = [{
   number: '01',
   name: 'Keynote and Motivational Speakers',
   description: 'Influential global voices, accomplished leaders, inspiring change-makers and exceptional storytellers who challenge conventional thinking, energise audiences and turn inspiration into meaningful action.',
-  seed: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
   path: '/categories/inspirational-keynote-speakers'
 }, {
   number: '02',
   name: 'Leadership, Strategy and Executive Performance',
   description: 'World-class CEOs, board chairs and executive leaders offering decisive insights into courageous leadership, strategy execution, organisational performance and leading through complexity.',
-  seed: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
+  path: '/categories/leadership-strategy-and-executive-performance'
 }, {
   number: '03',
   name: 'Boards, Governance and Boardroom Influence',
   description: 'Distinguished directors and governance authorities strengthening board effectiveness, ethical stewardship, executive accountability and institutional sustainability.',
-  seed: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
+  path: '/categories/boards-governance-and-boardroom-influence'
 }, {
   number: '04',
   name: 'Artificial Intelligence and Intelligent Enterprise',
   description: 'AI pioneers and transformation leaders helping organisations move from experimentation to responsible, enterprise-wide adoption and measurable commercial value.',
-  seed: '/image_marquee/stafford-masie-the-speakers-firm.jpg'
+  seed: '/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
+  path: '/categories/artificial-intelligence-and-intelligent-enterprise'
 }, {
   number: '05',
   name: 'Future of Work, Talent and Workforce Transformation',
   description: 'Leading authorities preparing organisations and people for rapidly changing technologies, skills requirements, employee expectations and workplace models.',
-  seed: '/speakers/FutureOfWork/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
+  path: '/categories/future-of-work-talent-and-workforce-transformation'
 }, {
   number: '06',
   name: 'Economics, Markets and the Global Economy',
   description: 'Respected economists and financial strategists translating complex economic developments into clear implications for boards, investors, governments and business leaders.',
-  seed: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg'
+  seed: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg',
+  path: '/categories/economics-markets-and-the-global-economy'
 }, {
   number: '07',
   name: 'Futurists, Trends and Strategic Foresight',
   description: 'Futurists and trend specialists identifying the technological, demographic, economic and social forces that will reshape industries, consumers and societies.',
-  seed: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg'
+  seed: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg',
+  path: '/categories/futurists-trends-and-strategic-foresight'
 }, {
   number: '08',
   name: 'Geopolitics, Policy and Global Affairs',
   description: 'Diplomats, political leaders, journalists and analysts helping decision-makers understand geopolitical risk, policy shifts and the evolving global order.',
-  seed: '/speakers/Geopolitics/Prince-Mashele-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Prince-Mashele-The-Speakers-Firm.jpg',
+  path: '/categories/geopolitics-policy-and-global-affairs'
 }, {
   number: '09',
   name: 'Innovation, Disruption and Business Transformation',
   description: 'Proven innovators equipping organisations to challenge established models, unlock new value and build future-ready enterprises.',
-  seed: '/faculty/dr-victor-ramathesele-the-speakers-firm.jpg'
+  seed: '/speaker_thumbnails/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
+  path: '/categories/innovation-disruption-and-business-transformation'
 }, {
   number: '10',
   name: 'Entrepreneurship, Investment and Business Growth',
   description: 'Accomplished founders, investors and enterprise leaders sharing practical strategies for funding, scaling and sustaining high-growth businesses.',
-  seed: '/image_marquee/leadership/Abdullah-Verachia-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Tebogo-ProVerb-Thekisho.jpg',
+  path: '/categories/entrepreneurship-investment-and-business-growth'
 }, {
   number: '11',
   name: 'Change, Resilience and Organisational Agility',
   description: 'Change specialists helping leaders mobilise people, overcome resistance and sustain organisational performance through disruption and uncertainty.',
-  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg',
+  path: '/categories/change-resilience-and-organisational-agility'
 }, {
   number: '12',
   name: 'Media, Communication and Executive Visibility',
   description: 'Broadcasters, journalists and communication strategists empowering leaders to communicate with authority, clarity and influence across every platform.',
-  seed: '/speaker_thumbnails/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg',
+  path: '/categories/media-communication-and-executive-visibility'
 }, {
   number: '13',
   name: 'Reputation, Crisis and Trust Leadership',
   description: 'Reputation and crisis specialists helping organisations protect institutional trust, navigate scrutiny and lead decisively when credibility is at stake.',
-  seed: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg',
+  path: '/categories/reputation-crisis-and-trust-leadership'
 }, {
   number: '14',
   name: 'Marketing, Branding and Customer Growth',
   description: 'Visionary marketers and consumer authorities demonstrating how organisations can build distinctive brands, deepen customer relationships and convert relevance into revenue.',
-  seed: '/speakers/Branding/Sylvester-Chauke--The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Sylvester-Chauke--The-Speakers-Firm.jpg',
+  path: '/categories/marketing-branding-and-customer-growth'
 }, {
   number: '15',
   name: 'Sales, Negotiation and Commercial Performance',
   description: 'High-performing commercial leaders equipping teams to win clients, negotiate effectively and accelerate sustainable revenue growth.',
-  seed: '/speakers/Branding/Mzamo-Masito-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  path: '/categories/sales-negotiation-and-commercial-performance'
 }, {
   number: '16',
   name: 'Neuroscience, Psychology and Human Behaviour',
   description: 'Neuroscientists, psychologists and behavioural experts translating science into practical strategies for leadership, learning, decision-making and performance.',
-  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Timothy-Maurice-Webster-The-Speakers-Firm.jpg',
+  path: '/categories/neuroscience-psychology-and-human-behaviour'
 }, {
   number: '17',
   name: 'High-Performance Teams and Team-Building Experiences',
   description: 'Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions.',
-  seed: '/faculty/dr-victor-ramathesele-the-speakers-firm.jpg'
+  seed: '/speaker_thumbnails/Queen-Ramotsehoa-The-Speakers-Firm.jpg',
+  path: '/categories/high-performance-teams-and-team-building-experiences'
 }, {
   number: '18',
   name: 'Sports, Coaching and the Winning Mindset',
   description: 'Elite athletes, championship coaches and sporting icons translating lessons from world-class competition into compelling leadership and business insights.',
-  seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Neil-Tovey-The-Speakers-Firm.jpg',
+  path: '/categories/sports-coaching-and-the-winning-mindset'
 }, {
   number: '19',
   name: 'Sustainability, ESG, Health and Human Performance',
   description: 'Sustainability, climate, health and wellbeing authorities helping organisations build resilient businesses, healthier cultures and sustainable performance.',
-  seed: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg'
+  seed: '/speaker_thumbnails/Khanyi-Chaba-The-Speakers-Firm.jpg',
+  path: '/categories/sustainability-esg-health-and-human-performance'
 }, {
   number: '20',
   name: 'Celebrity Speakers, MCs, Comedy and Entertainment',
   description: 'Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.',
-  seed: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg'
-}];
+  seed: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg',
+  path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment'
+}                        ];
 
 const marqueeNames = categories.map(category => category.name);
 
@@ -293,17 +314,17 @@ export function SpeakerCategoriesPage() {
                       <p className="mb-2 text-[clamp(2rem,10vw,2.25rem)] font-black tracking-[-0.08em] text-[#e30e04]">{category.number}</p>
                       <h3 className="max-w-[260px] text-[clamp(1.05rem,5vw,1.125rem)] font-black uppercase leading-[0.94] tracking-[-0.045em]">{category.name}</h3>
                     </div>
-                    <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
+                     <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
                       <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
-                      <a href={category.path || "/contact"} className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
+                      <Link href={category.path || "/contact"} className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
                         Explore Speakers <ArrowUpRight size={15} />
-                      </a>
+                      </Link>
                     </div>
                   </div>
-                  <a href={category.path || "/contact"} className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d] hover:bg-[#0f0f0f] transition-colors cursor-pointer">
+                  <Link href={category.path || "/contact"} className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d] hover:bg-[#0f0f0f] transition-colors cursor-pointer">
                     <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/45">Category {categoryIndex + 1}</span>
                     <ArrowUpRight size={16} className="text-[#e30e04]" />
-                  </a>
+                  </Link>
                 </div>
               ))}
           </div>
