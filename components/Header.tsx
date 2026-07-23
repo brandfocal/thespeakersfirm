@@ -269,26 +269,26 @@ export function Header() {
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left max-h-[420px] overflow-y-auto pr-2 scrollbar-thin">
                   {[
-                    { name: 'Keynote and Motivational Speakers', path: '/categories/inspirational-keynote-speakers' },
-                    { name: 'Leadership, Strategy and Executive Performance', path: '/categories/leadership-strategy-and-executive-performance' },
-                    { name: 'Boards, Governance and Boardroom Influence', path: '/categories/boards-governance-and-boardroom-influence' },
-                    { name: 'Artificial Intelligence and Intelligent Enterprise', path: '/categories/artificial-intelligence-and-intelligent-enterprise' },
-                    { name: 'Future of Work, Talent and Workforce Transformation', path: '/categories/future-of-work-talent-and-workforce-transformation' },
-                    { name: 'Economics, Markets and the Global Economy', path: '/categories/economics-markets-and-the-global-economy' },
-                    { name: 'Futurists, Trends and Strategic Foresight', path: '/categories/futurists-trends-and-strategic-foresight' },
-                    { name: 'Geopolitics, Policy and Global Affairs', path: '/categories/geopolitics-policy-and-global-affairs' },
-                    { name: 'Innovation, Disruption and Business Transformation', path: '/categories/innovation-disruption-and-business-transformation' },
-                    { name: 'Entrepreneurship, Investment and Business Growth', path: '/categories/entrepreneurship-investment-and-business-growth' },
-                    { name: 'Change, Resilience and Organisational Agility', path: '/categories/change-resilience-and-organisational-agility' },
-                    { name: 'Media, Communication and Executive Visibility', path: '/categories/media-communication-and-executive-visibility' },
-                    { name: 'Reputation, Crisis and Trust Leadership', path: '/categories/reputation-crisis-and-trust-leadership' },
-                    { name: 'Marketing, Branding and Customer Growth', path: '/categories/marketing-branding-and-customer-growth' },
-                    { name: 'Sales, Negotiation and Commercial Performance', path: '/categories/sales-negotiation-and-commercial-performance' },
-                    { name: 'Neuroscience, Psychology and Human Behaviour', path: '/categories/neuroscience-psychology-and-human-behaviour' },
-                    { name: 'High-Performance Teams and Team-Building Experiences', path: '/categories/high-performance-teams-and-team-building-experiences' },
-                    { name: 'Sports, Coaching and the Winning Mindset', path: '/categories/sports-coaching-and-the-winning-mindset' },
-                    { name: 'Sustainability, ESG, Health and Human Performance', path: '/categories/sustainability-esg-health-and-human-performance' },
-                    { name: 'Celebrity Speakers, MCs, Comedy and Entertainment', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' }
+                    { name: 'Keynote', path: '/categories/inspirational-keynote-speakers' },
+                    { name: 'Leadership', path: '/categories/leadership-strategy-and-executive-performance' },
+                    { name: 'Governance', path: '/categories/boards-governance-and-boardroom-influence' },
+                    { name: 'A.I.', path: '/categories/artificial-intelligence-and-intelligent-enterprise' },
+                    { name: 'Future of Work', path: '/categories/future-of-work-talent-and-workforce-transformation' },
+                    { name: 'Economics', path: '/categories/economics-markets-and-the-global-economy' },
+                    { name: 'Futurists', path: '/categories/futurists-trends-and-strategic-foresight' },
+                    { name: 'Geopolitics', path: '/categories/geopolitics-policy-and-global-affairs' },
+                    { name: 'Innovation', path: '/categories/innovation-disruption-and-business-transformation' },
+                    { name: 'Entrepreneurship', path: '/categories/entrepreneurship-investment-and-business-growth' },
+                    { name: 'Change & Resilience', path: '/categories/change-resilience-and-organisational-agility' },
+                    { name: 'Media & Executive visibility', path: '/categories/media-communication-and-executive-visibility' },
+                    { name: 'Reputation & Trust', path: '/categories/reputation-crisis-and-trust-leadership' },
+                    { name: 'Marketing & Brand', path: '/categories/marketing-branding-and-customer-growth' },
+                    { name: 'Sales & Negotiation', path: '/categories/sales-negotiation-and-commercial-performance' },
+                    { name: 'Neuroscience', path: '/categories/neuroscience-psychology-and-human-behaviour' },
+                    { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
+                    { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
+                    { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
+                    { name: 'MCs & Entertainment', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' }
                   ].map(cat => {
                     return (
                       <Link
