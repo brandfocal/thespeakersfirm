@@ -269,7 +269,7 @@ export function Header() {
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left">
                   {CATEGORIES_CONFIG.map(cat => {
-                    const slugMap = {
+                    const slugMap: Record<string, string> = {
                       "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
                       "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
                       "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
@@ -576,7 +576,7 @@ export function Header() {
                     className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                   >
                     {MAIN_CATEGORIES.map(cat => {
-                      const slugMap = {
+                      const slugMap: Record<string, string> = {
                         "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
                         "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
                         "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
@@ -644,7 +644,7 @@ export function Header() {
                           className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                         >
                           {SUBMENU_CATEGORIES.map(cat => {
-                            const slugMap = {
+                            const slugMap: Record<string, string> = {
                               "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
                               "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
                               "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
