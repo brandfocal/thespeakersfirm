@@ -341,7 +341,7 @@ export const TSFGallery = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <motion.a href="/#brief-us" whileHover={{
+              <motion.a href="/book-a-speaker" whileHover={{
               scale: 1.02
             }} whileTap={{
               scale: 0.98
