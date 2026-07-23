@@ -269,13 +269,44 @@ export function Header() {
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left">
                   {CATEGORIES_CONFIG.map(cat => {
-                    const isKeynote = cat.id === "inspirational-keynote-speakers";
+                    const slugMap = {
+                      "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                      "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
+                      "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
+                      "digital-identity-cybersecurity-and-data-sovereignty": "/categories/artificial-intelligence-and-intelligent-enterprise",
+                      "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
+                      "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
+                      "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                      "comedy": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                      "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
+                      "diversity": "/categories/leadership-strategy-and-executive-performance",
+                      "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
+                      "neuroscience-peak-performance-mental-agility": "/categories/neuroscience-psychology-and-human-behaviour",
+                      "governance": "/categories/boards-governance-and-boardroom-influence",
+                      "gender": "/categories/leadership-strategy-and-executive-performance",
+                      "workplace-wellness": "/categories/sustainability-esg-health-and-human-performance",
+                      "financial-inclusion": "/categories/economics-markets-and-the-global-economy",
+                      "entrepreneurship": "/categories/entrepreneurship-investment-and-business-growth",
+                      "masculinity": "/categories/leadership-strategy-and-executive-performance",
+                      "female-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                      "futurists": "/categories/futurists-trends-and-strategic-foresight",
+                      "sales": "/categories/sales-negotiation-and-commercial-performance",
+                      "marketing": "/categories/marketing-branding-and-customer-growth",
+                      "sustainability": "/categories/sustainability-esg-health-and-human-performance",
+                      "education": "/categories/leadership-strategy-and-executive-performance",
+                      "citizenship": "/categories/boards-governance-and-boardroom-influence",
+                      "motivation": "/categories/inspirational-keynote-speakers",
+                      "strategy-facilitators": "/categories/boards-governance-and-boardroom-influence",
+                      "respectful-workplaces": "/categories/leadership-strategy-and-executive-performance",
+                      "celebrity-speakers": "/categories/celebrity-speakers-mcs-comedy-and-entertainment"
+                    };
+                    const routePath = slugMap[cat.id];
                     return (
                       <button
                         key={cat.id}
                         onClick={() => {
-                          if (isKeynote) {
-                            router.push('/categories/inspirational-keynote-speakers');
+                          if (routePath) {
+                            router.push(routePath);
                           } else {
                             window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
                             router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
@@ -545,13 +576,44 @@ export function Header() {
                     className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                   >
                     {MAIN_CATEGORIES.map(cat => {
-                      const isKeynote = cat.id === "inspirational-keynote-speakers";
+                      const slugMap = {
+                        "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                        "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
+                        "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
+                        "digital-identity-cybersecurity-and-data-sovereignty": "/categories/artificial-intelligence-and-intelligent-enterprise",
+                        "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
+                        "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
+                        "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                        "comedy": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                        "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
+                        "diversity": "/categories/leadership-strategy-and-executive-performance",
+                        "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
+                        "neuroscience-peak-performance-mental-agility": "/categories/neuroscience-psychology-and-human-behaviour",
+                        "governance": "/categories/boards-governance-and-boardroom-influence",
+                        "gender": "/categories/leadership-strategy-and-executive-performance",
+                        "workplace-wellness": "/categories/sustainability-esg-health-and-human-performance",
+                        "financial-inclusion": "/categories/economics-markets-and-the-global-economy",
+                        "entrepreneurship": "/categories/entrepreneurship-investment-and-business-growth",
+                        "masculinity": "/categories/leadership-strategy-and-executive-performance",
+                        "female-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                        "futurists": "/categories/futurists-trends-and-strategic-foresight",
+                        "sales": "/categories/sales-negotiation-and-commercial-performance",
+                        "marketing": "/categories/marketing-branding-and-customer-growth",
+                        "sustainability": "/categories/sustainability-esg-health-and-human-performance",
+                        "education": "/categories/leadership-strategy-and-executive-performance",
+                        "citizenship": "/categories/boards-governance-and-boardroom-influence",
+                        "motivation": "/categories/inspirational-keynote-speakers",
+                        "strategy-facilitators": "/categories/boards-governance-and-boardroom-influence",
+                        "respectful-workplaces": "/categories/leadership-strategy-and-executive-performance",
+                        "celebrity-speakers": "/categories/celebrity-speakers-mcs-comedy-and-entertainment"
+                      };
+                      const routePath = slugMap[cat.id];
                       return (
                         <button
                           key={cat.id}
                           onClick={() => {
-                            if (isKeynote) {
-                              router.push('/categories/inspirational-keynote-speakers');
+                            if (routePath) {
+                              router.push(routePath);
                             } else {
                               window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
                               router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
@@ -582,13 +644,44 @@ export function Header() {
                           className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
                         >
                           {SUBMENU_CATEGORIES.map(cat => {
-                            const isKeynote = cat.id === "inspirational-keynote-speakers";
+                            const slugMap = {
+                              "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                              "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
+                              "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
+                              "digital-identity-cybersecurity-and-data-sovereignty": "/categories/artificial-intelligence-and-intelligent-enterprise",
+                              "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
+                              "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
+                              "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                              "comedy": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                              "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
+                              "diversity": "/categories/leadership-strategy-and-executive-performance",
+                              "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
+                              "neuroscience-peak-performance-mental-agility": "/categories/neuroscience-psychology-and-human-behaviour",
+                              "governance": "/categories/boards-governance-and-boardroom-influence",
+                              "gender": "/categories/leadership-strategy-and-executive-performance",
+                              "workplace-wellness": "/categories/sustainability-esg-health-and-human-performance",
+                              "financial-inclusion": "/categories/economics-markets-and-the-global-economy",
+                              "entrepreneurship": "/categories/entrepreneurship-investment-and-business-growth",
+                              "masculinity": "/categories/leadership-strategy-and-executive-performance",
+                              "female-keynote-speakers": "/categories/inspirational-keynote-speakers",
+                              "futurists": "/categories/futurists-trends-and-strategic-foresight",
+                              "sales": "/categories/sales-negotiation-and-commercial-performance",
+                              "marketing": "/categories/marketing-branding-and-customer-growth",
+                              "sustainability": "/categories/sustainability-esg-health-and-human-performance",
+                              "education": "/categories/leadership-strategy-and-executive-performance",
+                              "citizenship": "/categories/boards-governance-and-boardroom-influence",
+                              "motivation": "/categories/inspirational-keynote-speakers",
+                              "strategy-facilitators": "/categories/boards-governance-and-boardroom-influence",
+                              "respectful-workplaces": "/categories/leadership-strategy-and-executive-performance",
+                              "celebrity-speakers": "/categories/celebrity-speakers-mcs-comedy-and-entertainment"
+                            };
+                            const routePath = slugMap[cat.id];
                             return (
                               <button
                                 key={cat.id}
                                 onClick={() => {
-                                  if (isKeynote) {
-                                    router.push('/categories/inspirational-keynote-speakers');
+                                  if (routePath) {
+                                    router.push(routePath);
                                   } else {
                                     window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
                                     router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
