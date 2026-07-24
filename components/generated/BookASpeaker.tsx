@@ -330,8 +330,8 @@ export function BookASpeaker() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-[clamp(3rem,12vw,7rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
-                <span>Brief The</span><br />
-                <span>Bureau.</span>
+                <span>Book A</span><br />
+                <span>Speaker.</span>
               </h1>
             </Reveal>
             <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
@@ -345,7 +345,7 @@ export function BookASpeaker() {
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 mt-4">
                   <motion.a href="#brief" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex w-full items-center justify-center gap-2 rounded-full border bg-white p-1.5 sm:w-auto" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
                     <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]">
-                      <span>Brief Us Now</span>
+                      <span>Book A Speaker</span>
                       <ArrowRight size={16} />
                     </span>
                   </motion.a>
