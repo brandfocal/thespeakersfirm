@@ -151,7 +151,7 @@ img.broken-image-fallback {
 .tabbed-contact-form__heading { margin-bottom: 1.4rem; }
 .tabbed-contact-form__intro { max-width: 520px; margin: 0 0 1.65rem; color: #B0ADA8; font-size: 14px; line-height: 1.65; }
 .tabbed-contact-form__fields { min-height: 330px; align-content: start; }
-.tabbed-contact-form .contact-line-field input, .tabbed-contact-form .contact-line-field textarea { border: 1px solid #1E1E1E; background: #0A0A0A; color: #F8F7F5; padding: 0.75rem 1rem; border-radius: 0.75rem; }
+.tabbed-contact-form .contact-line-field input, .tabbed-contact-form .contact-line-field textarea { border: 1px solid rgba(255, 255, 255, 0.25); background: #0A0A0A; color: #F8F7F5; padding: 0.75rem 1rem; border-radius: 0.75rem; }
 .tabbed-contact-form .contact-line-field input { min-height: 3rem; }
 .tabbed-contact-form .contact-line-field textarea { min-height: 8.5rem; }
 .tabbed-contact-form .contact-line-field input:focus, .tabbed-contact-form .contact-line-field textarea:focus { border-color: #e30e04; box-shadow: 0 0 0 1px #e30e04; }
