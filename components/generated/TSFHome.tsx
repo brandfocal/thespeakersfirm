@@ -3853,6 +3853,7 @@ export const TheSpeakersFirmHome = () => {
           delay: 0.18
         }} className="mt-12 flex w-full justify-center md:mt-16">
           <div className="h-0 py-0" />
+        </motion.div>
         </div>
       </section>
 
