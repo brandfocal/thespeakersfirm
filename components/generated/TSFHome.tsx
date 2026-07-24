@@ -3597,12 +3597,12 @@ export const TheSpeakersFirmHome = () => {
         </div>
 
         {/* Category Filter Chips */}
-        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 flex flex-wrap gap-2.5 z-20 relative">
+        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 flex flex-nowrap overflow-x-auto scrollbar-none gap-2.5 z-20 relative pb-2 select-none">
           <button
             type="button"
             onClick={() => handleFeaturedSpeakerFilterChange('All')}
             className={cn(
-              "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border",
+              "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
               activeSpeakerCategory === 'All'
                 ? "bg-[#e30e04] text-white border-[#e30e04]"
                 : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
@@ -3616,7 +3616,7 @@ export const TheSpeakersFirmHome = () => {
               type="button"
               onClick={() => handleFeaturedSpeakerFilterChange(cat.id)}
               className={cn(
-                "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border",
+                "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
                 activeSpeakerCategory === cat.id
                   ? "bg-[#e30e04] text-white border-[#e30e04]"
                   : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
@@ -3852,22 +3852,7 @@ export const TheSpeakersFirmHome = () => {
         }} transition={{
           delay: 0.18
         }} className="mt-12 flex w-full justify-center md:mt-16">
-            <a href="#faculty" className="flex w-full justify-center rounded-full border px-8 py-4 text-[12px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 hover:text-white sm:w-auto sm:px-10 sm:text-[13px]" style={{
-            borderColor: COLORS.borderGray,
-            color: COLORS.black,
-            backgroundColor: 'transparent'
-          }} onMouseEnter={event => {
-            event.currentTarget.style.backgroundColor = COLORS.red;
-            event.currentTarget.style.borderColor = COLORS.red;
-            event.currentTarget.style.color = '#FFFFFF';
-          }} onMouseLeave={event => {
-            event.currentTarget.style.backgroundColor = 'transparent';
-            event.currentTarget.style.borderColor = COLORS.borderGray;
-            event.currentTarget.style.color = COLORS.black;
-          }}>
-              <span>View All Speakers</span>
-            </a>
-          </motion.div>
+          <div className="h-0 py-0" />
         </div>
       </section>
 
