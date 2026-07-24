@@ -3791,7 +3791,7 @@ export const TheSpeakersFirmHome = () => {
                         />
                         <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                         <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                          <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                          <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                             <span>{speaker.name}</span>
                           </h3>
                           <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
@@ -3861,7 +3861,7 @@ export const TheSpeakersFirmHome = () => {
                           />
                           <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                           <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                               <span>{speaker.name}</span>
                             </h3>
                             <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
@@ -3932,7 +3932,7 @@ export const TheSpeakersFirmHome = () => {
                           />
                           <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
                           <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold uppercase leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
+                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
                               <span>{speaker.name}</span>
                             </h3>
                             <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
