@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Instagram, Linkedin, Menu, Play, X, Youtube } from 'lucide-react';
+import Link from 'next/link';
 const filters = [{
   id: 'all',
   label: 'All'
@@ -341,15 +342,11 @@ export const TSFGallery = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <motion.a href="/book-a-speaker" whileHover={{
-              scale: 1.02
-            }} whileTap={{
-              scale: 0.98
-            }} className="flex w-full items-center gap-2 rounded-full border bg-white p-1.5 sm:w-auto" style={{
+              <Link href="/brief-us" className="flex w-full items-center gap-2 rounded-full border bg-white p-1.5 sm:w-auto" style={{
               borderColor: 'rgba(255, 255, 255, 0.18)'
             }}>
                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#212121] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]"><span>Brief Us</span><ArrowRight aria-hidden="true" size={16} /></span>
-              </motion.a>
+              </Link>
               <motion.a href="#gallery" whileHover={{
               scale: 1.02
             }} className="w-full rounded-full border border-[#F8F7F5]/40 px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] text-[#F8F7F5] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px]">Explore Gallery</motion.a>
@@ -379,6 +376,6 @@ export const TSFGallery = () => {
 
       <section className="relative mx-auto max-w-[1440px] px-6 py-16 md:px-16 md:py-24 lg:py-32"><VerticalBorderLines /><motion.div {...reveal}><SectionTag>Videos & Reels</SectionTag><h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">See the energy<br /><span className="text-[#686869]">in motion.</span></h2><AnimatedRedRule className="mt-6 w-full" /></motion.div><div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">{videos.map(video => <figure key={video.id} className="group w-full"><div className="relative aspect-[9/16] overflow-hidden"><img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} /><span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"><span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors group-hover:bg-[#e30e04]"><Play className="ml-0.5 h-4 w-4 fill-current" /></span></span></div><figcaption className="pt-3 text-[12px] font-bold uppercase tracking-[0.08em]">{video.title}</figcaption></figure>)}</div></section>
 
-      <section id="contact" className="relative border-t border-[rgba(33,33,33,0.14)] py-16 md:py-24 lg:py-28"><VerticalBorderLines /><motion.div {...reveal} className="mx-auto grid max-w-[1440px] gap-10 px-6 md:px-16 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-8"><SectionTag>Media Enquiries</SectionTag><h2 className="mt-7 text-[clamp(3rem,13vw,7rem)] font-bold uppercase leading-[0.86] tracking-[-0.055em]">Bring TSF<br /><span className="text-[#686869]">to your stage.</span></h2><p className="mt-8 max-w-lg text-base leading-relaxed text-[#686869]">For press enquiries, event coverage, or to invite one of our speakers to your next gathering, our team would love to hear from you.</p></div><div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end"><a href="mailto:info@thespeakersfirm.co.za" className="inline-flex items-center rounded-full bg-[#e30e04] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">Make an enquiry <ArrowRight className="ml-2 h-4 w-4" /></a><a href="/#brief-us" className="inline-flex items-center rounded-full border border-[#212121] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#212121]">Contact team</a></div></motion.div></section>
+      <section id="contact" className="relative border-t border-[rgba(33,33,33,0.14)] py-16 md:py-24 lg:py-28"><VerticalBorderLines /><motion.div {...reveal} className="mx-auto grid max-w-[1440px] gap-10 px-6 md:px-16 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-8"><SectionTag>Media Enquiries</SectionTag><h2 className="mt-7 text-[clamp(3rem,13vw,7rem)] font-bold uppercase leading-[0.86] tracking-[-0.055em]">Bring The Speakers Firm<br /><span className="text-[#686869]">to your stage.</span></h2><p className="mt-8 max-w-lg text-base leading-relaxed text-[#686869]">For press enquiries, event coverage, or to invite one of our speakers to your next gathering, our team would love to hear from you.</p></div><div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end"><Link href="/brief-us" className="inline-flex items-center rounded-full bg-[#e30e04] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">Brief Us Now <ArrowRight className="ml-2 h-4 w-4" /></Link><Link href="/contact" className="inline-flex items-center rounded-full border border-[#212121] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#212121]">Make An Enquiry</Link></div></motion.div></section>
     </main>;
 };
