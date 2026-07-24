@@ -3499,17 +3499,13 @@ export const TheSpeakersFirmHome = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <motion.a href="#faculty" whileHover={{
-              scale: 1.02
-            }} whileTap={{
-              scale: 0.98
-            }} className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
+              <Link href="/brief-us-now" className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
               borderColor: 'rgba(255, 255, 255, 0.18)'
             }}>
                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
                 backgroundColor: COLORS.black
-              }}><span>Find a Speaker</span><ArrowRight aria-hidden="true" size={16} /></span>
-              </motion.a>
+              }}><span>Brief Us Now</span><ArrowRight aria-hidden="true" size={16} /></span>
+              </Link>
               <Link href="/book-a-speaker" className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">
                 Book a Speaker
               </Link>

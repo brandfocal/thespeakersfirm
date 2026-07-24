@@ -67,7 +67,7 @@ const FOOTER_NAV_LINKS = [
   { id: 'faculty', label: 'Faculty', href: '/#faculty' },
   { id: 'methodology', label: 'Methodology', href: '/#methodology' },
   { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/#dialogues' },
-  { id: 'find-speaker', label: 'Find a Speaker', href: '/#faculty' }
+  { id: 'find-speaker', label: 'Brief Us Now', href: '/brief-us-now' }
 ];
 
 export function Header() {
@@ -507,18 +507,18 @@ export function Header() {
 
         <Link 
           href="/book-a-speaker" 
-          className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95" 
+          className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95 animate-none" 
           style={{ backgroundColor: COLORS.red }}
         >
           Book A Speaker
         </Link>
-        <a 
-          href="/#faculty" 
+        <Link 
+          href="/brief-us-now" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
           style={{ backgroundColor: COLORS.black }}
         >
-          Find a Speaker
-        </a>
+          Brief Us Now
+        </Link>
       </div>
       <button 
         type="button" 
