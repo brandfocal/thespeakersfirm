@@ -41,8 +41,8 @@ const contactMethods = [{
 }, {
   id: 'address',
   label: 'Physical Address',
-  value: 'Johannesburg, South Africa',
-  detail: 'Operating globally',
+  value: '364 Pine Avenue, Ferndale, Randburg, 2196',
+  detail: 'Johannesburg, South Africa',
   icon: 'location'
 }];
 
@@ -437,7 +437,7 @@ export const TSFContact = () => {
               </div>
               {activeSubmitted ? (
                 <p role="status" className="contact-redesign__status tabbed-contact-form__status mt-6">
-                  <span>Message received. A TSF consultant will contact you within one business day.</span>
+                  <span>Message received. A The Speakers Firm consultant will contact you within one business day.</span>
                 </p>
               ) : (
                 <button type="submit" className="red-button contact-redesign__submit tabbed-contact-form__submit mt-6">
@@ -514,13 +514,13 @@ export const TSFContact = () => {
                 </p>
               </blockquote>
               <p id="contact-aside-heading" className="border-l-3 border-[#e30e04] pl-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#B0ADA8]">
-                TSF Advisory Team
+                The Speakers Firm Advisory Team
               </p>
             </div>
             <figure className="location-card contact-location-card">
-              <iframe title="Map showing Johannesburg, South Africa" src="https://www.google.com/maps?q=Johannesburg%2C%20South%20Africa&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="location-card__map" />
+              <iframe title="Map showing The Speakers Firm Office" src="https://www.google.com/maps?q=364%20Pine%20Avenue%2C%20Ferndale%2C%20Randburg%2C%20South%20Africa&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="location-card__map" />
               <figcaption className="location-card__caption">
-                <span>Johannesburg base. Global speaker network.</span>
+                <span>364 Pine Avenue, Ferndale, Randburg, 2196</span>
               </figcaption>
             </figure>
           </motion.aside>
