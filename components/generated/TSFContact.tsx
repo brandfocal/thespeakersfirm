@@ -314,25 +314,16 @@ export const TSFContact = () => {
             <SectionTag>CONTACT US</SectionTag>
           </motion.div>
           <motion.h1 initial="hidden" animate="visible" transition={{ delay: 0.12 }} variants={reveal} className="text-[clamp(3.5rem,11vw,6.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
-            <span>BRIEF THE</span><br />
-            <span className="text-[#e30e04]">BUREAU.</span>
+            <span>Institutional Access.</span>
           </motion.h1>
           <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.74 }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
-          <div className="mt-8 flex max-w-[620px] flex-col gap-3">
+          <div className="mt-8 flex max-w-[720px] flex-col gap-3">
+            <motion.h2 initial="hidden" animate="visible" transition={{ delay: 0.18 }} variants={reveal} className="text-xl font-bold uppercase tracking-wider text-[#e30e04]">
+              General Enquiries, Operations &amp; Global Logistics.
+            </motion.h2>
             <motion.p initial="hidden" animate="visible" transition={{ delay: 0.24 }} variants={reveal} className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-              We place the right voice in the right room — strategically selected, professionally delivered.
+              For strategic talent recommendations or to initiate a booking, please utilize our dedicated Briefing or Booking gateways. For media inquiries, operational support, or general institutional correspondence, connect with our headquarters. All communications are handled with absolute corporate discretion.
             </motion.p>
-            <motion.div initial="hidden" animate="visible" transition={{ delay: 0.36 }} variants={reveal} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 mt-4">
-              <motion.a href="#contact" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-flex items-center" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
-                <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white border border-white/20">
-                  <span>Brief the Bureau</span>
-                  <ArrowRight size={16} />
-                </span>
-              </motion.a>
-              <a href="#speakers" className="border border-white/25 hover:border-white/50 backdrop-blur-sm px-6 py-3 rounded-full text-[12px] font-bold uppercase tracking-[0.1em] text-white flex items-center justify-center">
-                <span>Explore Speakers</span>
-              </a>
-            </motion.div>
           </div>
         </div>
       </section>
