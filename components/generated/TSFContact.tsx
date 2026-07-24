@@ -439,10 +439,6 @@ export const TSFContact = () => {
                   <span>{item.label}</span>
                 </a>
               ))}
-            </div>
-            <div className="feature-actions">
-              <a href="#speakers" className="ghost-button"><span>Explore Speakers</span></a>
-            </div>
           </div>
         </motion.article>
       </section>
