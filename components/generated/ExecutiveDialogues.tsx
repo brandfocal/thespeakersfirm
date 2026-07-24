@@ -479,7 +479,7 @@ export function ExecutiveDialogues() {
               <span>BRIEF US</span>
               <ArrowRight size={16} />
             </Link>
-            <Link className="inline-flex items-center justify-center gap-3 rounded-full border border-black/20 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-black transition-colors duration-300 hover:bg-black hover:text-white" href="/#speakers">
+            <Link className="inline-flex items-center justify-center gap-3 rounded-full border border-black/20 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-black transition-colors duration-300 hover:bg-black hover:text-white" href="/categories">
               <span>EXPLORE SPEAKERS</span>
               <ArrowRight size={16} />
             </Link>
