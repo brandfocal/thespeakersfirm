@@ -330,26 +330,27 @@ export function BookASpeaker() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-[clamp(3rem,12vw,7rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
-                <span>Book A</span><br />
-                <span>Speaker.</span>
+                <span>Secure Your</span><br />
+                <span>Talent.</span>
               </h1>
             </Reveal>
             <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
-            <div className="mt-8 flex max-w-[620px] flex-col gap-3">
+            <div className="mt-8 flex max-w-[720px] flex-col gap-3">
               <Reveal delay={0.2}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-                  Secure Strategic Talent. Receive Curated Options Within 24 Hours. All inquiries are handled with absolute institutional confidentiality.
+                <p className="text-[18px] font-bold leading-tight text-[#ffffff] md:text-[22px] mb-2">
+                  Initiate the Contracting &amp; Availability Process.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>
-                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 mt-4">
-                  <motion.a href="#brief" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex w-full items-center justify-center gap-2 rounded-full border bg-white p-1.5 sm:w-auto" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
-                    <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]">
-                      <span>Book A Speaker</span>
-                      <ArrowRight size={16} />
-                    </span>
-                  </motion.a>
-                </div>
+                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
+                  You have identified the right voice for your next engagement. Provide the logistical and commercial details below so our team can immediately verify availability, confirm fees, and initiate the end-to-end contracting process.
+                </p>
+              </Reveal>
+              <Reveal delay={0.4} className="mt-4">
+                <a href="#brief" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-black">
+                  <span>Start Booking Process</span>
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </a>
               </Reveal>
             </div>
           </div>
@@ -360,31 +361,29 @@ export function BookASpeaker() {
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-20">
               <div>
-                <SectionTag>STRATEGIC MATCHING</SectionTag>
+                <SectionTag>TRUST &amp; DELIVERY</SectionTag>
                 <Reveal>
                   <h2 className="mt-6 text-[clamp(2.2rem,8vw,3.8rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#000000]">
-                    Curation<br />In Motion.
+                    End-to-End<br />Confidence.
                   </h2>
                 </Reveal>
                 <Reveal delay={0.1}>
                   <p className="mt-6 text-sm leading-relaxed text-[#686869] max-w-sm">
-                    Our strategic matching system ensures your objectives, timeline, audience dynamics, and budget coordinate seamlessly to deliver optimal engagement outcomes.
+                    Our team handles all travel logistics, technical riders, contract negotiations and execution schedules, protecting both speaker and corporate client interests.
                   </p>
                 </Reveal>
                 
-                <div className="mt-10 flex flex-col gap-4 border-t border-black/10 pt-8 max-w-sm">
-                  <div className="flex justify-between items-center text-black text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-                    <span>Step {step} of 6</span>
-                    <span className="text-[#e30e04]">Progress</span>
-                  </div>
-                  <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-[#e30e04] h-full transition-all duration-300" style={{ width: `${(step / 6) * 100}%` }} />
-                  </div>
-                  <div className="grid grid-cols-3 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] mt-3 gap-2">
-                    <span className={step <= 2 ? "text-black" : ""}>1-2. Contact & Talent</span>
-                    <span className={step > 2 && step <= 4 ? "text-black" : ""}>3-4. Event & Budget</span>
-                    <span className={step > 4 ? "text-black" : ""}>5-6. Source & Consent</span>
-                  </div>
+                <div className="mt-8 border-l-4 border-[#e30e04] pl-6 py-2">
+                  <p className="text-lg font-normal italic leading-relaxed text-[#212121]">
+                    "The Speakers Firm saved our team valuable time, reduced booking risk and ensured that every commercial, contractual, and logistical detail was professionally managed. Their value extends far beyond securing talent. Partner with them for confidence from the first brief to the final applause."
+                  </p>
+                </div>
+
+                <div className="mt-8 rounded-2xl bg-gray-50 border border-black/10 p-5 space-y-3">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#e30e04]">VALUE PROPOSITION</p>
+                  <p className="text-sm font-bold text-black leading-snug">
+                    End-to-end contracting, coordination and talent management.
+                  </p>
                 </div>
               </div>
 
