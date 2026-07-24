@@ -3499,7 +3499,7 @@ export const TheSpeakersFirmHome = () => {
             delay: 1.7,
             duration: 0.8
           }} className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link href="/brief-us-now" className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
+              <Link href="/brief-us" className="flex w-full items-center gap-2 p-1.5 rounded-full border bg-white sm:w-auto" style={{
               borderColor: 'rgba(255, 255, 255, 0.18)'
             }}>
                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{

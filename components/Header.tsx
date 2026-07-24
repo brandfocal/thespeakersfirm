@@ -513,7 +513,7 @@ export function Header() {
           Book A Speaker
         </Link>
         <Link 
-          href="/brief-us-now" 
+          href="/brief-us" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
           style={{ backgroundColor: COLORS.black }}
         >
