@@ -3503,7 +3503,7 @@ export const TheSpeakersFirmHome = () => {
               borderColor: 'rgba(255, 255, 255, 0.18)'
             }}>
                 <span className="flex flex-1 items-center justify-center gap-3 rounded-full px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]" style={{
-                backgroundColor: COLORS.black
+                backgroundColor: COLORS.red
               }}><span>Brief Us Now</span><ArrowRight aria-hidden="true" size={16} /></span>
               </Link>
               <Link href="/book-a-speaker" className="w-full rounded-full border px-6 py-3 text-center text-[12px] font-bold uppercase tracking-[0.1em] backdrop-blur-sm sm:w-auto sm:px-10 sm:py-4 sm:text-[13px] text-white border-white/25 hover:border-white/50 transition-colors duration-300">

@@ -506,18 +506,18 @@ export function Header() {
         </div>
 
         <Link 
-          href="/book-a-speaker" 
+          href="/brief-us" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-white transition-transform active:scale-95 animate-none" 
           style={{ backgroundColor: COLORS.red }}
         >
-          Book A Speaker
+          Brief Us Now
         </Link>
         <Link 
-          href="/brief-us" 
+          href="/book-a-speaker" 
           className="whitespace-nowrap rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.1em] transition-transform active:scale-95 text-white hover:bg-[#333333] transition-colors" 
           style={{ backgroundColor: COLORS.black }}
         >
-          Brief Us Now
+          Book A Speaker
         </Link>
       </div>
       <button 
