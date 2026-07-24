@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const COLORS = {
   black: '#000000',
@@ -261,7 +262,7 @@ export const TSFAboutUsRedesign = () => <div style={{
   <section aria-labelledby="metrics-heading" className="relative -mt-px overflow-hidden bg-[#ffffff]">
     <VerticalBorderLines />
     <EditorialGrid />
-    <div className="relative z-10 mx-auto max-w-[1440px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-20">
+    <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 py-14 sm:py-16 lg:py-20">
       <h2 id="metrics-heading" className="sr-only">The Speakers Firm metrics</h2>
       <div className="grid grid-cols-2 gap-x-4 gap-y-8 border-y border-[rgba(33,33,33,0.14)] py-8 sm:gap-x-8 md:py-10 lg:grid-cols-4 lg:gap-x-10">
         {metrics.map((metric, index) => <motion.article key={metric.id} initial={{
@@ -288,7 +289,7 @@ export const TSFAboutUsRedesign = () => <div style={{
       </div>
     </div>
   </section>
-
+ 
   <section id="offering" className="relative -mt-px overflow-hidden bg-[#ffffff]">
     <VerticalBorderLines />
     <EditorialGrid />
@@ -296,7 +297,7 @@ export const TSFAboutUsRedesign = () => <div style={{
       backgroundImage: 'linear-gradient(rgba(33,33,33,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(33,33,33,0.035) 1px, transparent 1px)',
       backgroundSize: '72px 72px'
     }} />
-    <div className="relative z-10 mx-auto max-w-[1440px] px-4 py-16 sm:px-6 sm:py-24 md:px-8 md:py-28 lg:px-16 lg:py-36">
+    <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 py-16 sm:py-24 md:py-28 lg:py-36">
       <header className="mb-10 max-w-4xl sm:mb-12 md:mb-16">
         <SectionTag className="mb-5">Our Offering</SectionTag>
         <h2 className="text-balance text-[clamp(2rem,10vw,5.375rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#000000] sm:leading-[0.93]">
@@ -337,15 +338,15 @@ export const TSFAboutUsRedesign = () => <div style={{
     </div>
     <div className="relative z-30 h-[2px] w-full bg-[#e30e04]" aria-hidden="true" />
   </section>
-
-  <section id="leadership" aria-labelledby="leadership-heading" className="relative min-h-screen w-full overflow-hidden bg-[#000000] px-4 py-14 text-[#ffffff] sm:px-6 sm:py-18 md:px-8 md:py-20 lg:px-10 lg:py-24">
-    <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-4 w-px bg-[rgba(248,247,245,0.10)] sm:left-6 md:left-8 lg:left-10">
+ 
+  <section id="leadership" aria-labelledby="leadership-heading" className="relative min-h-screen w-full overflow-hidden bg-[#000000] px-6 md:px-16 py-14 text-[#ffffff] sm:py-18 md:py-20 lg:py-24">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-6 w-px bg-[rgba(248,247,245,0.10)] md:left-16">
       <span className="absolute left-1/2 top-0 block h-[7px] w-[7px] -translate-x-1/2 bg-[#ffffff]" />
     </div>
-    <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-4 w-px bg-[rgba(248,247,245,0.10)] sm:right-6 md:right-8 lg:right-10">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-6 w-px bg-[rgba(248,247,245,0.10)] md:right-16">
       <span className="absolute left-1/2 top-0 block h-[7px] w-[7px] -translate-x-1/2 bg-[#ffffff]" />
     </div>
-
+ 
     <div className="relative mx-auto max-w-[1440px]">
       <header className="mb-10 max-w-3xl sm:mb-12 md:mb-14 lg:mb-18">
         <p className="mb-4 inline-flex items-center border border-l-[4px] border-[rgba(248,247,245,0.14)] border-l-[#e30e04] bg-[#000000] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#ffffff] sm:mb-5 sm:px-4 sm:text-[12px]">
@@ -355,7 +356,7 @@ export const TSFAboutUsRedesign = () => <div style={{
           <span>Built with presence, led with intention.</span>
         </h2>
       </header>
-
+ 
       <div className="grid gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8" role="list" aria-label="Leadership team members">
         {leaders.map((leader, order) => {
           const imageFirst = order % 2 === 1;
@@ -376,16 +377,16 @@ export const TSFAboutUsRedesign = () => <div style={{
           <div className={`${imageFirst ? 'md:order-2' : 'md:order-1'} relative z-10 aspect-[4/3] w-full overflow-hidden bg-[#000000] md:aspect-auto md:min-h-full`}>
             <img src={leader.image} alt={`${leader.name}, ${leader.role}`} className="block h-full w-full object-cover object-top grayscale transition duration-700 ease-out group-hover:scale-[1.04] group-hover:grayscale-0" />
           </div>
-
+ 
           <div className={`${imageFirst ? 'md:order-1' : 'md:order-2'} relative z-10 flex min-h-[220px] flex-col justify-between overflow-hidden px-5 py-6 sm:min-h-[240px] sm:px-8 sm:py-8 md:min-h-full lg:p-10`}>
             <span className="pointer-events-none absolute bottom-0 left-0 z-0 text-[96px] font-bold leading-none tracking-[-0.08em] text-[#ffffff]/[0.035] sm:text-[132px] md:text-[150px] lg:text-[176px]">
               {leader.ordinal}
             </span>
-
+ 
             <span className="relative z-10 w-fit border border-[#e30e04]/40 bg-[#e30e04]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#ff4a42] sm:text-[12px]">
               {leader.ordinal}
             </span>
-
+ 
             <div className="relative z-10 mt-10 sm:mt-12 md:mt-14 lg:mt-18">
               <h3 className="max-w-[360px] text-[clamp(1.625rem,7vw,2.625rem)] font-bold uppercase leading-[0.95] tracking-[-0.04em] text-[#ffffff] md:text-[clamp(1.75rem,3.6vw,2.625rem)]">
                 <span>{leader.name}</span>
@@ -403,13 +404,13 @@ export const TSFAboutUsRedesign = () => <div style={{
       </div>
     </div>
   </section>
-
+ 
   <section className="relative -mt-px overflow-hidden bg-[#000000] text-[#ffffff]">
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
       backgroundImage: NOISE_TEXTURE
     }} aria-hidden="true" />
     <VerticalBorderLines isDark />
-    <div className="relative z-30 mx-auto max-w-[1440px] px-4 py-18 text-center sm:px-6 sm:py-24 md:px-8 md:py-28 md:text-left lg:px-16 lg:py-36">
+    <div className="relative z-30 mx-auto max-w-[1440px] px-6 py-18 text-center sm:py-24 md:px-16 md:py-28 md:text-left lg:py-36">
       <span className="absolute bottom-0 left-0 top-0 hidden w-[4px] bg-[#e30e04] sm:block" aria-hidden="true" />
       <span className="mx-auto mb-0 mt-0 block h-[0.5em] overflow-hidden font-serif text-[clamp(76px,26vw,200px)] leading-none text-[#e30e04] md:mx-0">“</span>
       <motion.blockquote className="mx-auto max-w-[900px] text-[clamp(18px,5.4vw,32px)] font-normal leading-[1.45] tracking-[-0.025em] md:mx-0 md:text-[clamp(20px,2.5vw,32px)]">
@@ -433,23 +434,23 @@ export const TSFAboutUsRedesign = () => <div style={{
       }} />
     </div>
   </section>
-
+ 
   <section id="brief-us" className="relative -mt-px overflow-hidden bg-[#000000] text-[#ffffff]">
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
       backgroundImage: NOISE_TEXTURE
     }} aria-hidden="true" />
     <VerticalBorderLines isDark />
-    <div className="relative z-30 mx-auto max-w-[1440px] px-4 py-18 sm:px-6 sm:py-24 md:px-8 md:py-28 lg:px-10 lg:py-32">
+    <div className="relative z-30 mx-auto max-w-[1440px] px-6 md:px-16 py-18 sm:py-24 md:py-28 lg:py-32">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-8">
           <SectionTag>Ready to Partner</SectionTag>
           <AnimatedHeading lines={CTA_LINES} className="max-w-[960px] text-[clamp(2rem,10vw,4rem)] font-bold uppercase leading-[0.97] tracking-[-0.04em] sm:leading-[0.95]" />
         </div>
         <div className="flex items-center lg:col-span-4 lg:justify-end">
-          <a href="mailto:brief@thespeakersfirm.com" className="flex w-full items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_16px_40px_rgba(227,14,4,0.3)] transition-all hover:-translate-y-1 hover:bg-[#c00c03] sm:w-auto sm:px-8 sm:py-5 sm:text-[12px]">
+          <Link href="/brief-us" className="flex w-full items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_16px_40px_rgba(227,14,4,0.3)] transition-all hover:-translate-y-1 hover:bg-[#c00c03] sm:w-auto sm:px-8 sm:py-5 sm:text-[12px]">
             <span>Brief The Speakers Firm</span>
             <ArrowUpRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
