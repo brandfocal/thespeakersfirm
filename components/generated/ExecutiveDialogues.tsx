@@ -4,6 +4,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const C = {
   black: '#000000',
@@ -474,14 +475,14 @@ export function ExecutiveDialogues() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-black" href="mailto:brief@thespeakersfirm.com">
+            <Link className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-black" href="/brief-us">
               <span>BRIEF US</span>
               <ArrowRight size={16} />
-            </a>
-            <a className="inline-flex items-center justify-center gap-3 rounded-full border border-black/20 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-black transition-colors duration-300 hover:bg-black hover:text-white" href="/">
+            </Link>
+            <Link className="inline-flex items-center justify-center gap-3 rounded-full border border-black/20 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-black transition-colors duration-300 hover:bg-black hover:text-white" href="/#speakers">
               <span>EXPLORE SPEAKERS</span>
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>
