@@ -5,9 +5,30 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
-import { CATEGORIES_CONFIG } from "@/lib/categories";
+import Link from "next/link";
 
-const CATEGORIES = CATEGORIES_CONFIG.map(c => c.buttonLabel);
+const CATEGORIES = [
+  { name: 'Keynote', path: '/categories/inspirational-keynote-speakers' },
+  { name: 'Leadership', path: '/categories/leadership-strategy-and-executive-performance' },
+  { name: 'Governance', path: '/categories/boards-governance-and-boardroom-influence' },
+  { name: 'A.I.', path: '/categories/artificial-intelligence-and-intelligent-enterprise' },
+  { name: 'Future of Work', path: '/categories/future-of-work-talent-and-workforce-transformation' },
+  { name: 'Economics', path: '/categories/economics-markets-and-the-global-economy' },
+  { name: 'Futurists', path: '/categories/futurists-trends-and-strategic-foresight' },
+  { name: 'Geopolitics', path: '/categories/geopolitics-policy-and-global-affairs' },
+  { name: 'Innovation', path: '/categories/innovation-disruption-and-business-transformation' },
+  { name: 'Entrepreneurship', path: '/categories/entrepreneurship-investment-and-business-growth' },
+  { name: 'Change & Resilience', path: '/categories/change-resilience-and-organisational-agility' },
+  { name: 'Media & Executive visibility', path: '/categories/media-communication-and-executive-visibility' },
+  { name: 'Reputation & Trust', path: '/categories/reputation-crisis-and-trust-leadership' },
+  { name: 'Marketing & Brand', path: '/categories/marketing-branding-and-customer-growth' },
+  { name: 'Sales & Negotiation', path: '/categories/sales-negotiation-and-commercial-performance' },
+  { name: 'Neuroscience', path: '/categories/neuroscience-psychology-and-human-behaviour' },
+  { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
+  { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
+  { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
+  { name: 'MCs & Entertainment', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' }
+];
 
 export function BottomCategoryMenu() {
   const router = useRouter();
@@ -47,7 +68,6 @@ export function BottomCategoryMenu() {
       const target = document.getElementById("featured-speakers-heading");
       if (target) {
         const rect = target.getBoundingClientRect();
-        // Show once the heading is scrolled to or passed (rect.top <= 100px from top of viewport)
         if (rect.top <= 100) {
           setIsVisible(true);
         } else {
@@ -62,20 +82,6 @@ export function BottomCategoryMenu() {
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
-
-  const handleCategoryClick = (category: string) => {
-    setActiveCategory(category);
-    window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: category }));
-    
-    if (pathname !== "/") {
-      router.push(`/?category=${encodeURIComponent(category)}`);
-    } else {
-      const target = document.getElementById("featured-speakers-heading");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    }
-  };
 
   const handleScrollRight = () => {
     if (scrollRef.current) {
@@ -97,18 +103,18 @@ export function BottomCategoryMenu() {
         className="scrollbar-none flex w-full items-center gap-1.5 overflow-x-auto scroll-smooth"
       >
         {CATEGORIES.map((category) => (
-          <button
-            key={category}
-            onClick={() => handleCategoryClick(category)}
+          <Link
+            key={category.path}
+            href={category.path}
             className={cn(
               "shrink-0 rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] transition-all duration-300",
-              activeCategory === category
+              pathname === category.path
                 ? "bg-[#e30e04] text-white shadow-sm"
                 : "text-[#686869] hover:bg-gray-100 hover:text-[#212121]"
             )}
           >
-            <span>{category}</span>
-          </button>
+            <span>{category.name}</span>
+          </Link>
         ))}
       </div>
       
