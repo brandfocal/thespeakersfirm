@@ -1,59 +1,120 @@
 "use client";
 
 import * as React from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
+import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import { CheckCircle, ChevronDown, ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { ArrowRight, Check, ChevronDown, CheckCircle } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 const COLORS = {
-  black: "#0A0A0A",
-  red: "#e30e04",
-  redHover: "#c00b03",
-  gray: "#9A9A9A",
-  mutedGray: "#9A9A9A",
-  silver: "#9A9A9A",
-  silverAlt: "#9A9A9A",
-  borderGray: "#E5E5E5",
-  darkGray: "#1E1E1E",
-  cardBorder: "#1E1E1E",
-  offWhite: "#FFFFFF",
-  deepBlack: "#0A0A0A"
+  black: '#000000',
+  red: '#e30e04',
+  gray: '#000000',
+  silver: '#ffffff',
+  borderGray: '#ffffff',
+  darkGray: '#000000',
+  offWhite: '#ffffff'
 };
 
-const SECTION_TAG_CLASS = "inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-widest sm:px-4 sm:text-xs";
-const SECTION_TAG_STYLE: React.CSSProperties = {
-  backgroundColor: "#111111",
-  borderColor: COLORS.darkGray,
-  borderLeftColor: COLORS.red,
-  color: COLORS.offWhite
+const stats = [{
+  id: 'turnaround',
+  value: '24 HRS',
+  label: 'Average curation turnaround'
+}, {
+  id: 'tracks',
+  value: '20+',
+  label: 'Strategic speaker tracks'
+}, {
+  id: 'confidentiality',
+  value: '100%',
+  label: 'Institutional confidentiality'
+}];
+
+const revealTransition = {
+  duration: 0.8,
+  ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
 };
 
-const VerticalBorderLines = ({ isDark = false }: { isDark?: boolean }) => {
+const SECTION_TAG_CLASS = 'inline-flex items-center border border-l-[4px] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] shadow-none';
+const SECTION_TAG_STYLE = {
+  backgroundColor: '#000000',
+  borderColor: '#000000',
+  borderLeftColor: '#e30e04',
+  color: '#ffffff'
+};
+
+const SectionTag = ({
+  children
+}: {
+  children: string;
+}) => <span className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>{children}</span>;
+
+const VerticalBorderLines = ({
+  isDark = false
+}: {
+  isDark?: boolean;
+}) => {
   const borderColor = isDark ? '#393939' : '#C7C7C8';
   const capColor = isDark ? '#FFFFFF' : '#212121';
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-20">
-      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-16">
-        <div className="absolute left-6 md:left-16 top-0 bottom-0 w-[1px]" style={{ backgroundColor: borderColor }}>
-          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{ backgroundColor: capColor }} />
+  return <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-20">
+      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-10">
+        <div className="absolute left-6 md:left-10 top-0 bottom-0 w-[1px]" style={{
+        backgroundColor: borderColor
+      }}>
+          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
+          backgroundColor: capColor
+        }} />
         </div>
-        <div className="absolute right-6 md:right-16 top-0 bottom-0 w-[1px]" style={{ backgroundColor: borderColor }}>
-          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{ backgroundColor: capColor }} />
+        <div className="absolute right-6 md:right-10 top-0 bottom-0 w-[1px]" style={{
+        backgroundColor: borderColor
+      }}>
+          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{
+          backgroundColor: capColor
+        }} />
         </div>
       </div>
-    </div>
-  );
+    </div>;
+};
+
+const Reveal = ({
+  children,
+  delay = 0,
+  className = ''
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) => {
+  return <motion.div className={className} initial={{
+    opacity: 0,
+    y: 28
+  }} whileInView={{
+    opacity: 1,
+    y: 0
+  }} viewport={{
+    once: true,
+    margin: '-80px'
+  }} transition={{
+    ...revealTransition,
+    delay
+  }}>
+      {children}
+    </motion.div>;
 };
 
 export function BookASpeaker() {
   const searchParams = useSearchParams();
-  const [step, setStep] = React.useState(1);
-  const [enquiryRef] = React.useState(() => `TSF-ENQ-${Math.floor(100000 + Math.random() * 900000)}`);
-  
-  const [formData, setFormData] = React.useState({
+  const [step, setStep] = useState(1);
+  const [enquiryRef] = useState(() => `TSF-ENQ-${Math.floor(100000 + Math.random() * 900000)}`);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const [formData, setFormData] = useState({
+    // Step 1
     fullName: "",
     jobTitle: "",
     organisation: "",
@@ -66,6 +127,7 @@ export function BookASpeaker() {
     decisionMaker: "Yes",
     additionalContact: "",
     
+    // Step 2
     speakerName: "",
     speakerRef: "",
     engagementCategory: "Keynote speaker",
@@ -77,6 +139,7 @@ export function BookASpeaker() {
     duration: "",
     additionalActivities: "No",
     
+    // Step 3
     eventName: "",
     eventType: "Conference",
     eventFormat: "In-person",
@@ -101,15 +164,18 @@ export function BookASpeaker() {
     territory: "",
     usagePeriod: "",
     
+    // Step 4
     budgetRange: "",
     currency: "ZAR",
     budgetStatus: "Approved",
     quotationDeadline: "",
     decisionDate: "",
     
+    // Step 5
     source: "Google or another search engine",
     sourceDetails: "",
     
+    // Step 6
     ackComplete: false,
     ackPolicy: false,
     ackNoReserve: false,
@@ -118,12 +184,7 @@ export function BookASpeaker() {
     marketingConsent: false
   });
 
-  const [errors, setErrors] = React.useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [isSubmitted, setIsSubmitted] = React.useState(false);
-
   React.useEffect(() => {
-    // Try to auto-populate speaker from query param
     const querySpeaker = searchParams.get("speaker");
     if (querySpeaker) {
       setFormData(prev => ({
@@ -252,365 +313,341 @@ export function BookASpeaker() {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-black text-white font-[Kontora,sans-serif] selection:bg-[#e30e04] selection:text-white flex flex-col justify-between">
+  return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000] flex flex-col justify-between">
       <Header />
       
-      <main className="flex-grow pt-24 pb-20 relative">
-        <VerticalBorderLines isDark={true} />
-        
-        <div className="mx-auto max-w-[1440px] px-6 md:px-16 relative z-30">
-          <div className="mb-10 text-center">
-            <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-              <span>SECURE STRATEGIC TALENT</span>
+      <div className="flex-grow">
+        <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000]">
+          <img src="/galleries/bonang-mohale/bonang-mohale.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
+          <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
+          }} aria-hidden="true" />
+          <VerticalBorderLines isDark={true} />
+          <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-10">
+            <Reveal>
+              <SectionTag>BOOK A SPEAKER</SectionTag>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h1 className="text-[clamp(3rem,12vw,7rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
+                <span>Brief The</span><br />
+                <span>Bureau.</span>
+              </h1>
+            </Reveal>
+            <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
+            <div className="mt-8 flex max-w-[620px] flex-col gap-3">
+              <Reveal delay={0.2}>
+                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
+                  Secure Strategic Talent. Receive Curated Options Within 24 Hours. All inquiries are handled with absolute institutional confidentiality.
+                </p>
+              </Reveal>
+              <Reveal delay={0.3}>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 mt-4">
+                  <motion.a href="#brief" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex w-full items-center justify-center gap-2 rounded-full border bg-white p-1.5 sm:w-auto" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
+                    <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:flex-none sm:px-10 sm:py-4 sm:text-[13px]">
+                      <span>Brief Us Now</span>
+                      <ArrowRight size={16} />
+                    </span>
+                  </motion.a>
+                </div>
+              </Reveal>
             </div>
-            <h1 className="text-[clamp(2.5rem,7vw,4.5rem)] font-bold uppercase leading-none tracking-[-0.05em] mt-6">
-              Book A <span className="text-[#e30e04]">Speaker</span>
-            </h1>
-            <p className="mt-4 text-[#9A9A9A] max-w-xl mx-auto text-sm leading-relaxed sm:text-base">
-              Complete the multi-step form below to brief our bureau. We respond to all enquiries within 24 hours.
-            </p>
           </div>
+        </section>
 
-          {isSubmitted ? (
-            <div className="mx-auto max-w-2xl rounded-2xl border border-[#1E1E1E] bg-[#111111] p-8 text-center text-white shadow-2xl">
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e30e04]">
-                <CheckCircle className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold uppercase">Enquiry Submitted Successfully</h3>
-              <p className="mt-4 text-[#9A9A9A] text-sm leading-relaxed">
-                Thank you for considering The Speakers Firm™.
-              </p>
-              <div className="my-6 rounded-xl bg-black/40 p-4 border border-[#1E1E1E]">
-                <p className="text-xs uppercase tracking-widest text-[#9A9A9A]">Reference Number</p>
-                <p className="mt-1 text-lg font-mono font-bold text-[#e30e04]">{enquiryRef}</p>
-              </div>
-              <p className="text-[#9A9A9A] text-sm leading-relaxed text-left max-w-md mx-auto">
-                A member of our team will contact you within one business day to assess availability, review your requirements and advise you on the next steps.
-                <br /><br />
-                <span className="text-xs text-[#FFFFFF]/70 italic">Please note that submitting an enquiry does not reserve or confirm the requested speaker. All bookings remain subject to availability, written confirmation and fulfilment of our commercial terms.</span>
-              </p>
-              <button 
-                onClick={() => {
-                  setStep(1);
-                  setIsSubmitted(false);
-                  setFormData(prev => ({
-                    ...prev,
-                    fullName: "",
-                    email: "",
-                    mobile: "",
-                    organisation: "",
-                    eventName: "",
-                    eventDate: "",
-                    ackComplete: false,
-                    ackPolicy: false,
-                    ackNoReserve: false,
-                    ackNoTender: false,
-                    ackConsent: false
-                  }));
-                }}
-                className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#e30e04] px-8 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03]"
-              >
-                Submit Another Enquiry
-              </button>
-            </div>
-          ) : (
-            <div className="mx-auto w-full max-w-4xl rounded-2xl border border-[#1E1E1E] bg-[#111111] p-6 text-white shadow-2xl md:p-8">
-              {/* Progress Tracker */}
-              <div className="mb-8 w-full border-b border-[#1E1E1E] pb-6">
-                <div className="flex justify-between items-center text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-                  <span>Step {step} of 6</span>
-                  <span className="text-[#e30e04]">Progress</span>
-                </div>
-                <div className="w-full bg-[#1E1E1E] h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-[#e30e04] h-full transition-all duration-300" style={{ width: `${(step / 6) * 100}%` }} />
-                </div>
-                <div className="grid grid-cols-6 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] mt-3 gap-1">
-                  <span className={step === 1 ? "text-white" : ""}>1. Contact</span>
-                  <span className={step === 2 ? "text-white" : ""}>2. Talent</span>
-                  <span className={step === 3 ? "text-white" : ""}>3. Event</span>
-                  <span className={step === 4 ? "text-white" : ""}>4. Budget</span>
-                  <span className={step === 5 ? "text-white" : ""}>5. Source</span>
-                  <span className={step === 6 ? "text-white" : ""}>6. Consent</span>
+        <section id="brief" className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.offWhite }}>
+          <VerticalBorderLines isDark={false} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-20">
+              <div>
+                <SectionTag>STRATEGIC MATCHING</SectionTag>
+                <Reveal>
+                  <h2 className="mt-6 text-[clamp(2.2rem,8vw,3.8rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#000000]">
+                    Curation<br />In Motion.
+                  </h2>
+                </Reveal>
+                <Reveal delay={0.1}>
+                  <p className="mt-6 text-sm leading-relaxed text-[#686869] max-w-sm">
+                    Our strategic matching system ensures your objectives, timeline, audience dynamics, and budget coordinate seamlessly to deliver optimal engagement outcomes.
+                  </p>
+                </Reveal>
+                
+                <div className="mt-10 flex flex-col gap-4 border-t border-black/10 pt-8 max-w-sm">
+                  <div className="flex justify-between items-center text-black text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
+                    <span>Step {step} of 6</span>
+                    <span className="text-[#e30e04]">Progress</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-[#e30e04] h-full transition-all duration-300" style={{ width: `${(step / 6) * 100}%` }} />
+                  </div>
+                  <div className="grid grid-cols-3 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] mt-3 gap-2">
+                    <span className={step <= 2 ? "text-black" : ""}>1-2. Contact & Talent</span>
+                    <span className={step > 2 && step <= 4 ? "text-black" : ""}>3-4. Event & Budget</span>
+                    <span className={step > 4 ? "text-black" : ""}>5-6. Source & Consent</span>
+                  </div>
                 </div>
               </div>
 
-              <form onSubmit={handleFormSubmit} className="space-y-6">
-                {step === 1 && (
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 1: Contact Information</h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Full Name*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
-                        {errors.fullName && <p className="text-[#e30e04] text-xs mt-1">{errors.fullName}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Job Title*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
-                        {errors.jobTitle && <p className="text-[#e30e04] text-xs mt-1">{errors.jobTitle}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Organisation*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
-                        {errors.organisation && <p className="text-[#e30e04] text-xs mt-1">{errors.organisation}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Business Email Address*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="email" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
-                        {errors.email && <p className="text-[#e30e04] text-xs mt-1">{errors.email}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Mobile Number*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="tel" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
-                        {errors.mobile && <p className="text-[#e30e04] text-xs mt-1">{errors.mobile}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Country*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.country} onChange={e => handleFieldChange("country", e.target.value)}>
-                          <option value="South Africa">South Africa</option>
-                          <option value="United Kingdom">United Kingdom</option>
-                          <option value="United States">United States</option>
-                          <option value="Europe">Europe</option>
-                          <option value="Kenya">Kenya</option>
-                          <option value="Nigeria">Nigeria</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} />
-                        {errors.city && <p className="text-[#e30e04] text-xs mt-1">{errors.city}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Organisation Website</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.website} onChange={e => handleFieldChange("website", e.target.value)} />
-                      </label>
+              <div>
+                {isSubmitted ? (
+                  <div className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-center">
+                    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e30e04]">
+                      <CheckCircle className="h-8 w-8 text-white" />
                     </div>
+                    <h3 className="text-xl font-bold uppercase text-black">Enquiry Submitted</h3>
+                    <p className="mt-4 text-[#686869] text-sm leading-relaxed">
+                      Thank you for briefing The Speakers Firm™. Reference: <strong className="text-black">{enquiryRef}</strong>
+                    </p>
+                    <button onClick={() => { setStep(1); setIsSubmitted(false); }} className="mt-8 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300">
+                      Submit Another
+                    </button>
                   </div>
-                )}
-
-                {step === 2 && (
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 2: Speaker or Talent Requirements</h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Requested (Optional)</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. Professor Bonang Mohale" value={formData.speakerName} onChange={e => handleFieldChange("speakerName", e.target.value)} />
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Engagement Category*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.engagementCategory} onChange={e => handleFieldChange("engagementCategory", e.target.value)}>
-                          <option value="Keynote speaker">Keynote speaker</option>
-                          <option value="Facilitator">Facilitator</option>
-                          <option value="Moderator">Moderator</option>
-                          <option value="Master of ceremonies">Master of ceremonies</option>
-                          <option value="Panellist">Panellist</option>
-                          <option value="Comedian">Comedian</option>
-                          <option value="Celebrity">Celebrity</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Topic, stream or area of expertise*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. Ethical Leadership, Governance" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} />
-                        {errors.expertise && <p className="text-[#e30e04] text-xs mt-1">{errors.expertise}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative recommendations?</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.alternativeRecommendations} onChange={e => handleFieldChange("alternativeRecommendations", e.target.value)}>
-                          <option value="Yes">Yes, please propose alternatives if unavailable</option>
-                          <option value="No">No, only requested speaker</option>
-                        </select>
-                      </label>
-                      <label className="block sm:col-span-2">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event objectives*</span>
-                        <textarea className="min-h-[80px] w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} />
-                        {errors.eventObjectives && <p className="text-[#e30e04] text-xs mt-1">{errors.eventObjectives}</p>}
-                      </label>
-                    </div>
-                  </div>
-                )}
-
-                {step === 3 && (
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 3: Event Information</h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Name*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.eventName} onChange={e => handleFieldChange("eventName", e.target.value)} />
-                        {errors.eventName && <p className="text-[#e30e04] text-xs mt-1">{errors.eventName}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Type*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.eventType} onChange={e => handleFieldChange("eventType", e.target.value)}>
-                          <option value="Conference">Conference</option>
-                          <option value="Leadership summit">Leadership summit</option>
-                          <option value="Corporate function">Corporate function</option>
-                          <option value="Strategy session">Strategy session</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Format*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.eventFormat} onChange={e => handleFieldChange("eventFormat", e.target.value)}>
-                          <option value="In-person">In-person</option>
-                          <option value="Virtual">Virtual</option>
-                          <option value="Hybrid">Hybrid</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Event Date*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. 15 September 2026" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} />
-                        {errors.eventDate && <p className="text-[#e30e04] text-xs mt-1">{errors.eventDate}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City and Country*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. Johannesburg, South Africa" value={formData.eventCityCountry} onChange={e => handleFieldChange("eventCityCountry", e.target.value)} />
-                        {errors.eventCityCountry && <p className="text-[#e30e04] text-xs mt-1">{errors.eventCityCountry}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Expected Audience Size*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. 250 people" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)} />
-                        {errors.audienceSize && <p className="text-[#e30e04] text-xs mt-1">{errors.audienceSize}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Audience Profile & Seniority*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. Executive Board, C-Suite Leaders" value={formData.audienceProfile} onChange={e => handleFieldChange("audienceProfile", e.target.value)} />
-                        {errors.audienceProfile && <p className="text-[#e30e04] text-xs mt-1">{errors.audienceProfile}</p>}
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Industry or Sector*</span>
-                        <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" placeholder="e.g. Financial Services" value={formData.industry} onChange={e => handleFieldChange("industry", e.target.value)} />
-                        {errors.industry && <p className="text-[#e30e04] text-xs mt-1">{errors.industry}</p>}
-                      </label>
-                    </div>
-                  </div>
-                )}
-
-                {step === 4 && (
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 4: Budget and Commercial Information</h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Currency*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.currency} onChange={e => handleFieldChange("currency", e.target.value)}>
-                          <option value="ZAR">ZAR (R)</option>
-                          <option value="USD">USD ($)</option>
-                          <option value="GBP">GBP (£)</option>
-                          <option value="EUR">EUR (€)</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Budget Range*</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.budgetRange} onChange={e => handleFieldChange("budgetRange", e.target.value)}>
-                          <option value="" disabled>Select range...</option>
-                          {getBudgetRanges().map((range) => (
-                            <option key={range} value={range}>{range}</option>
-                          ))}
-                        </select>
-                        {errors.budgetRange && <p className="text-[#e30e04] text-xs mt-1">{errors.budgetRange}</p>}
-                      </label>
-                    </div>
-                  </div>
-                )}
-
-                {step === 5 && (
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 5: How Did You Hear About Us?</h4>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block sm:col-span-2">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">How did you hear about The Speakers Firm™?</span>
-                        <select className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" value={formData.source} onChange={e => handleFieldChange("source", e.target.value)}>
-                          <option value="Google or another search engine">Google or another search engine</option>
-                          <option value="LinkedIn">LinkedIn</option>
-                          <option value="Referral or recommendation">Referral or recommendation</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </label>
-                      {["Referral or recommendation", "Other"].includes(formData.source) && (
-                        <label className="block sm:col-span-2">
-                          <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Please provide details*</span>
-                          <input className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none" type="text" value={formData.sourceDetails} onChange={e => handleFieldChange("sourceDetails", e.target.value)} />
-                          {errors.sourceDetails && <p className="text-[#e30e04] text-xs mt-1">{errors.sourceDetails}</p>}
-                        </label>
+                ) : (
+                  <form onSubmit={handleFormSubmit} className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-black">
+                    <AnimatePresence mode="wait">
+                      {step === 1 && (
+                        <motion.fieldset key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 1: Contact Information</h3>
+                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Full Name*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
+                              {errors.fullName && <p className="text-[#e30e04] text-xs">{errors.fullName}</p>}
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Job Title*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Organisation*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Email Address*</span>
+                              <input required type="email" className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Mobile Number*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">City & Country*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
+                            </label>
+                          </div>
+                          <div className="mt-4 flex justify-end">
+                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                              <span>Next Step</span>
+                              <ArrowRight size={14} />
+                            </button>
+                          </div>
+                        </motion.fieldset>
                       )}
-                    </div>
-                  </div>
+
+                      {step === 2 && (
+                        <motion.fieldset key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 2: Speaker requirements</h3>
+                          <div className="grid grid-cols-1 gap-6">
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Speaker Requested (Optional)</span>
+                              <input className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.speakerName} onChange={e => handleFieldChange("speakerName", e.target.value)} placeholder="Leave blank for strategic matching" />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Area of Expertise / Topic*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. Ethical Mentorship, Cyber Security" />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Strategic Objectives / Focus*</span>
+                              <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[100px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What must this event achieve?" />
+                            </label>
+                          </div>
+                          <div className="mt-4 flex justify-between">
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                              <span>Next Step</span>
+                              <ArrowRight size={14} />
+                            </button>
+                          </div>
+                        </motion.fieldset>
+                      )}
+
+                      {step === 3 && (
+                        <motion.fieldset key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 3: Event Information</h3>
+                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Name*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventName} onChange={e => handleFieldChange("eventName", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Date*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 October 2026" />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Location / City*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventCityCountry} onChange={e => handleFieldChange("eventCityCountry", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Expected Audience Size*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)} />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Audience Profile*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceProfile} onChange={e => handleFieldChange("audienceProfile", e.target.value)} placeholder="e.g. Executive C-Suite" />
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Industry / Sector*</span>
+                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.industry} onChange={e => handleFieldChange("industry", e.target.value)} />
+                            </label>
+                          </div>
+                          <div className="mt-4 flex justify-between">
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                              <span>Next Step</span>
+                              <ArrowRight size={14} />
+                            </button>
+                          </div>
+                        </motion.fieldset>
+                      )}
+
+                      {step === 4 && (
+                        <motion.fieldset key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 4: Budget range</h3>
+                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Currency*</span>
+                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.currency} onChange={e => handleFieldChange("currency", e.target.value)}>
+                                <option value="ZAR">ZAR (R)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="EUR">EUR (€)</option>
+                              </select>
+                            </label>
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Speaker Budget Range*</span>
+                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.budgetRange} onChange={e => handleFieldChange("budgetRange", e.target.value)}>
+                                <option value="" disabled>Select range...</option>
+                                {getBudgetRanges().map((range) => (
+                                  <option key={range} value={range}>{range}</option>
+                                ))}
+                              </select>
+                            </label>
+                          </div>
+                          <div className="mt-4 flex justify-between">
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                              <span>Next Step</span>
+                              <ArrowRight size={14} />
+                            </button>
+                          </div>
+                        </motion.fieldset>
+                      )}
+
+                      {step === 5 && (
+                        <motion.fieldset key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 5: How did you hear about us?</h3>
+                          <div className="grid grid-cols-1 gap-6">
+                            <label className="flex flex-col gap-2">
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Source Channel*</span>
+                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.source} onChange={e => handleFieldChange("source", e.target.value)}>
+                                <option value="Google or another search engine">Google or another search engine</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Referral or recommendation">Referral or recommendation</option>
+                                <option value="Other">Other</option>
+                              </select>
+                            </label>
+                            {["Referral or recommendation", "Other"].includes(formData.source) && (
+                              <label className="flex flex-col gap-2">
+                                <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Provide details*</span>
+                                <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.sourceDetails} onChange={e => handleFieldChange("sourceDetails", e.target.value)} />
+                              </label>
+                            )}
+                          </div>
+                          <div className="mt-4 flex justify-between">
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                              <span>Next Step</span>
+                              <ArrowRight size={14} />
+                            </button>
+                          </div>
+                        </motion.fieldset>
+                      )}
+
+                      {step === 6 && (
+                        <motion.fieldset key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 6: Review &amp; Policies</h3>
+                          
+                          <div className="rounded-xl border border-black/10 bg-gray-50 p-4 space-y-3 max-h-[160px] overflow-y-auto text-xs text-[#686869]">
+                            <h5 className="font-bold text-black uppercase">Enquiry Terms &amp; Policies</h5>
+                            <p><strong>1. Payments:</strong> Clearance of booking fee is required prior to event delivery.</p>
+                            <p><strong>2. Availability:</strong> Placements remain non-reserved until full written contract executions.</p>
+                          </div>
+
+                          <div className="space-y-3">
+                            <label className="flex items-start gap-3 cursor-pointer">
+                              <input type="checkbox" checked={formData.ackComplete} onChange={e => handleFieldChange("ackComplete", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
+                              <span className="text-xs text-[#686869]">I confirm that all details provided in this enquiry are accurate.*</span>
+                            </label>
+                            <label className="flex items-start gap-3 cursor-pointer">
+                              <input type="checkbox" checked={formData.ackPolicy} onChange={e => handleFieldChange("ackPolicy", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
+                              <span className="text-xs text-[#686869]">I accept booking and confidentiality policy.*</span>
+                            </label>
+                            <label className="flex items-start gap-3 cursor-pointer">
+                              <input type="checkbox" checked={formData.ackNoReserve} onChange={e => handleFieldChange("ackNoReserve", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
+                              <span className="text-xs text-[#686869]">I understand submitting does not reserve the speaker.*</span>
+                            </label>
+                            <label className="flex items-start gap-3 cursor-pointer">
+                              <input type="checkbox" checked={formData.ackNoTender} onChange={e => handleFieldChange("ackNoTender", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
+                              <span className="text-xs text-[#686869]">I represent that I will not name speakers in tenders without consent.*</span>
+                            </label>
+                            <label className="flex items-start gap-3 cursor-pointer">
+                              <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
+                              <span className="text-xs text-[#686869]">I consent to secure processing of my data.*</span>
+                            </label>
+                          </div>
+
+                          <div className="mt-4 flex justify-between">
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300" type="submit">
+                              Submit Booking Enquiry
+                            </button>
+                          </div>
+                        </motion.fieldset>
+                      )}
+                    </AnimatePresence>
+                  </form>
                 )}
-
-                {step === 6 && (
-                  <div className="space-y-6">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 6: Review, Policy and Consent</h4>
-                    <div className="rounded-xl border border-[#1E1E1E] bg-black/40 p-5 space-y-4 max-h-[260px] overflow-y-auto text-xs text-[#9A9A9A] leading-relaxed scrollbar-thin">
-                      <h5 className="font-bold text-white uppercase text-sm">Booking, Tender, Payment and Confidentiality Policy</h5>
-                      <p><strong>1. Booking and Payment:</strong> The Speakers Firm™ requires full payment before the event. A booking may only be confirmed once payment has cleared or an authorised purchase order is accepted.</p>
-                      <p><strong>2. Availability and Confirmation:</strong> Availability cannot be guaranteed or reserved indefinitely. A booking becomes binding only once formal written confirmation is issued by The Speakers Firm™.</p>
-                      <p><strong>3. Announcements and Marketing:</strong> Clients may not market or represent the speaker as confirmed before receiving formal written confirmation.</p>
-                      <p><strong>4. Tender and Proposal Restrictions:</strong> Clients may not name or represent any talent in a tender or bid without prior written authorisation.</p>
-                    </div>
-
-                    <div className="space-y-3">
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackComplete} onChange={e => handleFieldChange("ackComplete", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
-                        <span className="text-xs text-[#9A9A9A]">I confirm that all details provided in this enquiry are accurate.*</span>
-                      </label>
-                      {errors.ackComplete && <p className="text-[#e30e04] text-xs pl-7">{errors.ackComplete}</p>}
-
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackPolicy} onChange={e => handleFieldChange("ackPolicy", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
-                        <span className="text-xs text-[#9A9A9A]">I have read and accept The Speakers Firm™ Booking, Tender, Payment and Confidentiality Policy.*</span>
-                      </label>
-                      {errors.ackPolicy && <p className="text-[#e30e04] text-xs pl-7">{errors.ackPolicy}</p>}
-
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackNoReserve} onChange={e => handleFieldChange("ackNoReserve", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
-                        <span className="text-xs text-[#9A9A9A]">I understand that submitting this enquiry does not reserve or confirm the requested speaker.*</span>
-                      </label>
-                      {errors.ackNoReserve && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoReserve}</p>}
-
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackNoTender} onChange={e => handleFieldChange("ackNoTender", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
-                        <span className="text-xs text-[#9A9A9A]">I understand that I may not represent a speaker from The Speakers Firm™ in a tender, bid or proposal without written authorisation.*</span>
-                      </label>
-                      {errors.ackNoTender && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoTender}</p>}
-
-                      <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
-                        <span className="text-xs text-[#9A9A9A]">I consent to secure processing of my data.*</span>
-                      </label>
-                      {errors.ackConsent && <p className="text-[#e30e04] text-xs pl-7">{errors.ackConsent}</p>}
-                    </div>
-                  </div>
-                )}
-
-                <div className="mt-8 flex flex-col gap-3 border-t border-[#1E1E1E] pt-6 sm:flex-row sm:items-center sm:justify-between">
-                  <div>
-                    {step > 1 && (
-                      <button type="button" onClick={prevStep} className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#9A9A9A] px-6 text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] transition-colors hover:border-white hover:text-white sm:text-xs">
-                        Back
-                      </button>
-                    )}
-                  </div>
-                  <div>
-                    {step < 6 ? (
-                      <button type="button" onClick={nextStep} className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs">
-                        Next Step
-                      </button>
-                    ) : (
-                      <button type="submit" disabled={isSubmitting} className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs">
-                        {isSubmitting ? "Submitting..." : "Submit Booking Enquiry"}
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </form>
+              </div>
             </div>
-          )}
-        </div>
-      </main>
-      
+          </div>
+        </section>
+
+        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16 border-t border-black/10" style={{ backgroundColor: COLORS.offWhite }}>
+          <VerticalBorderLines isDark={false} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 gap-12 md:grid-cols-2">
+            <Reveal>
+              <blockquote className="border-l-4 border-[#e30e04] pl-6 py-2">
+                <span className="block text-[11px] font-bold uppercase tracking-widest text-[#e30e04] mb-3">CURATED RECOMMENDATIONS</span>
+                <p className="text-xl font-bold leading-tight">
+                  “Within 24 hours, The Speakers Firm presented a carefully curated shortlist aligned with our strategy, audience, budget and brand. Their speed never compromised quality.”
+                </p>
+                <footer className="mt-4 text-xs text-[#686869]">— Head of Brand, Standard Bank</footer>
+              </blockquote>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="flex flex-col gap-4">
+                <span className="block text-[11px] font-bold uppercase tracking-widest text-[#e30e04]">DIRECT DESK ACCESS</span>
+                <p className="text-sm leading-relaxed text-[#686869]">For urgent bookings or boardroom advisory interventions, email us directly:</p>
+                <div className="flex flex-col gap-2">
+                  <a href="mailto:booking@thespeakersfirm.co.za" className="text-sm font-bold text-black hover:text-[#e30e04] transition-colors">booking@thespeakersfirm.co.za</a>
+                  <a href="mailto:info@thespeakersfirm.co.za" className="text-sm font-bold text-black hover:text-[#e30e04] transition-colors">info@thespeakersfirm.co.za</a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      </div>
+
       <Footer />
-    </div>
-  );
+    </main>;
 }
