@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Check, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const VALUE_PROPOSITION_ITEMS = [
   {
@@ -93,10 +94,10 @@ export const WhyChooseUs = () => {
         backgroundSize: '128px 128px'
       }} />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 sm:py-24 md:px-16 md:py-32 lg:px-24">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pt-8 pb-20 sm:px-8 sm:pt-10 sm:pb-24 md:px-16 md:pt-12 md:pb-32 lg:px-24">
         
         {/* Stat Bar Header to add energy */}
-        <div className="grid grid-cols-1 gap-8 border-b border-white/[0.08] pb-16 sm:grid-cols-3 md:gap-12 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 gap-8 border-b border-white/[0.08] pb-10 sm:grid-cols-3 md:gap-12 mb-6 md:mb-8">
           <div className="flex flex-col items-start">
             <span className="text-[clamp(2.5rem,8vw,4.5rem)] font-light font-serif tracking-tight leading-none text-[#e30e04]">
               <StatCounter value={100} suffix="%" />
@@ -179,13 +180,13 @@ export const WhyChooseUs = () => {
               variants={itemVariants}
               className="mt-14 pt-8 border-t border-white/[0.08]"
             >
-              <a 
-                href="/contact" 
+              <Link 
+                href="/brief-us" 
                 className="group relative inline-flex items-center gap-3 rounded-full bg-[#e30e04] hover:bg-white text-white hover:text-[#181818] px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-[0_12px_32px_rgba(227,14,4,0.18)] hover:shadow-none active:scale-98"
               >
                 <span>Start a Brief</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
           

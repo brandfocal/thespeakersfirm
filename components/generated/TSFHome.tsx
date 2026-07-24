@@ -2505,16 +2505,74 @@ const TestimonialMarqueeStrip = () => {
     </section>;
 };
 const BriefBureauFormSection = () => {
-  const [strategicObjective, setStrategicObjective] = React.useState('');
+  const [step, setStep] = React.useState(1);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [errors, setErrors] = React.useState<Record<string, string>>({});
+  const [formData, setFormData] = React.useState({
+    fullName: "",
+    jobTitle: "",
+    organisation: "",
+    email: "",
+    mobile: "",
+    format: "",
+    eventDate: "",
+    city: "",
+    audienceSize: "",
+    budget: "",
+    expertise: "",
+    eventObjectives: ""
+  });
+
+  const handleFieldChange = (field: string, value: any) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => {
+        const next = { ...prev };
+        delete next[field];
+        return next;
+      });
+    }
+  };
+
+  const validateStep = (currentStep: number): boolean => {
+    const newErrors: Record<string, string> = {};
+    if (currentStep === 1) {
+      if (!formData.fullName.trim()) newErrors.fullName = "Full Name is required";
+      if (!formData.jobTitle.trim()) newErrors.jobTitle = "Corporate Designation is required";
+      if (!formData.organisation.trim()) newErrors.organisation = "Organisation Name is required";
+      if (!formData.email.trim()) newErrors.email = "Corporate Email is required";
+      if (!formData.mobile.trim()) newErrors.mobile = "Direct Contact Number is required";
+    }
+    if (currentStep === 2) {
+      if (!formData.format) newErrors.format = "Nature of Engagement is required";
+      if (!formData.eventDate.trim()) newErrors.eventDate = "Proposed Date(s) is required";
+      if (!formData.city.trim()) newErrors.city = "Location is required";
+      if (!formData.audienceSize) newErrors.audienceSize = "Estimated Audience Size is required";
+      if (!formData.budget) newErrors.budget = "Allocated Talent Budget is required";
+    }
+    if (currentStep === 3) {
+      if (!formData.expertise.trim()) newErrors.expertise = "Topic / Theme required is required";
+      if (!formData.eventObjectives.trim()) newErrors.eventObjectives = "Strategic Objective & Context is required";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const nextStep = () => {
+    if (validateStep(step)) setStep(prev => prev + 1);
+  };
+  const prevStep = () => {
+    setStep(prev => Math.max(1, prev - 1));
+  };
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitted(true);
+    if (validateStep(3)) {
+      setIsSubmitted(true);
+    }
   };
-  const handleObjectiveChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setStrategicObjective(event.target.value);
-  };
-  return <section id="brief-us" className="relative w-full" style={{
+
+  return <section id="brief-us" className="relative w-full border-t" style={{
     backgroundColor: COLORS.offWhite,
     borderColor: SOFT_RULE_COLOR
   }}>
@@ -2552,97 +2610,130 @@ const BriefBureauFormSection = () => {
             }} transition={{
               duration: 0.35,
               ease: [0.22, 1, 0.36, 1]
-            }} onSubmit={handleSubmit} className="flex flex-col gap-10" aria-label="Brief the Bureau contact form">
-                  <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.black
-              }}>
-                    <input id="brief-name" name="name" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
-                  color: COLORS.black
-                }} />
-                    <label htmlFor="brief-name" className="absolute left-0 top-6 origin-left text-[18px] transition-all duration-300 ease-out peer-focus:top-0 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.16em] peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:font-bold peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.16em]" style={{
-                  color: COLORS.gray
-                }}>Full Name & Designation</label>
-                    <span aria-hidden="true" className="absolute bottom-[-1px] left-0 h-[1px] w-0 transition-all duration-300 ease-out peer-focus:w-full" style={{
-                  backgroundColor: COLORS.red
-                }} />
+            }} onSubmit={handleSubmit} className="flex flex-col gap-6" aria-label="Brief the Bureau contact form">
+                  
+                  {/* Step Tracker */}
+                  <div className="pb-4 border-b border-black/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#686869]">
+                    <span>Step {step} of 3</span>
+                    <span className="text-[#e30e04]">{step === 1 ? 'Identity' : step === 2 ? 'Logistics' : 'Strategic'}</span>
                   </div>
-                  <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.black
-              }}>
-                    <input id="brief-organisation" name="organisation" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
-                  color: COLORS.black
-                }} />
-                    <label htmlFor="brief-organisation" className="absolute left-0 top-6 origin-left text-[18px] transition-all duration-300 ease-out peer-focus:top-0 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.16em] peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:font-bold peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.16em]" style={{
-                  color: COLORS.gray
-                }}>Institution / Organisation</label>
-                    <span aria-hidden="true" className="absolute bottom-[-1px] left-0 h-[1px] w-0 transition-all duration-300 ease-out peer-focus:w-full" style={{
-                  backgroundColor: COLORS.red
-                }} />
-                  </div>
-                  <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.black
-              }}>
-                    <select id="brief-engagement" name="engagement" required defaultValue="" className="peer w-full appearance-none bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
-                  color: COLORS.black
-                }}>
-                      <option value="" disabled> </option>
-                      {ENGAGEMENT_OPTIONS.map(option => <option key={option.id} value={option.label}>{option.label}</option>)}
-                    </select>
-                    <label htmlFor="brief-engagement" className="absolute left-0 top-6 origin-left text-[18px] transition-all duration-300 ease-out peer-focus:top-0 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.16em] peer-valid:top-0 peer-valid:text-[11px] peer-valid:font-bold peer-valid:uppercase peer-valid:tracking-[0.16em]" style={{
-                  color: COLORS.gray
-                }}>Nature of Engagement</label>
-                    <span aria-hidden="true" className="absolute bottom-[-1px] left-0 h-[1px] w-0 transition-all duration-300 ease-out peer-focus:w-full" style={{
-                  backgroundColor: COLORS.red
-                }} />
-                  </div>
-                  <div>
-                    <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                  borderColor: COLORS.black
-                }}>
-                      <textarea id="brief-objective" name="objective" required maxLength={500} value={strategicObjective} onChange={handleObjectiveChange} placeholder=" " rows={6} className="peer min-h-[180px] w-full resize-none bg-transparent pb-4 text-[20px] leading-[1.45] outline-none" style={{
-                    color: COLORS.black
-                  }} />
-                      <label htmlFor="brief-objective" className="absolute left-0 top-6 origin-left text-[18px] transition-all duration-300 ease-out peer-focus:top-0 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.16em] peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:font-bold peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.16em]" style={{
-                    color: COLORS.gray
-                  }}>Strategic Objective</label>
-                      <span aria-hidden="true" className="absolute bottom-[-1px] left-0 h-[1px] w-0 transition-all duration-300 ease-out peer-focus:w-full" style={{
-                    backgroundColor: COLORS.red
-                  }} />
-                    </div>
-                    <p className="mt-3 text-right font-mono text-[12px] tracking-[0.08em]" style={{
-                  color: COLORS.silver
-                }}><span>{strategicObjective.length} / 500</span></p>
-                  </div>
-                  <div className="relative pt-6 border-b focus-within:border-transparent transition-colors duration-300" style={{
-                borderColor: COLORS.black
-              }}>
-                    <input id="brief-date-location" name="date-location" type="text" required placeholder=" " className="peer w-full bg-transparent pb-4 text-[20px] leading-none outline-none" style={{
-                  color: COLORS.black
-                }} />
-                    <label htmlFor="brief-date-location" className="absolute left-0 top-6 origin-left text-[18px] transition-all duration-300 ease-out peer-focus:top-0 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.16em] peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:font-bold peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.16em]" style={{
-                  color: COLORS.gray
-                }}>Proposed Date & Location</label>
-                    <span aria-hidden="true" className="absolute bottom-[-1px] left-0 h-[1px] w-0 transition-all duration-300 ease-out peer-focus:w-full" style={{
-                  backgroundColor: COLORS.red
-                }} />
-                  </div>
-                  <div className="pt-2">
-                    <button type="submit" className="rounded-full border px-10 py-4 text-[13px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 hover:text-white" style={{
-                  borderColor: COLORS.black,
-                  color: COLORS.black,
-                  backgroundColor: 'transparent'
-                }} onMouseEnter={event => {
-                  event.currentTarget.style.backgroundColor = COLORS.red;
-                  event.currentTarget.style.borderColor = COLORS.red;
-                  event.currentTarget.style.color = '#FFFFFF';
-                }} onMouseLeave={event => {
-                  event.currentTarget.style.backgroundColor = 'transparent';
-                  event.currentTarget.style.borderColor = COLORS.black;
-                  event.currentTarget.style.color = COLORS.black;
-                }}>
-                      <span>Send Brief</span>
-                    </button>
-                  </div>
+
+                  <AnimatePresence mode="wait">
+                    {step === 1 && (
+                      <motion.fieldset key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Institutional Identity</h3>
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Full Name*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
+                            {errors.fullName && <p className="text-[#e30e04] text-xs">{errors.fullName}</p>}
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Designation*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Organisation Name*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Email*</span>
+                            <input required type="email" className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
+                          </label>
+                          <label className="flex flex-col gap-2 sm:col-span-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Direct Contact Number*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
+                          </label>
+                        </div>
+                        <div className="mt-4 flex justify-end">
+                          <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                            <span>Next Step</span>
+                            <ArrowRight size={14} />
+                          </button>
+                        </div>
+                      </motion.fieldset>
+                    )}
+
+                    {step === 2 && (
+                      <motion.fieldset key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Engagement Logistics</h3>
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Nature of Engagement*</span>
+                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
+                              <option value="" disabled>Select option...</option>
+                              <option value="Executive Boardroom Strategy">Executive Boardroom Strategy</option>
+                              <option value="Annual General Meeting">Annual General Meeting</option>
+                              <option value="Leadership Summit">Leadership Summit</option>
+                              <option value="Brand Campaign">Brand Campaign</option>
+                              <option value="Keynote Address">Keynote Address</option>
+                              <option value="Panel Facilitation">Panel Facilitation</option>
+                              <option value="Virtual Broadcast">Virtual Broadcast</option>
+                            </select>
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Proposed Date(s)*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 September 2026" />
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Location*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Estimated Audience Size*</span>
+                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
+                              <option value="" disabled>Select range...</option>
+                              <option value="Under 50 (Executive/Closed Door)">Under 50 (Executive/Closed Door)</option>
+                              <option value="50-200">50–200</option>
+                              <option value="200-500">200–500</option>
+                              <option value="500+ (Large Scale Summit)">500+ (Large Scale Summit)</option>
+                            </select>
+                          </label>
+                          <label className="flex flex-col gap-2 sm:col-span-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Allocated Talent Budget*</span>
+                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
+                              <option value="" disabled>Select range...</option>
+                              <option value="To be Determined">To be Determined</option>
+                              <option value="R20k–R40k">R20k–R40k</option>
+                              <option value="R40k–R80k">R40k–R80k</option>
+                              <option value="R80k–R150k">R80k–R150k</option>
+                              <option value="R150k+">R150k+</option>
+                            </select>
+                          </label>
+                        </div>
+                        <div className="mt-4 flex justify-between">
+                          <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                          <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                            <span>Next Step</span>
+                            <ArrowRight size={14} />
+                          </button>
+                        </div>
+                      </motion.fieldset>
+                    )}
+
+                    {step === 3 && (
+                      <motion.fieldset key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">The Strategic Brief</h3>
+                        <div className="grid grid-cols-1 gap-6">
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Topic / Theme Required*</span>
+                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. AI Transformation, Macroeconomics" />
+                          </label>
+                          <label className="flex flex-col gap-2">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Strategic Objective &amp; Context*</span>
+                            <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[120px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
+                          </label>
+                        </div>
+                        <div className="mt-4 flex justify-between">
+                          <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                          <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300" type="submit">
+                            <span>Request Talent Recommendations</span>
+                          </button>
+                        </div>
+                      </motion.fieldset>
+                    )}
+                  </AnimatePresence>
+
                 </motion.form>}
               {isSubmitted && <motion.div key="brief-confirmation" initial={{
               opacity: 0,
@@ -2725,6 +2816,7 @@ export const TheSpeakersFirmHome = () => {
     return () => window.removeEventListener('tsf-select-category', handleCategorySelect);
   }, []);
 
+  const refCategoryContainer = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
@@ -3596,35 +3688,66 @@ export const TheSpeakersFirmHome = () => {
         }} />
         </div>
 
-        {/* Category Filter Chips */}
-        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 flex flex-nowrap overflow-x-auto scrollbar-none gap-2.5 z-20 relative pb-2 select-none">
+        {/* Category Filter Chips with Prev/Next buttons */}
+        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 relative z-20 flex items-center gap-3">
           <button
             type="button"
-            onClick={() => handleFeaturedSpeakerFilterChange('All')}
-            className={cn(
-              "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
-              activeSpeakerCategory === 'All'
-                ? "bg-[#e30e04] text-white border-[#e30e04]"
-                : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
-            )}
+            aria-label="Scroll categories left"
+            onClick={() => {
+              if (refCategoryContainer.current) {
+                refCategoryContainer.current.scrollBy({ left: -200, behavior: 'smooth' });
+              }
+            }}
+            className="flex h-9 w-9 shrink-0 place-items-center justify-center rounded-full border border-black/10 bg-white shadow-sm text-black hover:bg-black hover:text-white transition-colors"
           >
-            All
+            <ChevronLeft className="h-4 w-4" />
           </button>
-          {CATEGORIES_CONFIG.map((cat) => (
+          
+          <div 
+            ref={refCategoryContainer}
+            className="flex-grow flex flex-nowrap overflow-x-auto scrollbar-none gap-2.5 pb-2 select-none scroll-smooth"
+          >
             <button
-              key={cat.id}
               type="button"
-              onClick={() => handleFeaturedSpeakerFilterChange(cat.id)}
+              onClick={() => handleFeaturedSpeakerFilterChange('All')}
               className={cn(
                 "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
-                activeSpeakerCategory === cat.id
+                activeSpeakerCategory === 'All'
                   ? "bg-[#e30e04] text-white border-[#e30e04]"
                   : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
               )}
             >
-              {cat.buttonLabel}
+              All
             </button>
-          ))}
+            {CATEGORIES_CONFIG.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => handleFeaturedSpeakerFilterChange(cat.id)}
+                className={cn(
+                  "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
+                  activeSpeakerCategory === cat.id
+                    ? "bg-[#e30e04] text-white border-[#e30e04]"
+                    : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
+                )}
+              >
+                {cat.buttonLabel}
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            aria-label="Scroll categories right"
+            onClick={() => {
+              if (refCategoryContainer.current) {
+                refCategoryContainer.current.scrollBy({ left: 200, behavior: 'smooth' });
+              }
+            }}
+            className="flex h-9 w-9 shrink-0 place-items-center justify-center rounded-full border border-black/10 bg-white shadow-sm text-black hover:bg-black hover:text-white transition-colors"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
         </div>
 
         <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
@@ -3840,20 +3963,6 @@ export const TheSpeakersFirmHome = () => {
             )}
           </div>
 
-          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 pb-20 sm:pb-24 md:pb-[120px]">
-            <motion.div initial={{
-          opacity: 0,
-          y: 18
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          delay: 0.18
-        }} className="mt-12 flex w-full justify-center md:mt-16">
-          <div className="h-0 py-0" />
-        </motion.div>
         </div>
       </section>
 
@@ -3867,7 +3976,7 @@ export const TheSpeakersFirmHome = () => {
         backgroundSize: '128px 128px'
       }} />
         <VerticalBorderLines isDark />
-        <div className="max-w-[1440px] mx-auto px-6 md:px-16 py-20 sm:py-24 md:py-32 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16 py-8 sm:py-10 md:py-12 relative z-10">
           <motion.div initial={{
           scale: 0.9,
           opacity: 0
@@ -4153,11 +4262,11 @@ export const TheSpeakersFirmHome = () => {
       backgroundColor: COLORS.offWhite
     }}>
         <VerticalBorderLines />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-24 text-center sm:py-32 md:px-16 md:py-48">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-8 text-center sm:py-10 md:px-16 md:py-12">
           <AnimatedWordHeading as="h2" lines={BRIDGE_HEADING_LINES} className="mx-auto max-w-[1180px] font-serif text-[clamp(3rem,15vw,7.625rem)] font-light italic leading-[0.98] tracking-[-0.06em]" style={{
           color: COLORS.black
         }} />
-          <p className="mx-auto mt-8 max-w-[640px] text-[18px] font-light leading-[1.7] md:text-[22px]" style={{
+          <p className="mx-auto mt-4 max-w-[640px] text-[18px] font-light leading-[1.7] md:text-[22px]" style={{
           color: COLORS.gray
         }}>The right voice for the right room, every time.</p>
         </div>
@@ -4211,6 +4320,16 @@ export const TheSpeakersFirmHome = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-12 flex justify-center">
+            <Link 
+              href="/executive-dialogues" 
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-black hover:bg-[#e30e04] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-md active:scale-98"
+            >
+              <span>Explore Executive Dialogues</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
 
@@ -4398,14 +4517,13 @@ export const TheSpeakersFirmHome = () => {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-10 flex justify-center"
           >
-            <button 
-              type="button"
-              onClick={() => document.getElementById('brief-us')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link 
+              href="/brief-us"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-white hover:text-black hover:scale-[1.03]"
             >
               <span>Make Us Your Agency of Choice</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>
