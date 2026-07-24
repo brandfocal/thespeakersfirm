@@ -439,6 +439,7 @@ export const TSFContact = () => {
                   <span>{item.label}</span>
                 </a>
               ))}
+            </div>
           </div>
         </motion.article>
       </section>
