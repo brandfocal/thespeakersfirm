@@ -3955,7 +3955,13 @@ export const TheSpeakersFirmHome = () => {
                   aria-label="Show next speakers" 
                   onClick={() => handleSpeakerCarouselAdvance(3, 'next')} 
                   className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-          </div>
+                  style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            )}
+        </div>
       </section>
 
       <section id="methodology" className="relative w-full" style={{
