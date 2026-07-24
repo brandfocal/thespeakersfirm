@@ -90,56 +90,6 @@ const contactTabs: ContactTab[] = [{
     rows: 6
   }]
 }, {
-  id: 'speaker',
-  label: 'Book A Speaker',
-  kicker: 'Speaker Booking',
-  title: 'Match the voice to the moment.',
-  description: 'For keynotes, MCs, moderators, facilitators, and influential talent procurement.',
-  subject: 'Speaker booking brief',
-  message: 'Tell us the event format, audience size, required speaker profile, topic territory, budget range, and timing.',
-  fields: [{
-    id: 'speaker-name',
-    label: 'Name',
-    name: 'name',
-    type: 'text',
-    autoComplete: 'name',
-    placeholder: 'Your full name'
-  }, {
-    id: 'speaker-email',
-    label: 'Email',
-    name: 'email',
-    type: 'email',
-    autoComplete: 'email',
-    placeholder: 'you@organisation.com'
-  }, {
-    id: 'speaker-date',
-    label: 'Event Date',
-    name: 'eventDate',
-    type: 'date',
-    placeholder: 'Select the event date'
-  }, {
-    id: 'speaker-budget',
-    label: 'Budget',
-    name: 'budget',
-    type: 'text',
-    placeholder: 'Preferred budget range'
-  }, {
-    id: 'speaker-preference',
-    label: 'Speaker Preference',
-    name: 'speakerPreference',
-    type: 'text',
-    placeholder: 'Named speaker, topic, or profile preference',
-    wide: true
-  }, {
-    id: 'speaker-message',
-    label: 'Event Context',
-    name: 'message',
-    type: 'textarea',
-    placeholder: 'Audience size, format, objectives, and timing.',
-    wide: true,
-    rows: 5
-  }]
-}, {
   id: 'media',
   label: 'Media & Press',
   kicker: 'Press Desk',
@@ -491,7 +441,6 @@ export const TSFContact = () => {
               ))}
             </div>
             <div className="feature-actions">
-              <a href="#contact" className="red-button"><span>Submit a Brief</span><ArrowRight size={16} aria-hidden="true" /></a>
               <a href="#speakers" className="ghost-button"><span>Explore Speakers</span></a>
             </div>
           </div>
