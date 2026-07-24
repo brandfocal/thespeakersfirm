@@ -552,31 +552,31 @@ export function BookASpeaker() {
 
                     <div className="space-y-3">
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackComplete} onChange={e => handleFieldChange("ackComplete", e.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
+                        <input type="checkbox" checked={formData.ackComplete} onChange={e => handleFieldChange("ackComplete", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
                         <span className="text-xs text-[#9A9A9A]">I confirm that all details provided in this enquiry are accurate.*</span>
                       </label>
                       {errors.ackComplete && <p className="text-[#e30e04] text-xs pl-7">{errors.ackComplete}</p>}
 
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackPolicy} onChange={e => handleFieldChange("ackPolicy", e.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
+                        <input type="checkbox" checked={formData.ackPolicy} onChange={e => handleFieldChange("ackPolicy", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
                         <span className="text-xs text-[#9A9A9A]">I have read and accept The Speakers Firm™ Booking, Tender, Payment and Confidentiality Policy.*</span>
                       </label>
                       {errors.ackPolicy && <p className="text-[#e30e04] text-xs pl-7">{errors.ackPolicy}</p>}
 
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackNoReserve} onChange={e => handleFieldChange("ackNoReserve", e.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
+                        <input type="checkbox" checked={formData.ackNoReserve} onChange={e => handleFieldChange("ackNoReserve", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
                         <span className="text-xs text-[#9A9A9A]">I understand that submitting this enquiry does not reserve or confirm the requested speaker.*</span>
                       </label>
                       {errors.ackNoReserve && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoReserve}</p>}
 
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackNoTender} onChange={e => handleFieldChange("ackNoTender", e.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
+                        <input type="checkbox" checked={formData.ackNoTender} onChange={e => handleFieldChange("ackNoTender", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
                         <span className="text-xs text-[#9A9A9A]">I understand that I may not represent a speaker from The Speakers Firm™ in a tender, bid or proposal without written authorisation.*</span>
                       </label>
                       {errors.ackNoTender && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoTender}</p>}
 
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
+                        <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.target.checked)} className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" />
                         <span className="text-xs text-[#9A9A9A]">I consent to secure processing of my data.*</span>
                       </label>
                       {errors.ackConsent && <p className="text-[#e30e04] text-xs pl-7">{errors.ackConsent}</p>}
