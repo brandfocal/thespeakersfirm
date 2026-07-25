@@ -25,6 +25,8 @@ export async function POST(request: Request) {
       input_values: formattedValues
     };
 
+    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(payload));
+
     const username = process.env.GF_CONSUMER_KEY || '';
     const password = process.env.GF_CONSUMER_SECRET || '';
     
