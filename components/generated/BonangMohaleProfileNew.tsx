@@ -359,14 +359,7 @@ const BookingDecorativeLines = () => {
       </div>
     </div>;
 };
-      <div className="mt-6 border-t border-[#1E1E1E] pt-4 text-center">
-        <p className="text-xs text-[#9A9A9A]">
-          Have an urgent enquiry? Contact us via telephone or WhatsApp at <a href="tel:+27114827256" className="text-white hover:text-[#e30e04] font-bold">+27(0) 11 482 7256/7257</a>.
-        </p>
-      </div>
-    </div>
-  );
-};
+
 const BookingSection = () => {
   return <section id="booking-calendar" className="relative flex min-h-[100svh] w-full flex-col items-center overflow-hidden bg-[#0A0A0A]" aria-labelledby="booking-section-heading">
       <div className="h-4 w-full bg-[#e30e04]" aria-hidden="true" />
