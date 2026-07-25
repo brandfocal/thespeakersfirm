@@ -189,7 +189,7 @@ export const TSFUpcomingEvents = () => {
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
 
   // Newsletter Gravity Form submission state
-  const [newsletterData, setNewsletterData] = React.useState({ firstName: '', lastName: '', email: '', company: '', designation: '' });
+  const [newsletterData, setNewsletterData] = React.useState({ name: '', email: '', company: '', designation: '' });
   const [newsletterSubmitting, setNewsletterSubmitting] = React.useState(false);
   const [newsletterSubmitted, setNewsletterSubmitted] = React.useState(false);
 
@@ -203,8 +203,7 @@ export const TSFUpcomingEvents = () => {
         body: JSON.stringify({
           formId: 2,
           values: {
-            "input_1_3": newsletterData.firstName,
-            "input_1_6": newsletterData.lastName,
+            "input_17": newsletterData.name,
             "input_14": newsletterData.email,
             "input_15": newsletterData.company,
             "input_16": newsletterData.designation
@@ -475,12 +474,8 @@ export const TSFUpcomingEvents = () => {
               <input type="hidden" name="form_id" value="2" />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">First Name*</span>
-                  <input type="text" name="input_1_3" value={newsletterData.firstName} onChange={e => setNewsletterData(prev => ({ ...prev, firstName: e.target.value }))} placeholder="First name" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
-                </label>
-                <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Last Name*</span>
-                  <input type="text" name="input_1_6" value={newsletterData.lastName} onChange={e => setNewsletterData(prev => ({ ...prev, lastName: e.target.value }))} placeholder="Last name" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Full Name*</span>
+                  <input type="text" name="input_17" value={newsletterData.name} onChange={e => setNewsletterData(prev => ({ ...prev, name: e.target.value }))} placeholder="First and last name" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
                 </label>
                 <label className="flex flex-col gap-2">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Email Address*</span>
