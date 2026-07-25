@@ -752,8 +752,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Event Date*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
-                    placeholder="e.g. 15 September 2026"
+                    type="date" 
                     value={formData.eventDate} 
                     onChange={e => handleFieldChange("eventDate", e.target.value)} 
                   />
@@ -764,20 +763,35 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative Date</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
+                    type="date" 
                     value={formData.alternativeDate} 
                     onChange={e => handleFieldChange("alternativeDate", e.target.value)} 
                   />
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Start and End Time</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Start Time</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
-                    placeholder="e.g. 09:00 - 17:00"
-                    value={formData.times} 
-                    onChange={e => handleFieldChange("times", e.target.value)} 
+                    type="time" 
+                    value={formData.times.split(" - ")[0] || ""} 
+                    onChange={e => {
+                      const endTime = formData.times.split(" - ")[1] || "17:00";
+                      handleFieldChange("times", `${e.target.value} - ${endTime}`);
+                    }} 
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event End Time</span>
+                  <input 
+                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    type="time" 
+                    value={formData.times.split(" - ")[1] || ""} 
+                    onChange={e => {
+                      const startTime = formData.times.split(" - ")[0] || "09:00";
+                      handleFieldChange("times", `${startTime} - ${e.target.value}`);
+                    }} 
                   />
                 </label>
 
@@ -785,7 +799,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Arrival / Technical Check Time</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
+                    type="time" 
                     value={formData.techCheckTime} 
                     onChange={e => handleFieldChange("techCheckTime", e.target.value)} 
                   />
@@ -795,7 +809,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaking / Performance Time</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
+                    type="time" 
                     value={formData.performanceTime} 
                     onChange={e => handleFieldChange("performanceTime", e.target.value)} 
                   />
