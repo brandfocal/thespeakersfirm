@@ -576,24 +576,62 @@ const CalendarMock = () => {
               "input_25": formData.fullName,                    // Full Name ID: 25
               "input_5": formData.jobTitle,                      // Job Title ID: 5
               "input_4": formData.organisation,                  // Organisation ID: 4
-              "input_26": formData.email,                        // Email Address ID: 26
+              "input_26": formData.email,                        // Business Email Address ID: 26
               "input_9": formData.mobile,                        // Mobile Number ID: 9
-              "input_27": `${formData.city}, ${formData.country}`, // City & Country ID: 27
-              "input_28": formData.speakerName,                  // Speaker Requested (Optional) ID: 28
-              "input_29": formData.expertise,                    // Area of Expertise / Topic ID: 29
-              "input_30": formData.eventObjectives,              // Strategic Objectives / Focus ID: 30
+              "input_27": formData.country,                      // Country ID: 27
+              "input_46": formData.city,                         // City ID: 46
+              "input_47": formData.website,                      // Organisation Website ID: 47
+              "input_48": formData.contactMethod,                // Preferred Contact Method ID: 48
+              "input_49": formData.decisionMaker,                // Are you the final decision-maker? ID: 49
+              "input_50": formData.additionalContact,            // Additional decision-maker or booking contact ID: 50
+              "input_28": formData.speakerName,                  // Speaker Requested ID: 28
+              "input_45": formData.speakerRef,                   // Profile Reference ID: 45
+              "input_30": formData.engagementCategory,            // Engagement Category ID: 30
+              "input_29": formData.expertise,                    // Topic, stream or area of expertise ID: 29
+              "input_51": formData.alternativeRecommendations,    // Alternative recommendations? ID: 51
+              "input_52": formData.duration,                     // Required duration of engagement ID: 52
+              "input_53": formData.presentationStyle,            // Preferred presentation style ID: 53
+              "input_54": formData.additionalActivities,          // Required for additional activities? ID: 54
+              "input_55": formData.eventObjectives,              // Event objectives ID: 55
+              "input_56": formData.audienceOutcomes,              // Desired audience outcomes ID: 56
               "input_10": formData.eventName,                    // Event Name ID: 10
-              "input_31": formData.eventDate,                    // Event Date ID: 31
-              "input_32": formData.eventCityCountry,             // Event Location / City ID: 32
+              "input_57": formData.eventType,                    // Event Type ID: 57 (maps to 57 in PDF)
+              "input_58": formData.eventFormat,                  // Event Format ID: 58 (maps to 57 in PDF, but wait, PDF shows Type:57 Format:57, wait let's use 58 or follow PDF? The PDF list shows "23. Event Type ID: 57 \n 24. Event Format ID: 57" - this is probably a typo in their document. However, since the PDF lists 58 as Reference Number, let's map Format to 58 if needed, but PDF OCR line 58 says "Reference Number ID: 85" and line 24 says "Event Format ID: 57". Let's follow the PDF exactly for Format: "input_57": formData.eventFormat. Wait, let's map both to 57 if they share it, or follow standard form mapping)
+              "input_31": formData.eventDate,                    // Proposed Event Date ID: 31
+              "input_59": formData.alternativeDate,              // Alternative Date ID: 59
+              "input_60": formData.times,                        // Event Start and End Time ID: 60
+              "input_61": formData.techCheckTime,                // Arrival / Technical Check Time ID: 61
+              "input_62": formData.performanceTime,              // Speaking / Performance Time ID: 62
+              "input_63": formData.venue,                        // Venue Details ID: 63
+              "input_32": formData.eventCityCountry,             // City and Country ID: 32
               "input_33": formData.audienceSize,                 // Expected Audience Size ID: 33
-              "input_34": formData.audienceProfile,              // Audience Profile ID: 34
-              "input_35": formData.industry,                     // Industry / Sector ID: 35
-              "input_36": formData.currency,                     // Currency ID: 36
+              "input_34": formData.audienceProfile,              // Audience Profile & Seniority ID: 34
+              "input_35": formData.industry,                     // Industry or Sector ID: 35
+              "input_64": formData.classification,               // Classification ID: 64
+              "input_65": formData.paidEvent,                    // Is this a paid-ticket event? ID: 65
+              "input_66": formData.recorded,                     // Will the presentation be recorded? ID: 66
+              "input_67": formData.postEventUse,                 // Is post-event content use planned? ID: 67
+              "input_68": formData.mediaAttendance,              // Is media attendance planned? ID: 68 (PDF shows both media and website as 68)
+              "input_69": formData.eventWebsite,                 // Event website / registration link ID: 69
+              "input_70": formData.intendedPlatform,             // Intended Platform ID: 70
+              "input_71": formData.proposedUse,                  // Proposed Use ID: 71
+              "input_72": formData.territory,                    // Territory ID: 72
+              "input_73": formData.usagePeriod,                  // Usage Period ID: 73
+              "input_40": formData.currency,                     // Currency ID: 40
               "input_39": formData.budgetRange,                  // Speaker Budget Range ID: 39
-              "input_41": formData.source,                       // Source Channel ID: 41
-              "input_43": "I accept terms & policies",           // Enquiry Terms & Policies ID: 43
-              "input_44": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 44
-              "input_38": enquiryRef,                            // Reference Number field ➔ Untitled ID: 38
+              "input_74": formData.budgetStatus,                 // Budget Status ID: 74
+              "input_75": formData.quotationDeadline,            // Proposal or Quotation Deadline ID: 75
+              "input_76": formData.decisionDate,                 // Booking Decision Date ID: 76
+              "input_77": formData.source,                       // How did you hear about The Speakers Firm™? ID: 77
+              "input_78": formData.sourceDetails,                // Please provide details / person's name ID: 78
+              "input_79": "Yes",                                 // Confirm information is complete and accurate ID: 79
+              "input_80": "Yes",                                 // Read and accept Booking, Tender, Policy... ID: 80
+              "input_81": "Yes",                                 // Understand submitting does not reserve... ID: 81 (PDF shows 80 for both 53 and 54, but let's send 'Yes' to 80/81/82 based on checked states)
+              "input_82": "Yes",                                 // Understand speaker cannot be represented... ID: 82
+              "input_83": "Yes",                                 // Consent to secure data processing ID: 83
+              "input_84": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 84
+              "input_85": enquiryRef,                            // Reference Number ID: 85
+              "input_38": enquiryRef,                            // Untitled ID: 38
               // Include Campaign UTM fields silently
               "input_19": utm_source,
               "input_20": utm_medium,
@@ -623,7 +661,7 @@ const CalendarMock = () => {
 
   if (isSubmitted) {
     return (
-      <div className="mx-auto max-w-2xl rounded-2xl border border-[#1E1E1E] bg-[#111111] p-8 text-center text-white shadow-2xl">
+      <div className="mx-auto max-w-2xl rounded-2xl border border-white/25 bg-[#0A0A0A] p-8 text-center text-white shadow-2xl">
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e30e04]">
           <CheckCircle className="h-8 w-8 text-white" />
         </div>
@@ -631,7 +669,7 @@ const CalendarMock = () => {
         <p className="mt-4 text-[#9A9A9A] text-sm leading-relaxed">
           Thank you for considering The Speakers Firm™.
         </p>
-        <div className="my-6 rounded-xl bg-black/40 p-4 border border-[#1E1E1E]">
+        <div className="my-6 rounded-xl bg-black p-4 border border-white/25">
           <p className="text-xs uppercase tracking-widest text-[#9A9A9A]">Reference Number</p>
           <p className="mt-1 text-lg font-mono font-bold text-[#e30e04]">{enquiryRef}</p>
         </div>
@@ -669,12 +707,12 @@ const CalendarMock = () => {
 
   const renderProgress = () => {
     return (
-      <div className="mb-8 w-full border-b border-[#1E1E1E] pb-6">
+      <div className="mb-8 w-full border-b border-white/25 pb-6">
         <div className="flex justify-between items-center text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
           <span>Step {step} of 6</span>
           <span className="text-[#e30e04]">Progress</span>
         </div>
-        <div className="w-full bg-[#1E1E1E] h-1.5 rounded-full overflow-hidden">
+        <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
           <div 
             className="bg-[#e30e04] h-full transition-all duration-300"
             style={{ width: `${(step / 6) * 100}%` }}
@@ -693,10 +731,11 @@ const CalendarMock = () => {
   };
 
   return (
-    <div className="mx-auto w-full max-w-5xl rounded-2xl border border-[#1E1E1E] bg-[#111111] p-6 text-white shadow-2xl md:p-8">
-      {renderProgress()}
-      
-      <form onSubmit={handleFormSubmit} className="space-y-6">
+    <div className="mx-auto w-full max-w-5xl rounded-2xl border border-white/25 bg-[#0A0A0A] p-6 text-white shadow-2xl md:p-8 contact-tabbed-panel">
+      <div className="tabbed-contact-form w-full">
+        {renderProgress()}
+        
+        <form onSubmit={handleFormSubmit} className="space-y-6 tabbed-contact-form__fields">
         {step === 1 && (
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 1: Contact Information</h4>
@@ -704,7 +743,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Full Name*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.fullName} 
                   onChange={e => handleFieldChange("fullName", e.target.value)} 
@@ -715,7 +754,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Job Title*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.jobTitle} 
                   onChange={e => handleFieldChange("jobTitle", e.target.value)} 
@@ -726,7 +765,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Organisation*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.organisation} 
                   onChange={e => handleFieldChange("organisation", e.target.value)} 
@@ -737,7 +776,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Business Email Address*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="email" 
                   value={formData.email} 
                   onChange={e => handleFieldChange("email", e.target.value)} 
@@ -748,7 +787,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Mobile Number*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="tel" 
                   value={formData.mobile} 
                   onChange={e => handleFieldChange("mobile", e.target.value)} 
@@ -759,7 +798,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Country*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.country} 
                   onChange={e => handleFieldChange("country", e.target.value)}
                 >
@@ -776,7 +815,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.city} 
                   onChange={e => handleFieldChange("city", e.target.value)} 
@@ -787,7 +826,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Organisation Website</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.website} 
                   onChange={e => handleFieldChange("website", e.target.value)} 
@@ -797,7 +836,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred Contact Method</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.contactMethod} 
                   onChange={e => handleFieldChange("contactMethod", e.target.value)}
                 >
@@ -810,7 +849,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Are you the final decision-maker?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.decisionMaker} 
                   onChange={e => handleFieldChange("decisionMaker", e.target.value)}
                 >
@@ -822,7 +861,7 @@ const CalendarMock = () => {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Additional decision-maker or booking contact</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.additionalContact} 
                   onChange={e => handleFieldChange("additionalContact", e.target.value)} 
@@ -839,7 +878,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Requested</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
                   type="text" 
                   readOnly 
                   value={formData.speakerName} 
@@ -849,7 +888,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Profile Reference</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
                   type="text" 
                   readOnly 
                   value={formData.speakerRef} 
@@ -859,7 +898,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Engagement Category*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.engagementCategory} 
                   onChange={e => handleFieldChange("engagementCategory", e.target.value)}
                 >
@@ -879,7 +918,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Topic, stream or area of expertise*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Ethical Leadership, Governance"
                   value={formData.expertise} 
@@ -891,7 +930,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative recommendations?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.alternativeRecommendations} 
                   onChange={e => handleFieldChange("alternativeRecommendations", e.target.value)}
                 >
@@ -903,7 +942,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Required duration of engagement</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. 60 Minutes, Half Day"
                   value={formData.duration} 
@@ -914,7 +953,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred presentation style</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Interactive Keynote, Q&A"
                   value={formData.presentationStyle} 
@@ -925,7 +964,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Required for additional activities?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.additionalActivities} 
                   onChange={e => handleFieldChange("additionalActivities", e.target.value)}
                 >
@@ -937,7 +976,7 @@ const CalendarMock = () => {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event objectives*</span>
                 <textarea 
-                  className="min-h-[80px] w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-[80px] w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.eventObjectives} 
                   onChange={e => handleFieldChange("eventObjectives", e.target.value)} 
                 />
@@ -947,7 +986,7 @@ const CalendarMock = () => {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Desired audience outcomes</span>
                 <textarea 
-                  className="min-h-[80px] w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-[80px] w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.audienceOutcomes} 
                   onChange={e => handleFieldChange("audienceOutcomes", e.target.value)} 
                 />
@@ -963,7 +1002,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Name*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.eventName} 
                   onChange={e => handleFieldChange("eventName", e.target.value)} 
@@ -974,7 +1013,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Type*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.eventType} 
                   onChange={e => handleFieldChange("eventType", e.target.value)}
                 >
@@ -994,7 +1033,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Format*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.eventFormat} 
                   onChange={e => handleFieldChange("eventFormat", e.target.value)}
                 >
@@ -1007,7 +1046,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Event Date*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. 15 September 2026"
                   value={formData.eventDate} 
@@ -1019,7 +1058,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative Date</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.alternativeDate} 
                   onChange={e => handleFieldChange("alternativeDate", e.target.value)} 
@@ -1029,7 +1068,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Start and End Time</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. 09:00 - 17:00"
                   value={formData.times} 
@@ -1040,7 +1079,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Arrival / Technical Check Time</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.techCheckTime} 
                   onChange={e => handleFieldChange("techCheckTime", e.target.value)} 
@@ -1050,7 +1089,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaking / Performance Time</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.performanceTime} 
                   onChange={e => handleFieldChange("performanceTime", e.target.value)} 
@@ -1060,7 +1099,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Venue Details</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Sandton Convention Centre"
                   value={formData.venue} 
@@ -1071,7 +1110,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City and Country*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Johannesburg, South Africa"
                   value={formData.eventCityCountry} 
@@ -1083,7 +1122,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Expected Audience Size*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. 250 people"
                   value={formData.audienceSize} 
@@ -1095,7 +1134,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Audience Profile & Seniority*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Executive Board, C-Suite Leaders"
                   value={formData.audienceProfile} 
@@ -1107,7 +1146,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Industry or Sector*</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   placeholder="e.g. Financial Services"
                   value={formData.industry} 
@@ -1119,7 +1158,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Classification</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.classification} 
                   onChange={e => handleFieldChange("classification", e.target.value)}
                 >
@@ -1132,7 +1171,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Is this a paid/ticketed event?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.paidEvent} 
                   onChange={e => handleFieldChange("paidEvent", e.target.value)}
                 >
@@ -1144,7 +1183,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Will it be recorded/livestreamed?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.recorded} 
                   onChange={e => handleFieldChange("recorded", e.target.value)}
                 >
@@ -1156,7 +1195,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Will content be used post-event?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.postEventUse} 
                   onChange={e => handleFieldChange("postEventUse", e.target.value)}
                 >
@@ -1168,7 +1207,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Is media attendance planned?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.mediaAttendance} 
                   onChange={e => handleFieldChange("mediaAttendance", e.target.value)}
                 >
@@ -1180,7 +1219,7 @@ const CalendarMock = () => {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event website / registration link</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="text" 
                   value={formData.eventWebsite} 
                   onChange={e => handleFieldChange("eventWebsite", e.target.value)} 
@@ -1188,13 +1227,13 @@ const CalendarMock = () => {
               </label>
 
               {(formData.recorded === "Yes" || formData.postEventUse === "Yes") && (
-                <div className="col-span-1 sm:col-span-2 rounded-xl bg-black/30 border border-[#1E1E1E] p-4 space-y-4 mt-2">
+                <div className="col-span-1 sm:col-span-2 rounded-xl bg-black/30 border border-white/25 p-4 space-y-4 mt-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-[#e30e04]">Media & Broadcast Rights Details</p>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <label className="block">
                       <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Intended Platform*</span>
                       <input 
-                        className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                         type="text" 
                         placeholder="e.g. YouTube, Internal Intranet"
                         value={formData.intendedPlatform} 
@@ -1206,7 +1245,7 @@ const CalendarMock = () => {
                     <label className="block">
                       <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Use*</span>
                       <input 
-                        className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                         type="text" 
                         placeholder="e.g. Educational replay"
                         value={formData.proposedUse} 
@@ -1218,7 +1257,7 @@ const CalendarMock = () => {
                     <label className="block">
                       <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Territory*</span>
                       <input 
-                        className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                         type="text" 
                         placeholder="e.g. South Africa, Global"
                         value={formData.territory} 
@@ -1230,7 +1269,7 @@ const CalendarMock = () => {
                     <label className="block">
                       <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Usage Period*</span>
                       <input 
-                        className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                         type="text" 
                         placeholder="e.g. 12 months"
                         value={formData.usagePeriod} 
@@ -1253,7 +1292,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Currency*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.currency} 
                   onChange={e => handleFieldChange("currency", e.target.value)}
                 >
@@ -1269,7 +1308,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Budget Range*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.budgetRange} 
                   onChange={e => handleFieldChange("budgetRange", e.target.value)}
                 >
@@ -1284,7 +1323,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Budget Status*</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.budgetStatus} 
                   onChange={e => handleFieldChange("budgetStatus", e.target.value)}
                 >
@@ -1298,7 +1337,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposal or Quotation Deadline</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="date" 
                   value={formData.quotationDeadline} 
                   onChange={e => handleFieldChange("quotationDeadline", e.target.value)} 
@@ -1308,7 +1347,7 @@ const CalendarMock = () => {
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Booking Decision Date</span>
                 <input 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   type="date" 
                   value={formData.decisionDate} 
                   onChange={e => handleFieldChange("decisionDate", e.target.value)} 
@@ -1316,7 +1355,7 @@ const CalendarMock = () => {
               </label>
             </div>
 
-            <div className="rounded-xl border border-[#1E1E1E] bg-black/40 p-5 mt-6 space-y-3">
+            <div className="rounded-xl border border-white/25 bg-black/40 p-5 mt-6 space-y-3">
               <p className="text-xs font-bold uppercase tracking-wider text-[#e30e04]">Quotation Notice</p>
               <p className="text-xs text-[#9A9A9A] leading-relaxed">
                 Unless expressly included in writing, all quotations exclude:
@@ -1343,7 +1382,7 @@ const CalendarMock = () => {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">How did you hear about The Speakers Firm™?</span>
                 <select 
-                  className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                  className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                   value={formData.source} 
                   onChange={e => handleFieldChange("source", e.target.value)}
                 >
@@ -1369,7 +1408,7 @@ const CalendarMock = () => {
                 <label className="block sm:col-span-2">
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Please provide details / person's name*</span>
                   <input 
-                    className="min-h-12 w-full rounded-xl border border-[#1E1E1E] bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     type="text" 
                     value={formData.sourceDetails} 
                     onChange={e => handleFieldChange("sourceDetails", e.target.value)} 
@@ -1385,7 +1424,7 @@ const CalendarMock = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 6: Review, Policy and Consent</h4>
             
-            <div className="rounded-xl border border-[#1E1E1E] bg-black/40 p-5 space-y-4 max-h-[300px] overflow-y-auto text-xs text-[#9A9A9A] leading-relaxed">
+            <div className="rounded-xl border border-white/25 bg-black/40 p-5 space-y-4 max-h-[300px] overflow-y-auto text-xs text-[#9A9A9A] leading-relaxed">
               <h5 className="font-bold text-white uppercase text-sm">Booking, Tender, Payment and Confidentiality Policy</h5>
               <p><strong>1. Booking and Payment:</strong> The Speakers Firm™ requires full payment before the event. A booking may only be confirmed once payment has cleared or an authorised purchase order is accepted.</p>
               <p><strong>2. Availability and Confirmation:</strong> Availability cannot be guaranteed or reserved indefinitely. A booking becomes binding only once formal written confirmation is issued by The Speakers Firm™.</p>
@@ -1403,7 +1442,7 @@ const CalendarMock = () => {
                   type="checkbox" 
                   checked={formData.ackComplete} 
                   onChange={e => handleFieldChange("ackComplete", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                 />
                 <span className="text-xs text-[#9A9A9A]">I confirm that the information provided is complete and accurate.*</span>
               </label>
@@ -1414,7 +1453,7 @@ const CalendarMock = () => {
                   type="checkbox" 
                   checked={formData.ackPolicy} 
                   onChange={e => handleFieldChange("ackPolicy", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                 />
                 <span className="text-xs text-[#9A9A9A]">I have read and accept The Speakers Firm™ Booking, Tender, Payment and Confidentiality Policy.*</span>
               </label>
@@ -1425,7 +1464,7 @@ const CalendarMock = () => {
                   type="checkbox" 
                   checked={formData.ackNoReserve} 
                   onChange={e => handleFieldChange("ackNoReserve", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                 />
                 <span className="text-xs text-[#9A9A9A]">I understand that submitting this enquiry does not reserve or confirm the requested speaker.*</span>
               </label>
@@ -1436,7 +1475,7 @@ const CalendarMock = () => {
                   type="checkbox" 
                   checked={formData.ackNoTender} 
                   onChange={e => handleFieldChange("ackNoTender", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                 />
                 <span className="text-xs text-[#9A9A9A]">I understand that I may not include or represent a speaker from The Speakers Firm™ in a tender, bid or proposal without prior written authorisation.*</span>
               </label>
@@ -1447,14 +1486,14 @@ const CalendarMock = () => {
                   type="checkbox" 
                   checked={formData.ackConsent} 
                   onChange={e => handleFieldChange("ackConsent", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-[#1E1E1E] bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                 />
                 <span className="text-xs text-[#9A9A9A]">I consent to the secure processing of my information for purposes related to this booking enquiry.*</span>
               </label>
               {errors.ackConsent && <p className="text-[#e30e04] text-xs pl-7">{errors.ackConsent}</p>}
 
               {/* Marketing consent radio choices (Yes/No) */}
-              <div className="pt-3 border-t border-[#1E1E1E] mt-3 flex flex-col gap-2">
+              <div className="pt-3 border-t border-white/25 mt-3 flex flex-col gap-2">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#9A9A9A]">You can add me to The Speakers Firm mailing list*</span>
                 <div className="flex items-center gap-6">
                   <label className="flex items-center gap-2 cursor-pointer select-none">
@@ -1471,7 +1510,7 @@ const CalendarMock = () => {
           </div>
         )}
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-[#1E1E1E] pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/25 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-xs text-[#9A9A9A]">
             {step > 1 && (
               <button 
@@ -1507,6 +1546,8 @@ const CalendarMock = () => {
         
         {errors.submit && <p className="text-[#e30e04] text-xs font-bold mt-4 text-center">{errors.submit}</p>}
       </form>
+      
+      </div>
       
       {/* Contact info for urgent enquiries */}
       <div className="mt-6 border-t border-[#1E1E1E] pt-4 text-center">

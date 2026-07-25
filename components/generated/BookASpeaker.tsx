@@ -334,24 +334,62 @@ export function BookASpeaker() {
               "input_25": formData.fullName,                    // Full Name ID: 25
               "input_5": formData.jobTitle,                      // Job Title ID: 5
               "input_4": formData.organisation,                  // Organisation ID: 4
-              "input_26": formData.email,                        // Email Address ID: 26
+              "input_26": formData.email,                        // Business Email Address ID: 26
               "input_9": formData.mobile,                        // Mobile Number ID: 9
-              "input_27": `${formData.city}, ${formData.country}`, // City & Country ID: 27
-              "input_28": formData.speakerName,                  // Speaker Requested (Optional) ID: 28
-              "input_29": formData.expertise,                    // Area of Expertise / Topic ID: 29
-              "input_30": formData.eventObjectives,              // Strategic Objectives / Focus ID: 30
+              "input_27": formData.country,                      // Country ID: 27
+              "input_46": formData.city,                         // City ID: 46
+              "input_47": formData.website,                      // Organisation Website ID: 47
+              "input_48": formData.contactMethod,                // Preferred Contact Method ID: 48
+              "input_49": formData.decisionMaker,                // Are you the final decision-maker? ID: 49
+              "input_50": formData.additionalContact,            // Additional decision-maker or booking contact ID: 50
+              "input_28": formData.speakerName,                  // Speaker Requested ID: 28
+              "input_45": formData.speakerRef,                   // Profile Reference ID: 45
+              "input_30": formData.engagementCategory,            // Engagement Category ID: 30
+              "input_29": formData.expertise,                    // Topic, stream or area of expertise ID: 29
+              "input_51": formData.alternativeRecommendations,    // Alternative recommendations? ID: 51
+              "input_52": formData.duration,                     // Required duration of engagement ID: 52
+              "input_53": formData.presentationStyle,            // Preferred presentation style ID: 53
+              "input_54": formData.additionalActivities,          // Required for additional activities? ID: 54
+              "input_55": formData.eventObjectives,              // Event objectives ID: 55
+              "input_56": formData.audienceOutcomes,              // Desired audience outcomes ID: 56
               "input_10": formData.eventName,                    // Event Name ID: 10
-              "input_31": formData.eventDate,                    // Event Date ID: 31
-              "input_32": formData.eventCityCountry,             // Event Location / City ID: 32
+              "input_57": formData.eventType,                    // Event Type ID: 57
+              "input_58": formData.eventFormat,                  // Event Format ID: 58 (following mapping pattern)
+              "input_31": formData.eventDate,                    // Proposed Event Date ID: 31
+              "input_59": formData.alternativeDate,              // Alternative Date ID: 59
+              "input_60": formData.times,                        // Event Start and End Time ID: 60
+              "input_61": formData.techCheckTime,                // Arrival / Technical Check Time ID: 61
+              "input_62": formData.performanceTime,              // Speaking / Performance Time ID: 62
+              "input_63": formData.venue,                        // Venue Details ID: 63
+              "input_32": formData.eventCityCountry,             // City and Country ID: 32
               "input_33": formData.audienceSize,                 // Expected Audience Size ID: 33
-              "input_34": formData.audienceProfile,              // Audience Profile ID: 34 (Note: maps to profile)
-              "input_35": formData.industry,                     // Industry / Sector ID: 35
-              "input_36": formData.currency,                     // Currency ID: 36 (Updated map to avoid collision with 34)
+              "input_34": formData.audienceProfile,              // Audience Profile & Seniority ID: 34
+              "input_35": formData.industry,                     // Industry or Sector ID: 35
+              "input_64": formData.classification,               // Classification ID: 64
+              "input_65": formData.paidEvent,                    // Is this a paid-ticket event? ID: 65
+              "input_66": formData.recorded,                     // Will the presentation be recorded? ID: 66
+              "input_67": formData.postEventUse,                 // Is post-event content use planned? ID: 67
+              "input_68": formData.mediaAttendance,              // Is media attendance planned? ID: 68
+              "input_69": formData.eventWebsite,                 // Event website / registration link ID: 69
+              "input_70": formData.intendedPlatform,             // Intended Platform ID: 70
+              "input_71": formData.proposedUse,                  // Proposed Use ID: 71
+              "input_72": formData.territory,                    // Territory ID: 72
+              "input_73": formData.usagePeriod,                  // Usage Period ID: 73
+              "input_40": formData.currency,                     // Currency ID: 40
               "input_39": formData.budgetRange,                  // Speaker Budget Range ID: 39
-              "input_41": formData.source,                       // Source Channel ID: 41
-              "input_43": "I accept terms & policies",           // Enquiry Terms & Policies ID: 43
-              "input_44": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 44
-              "input_38": "",                                    // Untitled ID: 38
+              "input_74": formData.budgetStatus,                 // Budget Status ID: 74
+              "input_75": formData.quotationDeadline,            // Proposal or Quotation Deadline ID: 75
+              "input_76": formData.decisionDate,                 // Booking Decision Date ID: 76
+              "input_77": formData.source,                       // How did you hear about The Speakers Firm™? ID: 77
+              "input_78": formData.sourceDetails,                // Please provide details / person's name ID: 78
+              "input_79": "Yes",                                 // Confirm information is complete and accurate ID: 79
+              "input_80": "Yes",                                 // Read and accept Booking, Tender, Policy... ID: 80
+              "input_81": "Yes",                                 // Understand submitting does not reserve... ID: 81
+              "input_82": "Yes",                                 // Understand speaker cannot be represented... ID: 82
+              "input_83": "Yes",                                 // Consent to secure data processing ID: 83
+              "input_84": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 84
+              "input_85": enquiryRef,                            // Reference Number ID: 85
+              "input_38": enquiryRef,                            // Untitled ID: 38
               // Include Campaign UTM fields silently
               "input_19": utm_source,
               "input_20": utm_medium,
