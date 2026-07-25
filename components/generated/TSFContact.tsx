@@ -315,7 +315,8 @@ export const TSFContact = () => {
         body: JSON.stringify({
           formId: 2,
           values: {
-            "1": newsletterData.name,
+            "1.3": newsletterData.name.split(' ')[0] || '',
+            "1.6": newsletterData.name.split(' ').slice(1).join(' ') || '',
             "14": newsletterData.email,
             "15": newsletterData.company,
             "16": newsletterData.designation
