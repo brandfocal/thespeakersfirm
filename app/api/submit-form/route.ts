@@ -11,8 +11,8 @@ export async function POST(request: Request) {
     const formattedValues: Record<string, any> = {};
     Object.keys(values).forEach(key => {
       const cleanKey = key.replace(/^input_/, '');
-      // Format to raw numbers or dot notation (e.g. "6.1") as keys
-      formattedValues[cleanKey] = values[key];
+      // Gravity Forms REST API submissions endpoint requires keys in input_x format
+      formattedValues[`input_${cleanKey}`] = values[key];
     });
 
     const payload = {
