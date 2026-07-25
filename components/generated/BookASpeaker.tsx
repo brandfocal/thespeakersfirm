@@ -689,9 +689,9 @@ export function BookASpeaker() {
                           {errors.submit && <p className="text-[#e30e04] text-xs font-bold">{errors.submit}</p>}
 
                           <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300" type="submit">
-                              Submit Booking Enquiry
+                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" disabled={isSubmitting} onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300 disabled:opacity-50" type="submit" disabled={isSubmitting}>
+                              {isSubmitting ? "Submitting..." : "Submit Booking Enquiry"}
                             </button>
                           </div>
                         </motion.fieldset>
