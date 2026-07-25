@@ -498,12 +498,32 @@ export const TSFContact = () => {
             amount: 0.25
           }} variants={reveal} className="newsletter-form flex-1 w-full">
             <p>Receive useful ideas, speaker updates, and invitation-only moments from The Speakers Firm.</p>
-            <form onSubmit={event => event.preventDefault()}>
-              <label className="email-pill">
-                <Mail size={17} aria-hidden="true" />
-                <input type="email" placeholder="Your email address" aria-label="Your email address" required className="bg-transparent border-none outline-none pl-3 text-white" />
-                <button type="submit" className="mt-4 md:mt-0"><span>Subscribe</span><ArrowRight size={15} aria-hidden="true" /></button>
-              </label>
+            <form onSubmit={event => event.preventDefault()} className="mt-6 flex flex-col gap-4">
+              <input type="hidden" name="form_id" value="2" />
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <label className="flex flex-col gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Full Name*</span>
+                  <input type="text" name="input_1" placeholder="First and last name" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                </label>
+                <label className="flex flex-col gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Email Address*</span>
+                  <input type="email" name="input_14" placeholder="Corporate email" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                </label>
+                <label className="flex flex-col gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Company*</span>
+                  <input type="text" name="input_15" placeholder="Company/organisation" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                </label>
+                <label className="flex flex-col gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Designation*</span>
+                  <input type="text" name="input_16" placeholder="Corporate job title" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                </label>
+              </div>
+              <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="mt-2 inline-flex items-center self-start" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
+                <span className="flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#c00b03] transition-colors">
+                  <span>Subscribe</span>
+                  <ArrowRight size={16} />
+                </span>
+              </motion.button>
             </form>
             <small className="block mt-4 text-[#B0ADA8] text-[10px]">By subscribing, you agree to receive updates from The Speakers Firm. Unsubscribe anytime.</small>
           </motion.div>

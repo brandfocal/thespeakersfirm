@@ -430,11 +430,29 @@ export const TSFUpcomingEvents = () => {
           <p className="text-[#686869] text-[16px] leading-relaxed">
             Get the latest conversations, invitations, and ideas from The Speakers Firm, delivered with intention.
           </p>
-          <form onSubmit={e => e.preventDefault()} className="relative flex items-center bg-black/[0.03] rounded-full p-2 border border-black/5">
-            <Mail size={17} className="text-black/30 ml-3" />
-            <input type="email" placeholder="Your email address" className="bg-transparent border-0 outline-none text-xs text-black pl-3 w-full placeholder-black/35 font-bold uppercase tracking-wider" required aria-label="Your email address" />
-            <button type="submit" className="rounded-full bg-[#e30e04] text-white px-6 py-3 text-[11px] font-bold uppercase tracking-wider hover:bg-black transition-colors">
-              Subscribe
+          <form onSubmit={e => e.preventDefault()} className="flex flex-col gap-4">
+            <input type="hidden" name="form_id" value="2" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <label className="flex flex-col gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Full Name*</span>
+                <input type="text" name="input_1" placeholder="First and last name" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
+              </label>
+              <label className="flex flex-col gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Email Address*</span>
+                <input type="email" name="input_14" placeholder="Corporate email" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
+              </label>
+              <label className="flex flex-col gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Company*</span>
+                <input type="text" name="input_15" placeholder="Company/organisation" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
+              </label>
+              <label className="flex flex-col gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-black/50">Designation*</span>
+                <input type="text" name="input_16" placeholder="Corporate job title" required className="border border-black/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-black transition-colors" />
+              </label>
+            </div>
+            <button type="submit" className="mt-2 inline-flex items-center self-start rounded-full bg-[#e30e04] text-white px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-black transition-colors">
+              <span>Subscribe</span>
+              <ArrowRight size={16} className="ml-2" />
             </button>
           </form>
           <small className="text-[10px] text-black/40">By subscribing, you agree to receive updates from The Speakers Firm. Unsubscribe anytime.</small>
