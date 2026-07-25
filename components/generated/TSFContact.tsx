@@ -340,7 +340,7 @@ export const TSFContact = () => {
             "input_24": enquiryData.name,
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
-            "input_6": enquiryData.mailingList,
+            "input_6.1": "Yes", // Map Yes to subfield key option choice
             "input_25": "", // Untitled Field ID: 25
             "input_18": utmParams.utm_source,
             "input_19": utmParams.utm_medium,

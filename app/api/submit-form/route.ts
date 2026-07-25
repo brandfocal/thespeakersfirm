@@ -10,9 +10,9 @@ export async function POST(request: Request) {
 
     const formattedValues: Record<string, any> = {};
     Object.keys(values).forEach(key => {
-      // Ensure each key starts with 'input_'
       const cleanKey = key.replace(/^input_/, '');
-      formattedValues[`input_${cleanKey}`] = values[key];
+      // Format to raw numbers or dot notation (e.g. "6.1") as keys
+      formattedValues[cleanKey] = values[key];
     });
 
     const payload = {
