@@ -11,8 +11,14 @@ export async function POST(request: Request) {
     // Format input keys: Gravity Forms REST API expects direct keys like "1.3", "14", etc.
     const formattedValues: Record<string, any> = {};
     Object.keys(values).forEach(key => {
-      const cleanKey = key.replace(/^input_/, '').replace(/_/g, '.');
-      formattedValues[cleanKey] = values[key];
+      const cleanKey = key.replace(/^input_/, '');
+      // Only replace underscores with dots if it is a composite sub-field (e.g. "1_3" -> "1.3")
+      // Do not convert simple integer IDs like "17" or "14"
+      if (/^\d+_\d+$/.test(cleanKey)) {
+        formattedValues[cleanKey.replace('_', '.')] = values[key];
+      } else {
+        formattedValues[cleanKey] = values[key];
+      }
     });
 
     const payload = {
