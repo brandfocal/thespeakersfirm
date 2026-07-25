@@ -33,9 +33,17 @@ export async function POST(request: Request) {
       body: JSON.stringify(payload)
     });
 
-    const data = await response.json();
-    return NextResponse.json(data, { status: response.status });
+    const contentType = response.headers.get("content-type") || "";
+    if (contentType.includes("application/json")) {
+      const data = await response.json();
+      return NextResponse.json(data, { status: response.status });
+    } else {
+      const text = await response.text();
+      console.error("WordPress did not return JSON. Status:", response.status, "Response:", text.substring(0, 500));
+      return NextResponse.json({ error: "WordPress returned non-JSON payload", details: text.substring(0, 300) }, { status: response.status === 200 ? 500 : response.status });
+    }
   } catch (error: any) {
+    console.error("Error in submit-form API Route:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
