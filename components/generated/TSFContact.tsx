@@ -281,7 +281,7 @@ export const TSFContact = () => {
   const displayedContact = contactTabs.find(tab => tab.id === displayedTab) ?? contactTabs[0];
 
   // Contact Enquiry Form submission states
-  const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', mailingList: 'Yes' });
+  const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', mailingList: '' }); // Set empty default to avoid pre-selection
   const [enquirySubmitting, setEnquirySubmitting] = useState(false);
   const [utmParams, setUtmParams] = useState({
     utm_source: '',
@@ -340,7 +340,8 @@ export const TSFContact = () => {
             "input_24": enquiryData.name,
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
-            "input_6.1": enquiryData.mailingList === 'Yes' ? 'Yes' : '', // Send Yes if checked, empty if not
+            "input_6.1": enquiryData.mailingList === 'Yes' ? 'Yes' : '', 
+            "input_6.2": enquiryData.mailingList === 'No' ? 'No' : '', 
             "input_25": "", // Untitled Field ID: 25
             "input_18": utmParams.utm_source,
             "input_19": utmParams.utm_medium,
@@ -486,12 +487,19 @@ export const TSFContact = () => {
                 })}
               </div>
               
-              {/* Mailing List Opt-in Checkbox Option */}
-              <div className="mt-4">
-                <label className="flex items-center gap-3 cursor-pointer select-none">
-                  <input type="checkbox" checked={enquiryData.mailingList === 'Yes'} onChange={e => setEnquiryData(prev => ({ ...prev, mailingList: e.target.checked ? 'Yes' : 'No' }))} className="h-4 w-4 rounded border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04] focus:ring-offset-black" />
-                  <span className="text-xs text-white/70">You can add me to The Speakers Firm mailing list</span>
-                </label>
+              {/* Mailing List Opt-in Radio Options */}
+              <div className="mt-5 flex flex-col gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">You can add me to The Speakers Firm mailing list*</span>
+                <div className="flex items-center gap-6 mt-1">
+                  <label className="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="radio" required name="mailingList" value="Yes" checked={enquiryData.mailingList === 'Yes'} onChange={() => setEnquiryData(prev => ({ ...prev, mailingList: 'Yes' }))} className="h-4 w-4 border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04]" />
+                    <span className="text-sm text-white/70">Yes</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="radio" required name="mailingList" value="No" checked={enquiryData.mailingList === 'No'} onChange={() => setEnquiryData(prev => ({ ...prev, mailingList: 'No' }))} className="h-4 w-4 border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04]" />
+                    <span className="text-sm text-white/70">No</span>
+                  </label>
+                </div>
               </div>
               {activeSubmitted ? (
                 <p role="status" className="contact-redesign__status tabbed-contact-form__status mt-6">
