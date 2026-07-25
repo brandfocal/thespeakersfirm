@@ -300,6 +300,40 @@ export const TSFContact = () => {
     }, 110);
   };
 
+  // Newsletter Gravity Form submission state
+  const [newsletterData, setNewsletterData] = useState({ name: '', email: '', company: '', designation: '' });
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNewsletterSubmitting(true);
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formId: 2,
+          values: {
+            "1": newsletterData.name,
+            "14": newsletterData.email,
+            "15": newsletterData.company,
+            "16": newsletterData.designation
+          }
+        })
+      });
+      if (response.ok) {
+        setNewsletterSubmitted(true);
+      } else {
+        console.error("Failed to register newsletter subscriber");
+      }
+    } catch (err) {
+      console.error("Newsletter submission error", err);
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
+
   return <main className="tsf-page font-[Kontora,sans-serif] selection:bg-[#e30e04] selection:text-white bg-[#212121] text-[#F8F7F5]">
       
       {/* Redesigned Hero complying with standard design limits */}
@@ -498,33 +532,39 @@ export const TSFContact = () => {
             amount: 0.25
           }} variants={reveal} className="newsletter-form flex-1 w-full">
             <p>Receive useful ideas, speaker updates, and invitation-only moments from The Speakers Firm.</p>
-            <form onSubmit={event => event.preventDefault()} className="mt-6 flex flex-col gap-4">
-              <input type="hidden" name="form_id" value="2" />
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Full Name*</span>
-                  <input type="text" name="input_1" placeholder="First and last name" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
-                </label>
-                <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Email Address*</span>
-                  <input type="email" name="input_14" placeholder="Corporate email" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
-                </label>
-                <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Company*</span>
-                  <input type="text" name="input_15" placeholder="Company/organisation" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
-                </label>
-                <label className="flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Designation*</span>
-                  <input type="text" name="input_16" placeholder="Corporate job title" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
-                </label>
+            {newsletterSubmitted ? (
+              <div className="rounded-2xl border border-white/[0.08] bg-[#2C2C2C]/30 p-6 text-center text-white">
+                <p className="font-serif text-[20px] italic">Thank you for subscribing. You have been added to our network.</p>
               </div>
-              <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="mt-2 inline-flex items-center self-start" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
-                <span className="flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#c00b03] transition-colors">
-                  <span>Subscribe</span>
-                  <ArrowRight size={16} />
-                </span>
-              </motion.button>
-            </form>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="mt-6 flex flex-col gap-4">
+                <input type="hidden" name="form_id" value="2" />
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <label className="flex flex-col gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Full Name*</span>
+                    <input type="text" name="input_1" value={newsletterData.name} onChange={e => setNewsletterData(prev => ({ ...prev, name: e.target.value }))} placeholder="First and last name" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                  </label>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Email Address*</span>
+                    <input type="email" name="input_14" value={newsletterData.email} onChange={e => setNewsletterData(prev => ({ ...prev, email: e.target.value }))} placeholder="Corporate email" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                  </label>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Company*</span>
+                    <input type="text" name="input_15" value={newsletterData.company} onChange={e => setNewsletterData(prev => ({ ...prev, company: e.target.value }))} placeholder="Company/organisation" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                  </label>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Designation*</span>
+                    <input type="text" name="input_16" value={newsletterData.designation} onChange={e => setNewsletterData(prev => ({ ...prev, designation: e.target.value }))} placeholder="Corporate job title" required className="border border-white/20 px-4 py-3 rounded-full text-sm bg-transparent outline-none focus:border-[#e30e04] text-white transition-colors" />
+                  </label>
+                </div>
+                <motion.button type="submit" disabled={newsletterSubmitting} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="mt-2 inline-flex items-center self-start" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
+                  <span className="flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#c00b03] transition-colors disabled:opacity-50">
+                    <span>{newsletterSubmitting ? "Subscribing..." : "Subscribe"}</span>
+                    <ArrowRight size={16} />
+                  </span>
+                </motion.button>
+              </form>
+            )}
             <small className="block mt-4 text-[#B0ADA8] text-[10px]">By subscribing, you agree to receive updates from The Speakers Firm. Unsubscribe anytime.</small>
           </motion.div>
         </div>
