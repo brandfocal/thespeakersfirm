@@ -283,6 +283,29 @@ export const TSFContact = () => {
   // Contact Enquiry Form submission states
   const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', mailingList: 'Yes' });
   const [enquirySubmitting, setEnquirySubmitting] = useState(false);
+  const [utmParams, setUtmParams] = useState({
+    utm_source: '',
+    utm_medium: '',
+    utm_campaign: '',
+    utm_term: '',
+    utm_content: '',
+    gclid: ''
+  });
+
+  // Automatically parse UTM parameters from search URL on component mount
+  useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setUtmParams({
+        utm_source: params.get('utm_source') || '',
+        utm_medium: params.get('utm_medium') || '',
+        utm_campaign: params.get('utm_campaign') || '',
+        utm_term: params.get('utm_term') || '',
+        utm_content: params.get('utm_content') || '',
+        gclid: params.get('gclid') || ''
+      });
+    }
+  });
 
   const handleTabChange = (tabId: string) => {
     if (tabId === activeTab) {
@@ -318,7 +341,13 @@ export const TSFContact = () => {
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
             "input_6": enquiryData.mailingList,
-            "input_25": "" // Untitled Field ID: 25
+            "input_25": "", // Untitled Field ID: 25
+            "input_18": utmParams.utm_source,
+            "input_19": utmParams.utm_medium,
+            "input_20": utmParams.utm_campaign,
+            "input_21": utmParams.utm_term,
+            "input_22": utmParams.utm_content,
+            "input_23": utmParams.gclid
           }
         })
       });
