@@ -1265,7 +1265,16 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
             </div>
           </div>
           
-          {errors.submit && <p className="text-[#e30e04] text-xs font-bold mt-4 text-center">{errors.submit}</p>}
+          {Object.keys(errors).length > 0 && (
+            <div className="mt-6 rounded-xl border border-[#e30e04]/30 bg-[#e30e04]/10 p-4">
+              <p className="text-sm font-bold text-[#e30e04] mb-2">Please correct the following errors:</p>
+              <ul className="list-disc pl-5 space-y-1 text-xs text-[#e30e04]">
+                {Object.entries(errors).map(([key, msg]) => (
+                  <li key={key}>{msg}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </form>
       </div>
     </div>
