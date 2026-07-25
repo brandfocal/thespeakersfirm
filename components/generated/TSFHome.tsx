@@ -2565,10 +2565,16 @@ const BriefBureauFormSection = () => {
     setStep(prev => Math.max(1, prev - 1));
   };
 
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (validateStep(3)) {
-      setIsSubmitted(true);
+      setIsSubmitting(true);
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+      }, 1200);
     }
   };
 
@@ -2726,8 +2732,8 @@ const BriefBureauFormSection = () => {
                         </div>
                         <div className="mt-4 flex justify-between">
                           <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                          <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300" type="submit">
-                            <span>Request Talent Recommendations</span>
+                          <button disabled={isSubmitting} className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300 disabled:opacity-50" type="submit">
+                            <span>{isSubmitting ? "Requesting..." : "Request Talent Recommendations"}</span>
                           </button>
                         </div>
                       </motion.fieldset>
