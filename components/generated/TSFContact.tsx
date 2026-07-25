@@ -340,8 +340,7 @@ export const TSFContact = () => {
             "input_24": enquiryData.name,
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
-            "input_6.1": enquiryData.mailingList === 'Yes' ? 'Yes' : '', 
-            "input_6.2": enquiryData.mailingList === 'No' ? 'No' : '', 
+            "input_6": enquiryData.mailingList,
             "input_25": "", // Untitled Field ID: 25
             "input_18": utmParams.utm_source,
             "input_19": utmParams.utm_medium,
