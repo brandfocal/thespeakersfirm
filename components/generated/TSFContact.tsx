@@ -340,7 +340,7 @@ export const TSFContact = () => {
             "input_24": enquiryData.name,
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
-            "input_6.1": "Yes", // Map Yes to subfield key option choice
+            "input_6.1": enquiryData.mailingList === 'Yes' ? 'Yes' : '', // Send Yes if checked, empty if not
             "input_25": "", // Untitled Field ID: 25
             "input_18": utmParams.utm_source,
             "input_19": utmParams.utm_medium,
@@ -484,6 +484,14 @@ export const TSFContact = () => {
                     </label>
                   );
                 })}
+              </div>
+              
+              {/* Mailing List Opt-in Checkbox Option */}
+              <div className="mt-4">
+                <label className="flex items-center gap-3 cursor-pointer select-none">
+                  <input type="checkbox" checked={enquiryData.mailingList === 'Yes'} onChange={e => setEnquiryData(prev => ({ ...prev, mailingList: e.target.checked ? 'Yes' : 'No' }))} className="h-4 w-4 rounded border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04] focus:ring-offset-black" />
+                  <span className="text-xs text-white/70">You can add me to The Speakers Firm mailing list</span>
+                </label>
               </div>
               {activeSubmitted ? (
                 <p role="status" className="contact-redesign__status tabbed-contact-form__status mt-6">
