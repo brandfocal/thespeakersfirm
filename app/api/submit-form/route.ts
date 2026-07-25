@@ -8,8 +8,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "formId is required" }, { status: 400 });
     }
 
+    // Format input keys: Gravity Forms REST API expects direct keys like "1.3", "14", etc.
+    const formattedValues: Record<string, any> = {};
+    Object.keys(values).forEach(key => {
+      const cleanKey = key.replace(/^input_/, '').replace(/_/g, '.');
+      formattedValues[cleanKey] = values[key];
+    });
+
     const payload = {
-      input_values: values
+      input_values: formattedValues
     };
 
     const username = process.env.GF_CONSUMER_KEY || '';
