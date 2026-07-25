@@ -281,7 +281,7 @@ export const TSFContact = () => {
   const displayedContact = contactTabs.find(tab => tab.id === displayedTab) ?? contactTabs[0];
 
   // Contact Enquiry Form submission states
-  const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', mailingList: '' }); // Set empty default to avoid pre-selection
+  const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', outlet: '', deadline: '', organisation: '', timeline: '', mailingList: '' }); // Set empty default to avoid pre-selection
   const [enquirySubmitting, setEnquirySubmitting] = useState(false);
   const [utmParams, setUtmParams] = useState({
     utm_source: '',
@@ -331,23 +331,53 @@ export const TSFContact = () => {
     e.preventDefault();
     setEnquirySubmitting(true);
     try {
+      let formId = 3;
+      let payloadValues: Record<string, string> = {};
+
+      if (activeTab === 'media') {
+        formId = 5; // Media Requests form ID
+        payloadValues = {
+          "input_1": enquiryData.name,         // Full Name ID: 1
+          "input_3": enquiryData.email,        // Email ID: 3
+          "input_4": enquiryData.outlet,       // Publication / Outlet ID: 4
+          "input_5": enquiryData.deadline,     // Deadline ID: 5
+          "input_6": enquiryData.message,      // Request Details ID: 6
+          // Include Campaign UTM fields silently
+          "input_18": utmParams.utm_source,
+          "input_19": utmParams.utm_medium,
+          "input_20": utmParams.utm_campaign,
+          "input_21": utmParams.utm_term,
+          "input_22": utmParams.utm_content,
+          "input_23": utmParams.gclid
+        };
+      } else {
+        // Partnerships / General tabs fall back to Form ID: 3 (Website Enquiry Form)
+        let messageContent = enquiryData.message;
+        if (activeTab === 'partnerships') {
+          messageContent = `Organisation: ${enquiryData.organisation}\nTimeline: ${enquiryData.timeline}\n\nPartnership Ambition:\n${enquiryData.message}`;
+        }
+
+        payloadValues = {
+          "input_24": enquiryData.name,        // Full Name ID: 24
+          "input_14": enquiryData.email,       // Email ID: 14
+          "input_17": messageContent,          // Message ID: 17
+          "input_25": "",                      // Untitled ID: 25
+          // Include Campaign UTM fields silently
+          "input_18": utmParams.utm_source,
+          "input_19": utmParams.utm_medium,
+          "input_20": utmParams.utm_campaign,
+          "input_21": utmParams.utm_term,
+          "input_22": utmParams.utm_content,
+          "input_23": utmParams.gclid
+        };
+      }
+
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          formId: 3,
-          values: {
-            "input_24": enquiryData.name,
-            "input_14": enquiryData.email,
-            "input_17": enquiryData.message,
-            "input_25": "", // Untitled Field ID: 25
-            "input_18": utmParams.utm_source,
-            "input_19": utmParams.utm_medium,
-            "input_20": utmParams.utm_campaign,
-            "input_21": utmParams.utm_term,
-            "input_22": utmParams.utm_content,
-            "input_23": utmParams.gclid
-          }
+          formId,
+          values: payloadValues
         })
       });
       if (response.ok) {
