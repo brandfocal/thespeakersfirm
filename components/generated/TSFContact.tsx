@@ -350,17 +350,28 @@ export const TSFContact = () => {
           "input_22": utmParams.utm_content,
           "input_23": utmParams.gclid
         };
+      } else if (activeTab === 'partnerships') {
+        formId = 6; // Strategic Partnerships form ID
+        payloadValues = {
+          "input_1": enquiryData.name,         // Full Name ID: 1
+          "input_3": enquiryData.email,        // Email ID: 3
+          "input_4": enquiryData.organisation, // Organisation ID: 4
+          "input_7": enquiryData.timeline,     // Timeline ID: 7
+          "input_6": enquiryData.message,      // Partnership Ambition ID: 6
+          // Include Campaign UTM fields silently
+          "input_18": utmParams.utm_source,
+          "input_19": utmParams.utm_medium,
+          "input_20": utmParams.utm_campaign,
+          "input_21": utmParams.utm_term,
+          "input_22": utmParams.utm_content,
+          "input_23": utmParams.gclid
+        };
       } else {
-        // Partnerships / General tabs fall back to Form ID: 3 (Website Enquiry Form)
-        let messageContent = enquiryData.message;
-        if (activeTab === 'partnerships') {
-          messageContent = `Organisation: ${enquiryData.organisation}\nTimeline: ${enquiryData.timeline}\n\nPartnership Ambition:\n${enquiryData.message}`;
-        }
-
+        // General tab falls back to Form ID: 3 (Website Enquiry Form)
         payloadValues = {
           "input_24": enquiryData.name,        // Full Name ID: 24
           "input_14": enquiryData.email,       // Email ID: 14
-          "input_17": messageContent,          // Message ID: 17
+          "input_17": enquiryData.message,     // Message ID: 17
           "input_25": "",                      // Untitled ID: 25
           // Include Campaign UTM fields silently
           "input_18": utmParams.utm_source,
