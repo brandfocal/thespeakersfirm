@@ -340,7 +340,6 @@ export const TSFContact = () => {
             "input_24": enquiryData.name,
             "input_14": enquiryData.email,
             "input_17": enquiryData.message,
-            "input_6": enquiryData.mailingList,
             "input_25": "", // Untitled Field ID: 25
             "input_18": utmParams.utm_source,
             "input_19": utmParams.utm_medium,
@@ -486,20 +485,7 @@ export const TSFContact = () => {
                 })}
               </div>
               
-              {/* Mailing List Opt-in Radio Options */}
-              <div className="mt-5 flex flex-col gap-2">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">You can add me to The Speakers Firm mailing list*</span>
-                <div className="flex items-center gap-6 mt-1">
-                  <label className="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="radio" required name="mailingList" value="Yes" checked={enquiryData.mailingList === 'Yes'} onChange={() => setEnquiryData(prev => ({ ...prev, mailingList: 'Yes' }))} className="h-4 w-4 border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04]" />
-                    <span className="text-sm text-white/70">Yes</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="radio" required name="mailingList" value="No" checked={enquiryData.mailingList === 'No'} onChange={() => setEnquiryData(prev => ({ ...prev, mailingList: 'No' }))} className="h-4 w-4 border-white/20 bg-transparent text-[#e30e04] focus:ring-[#e30e04]" />
-                    <span className="text-sm text-white/70">No</span>
-                  </label>
-                </div>
-              </div>
+
               {activeSubmitted ? (
                 <p role="status" className="contact-redesign__status tabbed-contact-form__status mt-6">
                   <span>Message received. A The Speakers Firm consultant will contact you within one business day.</span>
