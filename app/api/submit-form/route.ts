@@ -13,8 +13,7 @@ export async function POST(request: Request) {
     const formattedValues: Record<string, any> = {};
     Object.keys(values).forEach(key => {
       const cleanKey = key.replace(/^input_/, '');
-      // Gravity Forms REST API submissions endpoint requires keys in input_x format
-      formattedValues[`input_${cleanKey}`] = values[key];
+      formattedValues[cleanKey] = values[key];
     });
 
     const payload = {
@@ -25,7 +24,6 @@ export async function POST(request: Request) {
     const password = process.env.GF_CONSUMER_SECRET || '';
     
     if (!username || !password) {
-      // Fallback/log warning if environment variables are not configured yet
       console.warn("Gravity Forms REST API keys are not configured. Submissions will fail.");
     }
 
@@ -33,15 +31,20 @@ export async function POST(request: Request) {
     const gfApiUrl = process.env.GF_API_URL || 'https://yourdomain.com/wp-json/gf/v2';
     const gfUrl = `${gfApiUrl}/forms/${formId}/submissions`;
 
-    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(formattedValues));
+    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(payload));
+
+    const userAgent = request.headers.get('user-agent') || '';
+    const forwardIp = request.headers.get('x-forwarded-for') || '';
 
     const response = await fetch(gfUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': authHeader
+        'Authorization': authHeader,
+        'User-Agent': userAgent,
+        ...(forwardIp ? { 'X-Forwarded-For': forwardIp } : {})
       },
-      body: JSON.stringify(formattedValues)
+      body: JSON.stringify(payload)
     });
 
     const contentType = response.headers.get("content-type") || "";
