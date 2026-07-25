@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
+  // Allow unauthorized/self-signed SSL certificates when connecting to WordPress
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   try {
     const { formId, values } = await request.json();
     
@@ -31,7 +33,7 @@ export async function POST(request: Request) {
     const gfApiUrl = process.env.GF_API_URL || 'https://yourdomain.com/wp-json/gf/v2';
     const gfUrl = `${gfApiUrl}/forms/${formId}/submissions`;
 
-    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(payload));
+    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(formattedValues));
 
     const response = await fetch(gfUrl, {
       method: 'POST',
@@ -39,7 +41,7 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
         'Authorization': authHeader
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(formattedValues)
     });
 
     const contentType = response.headers.get("content-type") || "";
