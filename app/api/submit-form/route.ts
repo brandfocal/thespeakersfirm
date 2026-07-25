@@ -25,8 +25,6 @@ export async function POST(request: Request) {
       input_values: formattedValues
     };
 
-    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(payload));
-
     const username = process.env.GF_CONSUMER_KEY || '';
     const password = process.env.GF_CONSUMER_SECRET || '';
     
@@ -38,6 +36,8 @@ export async function POST(request: Request) {
     const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
     const gfApiUrl = process.env.GF_API_URL || 'https://yourdomain.com/wp-json/gf/v2';
     const gfUrl = `${gfApiUrl}/forms/${formId}/submissions`;
+
+    console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(payload));
 
     const response = await fetch(gfUrl, {
       method: 'POST',
