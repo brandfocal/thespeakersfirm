@@ -34,6 +34,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Accent Color Customizations for Radio and Checkbox Inputs */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #e30e04;
+}
+
 /* Institutional Minimalist Base Utilities */
 .line-grid {
   background-size: 40px 40px;
