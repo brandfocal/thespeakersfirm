@@ -313,7 +313,47 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
         } else {
           const errData = await response.json().catch(() => ({}));
           console.error("Failed to submit speaker booking form", response.status, errData);
-          setErrors({ submit: "There was a validation issue submitting your booking. Please review your fields." });
+          
+          const newErrors: Record<string, string> = {
+            submit: "There was a validation issue submitting your booking. Please review your fields."
+          };
+          
+          if (errData && errData.validation_messages) {
+            // Map validation messages back to matching frontend field names
+            const valMsgs = errData.validation_messages;
+            if (valMsgs["25"]) newErrors.fullName = valMsgs["25"];
+            if (valMsgs["5"]) newErrors.jobTitle = valMsgs["5"];
+            if (valMsgs["4"]) newErrors.organisation = valMsgs["4"];
+            if (valMsgs["26"]) newErrors.email = valMsgs["26"];
+            if (valMsgs["9"]) newErrors.mobile = valMsgs["9"];
+            if (valMsgs["27"]) newErrors.country = valMsgs["27"];
+            if (valMsgs["46"]) newErrors.city = valMsgs["46"];
+            if (valMsgs["29"]) newErrors.expertise = valMsgs["29"];
+            if (valMsgs["55"]) newErrors.eventObjectives = valMsgs["55"];
+            if (valMsgs["10"]) newErrors.eventName = valMsgs["10"];
+            if (valMsgs["31"]) newErrors.eventDate = valMsgs["31"];
+            if (valMsgs["32"]) newErrors.eventCityCountry = valMsgs["32"];
+            if (valMsgs["33"]) newErrors.audienceSize = valMsgs["33"];
+            if (valMsgs["34"]) newErrors.audienceProfile = valMsgs["34"];
+            if (valMsgs["35"]) newErrors.industry = valMsgs["35"];
+            if (valMsgs["39"]) newErrors.budgetRange = valMsgs["39"];
+            if (valMsgs["78"]) newErrors.sourceDetails = valMsgs["78"];
+            
+            // If errors are on earlier steps, automatically take user back to that step
+            if (valMsgs["25"] || valMsgs["5"] || valMsgs["4"] || valMsgs["26"] || valMsgs["9"] || valMsgs["27"] || valMsgs["46"]) {
+              setStep(1);
+            } else if (valMsgs["29"] || valMsgs["55"]) {
+              setStep(2);
+            } else if (valMsgs["10"] || valMsgs["31"] || valMsgs["32"] || valMsgs["33"] || valMsgs["34"] || valMsgs["35"]) {
+              setStep(3);
+            } else if (valMsgs["39"]) {
+              setStep(4);
+            } else if (valMsgs["78"]) {
+              setStep(5);
+            }
+          }
+          
+          setErrors(newErrors);
         }
       } catch (err) {
         console.error("Booking form submit error", err);
