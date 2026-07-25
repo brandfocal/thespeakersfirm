@@ -325,7 +325,8 @@ export const TSFContact = () => {
       if (response.ok) {
         setNewsletterSubmitted(true);
       } else {
-        console.error("Failed to register newsletter subscriber");
+        const errData = await response.json().catch(() => ({}));
+        console.error("Failed to register newsletter subscriber", response.status, errData);
       }
     } catch (err) {
       console.error("Newsletter submission error", err);
