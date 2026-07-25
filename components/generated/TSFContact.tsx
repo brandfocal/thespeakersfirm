@@ -315,11 +315,11 @@ export const TSFContact = () => {
         body: JSON.stringify({
           formId: 2,
           values: {
-            "1.3": newsletterData.firstName,
-            "1.6": newsletterData.lastName,
-            "14": newsletterData.email,
-            "15": newsletterData.company,
-            "16": newsletterData.designation
+            "input_1_3": newsletterData.firstName,
+            "input_1_6": newsletterData.lastName,
+            "input_14": newsletterData.email,
+            "input_15": newsletterData.company,
+            "input_16": newsletterData.designation
           }
         })
       });
