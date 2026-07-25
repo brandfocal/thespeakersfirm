@@ -280,6 +280,10 @@ export const TSFContact = () => {
   const activeContact = contactTabs.find(tab => tab.id === activeTab) ?? contactTabs[0];
   const displayedContact = contactTabs.find(tab => tab.id === displayedTab) ?? contactTabs[0];
 
+  // Contact Enquiry Form submission states
+  const [enquiryData, setEnquiryData] = useState({ name: '', email: '', message: '', mailingList: 'Yes' });
+  const [enquirySubmitting, setEnquirySubmitting] = useState(false);
+
   const handleTabChange = (tabId: string) => {
     if (tabId === activeTab) {
       return;
@@ -298,6 +302,37 @@ export const TSFContact = () => {
         tabTransitionTimeout.current = null;
       }, 180);
     }, 110);
+  };
+
+  const handleEnquirySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setEnquirySubmitting(true);
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formId: 3,
+          values: {
+            "input_24": enquiryData.name,
+            "input_14": enquiryData.email,
+            "input_17": enquiryData.message,
+            "input_6": enquiryData.mailingList,
+            "input_25": "" // Untitled Field ID: 25
+          }
+        })
+      });
+      if (response.ok) {
+        setActiveSubmitted(true);
+      } else {
+        const errData = await response.json().catch(() => ({}));
+        console.error("Failed to submit enquiry form", response.status, errData);
+      }
+    } catch (err) {
+      console.error("Enquiry form submission error", err);
+    } finally {
+      setEnquirySubmitting(false);
+    }
   };
 
   // Newsletter Gravity Form submission state
@@ -390,34 +425,44 @@ export const TSFContact = () => {
           amount: 0.2
         }} variants={reveal} className="featured-card contact-featured__card max-w-[1440px] mx-auto z-10 relative">
           <div className="featured-photo contact-tabbed-panel">
-            <form key={displayedContact.id} className={`tabbed-contact-form tabbed-contact-form--${tabTransition}`} aria-label={`${displayedContact.label} form`} onSubmit={event => {
-              event.preventDefault();
-              setActiveSubmitted(true);
-            }}>
+            <form key={displayedContact.id} className={`tabbed-contact-form tabbed-contact-form--${tabTransition}`} aria-label={`${displayedContact.label} form`} onSubmit={handleEnquirySubmit}>
               <div className="contact-form-heading tabbed-contact-form__heading">
                 <span className="text-[10px] font-extrabold tracking-[0.16em] text-[#e30e04] block mb-2">{displayedContact.kicker.toUpperCase()}</span>
                 <p className="text-[clamp(1.35rem,2.4vw,2.2rem)] font-black uppercase leading-[0.96] tracking-[-0.055em] text-[#F8F7F5]">{displayedContact.title}</p>
               </div>
               <p className="tabbed-contact-form__intro text-white/70 text-sm leading-6 mb-6">{displayedContact.description}</p>
               <div className="contact-form__fields contact-form__fields--refined tabbed-contact-form__fields">
-                {displayedContact.fields.map(field => (
-                  <label key={field.id} className={field.wide ? 'contact-line-field contact-line-field--wide' : 'contact-line-field'}>
-                    <span className="contact-line-field__label">{field.label}</span>
-                    {field.type === 'textarea' ? (
-                      <textarea required name={field.name} rows={field.rows ?? 5} placeholder={field.placeholder} />
-                    ) : (
-                      <input required name={field.name} type={field.type} autoComplete={field.autoComplete} placeholder={field.placeholder} />
-                    )}
-                  </label>
-                ))}
+                {displayedContact.fields.map(field => {
+                  const getFieldValue = () => {
+                    return (enquiryData as any)[field.name] || '';
+                  };
+
+                  const handleValueChange = (val: string) => {
+                    setEnquiryData(prev => ({
+                      ...prev,
+                      [field.name]: val
+                    }));
+                  };
+
+                  return (
+                    <label key={field.id} className={field.wide ? 'contact-line-field contact-line-field--wide' : 'contact-line-field'}>
+                      <span className="contact-line-field__label">{field.label}</span>
+                      {field.type === 'textarea' ? (
+                        <textarea required name={field.name} rows={field.rows ?? 5} value={getFieldValue()} onChange={e => handleValueChange(e.target.value)} placeholder={field.placeholder} />
+                      ) : (
+                        <input required name={field.name} type={field.type} autoComplete={field.autoComplete} value={getFieldValue()} onChange={e => handleValueChange(e.target.value)} placeholder={field.placeholder} />
+                      )}
+                    </label>
+                  );
+                })}
               </div>
               {activeSubmitted ? (
                 <p role="status" className="contact-redesign__status tabbed-contact-form__status mt-6">
                   <span>Message received. A The Speakers Firm consultant will contact you within one business day.</span>
                 </p>
               ) : (
-                <button type="submit" className="red-button contact-redesign__submit tabbed-contact-form__submit mt-6">
-                  <span>Submit {displayedContact.label}</span>
+                <button type="submit" disabled={enquirySubmitting} className="red-button contact-redesign__submit tabbed-contact-form__submit mt-6 disabled:opacity-50">
+                  <span>{enquirySubmitting ? "Submitting..." : `Submit ${displayedContact.label}`}</span>
                   <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
                 </button>
               )}
