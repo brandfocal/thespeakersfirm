@@ -1181,7 +1181,8 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 <button 
                   type="button" 
                   onClick={prevStep}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#9A9A9A] px-6 text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] transition-colors hover:border-white hover:text-white sm:text-xs"
+                  disabled={isSubmitting}
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#9A9A9A] px-6 text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] transition-colors hover:border-white hover:text-white sm:text-xs disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Back
                 </button>
@@ -1193,7 +1194,8 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 <button 
                   type="button" 
                   onClick={nextStep}
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs"
+                  disabled={isSubmitting}
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Next Step
                 </button>
@@ -1201,7 +1203,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e30e04] px-7 text-[10px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c00c03] sm:w-auto sm:text-xs disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Booking Enquiry"}
                 </button>
