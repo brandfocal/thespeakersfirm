@@ -1,13 +1,13 @@
 "use client";
 
 import * as React from 'react';
-import { useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowRight, Check, ChevronDown, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { SpeakerBookingForm } from './SpeakerBookingForm';
 
 const COLORS = {
   black: '#000000',
@@ -18,20 +18,6 @@ const COLORS = {
   darkGray: '#000000',
   offWhite: '#ffffff'
 };
-
-const stats = [{
-  id: 'turnaround',
-  value: '24 HRS',
-  label: 'Average curation turnaround'
-}, {
-  id: 'tracks',
-  value: '20+',
-  label: 'Strategic speaker tracks'
-}, {
-  id: 'confidentiality',
-  value: '100%',
-  label: 'Institutional confidentiality'
-}];
 
 const revealTransition = {
   duration: 0.8,
@@ -107,315 +93,20 @@ const Reveal = ({
 
 export function BookASpeaker() {
   const searchParams = useSearchParams();
-  const [step, setStep] = useState(1);
-  const [enquiryRef] = useState(() => `TSF-ENQ-${Math.floor(100000 + Math.random() * 900000)}`);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const [formData, setFormData] = useState({
-    // Step 1
-    fullName: "",
-    jobTitle: "",
-    organisation: "",
-    email: "",
-    mobile: "",
-    country: "South Africa",
-    city: "",
-    website: "",
-    contactMethod: "Email",
-    decisionMaker: "Yes",
-    additionalContact: "",
-    
-    // Step 2
-    speakerName: "",
-    speakerRef: "",
-    engagementCategory: "Keynote speaker",
-    expertise: "",
-    alternativeRecommendations: "Yes",
-    eventObjectives: "",
-    audienceOutcomes: "",
-    presentationStyle: "",
-    duration: "",
-    additionalActivities: "No",
-    
-    // Step 3
-    eventName: "",
-    eventType: "Conference",
-    eventFormat: "In-person",
-    eventDate: "",
-    alternativeDate: "",
-    times: "",
-    techCheckTime: "",
-    performanceTime: "",
-    venue: "",
-    eventCityCountry: "",
-    audienceSize: "",
-    audienceProfile: "",
-    industry: "",
-    classification: "Private",
-    paidEvent: "No",
-    recorded: "No",
-    postEventUse: "No",
-    mediaAttendance: "No",
-    eventWebsite: "",
-    intendedPlatform: "",
-    proposedUse: "",
-    territory: "",
-    usagePeriod: "",
-    
-    // Step 4
-    budgetRange: "",
-    currency: "ZAR",
-    budgetStatus: "Approved",
-    quotationDeadline: "",
-    decisionDate: "",
-    
-    // Step 5
-    source: "Google or another search engine",
-    sourceDetails: "",
-    
-    // Step 6
-    ackComplete: false,
-    ackPolicy: false,
-    ackNoReserve: false,
-    ackNoTender: false,
-    ackConsent: false,
-    marketingConsent: false
-  });
+  const [speakerInfo, setSpeakerInfo] = React.useState({ name: "", ref: "" });
 
   React.useEffect(() => {
     const querySpeaker = searchParams.get("speaker");
     if (querySpeaker) {
-      setFormData(prev => ({
-        ...prev,
-        speakerName: decodeURIComponent(querySpeaker),
-        speakerRef: `TSF-${decodeURIComponent(querySpeaker).substring(0,3).toUpperCase()}-${Math.floor(10 + Math.random() * 90)}`
-      }));
+      const decodedName = decodeURIComponent(querySpeaker);
+      setSpeakerInfo({
+        name: decodedName,
+        ref: `TSF-${decodedName.substring(0, 3).toUpperCase()}-${Math.floor(10 + Math.random() * 90)}`
+      });
+    } else {
+      setSpeakerInfo({ name: "", ref: "" });
     }
   }, [searchParams]);
-
-  React.useEffect(() => {
-    let matchedCurrency = "USD";
-    if (formData.country === "South Africa") matchedCurrency = "ZAR";
-    else if (formData.country === "United Kingdom") matchedCurrency = "GBP";
-    else if (formData.country === "Europe") matchedCurrency = "EUR";
-    else if (formData.country === "Kenya") matchedCurrency = "KES";
-    else if (formData.country === "Nigeria") matchedCurrency = "NGN";
-    
-    setFormData(prev => ({ ...prev, currency: matchedCurrency }));
-  }, [formData.country]);
-
-  const getBudgetRanges = () => {
-    switch (formData.currency) {
-      case "ZAR":
-        return ["R50,000 - R100,000", "R100,000 - R150,000", "R150,000 - R200,000", "R200,000+"];
-      case "GBP":
-        return ["£3,000 - £6,000", "£6,000 - £10,000", "£10,000 - £15,000", "£15,000+"];
-      case "EUR":
-        return ["€4,000 - €8,000", "€8,000 - €12,000", "€12,000 - €16,000", "€16,000+"];
-      case "KES":
-        return ["KSh 500,000 - KSh 1,000,000", "KSh 1,000,000+"];
-      case "NGN":
-        return ["₦5,000,000 - ₦10,000,000", "₦10,000,000+"];
-      default:
-        return ["$5,000 - $10,000", "$10,000 - $15,000", "$15,000 - $20,000", "$20,000+"];
-    }
-  };
-
-  const handleFieldChange = (field: string, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors(prev => {
-        const next = { ...prev };
-        delete next[field];
-        return next;
-      });
-    }
-  };
-
-  const validateStep = (currentStep: number): boolean => {
-    const newErrors: Record<string, string> = {};
-    
-    if (currentStep === 1) {
-      if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
-      if (!formData.jobTitle.trim()) newErrors.jobTitle = "Job title is required";
-      if (!formData.organisation.trim()) newErrors.organisation = "Organisation is required";
-      if (!formData.email.trim()) newErrors.email = "Email address is required";
-      if (!formData.mobile.trim()) newErrors.mobile = "Mobile number is required";
-      if (!formData.country.trim()) newErrors.country = "Country is required";
-      if (!formData.city.trim()) newErrors.city = "City is required";
-    }
-    
-    if (currentStep === 2) {
-      if (!formData.expertise.trim()) newErrors.expertise = "Topic or area of expertise is required";
-      if (!formData.eventObjectives.trim()) newErrors.eventObjectives = "Event objectives are required";
-    }
-    
-    if (currentStep === 3) {
-      if (!formData.eventName.trim()) newErrors.eventName = "Event name is required";
-      if (!formData.eventCityCountry.trim()) newErrors.eventCityCountry = "Event city & country are required";
-      if (!formData.eventDate.trim()) newErrors.eventDate = "Proposed date is required";
-      if (!formData.audienceSize.trim()) newErrors.audienceSize = "Expected audience size is required";
-      if (!formData.audienceProfile.trim()) newErrors.audienceProfile = "Audience profile is required";
-      if (!formData.industry.trim()) newErrors.industry = "Industry/sector is required";
-      
-      const requiresMediaConsent = formData.recorded === "Yes" || formData.postEventUse === "Yes";
-      if (requiresMediaConsent) {
-        if (!formData.intendedPlatform.trim()) newErrors.intendedPlatform = "Intended platform is required";
-        if (!formData.proposedUse.trim()) newErrors.proposedUse = "Proposed use is required";
-        if (!formData.territory.trim()) newErrors.territory = "Territory is required";
-        if (!formData.usagePeriod.trim()) newErrors.usagePeriod = "Usage period is required";
-      }
-    }
-    
-    if (currentStep === 4) {
-      if (!formData.budgetRange.trim()) newErrors.budgetRange = "Budget range is required";
-    }
-    
-    if (currentStep === 5) {
-      const needsDetails = ["Referral or recommendation", "Speaker or talent referral", "Other"].includes(formData.source);
-      if (needsDetails && !formData.sourceDetails.trim()) {
-        newErrors.sourceDetails = "Please specify source details";
-      }
-    }
-    
-    if (currentStep === 6) {
-      if (!formData.ackComplete) newErrors.ackComplete = "Please confirm accurate details";
-      if (!formData.ackPolicy) newErrors.ackPolicy = "Please accept policy terms";
-      if (!formData.ackNoReserve) newErrors.ackNoReserve = "Please acknowledge booking terms";
-      if (!formData.ackNoTender) newErrors.ackNoTender = "Please acknowledge tender restrictions";
-      if (!formData.ackConsent) newErrors.ackConsent = "Please consent to data processing";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const nextStep = () => {
-    if (validateStep(step)) {
-      setStep(prev => prev + 1);
-    }
-  };
-
-  const prevStep = () => {
-    setStep(prev => Math.max(1, prev - 1));
-  };
-
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateStep(6)) {
-      setIsSubmitting(true);
-      try {
-        // Parse UTM parameters from URL search string
-        let utm_source = "";
-        let utm_medium = "";
-        let utm_campaign = "";
-        let utm_term = "";
-        let utm_content = "";
-        let gclid = "";
-
-        if (typeof window !== 'undefined') {
-          const params = new URLSearchParams(window.location.search);
-          utm_source = params.get('utm_source') || "";
-          utm_medium = params.get('utm_medium') || "";
-          utm_campaign = params.get('utm_campaign') || "";
-          utm_term = params.get('utm_term') || "";
-          utm_content = params.get('utm_content') || "";
-          gclid = params.get('gclid') || "";
-        }
-
-        const response = await fetch('/api/submit-form', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            formId: 1, // Book A Speaker Form ID: 1
-            values: {
-              "input_25": formData.fullName,                    // Full Name ID: 25
-              "input_5": formData.jobTitle,                      // Job Title ID: 5
-              "input_4": formData.organisation,                  // Organisation ID: 4
-              "input_26": formData.email,                        // Business Email Address ID: 26
-              "input_9": formData.mobile,                        // Mobile Number ID: 9
-              "input_27": formData.country,                      // Country ID: 27
-              "input_46": formData.city,                         // City ID: 46
-              "input_47": formData.website,                      // Organisation Website ID: 47
-              "input_48": formData.contactMethod,                // Preferred Contact Method ID: 48
-              "input_49": formData.decisionMaker,                // Are you the final decision-maker? ID: 49
-              "input_50": formData.additionalContact,            // Additional decision-maker or booking contact ID: 50
-              "input_28": formData.speakerName,                  // Speaker Requested ID: 28
-              "input_45": formData.speakerRef,                   // Profile Reference ID: 45
-              "input_30": formData.engagementCategory,            // Engagement Category ID: 30
-              "input_29": formData.expertise,                    // Topic, stream or area of expertise ID: 29
-              "input_51": formData.alternativeRecommendations,    // Alternative recommendations? ID: 51
-              "input_52": formData.duration,                     // Required duration of engagement ID: 52
-              "input_53": formData.presentationStyle,            // Preferred presentation style ID: 53
-              "input_54": formData.additionalActivities,          // Required for additional activities? ID: 54
-              "input_55": formData.eventObjectives,              // Event objectives ID: 55
-              "input_56": formData.audienceOutcomes,              // Desired audience outcomes ID: 56
-              "input_10": formData.eventName,                    // Event Name ID: 10
-              "input_57": formData.eventType,                    // Event Type ID: 57
-              "input_58": formData.eventFormat,                  // Event Format ID: 58 (following mapping pattern)
-              "input_31": formData.eventDate,                    // Proposed Event Date ID: 31
-              "input_59": formData.alternativeDate,              // Alternative Date ID: 59
-              "input_60": formData.times,                        // Event Start and End Time ID: 60
-              "input_61": formData.techCheckTime,                // Arrival / Technical Check Time ID: 61
-              "input_62": formData.performanceTime,              // Speaking / Performance Time ID: 62
-              "input_63": formData.venue,                        // Venue Details ID: 63
-              "input_32": formData.eventCityCountry,             // City and Country ID: 32
-              "input_33": formData.audienceSize,                 // Expected Audience Size ID: 33
-              "input_34": formData.audienceProfile,              // Audience Profile & Seniority ID: 34
-              "input_35": formData.industry,                     // Industry or Sector ID: 35
-              "input_64": formData.classification,               // Classification ID: 64
-              "input_65": formData.paidEvent,                    // Is this a paid-ticket event? ID: 65
-              "input_66": formData.recorded,                     // Will the presentation be recorded? ID: 66
-              "input_67": formData.postEventUse,                 // Is post-event content use planned? ID: 67
-              "input_68": formData.mediaAttendance,              // Is media attendance planned? ID: 68
-              "input_69": formData.eventWebsite,                 // Event website / registration link ID: 69
-              "input_70": formData.intendedPlatform,             // Intended Platform ID: 70
-              "input_71": formData.proposedUse,                  // Proposed Use ID: 71
-              "input_72": formData.territory,                    // Territory ID: 72
-              "input_73": formData.usagePeriod,                  // Usage Period ID: 73
-              "input_40": formData.currency,                     // Currency ID: 40
-              "input_39": formData.budgetRange,                  // Speaker Budget Range ID: 39
-              "input_74": formData.budgetStatus,                 // Budget Status ID: 74
-              "input_75": formData.quotationDeadline,            // Proposal or Quotation Deadline ID: 75
-              "input_76": formData.decisionDate,                 // Booking Decision Date ID: 76
-              "input_77": formData.source,                       // How did you hear about The Speakers Firm™? ID: 77
-              "input_78": formData.sourceDetails,                // Please provide details / person's name ID: 78
-              "input_79": "Yes",                                 // Confirm information is complete and accurate ID: 79
-              "input_80": "Yes",                                 // Read and accept Booking, Tender, Policy... ID: 80
-              "input_81": "Yes",                                 // Understand submitting does not reserve... ID: 81
-              "input_82": "Yes",                                 // Understand speaker cannot be represented... ID: 82
-              "input_83": "Yes",                                 // Consent to secure data processing ID: 83
-              "input_84": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 84
-              "input_85": enquiryRef,                            // Reference Number ID: 85
-              "input_38": enquiryRef,                            // Untitled ID: 38
-              // Include Campaign UTM fields silently
-              "input_19": utm_source,
-              "input_20": utm_medium,
-              "input_21": utm_campaign,
-              "input_22": utm_term,
-              "input_23": utm_content,
-              "input_24": gclid
-            }
-          })
-        });
-
-        if (response.ok) {
-          setIsSubmitted(true);
-        } else {
-          const errData = await response.json().catch(() => ({}));
-          console.error("Failed to submit speaker booking form", response.status, errData);
-          setErrors({ submit: "There was a validation issue submitting your booking. Please review your fields." });
-        }
-      } catch (err) {
-        console.error("Booking form submit error", err);
-        setErrors({ submit: "A network error occurred. Please try again." });
-      } finally {
-        setIsSubmitting(false);
-      }
-    }
-  };
 
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000] flex flex-col justify-between">
       <Header />
@@ -459,7 +150,7 @@ export function BookASpeaker() {
             </div>
           </div>
         </section>
-
+ 
         <section id="brief" className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.offWhite }}>
           <VerticalBorderLines isDark={false} />
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
@@ -482,7 +173,7 @@ export function BookASpeaker() {
                     "The Speakers Firm saved our team valuable time, reduced booking risk and ensured that every commercial, contractual, and logistical detail was professionally managed. Their value extends far beyond securing talent. Partner with them for confidence from the first brief to the final applause."
                   </p>
                 </div>
-
+ 
                 <div className="mt-8 rounded-2xl bg-gray-50 border border-black/10 p-5 space-y-3">
                   <p className="text-[10px] font-bold uppercase tracking-wider text-[#e30e04]">VALUE PROPOSITION</p>
                   <p className="text-sm font-bold text-black leading-snug">
@@ -490,258 +181,14 @@ export function BookASpeaker() {
                   </p>
                 </div>
               </div>
-
+ 
               <div>
-                {isSubmitted ? (
-                  <div className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-center">
-                    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e30e04]">
-                      <CheckCircle className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold uppercase text-black">Enquiry Submitted</h3>
-                    <p className="mt-4 text-[#686869] text-sm leading-relaxed">
-                      Thank you for briefing The Speakers Firm™. Reference: <strong className="text-black">{enquiryRef}</strong>
-                    </p>
-                    <button onClick={() => { setStep(1); setIsSubmitted(false); }} className="mt-8 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300">
-                      Submit Another
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleFormSubmit} className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-black">
-                    <AnimatePresence mode="wait">
-                      {step === 1 && (
-                        <motion.fieldset key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 1: Contact Information</h3>
-                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Full Name*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
-                              {errors.fullName && <p className="text-[#e30e04] text-xs">{errors.fullName}</p>}
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Job Title*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Organisation*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Email Address*</span>
-                              <input required type="email" className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Mobile Number*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">City & Country*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
-                            </label>
-                          </div>
-                          <div className="mt-4 flex justify-end">
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
-                              <span>Next Step</span>
-                              <ArrowRight size={14} />
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-
-                      {step === 2 && (
-                        <motion.fieldset key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 2: Speaker requirements</h3>
-                          <div className="grid grid-cols-1 gap-6">
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Speaker Requested (Optional)</span>
-                              <input className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.speakerName} onChange={e => handleFieldChange("speakerName", e.target.value)} placeholder="Leave blank for strategic matching" />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Area of Expertise / Topic*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. Ethical Mentorship, Cyber Security" />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Strategic Objectives / Focus*</span>
-                              <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[100px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What must this event achieve?" />
-                            </label>
-                          </div>
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
-                              <span>Next Step</span>
-                              <ArrowRight size={14} />
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-
-                      {step === 3 && (
-                        <motion.fieldset key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 3: Event Information</h3>
-                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Name*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventName} onChange={e => handleFieldChange("eventName", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Date*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 October 2026" />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Event Location / City*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventCityCountry} onChange={e => handleFieldChange("eventCityCountry", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Expected Audience Size*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)} />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Audience Profile*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceProfile} onChange={e => handleFieldChange("audienceProfile", e.target.value)} placeholder="e.g. Executive C-Suite" />
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Industry / Sector*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.industry} onChange={e => handleFieldChange("industry", e.target.value)} />
-                            </label>
-                          </div>
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
-                              <span>Next Step</span>
-                              <ArrowRight size={14} />
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-
-                      {step === 4 && (
-                        <motion.fieldset key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 4: Budget range</h3>
-                          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Currency*</span>
-                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.currency} onChange={e => handleFieldChange("currency", e.target.value)}>
-                                <option value="ZAR">ZAR (R)</option>
-                                <option value="USD">USD ($)</option>
-                                <option value="GBP">GBP (£)</option>
-                                <option value="EUR">EUR (€)</option>
-                              </select>
-                            </label>
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Speaker Budget Range*</span>
-                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.budgetRange} onChange={e => handleFieldChange("budgetRange", e.target.value)}>
-                                <option value="" disabled>Select range...</option>
-                                {getBudgetRanges().map((range) => (
-                                  <option key={range} value={range}>{range}</option>
-                                ))}
-                              </select>
-                            </label>
-                          </div>
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
-                              <span>Next Step</span>
-                              <ArrowRight size={14} />
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-
-                      {step === 5 && (
-                        <motion.fieldset key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 5: How did you hear about us?</h3>
-                          <div className="grid grid-cols-1 gap-6">
-                            <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Source Channel*</span>
-                              <select className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.source} onChange={e => handleFieldChange("source", e.target.value)}>
-                                <option value="Google or another search engine">Google or another search engine</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Referral or recommendation">Referral or recommendation</option>
-                                <option value="Other">Other</option>
-                              </select>
-                            </label>
-                            {["Referral or recommendation", "Other"].includes(formData.source) && (
-                              <label className="flex flex-col gap-2">
-                                <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Provide details*</span>
-                                <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.sourceDetails} onChange={e => handleFieldChange("sourceDetails", e.target.value)} />
-                              </label>
-                            )}
-                          </div>
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
-                              <span>Next Step</span>
-                              <ArrowRight size={14} />
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-
-                      {step === 6 && (
-                        <motion.fieldset key="step6" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-sm font-bold uppercase tracking-wider text-black border-b pb-3">Step 6: Review &amp; Policies</h3>
-                          
-                          <div className="rounded-xl border border-black/10 bg-gray-50 p-4 space-y-3 max-h-[160px] overflow-y-auto text-xs text-[#686869]">
-                            <h5 className="font-bold text-black uppercase">Enquiry Terms &amp; Policies</h5>
-                            <p><strong>1. Payments:</strong> Clearance of booking fee is required prior to event delivery.</p>
-                            <p><strong>2. Availability:</strong> Placements remain non-reserved until full written contract executions.</p>
-                          </div>
-
-                          <div className="space-y-3">
-                            <label className="flex items-start gap-3 cursor-pointer">
-                              <input type="checkbox" checked={formData.ackComplete} onChange={e => handleFieldChange("ackComplete", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
-                              <span className="text-xs text-[#686869]">I confirm that all details provided in this enquiry are accurate.*</span>
-                            </label>
-                            <label className="flex items-start gap-3 cursor-pointer">
-                              <input type="checkbox" checked={formData.ackPolicy} onChange={e => handleFieldChange("ackPolicy", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
-                              <span className="text-xs text-[#686869]">I accept booking and confidentiality policy.*</span>
-                            </label>
-                            <label className="flex items-start gap-3 cursor-pointer">
-                              <input type="checkbox" checked={formData.ackNoReserve} onChange={e => handleFieldChange("ackNoReserve", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
-                              <span className="text-xs text-[#686869]">I understand submitting does not reserve the speaker.*</span>
-                            </label>
-                            <label className="flex items-start gap-3 cursor-pointer">
-                              <input type="checkbox" checked={formData.ackNoTender} onChange={e => handleFieldChange("ackNoTender", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
-                              <span className="text-xs text-[#686869]">I represent that I will not name speakers in tenders without consent.*</span>
-                            </label>
-                            <label className="flex items-start gap-3 cursor-pointer">
-                              <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
-                              <span className="text-xs text-[#686869]">I consent to secure processing of my data.*</span>
-                            </label>
-
-                            {/* Marketing consent radio choices (Yes/No) */}
-                            <div className="pt-2 border-t border-black/5 flex flex-col gap-2">
-                              <span className="text-[10px] font-bold uppercase tracking-wider text-[#686869]">You can add me to The Speakers Firm mailing list*</span>
-                              <div className="flex items-center gap-6">
-                                <label className="flex items-center gap-2 cursor-pointer select-none">
-                                  <input type="radio" required name="marketingConsent" checked={formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", true)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
-                                  <span className="text-xs text-[#686869]">Yes</span>
-                                </label>
-                                <label className="flex items-center gap-2 cursor-pointer select-none">
-                                  <input type="radio" required name="marketingConsent" checked={!formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", false)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
-                                  <span className="text-xs text-[#686869]">No</span>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {errors.submit && <p className="text-[#e30e04] text-xs font-bold">{errors.submit}</p>}
-
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" disabled={isSubmitting} onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300 disabled:opacity-50" type="submit" disabled={isSubmitting}>
-                              {isSubmitting ? "Submitting..." : "Submit Booking Enquiry"}
-                            </button>
-                          </div>
-                        </motion.fieldset>
-                      )}
-                    </AnimatePresence>
-                  </form>
-                )}
+                <SpeakerBookingForm speakerName={speakerInfo.name} speakerRef={speakerInfo.ref} />
               </div>
             </div>
           </div>
         </section>
-
+ 
         <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16 border-t border-black/10" style={{ backgroundColor: COLORS.offWhite }}>
           <VerticalBorderLines isDark={false} />
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -767,7 +214,7 @@ export function BookASpeaker() {
           </div>
         </section>
       </div>
-
+ 
       <Footer />
     </main>;
 }
