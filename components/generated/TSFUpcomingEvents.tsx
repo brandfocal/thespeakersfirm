@@ -203,10 +203,10 @@ export const TSFUpcomingEvents = () => {
         body: JSON.stringify({
           formId: 2,
           values: {
-            "input_17": newsletterData.name,
-            "input_14": newsletterData.email,
-            "input_15": newsletterData.company,
-            "input_16": newsletterData.designation
+            "17": newsletterData.name,
+            "14": newsletterData.email,
+            "15": newsletterData.company,
+            "16": newsletterData.designation
           }
         })
       });
