@@ -302,14 +302,80 @@ export function BookASpeaker() {
     setStep(prev => Math.max(1, prev - 1));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateStep(6)) {
       setIsSubmitting(true);
-      setTimeout(() => {
+      try {
+        // Parse UTM parameters from URL search string
+        let utm_source = "";
+        let utm_medium = "";
+        let utm_campaign = "";
+        let utm_term = "";
+        let utm_content = "";
+        let gclid = "";
+
+        if (typeof window !== 'undefined') {
+          const params = new URLSearchParams(window.location.search);
+          utm_source = params.get('utm_source') || "";
+          utm_medium = params.get('utm_medium') || "";
+          utm_campaign = params.get('utm_campaign') || "";
+          utm_term = params.get('utm_term') || "";
+          utm_content = params.get('utm_content') || "";
+          gclid = params.get('gclid') || "";
+        }
+
+        const response = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            formId: 1, // Book A Speaker Form ID: 1
+            values: {
+              "input_25": formData.fullName,                    // Full Name ID: 25
+              "input_5": formData.jobTitle,                      // Job Title ID: 5
+              "input_4": formData.organisation,                  // Organisation ID: 4
+              "input_26": formData.email,                        // Email Address ID: 26
+              "input_9": formData.mobile,                        // Mobile Number ID: 9
+              "input_27": `${formData.city}, ${formData.country}`, // City & Country ID: 27
+              "input_28": formData.speakerName,                  // Speaker Requested (Optional) ID: 28
+              "input_29": formData.expertise,                    // Area of Expertise / Topic ID: 29
+              "input_30": formData.eventObjectives,              // Strategic Objectives / Focus ID: 30
+              "input_10": formData.eventName,                    // Event Name ID: 10
+              "input_31": formData.eventDate,                    // Event Date ID: 31
+              "input_32": formData.eventCityCountry,             // Event Location / City ID: 32
+              "input_33": formData.audienceSize,                 // Expected Audience Size ID: 33
+              "input_34": formData.audienceProfile,              // Audience Profile ID: 34 (Note: maps to profile)
+              "input_35": formData.industry,                     // Industry / Sector ID: 35
+              "input_36": formData.currency,                     // Currency ID: 36 (Updated map to avoid collision with 34)
+              "input_39": formData.budgetRange,                  // Speaker Budget Range ID: 39
+              "input_41": formData.source,                       // Source Channel ID: 41
+              "input_43": "I accept terms & policies",           // Enquiry Terms & Policies ID: 43
+              "input_44": formData.marketingConsent ? "Yes" : "No", // You can add me to mailing list ID: 44
+              "input_38": "",                                    // Untitled ID: 38
+              // Include Campaign UTM fields silently
+              "input_19": utm_source,
+              "input_20": utm_medium,
+              "input_21": utm_campaign,
+              "input_22": utm_term,
+              "input_23": utm_content,
+              "input_24": gclid
+            }
+          })
+        });
+
+        if (response.ok) {
+          setIsSubmitted(true);
+        } else {
+          const errData = await response.json().catch(() => ({}));
+          console.error("Failed to submit speaker booking form", response.status, errData);
+          setErrors({ submit: "There was a validation issue submitting your booking. Please review your fields." });
+        }
+      } catch (err) {
+        console.error("Booking form submit error", err);
+        setErrors({ submit: "A network error occurred. Please try again." });
+      } finally {
         setIsSubmitting(false);
-        setIsSubmitted(true);
-      }, 1200);
+      }
     }
   };
 
@@ -603,7 +669,24 @@ export function BookASpeaker() {
                               <input type="checkbox" checked={formData.ackConsent} onChange={e => handleFieldChange("ackConsent", e.target.checked)} className="mt-1 h-4 w-4 rounded border-gray-300 text-[#e30e04] focus:ring-[#e30e04]" />
                               <span className="text-xs text-[#686869]">I consent to secure processing of my data.*</span>
                             </label>
+
+                            {/* Marketing consent radio choices (Yes/No) */}
+                            <div className="pt-2 border-t border-black/5 flex flex-col gap-2">
+                              <span className="text-[10px] font-bold uppercase tracking-wider text-[#686869]">You can add me to The Speakers Firm mailing list*</span>
+                              <div className="flex items-center gap-6">
+                                <label className="flex items-center gap-2 cursor-pointer select-none">
+                                  <input type="radio" required name="marketingConsent" checked={formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", true)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
+                                  <span className="text-xs text-[#686869]">Yes</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer select-none">
+                                  <input type="radio" required name="marketingConsent" checked={!formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", false)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
+                                  <span className="text-xs text-[#686869]">No</span>
+                                </label>
+                              </div>
+                            </div>
                           </div>
+                          
+                          {errors.submit && <p className="text-[#e30e04] text-xs font-bold">{errors.submit}</p>}
 
                           <div className="mt-4 flex justify-between">
                             <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
