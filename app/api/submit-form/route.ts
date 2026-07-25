@@ -8,8 +8,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "formId is required" }, { status: 400 });
     }
 
+    const formattedValues: Record<string, any> = {};
+    Object.keys(values).forEach(key => {
+      // Ensure each key starts with 'input_'
+      const cleanKey = key.replace(/^input_/, '');
+      formattedValues[`input_${cleanKey}`] = values[key];
+    });
+
     const payload = {
-      input_values: values
+      input_values: formattedValues
     };
 
     const username = process.env.GF_CONSUMER_KEY || '';
