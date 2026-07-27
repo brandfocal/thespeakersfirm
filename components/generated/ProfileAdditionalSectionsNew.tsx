@@ -285,15 +285,15 @@ const ENGAGEMENT_FORMATS: EngagementFormat[] = [{
 const VIDEO_CLIPS: VideoClip[] = [{
   id: "clip-safm-1",
   label: "SAfm Dialogue Clip 1",
-  youtubeId: "piHV2khD7bU"
+  youtubeId: "2s5CXK-w0AQ"
 }, {
   id: "clip-safm-2",
   label: "SAfm Dialogue Clip 2",
-  youtubeId: "e-3sWa61V0w"
+  youtubeId: "qp0HIF3SfI4"
 }, {
   id: "clip-coming-cold",
   label: "‘Coming in From the Cold’ Launch",
-  youtubeId: "O6_1XH3MMcE"
+  youtubeId: "qp0HIF3SfI4"
 }, {
   id: "clip-lift-rise",
   label: "Lift As You Rise Keynote",
@@ -538,11 +538,11 @@ export const ProfileAdditionalSections = () => {
             {/* Main Video Player formatted in the identical card grid style */}
             <article className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors">
               <div 
-                onClick={() => setActiveVideoId("AltporzbBBQ")}
+                onClick={() => setActiveVideoId("2s5CXK-w0AQ")}
                 className="relative aspect-video w-full flex items-center justify-center overflow-hidden"
               >
                 <img 
-                  src="https://img.youtube.com/vi/AltporzbBBQ/hqdefault.jpg"
+                  src="https://img.youtube.com/vi/2s5CXK-w0AQ/hqdefault.jpg"
                   alt="Prof. Bonang Mohale experience reel"
                   className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
                 />

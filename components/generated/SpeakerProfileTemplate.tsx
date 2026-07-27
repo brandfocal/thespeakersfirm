@@ -212,9 +212,9 @@ export const SpeakerProfileTemplate = ({
                     <CalendarDays className="h-5 w-5" aria-hidden="true" />
                     <span>Book an Engagement Call</span>
                   </button>
-                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-white/30 bg-transparent px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-white hover:text-black sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("biography")} aria-label="Explore His Work">
+                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-white/30 bg-transparent px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-white hover:text-black sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("biography")} aria-label="Explore Profile">
                     <ChevronDown className="h-5 w-5" aria-hidden="true" />
-                    <span>Explore His Work</span>
+                    <span>Explore Profile</span>
                   </button>
                 </motion.div>
               </div>

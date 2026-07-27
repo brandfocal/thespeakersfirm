@@ -72,6 +72,7 @@ export const AboutTeamSection = () => {
         speakerRole="Former Deputy President of South Africa & United Nations Under-Secretary-General."
         speakerRef="TSF-PMN-02"
         heroBackgroundImage="/hero_backgrounds/dr-phumzile-mlambo-ngcuka2.jpg"
+        biographyImage="/speakers/Phumzile-Mlambo-Ngcuka/finals/Dr.-Phumzile-Mlambo-Ngcuka-9.jpg"
         bioHook="“Equity is not a favor; it is a fundamental human right and a structural economic necessity.”"
         fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
         credentials={CREDENTIAL_BADGES}

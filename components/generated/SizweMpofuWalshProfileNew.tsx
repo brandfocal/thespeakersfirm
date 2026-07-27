@@ -77,7 +77,7 @@ export const AboutTeamSection = () => {
       speakerRole="International Relations scholar, founder of SMWX, and bestselling political author."
       speakerRef="TSF-SMW-04"
       heroBackgroundImage="/speakers/Sizwe Mpofu-Walsh/New folder/sizwe-mpofu-walsh-4.jpg"
-      biographyImage="/speakers/Sizwe Mpofu-Walsh/New folder/Sizwe-Mpofu-Walsh-The-Speakers-Firm9.jpg"
+      biographyImage="/speakers/Sizwe Mpofu-Walsh/New folder/Sizwe-Mpofu-Walsh-The-Speakers-Firm7.jpg"
       bioHook="“Deconstructing political delusions and building frameworks for a new generation of leaders.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
