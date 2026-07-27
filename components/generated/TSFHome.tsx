@@ -134,6 +134,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   topics: string[];
   tint: string;
   bio: React.ReactNode;
+  trackId?: string;
 }> = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
@@ -166,7 +167,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Global Moderator, Conversation Architect & Broadcast Journalist</span>
+  bio: <span>Global Moderator, Conversation Architect & Broadcast Journalist</span>,
+  trackId: 'mcs'
 }, {
   id: 'prince-mashele',
   name: 'Prince Mashele',
@@ -177,7 +179,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Political Analyst, Columnist & Public Intellectual</span>
+  bio: <span>Political Analyst, Columnist & Public Intellectual</span>,
+  trackId: 'geopolitics'
 }, {
   id: 'clement-manyathela',
   name: 'Clement Manyathela',
@@ -188,7 +191,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'iG9CE55wbtY',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Public-Dialogue Facilitator</span>
+  bio: <span>Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Public-Dialogue Facilitator</span>,
+  trackId: 'mcs'
 }, {
   id: 'sizwe-mpofu-walsh',
   name: 'Dr. Sizwe Mpofu-Walsh',
@@ -199,7 +203,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.25)',
-  bio: <span>Lecturer in the Department of International Relations at Wits University, Podcaster, Author, Musician and Activist</span>
+  bio: <span>Lecturer in the Department of International Relations at Wits University, Podcaster, Author, Musician and Activist</span>,
+  trackId: 'future-of-work'
 }, {
   id: 'khaya-sithole',
   name: 'Khaya Sithole',
