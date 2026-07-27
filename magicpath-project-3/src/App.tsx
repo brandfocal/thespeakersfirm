@@ -1,20 +1,13 @@
-import { Theme } from './settings/types';
-import { WhyChooseUs } from './components/generated/WhyChooseUs';
-
-let theme: Theme = 'light';
+import { TSFContact } from './components/generated/TSFContact';
 
 function App() {
-  function setTheme(theme: Theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }
+  document.documentElement.classList.remove('dark');
 
-  setTheme(theme);
-
-  return <WhyChooseUs />;
+  return (
+    <div className="w-full h-full">
+      <TSFContact />
+    </div>
+  );
 }
 
 export default App;

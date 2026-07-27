@@ -27,3 +27,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Photoshop files
+*.psd
+
+# Magicpath clones
+magicpath-project-*/

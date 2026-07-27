@@ -1,5 +1,5 @@
 import { Theme } from './settings/types';
-import { AboutTeamSection } from "./components/generated/AboutTeamSection";
+import { TSFKeynoteCategory } from './components/generated/TSFKeynoteCategory';
 
 let theme: Theme = 'light';
 
@@ -14,11 +14,7 @@ function App() {
 
   setTheme(theme);
 
-  return (
-    <div className="w-full min-h-screen bg-[#FFFFFF] font-['Kontora',sans-serif]">
-      <AboutTeamSection />
-    </div>
-  );
+  return <TSFKeynoteCategory />;
 }
 
 export default App;

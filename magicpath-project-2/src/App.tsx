@@ -1,5 +1,6 @@
 import { Theme } from './settings/types';
-import { TheSpeakersFirmHome } from './components/generated/TSFHome';
+import { SpeakerCategoriesPage } from './components/generated/SpeakerCategoriesPage';
+// %IMPORT_STATEMENT
 
 let theme: Theme = 'light';
 
@@ -14,7 +15,7 @@ function App() {
 
   setTheme(theme);
 
-  return <TheSpeakersFirmHome />;
+  return <SpeakerCategoriesPage />; // %EXPORT_STATEMENT%
 }
 
 export default App;

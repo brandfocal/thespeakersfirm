@@ -2,6 +2,11 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
 import { AboutTeamSection } from "@/components/generated/BonangMohaleProfileNew";
+import { AboutTeamSection as PhumzileProfile } from "@/components/generated/DrPhumzileMlamboNgcukaProfileNew";
+import { AboutTeamSection as ClementProfile } from "@/components/generated/ClementManyathelaProfileNew";
+import { AboutTeamSection as SizweProfile } from "@/components/generated/SizweMpofuWalshProfileNew";
+import { AboutTeamSection as NoziphoProfile } from "@/components/generated/NoziphoTshabalalaProfileNew";
+import { AboutTeamSection as PrinceProfile } from "@/components/generated/PrinceMasheleProfileNew";
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -10,8 +15,28 @@ interface PageProps {
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
 
-  if ((trackId === "leadership-governance-and-risk-intelligence" || trackId === "leadership-strategy-and-executive-performance" || trackId === "governance") && (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate")) {
+  if (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate") {
     return <AboutTeamSection />;
+  }
+
+  if (speakerId === "phumzile-mlambo-ngcuka") {
+    return <PhumzileProfile />;
+  }
+
+  if (speakerId === "clement-manyathela") {
+    return <ClementProfile />;
+  }
+
+  if (speakerId === "sizwe-mpofu-walsh") {
+    return <SizweProfile />;
+  }
+
+  if (speakerId === "nozipho-tshabalala") {
+    return <NoziphoProfile />;
+  }
+
+  if (speakerId === "prince-mashele") {
+    return <PrinceProfile />;
   }
 
   // Format parameters to readable names

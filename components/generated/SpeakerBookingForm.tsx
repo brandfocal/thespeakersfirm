@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, AlertTriangle } from "lucide-react";
 
 const SUB_HEADING_CLASS = "font-['Kontora',sans-serif] text-lg font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-xl md:text-2xl";
 
@@ -15,68 +15,45 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
   const [enquiryRef] = React.useState(() => `TSF-ENQ-${Math.floor(100000 + Math.random() * 900000)}`);
   
   const [formData, setFormData] = React.useState({
-    // Step 1
+    // Step 1: Contact Details
     fullName: "",
     jobTitle: "",
     organisation: "",
     email: "",
     mobile: "",
-    country: "South Africa",
-    city: "",
+    countryCity: "",
     website: "",
     contactMethod: "Email",
-    decisionMaker: "Yes",
-    additionalContact: "",
     
-    // Step 2
+    // Step 2: Speaker or Talent Requirements
     speakerName: speakerName,
     speakerRef: speakerRef,
-    engagementCategory: "Keynote speaker",
+    engagementCategory: "Keynote",
     expertise: "",
-    alternativeRecommendations: "No",
     eventObjectives: "",
     audienceOutcomes: "",
-    presentationStyle: "",
-    duration: "",
-    additionalActivities: "No",
+    presentationStyle: "Presentation / Keynote",
+    duration: "45-60 Minutes",
+    additionalRequirements: "None",
+    alternativeRecommendations: "No",
     
-    // Step 3
+    // Step 3: Event Details
     eventName: "",
     eventType: "Conference",
     eventFormat: "In-person",
     eventDate: "",
-    alternativeDate: "",
     times: "",
-    techCheckTime: "",
-    performanceTime: "",
     venue: "",
-    eventCityCountry: "",
+    venueAddress: "",
+    eventCityProvinceCountry: "",
     audienceSize: "",
     audienceProfile: "",
     industry: "",
-    classification: "Private",
-    paidEvent: "No",
-    recorded: "No",
-    postEventUse: "No",
-    mediaAttendance: "No",
     eventWebsite: "",
-    intendedPlatform: "",
-    proposedUse: "",
-    territory: "",
-    usagePeriod: "",
+    hostingPlatform: "",
+    accessRequirements: "",
     
-    // Step 4
-    budgetRange: "",
-    currency: "ZAR",
-    budgetStatus: "Approved",
-    quotationDeadline: "",
-    decisionDate: "",
-    
-    // Step 5
-    source: "Google or another search engine",
-    sourceDetails: "",
-    
-    // Step 6
+    // Step 4: Consent & Review
     ackComplete: false,
     ackPolicy: false,
     ackNoReserve: false,
@@ -97,35 +74,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
   const [errors, setErrors] = React.useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
-
-  // Sync currency with country selection
-  React.useEffect(() => {
-    let matchedCurrency = "USD";
-    if (formData.country === "South Africa") matchedCurrency = "ZAR";
-    else if (formData.country === "United Kingdom") matchedCurrency = "GBP";
-    else if (formData.country === "Europe") matchedCurrency = "EUR";
-    else if (formData.country === "Kenya") matchedCurrency = "KES";
-    else if (formData.country === "Nigeria") matchedCurrency = "NGN";
-    
-    setFormData(prev => ({ ...prev, currency: matchedCurrency }));
-  }, [formData.country]);
-
-  const getBudgetRanges = () => {
-    switch (formData.currency) {
-      case "ZAR":
-        return ["R50,000 - R100,000", "R100,000 - R150,000", "R150,000 - R200,000", "R200,000+"];
-      case "GBP":
-        return ["£3,000 - £6,000", "£6,000 - £10,000", "£10,000 - £15,000", "£15,000+"];
-      case "EUR":
-        return ["€4,000 - €8,000", "€8,000 - €12,000", "€12,000 - €16,000", "€16,000+"];
-      case "KES":
-        return ["KSh 500,000 - KSh 1,000,000", "KSh 1,000,000+"];
-      case "NGN":
-        return ["₦5,000,000 - ₦10,000,000", "₦10,000,000+"];
-      default:
-        return ["$5,000 - $10,000", "$10,000 - $15,000", "$15,000 - $20,000", "$20,000+"];
-    }
-  };
+  const [editStepIndex, setEditStepIndex] = React.useState<number | null>(null);
 
   const handleFieldChange = (field: string, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -145,46 +94,33 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
       if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
       if (!formData.jobTitle.trim()) newErrors.jobTitle = "Job title is required";
       if (!formData.organisation.trim()) newErrors.organisation = "Organisation is required";
-      if (!formData.email.trim()) newErrors.email = "Email address is required";
+      if (!formData.email.trim()) newErrors.email = "Business email is required";
       if (!formData.mobile.trim()) newErrors.mobile = "Mobile number is required";
-      if (!formData.country.trim()) newErrors.country = "Country is required";
-      if (!formData.city.trim()) newErrors.city = "City is required";
+      if (!formData.countryCity.trim()) newErrors.countryCity = "Country and city are required";
     }
     
     if (currentStep === 2) {
+      if (!formData.engagementCategory.trim()) newErrors.engagementCategory = "Engagement category is required";
       if (!formData.expertise.trim()) newErrors.expertise = "Topic or area of expertise is required";
       if (!formData.eventObjectives.trim()) newErrors.eventObjectives = "Event objectives are required";
     }
     
     if (currentStep === 3) {
       if (!formData.eventName.trim()) newErrors.eventName = "Event name is required";
-      if (!formData.eventCityCountry.trim()) newErrors.eventCityCountry = "Event city & country are required";
-      if (!formData.eventDate.trim()) newErrors.eventDate = "Proposed date is required";
+      if (!formData.eventType.trim()) newErrors.eventType = "Event type is required";
+      if (!formData.eventFormat.trim()) newErrors.eventFormat = "Event format is required";
+      if (!formData.eventDate.trim()) newErrors.eventDate = "Event date is required";
+      if (!formData.times.trim()) newErrors.times = "Start and end time are required";
+      if (!formData.venue.trim()) newErrors.venue = "Venue name is required";
+      if (!formData.venueAddress.trim()) newErrors.venueAddress = "Full venue address is required";
+      if (!formData.eventCityProvinceCountry.trim()) newErrors.eventCityProvinceCountry = "City, province/state and country are required";
       if (!formData.audienceSize.trim()) newErrors.audienceSize = "Expected audience size is required";
-      if (!formData.audienceProfile.trim()) newErrors.audienceProfile = "Audience profile is required";
-      if (!formData.industry.trim()) newErrors.industry = "Industry/sector is required";
-      
-      const requiresMediaConsent = formData.recorded === "Yes" || formData.postEventUse === "Yes";
-      if (requiresMediaConsent) {
-        if (!formData.intendedPlatform.trim()) newErrors.intendedPlatform = "Intended platform is required";
-        if (!formData.proposedUse.trim()) newErrors.proposedUse = "Proposed use is required";
-        if (!formData.territory.trim()) newErrors.territory = "Territory is required";
-        if (!formData.usagePeriod.trim()) newErrors.usagePeriod = "Usage period is required";
+      if (["virtual", "hybrid"].includes(formData.eventFormat.toLowerCase())) {
+        if (!formData.hostingPlatform.trim()) newErrors.hostingPlatform = "Hosting platform is required";
       }
     }
     
     if (currentStep === 4) {
-      if (!formData.budgetRange.trim()) newErrors.budgetRange = "Budget range is required";
-    }
-    
-    if (currentStep === 5) {
-      const needsDetails = ["Referral or recommendation", "Speaker or talent referral", "Other"].includes(formData.source);
-      if (needsDetails && !formData.sourceDetails.trim()) {
-        newErrors.sourceDetails = "Please specify source details";
-      }
-    }
-    
-    if (currentStep === 6) {
       if (!formData.ackComplete) newErrors.ackComplete = "Please confirm accurate details";
       if (!formData.ackPolicy) newErrors.ackPolicy = "Please accept policy terms";
       if (!formData.ackNoReserve) newErrors.ackNoReserve = "Please acknowledge booking terms";
@@ -208,52 +144,44 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateStep(6)) {
+    if (validateStep(4)) {
       setIsSubmitting(true);
       try {
-        let utm_source = "";
-        let utm_medium = "";
-        let utm_campaign = "";
-        let utm_term = "";
-        let utm_content = "";
-        let gclid = "";
-
-        if (typeof window !== 'undefined') {
-          const params = new URLSearchParams(window.location.search);
-          utm_source = params.get('utm_source') || "";
-          utm_medium = params.get('utm_medium') || "";
-          utm_campaign = params.get('utm_campaign') || "";
-          utm_term = params.get('utm_term') || "";
-          utm_content = params.get('utm_content') || "";
-          gclid = params.get('gclid') || "";
-        }
-
-        // Combine the 5 checked consents into one dynamic single text payload for field 79
+        // Build combined consents string
         const combinedConsents = [
           `Confirm Details: Yes`,
-          `Accept Booking/Confidentiality Policy: Yes`,
+          `Accept Booking Policy: Yes`,
           `Acknowledge no reservation: Yes`,
           `Accept no tender representation: Yes`,
           `Consent to secure processing: Yes`
         ].join(" | ");
 
-        const response = await fetch('/api/submit-form', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+        // Build mock UTM parameters
+        let utm_source = "";
+        let utm_medium = "";
+        let utm_campaign = "";
+
+        if (typeof window !== "undefined") {
+          const params = new URLSearchParams(window.location.search);
+          utm_source = params.get("utm_source") || "";
+          utm_medium = params.get("utm_medium") || "";
+          utm_campaign = params.get("utm_campaign") || "";
+        }
+
+        const response = await fetch("/api/submit-form", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            formId: 1, // Book A Speaker Form ID: 1
+            formId: 1,
             values: {
               "input_25": formData.fullName,
               "input_5": formData.jobTitle,
               "input_4": formData.organisation,
               "input_26": formData.email,
               "input_9": formData.mobile,
-              "input_27": formData.country,
-              "input_46": formData.city,
+              "input_46": formData.countryCity,
               "input_47": formData.website,
               "input_48": formData.contactMethod,
-              "input_49": formData.decisionMaker,
-              "input_50": formData.additionalContact,
               "input_28": formData.speakerName,
               "input_45": formData.speakerRef,
               "input_30": formData.engagementCategory,
@@ -261,49 +189,30 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
               "input_51": formData.alternativeRecommendations,
               "input_52": formData.duration,
               "input_53": formData.presentationStyle,
-              "input_54": formData.additionalActivities,
+              "input_54": formData.additionalRequirements,
               "input_55": formData.eventObjectives,
               "input_56": formData.audienceOutcomes,
               "input_10": formData.eventName,
               "input_57": formData.eventType,
               "input_58": formData.eventFormat,
               "input_31": formData.eventDate,
-              "input_59": formData.alternativeDate,
               "input_60": formData.times,
-              "input_61": formData.techCheckTime,
-              "input_62": formData.performanceTime,
               "input_63": formData.venue,
-              "input_32": formData.eventCityCountry,
+              "input_86": formData.venueAddress,
+              "input_32": formData.eventCityProvinceCountry,
               "input_33": formData.audienceSize,
               "input_34": formData.audienceProfile,
               "input_35": formData.industry,
-              "input_64": formData.classification,
-              "input_65": formData.paidEvent,
-              "input_66": formData.recorded,
-              "input_67": formData.postEventUse,
-              "input_68": formData.mediaAttendance,
               "input_69": formData.eventWebsite,
-              "input_70": formData.intendedPlatform,
-              "input_71": formData.proposedUse,
-              "input_72": formData.territory,
-              "input_73": formData.usagePeriod,
-              "input_40": formData.currency,
-              "input_39": formData.budgetRange,
-              "input_74": formData.budgetStatus,
-              "input_75": formData.quotationDeadline,
-              "input_76": formData.decisionDate,
-              "input_77": formData.source,
-              "input_78": formData.sourceDetails,
-              "input_79": combinedConsents, // Combined Consents Paragraph Field ID: 79
+              "input_70": formData.hostingPlatform,
+              "input_87": formData.accessRequirements,
+              "input_79": combinedConsents,
               "input_84": formData.marketingConsent ? "Yes" : "No",
               "input_85": enquiryRef,
               "input_38": enquiryRef,
               "input_19": utm_source,
               "input_20": utm_medium,
-              "input_21": utm_campaign,
-              "input_22": utm_term,
-              "input_23": utm_content,
-              "input_24": gclid
+              "input_21": utm_campaign
             }
           })
         });
@@ -312,51 +221,11 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
           setIsSubmitted(true);
         } else {
           const errData = await response.json().catch(() => ({}));
-          console.error("Failed to submit speaker booking form", response.status, errData);
-          
-          const newErrors: Record<string, string> = {
-            submit: "There was a validation issue submitting your booking. Please review your fields."
-          };
-          
-          if (errData && errData.validation_messages) {
-            // Map validation messages back to matching frontend field names
-            const valMsgs = errData.validation_messages;
-            if (valMsgs["25"]) newErrors.fullName = valMsgs["25"];
-            if (valMsgs["5"]) newErrors.jobTitle = valMsgs["5"];
-            if (valMsgs["4"]) newErrors.organisation = valMsgs["4"];
-            if (valMsgs["26"]) newErrors.email = valMsgs["26"];
-            if (valMsgs["9"]) newErrors.mobile = valMsgs["9"];
-            if (valMsgs["27"]) newErrors.country = valMsgs["27"];
-            if (valMsgs["46"]) newErrors.city = valMsgs["46"];
-            if (valMsgs["29"]) newErrors.expertise = valMsgs["29"];
-            if (valMsgs["55"]) newErrors.eventObjectives = valMsgs["55"];
-            if (valMsgs["10"]) newErrors.eventName = valMsgs["10"];
-            if (valMsgs["31"]) newErrors.eventDate = valMsgs["31"];
-            if (valMsgs["32"]) newErrors.eventCityCountry = valMsgs["32"];
-            if (valMsgs["33"]) newErrors.audienceSize = valMsgs["33"];
-            if (valMsgs["34"]) newErrors.audienceProfile = valMsgs["34"];
-            if (valMsgs["35"]) newErrors.industry = valMsgs["35"];
-            if (valMsgs["39"]) newErrors.budgetRange = valMsgs["39"];
-            if (valMsgs["78"]) newErrors.sourceDetails = valMsgs["78"];
-            
-            // If errors are on earlier steps, automatically take user back to that step
-            if (valMsgs["25"] || valMsgs["5"] || valMsgs["4"] || valMsgs["26"] || valMsgs["9"] || valMsgs["27"] || valMsgs["46"]) {
-              setStep(1);
-            } else if (valMsgs["29"] || valMsgs["55"]) {
-              setStep(2);
-            } else if (valMsgs["10"] || valMsgs["31"] || valMsgs["32"] || valMsgs["33"] || valMsgs["34"] || valMsgs["35"]) {
-              setStep(3);
-            } else if (valMsgs["39"]) {
-              setStep(4);
-            } else if (valMsgs["78"]) {
-              setStep(5);
-            }
-          }
-          
-          setErrors(newErrors);
+          console.error("Booking form submit failure", response.status, errData);
+          setErrors({ submit: "There was a validation issue submitting your booking. Please review your fields." });
         }
       } catch (err) {
-        console.error("Booking form submit error", err);
+        console.error("Booking form submit network error", err);
         setErrors({ submit: "A network error occurred. Please try again." });
       } finally {
         setIsSubmitting(false);
@@ -414,22 +283,20 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
     return (
       <div className="mb-8 w-full border-b border-white/25 pb-6">
         <div className="flex justify-between items-center text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-          <span>Step {step} of 6</span>
+          <span>Step {step} of 4</span>
           <span className="text-[#e30e04]">Progress</span>
         </div>
         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
           <div 
             className="bg-[#e30e04] h-full transition-all duration-300"
-            style={{ width: `${(step / 6) * 100}%` }}
+            style={{ width: `${(step / 4) * 100}%` }}
           />
         </div>
-        <div className="grid grid-cols-6 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] mt-3 gap-1">
-          <span className={step === 1 ? "text-white" : ""}>1. Contact</span>
-          <span className={step === 2 ? "text-white" : ""}>2. Talent</span>
-          <span className={step === 3 ? "text-white" : ""}>3. Event</span>
-          <span className={step === 4 ? "text-white" : ""}>4. Budget</span>
-          <span className={step === 5 ? "text-white" : ""}>5. Source</span>
-          <span className={step === 6 ? "text-white" : ""}>6. Consent</span>
+        <div className="grid grid-cols-4 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] mt-3 gap-1">
+          <button type="button" onClick={() => setStep(1)} className={`text-left hover:text-white transition-colors ${step === 1 ? "text-white" : ""}`}>1. Contact Details</button>
+          <button type="button" onClick={() => step > 1 ? setStep(2) : null} className={`text-left hover:text-white transition-colors ${step === 2 ? "text-white" : ""}`}>2. Requirements</button>
+          <button type="button" onClick={() => step > 2 ? setStep(3) : null} className={`text-left hover:text-white transition-colors ${step === 3 ? "text-white" : ""}`}>3. Event Details</button>
+          <button type="button" onClick={() => step > 3 ? setStep(4) : null} className={`text-left hover:text-white transition-colors ${step === 4 ? "text-white" : ""}`}>4. Review &amp; Consent</button>
         </div>
       </div>
     );
@@ -443,7 +310,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
         <form onSubmit={handleFormSubmit} className="space-y-6 tabbed-contact-form__fields">
           {step === 1 && (
             <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 1: Contact Information</h4>
+              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 1: Contact Details</h4>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block">
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Full Name*</span>
@@ -479,7 +346,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Business Email Address*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Business Email*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     type="email" 
@@ -501,31 +368,15 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Country*</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.country} 
-                    onChange={e => handleFieldChange("country", e.target.value)}
-                  >
-                    <option value="South Africa">South Africa</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="United States">United States</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Kenya">Kenya</option>
-                    <option value="Nigeria">Nigeria</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Country and City*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. South Africa, Johannesburg"
                     type="text" 
-                    value={formData.city} 
-                    onChange={e => handleFieldChange("city", e.target.value)} 
+                    value={formData.countryCity} 
+                    onChange={e => handleFieldChange("countryCity", e.target.value)} 
                   />
-                  {errors.city && <p className="text-[#e30e04] text-xs mt-1">{errors.city}</p>}
+                  {errors.countryCity && <p className="text-[#e30e04] text-xs mt-1">{errors.countryCity}</p>}
                 </label>
 
                 <label className="block">
@@ -550,28 +401,6 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     <option value="WhatsApp">WhatsApp</option>
                   </select>
                 </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Are you the final decision-maker?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.decisionMaker} 
-                    onChange={e => handleFieldChange("decisionMaker", e.target.value)}
-                  >
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                </label>
-
-                <label className="block sm:col-span-2">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Additional decision-maker or booking contact</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
-                    value={formData.additionalContact} 
-                    onChange={e => handleFieldChange("additionalContact", e.target.value)} 
-                  />
-                </label>
               </div>
             </div>
           )}
@@ -581,22 +410,12 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 2: Speaker or Talent Requirements</h4>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Requested</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred Speaker or Talent</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
                     type="text" 
                     readOnly 
                     value={formData.speakerName} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Profile Reference</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#1A1A1A] px-4 text-sm text-[#888] focus:outline-none cursor-not-allowed"
-                    type="text" 
-                    readOnly 
-                    value={formData.speakerRef} 
                   />
                 </label>
 
@@ -607,10 +426,10 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     value={formData.engagementCategory} 
                     onChange={e => handleFieldChange("engagementCategory", e.target.value)}
                   >
-                    <option value="Keynote speaker">Keynote speaker</option>
+                    <option value="Keynote">Keynote</option>
                     <option value="Facilitator">Facilitator</option>
                     <option value="Moderator">Moderator</option>
-                    <option value="Master of ceremonies">Master of ceremonies</option>
+                    <option value="MC">MC</option>
                     <option value="Panellist">Panellist</option>
                     <option value="Comedian">Comedian</option>
                     <option value="Celebrity">Celebrity</option>
@@ -618,14 +437,15 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     <option value="Performer">Performer</option>
                     <option value="Other">Other</option>
                   </select>
+                  {errors.engagementCategory && <p className="text-[#e30e04] text-xs mt-1">{errors.engagementCategory}</p>}
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Topic, stream or area of expertise*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Topic or Area of Expertise*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. Ethical Leadership, AI Transformation"
                     type="text" 
-                    placeholder="e.g. Ethical Leadership, Governance"
                     value={formData.expertise} 
                     onChange={e => handleFieldChange("expertise", e.target.value)} 
                   />
@@ -633,55 +453,57 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative recommendations?</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred Presentation Style</span>
                   <select 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.alternativeRecommendations} 
-                    onChange={e => handleFieldChange("alternativeRecommendations", e.target.value)}
+                    value={formData.presentationStyle} 
+                    onChange={e => handleFieldChange("presentationStyle", e.target.value)}
                   >
-                    <option value="Yes">Yes, please propose alternatives if unavailable</option>
-                    <option value="No">No, only {speakerName}</option>
+                    <option value="Presentation / Keynote">Presentation / Keynote</option>
+                    <option value="Interactive Dialogue / Fireside">Interactive Dialogue / Fireside</option>
+                    <option value="Formal Address">Formal Address</option>
+                    <option value="Q&amp;A Session">Q&amp;A Session</option>
+                    <option value="Virtual Live / Pre-record">Virtual Live / Pre-record</option>
                   </select>
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Required duration of engagement</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
-                    placeholder="e.g. 60 Minutes, Half Day"
-                    value={formData.duration} 
-                    onChange={e => handleFieldChange("duration", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred presentation style</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
-                    placeholder="e.g. Interactive Keynote, Q&A"
-                    value={formData.presentationStyle} 
-                    onChange={e => handleFieldChange("presentationStyle", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Required for additional activities?</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Engagement Duration</span>
                   <select 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.additionalActivities} 
-                    onChange={e => handleFieldChange("additionalActivities", e.target.value)}
+                    value={formData.duration} 
+                    onChange={e => handleFieldChange("duration", e.target.value)}
                   >
-                    <option value="Yes">Yes (panel, VIP, media, signing etc)</option>
-                    <option value="No">No, keynote presentation only</option>
+                    <option value="45-60 Minutes">45-60 Minutes</option>
+                    <option value="60-90 Minutes">60-90 Minutes</option>
+                    <option value="Half Day Masterclass">Half Day Masterclass</option>
+                    <option value="Full Day Strategy Retreat">Full Day Strategy Retreat</option>
+                    <option value="Multi-day Residency">Multi-day Residency</option>
+                  </select>
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Additional Requirements</span>
+                  <select 
+                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    value={formData.additionalRequirements} 
+                    onChange={e => handleFieldChange("additionalRequirements", e.target.value)}
+                  >
+                    <option value="None">None</option>
+                    <option value="Panel Integration">Panel Integration</option>
+                    <option value="Media Interview">Media Interview</option>
+                    <option value="Meet-and-greet">Meet-and-greet</option>
+                    <option value="Book signing">Book signing</option>
+                    <option value="VIP Engagement">VIP Engagement</option>
                   </select>
                 </label>
 
                 <label className="block sm:col-span-2">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event objectives*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Objectives*</span>
                   <textarea 
-                    className="min-h-[80px] w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    className="w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    rows={3}
+                    placeholder="What are the key goals and objectives for this segment?"
                     value={formData.eventObjectives} 
                     onChange={e => handleFieldChange("eventObjectives", e.target.value)} 
                   />
@@ -689,20 +511,36 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block sm:col-span-2">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Desired audience outcomes</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Desired Audience Outcomes</span>
                   <textarea 
-                    className="min-h-[80px] w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    className="w-full rounded-xl border border-white/25 bg-[#0A0A0A] p-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    rows={2}
+                    placeholder="What should the audience feel, think or do differently after the session?"
                     value={formData.audienceOutcomes} 
                     onChange={e => handleFieldChange("audienceOutcomes", e.target.value)} 
                   />
                 </label>
+
+                <div className="sm:col-span-2 flex flex-col gap-2 pt-2">
+                  <span className="text-xs font-bold uppercase text-[#9A9A9A]">Would you like alternative recommendations?</span>
+                  <div className="flex items-center gap-6">
+                    <label className="flex items-center gap-2 cursor-pointer select-none">
+                      <input type="radio" checked={formData.alternativeRecommendations === "Yes"} onChange={() => handleFieldChange("alternativeRecommendations", "Yes")} className="h-4 w-4 text-[#e30e04]" />
+                      <span className="text-xs text-[#9A9A9A]">Yes</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer select-none">
+                      <input type="radio" checked={formData.alternativeRecommendations === "No"} onChange={() => handleFieldChange("alternativeRecommendations", "No")} className="h-4 w-4 text-[#e30e04]" />
+                      <span className="text-xs text-[#9A9A9A]">No</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           )}
 
           {step === 3 && (
             <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 3: Event Information</h4>
+              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 3: Event Details</h4>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block">
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Name*</span>
@@ -723,16 +561,16 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("eventType", e.target.value)}
                   >
                     <option value="Conference">Conference</option>
-                    <option value="Leadership summit">Leadership summit</option>
-                    <option value="Corporate function">Corporate function</option>
-                    <option value="Awards ceremony">Awards ceremony</option>
-                    <option value="Strategy session">Strategy session</option>
-                    <option value="Training programme">Training programme</option>
-                    <option value="Employee engagement">Employee engagement</option>
-                    <option value="Client event">Client event</option>
-                    <option value="Media engagement">Media engagement</option>
+                    <option value="Boardroom Briefing">Boardroom Briefing</option>
+                    <option value="Strategy Session">Strategy Session</option>
+                    <option value="Panel Discussion">Panel Discussion</option>
+                    <option value="Annual General Meeting">Annual General Meeting</option>
+                    <option value="Awards Ceremony">Awards Ceremony</option>
+                    <option value="Private Dinner">Private Dinner</option>
+                    <option value="Public Forum">Public Forum</option>
                     <option value="Other">Other</option>
                   </select>
+                  {errors.eventType && <p className="text-[#e30e04] text-xs mt-1">{errors.eventType}</p>}
                 </label>
 
                 <label className="block">
@@ -746,10 +584,11 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     <option value="Virtual">Virtual</option>
                     <option value="Hybrid">Hybrid</option>
                   </select>
+                  {errors.eventFormat && <p className="text-[#e30e04] text-xs mt-1">{errors.eventFormat}</p>}
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Event Date*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Date*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     type="date" 
@@ -760,90 +599,58 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Alternative Date</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Start and End Time*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="date" 
-                    value={formData.alternativeDate} 
-                    onChange={e => handleFieldChange("alternativeDate", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Start Time</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="time" 
-                    value={formData.times.split(" - ")[0] || ""} 
-                    onChange={e => {
-                      const endTime = formData.times.split(" - ")[1] || "17:00";
-                      handleFieldChange("times", `${e.target.value} - ${endTime}`);
-                    }} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event End Time</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="time" 
-                    value={formData.times.split(" - ")[1] || ""} 
-                    onChange={e => {
-                      const startTime = formData.times.split(" - ")[0] || "09:00";
-                      handleFieldChange("times", `${startTime} - ${e.target.value}`);
-                    }} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Arrival / Technical Check Time</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="time" 
-                    value={formData.techCheckTime} 
-                    onChange={e => handleFieldChange("techCheckTime", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaking / Performance Time</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="time" 
-                    value={formData.performanceTime} 
-                    onChange={e => handleFieldChange("performanceTime", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Venue Details</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. 09:00 - 10:30 SAST"
                     type="text" 
+                    value={formData.times} 
+                    onChange={e => handleFieldChange("times", e.target.value)} 
+                  />
+                  {errors.times && <p className="text-[#e30e04] text-xs mt-1">{errors.times}</p>}
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Venue Name*</span>
+                  <input 
+                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     placeholder="e.g. Sandton Convention Centre"
+                    type="text" 
                     value={formData.venue} 
                     onChange={e => handleFieldChange("venue", e.target.value)} 
                   />
+                  {errors.venue && <p className="text-[#e30e04] text-xs mt-1">{errors.venue}</p>}
                 </label>
 
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City and Country*</span>
+                <label className="block sm:col-span-2">
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Full Venue Address*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     type="text" 
-                    placeholder="e.g. Johannesburg, South Africa"
-                    value={formData.eventCityCountry} 
-                    onChange={e => handleFieldChange("eventCityCountry", e.target.value)} 
+                    value={formData.venueAddress} 
+                    onChange={e => handleFieldChange("venueAddress", e.target.value)} 
                   />
-                  {errors.eventCityCountry && <p className="text-[#e30e04] text-xs mt-1">{errors.eventCityCountry}</p>}
+                  {errors.venueAddress && <p className="text-[#e30e04] text-xs mt-1">{errors.venueAddress}</p>}
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">City, Province/State and Country*</span>
+                  <input 
+                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. Sandton, Gauteng, South Africa"
+                    type="text" 
+                    value={formData.eventCityProvinceCountry} 
+                    onChange={e => handleFieldChange("eventCityProvinceCountry", e.target.value)} 
+                  />
+                  {errors.eventCityProvinceCountry && <p className="text-[#e30e04] text-xs mt-1">{errors.eventCityProvinceCountry}</p>}
                 </label>
 
                 <label className="block">
                   <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Expected Audience Size*</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. 150"
                     type="text" 
-                    placeholder="e.g. 250 people"
                     value={formData.audienceSize} 
                     onChange={e => handleFieldChange("audienceSize", e.target.value)} 
                   />
@@ -851,92 +658,29 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Audience Profile & Seniority*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Audience Profile</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                    placeholder="e.g. C-Suite, middle management, public"
                     type="text" 
-                    placeholder="e.g. Executive Board, C-Suite Leaders"
                     value={formData.audienceProfile} 
                     onChange={e => handleFieldChange("audienceProfile", e.target.value)} 
                   />
-                  {errors.audienceProfile && <p className="text-[#e30e04] text-xs mt-1">{errors.audienceProfile}</p>}
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Industry or Sector*</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Industry or Sector</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="text" 
                     placeholder="e.g. Financial Services"
+                    type="text" 
                     value={formData.industry} 
                     onChange={e => handleFieldChange("industry", e.target.value)} 
                   />
-                  {errors.industry && <p className="text-[#e30e04] text-xs mt-1">{errors.industry}</p>}
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Classification</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.classification} 
-                    onChange={e => handleFieldChange("classification", e.target.value)}
-                  >
-                    <option value="Public">Public (open registration)</option>
-                    <option value="Private">Private (invite only)</option>
-                    <option value="Internal">Internal (employees only)</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Is this a paid/ticketed event?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.paidEvent} 
-                    onChange={e => handleFieldChange("paidEvent", e.target.value)}
-                  >
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Will it be recorded/livestreamed?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.recorded} 
-                    onChange={e => handleFieldChange("recorded", e.target.value)}
-                  >
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Will content be used post-event?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.postEventUse} 
-                    onChange={e => handleFieldChange("postEventUse", e.target.value)}
-                  >
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Is media attendance planned?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.mediaAttendance} 
-                    onChange={e => handleFieldChange("mediaAttendance", e.target.value)}
-                  >
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                  </select>
                 </label>
 
                 <label className="block sm:col-span-2">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event website / registration link</span>
+                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Event Website or Registration Link</span>
                   <input 
                     className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
                     type="text" 
@@ -945,217 +689,86 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   />
                 </label>
 
-                {(formData.recorded === "Yes" || formData.postEventUse === "Yes") && (
-                  <div className="col-span-1 sm:col-span-2 rounded-xl bg-black/30 border border-white/25 p-4 space-y-4 mt-2">
-                    <p className="text-xs font-bold uppercase tracking-wider text-[#e30e04]">Media & Broadcast Rights Details</p>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Intended Platform*</span>
-                        <input 
-                          className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                          type="text" 
-                          placeholder="e.g. YouTube, Internal Intranet"
-                          value={formData.intendedPlatform} 
-                          onChange={e => handleFieldChange("intendedPlatform", e.target.value)} 
-                        />
-                        {errors.intendedPlatform && <p className="text-[#e30e04] text-xs mt-1">{errors.intendedPlatform}</p>}
-                      </label>
-
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposed Use*</span>
-                        <input 
-                          className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                          type="text" 
-                          placeholder="e.g. Educational replay"
-                          value={formData.proposedUse} 
-                          onChange={e => handleFieldChange("proposedUse", e.target.value)} 
-                        />
-                        {errors.proposedUse && <p className="text-[#e30e04] text-xs mt-1">{errors.proposedUse}</p>}
-                      </label>
-
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Territory*</span>
-                        <input 
-                          className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                          type="text" 
-                          placeholder="e.g. South Africa, Global"
-                          value={formData.territory} 
-                          onChange={e => handleFieldChange("territory", e.target.value)} 
-                        />
-                        {errors.territory && <p className="text-[#e30e04] text-xs mt-1">{errors.territory}</p>}
-                      </label>
-
-                      <label className="block">
-                        <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Usage Period*</span>
-                        <input 
-                          className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                          type="text" 
-                          placeholder="e.g. 12 months"
-                          value={formData.usagePeriod} 
-                          onChange={e => handleFieldChange("usagePeriod", e.target.value)} 
-                        />
-                        {errors.usagePeriod && <p className="text-[#e30e04] text-xs mt-1">{errors.usagePeriod}</p>}
-                      </label>
-                    </div>
-                    <p className="text-[10px] text-[#9A9A9A] leading-relaxed italic">Note: Recording, livestreaming, distribution, and content-usage rights require prior written approval and may attract additional fees.</p>
-                  </div>
+                {["virtual", "hybrid"].includes(formData.eventFormat.toLowerCase()) && (
+                  <>
+                    <label className="block">
+                      <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Preferred Hosting Platform*</span>
+                      <input 
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        placeholder="e.g. MS Teams, Zoom Webinar"
+                        type="text" 
+                        value={formData.hostingPlatform} 
+                        onChange={e => handleFieldChange("hostingPlatform", e.target.value)} 
+                      />
+                      {errors.hostingPlatform && <p className="text-[#e30e04] text-xs mt-1">{errors.hostingPlatform}</p>}
+                    </label>
+                    <label className="block">
+                      <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Platform Access Requirements</span>
+                      <input 
+                        className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
+                        placeholder="e.g. Moderator login, custom registration"
+                        type="text" 
+                        value={formData.accessRequirements} 
+                        onChange={e => handleFieldChange("accessRequirements", e.target.value)} 
+                      />
+                    </label>
+                  </>
                 )}
               </div>
             </div>
           )}
 
           {step === 4 && (
-            <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 4: Budget and Commercial Information</h4>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Currency*</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.currency} 
-                    onChange={e => handleFieldChange("currency", e.target.value)}
-                  >
-                    <option value="ZAR">ZAR (R)</option>
-                    <option value="USD">USD ($)</option>
-                    <option value="GBP">GBP (£)</option>
-                    <option value="EUR">EUR (€)</option>
-                    <option value="KES">KES (KSh)</option>
-                    <option value="NGN">NGN (₦)</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Speaker Budget Range*</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.budgetRange} 
-                    onChange={e => handleFieldChange("budgetRange", e.target.value)}
-                  >
-                    <option value="" disabled>Select range...</option>
-                    {getBudgetRanges().map((range) => (
-                      <option key={range} value={range}>{range}</option>
-                    ))}
-                  </select>
-                  {errors.budgetRange && <p className="text-[#e30e04] text-xs mt-1">{errors.budgetRange}</p>}
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Budget Status*</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.budgetStatus} 
-                    onChange={e => handleFieldChange("budgetStatus", e.target.value)}
-                  >
-                    <option value="Approved">Approved</option>
-                    <option value="Provisional">Provisional</option>
-                    <option value="Under consideration">Under consideration</option>
-                    <option value="Budget to be discussed">Budget to be discussed</option>
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Proposal or Quotation Deadline</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="date" 
-                    value={formData.quotationDeadline} 
-                    onChange={e => handleFieldChange("quotationDeadline", e.target.value)} 
-                  />
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Booking Decision Date</span>
-                  <input 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    type="date" 
-                    value={formData.decisionDate} 
-                    onChange={e => handleFieldChange("decisionDate", e.target.value)} 
-                  />
-                </label>
-              </div>
-
-              <div className="rounded-xl border border-white/25 bg-black/40 p-5 mt-6 space-y-3">
-                <p className="text-xs font-bold uppercase tracking-wider text-[#e30e04]">Quotation Notice</p>
-                <p className="text-xs text-[#9A9A9A] leading-relaxed">
-                  Unless expressly included in writing, all quotations exclude:
-                </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 text-xs text-[#9A9A9A] gap-2 pl-4 list-disc">
-                  <li>VAT, where applicable</li>
-                  <li>Technical riders and equipment</li>
-                  <li>Production and staging requirements</li>
-                  <li>Travel and flights</li>
-                  <li>Accommodation</li>
-                  <li>Ground transportation and transfers</li>
-                  <li>Security, visas and permits</li>
-                  <li>Recording, livestreaming and content-usage rights</li>
-                  <li>Other agreed engagement-related expenses</li>
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 4: Review and Consent</h4>
+              
+              {/* Core Booking Policy Box */}
+              <div className="rounded-xl border border-[#e30e04]/30 bg-black/40 p-5 space-y-4 text-xs text-[#9A9A9A] leading-relaxed">
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="h-5 w-5 text-[#e30e04]" />
+                  <h5 className="font-bold text-white uppercase text-sm">Core Booking &amp; Tender Policy</h5>
+                </div>
+                <ul className="list-disc pl-4 space-y-2">
+                  <li>Full payment is required before the engagement unless approved written terms apply.</li>
+                  <li>A booking is confirmed only through formal written confirmation from The Speakers Firm™.</li>
+                  <li>Availability cannot be guaranteed or reserved through an enquiry, quotation, invoice or purchase order alone.</li>
+                  <li>Talent may not be publicly announced or marketed before written confirmation.</li>
+                  <li>Talent names, profiles, images, credentials or fees may not be used in tenders or proposals without prior written authorisation.</li>
+                  <li>Recording, livestreaming, rebroadcasting and post-event content use require written approval and may attract additional fees.</li>
+                  <li>Client and commercial information will be handled confidentially and in accordance with applicable data-protection requirements.</li>
                 </ul>
               </div>
-            </div>
-          )}
 
-          {step === 5 && (
-            <div className="space-y-4">
-              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 5: How Did You Hear About Us?</h4>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="block sm:col-span-2">
-                  <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">How did you hear about The Speakers Firm™?</span>
-                  <select 
-                    className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                    value={formData.source} 
-                    onChange={e => handleFieldChange("source", e.target.value)}
-                  >
-                    <option value="Google or another search engine">Google or another search engine</option>
-                    <option value="LinkedIn">LinkedIn</option>
-                    <option value="Instagram">Instagram</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="YouTube">YouTube</option>
-                    <option value="TikTok">TikTok</option>
-                    <option value="Referral or recommendation">Referral or recommendation</option>
-                    <option value="Previous client or booking">Previous client or booking</option>
-                    <option value="Speaker or talent referral">Speaker or talent referral</option>
-                    <option value="Conference or event">Conference or event</option>
-                    <option value="Media appearance">Media appearance</option>
-                    <option value="Email campaign or newsletter">Email campaign or newsletter</option>
-                    <option value="The Speakers Firm™ team">The Speakers Firm™ team</option>
-                    <option value="EmpowaWorx Group">EmpowaWorx Group</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </label>
-
-                {["Referral or recommendation", "Speaker or talent referral", "Other"].includes(formData.source) && (
-                  <label className="block sm:col-span-2">
-                    <span className="mb-2 block text-xs font-bold uppercase text-[#9A9A9A]">Please provide details / person's name*</span>
-                    <input 
-                      className="min-h-12 w-full rounded-xl border border-white/25 bg-[#0A0A0A] px-4 text-sm text-white focus:border-[#e30e04] focus:outline-none"
-                      type="text" 
-                      value={formData.sourceDetails} 
-                      onChange={e => handleFieldChange("sourceDetails", e.target.value)} 
-                    />
-                    {errors.sourceDetails && <p className="text-[#e30e04] text-xs mt-1">{errors.sourceDetails}</p>}
-                  </label>
-                )}
-              </div>
-            </div>
-          )}
-
-          {step === 6 && (
-            <div className="space-y-6">
-              <h4 className="text-lg font-bold text-white uppercase tracking-wider">Step 6: Review, Policy and Consent</h4>
-              
-              <div className="rounded-xl border border-white/25 bg-black/40 p-5 space-y-4 max-h-[300px] overflow-y-auto text-xs text-[#9A9A9A] leading-relaxed">
-                <h5 className="font-bold text-white uppercase text-sm">Booking, Tender, Payment and Confidentiality Policy</h5>
-                <p><strong>1. Booking and Payment:</strong> The Speakers Firm™ requires full payment before the event. A booking may only be confirmed once payment has cleared or an authorised purchase order is accepted.</p>
-                <p><strong>2. Availability and Confirmation:</strong> Availability cannot be guaranteed or reserved indefinitely. A booking becomes binding only once formal written confirmation is issued by The Speakers Firm™.</p>
-                <p><strong>3. Announcements and Marketing:</strong> Clients may not market or represent the speaker as confirmed before receiving formal written confirmation.</p>
-                <p><strong>4. Tender and Proposal Restrictions:</strong> Clients may not name or represent any talent in a tender or bid without prior written authorisation.</p>
-                <p><strong>5. Recording and Content Rights:</strong> Photography, recording, livestreaming, and post-event content use require prior written approval and may attract additional fees.</p>
-                <p><strong>6. Quotation Exclusions:</strong> Quotations exclude VAT, technical riders, travel, accommodation, ground transportation, security, visas, and permits.</p>
-                <p><strong>7. Privacy and Confidentiality:</strong> Booking details will be treated as strictly confidential and processed in accordance with data-protection requirements.</p>
-                <p><strong>8. No Automatic Agreement:</strong> A submitted booking form, quotation, or purchase order does not independently constitute a final engagement agreement.</p>
+              {/* Summary View */}
+              <div className="rounded-xl border border-white/10 bg-[#111] p-5 space-y-4 text-xs">
+                <h5 className="font-bold text-white uppercase text-sm border-b border-white/10 pb-2">Enquiry Summary</h5>
+                <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+                  <div>
+                    <span className="text-[#9A9A9A] uppercase tracking-wider block font-semibold mb-1">Contact</span>
+                    <p className="text-white font-medium">{formData.fullName} ({formData.jobTitle})</p>
+                    <p className="text-[#9A9A9A]">{formData.organisation} · {formData.email}</p>
+                    <p className="text-[#9A9A9A]">{formData.mobile} · {formData.countryCity}</p>
+                    <button type="button" onClick={() => setStep(1)} className="text-[#e30e04] hover:underline font-bold mt-2 uppercase tracking-widest text-[9px]">Edit Contact</button>
+                  </div>
+                  <div>
+                    <span className="text-[#9A9A9A] uppercase tracking-wider block font-semibold mb-1">Talent &amp; Format</span>
+                    <p className="text-white font-medium">{formData.speakerName}</p>
+                    <p className="text-[#9A9A9A]">{formData.engagementCategory} · {formData.expertise}</p>
+                    <p className="text-[#9A9A9A]">{formData.duration} · {formData.presentationStyle}</p>
+                    <button type="button" onClick={() => setStep(2)} className="text-[#e30e04] hover:underline font-bold mt-2 uppercase tracking-widest text-[9px]">Edit Talent</button>
+                  </div>
+                  <div>
+                    <span className="text-[#9A9A9A] uppercase tracking-wider block font-semibold mb-1">Event Details</span>
+                    <p className="text-white font-medium">{formData.eventName} ({formData.eventFormat})</p>
+                    <p className="text-[#9A9A9A]">{formData.eventDate} · {formData.times}</p>
+                    <p className="text-[#9A9A9A]">{formData.venue} · {formData.eventCityProvinceCountry}</p>
+                    <button type="button" onClick={() => setStep(3)} className="text-[#e30e04] hover:underline font-bold mt-2 uppercase tracking-widest text-[9px]">Edit Event</button>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-3">
+              {/* Acknowledgements Checklist */}
+              <div className="space-y-3 pt-4 border-t border-white/10">
                 <label className="flex items-start gap-3 cursor-pointer">
                   <input 
                     type="checkbox" 
@@ -1163,7 +776,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("ackComplete", e.target.checked)}
                     className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                   />
-                  <span className="text-xs text-[#9A9A9A]">I confirm that the information provided is complete and accurate.*</span>
+                  <span className="text-xs text-[#9A9A9A]">I confirm that the information supplied is accurate.*</span>
                 </label>
                 {errors.ackComplete && <p className="text-[#e30e04] text-xs pl-7">{errors.ackComplete}</p>}
 
@@ -1174,7 +787,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("ackPolicy", e.target.checked)}
                     className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                   />
-                  <span className="text-xs text-[#9A9A9A]">I have read and accept The Speakers Firm™ Booking, Tender, Payment and Confidentiality Policy.*</span>
+                  <span className="text-xs text-[#9A9A9A]">I accept The Speakers Firm™ Booking, Tender, Payment and Confidentiality Policy.*</span>
                 </label>
                 {errors.ackPolicy && <p className="text-[#e30e04] text-xs pl-7">{errors.ackPolicy}</p>}
 
@@ -1185,7 +798,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("ackNoReserve", e.target.checked)}
                     className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                   />
-                  <span className="text-xs text-[#9A9A9A]">I understand that submitting this enquiry does not reserve or confirm the requested speaker.*</span>
+                  <span className="text-xs text-[#9A9A9A]">I understand that submitting an enquiry does not reserve or confirm the talent.*</span>
                 </label>
                 {errors.ackNoReserve && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoReserve}</p>}
 
@@ -1196,7 +809,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("ackNoTender", e.target.checked)}
                     className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                   />
-                  <span className="text-xs text-[#9A9A9A]">I understand that I may not include or represent a speaker from The Speakers Firm™ in a tender, bid or proposal without prior written authorisation.*</span>
+                  <span className="text-xs text-[#9A9A9A]">I understand that prior written authorisation is required before including talent in any tender, bid or proposal.*</span>
                 </label>
                 {errors.ackNoTender && <p className="text-[#e30e04] text-xs pl-7">{errors.ackNoTender}</p>}
 
@@ -1207,24 +820,19 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                     onChange={e => handleFieldChange("ackConsent", e.target.checked)}
                     className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
                   />
-                  <span className="text-xs text-[#9A9A9A]">I consent to the secure processing of my information for purposes related to this booking enquiry.*</span>
+                  <span className="text-xs text-[#9A9A9A]">I consent to the secure processing of my information for this enquiry.*</span>
                 </label>
                 {errors.ackConsent && <p className="text-[#e30e04] text-xs pl-7">{errors.ackConsent}</p>}
 
-                {/* Marketing consent radio choices (Yes/No) */}
-                <div className="pt-3 border-t border-white/25 mt-3 flex flex-col gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#9A9A9A]">You can add me to The Speakers Firm mailing list*</span>
-                  <div className="flex items-center gap-6">
-                    <label className="flex items-center gap-2 cursor-pointer select-none">
-                      <input type="radio" required name="marketingConsent" checked={formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", true)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
-                      <span className="text-xs text-[#9A9A9A]">Yes</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer select-none">
-                      <input type="radio" required name="marketingConsent" checked={!formData.marketingConsent} onChange={() => handleFieldChange("marketingConsent", false)} className="h-4 w-4 text-[#e30e04] focus:ring-[#e30e04]" />
-                      <span className="text-xs text-[#9A9A9A]">No</span>
-                    </label>
-                  </div>
-                </div>
+                <label className="flex items-start gap-3 cursor-pointer pt-3 border-t border-white/10 mt-3">
+                  <input 
+                    type="checkbox" 
+                    checked={formData.marketingConsent} 
+                    onChange={e => handleFieldChange("marketingConsent", e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-white/25 bg-[#0A0A0A] text-[#e30e04] focus:ring-[#e30e04]" 
+                  />
+                  <span className="text-xs text-[#9A9A9A]">I would like to receive relevant talent recommendations, industry insights and updates. (Optional)</span>
+                </label>
               </div>
             </div>
           )}
@@ -1244,7 +852,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
             </div>
             
             <div>
-              {step < 6 ? (
+              {step < 4 ? (
                 <button 
                   type="button" 
                   onClick={nextStep}
@@ -1269,9 +877,14 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
             <div className="mt-6 rounded-xl border border-[#e30e04]/30 bg-[#e30e04]/10 p-4">
               <p className="text-sm font-bold text-[#e30e04] mb-2">Please correct the following errors:</p>
               <ul className="list-disc pl-5 space-y-1 text-xs text-[#e30e04]">
-                {Object.entries(errors).map(([key, msg]) => (
-                  <li key={key}>{msg}</li>
-                ))}
+                {Object.entries(errors)
+                  .filter(([key]) => key !== "submit")
+                  .map(([key, msg]) => (
+                    <li key={key}>{msg}</li>
+                  ))}
+                {Object.keys(errors).length === 1 && errors.submit && (
+                  <li>{errors.submit}</li>
+                )}
               </ul>
             </div>
           )}

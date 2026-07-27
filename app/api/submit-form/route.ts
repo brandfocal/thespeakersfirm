@@ -47,6 +47,23 @@ export async function POST(request: Request) {
     const contentType = response.headers.get("content-type") || "";
     if (contentType.includes("application/json")) {
       const data = await response.json();
+      
+      // If Gravity Forms returns validation failures, normalize them for the client
+      if (response.status === 400 && data.validation_messages) {
+        return NextResponse.json({
+          error: "Validation failed",
+          validation_messages: data.validation_messages
+        }, { status: 400 });
+      }
+      
+      // If it's a general REST error containing a message
+      if (!response.ok && data.message) {
+        return NextResponse.json({
+          error: data.message,
+          validation_messages: data.validation_messages || {}
+        }, { status: response.status });
+      }
+      
       return NextResponse.json(data, { status: response.status });
     } else {
       const text = await response.text();

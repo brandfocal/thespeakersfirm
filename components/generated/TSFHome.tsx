@@ -3804,10 +3804,10 @@ export const TheSpeakersFirmHome = () => {
                             {speaker.bio}
                           </p>
                           <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                            <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>Book Speaker</span>
+                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                              <span>View Profile</span>
                               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </motion.article>
@@ -3873,12 +3873,12 @@ export const TheSpeakersFirmHome = () => {
                             <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
                               {speaker.bio}
                             </p>
-                            <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                              <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                                <span>Book Speaker</span>
-                                <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                              </a>
-                            </div>
+                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
+                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                              <span>View Profile</span>
+                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                            </Link>
+                          </div>
                           </div>
                         </motion.article>
                       ))}
@@ -3944,12 +3944,12 @@ export const TheSpeakersFirmHome = () => {
                             <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
                               {speaker.bio}
                             </p>
-                            <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                              <a href="#brief-us" className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                                <span>Book Speaker</span>
-                                <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                              </a>
-                            </div>
+                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
+                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
+                              <span>View Profile</span>
+                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                            </Link>
+                          </div>
                           </div>
                         </motion.article>
                       ))}

@@ -218,7 +218,7 @@ const BOOK_PUBLICATIONS: BookPublication[] = [{
   description: "Professor Bonang Mohale shares his personal life journey, reflecting on the experiences, principles, and people that shaped him.",
   accentClassName: "from-[#0A0A0A] via-[#9A9A9A] to-[#9A9A9A]",
   image: "/speakers/Bonang Mohale/Coming-in-from-the-Cold-by-Bonang-Mohale.jpg",
-  url: "https://exclusivebooks.co.za/products/9781067228989?_pos=2&_sid=547a33132&_ss=r"
+  url: "https://exclusivebooks.co.za/products/9781776391691?_pos=2&_sid=547a33132&_ss=r"
 }];
 const TOPIC_CARDS: TopicCard[] = [{
   id: "leadership-governance",
@@ -533,25 +533,34 @@ export const ProfileAdditionalSections = () => {
             </div>
             <p className="col-span-1 max-w-xl text-base leading-relaxed text-[#9A9A9A] sm:text-lg md:text-xl lg:col-span-5"><span>See why global leaders choose Prof. Bonang Mohale to inspire, challenge, and transform their audiences.</span></p>
           </div>
-          <div 
-            onClick={() => setActiveVideoId("AltporzbBBQ")}
-            className="group relative aspect-video w-full flex items-center justify-center overflow-hidden rounded-[28px] border border-[#1E1E1E] bg-[#0A0A0A] shadow-2xl cursor-pointer"
-          >
-            <img 
-              src="https://img.youtube.com/vi/AltporzbBBQ/hqdefault.jpg"
-              alt="Prof. Bonang Mohale experience reel"
-              className="absolute inset-0 w-full h-full object-cover brightness-75 group-hover:brightness-90 transition-all duration-500"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-white/45 bg-black/45 text-white shadow-2xl backdrop-blur-md transition-all duration-300 group-hover:border-[#e30e04] group-hover:bg-[#e30e04]">
-              <Play className="ml-1 h-7 w-7 fill-current" />
-            </div>
-          </div>
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
+          
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Main Video Player formatted in the identical card grid style */}
+            <article className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors">
+              <div 
+                onClick={() => setActiveVideoId("AltporzbBBQ")}
+                className="relative aspect-video w-full flex items-center justify-center overflow-hidden"
+              >
+                <img 
+                  src="https://img.youtube.com/vi/AltporzbBBQ/hqdefault.jpg"
+                  alt="Prof. Bonang Mohale experience reel"
+                  className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
+                />
+                <div aria-hidden="true" className="absolute bottom-0 left-0 right-0 z-[5] h-[50%] bg-gradient-to-t from-black via-black/30 to-transparent" />
+                <div className="relative z-[7] flex h-11 w-11 items-center justify-center rounded-full border border-white/45 bg-black/45 text-white shadow-md backdrop-blur-md transition-all duration-300 group-hover:border-[#e30e04] group-hover:bg-[#e30e04]">
+                  <Play className="ml-0.5 h-4 w-4 fill-current" />
+                </div>
+              </div>
+              <h3 className="p-4 text-[10px] font-bold uppercase tracking-widest text-[#FFFFFF] sm:text-xs">
+                <span>Prof. Bonang Mohale Experience Reel</span>
+              </h3>
+            </article>
+
+            {/* Rest of the clips in the same grid row structure */}
             {VIDEO_CLIPS.map(clip => <article 
                 key={clip.id} 
                 onClick={() => setActiveVideoId(clip.youtubeId)}
-                className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111]"
+                className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors"
               >
                 <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
                   <img 
