@@ -46,7 +46,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Prince Mashele',
     bio: 'Political Analyst, Columnist & Public Intellectual',
     quote: 'Understanding political dynamics is key to future stability.',
-    image: '/speakers/Geopolitics/Prince-Mashele-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Prince-Mashele-The-Speakers-Firm.jpg',
     trackId: 'geopolitics',
     trackLabel: 'Geopolitics'
   },

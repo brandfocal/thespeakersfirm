@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "prince-mashele",
     "name": "Prince Mashele",
     "role": "Political Analyst, Columnist & Public Intellectual",
-    "image": "/speakers/Geopolitics/Prince-Mashele-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Prince-Mashele-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
@@ -30,7 +30,7 @@ const speakers: Speaker[] = [
     "id": "thembisa-fakude",
     "name": "Thembisa Fakude",
     "role": "Political Analyst, Author & Middle East–Africa Relations Specialist",
-    "image": "/speakers/Geopolitics/Thembisa-Fakude-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thembisa-Fakude-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
@@ -42,7 +42,7 @@ const speakers: Speaker[] = [
     "id": "mcebisi-ndletyana",
     "name": "Prof. Mcebisi Ndletyana",
     "role": "Academic, Historian & Political Commentator",
-    "image": "/speakers/Geopolitics/Mcebisi-Ndletyana-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mcebisi-Ndletyana-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
@@ -54,7 +54,7 @@ const speakers: Speaker[] = [
     "id": "ralph-mathekga",
     "name": "Dr. Ralph Mathekga",
     "role": "Political Analyst, Author & Democracy Specialist",
-    "image": "/speakers/Geopolitics/Ralph-Mathekga-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Ralph-Mathekga-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
@@ -66,7 +66,7 @@ const speakers: Speaker[] = [
     "id": "ebrahim-fakir",
     "name": "Ebrahim Fakir",
     "role": "Political Analyst & Democracy Governance Specialist",
-    "image": "/speakers/Geopolitics/Ebrahim-Fakir-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Ebrahim-Fakir-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
@@ -78,7 +78,7 @@ const speakers: Speaker[] = [
     "id": "siphamandla-zondi",
     "name": "Dr. Siphamandla Zondi",
     "role": "Political Scientist & Global South Policy Strategist",
-    "image": "/speakers/Geopolitics/Siphamandla-Zondi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Siphamandla-Zondi-The-Speakers-Firm.jpg",
     "topics": [
       "Geopolitical Risk Analysis",
       "Global Policy Shifts",
