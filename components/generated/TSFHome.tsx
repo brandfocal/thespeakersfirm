@@ -215,7 +215,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'arj7oStGLkU',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Accountant, Broadcaster & Economic Analyst</span>
+  bio: <span>Accountant, Broadcaster & Economic Analyst</span>,
+  trackId: 'economics-markets-and-the-global-economy'
 }, {
   id: 'siphiwe-moyo',
   name: 'Siphiwe Moyo',
@@ -226,7 +227,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.25)',
-  bio: <span>Global Speaker, Author & Organisational Development Specialist</span>
+  bio: <span>Global Speaker, Author & Organisational Development Specialist</span>,
+  trackId: 'change-resilience-and-organisational-agility'
 }, {
   id: 'lincoln-mali',
   name: 'Lincoln Mali',
@@ -237,7 +239,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Corporate Executive, Leadership Writer & CEO</span>
+  bio: <span>Corporate Executive, Leadership Writer & CEO</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
 }, {
   id: 'stafford-masie',
   name: 'Stafford Masie',
@@ -248,7 +251,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.26)',
-  bio: <span>Technology Futurist, Former CEO of Google SA & Angel Investor</span>
+  bio: <span>Technology Futurist, Former CEO of Google SA & Angel Investor</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
 }, {
   id: 'abdullah-verachia',
   name: 'Abdullah Verachia',
@@ -369,7 +373,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
-  bio: <span>Corporate Executive, Financial Services Leader & Speaker</span>
+  bio: <span>Corporate Executive, Financial Services Leader & Speaker</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
 }, {
   id: 'zukie-siyotula',
   name: 'Nozukiso “Zukie” Siyotula',

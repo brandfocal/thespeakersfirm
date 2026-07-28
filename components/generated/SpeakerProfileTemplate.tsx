@@ -75,6 +75,7 @@ export interface SpeakerProfileTemplateProps {
   books?: SpeakerBook[];
   socialProofLogos?: SpeakerSocialProofLogo[];
   children?: React.ReactNode;
+  mediaArticlesSlot?: React.ReactNode;
 }
 
 const BorderLine = ({ side }: { side: "left" | "right" }) => {
@@ -100,7 +101,8 @@ export const SpeakerProfileTemplate = ({
   strategicThemes,
   books = [],
   socialProofLogos = [],
-  children
+  children,
+  mediaArticlesSlot
 }: SpeakerProfileTemplateProps) => {
   const [activeStrategicThemeIndex, setActiveStrategicThemeIndex] = React.useState<number | null>(0);
 
@@ -395,6 +397,8 @@ export const SpeakerProfileTemplate = ({
           </div>
         </section>
       )}
+
+      {mediaArticlesSlot}
 
       {/* 5. Booking Enquiry Section */}
       <section id="booking-form" className="relative flex min-h-[100svh] w-full flex-col items-center overflow-hidden bg-[#0A0A0A]" aria-labelledby="booking-section-heading">

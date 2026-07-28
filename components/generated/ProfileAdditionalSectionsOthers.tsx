@@ -231,12 +231,23 @@ const PRINCE_MEDIA: MediaItem[] = [
   }
 ];
 
-interface SpeakerAdditionalDataProps {
-  speakerId: "clement-manyathela" | "sizwe-mpofu-walsh" | "nozipho-tshabalala" | "prince-mashele";
+interface VideoClip {
+  id: string;
+  label: string;
+  youtubeId: string;
 }
 
-export const ProfileAdditionalSections = ({ speakerId }: SpeakerAdditionalDataProps) => {
+interface SpeakerAdditionalDataProps {
+  speakerId: "clement-manyathela" | "sizwe-mpofu-walsh" | "nozipho-tshabalala" | "prince-mashele" | "tryphosa-ramano" | "khaya-sithole" | "siphiwe-moyo" | "lincoln-mali" | "stafford-masie";
+  customGallery?: GalleryImage[];
+  customMedia?: MediaItem[];
+  customIntroText?: string;
+  customVideos?: VideoClip[];
+}
+
+export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntroText, customVideos }: SpeakerAdditionalDataProps) => {
   const [activeGalleryImage, setActiveGalleryImage] = React.useState<GalleryImage | null>(null);
+  const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
   const closeLightbox = () => setActiveGalleryImage(null);
 
   React.useEffect(() => {
@@ -249,30 +260,58 @@ export const ProfileAdditionalSections = ({ speakerId }: SpeakerAdditionalDataPr
   }, [activeGalleryImage]);
 
   // Determine correct content array based on speakerId
-  let galleryImages: GalleryImage[] = [];
-  let mediaArticles: MediaItem[] = [];
-  let galleryIntroText = "";
+  let galleryImages: GalleryImage[] = customGallery || [];
+  let galleryIntroText = customIntroText || "";
+  let videoClips: VideoClip[] = customVideos || [];
 
-  if (speakerId === "clement-manyathela") {
-    galleryImages = CLEMENT_GALLERY;
-    mediaArticles = CLEMENT_MEDIA;
-    galleryIntroText = "A glimpse into Clement's high-impact broadcasting and live moderation roles.";
-  } else if (speakerId === "sizwe-mpofu-walsh") {
-    galleryImages = SIZWE_GALLERY;
-    mediaArticles = SIZWE_MEDIA;
-    galleryIntroText = "Key snapshots from Dr. Mpofu-Walsh's lectures, book reviews and podcast series.";
-  } else if (speakerId === "nozipho-tshabalala") {
-    galleryImages = NOZIPHO_GALLERY;
-    mediaArticles = NOZIPHO_MEDIA;
-    galleryIntroText = "Highlights from Nozipho's global summits, business hosting, and moderator work.";
-  } else if (speakerId === "prince-mashele") {
-    galleryImages = PRINCE_GALLERY;
-    mediaArticles = PRINCE_MEDIA;
-    galleryIntroText = "Policy analysis roundtables and writing sessions with Prince Mashele.";
+  if (!customGallery) {
+    if (speakerId === "clement-manyathela") {
+      galleryImages = CLEMENT_GALLERY;
+      galleryIntroText = "A glimpse into Clement's high-impact broadcasting and live moderation roles.";
+    } else if (speakerId === "sizwe-mpofu-walsh") {
+      galleryImages = SIZWE_GALLERY;
+      galleryIntroText = "Key snapshots from Dr. Mpofu-Walsh's lectures, book reviews and podcast series.";
+    } else if (speakerId === "nozipho-tshabalala") {
+      galleryImages = NOZIPHO_GALLERY;
+      galleryIntroText = "Highlights from Nozipho's global summits, business hosting, and moderator work.";
+    } else if (speakerId === "prince-mashele") {
+      galleryImages = PRINCE_GALLERY;
+      galleryIntroText = "Policy analysis roundtables and writing sessions with Prince Mashele.";
+    }
+  } else {
+    galleryImages = customGallery;
+    galleryIntroText = customIntroText || "";
   }
 
   return (
     <div className="w-full">
+      {/* Video Modal Player */}
+      {activeVideoId && (
+        <div 
+          onClick={() => setActiveVideoId(null)}
+          className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-4 md:p-12 cursor-pointer"
+        >
+          <button 
+            onClick={() => setActiveVideoId(null)}
+            className="absolute top-6 right-6 text-white hover:text-[#e30e04] transition-colors p-2 z-[310]"
+            aria-label="Close video player"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div 
+            className="relative w-full max-w-5xl aspect-video bg-[#000000] border border-[#333333] overflow-hidden cursor-default rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe 
+              src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      )}
       {/* 1. Moments & Milestones Gallery Section */}
       {galleryImages.length > 0 && (
         <section id="gallery" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="gallery-heading">
@@ -296,6 +335,88 @@ export const ProfileAdditionalSections = ({ speakerId }: SpeakerAdditionalDataPr
         </section>
       )}
 
+      {/* 3. Video Reel Section */}
+      {videoClips.length > 0 && (
+        <section id="experience-reel" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="experience-reel-heading">
+          <div className="mx-auto max-w-[1312px]">
+            <div className="mb-10 grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div className="col-span-1 lg:col-span-7">
+                <p className={`${SECTION_TAG_CLASS} mb-6 w-fit`} style={SECTION_TAG_STYLE}><span>Experience Reel</span></p>
+                <h2 id="experience-reel-heading" className={SECTION_HEADING_CLASS}>
+                  <span className="block text-[#FFFFFF]">Watch Them</span>
+                  <span className="block text-[#e30e04]">In Action</span>
+                </h2>
+              </div>
+            </div>
+            
+            <div className={`grid gap-6 ${videoClips.length === 1 ? 'max-w-6xl md:grid-cols-1 mx-auto' : videoClips.length === 2 ? 'max-w-5xl md:grid-cols-2 mx-auto' : 'md:grid-cols-3'}`}>
+              {videoClips.map(clip => (
+                <article 
+                  key={clip.id} 
+                  onClick={() => setActiveVideoId(clip.youtubeId)}
+                  className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors"
+                >
+                  <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={`https://img.youtube.com/vi/${clip.youtubeId}/maxresdefault.jpg`}
+                      onError={(e) => {
+                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`;
+                      }}
+                      alt={`${clip.label} clip`}
+                      className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
+                    />
+                    <div aria-hidden="true" className="absolute bottom-0 left-0 right-0 z-[5] h-[50%] bg-gradient-to-t from-black via-black/30 to-transparent" />
+                    <div className="relative z-[7] flex h-16 w-16 items-center justify-center rounded-full border border-white/45 bg-black/45 text-white shadow-md backdrop-blur-md transition-all duration-300 group-hover:border-[#e30e04] group-hover:bg-[#e30e04]">
+                      <svg className="ml-1.5 h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="p-5 text-[12px] font-bold uppercase tracking-widest text-[#FFFFFF] sm:text-sm"><span>{clip.label}</span></h3>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Lightbox Modal */}
+      {activeGalleryImage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/82 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Gallery image lightbox">
+          <button type="button" className="absolute inset-0 cursor-default bg-transparent border-0" onClick={closeLightbox} aria-label="Close gallery image" />
+          <figure className="relative z-10 w-full max-w-5xl overflow-hidden rounded-[26px] border border-white/15 bg-[#0A0A0A] shadow-2xl">
+            <img src={activeGalleryImage.src} alt={activeGalleryImage.alt} className="max-h-[78vh] w-full object-contain mx-auto" />
+            <figcaption className="flex flex-col items-start justify-between gap-4 p-5 text-white sm:flex-row sm:items-center">
+              <span className="text-[10px] font-bold uppercase tracking-widest sm:text-xs">{activeGalleryImage.caption}</span>
+              <button type="button" onClick={closeLightbox} className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/30 text-white bg-transparent transition-colors hover:bg-white hover:text-[#0A0A0A]" aria-label="Close lightbox">
+                <X className="h-5 w-5" aria-hidden="true" />
+              </button>
+            </figcaption>
+          </figure>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const ProfileAdditionalMediaSections = ({ speakerId, customMedia }: SpeakerAdditionalDataProps) => {
+  // Determine correct content array based on speakerId
+  let mediaArticles: MediaItem[] = customMedia || [];
+
+  if (!customMedia) {
+    if (speakerId === "clement-manyathela") {
+      mediaArticles = CLEMENT_MEDIA;
+    } else if (speakerId === "sizwe-mpofu-walsh") {
+      mediaArticles = SIZWE_MEDIA;
+    } else if (speakerId === "nozipho-tshabalala") {
+      mediaArticles = NOZIPHO_MEDIA;
+    } else if (speakerId === "prince-mashele") {
+      mediaArticles = PRINCE_MEDIA;
+    }
+  }
+
+  return (
+    <div className="w-full">
       {/* 2. Media Coverage Section */}
       {mediaArticles.length > 0 && (
         <section id="media-coverage" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="media-coverage-heading">
@@ -330,22 +451,6 @@ export const ProfileAdditionalSections = ({ speakerId }: SpeakerAdditionalDataPr
             </div>
           </div>
         </section>
-      )}
-
-      {/* Lightbox Modal */}
-      {activeGalleryImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/82 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Gallery image lightbox">
-          <button type="button" className="absolute inset-0 cursor-default bg-transparent border-0" onClick={closeLightbox} aria-label="Close gallery image" />
-          <figure className="relative z-10 w-full max-w-5xl overflow-hidden rounded-[26px] border border-white/15 bg-[#0A0A0A] shadow-2xl">
-            <img src={activeGalleryImage.src} alt={activeGalleryImage.alt} className="max-h-[78vh] w-full object-contain mx-auto" />
-            <figcaption className="flex flex-col items-start justify-between gap-4 p-5 text-white sm:flex-row sm:items-center">
-              <span className="text-[10px] font-bold uppercase tracking-widest sm:text-xs">{activeGalleryImage.caption}</span>
-              <button type="button" onClick={closeLightbox} className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/30 text-white bg-transparent transition-colors hover:bg-white hover:text-[#0A0A0A]" aria-label="Close lightbox">
-                <X className="h-5 w-5" aria-hidden="true" />
-              </button>
-            </figcaption>
-          </figure>
-        </div>
       )}
     </div>
   );
