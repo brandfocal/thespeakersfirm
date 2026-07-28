@@ -12,6 +12,11 @@ import { AboutTeamSection as KhayaProfile } from "@/components/generated/KhayaSi
 import { AboutTeamSection as SiphiweProfile } from "@/components/generated/SiphiweMoyoProfileNew";
 import { AboutTeamSection as LincolnProfile } from "@/components/generated/LincolnMaliProfileNew";
 import { AboutTeamSection as StaffordProfile } from "@/components/generated/StaffordMasieProfileNew";
+import { AboutTeamSection as MarwalaProfile } from "@/components/generated/ProfTshilidziMarwalaProfileNew";
+import { AboutTeamSection as SylvesterProfile } from "@/components/generated/SylvesterChaukeProfileNew";
+import { AboutTeamSection as MzamoProfile } from "@/components/generated/MzamoMasitoProfileNew";
+import { AboutTeamSection as MuziProfile } from "@/components/generated/MuziKuzwayoProfileNew";
+import { AboutTeamSection as MushambiProfile } from "@/components/generated/MushambiMutumaProfileNew";
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -62,6 +67,26 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "stafford-masie") {
     return <StaffordProfile />;
+  }
+
+  if (speakerId === "tshilidzi-marwala") {
+    return <MarwalaProfile />;
+  }
+
+  if (speakerId === "sylvester-chauke") {
+    return <SylvesterProfile />;
+  }
+
+  if (speakerId === "mzamo-masito") {
+    return <MzamoProfile />;
+  }
+
+  if (speakerId === "muzi-kuzwayo") {
+    return <MuziProfile />;
+  }
+
+  if (speakerId === "mushambi-mutuma") {
+    return <MushambiProfile />;
   }
 
   // Format parameters to readable names
