@@ -38,9 +38,7 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Lincoln Mali, a distinguished corporate leader, banking veteran, and the CEO of Lesaka Technologies.",
-  "Lincoln has built a stellar reputation over 25 years in financial services, leading massive organizational turnarounds, driving tech adoption, and advocating for leadership integrity. He is a prominent voice on business ethics and African governance models.",
-  "As an author and strategic boardroom speaker, he provides invaluable blueprints for leading large-scale corporate changes, alignment of team culture, and consumer-centric financial innovation."
+  "Lincoln Mali was appointed as our Chief Executive Officer: Southern Africa on May 1, 2021. He is a financial services executive with over 25 years in the industry. Until April 2021, he was the Head of Group Card and Payments at Standard Bank Group, having served in many different roles within that organisation since 2001. Lincoln chaired the board of directors of Diners Club South Africa until April 2021 and was a member of the Central and Eastern Europe, Middle East and Africa Business Council for Visa. Besides his other qualifications, he has attended an Advanced Management Program at Harvard Business School and holds various diplomas in banking and management."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

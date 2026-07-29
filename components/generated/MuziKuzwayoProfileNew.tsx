@@ -38,7 +38,6 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Muzi Kuzwayo, a legendary brand strategist, visiting professor at UCT GSB, and marketing disruptor.",
   "Muzi Kuzwayo is the founder of Ignitive, the former CEO of TBWAHuntLascaris, a leading advertising agency, non-executive director of Spur Holdings and chairman of Project Literacy, an organisation dedicated to promoting literacy in South Africa. Muzi was also a director and shareholder of King James, an advertising agency, as well as a director of the Association of Communication Agencies, an industry body that represents advertising and communication agencies.",
   "Muzi is a visiting professor at UCT’s Graduate School of Business and author of the best-selling books Marketing through Mud and Dust and There’s a Tsotsi in the Boardroom, and was a columnist for the newspapers The Saturday Star and The Argus, commenting on advertising and marketing. Six years ago he bought two Pick ‘n Pay franchise stores which he ran personally, giving him a complete understanding of building brands right through to retail. He also has extensive knowledge of the South African work force and the ability to align the interests of workers with those of shareholders."
 ];

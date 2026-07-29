@@ -83,6 +83,15 @@ const CLEMENT_MEDIA: MediaItem[] = [
     action: "Listen to Episode",
     url: "https://omny.fm/shows/mid-morning-show-702/health-and-wellness-gout-what-causes-it-and-how-ca?in_playlist=podcast-1#description",
     image: "/speakers/Clement Manyathela/Clement-Manyathela-The-Speakers-Firm-10.jpg"
+  },
+  {
+    id: "clement-art-3",
+    headline: "World of work – Work policies on office romance",
+    publication: "Radio 702",
+    date: "08 Nov 2022",
+    action: "Listen to Episode",
+    url: "https://omny.fm/shows/mid-morning-show-702/world-of-work-work-policies-on-office-romance?in_playlist=podcast-1#description",
+    image: "/speakers/Clement Manyathela/Clement-Manyathela-The-Speakers-Firm-6.jpg"
   }
 ];
 
@@ -129,6 +138,15 @@ const SIZWE_MEDIA: MediaItem[] = [
     action: "Watch Commentary",
     url: "https://www.youtube.com/watch?v=tHBhmi9zPN8",
     image: "/speakers/Sizwe Mpofu-Walsh/New folder/sizwe-mpofu-walsh.jpg"
+  },
+  {
+    id: "sizwe-art-3",
+    headline: "Penuel The Black Pen In Conversation Dr. Sizwe Mpofu-Walsh",
+    publication: "YouTube / Penuel The Black Pen",
+    date: "12 Jul 2022",
+    action: "Watch Interview",
+    url: "https://www.youtube.com/watch?v=BFfspPfqz2A",
+    image: "/speakers/Sizwe Mpofu-Walsh/New folder/Sizwe-Mpofu-Walsh-The-Speakers-Firm6.jpg"
   }
 ];
 
@@ -182,6 +200,15 @@ const NOZIPHO_MEDIA: MediaItem[] = [
     action: "Watch Dialogue",
     url: "https://www.youtube.com/watch?v=503QsXitWGs",
     image: "/speakers/Nozipho Tshabalala/Nozipho-Tshabalala-The-Speakers-Firm-10.jpg"
+  },
+  {
+    id: "nozipho-art-3",
+    headline: "Mentorship Mondays Episode 55 | The Masterclass Series | Dr Thebe Ikalafeng",
+    publication: "YouTube / Masterclass Series",
+    date: "11 Apr 2022",
+    action: "Watch Masterclass",
+    url: "https://www.youtube.com/watch?v=LQmnzZ21wKk",
+    image: "/speakers/Nozipho Tshabalala/Nozipho-Tshabalala-The-Speakers-Firm-2.png"
   }
 ];
 
@@ -228,6 +255,15 @@ const PRINCE_MEDIA: MediaItem[] = [
     action: "Read Commentary",
     url: "https://iol.co.za/news/politics/2025-07-17-prince-mashele-i-will-publicly-endorse-helen-zille-if-she-vies-joburg-mayoral-chain/",
     image: "/speakers/Prince Mashele/Prince-Mashele-The-Speakers-Firm-9.jpg"
+  },
+  {
+    id: "prince-art-3",
+    headline: "Faith in the future holds us together, hope that tomorrow will be better",
+    publication: "Sowetan Live",
+    date: "05 Jan 2022",
+    action: "Read Opinion",
+    url: "https://www.sowetanlive.co.za/opinion/columnists/2022-01-05-faith-in-the-future-holds-us-together-hope-that-tomorrow-will-be-better/",
+    image: "/speakers/Prince Mashele/Prince-Mashele-The-Speakers-Firm-3.jpg"
   }
 ];
 
@@ -332,6 +368,7 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
               ))}
             </div>
           </div>
+          <div className="mx-auto max-w-[1312px] mt-12 border-t border-white/10" />
         </section>
       )}
 

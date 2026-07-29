@@ -38,9 +38,8 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Sylvester Chauke, an award-winning entrepreneur, brand disruptor, and founder of DNA Brand Architects.",
   "All Africa Young Business Leader of the Year 2017, Sylvester Chauke is a self-confessed Madonna crazy, multi-ward winning Entrepreneur and founder of DNA Brand Architects. After an lustrous career as the National Marketing Manager for Nando’s South Africa, Sylvester joined broadcasting giant MTV Networks Africa as its Director of Marketing and Communication. In 2012, Sylvester established DNA Brand Architects; a marketing and brand consultancy that works with some of the most revered brands on the continent. Besides running one of the most innovative brand agency in South Africa, Sylvester Chauke is one the 22 young leaders from around the world to sit as the Advisory Council for the World Economic Forum Global Shapers.",
-  "Sylvester’s business acumen has led him to be invited to sit amongst others, on the board of the South African State Theatre; Chair of the Artistic and Sponsorship Committee and is also in the Advisory Board for the University of Johannesburg. Some of Sylvester’s accolades include: All Africa Young Business Leader of the Year, BBQ Young Leader of the Year, Oliver Empowerment Top Empowered Young Entrepreneur, and the Falcon Award for Excellence in Leadership."
+  "Sylvester’s business acumen has led him to be invited to sit amongst others, on the board of the South African State Theatre; Chair of the Artistic and Sponsorship Committee and is also in the Advisory Board for the University of Johannesburg. Some of Sylvester’s accolades include: CNBC Africa All Africa Young Business Leader of the Year, BBQ Young Leader of the Year, European Business Assembly, Best Enterprise and CEO Award, Oliver Empowerment Top Empowered Young Entrepreneur, World Confederation of Businesses Business Leader Award, Falcon Award for Excellence in leadership, Golden European Award for Quality and Commercial Prestige – to name a few."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

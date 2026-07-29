@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
-import { ProfileAdditionalSections } from "./ProfileAdditionalSectionsOthers";
+import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
   {
@@ -77,6 +77,9 @@ export const AboutTeamSection = () => {
       strategicThemes={STRATEGIC_THEMES}
       books={PUBLISHED_BOOKS}
       socialProofLogos={SOCIAL_PROOF_LOGOS}
+      mediaArticlesSlot={
+        <ProfileAdditionalMediaSections speakerId="nozipho-tshabalala" />
+      }
     >
       <ProfileAdditionalSections speakerId="nozipho-tshabalala" />
     </SpeakerProfileTemplate>

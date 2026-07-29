@@ -38,9 +38,10 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Siphiwe Moyo, an esteemed global speaker, author, and organizational development specialist.",
-  "Siphiwe is a master of teaching change management, resilience, and personal leadership. With over a decade of executive advisory work, he connects psychological concepts with daily corporate realities to help teams navigate transition successfully.",
-  "His engaging delivery, combined with academic frameworks in organizational behavior, makes him a highly sought-after voice for strategic leadership sessions and corporate retreats."
+  "At The Speakers Firm, we proudly represent Siphiwe Moyo, a globally sought-after Keynote Speaker, Author, and Facilitator renowned for transforming leadership, culture, and human behaviour in organisations. A Southern African Speaker Hall of Fame and Educator Hall of Fame inductee, Siphiwe is trusted by executives and institutions navigating people, performance, and organisational change.",
+  "A seasoned HR practitioner and Organisational Behaviour specialist, Siphiwe has served as Head of Learning & Development for several JSE-listed companies and taught at leading business schools including Stellenbosch University, GIBS, Henley Business School Africa, Wits Business School, and Johannesburg Business School.",
+  "His keynotes bring clarity, energy, and executional insight to leadership teams, making him the perfect fit for year-end functions, strategy offsites, and teambuilding sessions. Whether in person or virtual, Siphiwe connects deeply with audiences, turning behavioural science into practical leadership action.",
+  "Elevate your next leadership event with Siphiwe Moyo, represented by The Speakers Firm, Africa’s #1 Strategic Speakers Bureau."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

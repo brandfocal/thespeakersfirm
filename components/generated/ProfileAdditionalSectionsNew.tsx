@@ -519,6 +519,7 @@ export const ProfileAdditionalSections = () => {
               </button>)}
           </div>
         </div>
+        <div className="mx-auto max-w-[1312px] mt-12 border-t border-white/10" />
       </section>
 
       <section id="experience-reel" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="experience-reel-heading">

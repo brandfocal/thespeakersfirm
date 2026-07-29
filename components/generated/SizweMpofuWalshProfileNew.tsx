@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
-import { ProfileAdditionalSections } from "./ProfileAdditionalSectionsOthers";
+import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
   {
@@ -38,10 +38,7 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Dr Sizwe Mpofu-Walsh is a Lecturer in the Department of International Relations at Wits University. He was SRC president at UCT in 2010. He holds a DPhil in International Relations from the University of Oxford.",
-  "His first book Democracy and Delusion: 10 Myths in South African Politics (2017) won the City Press-Tafelberg Nonfiction Award. The book was accompanied by a rap album of the same name.",
-  "His second book The New Apartheid (2021) was one of the bestselling books in South Africa that year.",
-  "He is the founder of the popular current affairs YouTube channel SMWX, and has recently worked as a broadcaster on Unfiltered at the SABC."
+  "Dr Sizwe Mpofu-Walsh is a Lecturer in the Department of International Relations at Wits University. He was SRC president at UCT in 2010. He holds a DPhil in International Relations from the University of Oxford. His first book Democracy and Delusion: 10 Myths in South African Politics (2017) won the City Press-Tafelberg Nonfiction Award. The book was accompanied by a rap album of the same name. His second book The New Apartheid (2021) was one of the bestselling books in South Africa that year. He is the founder of the popular current affairs YouTube channel SMWX, and has recently worked as a broadcaster on Unfiltered at the SABC."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
@@ -84,6 +81,9 @@ export const AboutTeamSection = () => {
       strategicThemes={STRATEGIC_THEMES}
       books={PUBLISHED_BOOKS}
       socialProofLogos={SOCIAL_PROOF_LOGOS}
+      mediaArticlesSlot={
+        <ProfileAdditionalMediaSections speakerId="sizwe-mpofu-walsh" />
+      }
     >
       <ProfileAdditionalSections speakerId="sizwe-mpofu-walsh" />
     </SpeakerProfileTemplate>

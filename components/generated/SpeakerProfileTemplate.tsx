@@ -104,8 +104,6 @@ export const SpeakerProfileTemplate = ({
   children,
   mediaArticlesSlot
 }: SpeakerProfileTemplateProps) => {
-  const [activeStrategicThemeIndex, setActiveStrategicThemeIndex] = React.useState<number | null>(0);
-
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (el) {
@@ -281,81 +279,7 @@ export const SpeakerProfileTemplate = ({
         </div>
       </section>
 
-      {/* 4. Boardroom Interventions Accordion Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 24 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
-        viewport={{ once: true, margin: "-120px" }} 
-        transition={{
-          duration: 0.65,
-          ease: [0.22, 1, 0.36, 1]
-        }} 
-        className="relative w-full overflow-hidden bg-[#0A0A0A] px-6 py-16 text-white md:px-16 md:py-32" 
-        aria-labelledby="boardroom-section-heading" 
-        id="boardroom-interventions"
-      >
-        <div className="pointer-events-none absolute inset-0 hidden justify-center xl:flex" aria-hidden="true">
-          <div className="relative h-full w-full max-w-[1440px] border-x border-[#333333]">
-            <div className="absolute top-0 -left-[3.5px] h-[7px] w-[7px] bg-white" />
-            <div className="absolute top-0 -right-[3.5px] h-[7px] w-[7px] bg-white" />
-          </div>
-        </div>
-        <div className="relative z-10 mx-auto flex w-full max-w-[1312px] flex-col gap-16 xl:flex-row xl:gap-20">
-          <div className="flex flex-col items-start justify-start gap-8 xl:max-w-[420px]">
-            <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-              <span>Boardroom Interventions and Keynotes</span>
-            </div>
-            <h2 id="boardroom-section-heading" className={`${SECTION_HEADING_CLASS} text-balance text-start`}>
-              <span className="block text-[#AFB0B0]">Boardroom Interventions</span>
-              <span className="block text-[#e30e04]">And Keynotes</span>
-            </h2>
-          </div>
-          <div className="flex flex-grow justify-center xl:justify-end">
-            <div className="flex w-full flex-col gap-0 overflow-hidden rounded-[24px] md:rounded-[32px]">
-              {strategicThemes.map((theme, themeIndex) => {
-                const isActive = activeStrategicThemeIndex === themeIndex;
-                return (
-                  <motion.article 
-                    key={theme.id} 
-                    className={`w-full overflow-hidden border-b border-[#333333] last:border-b-0 ${isActive ? "bg-[#1A1A1A]" : "bg-[#111111]"}`} 
-                    aria-label={`${theme.number} ${theme.title}`}
-                  >
-                    <button 
-                      type="button" 
-                      className="flex w-full cursor-pointer items-start justify-between gap-4 px-5 py-5 text-left transition-colors hover:bg-[#1A1A1A] sm:items-center sm:gap-6 sm:px-8 sm:py-6" 
-                      aria-expanded={isActive} 
-                      aria-controls={`${theme.id}-panel`} 
-                      onClick={() => setActiveStrategicThemeIndex(isActive ? null : themeIndex)}
-                    >
-                      <span className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:gap-8">
-                        <span className={`shrink-0 text-xs font-bold uppercase tracking-widest [font-variant-numeric:tabular-nums] ${isActive ? "text-[#e30e04]" : "text-[#AFB0B0]"}`}>{theme.number.replace("Theme ", "")}</span>
-                        <span className="text-base font-semibold uppercase tracking-tight text-white">{theme.title}</span>
-                      </span>
-                      <ChevronDown className={`h-5 w-5 shrink-0 transition-transform duration-300 ${isActive ? "rotate-180 text-[#e30e04]" : "text-[#AFB0B0]"}`} aria-hidden="true" />
-                    </button>
-                    {isActive ? (
-                      <motion.div 
-                        id={`${theme.id}-panel`} 
-                        initial={{ height: 0, opacity: 0 }} 
-                        animate={{ height: "auto", opacity: 1 }} 
-                        transition={{
-                          duration: 0.35,
-                          ease: "easeOut"
-                        }} 
-                        className="overflow-hidden"
-                      >
-                        <p className="max-w-2xl px-5 pb-6 text-sm leading-relaxed text-[#AFB0B0] sm:px-8 sm:pb-8">
-                          <span>{theme.copy}</span>
-                        </p>
-                      </motion.div>
-                    ) : null}
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      {/* Boardroom Interventions & Keynotes section removed as not all speakers are keynote speakers */}
 
       {children}
 

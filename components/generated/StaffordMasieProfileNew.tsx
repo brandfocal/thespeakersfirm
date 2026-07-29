@@ -38,9 +38,13 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Stafford Masie, a renowned technology strategist, futurist, and the former CEO of Google South Africa.",
-  "Stafford is a pioneer of the digital business landscape, having spent over 25 years advising corporate boards, national governments, and global technology organizations on digital acceleration, artificial intelligence, and payment systems.",
-  "His high-impact keynote sessions combine strategic foresight, technological depth, and a passionate focus on the human side of innovation, leaving corporate audiences equipped to navigate future disruptions."
+  "Stafford Masie has been in the ICT industry for more than 30 years. He began his career as a software developer, network engineer & technology analyst for Telkom and thereafter, recruited to be the National Software Strategist for Dimension Data. Stafford has held various other technology leadership positions in his career, such as Co-CEO, co-founder and strategist for Redstar Networks (his first startup), the Product Director for Novell South Africa, a Global Corporate Business Strategist for Novell Inc. based in the USA (Utah) and returned to SA after 7.5 years to become Managing Director for Novell Sub-Saharan Africa.",
+  "Thereafter he joined Google, established Google’s first South Africa presence and became Google’s first Sub-Saharan Africa leader. Stafford built the first Google SA team, launched several of Google’s mainstream platforms, prepared all application services in unison with the World Cup Organizing Committee to ensure SA services were updated and available on all Google’s applications, globally. He and the team compiled, published and maintained Google’s first African strategy.",
+  "After Google, Stafford established several leading technology startups; notably “thumbzup” where he and his team invented several world-first financial services (fintech) payment technologies, raised international venture capital (via Visa Inc and Entré Capital) and also launched that fintech business in several global markets (partnering closely with leading international banks).",
+  "After thumbzup he established SauronAi and built several leading edge artificial intelligence solutions for the retail sector.",
+  "He has also served on the board of Advtech for 7.5 years as an independent non-executive director (and member of the investment and risk subcommittees) and during that tenure joined the board of the CSIR for a 4.5 year term.",
+  "Stafford is a well known businessman and technology investor, who is often a guest on international and local podcasts, radio, and tv news/talk shows. He is also specifically recognized as a tech startup angel investor, executive-MBA guest lecturer (GIBS, Henley, UJ/Wits business schools), and international keynote speaker.",
+  "He presently serves as a non-exec director on the board of Discovery Bank, is the Chairman of the board at Altvest Capital, additionally the Chairman of the board at the WITS/Telkom Innovation Lab, whilst angel investing in several emerging technology startups (most notably focused on Ai and Bitcoin (Lightning Network))."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

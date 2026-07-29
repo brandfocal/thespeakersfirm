@@ -30,8 +30,8 @@ const TICKER_LOGOS = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Professor Bonang Mohale is the Chancellor of the University of the Free State, Professor of Practice at the Johannesburg Business School (JBS) College of Business and Economics, Chairman of both Bidvest Group Limited and SBV Services, and President of the Business Unity South Africa (BUSA).",
-  "He is a highly respected South African businessman, known for his patriotism and active role in advancing countrywide transformation. He is the author of the best-selling books 'Lift As You Rise' and 'Behold The Turtle'."
+  "Bonang Mohale is the President of Business Unity South Africa (BUSA), Chancellor of the University of the Free State, Professor of Practice in the Johannesburg Business School (JBS) College of Business and Economics and Chairman of The Bidvest Group Limited, SBV Services and ArcelorMittal! He is a member of the Community of Chairpersons (CoC) of the World Economic Forum and author of the best selling books, “Lift As You Rise“ and “Behold The Turtle”! He has been included in the Reputation Poll International’s (RPI) 2023 list of the ‘100 Most Reputable Africans’. The selection criteria are Integrity, Reputation, Transparency, Visibility and Impact.",
+  "As the head of the UNwomen, she has been a global advocate for women and girls. She established initiatives such as the HeForShe for men and boys to address gender Equality. She is a Chancellor of University of Johannesburg a leading university on universal education on 4IR. She is a founder and leader of Umlambo Foundation which is dedicated to improvement of education and digital literacy training for educators."
 ];
 
 const CREDENTIAL_BADGES = [

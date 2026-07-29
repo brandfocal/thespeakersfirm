@@ -147,6 +147,7 @@ export const ProfileAdditionalSections = () => {
             ))}
           </div>
         </div>
+        <div className="mx-auto max-w-[1312px] mt-12 border-t border-white/10" />
       </section>
 
       {/* 2. Media Coverage Section */}

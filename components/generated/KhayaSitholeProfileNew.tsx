@@ -38,9 +38,9 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "At The Speakers Firm, we proudly represent Khaya Sithole, a prominent Chartered Accountant, academic, broadcaster, and macro-economic analyst.",
-  "Known for his analytical clarity and direct style, Khaya specializes in breaking down South Africa's public finance landscapes, state-owned enterprise governance, and fiscal policy directions. He writes and speaks extensively on regulatory accountability and state capacity.",
-  "His career spans academic lecturing, corporate advisory, and media hosting, positioning him as a leading interpreter of South Africa's political economy for local and international audiences."
+  "Khaya Sithole, is a chartered accountant, academic, activist, writer and radio host.",
+  "A graduate of UKZN and Oxford University, Khaya’s work in the media arena includes political and economic commentary, corporate events facilitation. He is the radio host on Power FM, a Johannesburg-based radio station. Khaya is a regular contributor on politics and finance for eNCA, Open News and the SABC and writes columns for the Business Day, the Mail & Guardian and Fin24.",
+  "Khaya served on the boards of JSE-listed Stadio Holdings Limited where he chaired the audit committee; and Tshikululu Social Investment’s audit committee. He currently serves on the boards of Lefika La Phodiso (The Art Therapy Institute) where he serves as the board chairperson; the board of the Association of Black Securities and Investment Professionals (ABSIP), and the Financial Sector Transformation Council (FSTC) as board chairperson."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

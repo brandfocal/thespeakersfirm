@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
-import { ProfileAdditionalSections } from "./ProfileAdditionalSectionsOthers";
+import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
   {
@@ -38,9 +38,8 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Prince Mashele is a prolific writer and commentator on diverse subjects related to his training as a political scientist. An influential thinker, who has written articles for South Africa’s top newspapers, including the Sunday Times, Sunday Independent, Business Day, Sowetan, and others, Prince Mashele is also a sought-after political consultant.",
-  "Further, as the speech writer for, among others, the SA Presidency and the Pan-Africa Parliament; such insights have further informed his opinions on South Africa today.",
-  "He has a Master’s Degree in Political Studies (Rhodes University), an Honours Degree in Political Studies and a BA Degree (both from the University of Venda). Prince Mashele is a former Senior Research Fellow at GovInn. Previously he served as Executive Director of the Centre for Politics and Research. Mashele also lectured in the Department of Political Sciences at the University of Pretoria."
+  "Prince Mashele is a prolific writer and commentator on diverse subjects related to his training as a political scientist. An influential thinker, who has written articles for South Africa’s top newspapers, including the Sunday Times, Sunday Independent, Business Day, Sowetan, and others, Prince Mashele is also a sought-after political consultant. Further, as the speech writer for, among others, the SA Presidency and the Pan-Africa Parliament; such insights have further informed his opinions on South Africa today.",
+  "He has a Master’s Degree in Political Studies (Rhodes University), an Honours Degree in Political Studies and a BA Degree (both from the University of Venda). Prince Mashele is a a former Senior Research Fellow at GovInn. Previously he served as Executive Director of the Centre for Politics and Research. Mashele also lectured in the Department of Political Sciences at the University of Pretoria."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
@@ -83,6 +82,9 @@ export const AboutTeamSection = () => {
       strategicThemes={STRATEGIC_THEMES}
       books={PUBLISHED_BOOKS}
       socialProofLogos={SOCIAL_PROOF_LOGOS}
+      mediaArticlesSlot={
+        <ProfileAdditionalMediaSections speakerId="prince-mashele" />
+      }
     >
       <ProfileAdditionalSections speakerId="prince-mashele" />
     </SpeakerProfileTemplate>
