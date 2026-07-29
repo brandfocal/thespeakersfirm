@@ -56,12 +56,12 @@ const speakers: Speaker[] = [{
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
-  id: 'lene-molefi',
-  name: 'Lene Molefi',
+  id: 'nene-molefi',
+  name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
   image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/lene-molefi'
+  path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',

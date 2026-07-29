@@ -274,7 +274,7 @@ interface VideoClip {
 }
 
 interface SpeakerAdditionalDataProps {
-  speakerId: "clement-manyathela" | "sizwe-mpofu-walsh" | "nozipho-tshabalala" | "prince-mashele" | "tryphosa-ramano" | "khaya-sithole" | "siphiwe-moyo" | "lincoln-mali" | "stafford-masie";
+  speakerId: string;
   customGallery?: GalleryImage[];
   customMedia?: MediaItem[];
   customIntroText?: string;
@@ -395,9 +395,10 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
                 >
                   <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src={`https://img.youtube.com/vi/${clip.youtubeId}/maxresdefault.jpg`}
+                      src={`https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`}
                       onError={(e) => {
-                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`;
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/mqdefault.jpg`;
                       }}
                       alt={`${clip.label} clip`}
                       className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"

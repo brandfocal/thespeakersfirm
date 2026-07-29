@@ -54,6 +54,14 @@ const SOCIAL_PROOF_LOGOS = [
 ];
 
 export const AboutTeamSection = () => {
+  const customVideos = [
+    {
+      id: "clement-vid-1",
+      label: "Clement Manyathela in Action",
+      youtubeId: "M7gLLEM0KPg"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Clement Manyathela"
@@ -73,7 +81,7 @@ export const AboutTeamSection = () => {
         <ProfileAdditionalMediaSections speakerId="clement-manyathela" />
       }
     >
-      <ProfileAdditionalSections speakerId="clement-manyathela" />
+      <ProfileAdditionalSections speakerId="clement-manyathela" customVideos={customVideos} />
     </SpeakerProfileTemplate>
   );
 };

@@ -70,12 +70,12 @@ const speakers: Speaker[] = [{
   topics: ['Courageous Leadership & Decision Making', 'Leading Through Institutional Complexity', 'C-Suite & Executive Resilience'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
-  id: 'lene-molefi',
-  name: 'Lene Molefi',
+  id: 'nene-molefi',
+  name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
   image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/lene-molefi'
+  path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',

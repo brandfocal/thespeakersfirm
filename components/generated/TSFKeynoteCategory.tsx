@@ -119,15 +119,15 @@ const speakers: Speaker[] = [{
   topics: ['Leadership', 'Governance', 'Resilience', 'Legacy'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
-  id: 'lene-molefi',
-  name: 'Lene Molefi',
+  id: 'nene-molefi',
+  name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
   image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Transformation'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/lene-molefi'
+  path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'vumile-msweli',
-  name: 'Dr Vumile Msweli',
+  name: 'Dr. Vumile Msweli',
   role: 'Chief Executive Officer, Hesed Consulting, International Keynote Speaker, Redefining People, Leadership & the Future of Work',
   image: '/speakers/FutureOfWork/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],

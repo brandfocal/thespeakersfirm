@@ -62,6 +62,14 @@ const PUBLISHED_BOOKS = [
 ];
 
 export const AboutTeamSection = () => {
+  const customVideos = [
+    {
+      id: "nozipho-vid-1",
+      label: "Nozipho Tshabalala in Action",
+      youtubeId: "WVpHhzeAlyM"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Nozipho Tshabalala"
@@ -81,7 +89,7 @@ export const AboutTeamSection = () => {
         <ProfileAdditionalMediaSections speakerId="nozipho-tshabalala" />
       }
     >
-      <ProfileAdditionalSections speakerId="nozipho-tshabalala" />
+      <ProfileAdditionalSections speakerId="nozipho-tshabalala" customVideos={customVideos} />
     </SpeakerProfileTemplate>
   );
 };

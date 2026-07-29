@@ -113,8 +113,9 @@ const MEDIA_ARTICLES: MediaItem[] = [
   }
 ];
 
-export const ProfileAdditionalSections = () => {
+export const ProfileAdditionalSections = ({ customVideos }: { customVideos?: Array<{ id: string; label: string; youtubeId: string }> }) => {
   const [activeGalleryImage, setActiveGalleryImage] = React.useState<GalleryImage | null>(null);
+  const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
   const closeLightbox = () => setActiveGalleryImage(null);
 
   React.useEffect(() => {
@@ -126,8 +127,38 @@ export const ProfileAdditionalSections = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [activeGalleryImage]);
 
+  const videoClips = customVideos || [];
+
   return (
     <div className="w-full">
+      {/* Video Modal Player */}
+      {activeVideoId && (
+        <div 
+          onClick={() => setActiveVideoId(null)}
+          className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-4 md:p-12 cursor-pointer"
+        >
+          <button 
+            onClick={() => setActiveVideoId(null)}
+            className="absolute top-6 right-6 text-white hover:text-[#e30e04] transition-colors p-2 z-[310]"
+            aria-label="Close video player"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div 
+            className="relative w-full max-w-5xl aspect-video bg-[#000000] border border-[#333333] overflow-hidden cursor-default rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe 
+              src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      )}
+
       {/* 1. Moments & Milestones Gallery Section */}
       <section id="gallery" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="gallery-heading">
         <div className="mx-auto grid max-w-[1312px] grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-16">
@@ -149,6 +180,53 @@ export const ProfileAdditionalSections = () => {
         </div>
         <div className="mx-auto max-w-[1312px] mt-12 border-t border-white/10" />
       </section>
+
+      {/* 3. Video Reel Section */}
+      {videoClips.length > 0 && (
+        <section id="experience-reel" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="experience-reel-heading">
+          <div className="mx-auto max-w-[1312px]">
+            <div className="mb-10 grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
+              <div className="col-span-1 lg:col-span-7">
+                <p className={`${SECTION_TAG_CLASS} mb-6 w-fit`} style={SECTION_TAG_STYLE}><span>Experience Reel</span></p>
+                <h2 id="experience-reel-heading" className={SECTION_HEADING_CLASS}>
+                  <span className="block text-[#FFFFFF]">Watch Them</span>
+                  <span className="block text-[#e30e04]">In Action</span>
+                </h2>
+              </div>
+            </div>
+            
+            <div className={`grid gap-6 ${videoClips.length === 1 ? 'max-w-6xl md:grid-cols-1 mx-auto' : videoClips.length === 2 ? 'max-w-5xl md:grid-cols-2 mx-auto' : 'md:grid-cols-3'}`}>
+              {videoClips.map(clip => (
+                <article 
+                  key={clip.id} 
+                  onClick={() => setActiveVideoId(clip.youtubeId)}
+                  className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors"
+                >
+                  <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={`https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/mqdefault.jpg`;
+                      }}
+                      alt={`${clip.label} clip`}
+                      className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
+                    />
+                    <div aria-hidden="true" className="absolute bottom-0 left-0 right-0 z-[5] h-[50%] bg-gradient-to-t from-black via-black/30 to-transparent" />
+                    <div className="relative z-[7] flex h-16 w-16 items-center justify-center rounded-full border border-white/45 bg-black/45 text-white shadow-md backdrop-blur-md transition-all duration-300 group-hover:border-[#e30e04] group-hover:bg-[#e30e04]">
+                      <svg className="ml-1.5 h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="p-5 text-[12px] font-bold uppercase tracking-widest text-[#FFFFFF] sm:text-sm"><span>{clip.label}</span></h3>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto max-w-[1312px] mt-12 border-t border-white/10" />
+        </section>
+      )}
 
       {/* 2. Media Coverage Section */}
       <section id="media-coverage" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="media-coverage-heading">

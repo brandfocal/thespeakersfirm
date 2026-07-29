@@ -66,6 +66,14 @@ const PUBLISHED_BOOKS = [
 ];
 
 export const AboutTeamSection = () => {
+  const customVideos = [
+    {
+      id: "sizwe-vid-1",
+      label: "Dr. Sizwe Mpofu-Walsh in Action",
+      youtubeId: "vZLishgxPCw"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Sizwe Mpofu-Walsh"
@@ -85,7 +93,7 @@ export const AboutTeamSection = () => {
         <ProfileAdditionalMediaSections speakerId="sizwe-mpofu-walsh" />
       }
     >
-      <ProfileAdditionalSections speakerId="sizwe-mpofu-walsh" />
+      <ProfileAdditionalSections speakerId="sizwe-mpofu-walsh" customVideos={customVideos} />
     </SpeakerProfileTemplate>
   );
 };

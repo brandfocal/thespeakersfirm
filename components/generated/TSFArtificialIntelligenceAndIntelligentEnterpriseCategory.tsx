@@ -93,7 +93,7 @@ const speakers: Speaker[] = [
   },
   {
     "id": "puleng-mokhoalibe",
-    "name": "Dr Puleng Mokhoalibe",
+    "name": "Dr. Puleng Mokhoalibe",
     "role": "The Innovation Catalyst, Design Thinking & Future Strategy Specialist",
     "image": "/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
     "topics": [

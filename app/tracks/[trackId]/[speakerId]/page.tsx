@@ -1,6 +1,9 @@
 import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
+import { fetchAPI } from "@/lib/graphql";
+import { SpeakerProfileTemplate } from "@/components/generated/SpeakerProfileTemplate";
+import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "@/components/generated/ProfileAdditionalSectionsOthers";
 import { AboutTeamSection } from "@/components/generated/BonangMohaleProfileNew";
 import { AboutTeamSection as PhumzileProfile } from "@/components/generated/DrPhumzileMlamboNgcukaProfileNew";
 import { AboutTeamSection as ClementProfile } from "@/components/generated/ClementManyathelaProfileNew";
@@ -17,6 +20,81 @@ import { AboutTeamSection as SylvesterProfile } from "@/components/generated/Syl
 import { AboutTeamSection as MzamoProfile } from "@/components/generated/MzamoMasitoProfileNew";
 import { AboutTeamSection as MuziProfile } from "@/components/generated/MuziKuzwayoProfileNew";
 import { AboutTeamSection as MushambiProfile } from "@/components/generated/MushambiMutumaProfileNew";
+import { AboutTeamSection as ZukieSiyotulaProfile } from "@/components/generated/ZukieSiyotulaProfileNew";
+import { AboutTeamSection as NombasaTsengwaProfile } from "@/components/generated/NombasaTsengwaProfileNew";
+import { AboutTeamSection as ThuliMadonselaProfile } from "@/components/generated/ThuliMadonselaProfileNew";
+import { AboutTeamSection as NeneMolefiProfile } from "@/components/generated/NeneMolefiProfileNew";
+import { AboutTeamSection as FemiAdebanjiProfile } from "@/components/generated/FemiAdebanjiProfileNew";
+import { AboutTeamSection as AlistairMokoenaProfile } from "@/components/generated/AlistairMokoenaProfileNew";
+import { AboutTeamSection as SiphoMasekoProfile } from "@/components/generated/SiphoMasekoProfileNew";
+import { AboutTeamSection as JohnSaneiProfile } from "@/components/generated/JohnSaneiProfileNew";
+import { AboutTeamSection as CallanAbrahamsProfile } from "@/components/generated/CallanAbrahamsProfileNew";
+import { AboutTeamSection as KgomotsoMotshidiProfile } from "@/components/generated/KgomotsoMotshidiProfileNew";
+import { AboutTeamSection as VumileMsweliProfile } from "@/components/generated/VumileMsweliProfileNew";
+import { AboutTeamSection as TselisoMohlomiProfile } from "@/components/generated/TselisoMohlomiProfileNew";
+import { AboutTeamSection as PulengMokhoalibeProfile } from "@/components/generated/PulengMokhoalibeProfileNew";
+import { AboutTeamSection as BoniweDunsterProfile } from "@/components/generated/BoniweDunsterProfileNew";
+
+async function getWordPressSpeaker(slug: string) {
+  const query = `
+    query GetSpeaker($id: ID!) {
+      speaker(id: $id, idType: SLUG) {
+        title
+        slug
+        acfFields {
+          speakerTitle
+          speakerDesignation
+          speakerRole
+          speakerRefId
+          heroImage
+          biographyImage
+          biographyHook
+          biographyParagraphs {
+            paragraph
+          }
+          credentials {
+            label
+            subtitle
+          }
+          strategicThemes {
+            number
+            title
+            copy
+          }
+          books {
+            title
+            description
+            coverImage
+            url
+          }
+          socialLogos {
+            name
+          }
+          gallery {
+            imageUrl
+            alt
+            caption
+            layoutWidth
+          }
+          videos {
+            label
+            youtubeId
+          }
+          mediaArticles {
+            headline
+            publication
+            date
+            action
+            url
+            image
+          }
+        }
+      }
+    }
+  `;
+
+  return await fetchAPI(query, { id: slug });
+}
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -24,6 +102,109 @@ interface PageProps {
 
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
+
+  if (speakerId === "test-speaker") {
+    const data = await getWordPressSpeaker("test-speaker");
+
+    if (!data || !data.speaker) {
+      return (
+        <div className="min-h-screen bg-[#0A0A0A] text-white flex flex-col items-center justify-center p-6 text-center">
+          <h1 className="text-2xl font-bold mb-4">Headless CMS Testing Route</h1>
+          <p className="text-white/70 max-w-md mb-6">
+            This route is configured to load data dynamically from WordPress using the <code>test-speaker</code> slug. 
+            No connection to the CMS was found, or the post does not exist yet.
+          </p>
+          <div className="bg-[#1C1C1E] border border-white/10 rounded-lg p-6 text-left text-xs font-mono max-w-lg overflow-auto">
+            <p className="text-yellow-500 font-bold mb-2">Next Steps for Setup:</p>
+            <ol className="list-decimal list-inside space-y-2 text-white/80">
+              <li>Configure <code>WORDPRESS_API_URL</code> in your <code>.env.local</code>.</li>
+              <li>Install WPGraphQL and WPGraphQL for ACF on your WordPress instance.</li>
+              <li>Create a &quot;Speaker&quot; post type and add fields matching the ACF Schema.</li>
+              <li>Publish a post with slug: <code>test-speaker</code>.</li>
+            </ol>
+          </div>
+        </div>
+      );
+    }
+
+    const speaker = data.speaker;
+    const acf = speaker.acfFields;
+
+    // Parse biography paragraphs
+    const bioParagraphs = acf.biographyParagraphs 
+      ? acf.biographyParagraphs.map((p: any) => p.paragraph) 
+      : [];
+
+    // Parse badges
+    const credentials = acf.credentials 
+      ? acf.credentials.map((c: any, index: number) => ({ id: `cred-${index}`, ...c })) 
+      : [];
+
+    // Parse themes
+    const strategicThemes = acf.strategicThemes 
+      ? acf.strategicThemes.map((t: any, index: number) => ({ id: `theme-${index}`, ...t })) 
+      : [];
+
+    // Parse books
+    const books = acf.books 
+      ? acf.books.map((b: any, index: number) => ({ id: `book-${index}`, ...b })) 
+      : [];
+
+    // Parse social proof
+    const socialProofLogos = acf.socialLogos 
+      ? acf.socialLogos.map((l: any, index: number) => ({ id: `logo-${index}`, name: l.name })) 
+      : [];
+
+    // Parse custom media articles
+    const customMedia = acf.mediaArticles 
+      ? acf.mediaArticles.map((m: any, index: number) => ({ id: `media-${index}`, ...m })) 
+      : [];
+
+    // Parse custom gallery
+    const customGallery = acf.gallery 
+      ? acf.gallery.map((g: any, index: number) => ({
+          id: `gal-${index}`,
+          src: g.imageUrl,
+          alt: g.alt,
+          caption: g.caption,
+          className: g.layoutWidth === "Span 2 Columns" ? "sm:col-span-2 lg:col-span-2" : ""
+        })) 
+      : [];
+
+    // Parse custom videos
+    const customVideos = acf.videos 
+      ? acf.videos.map((v: any, index: number) => ({ id: `vid-${index}`, ...v })) 
+      : [];
+
+    return (
+      <SpeakerProfileTemplate
+        speakerName={speaker.title}
+        speakerTitle={acf.speakerTitle || ""}
+        speakerDesignation={acf.speakerDesignation || ""}
+        speakerRole={acf.speakerRole || ""}
+        speakerRef={acf.speakerRefId || "CMS-TEST"}
+        heroBackgroundImage={acf.heroImage}
+        biographyImage={acf.biographyImage}
+        bioHook={acf.biographyHook}
+        fullBiographyParagraphs={bioParagraphs}
+        credentials={credentials}
+        strategicThemes={strategicThemes}
+        books={books}
+        socialProofLogos={socialProofLogos}
+        mediaArticlesSlot={
+          customMedia.length > 0 ? (
+            <ProfileAdditionalMediaSections speakerId="clement-manyathela" customMedia={customMedia} />
+          ) : undefined
+        }
+      >
+        <ProfileAdditionalSections 
+          speakerId="clement-manyathela" 
+          customGallery={customGallery} 
+          customVideos={customVideos}
+        />
+      </SpeakerProfileTemplate>
+    );
+  }
 
   if (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate") {
     return <AboutTeamSection />;
@@ -87,6 +268,62 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "mushambi-mutuma") {
     return <MushambiProfile />;
+  }
+
+  if (speakerId === "zukie-siyotula") {
+    return <ZukieSiyotulaProfile />;
+  }
+
+  if (speakerId === "dr-nombasa-tsengwa" || speakerId === "nombasa-tsengwa") {
+    return <NombasaTsengwaProfile />;
+  }
+
+  if (speakerId === "thuli-madonsela") {
+    return <ThuliMadonselaProfile />;
+  }
+
+  if (speakerId === "nene-molefi" || speakerId === "nene-molefe") {
+    return <NeneMolefiProfile />;
+  }
+
+  if (speakerId === "femi-adebanji") {
+    return <FemiAdebanjiProfile />;
+  }
+
+  if (speakerId === "dr-alistair-mokoena" || speakerId === "alistair-mokoena") {
+    return <AlistairMokoenaProfile />;
+  }
+
+  if (speakerId === "sipho-maseko") {
+    return <SiphoMasekoProfile />;
+  }
+
+  if (speakerId === "john-sanei") {
+    return <JohnSaneiProfile />;
+  }
+
+  if (speakerId === "callan-abrahams") {
+    return <CallanAbrahamsProfile />;
+  }
+
+  if (speakerId === "kgomotso-mamello-motshidi") {
+    return <KgomotsoMotshidiProfile />;
+  }
+
+  if (speakerId === "dr-vumile-msweli" || speakerId === "vumile-msweli") {
+    return <VumileMsweliProfile />;
+  }
+
+  if (speakerId === "tseliso-mohlomi") {
+    return <TselisoMohlomiProfile />;
+  }
+
+  if (speakerId === "dr-puleng-mokhoalibe" || speakerId === "puleng-mokhoalibe") {
+    return <PulengMokhoalibeProfile />;
+  }
+
+  if (speakerId === "boniwe-dunster") {
+    return <BoniweDunsterProfile />;
   }
 
   // Format parameters to readable names

@@ -67,6 +67,14 @@ const PUBLISHED_BOOKS = [
 ];
 
 export const AboutTeamSection = () => {
+  const customVideos = [
+    {
+      id: "prince-vid-1",
+      label: "Prince Mashele in Action",
+      youtubeId: "FmZykqcW844"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Prince Mashele"
@@ -86,7 +94,7 @@ export const AboutTeamSection = () => {
         <ProfileAdditionalMediaSections speakerId="prince-mashele" />
       }
     >
-      <ProfileAdditionalSections speakerId="prince-mashele" />
+      <ProfileAdditionalSections speakerId="prince-mashele" customVideos={customVideos} />
     </SpeakerProfileTemplate>
   );
 };

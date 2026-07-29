@@ -65,6 +65,14 @@ const SOCIAL_PROOF_LOGOS = [
 ];
 
 export const AboutTeamSection = () => {
+  const customVideos = [
+    {
+      id: "phumzile-vid-1",
+      label: "Dr. Phumzile Mlambo-Ngcuka in Action",
+      youtubeId: "cWaP-HkU8Jg"
+    }
+  ];
+
   return (
     <>
       <SpeakerProfileTemplate
@@ -81,7 +89,7 @@ export const AboutTeamSection = () => {
         strategicThemes={STRATEGIC_THEMES}
         socialProofLogos={SOCIAL_PROOF_LOGOS}
       >
-        <ProfileAdditionalSections />
+        <ProfileAdditionalSections customVideos={customVideos} />
       </SpeakerProfileTemplate>
     </>
   );

@@ -420,22 +420,22 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(227, 14, 4, 0.25)',
   bio: <span>Former Public Protector, Global Voice for Integrity & Governance</span>
 }, {
-  id: 'lene-molefi',
-  name: 'Lene Molefi',
+  id: 'nene-molefi',
+  name: 'Nene Molefi',
   category: ['Keynote', 'Governance'],
   image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
-  alt: 'Lene Molefi',
+  alt: 'Nene Molefi',
   quote: 'Cultural transformation starts with equity and inclusion.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
-  tint: 'rgba(84, 133, 96, 0.22)',
+  tint: 'rgba(227, 14, 4, 0.25)',
   bio: <span>The Inclusion Vanguard, Diversity & Cultural Specialist</span>
 }, {
   id: 'vumile-msweli',
-  name: 'Dr Vumile Msweli',
+  name: 'Dr. Vumile Msweli',
   category: ['Keynote', 'Future of Work'],
   image: '/speakers/FutureOfWork/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
-  alt: 'Dr Vumile Msweli',
+  alt: 'Dr. Vumile Msweli',
   quote: 'Empowering global careers and organizational human capital.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
@@ -872,10 +872,10 @@ const FEATURED_SPEAKERS_RAW: Array<{
   bio: <span>The Voice of Resilience, Mental Health & Leadership Strategist</span>
 }, {
   id: 'puleng-mokhoalibe',
-  name: 'Dr Puleng Mokhoalibe',
+  name: 'Dr. Puleng Mokhoalibe',
   category: ['Future of Work', 'A.I.', 'Business Transformation'],
   image: '/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
-  alt: 'Dr Puleng Mokhoalibe',
+  alt: 'Dr. Puleng Mokhoalibe',
   quote: 'Catalysing innovation through design thinking and future strategy.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],

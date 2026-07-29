@@ -230,7 +230,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo"
   ],
   "diversity": [
-    "ndileka-mandela", "lene-molefi", "rikky-minyuku", "brian-mhlanga"
+    "ndileka-mandela", "nene-molefi", "rikky-minyuku", "brian-mhlanga"
   ],
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
@@ -239,7 +239,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
-    "maurice-radebe", "phumzile-mlambo-ngcuka", "lene-molefi", "john-kani", "siphiwe-moyo",
+    "maurice-radebe", "phumzile-mlambo-ngcuka", "nene-molefi", "john-kani", "siphiwe-moyo",
     "eunice-cross", "lerato-sithole", "mazwe-majola", "maanda-tshifularo", "femi-adebanji",
     "sthembiso-phakathi", "luthando-daniels", "maureen-tong", "david-molapo", "abner-mariri"
   ],
@@ -272,7 +272,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "female-keynote-speakers": [
     "ndileka-mandela", "azania-mosaka", "tryphosa-ramano", "gerry-rantseli-elsdon",
-    "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "lene-molefi",
+    "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "nene-molefi",
     "vumile-msweli", "linda-maqoma", "samke-mhlongo", "joy-machoene-kaapu", "delia-ndlovu",
     "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse"
   ],
@@ -301,7 +301,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "lincoln-mali", "stafford-masie"
   ],
   "respectful-workplaces": [
-    "martin-pelders", "bafana-khumalo", "lene-molefi", "brenda-kubheka"
+    "martin-pelders", "bafana-khumalo", "nene-molefi", "brenda-kubheka"
   ],
   "celebrity-speakers": [
     "proverb", "john-kani", "doctor-khumalo", "leanne-manas", "bongani-bingwa"
