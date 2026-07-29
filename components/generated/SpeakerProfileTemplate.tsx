@@ -208,9 +208,9 @@ export const SpeakerProfileTemplate = ({
                   viewport={{ once: true }} 
                   className="flex flex-col gap-3 sm:flex-row sm:gap-4 pt-4"
                 >
-                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-md transition-opacity duration-200 hover:opacity-90 sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("booking-form")} aria-label="Book an Engagement Call">
+                  <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-md transition-opacity duration-200 hover:opacity-90 sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("booking-form")} aria-label="Book the Speaker">
                     <CalendarDays className="h-5 w-5" aria-hidden="true" />
-                    <span>Book an Engagement Call</span>
+                    <span>BOOK THE SPEAKER</span>
                   </button>
                   <button className="flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-white/30 bg-transparent px-6 py-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-white hover:text-black sm:px-8 sm:text-[12px]" type="button" onClick={() => scrollToSection("biography")} aria-label="Explore Profile">
                     <ChevronDown className="h-5 w-5" aria-hidden="true" />
