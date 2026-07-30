@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "Ruth First Fellow", subtitle: "Wits University" },
-  { label: "Director Programs", subtitle: "ASRI" },
-  { label: "Summer Fellow", subtitle: "Stanford University" }
+  { id: "ruth-first", label: "Ruth First Fellow", subtitle: "Wits University" },
+  { id: "director-asri", label: "Director Programs", subtitle: "ASRI" },
+  { id: "stanford-fellow", label: "Summer Fellow", subtitle: "Stanford University" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Legislative & Parliamentary Oversight",
     copy: "Structuring oversight protocols and legislative procedures based on foundational work in the first democratic Parliament of South Africa."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Democratic Reform & Party Politics",
     copy: "Analyzing internal party factionalism, electoral amendment bills, and the effectiveness of institutional governance reforms."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Media Commentary & Opinion Strategy",
     copy: "Structuring news editorial boards, advising media houses, and translating complex constitutional issues into public interest broadcasts."

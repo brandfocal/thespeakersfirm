@@ -3,25 +3,28 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "PhD", subtitle: "Economic Inclusion (Wits)" },
-  { label: "M. Com", subtitle: "UKZN" },
-  { label: "AMP", subtitle: "Harvard" },
-  { label: "PMD", subtitle: "GIBS" },
-  { label: "EDP", subtitle: "GIBS" }
+  { id: "phd", label: "PhD", subtitle: "Economic Inclusion (Wits)" },
+  { id: "mcom", label: "M. Com", subtitle: "UKZN" },
+  { id: "amp", label: "AMP", subtitle: "Harvard" },
+  { id: "pmd", label: "PMD", subtitle: "GIBS" },
+  { id: "edp", label: "EDP", subtitle: "GIBS" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Business Turnaround & Operational Discipline",
     copy: "Diagnosing structural weaknesses and constructing recovery pathways. Leveraging owner-operator insights to steer organisations through supply chain, procurement, and pricing crises."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Economic Inclusion & Procurement Strategy",
     copy: "Designing policies and procurement frameworks that create sustainable growth, supplier ecosystem restructuring, and active value chain participation."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Public Sector Reform & De-bottlenecking",
     copy: "Removing institutional bottlenecks and simplifying regulatory, compliance, and government interface systems for corporate agility."

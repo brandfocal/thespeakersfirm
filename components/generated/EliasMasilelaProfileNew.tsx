@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "BA", subtitle: "Social Science (UNISWA)" },
-  { label: "MSc", subtitle: "Economic Policy (AAU)" },
-  { label: "Harvard", subtitle: "Professional Certs" }
+  { id: "ba", label: "BA", subtitle: "Social Science (UNISWA)" },
+  { id: "msc", label: "MSc", subtitle: "Economic Policy (AAU)" },
+  { id: "harvard", label: "Harvard", subtitle: "Professional Certs" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Capital Allocation & Pension Fund Strategy",
     copy: "Structuring large-scale sovereign wealth and public investment portfolios. Aligning capital deployment with long-term macroeconomic stability and growth."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Impact Investing & Development Finance",
     copy: "Pioneering the national task force for impact investing in South Africa. Driving sustainable and social returns alongside financial performance."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Macroeconomic Policy Formulation",
     copy: "Crafting developmental frameworks at the National Planning Commission, advising national treasury, and structuring monetary policy systems."

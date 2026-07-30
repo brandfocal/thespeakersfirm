@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "Honorary PhD", subtitle: "Stellenbosch, UKZN, Zululand" },
-  { label: "Research Associate", subtitle: "Oxford University" },
-  { label: "Professor of Practice", subtitle: "UJ" }
+  { id: "hon-phd", label: "Honorary PhD", subtitle: "Stellenbosch, UKZN, Zululand" },
+  { id: "research-assoc", label: "Research Associate", subtitle: "Oxford University" },
+  { id: "prof-practice", label: "Professor of Practice", subtitle: "UJ" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "National Statistics & Data Revolution",
     copy: "Structuring state-level indicators and demographic frameworks. Utilizing statistical insights to navigate institutional planning and economic policy formulation."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Civil Registration & Development Economics",
     copy: "Advocating for robust vital statistics registries across Africa. Developing economic models that reflect the true motions of developmental finance."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Global Statistical Leadership & Governance",
     copy: "Structuring international data networks through roles at the UN Statistics Commission, StatCom Africa, and PARIS21."

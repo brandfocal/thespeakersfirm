@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "Professor", subtitle: "Political Sciences (UP)" },
-  { label: "Director", subtitle: "IPATC (UJ)" },
-  { label: "Former Head", subtitle: "Institute for Global Dialogue" }
+  { id: "professor", label: "Professor", subtitle: "Political Sciences (UP)" },
+  { id: "director-ipatc", label: "Director", subtitle: "IPATC (UJ)" },
+  { id: "former-head-igd", label: "Former Head", subtitle: "Institute for Global Dialogue" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Global South & Decolonial Diplomacy",
     copy: "Decolonizing diplomatic theory and practice. Building new paradigms of peace, dialogue, and South-South agency in global affairs."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "African Union & Regional Integration",
     copy: "Developing common positions at the African Union. Structuring mediation and governance frameworks to resolve regional conflicts."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "BRICS & Emerging Partnerships",
     copy: "Evaluating Africa's strategic relationships with BRICS countries and other emerging markets across Iran, Turkey, Japan, and South Korea."

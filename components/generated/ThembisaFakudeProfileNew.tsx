@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "MA", subtitle: "Politics (Wits)" },
-  { label: "BA Hons", subtitle: "Wits" },
-  { label: "Research Fellow", subtitle: "Al Sharq Forum" }
+  { id: "ma", label: "MA", subtitle: "Politics (Wits)" },
+  { id: "ba-hons", label: "BA Hons", subtitle: "Wits" },
+  { id: "research-fellow", label: "Research Fellow", subtitle: "Al Sharq Forum" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Middle East-Africa Geopolitical Relations",
     copy: "Analyzing diplomatic pivots, trade flows, and foreign policy strategies connecting the Middle East and African markets."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "International Media & Broadcast Strategy",
     copy: "Structuring broadcast networks and international news production systems. Leveraging tenured Al Jazeera experience to analyze global media narratives."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Global South Policy & Democracy",
     copy: "Evaluating active citizenship, human rights solidarity, and democratic policy changes across developing regions and African nations."

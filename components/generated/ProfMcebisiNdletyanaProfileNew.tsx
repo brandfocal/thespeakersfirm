@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "PhD", subtitle: "Political Science" },
-  { label: "Head Faculty", subtitle: "MISTRA" },
-  { label: "Mellon Award", subtitle: "Recipient" }
+  { id: "phd", label: "PhD", subtitle: "Political Science" },
+  { id: "head-faculty", label: "Head Faculty", subtitle: "MISTRA" },
+  { id: "mellon-award", label: "Mellon Award", subtitle: "Recipient" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Political Economy & Strategic Reflection",
     copy: "Analyzing the intersection of economic policy, governance structures, and historical dynamics to shape developmental strategy in emerging democracies."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Traditional Identity & Colonial Manipulation",
     copy: "Evaluating how colonial and apartheid administrations manipulated local identities, and how to adapt traditional institutions to modern democratic principles."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Heritage Conservation & Policy Advising",
     copy: "Shaping national policy on heritage representation, cultural preservation, and state-level advisory boards."

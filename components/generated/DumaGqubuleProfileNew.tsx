@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "Economist", subtitle: "" },
-  { label: "Analyst", subtitle: "" },
-  { label: "Strategist", subtitle: "" }
+  { id: "economist", label: "Economist", subtitle: "" },
+  { id: "analyst", label: "Analyst", subtitle: "" },
+  { id: "strategist", label: "Strategist", subtitle: "" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Black Economic Empowerment (BEE) Architecture",
     copy: "Analyzing the systemic impact of B-BBEE frameworks and economic transformation policies. Structuring broad-based participation models that align with economic reality."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Macroeconomic Policy Critique",
     copy: "Providing independent critique of monetary and fiscal policies, targeting GDP expansion, job creation, and developmental central banking mandates."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Financial Journalism & Policy Consulting",
     copy: "Translating complex fiscal statistics, corporate restructuring, and global economic crises into board briefings and accessible strategic commentaries."

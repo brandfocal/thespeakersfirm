@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "Economist", subtitle: "" },
-  { label: "Entrepreneur", subtitle: "" },
-  { label: "Growth Strategist", subtitle: "" }
+  { id: "economist", label: "Economist", subtitle: "" },
+  { id: "entrepreneur", label: "Entrepreneur", subtitle: "" },
+  { id: "growth-strategist", label: "Growth Strategist", subtitle: "" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Macroeconomic Policy & Inclusive Growth",
     copy: "Analyzing micro and macro indicators to shape developmental policy, trade strategies, and inclusive growth frameworks that bridge economic disparities."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "Strategic Asset & Portfolio Management",
     copy: "Designing growth plans across diverse Sub-Saharan African economies, based on deep institutional knowledge and hands-on portfolio management."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Economic Innovation & Advisory",
     copy: "Providing strategic direction for private and public sector infrastructure planning, G20 policy cooperation, and financial market integration."

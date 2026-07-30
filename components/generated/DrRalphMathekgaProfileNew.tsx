@@ -3,23 +3,26 @@ import { SpeakerProfileTemplate } from "./SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./ProfileAdditionalSectionsOthers";
 
 const CREDENTIAL_BADGES = [
-  { label: "PhD", subtitle: "Political Studies (UJ)" },
-  { label: "GIS Senior Expert", subtitle: "Lichtenstein" },
-  { label: "Former Senior Analyst", subtitle: "National Treasury" }
+  { id: "phd", label: "PhD", subtitle: "Political Studies (UJ)" },
+  { id: "gis-expert", label: "GIS Senior Expert", subtitle: "Lichtenstein" },
+  { id: "treasury-analyst", label: "Former Senior Analyst", subtitle: "National Treasury" }
 ];
 
 const STRATEGIC_THEMES = [
   {
+    id: "theme-1",
     number: "01",
     title: "Affirmative Action & Constitutional Law",
     copy: "Evaluating court challenges on affirmative action in South Africa and their systemic implications for equality, justice, and corporate compliance."
   },
   {
+    id: "theme-2",
     number: "02",
     title: "SADC Trade & Diplomacy",
     copy: "Providing geopolitical intelligence on trade, international relations, and diplomatic pacts within the Southern African Development Community (SADC)."
   },
   {
+    id: "theme-3",
     number: "03",
     title: "Democracy & State Reform",
     copy: "Analyzing party politics, electoral amendment bills, cabinet reshuffles, and state capacity to manage socio-economic crises."
