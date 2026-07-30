@@ -227,7 +227,9 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "economics-and-politics": [
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",
-    "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo"
+    "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo",
+    "sifiso-skenjana", "elias-masilela", "duma-gqubule", "pali-lehohla",
+    "thembisa-fakude", "mcebisi-ndletyana", "ralph-mathekga", "ebrahim-fakir", "siphamandla-zondi"
   ],
   "diversity": [
     "ndileka-mandela", "nene-molefi", "rikky-minyuku", "brian-mhlanga"

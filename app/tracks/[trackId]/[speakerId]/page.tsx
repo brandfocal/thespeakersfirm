@@ -34,6 +34,16 @@ import { AboutTeamSection as VumileMsweliProfile } from "@/components/generated/
 import { AboutTeamSection as TselisoMohlomiProfile } from "@/components/generated/TselisoMohlomiProfileNew";
 import { AboutTeamSection as PulengMokhoalibeProfile } from "@/components/generated/PulengMokhoalibeProfileNew";
 import { AboutTeamSection as BoniweDunsterProfile } from "@/components/generated/BoniweDunsterProfileNew";
+import { AboutTeamSection as MncaneMthunziProfile } from "@/components/generated/DrMncaneMthunziProfileNew";
+import { AboutTeamSection as SifisoSkenjanaProfile } from "@/components/generated/SifisoSkenjanaProfileNew";
+import { AboutTeamSection as EliasMasilelaProfile } from "@/components/generated/EliasMasilelaProfileNew";
+import { AboutTeamSection as DumaGqubuleProfile } from "@/components/generated/DumaGqubuleProfileNew";
+import { AboutTeamSection as DrPaliLehohlaProfile } from "@/components/generated/DrPaliLehohlaProfileNew";
+import { AboutTeamSection as ThembisaFakudeProfile } from "@/components/generated/ThembisaFakudeProfileNew";
+import { AboutTeamSection as ProfMcebisiNdletyanaProfile } from "@/components/generated/ProfMcebisiNdletyanaProfileNew";
+import { AboutTeamSection as DrRalphMathekgaProfile } from "@/components/generated/DrRalphMathekgaProfileNew";
+import { AboutTeamSection as EbrahimFakirProfile } from "@/components/generated/EbrahimFakirProfileNew";
+import { AboutTeamSection as DrSiphamandlaZondiProfile } from "@/components/generated/DrSiphamandlaZondiProfileNew";
 
 async function getWordPressSpeaker(slug: string) {
   const query = `
@@ -324,6 +334,46 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "boniwe-dunster") {
     return <BoniweDunsterProfile />;
+  }
+
+  if (speakerId === "dr-mncane-mthunzi" || speakerId === "mncane-mthunzi") {
+    return <MncaneMthunziProfile />;
+  }
+
+  if (speakerId === "sifiso-skenjana") {
+    return <SifisoSkenjanaProfile />;
+  }
+
+  if (speakerId === "elias-masilela") {
+    return <EliasMasilelaProfile />;
+  }
+
+  if (speakerId === "duma-gqubule") {
+    return <DumaGqubuleProfile />;
+  }
+
+  if (speakerId === "dr-pali-lehohla" || speakerId === "pali-lehohla") {
+    return <DrPaliLehohlaProfile />;
+  }
+
+  if (speakerId === "thembisa-fakude") {
+    return <ThembisaFakudeProfile />;
+  }
+
+  if (speakerId === "prof-mcebisi-ndletyana" || speakerId === "mcebisi-ndletyana") {
+    return <ProfMcebisiNdletyanaProfile />;
+  }
+
+  if (speakerId === "dr-ralph-mathekga" || speakerId === "ralph-mathekga") {
+    return <DrRalphMathekgaProfile />;
+  }
+
+  if (speakerId === "ebrahim-fakir") {
+    return <EbrahimFakirProfile />;
+  }
+
+  if (speakerId === "dr-siphamandla-zondi" || speakerId === "siphamandla-zondi") {
+    return <DrSiphamandlaZondiProfile />;
   }
 
   // Format parameters to readable names

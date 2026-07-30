@@ -65,7 +65,7 @@ const customMedia = [
     date: "",
     url: "https://www.ru.ac.za/latestnews/fromvisiontoactionalistairmokoenasetsupaneducationfund.html",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Dr%20Alistair%20Mokoena/Dr-Alistair-Mokoena-8.jpg"
   },
   {
     id: "alistair-media-2",
@@ -74,7 +74,7 @@ const customMedia = [
     date: "",
     url: "https://news.nwu.ac.za/prof-alistair-mokoena-investing-good-education-key",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Dr%20Alistair%20Mokoena/Dr-Alistair-Mokoena-9.jpg"
   },
   {
     id: "alistair-media-3",
@@ -83,7 +83,7 @@ const customMedia = [
     date: "",
     url: "https://businesstech.co.za/news/business-opinion/512370/business-talk-in-conversation-with-google-south-africas-alistair-mokoena/",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Dr%20Alistair%20Mokoena/Dr%20Alistair%20Mokoena-4.jpg"
   }
 ];
 
@@ -95,12 +95,35 @@ export const AboutTeamSection = () => {
       speakerDesignation="Country Director: Google South Africa & Extraordinary Professor of Practice"
       speakerRole="The Architect of Digital Futures."
       speakerRef="TSF-AM-17"
-      heroBackgroundImage="/speakers/Dr Alistair Mokoena/Dr Alistair Mokoena-2.jpg"
-      biographyImage="/speakers/Dr Alistair Mokoena/Dr Alistair Mokoena.jpg"
+      heroBackgroundImage="/speakers/Dr%20Alistair%20Mokoena/Dr-Alistair-Mokoena-7.jpg"
+      biographyImage="/speakers/Dr%20Alistair%20Mokoena/Dr-Alistair-Mokoena-6.jpg"
       bioHook="“Bridging the digital divide and deploying responsible AI to change our world.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
       strategicThemes={STRATEGIC_THEMES}
+      books={[
+        {
+          id: "alistair-book-1",
+          title: "Servings of Self-Mastery",
+          description: "Dr. Alistair Mokoena's reflection and guidance on self-leadership, purpose, and self-mastery.",
+          coverImage: "/speakers/Dr%20Alistair%20Mokoena/Servings-of-self-mastery.jpeg",
+          url: "https://mandatemolefi.co.za/product/a-journey-of-diversity-inclusion-by-nene-molefi-ebook/"
+        },
+        {
+          id: "alistair-book-2",
+          title: "The Book Every Leader Needs to Read",
+          description: "Essential strategies and leading perspectives for modern institutional and corporate leaders.",
+          coverImage: "/speakers/Dr%20Alistair%20Mokoena/The-Book-Every-Leader-Needs-to-Read.jpg",
+          url: "https://traceymcdonaldpublishers.com/product/the-book-every-leader-needs-to-read/"
+        },
+        {
+          id: "alistair-book-3",
+          title: "The Book Every Business Owner Must Read",
+          description: "Practical guides and rules of engagement for marketing and commercial scaling.",
+          coverImage: "/speakers/Dr%20Alistair%20Mokoena/The-Book-Every-Marketer-Should-Most-Definitely-Read.jpg",
+          url: "https://traceymcdonaldpublishers.com/product/the-book-every-business-owner-must-read/"
+        }
+      ]}
       socialProofLogos={SOCIAL_PROOF_LOGOS}
       mediaArticlesSlot={
         <ProfileAdditionalMediaSections speakerId="dr-alistair-mokoena" customMedia={customMedia} />

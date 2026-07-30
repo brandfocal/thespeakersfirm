@@ -66,7 +66,7 @@ const customMedia = [
     date: "",
     url: "https://omny.fm/shows/the-take-off-with-bongani-mtolo-and-nonala-tose/boniwe-dunster-hr-specialist#description",
     action: "Listen Audio",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm-two.jpg"
   },
   {
     id: "boniwe-media-2",
@@ -75,7 +75,7 @@ const customMedia = [
     date: "",
     url: "https://www.youtube.com/watch?v=lY2N-MpQXyY",
     action: "Watch Video",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm.jpg"
   },
   {
     id: "boniwe-media-3",
@@ -84,7 +84,7 @@ const customMedia = [
     date: "",
     url: "https://www.youtube.com/watch?v=eI4r2gmDdS0",
     action: "Watch Video",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Boniwe%20Dunster/Boniwe-Dunster-The-Speakers-Firm-5.jpg"
   }
 ];
 
@@ -96,8 +96,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Finalist, 2022 IPM HR Practitioner of the Year & Executive Manager"
       speakerRole="IPM HR Practitioner of the Year Finalist."
       speakerRef="TSF-BD-25"
-      heroBackgroundImage="/speakers/Boniwe Dunster/Boniwe-Dunster-The-Speakers-Firm-2.jpg"
-      biographyImage="/speakers/Boniwe Dunster/Boniwe-Dunster-The-Speakers-Firm.jpg"
+      heroBackgroundImage="/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm-three.jpg"
+      biographyImage="/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm-four.jpg"
       bioHook="“Simplifying HR concepts and educating the workforce to navigate everyday career dynamics.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}

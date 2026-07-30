@@ -62,7 +62,7 @@ const customMedia = [
     date: "",
     url: "https://cioviews.com/dr-puleng-makhoalibe-founder-of-alchemy-inspiration/",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Puleng%20Mokhoalibe/Dr-Puleng-Mokhoalibe-The-Speakers-Firm-4.jpg"
   },
   {
     id: "puleng-media-2",
@@ -71,7 +71,7 @@ const customMedia = [
     date: "",
     url: "https://blog.henleysa.ac.za/force-of-nature",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Puleng%20Mokhoalibe/Dr-Puleng-Mokhoalibe-The-Speakers-Firm-5.jpg"
   },
   {
     id: "puleng-media-3",
@@ -80,7 +80,7 @@ const customMedia = [
     date: "",
     url: "https://blog.henleysa.ac.za/research/project-artistry-framework-to-optimise-executive-education_dr-puleng-makhoalibe",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Puleng%20Mokhoalibe/Dr-Puleng-Mokhoalibe-The-Speakers-Firm-6.jpg"
   }
 ];
 
@@ -92,8 +92,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="The Innovation Catalyst, Design Thinking & Future Strategy Specialist"
       speakerRole="The Innovation Catalyst."
       speakerRef="TSF-PM-24"
-      heroBackgroundImage="/speakers/Puleng Mokhoalibe/Puleng-Mokhoalibe2.jpg"
-      biographyImage="/speakers/Puleng Mokhoalibe/Puleng-Mokhoalibe.jpg"
+      heroBackgroundImage="/speakers/Puleng%20Mokhoalibe/Dr-Puleng-Mokhoalibe-The-Speakers-Firm-7.jpg"
+      biographyImage="/speakers/Puleng%20Mokhoalibe/Dr-Puleng-Mokhoalibe-The-Speakers-Firm-3.jpg"
       bioHook="“We cannot rely solely on logic to solve complex problems in times of change.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}

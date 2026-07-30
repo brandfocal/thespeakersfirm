@@ -62,7 +62,7 @@ const customMedia = [
     date: "",
     url: "https://www.itweb.co.za/article/future-of-work-national-dialogue-to-focus-on-building-global-competitiveness-through-collaboration/lLn147mQb3x7J6Aa",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Tseliso%20Mohlomi/Tseliso-Mohlomi-The-Speakers-Firm-2.jpg"
   },
   {
     id: "mohlomi-media-2",
@@ -71,7 +71,7 @@ const customMedia = [
     date: "",
     url: "https://www.tut.ac.za/latest-news/411-inclusive-economic-growth-at-centre-of-tuts-annual-future-of-work-4ir-dialogue",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Tseliso%20Mohlomi/Tseliso-Mohlomi-The-Speakers-Firm-5.jpg"
   },
   {
     id: "mohlomi-media-3",
@@ -80,7 +80,7 @@ const customMedia = [
     date: "",
     url: "https://omny.fm/shows/the-national-pulse/the-innovative-hub-artificial-intelligence-and-its#description",
     action: "Listen Audio",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Tseliso%20Mohlomi/Tseliso-Mohlomi-The-Speakers-Firm.jpg"
   }
 ];
 
@@ -92,8 +92,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Senior Director, Institute for the Future of Work at TUT & Intercultural Executive Coach"
       speakerRole="Senior Director, Institute for the Future of Work at TUT."
       speakerRef="TSF-TM-23"
-      heroBackgroundImage="/speakers/Tseliso Mohlomi/New folder/Tseliso-Mohlomi-The-Speakers-Firm-2.jpg"
-      biographyImage="/speakers/Tseliso Mohlomi/New folder/Tseliso-Mohlomi-The-Speakers-Firm.jpg"
+      heroBackgroundImage="/speakers/Tseliso%20Mohlomi/Tseliso-Mohlomi-The-Speakers-Firm-8.jpg"
+      biographyImage="/speakers/Tseliso%20Mohlomi/Tseliso-Mohlomi-The-Speakers-Firm-6.jpg"
       bioHook="“Bridging industry and academia is key to creating future-ready leaders.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}

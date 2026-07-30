@@ -66,7 +66,7 @@ const customMedia = [
     date: "",
     url: "https://startupmag.co.za/2024/08/bidvest-banks-mmamollo-programme-drives-female-empowerment/",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Vumile%20Msweli/Dr-Vumile-Msweli-The-Speakers-Firm-2.jpg"
   },
   {
     id: "vumile-media-2",
@@ -75,7 +75,7 @@ const customMedia = [
     date: "",
     url: "https://www.hernetwork.co/vumile-msweli-career-success-for-me-is-driven-by-two-things-having-the-right-strategy-and-having-the-right-team/",
     action: "Read Article",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Vumile%20Msweli/Dr-Vumile-Msweli-The-Speakers-Firm-3.jpg"
   },
   {
     id: "vumile-media-3",
@@ -84,7 +84,7 @@ const customMedia = [
     date: "",
     url: "https://www.youtube.com/watch?v=ppNSTUMKG7Q",
     action: "Watch Video",
-    image: "/images/blog-placeholder.jpg"
+    image: "/speakers/Vumile%20Msweli/update/vumile-msweli-the-speakers-firm-2.jpg"
   }
 ];
 
@@ -96,8 +96,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Internationally Acclaimed Inspirational Speaker, Global Career Coach & Human Capital Strategist"
       speakerRole="Human Capital Strategist."
       speakerRef="TSF-VM-22"
-      heroBackgroundImage="/speakers/Vumile Msweli/update/vumile-msweli-the-speakers-firm-2.jpg"
-      biographyImage="/speakers/Vumile Msweli/update/vumile-msweli-the-speakers-firm.jpg"
+      heroBackgroundImage="/speakers/Vumile%20Msweli/Dr-Vumile-Msweli-The-Speakers-Firm.jpg"
+      biographyImage="/speakers/Vumile%20Msweli/Dr-Vumile-Msweli-The-Speakers-Firm-7.jpg"
       bioHook="“Career success requires having the right strategy and having the right team.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
