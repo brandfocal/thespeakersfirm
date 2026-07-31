@@ -158,7 +158,6 @@ export const ProfileAdditionalSections = ({ customVideos }: { customVideos?: Arr
           </div>
         </div>
       )}
-
       {/* 1. Moments & Milestones Gallery Section */}
       <section id="gallery" className="relative bg-[#0A0A0A] px-4 py-6 text-white sm:px-6 sm:py-8 md:py-10 lg:px-8 lg:py-12" aria-labelledby="gallery-heading">
         <div className="mx-auto grid max-w-[1312px] grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-16">
