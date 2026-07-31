@@ -178,7 +178,7 @@ export function BriefUs() {
       
       <div className="flex-grow">
         <section id="top" className="relative min-h-[70vh] w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-36 bg-[#000000]">
-          <img src="/galleries/bonang-mohale/bonang-mohale.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <img src="/hero_backgrounds/sizwe-mpofu-walsh.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
             backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"

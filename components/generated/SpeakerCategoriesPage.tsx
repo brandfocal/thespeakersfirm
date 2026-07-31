@@ -205,7 +205,7 @@ export function SpeakerCategoriesPage() {
       {/* Redesigned Hero using the default elements requested */}
       <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000]">
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=2200&q=85" alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-30" />
+          <img src="/hero_backgrounds/dr-phumzile-mlambo-ngcuka2.jpg" alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
         </div>
         <VerticalBorderLines isDark={true} />
