@@ -78,7 +78,7 @@ const speakers: Speaker[] = [
       "Strategic Executive Communication",
       "Authority, Clarity & Influence"
     ],
-    "path": "/tracks/mc-and-facilitators/sechaba-motsieloa"
+    "path": "/tracks/media-brand-reputation/sechaba-motsieloa"
   },
   {
     "id": "milton-nkosi",
@@ -286,18 +286,20 @@ export function TSFMediaCommunicationAndExecutiveVisibilityCategory() {
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               <AnimatePresence mode="popLayout">
                 {filteredSpeakers.map(speaker => (
-                  <motion.article layout initial={{ opacity: 0, scale: 0.95, y: 12 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.35, ease: 'easeOut' }} key={speaker.id} className="group relative overflow-hidden bg-[#1e1e1e] border border-white/[0.06]">
-                    <div className="relative aspect-[3/4] overflow-hidden">
-                      <img src={speaker.image} alt={speaker.name} className="h-full w-full object-cover grayscale contrast-[1.06] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" />
-                    </div>
-                    <div className="border-t border-white/[0.08] p-4 bg-[#1e1e1e]">
-                      <h3 className="text-sm font-bold text-white">{speaker.name}</h3>
-                      <p className="mt-1 text-[10px] uppercase text-white/50">{speaker.role}</p>
-                      <a href={speaker.path} className="mt-3 flex min-h-[36px] items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#e30e04]">
-                        <span>View Intelligence Profile</span>
-                        <ArrowUpRight size={14} />
-                      </a>
-                    </div>
+                  <motion.article layout initial={{ opacity: 0, scale: 0.95, y: 12 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.35, ease: 'easeOut' }} key={speaker.id} className="group relative overflow-hidden bg-[#1e1e1e] border border-white/[0.06] cursor-pointer">
+                    <a href={speaker.path} className="block h-full w-full">
+                      <div className="relative aspect-[3/4] overflow-hidden">
+                        <img src={speaker.image} alt={speaker.name} className="h-full w-full object-cover grayscale contrast-[1.06] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" />
+                      </div>
+                      <div className="border-t border-white/[0.08] p-4 bg-[#1e1e1e]">
+                        <h3 className="text-sm font-bold text-white">{speaker.name}</h3>
+                        <p className="mt-1 text-[10px] uppercase text-white/50">{speaker.role}</p>
+                        <span className="mt-3 flex min-h-[36px] items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#e30e04]">
+                          <span>View Intelligence Profile</span>
+                          <ArrowUpRight size={14} />
+                        </span>
+                      </div>
+                    </a>
                   </motion.article>
                 ))}
               </AnimatePresence>
