@@ -1276,7 +1276,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
-  bio: <span>CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert</span>
+  bio: <span>CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert</span>,
+  trackId: 'media-brand-reputation'
 }, {
   id: 'mandla-radebe',
   name: 'Mandla J. Radebe',
@@ -1287,7 +1288,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
-  bio: <span>Strategic Communication Professor, Author, Media Theorist</span>
+  bio: <span>Strategic Communication Professor, Author, Media Theorist</span>,
+  trackId: 'media-brand-reputation'
 }, {
   id: 'milton-nkosi',
   name: 'Milton Nkosi',
@@ -1298,7 +1300,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>Former BBC Africa Bureau Chief, Global Correspondent, Media Relations Specialist</span>
+  bio: <span>Former BBC Africa Bureau Chief, Global Correspondent, Media Relations Specialist</span>,
+  trackId: 'media-brand-reputation'
 }, {
   id: 'rams-mabote',
   name: 'Rams Mabote',
@@ -1309,7 +1312,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
-  bio: <span>Media Personality, Reputation Coach, Host & Facilitator</span>
+  bio: <span>Media Personality, Reputation Coach, Host & Facilitator</span>,
+  trackId: 'media-brand-reputation'
 }, {
   id: 'jj-tabane',
   name: 'Prof JJ Tabane',
@@ -1353,7 +1357,8 @@ const FEATURED_SPEAKERS_RAW: Array<{
   youtubeId: 'qp0HIF3SfI4',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
-  bio: <span>Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator</span>
+  bio: <span>Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator</span>,
+  trackId: 'media-brand-reputation'
 }, {
   id: 'joshua-maluleke',
   name: 'Joshua Maluleke',
