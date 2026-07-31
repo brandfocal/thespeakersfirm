@@ -2,6 +2,8 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
 import { fetchAPI } from "@/lib/graphql";
+
+export const dynamic = "force-dynamic";
 import { SpeakerProfileTemplate } from "@/components/generated/SpeakerProfileTemplate";
 import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "@/components/generated/ProfileAdditionalSectionsOthers";
 import { AboutTeamSection } from "@/components/generated/BonangMohaleProfileNew";
@@ -49,6 +51,11 @@ import { AboutTeamSection as ThapeloMokoenaProfile } from "@/components/generate
 import { AboutTeamSection as JoshuaMalulekeProfile } from "@/components/generated/JoshuaMalulekeProfileNew";
 import { AboutTeamSection as BulelaniBalabalaProfile } from "@/components/generated/BulelaniBalabalaProfileNew";
 import { AboutTeamSection as LeboGunguluzaProfile } from "@/components/generated/LeboGunguluzaProfileNew";
+import { AboutTeamSection as LoratoTshenkengProfile } from "@/components/generated/LoratoTshenkengProfileNew";
+import { AboutTeamSection as MandlaJRadebeProfile } from "@/components/generated/MandlaJRadebeProfileNew";
+import { AboutTeamSection as SechabaMotsieloaProfile } from "@/components/generated/SechabaMotsieloaProfileNew";
+import { AboutTeamSection as MiltonNkosiProfile } from "@/components/generated/MiltonNkosiProfileNew";
+import { AboutTeamSection as RamsMaboteProfile } from "@/components/generated/RamsMaboteProfileNew";
 
 async function getWordPressSpeaker(slug: string) {
   const query = `
@@ -399,6 +406,26 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "lebo-gunguluza") {
     return <LeboGunguluzaProfile />;
+  }
+
+  if (speakerId === "lorato-tshenkeng" || speakerId === "lorato-tshenkeng-2") {
+    return <LoratoTshenkengProfile />;
+  }
+
+  if (speakerId === "mandla-j-radebe" || speakerId === "mandla-radebe") {
+    return <MandlaJRadebeProfile />;
+  }
+
+  if (speakerId === "sechaba-motsieloa") {
+    return <SechabaMotsieloaProfile />;
+  }
+
+  if (speakerId === "milton-nkosi") {
+    return <MiltonNkosiProfile />;
+  }
+
+  if (speakerId === "rams-mabote") {
+    return <RamsMaboteProfile />;
   }
 
   // Format parameters to readable names
