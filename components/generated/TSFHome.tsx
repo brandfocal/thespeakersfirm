@@ -1449,10 +1449,10 @@ const FEATURED_SPEAKERS_RAW: Array<{
   bio: <span>Entrepreneur, Business Strategist & Empowerment Speaker</span>
 }, {
   id: 'zamo-mbele',
-  name: 'Zamo Mbele',
+  name: 'Dr Zamo Mbele',
   category: ['Neuroscience', 'Sustainability'],
   image: '/speakers/Neuroscience/Zamo-Mbele-The-Speakers-Firm.jpg',
-  alt: 'Zamo Mbele',
+  alt: 'Dr Zamo Mbele',
   quote: 'Sustaining mental fitness and composure under board-level pressure.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],

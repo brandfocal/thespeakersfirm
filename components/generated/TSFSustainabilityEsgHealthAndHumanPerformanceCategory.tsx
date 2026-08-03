@@ -49,7 +49,7 @@ const speakers: Speaker[] = [
   },
   {
     "id": "zamo-mbele",
-    "name": "Zamo Mbele",
+    "name": "Dr Zamo Mbele",
     "role": "Clinical Psychologist, Mental Health Advocate & Speaker",
     "image": "/speaker_thumbnails/Zamo-Mbele-The-Speakers-Firm.jpg",
     "topics": [
