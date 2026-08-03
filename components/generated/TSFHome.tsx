@@ -1514,11 +1514,11 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Leadership Alignment Coach, Organisational Culture Strategist & Speaker</span>
 }, {
-  id: 'khanyi-chaba',
-  name: 'Khanyi Chaba',
+  id: 'khanyisile-chaba',
+  name: 'Khanyisile Chaba',
   category: 'Sustainability',
   image: '/speakers/Sustainability/Khanyi-Chaba-The-Speakers-Firm.jpg',
-  alt: 'Khanyi Chaba',
+  alt: 'Khanyisile Chaba',
   quote: 'Integrating sustainable Old Mutual responsible business metrics.',
   youtubeId: 'qp0HIF3SfI4',
   topics: [],

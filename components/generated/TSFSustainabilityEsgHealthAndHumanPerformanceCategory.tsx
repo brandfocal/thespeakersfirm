@@ -15,15 +15,15 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
-    "id": "khanyi-chaba",
-    "name": "Khanyi Chaba",
+    "id": "khanyisile-chaba",
+    "name": "Khanyisile Chaba",
     "role": "Head of Responsible Business, Old Mutual | Sustainability & Corporate Citizenship Strategist",
     "image": "/speaker_thumbnails/Khanyi-Chaba-The-Speakers-Firm.jpg",
     "topics": [
       "Environmental, Social, and Governance (ESG)",
       "Climate Resilience Strategy"
     ],
-    "path": "/tracks/leadership-governance-and-risk-intelligence/khanyi-chaba"
+    "path": "/tracks/leadership-governance-and-risk-intelligence/khanyisile-chaba"
   },
   {
     "id": "victor-ramathesele",

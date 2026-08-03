@@ -198,7 +198,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "leadership-governance-and-risk-intelligence": [
     "stafford-masie", "themba-maseko", "lincoln-mali", "saray-khumalo", "somadoda-fikeni",
     "andisa-liba", "abdullah-verachia", "sthembiso-phakathi", "maanda-tshifularo", "eric-mafuna",
-    "mncane-mthunzi", "khanyi-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
+    "mncane-mthunzi", "khanyisile-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
     "luthando-daniels", "maurice-radebe", "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
     "tebogo-mekgoe", "queen-ramotsehoa", "yolisa-kani", "anael-granoux", "lauren-davis",
     "monde-ndlovu", "aubrey-masango-mc", "molefe-pooe"
@@ -288,13 +288,13 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "sylvester-chauke", "mzamo-masito", "muzi-kuzwayo", "lorato-tshenkeng", "gerry-rantseli-elsdon"
   ],
   "sustainability": [
-    "khanyi-chaba", "victor-ramathesele", "somadoda-fikeni", "shingai-mutambirwa"
+    "khanyisile-chaba", "victor-ramathesele", "somadoda-fikeni", "shingai-mutambirwa"
   ],
   "education": [
     "ntandoyenkosi-kunene-radzuma", "linda-yalezo", "veli-ndaba"
   ],
   "citizenship": [
-    "khanyi-chaba", "thuli-madonsela-keynote", "ndileka-mandela"
+    "khanyisile-chaba", "thuli-madonsela-keynote", "ndileka-mandela"
   ],
   "motivation": [
     "veli-ndaba", "hector-motivator", "richie-achukwu", "siphiwe-moyo", "saray-khumalo", "billy-selekane"
