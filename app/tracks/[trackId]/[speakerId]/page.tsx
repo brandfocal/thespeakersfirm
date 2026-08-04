@@ -76,6 +76,17 @@ import { AboutTeamSection as KhanyisileChabaProfile } from "@/components/generat
 import { AboutTeamSection as ShingaiMutambirwaProfile } from "@/components/generated/ShingaiMutambirwaProfileNew";
 import { AboutTeamSection as LaurenDavisProfile } from "@/components/generated/LaurenDavisProfileNew";
 import { AboutTeamSection as BuyaniZwaneProfile } from "@/components/generated/BuyaniZwaneProfileNew";
+import { AboutTeamSection as NeilToveyProfile } from "@/components/generated/NeilToveyProfileNew";
+import { AboutTeamSection as DoctorKhumaloProfile } from "@/components/generated/DoctorKhumaloProfileNew";
+import { AboutTeamSection as VeliNdabaProfile } from "@/components/generated/VeliNdabaProfileNew";
+import { AboutTeamSection as NyimpiniMabundaProfile } from "@/components/generated/NyimpiniMabundaProfileNew";
+import { AboutTeamSection as AzaniaMosakaProfile } from "@/components/generated/AzaniaMosakaProfileNew";
+import { AboutTeamSection as DeliaNdlovuProfile } from "@/components/generated/DeliaNdlovuProfileNew";
+import { AboutTeamSection as VictorKgomoeswanaProfile } from "@/components/generated/VictorKgomoeswanaProfileNew";
+import { AboutTeamSection as GerryRantseliElsdonProfile } from "@/components/generated/GerryRantseliElsdonProfileNew";
+import { AboutTeamSection as DrMaandaTshifularoProfile } from "@/components/generated/DrMaandaTshifularoProfileNew";
+import { AboutTeamSection as TumiRamonotsiProfile } from "@/components/generated/TumiRamonotsiProfileNew";
+
 
 async function getWordPressSpeaker(slug: string) {
   const query = `
@@ -527,6 +538,47 @@ export default async function SpeakerPage({ params }: PageProps) {
   if (speakerId === "dr-buyani-zwane" || speakerId === "buyani-zwane") {
     return <BuyaniZwaneProfile />;
   }
+
+  if (speakerId === "neil-tovey") {
+    return <NeilToveyProfile />;
+  }
+
+  if (speakerId === "doctor-khumalo") {
+    return <DoctorKhumaloProfile />;
+  }
+
+  if (speakerId === "veli-ndaba") {
+    return <VeliNdabaProfile />;
+  }
+
+  if (speakerId === "nyimpini-mabunda") {
+    return <NyimpiniMabundaProfile />;
+  }
+
+  if (speakerId === "azania-mosaka") {
+    return <AzaniaMosakaProfile />;
+  }
+
+  if (speakerId === "delia-ndlovu") {
+    return <DeliaNdlovuProfile />;
+  }
+
+  if (speakerId === "victor-kgomoeswana") {
+    return <VictorKgomoeswanaProfile />;
+  }
+
+  if (speakerId === "gerry-rantseli-elsdon") {
+    return <GerryRantseliElsdonProfile />;
+  }
+
+  if (speakerId === "dr-maanda-tshifularo" || speakerId === "maanda-tshifularo") {
+    return <DrMaandaTshifularoProfile />;
+  }
+
+  if (speakerId === "tumi-ramonotsi") {
+    return <TumiRamonotsiProfile />;
+  }
+
 
   // Format parameters to readable names
   const trackName = trackId
