@@ -60,45 +60,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "hulisani-art-1",
+      headline: "Hulisani Ravele on Career, Transition, and Alignment",
+      publication: "YouTube Interview",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=jUoQCg_oRRc",
+      image: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-2.jpg"
+    },
+    {
+      id: "hulisani-art-2",
       headline: "Hulisani Ravele celebrates milestone in her education journey at GIBS",
       publication: "Kaya 95.9",
       date: "04 Mar 2025",
       action: "Read Article",
       url: "https://www.kaya959.co.za/entertainment-news/hulisani-ravele-celebrates-milestone-in-her-education-journey/",
-      image: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-5.jpg"
     },
     {
-      id: "hulisani-art-2",
+      id: "hulisani-art-3",
       headline: "The Discomfort of Stillness: Walking Away for Alignment",
       publication: "YouTube",
       date: "2024",
       action: "Watch Show",
       url: "https://www.youtube.com/watch?v=Ta8rFguALEA",
-      image: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "hulisani-gal-1",
-      src: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-4.jpg",
-      alt: "Hulisani Ravele MCing",
-      caption: "Hosting Effie Awards South Africa",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "hulisani-gal-2",
-      src: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-5.jpg",
-      alt: "Hulisani Ravele strategy session",
-      caption: "Facilitating corporate strategy alignment workshops",
-      className: ""
-    },
-    {
-      id: "hulisani-gal-3",
-      src: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-6.jpg",
-      alt: "Hulisani Ravele brand ambassador",
-      caption: "Vibrant and authentic public speaker profile",
-      className: ""
+      image: "/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm.jpg"
     }
   ];
 
@@ -117,8 +102,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Television Presenter & Media Personality"
       speakerRole="Change Leadership scholar, 29-year broadcaster veteran, and premium MC."
       speakerRef="TSF-HR-06"
-      heroBackgroundImage="/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-7.jpg"
+      heroBackgroundImage="/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-8.jpg"
+      biographyImage="/speakers/Hulisani Ravele/Hulisani-Ravele-The-Speakers-Firm-6.jpg"
       bioHook="“Authenticity is a legacy that builds instant relatability and trust across any audience.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -133,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="hulisani-ravele" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Corporate events facilitation, SLT summits, and media dialogues by Hulisani Ravele."
         customVideos={customVideos}
       />

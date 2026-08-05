@@ -121,12 +121,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Kagiso “KG” Mokgadi"
-      speakerTitle="Kagiso “KG”"
+      speakerTitle=""
       speakerDesignation="Award-Winning Stand-Up Comedian & Master of Ceremonies"
       speakerRole="Comics Choice Award-winning comedy heavyweight and corporate emcee."
       speakerRef="TSF-KM-26"
-      heroBackgroundImage="/speakers/Kagiso KG Mokgadi/99d40624c4cf0d26cb810fe7376ff357_heavy-695.jpg"
-      biographyImage="/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg"
+      heroBackgroundImage="/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg"
+      biographyImage="/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi-The-Speakers-Firm.jpg"
       bioHook="“Relatable material and minimalist delivery allow an audience to connect with the storytelling naturally.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -141,7 +141,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="kagiso-kg-mokgadi" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Dynamic stand-up comedy, bespoke corporate emceeing, and panel moderation services with Kagiso KG Mokgadi."
         customVideos={customVideos}
       />

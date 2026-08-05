@@ -73,7 +73,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Article",
       url: "https://mgosi.co.za/tol-ass-mo-and-mome-make-a-comeback/",
-      image: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-8.jpg"
     },
     {
       id: "mo-art-3",
@@ -82,31 +82,7 @@ export const AboutTeamSection = () => {
       date: "2020",
       action: "Read Article",
       url: "https://youthvillage.co.za/2015/01/things-didnt-know-tall-ass-mo/",
-      image: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-4.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "mo-gal-1",
-      src: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-5.jpg",
-      alt: "Tol Ass Mo standup",
-      caption: "Tol Ass Mo performing live on stage.",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "mo-gal-2",
-      src: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-7.jpg",
-      alt: "Tol Ass Mo event emcee",
-      caption: "Hosting a high-impact corporate celebration.",
-      className: ""
-    },
-    {
-      id: "mo-gal-3",
-      src: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-8.jpg",
-      alt: "Tol Ass Mo portrait",
-      caption: "Official promo headshot of Mongezi Mahlangu.",
-      className: ""
+      image: "/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-7.jpg"
     }
   ];
 
@@ -121,12 +97,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Tol A$$ Mo"
-      speakerTitle="Mongezi Mahlangu"
+      speakerTitle=""
       speakerDesignation="Celebrated Stand-Up Comedian, TV Personality & Entrepreneur"
       speakerRole="Renowned television host, reality star, and comedic disruptor."
       speakerRef="TSF-TM-30"
-      heroBackgroundImage="/speakers/Tol Ass Mo/Mo.jpg"
-      biographyImage="/speakers/Tol Ass Mo/Tol-Ass-Mo.jpg"
+      heroBackgroundImage="/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-11.jpg"
+      biographyImage="/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm-6.jpg"
       bioHook="“Laughter is the ultimate vehicle for cultural disruption and authentic brand expression.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -141,7 +117,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="tol-ass-mo" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Gastronomy and cannabis culture alignment summits, satirical comedy hosting, and corporate keynote entertainment with Tol A$$ Mo."
         customVideos={customVideos}
       />

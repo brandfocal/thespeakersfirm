@@ -126,7 +126,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Tebogo “ProVerb” Thekisho"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Media Personality, Author, Entrepreneur & Speaker"
       speakerRole="Co-host of Metro FM Midday Link Up & former non-executive director FCM Travel / SAMRO board."
       speakerRef="TSF-TPT-31"

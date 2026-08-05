@@ -93,7 +93,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Joshua Maluleke"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="CEO at Mayeke Holdings, Financial Consultant & Author"
       speakerRole="Author of Entrepreneurship 101 & Former President of ABASA."
       speakerRef="TSF-JM-33"

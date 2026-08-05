@@ -60,36 +60,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "nqaba-art-1",
-      headline: "Competition Commission: Policy & Market Dynamics in Digital Media",
-      publication: "The Speakers Firm",
-      date: "2025",
-      action: "Read Profile",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/nqaba-mabece/",
+      headline: "eNCA launches 'The People’s Court' hosted by Nqaba Mabece",
+      publication: "eNCA",
+      date: "June 2025",
+      action: "Read Press Release",
+      url: "https://www.enca.com/lifestyle-press-release/enca-launches-peoples-court-hosted-nqaba-mabece",
       image: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-2.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "nqaba-gal-1",
-      src: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-3.jpg",
-      alt: "Nqaba Mabece keynote",
-      caption: "Presenting on international trade and procurement policy",
-      className: "sm:col-span-2 lg:col-span-2"
     },
     {
-      id: "nqaba-gal-2",
-      src: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-4.jpg",
-      alt: "Nqaba Mabece panel",
-      caption: "Facilitating high-level governance panel dialogues",
-      className: ""
+      id: "nqaba-art-2",
+      headline: "Dr Naledi Pandor Lecture with Guest Nqaba Mabece",
+      publication: "SAfm",
+      date: "2024",
+      action: "Listen to Lecture",
+      url: "https://omny.fm/shows/life-love-and-all/drnaledipandorlecture-with-guest-nqaba-mabece-safm#description",
+      image: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm.jpg"
     },
     {
-      id: "nqaba-gal-3",
-      src: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-5.jpg",
-      alt: "Nqaba Mabece media interview",
-      caption: "Representing policy frameworks in broadcast media",
-      className: ""
+      id: "nqaba-art-3",
+      headline: "Media Moves: eNCA launches The People's Court hosted by Nqaba Mabece",
+      publication: "The Media Online",
+      date: "June 2025",
+      action: "Read Article",
+      url: "https://themediaonline.co.za/2025/06/media-moves-enca-launches-the-peoples-court-hosted-by-nqaba-mabece-vml-south-africa-announces-new-sa-data-lead-astron-energy-official-fuel-sponsor-of-the-2025-comrades-marathon/",
+      image: "/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-3.jpg"
     }
   ];
 
@@ -108,7 +102,7 @@ export const AboutTeamSection = () => {
       speakerDesignation="Law, Policy & Strategic Stakeholder Engagement Authority"
       speakerRole="Buergenthal Scholar, government procurement expert, and SAfm broadcaster."
       speakerRef="TSF-NM-05"
-      heroBackgroundImage="/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm.jpg"
+      heroBackgroundImage="/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-6.jpg"
       biographyImage="/speakers/Nqaba Mabece/Nqaba-Mabece-The-Speakers-Firm-7.jpg"
       bioHook="“Bridging the gap between complex legal policy and impactful public communication is the core of governance.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
@@ -124,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="nqaba-mabece" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Policy briefs, legal forums and media facilitations by Nqaba Mabece."
         customVideos={customVideos}
       />

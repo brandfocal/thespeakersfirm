@@ -106,7 +106,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Lebo Gunguluza"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Entrepreneur, Turnaround Strategist & Dragon Investor"
       speakerRole="Group Chairman of Gem Group & President of SABEF."
       speakerRef="TSF-LG-35"

@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Article",
       url: "https://mileskubheka.com/africa-travel-indaba/",
-      image: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-3.jpg"
+      image: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-5.jpg"
     },
     {
       id: "miles-art-3",
@@ -84,31 +84,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Article",
       url: "https://mileskubheka.com/turning-food-tech-innovators-skills-businesses/",
-      image: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-4.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "miles-gal-1",
-      src: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-5.jpg",
-      alt: "Miles Kubheka presentation",
-      caption: "Miles presenting his social enterprise model.",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "miles-gal-2",
-      src: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-6.jpg",
-      alt: "Miles Kubheka chef",
-      caption: "Gastronomy accelerator session with culinary innovators.",
-      className: ""
-    },
-    {
-      id: "miles-gal-3",
-      src: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-profile-second.jpg",
-      alt: "Miles Kubheka headshot",
-      caption: "Official corporate speaking headshot.",
-      className: ""
+      image: "/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-6.jpg"
     }
   ];
 
@@ -123,12 +99,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Miles Kubheka"
-      speakerTitle="Miles"
+      speakerTitle=""
       speakerDesignation="Celebrated Chef, Author, Entrepreneur & Keynote Speaker"
       speakerRole="Gastronome maverick, social entrepreneur, and global business growth strategist."
       speakerRef="TSF-MK-32"
-      heroBackgroundImage="/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-profile.jpg"
-      biographyImage="/speakers/Miles Kubheka/miles-kubheka-1.jpg"
+      heroBackgroundImage="/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-7.jpg"
+      biographyImage="/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm-2.jpg"
       bioHook="“Resilience, purpose-driven action, and turning bold ideas into transformative ventures.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -143,7 +119,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="miles-kubheka" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Gastronomy disruption keynotes, social entrepreneurship strategy, and corporate growth masterclasses with Miles Kubheka."
         customVideos={customVideos}
       />

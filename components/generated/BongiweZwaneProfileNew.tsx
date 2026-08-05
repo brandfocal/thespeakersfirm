@@ -49,11 +49,11 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "bongiwe-art-1",
-      headline: "Marikana massacre: 10 years on and we still don't know who gave the order to shoot",
-      publication: "News24",
-      date: "11 Aug 2022",
-      action: "Read Opinion",
-      url: "https://www.news24.com/opinions/fridaybriefing/bongiwe-zwane-marikana-massacre-10-years-on-and-we-still-dont-know-who-gave-the-order-to-shoot-20220811",
+      headline: "The SABC is honoured at the UN's Most Influential People of African Descent (MIPAD) Awards Ceremony in New York",
+      publication: "SABC News",
+      date: "UN Awards",
+      action: "Read Statement",
+      url: "https://www.sabc.co.za/sabc/media-statement-the-sabc-is-honoured-at-the-uns-most-influential-people-of-african-descent-mipad-awards-ceremony-in-new-york/",
       image: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-2.jpg"
     },
     {
@@ -63,31 +63,16 @@ export const AboutTeamSection = () => {
       date: "03 Oct 2022",
       action: "Watch Coverage",
       url: "https://www.youtube.com/watch?v=V-bneYUWmF8",
-      image: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-6.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "bongiwe-gal-1",
-      src: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-3.jpg",
-      alt: "Bongiwe Zwane broadcasting",
-      caption: "Broadcasting live on SABC News",
-      className: "sm:col-span-2 lg:col-span-2"
+      image: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm.jpg"
     },
     {
-      id: "bongiwe-gal-2",
-      src: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-4.jpg",
-      alt: "Bongiwe Zwane editorial meeting",
-      caption: "Leading editorial and content planning",
-      className: ""
-    },
-    {
-      id: "bongiwe-gal-3",
-      src: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-5.jpg",
-      alt: "Bongiwe Zwane speaking event",
-      caption: "Facilitating leadership panel dialogue",
-      className: ""
+      id: "bongiwe-art-3",
+      headline: "Bongiwe Zwane: Journalistic Integrity & Democracy in Action",
+      publication: "SABC News",
+      date: "2023",
+      action: "Watch Segment",
+      url: "https://www.youtube.com/watch?v=V-bneYUWmF8",
+      image: "/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-3.jpg"
     }
   ];
 
@@ -106,8 +91,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="News Anchor, Broadcaster & Media Leader"
       speakerRole="Prime time news anchor, editorial strategist, and Duke University Menell Media Fellow."
       speakerRef="TSF-BZ-02"
-      heroBackgroundImage="/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-7.jpg"
+      heroBackgroundImage="/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-4.jpg"
+      biographyImage="/speakers/Bongiwe Zwane/Bongiwe-Zwane-The-Speakers-Firm-6.jpg"
       bioHook="“Journalistic integrity is about giving context to the truth and empowering nations to construct their own future.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -122,7 +107,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="bongiwe-zwane" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Broadcasting, facilitation and media leadership showcases by Bongiwe Zwane."
         customVideos={customVideos}
       />

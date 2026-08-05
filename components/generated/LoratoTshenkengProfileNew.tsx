@@ -82,7 +82,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Lorato Tshenkeng"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Brand Reputation Strategist & CEO of Khetha Media"
       speakerRole="Communications Consultant, PR Expert & Strategic Advisor."
       speakerRef="TSF-LT-36"

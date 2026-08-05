@@ -59,6 +59,15 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "kayise-art-1",
+      headline: "Kayise Ngqula on Healing, Purpose & Rising After Loss",
+      publication: "YouTube Interview",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=U3Vbffk_nUE",
+      image: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm.jpg"
+    },
+    {
+      id: "kayise-art-2",
       headline: "Kayise Ngqula returns with season 2 of her popular YouTube show, 'After Dark'",
       publication: "Sunday Tribune",
       date: "21 Aug 2024",
@@ -67,37 +76,13 @@ export const AboutTeamSection = () => {
       image: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm2.jpg"
     },
     {
-      id: "kayise-art-2",
+      id: "kayise-art-3",
       headline: "Kayise Ngqula shines bright as she talks healing, growth, and new beginnings",
       publication: "News24",
       date: "24 Aug 2024",
       action: "Read Interview",
       url: "https://www.news24.com/life/arts-and-entertainment/celebrities/kayise-ngqula-shines-bright-as-she-talks-healing-growth-and-new-beginnings-in-all-new-after-dark-20240824",
       image: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "kayise-gal-1",
-      src: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm4.jpg",
-      alt: "Kayise Ngqula production set",
-      caption: "Directing and hosting on the set of 'After Dark'",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "kayise-gal-2",
-      src: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm5.jpg",
-      alt: "Kayise Ngqula speaker engagement",
-      caption: "Speaking at a Women in Leadership summit",
-      className: ""
-    },
-    {
-      id: "kayise-gal-3",
-      src: "/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm6.jpg",
-      alt: "Kayise Ngqula brand shoot",
-      caption: "Brand ambassador and media executive profile",
-      className: ""
     }
   ];
 
@@ -116,8 +101,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Media Executive, Broadcaster & Autism Advocate"
       speakerRole="Founder & MD of KNN Media, television producer, and advocate for neurodiversity."
       speakerRef="TSF-KN-04"
-      heroBackgroundImage="/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm2.jpg"
+      heroBackgroundImage="/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm7.jpg"
+      biographyImage="/speakers/Kayise Ngcula/Kayise-Ngcula-The-Speakers-Firm4.jpg"
       bioHook="“Reinvention is not about changing who you are; it is about uncovering your true purpose and alignment.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -132,7 +117,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="kayise-ngqula" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Broadcasting, executive moderation and advocacy panel keynotes by Kayise Ngqula."
         customVideos={customVideos}
       />

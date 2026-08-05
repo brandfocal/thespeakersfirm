@@ -64,7 +64,7 @@ export const AboutTeamSection = () => {
       date: "2022",
       action: "Read Article",
       url: "https://iol.co.za/saturday-star/news/2022-10-29-step-aside-comedian-eugene-khoza-is-back-after-a-five-year-break/",
-      image: "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-4.jpg"
     },
     {
       id: "khoza-art-2",
@@ -82,7 +82,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Watch Interview",
       url: "https://www.youtube.com/watch?v=GhlhkbAtN1g",
-      image: "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-4.jpg"
+      image: "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-12.jpg"
     }
   ];
 
@@ -121,12 +121,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Eugene Khoza"
-      speakerTitle="Eugene"
+      speakerTitle=""
       speakerDesignation="Multilingual Stand-Up Comedian, TV Host & Cultural Analyst"
       speakerRole="Highly sought-after multilingual stand-up comedian and television presenter."
       speakerRef="TSF-EK-28"
-      heroBackgroundImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg"
+      heroBackgroundImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg"
+      biographyImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-9.png"
       bioHook="“Understanding cultures and engaging them on a humorous level is the true art of connection.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -141,7 +141,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="eugene-khoza" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Thoughtful comedy performances, live television hosting, and multicultural team-building sessions with Eugene Khoza."
         customVideos={customVideos}
       />

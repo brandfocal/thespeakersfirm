@@ -85,7 +85,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Rams Mabote"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Broadcaster, PR Strategist & Master of Ceremonies"
       speakerRole="Talk Show Host, Author & Communication Advisor."
       speakerRef="TSF-RM-40"

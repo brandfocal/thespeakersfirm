@@ -60,45 +60,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "billy-art-1",
+      headline: "Dr Billy Selekane on Personal & Professional Breakthroughs",
+      publication: "YouTube Interview",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=7JUaP40Kuu8",
+      image: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-2.jpg"
+    },
+    {
+      id: "billy-art-2",
       headline: "Master Class session with Billy Selekane on how to navigate tough times",
       publication: "TEA Alexandra",
       date: "2024",
       action: "Watch Masterclass",
       url: "https://www.youtube.com/watch?v=BlYrv5ucXnY",
-      image: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-3.jpg"
     },
     {
-      id: "billy-art-2",
+      id: "billy-art-3",
       headline: "The Power of a Dream: Strategic Purpose and Action",
       publication: "YouTube",
       date: "2023",
       action: "Watch Keynote",
       url: "https://www.youtube.com/watch?v=jue_3k4fxsg",
-      image: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "billy-gal-1",
-      src: "/speakers/Billy Selekane/billy-selekane-the-speakers-firm.jpg",
-      alt: "Dr Billy Selekane stage",
-      caption: "International keynote presentation on corporate culture",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "billy-gal-2",
-      src: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-4.jpg",
-      alt: "Dr Billy Selekane seminar",
-      caption: "Facilitating executive change management retreat",
-      className: ""
-    },
-    {
-      id: "billy-gal-3",
-      src: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-5.jpg",
-      alt: "Billy Selekane book session",
-      caption: "Signing bestselling leadership publications",
-      className: ""
+      image: "/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-7.jpg"
     }
   ];
 
@@ -117,8 +102,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Keynote Speaker, Author & Organisational Culture Specialist"
       speakerRole="Executive Chairman of Billy Selekane International, past PSASA President, and coach."
       speakerRef="TSF-BS-10"
-      heroBackgroundImage="/speakers/Billy Selekane/bg_billy.jpg"
-      biographyImage="/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm.jpg"
+      heroBackgroundImage="/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-10.jpg"
+      biographyImage="/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-6.jpg"
       bioHook="“Transformative strategy only works when the culture has been primed to receive it.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -133,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="dr-billy-selekane" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="International speaker briefs, corporate effectiveness lectures and book tours by Dr Billy Selekane."
         customVideos={customVideos}
       />

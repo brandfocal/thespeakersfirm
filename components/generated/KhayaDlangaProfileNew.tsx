@@ -116,7 +116,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Khaya Dlanga"
-      speakerTitle="Mr."
+      speakerTitle=""
       speakerDesignation="Author, Marketing Executive & Storyteller"
       speakerRole="TED Global Speaker & Brand Strategist"
       speakerRef="TSF-KD-12"

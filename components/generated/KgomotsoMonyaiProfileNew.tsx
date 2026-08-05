@@ -52,45 +52,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "kgomotso-art-1",
+      headline: "Unpacking Unconventional Stories in South African Art",
+      publication: "Iono FM",
+      date: "2024",
+      action: "Listen to Audio",
+      url: "https://iono.fm/e/1103955",
+      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-3.jpg"
+    },
+    {
+      id: "kgomotso-art-2",
       headline: "Dear Jozi: Hustle, ambition, and opportunity in the City of Gold",
       publication: "Medium",
       date: "2024",
       action: "Read Story",
       url: "https://medium.com/@Momonyai/dear-jozi-11eefa7c344d",
-      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-4.jpg"
     },
     {
-      id: "kgomotso-art-2",
+      id: "kgomotso-art-3",
       headline: "Starting and Running a Business: The 10 Minute Guide",
       publication: "iono.fm",
       date: "2024",
       action: "Listen to Audio",
       url: "https://iono.fm/e/1094779",
-      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "kgomotso-gal-1",
-      src: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-4.jpg",
-      alt: "Kgomotso Monyai studio recording",
-      caption: "Broadcasting live in studio",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "kgomotso-gal-2",
-      src: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-5.jpg",
-      alt: "Kgomotso Monyai MC event",
-      caption: "Hosting corporate events",
-      className: ""
-    },
-    {
-      id: "kgomotso-gal-3",
-      src: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-6.jpg",
-      alt: "Kgomotso Monyai profile shoot",
-      caption: "Creative media production and direction",
-      className: ""
+      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-6.jpg"
     }
   ];
 
@@ -125,7 +110,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="kgomotso-monyai" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Creative broadcasting, events facilitation and production showcases by Kgomotso Monyai."
         customVideos={customVideos}
       />

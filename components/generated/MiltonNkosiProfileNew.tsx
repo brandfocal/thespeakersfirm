@@ -86,7 +86,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Milton Nkosi"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Veteran BBC News Analyst, Geopolitical Expert & Speaker"
       speakerRole="International Correspondent, Media Strategist & C-Suite Advisor."
       speakerRef="TSF-MN-39"

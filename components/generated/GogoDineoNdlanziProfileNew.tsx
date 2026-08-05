@@ -59,45 +59,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "dineo-art-1",
+      headline: "Indigenous African Healing and Collective Consciousness",
+      publication: "Iono FM",
+      date: "2024",
+      action: "Listen to Podcast",
+      url: "https://iono.fm/e/1091616",
+      image: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.png"
+    },
+    {
+      id: "dineo-art-2",
       headline: "Weird & Wonderful: South Africa’s traditional history and cultural practices",
       publication: "702 (Aubrey Masango Show)",
       date: "2024",
       action: "Read Details",
       url: "https://gogodineondlanzi.com/the-aubrey-masango-show/",
-      image: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-3.jpg"
     },
     {
-      id: "dineo-art-2",
+      id: "dineo-art-3",
       headline: "Taking Your Spiritual Power Back – with Gogo Dineo Ndlanzi",
       publication: "Apple Podcasts",
       date: "2023",
       action: "Listen to Podcast",
       url: "https://podcasts.apple.com/gh/podcast/taking-your-spiritual-power-back-with-gogo-dineo-ndlanzi/id1362277001?i=1000499906646",
-      image: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "dineo-gal-1",
-      src: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-5.png",
-      alt: "Gogo Dineo Ndlanzi training",
-      caption: "Gobela Gogo Dineo instructing traditional initiates",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "dineo-gal-2",
-      src: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-4.jpg",
-      alt: "Spiritual coaching session",
-      caption: "Facilitating workplace wellness and spiritual alignment",
-      className: ""
-    },
-    {
-      id: "dineo-gal-3",
-      src: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-6.jpg",
-      alt: "Traditional throwing of bones",
-      caption: "Educating audiences on African indigenous healing",
-      className: ""
+      image: "/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-5.png"
     }
   ];
 
@@ -116,8 +101,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="African Spiritual Teacher & Healing Practitioner"
       speakerRole="Pre-eminent sangoma, spiritual life coach, and professional storyteller."
       speakerRef="TSF-GDN-09"
-      heroBackgroundImage="/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.png"
-      biographyImage="/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-7.jpg"
+      heroBackgroundImage="/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-7.jpg"
+      biographyImage="/speakers/Gogo Dineo Ndlanzi/Gogo-Dineo-Ndlanzi-The-Speakers-Firm-6.jpg"
       bioHook="“African spiritual healing modalities offer critical, time-tested systems to restore collective wellness.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -132,7 +117,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="gogo-dineo-ndlanzi" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Indigenous knowledge keynotes, heritage storytelling and alignment sessions by Gogo Dineo Ndlanzi."
         customVideos={customVideos}
       />

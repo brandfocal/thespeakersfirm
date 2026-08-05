@@ -60,45 +60,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "richie-art-1",
+      headline: "How to Build a High Performance Leadership Team",
+      publication: "YouTube Interview",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=0zTLyHU6kds",
+      image: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-2.jpg"
+    },
+    {
+      id: "richie-art-2",
       headline: "Emotional Intelligence and Personal Development Masterclass",
       publication: "YouTube",
       date: "2024",
       action: "Watch Masterclass",
       url: "https://www.youtube.com/watch?v=n18O4GMHy9Y",
-      image: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-5.jpg"
     },
     {
-      id: "richie-art-2",
+      id: "richie-art-3",
       headline: "The Path to Success: A GPS Navigator for Life's Traffic Jams",
       publication: "Dexterity Radio",
       date: "2023",
       action: "Watch Feature",
       url: "https://www.youtube.com/watch?v=VbQP9wV2tuY",
-      image: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "richie-gal-1",
-      src: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-4.jpg",
-      alt: "Dr Richie Achukwu consulting",
-      caption: "Strategic board advisory and team alignment",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "richie-gal-2",
-      src: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-5.jpg",
-      alt: "Dr Richie Achukwu speaking",
-      caption: "Neuroscience-based keynote presentation",
-      className: ""
-    },
-    {
-      id: "richie-gal-3",
-      src: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-6.jpg",
-      alt: "Dr Richie Achukwu broadcast",
-      caption: "Hosting The Mind Clinic on CNBC Africa",
-      className: ""
+      image: "/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-6.jpg"
     }
   ];
 
@@ -117,7 +102,7 @@ export const AboutTeamSection = () => {
       speakerDesignation="Leadership & Human Transformation Expert"
       speakerRole="Neuroscience speaker, strategic board advisor, and executive leadership coach."
       speakerRef="TSF-RA-07"
-      heroBackgroundImage="/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm.jpg"
+      heroBackgroundImage="/speakers/Richie Achukwu/Dr-Richie-Achukwu-The-Speakers-Firm-7.jpg"
       biographyImage="/speakers/Richie Achukwu/Dr-Richie.jpg"
       bioHook="“Transforming leadership requires mapping the mind to bridge the gap between intention and ultimate execution.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
@@ -133,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="dr-richie-achukwu" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Neuro-leadership seminars, organizational deconfliction forums and masterclasses by Dr Richie Achukwu."
         customVideos={customVideos}
       />

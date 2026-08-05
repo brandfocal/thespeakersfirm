@@ -306,7 +306,7 @@ const speakers: Speaker[] = [
     "id": "ntosh-madlingozi",
     "name": "Ntosh Madlingozi",
     "role": "Entrepreneur, Stand-Up Comedian & Master of Ceremonies",
-    "image": "/speakers/Ntosh Madlingozi/Ntobeko-Ntosh-Madlingozi.jpg",
+    "image": "/speaker_thumbnails/Ntosh-Madlingozi-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -317,7 +317,7 @@ const speakers: Speaker[] = [
     "id": "ndumiso-lindi",
     "name": "Ndumiso Lindi",
     "role": "Stand-Up Comedian, Master of Ceremonies & Broadcaster",
-    "image": "/speakers/Ndumiso Lindi/Ndumiso-Lindi-1.jpg",
+    "image": "/speaker_thumbnails/Ndumiso-Lindi-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -328,7 +328,7 @@ const speakers: Speaker[] = [
     "id": "mpho-popps",
     "name": "Mpho Popps Modikoane",
     "role": "Charismatic Comedian, Actor, Presenter & Master of Ceremonies",
-    "image": "/speakers/Mpho Popps/Mpho-Popps.jpg",
+    "image": "/speaker_thumbnails/Mpho-Popps-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -339,7 +339,7 @@ const speakers: Speaker[] = [
     "id": "kagiso-kg-mokgadi",
     "name": "Kagiso “KG” Mokgadi",
     "role": "Award-Winning Stand-Up Comedian & Master of Ceremonies",
-    "image": "/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg",
+    "image": "/speaker_thumbnails/Kagiso-KG-Mokgadi-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -350,7 +350,7 @@ const speakers: Speaker[] = [
     "id": "kagiso-lediga",
     "name": "Kagiso Lediga",
     "role": "Comedy Legend, Emmy-Nominated Director & Showrunner",
-    "image": "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg",
+    "image": "/speaker_thumbnails/Kagiso-Lediga-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -361,7 +361,7 @@ const speakers: Speaker[] = [
     "id": "eugene-khoza",
     "name": "Eugene Khoza",
     "role": "Multilingual Stand-Up Comedian, TV Host & Cultural Analyst",
-    "image": "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg",
+    "image": "/speaker_thumbnails/Eugene-Khoza-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -372,7 +372,7 @@ const speakers: Speaker[] = [
     "id": "isaac-gampu",
     "name": "Isaac Gampu",
     "role": "Veteran Stand-Up Comedian, Actor & Radio Presenter",
-    "image": "/speakers/Isaac Gampu/Isaac-Gampu-South-African-comedian-1.jpg",
+    "image": "/speaker_thumbnails/Isaac-Gampu-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -383,7 +383,7 @@ const speakers: Speaker[] = [
     "id": "tol-ass-mo",
     "name": "Tol A$$ Mo",
     "role": "Celebrated Stand-Up Comedian, TV Personality & Entrepreneur",
-    "image": "/speakers/Tol Ass Mo/Tol-Ass-Mo.jpg",
+    "image": "/speaker_thumbnails/Tol-As-Mo-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"
@@ -394,7 +394,7 @@ const speakers: Speaker[] = [
     "id": "summary",
     "name": "Summary",
     "role": "Stand-Up Comedian, Event Emcee & Media Personality",
-    "image": "/speakers/Summary/Summary-The-Speakers-Firm-1.jpg",
+    "image": "/speaker_thumbnails/Summary-The-Speakers-Firm.jpg",
     "topics": [
       "Comedy & Satirical Disruption",
       "Strategic Audience Engagement"

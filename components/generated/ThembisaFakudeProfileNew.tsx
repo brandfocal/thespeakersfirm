@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Thembisa Fakude"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Political Analyst, Author & Middle East-Africa Relations Specialist"
       speakerRole="Chairperson of FCASA & Research Fellow at Al Sharq Forum."
       speakerRef="TSF-TF-26"

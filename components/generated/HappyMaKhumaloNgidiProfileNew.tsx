@@ -60,45 +60,30 @@ export const AboutTeamSection = () => {
   const customMedia = [
     {
       id: "happy-art-1",
+      headline: "Happy MaKhumalo Ngidi on Buy Local Drive & Economic Impact",
+      publication: "YouTube Interview",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=H2xSqagUkfw",
+      image: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-6.jpg"
+    },
+    {
+      id: "happy-art-2",
       headline: "Get to know the woman behind Proudly SA's innovative marketing",
       publication: "TrueLove / News24",
       date: "09 Apr 2024",
       action: "Read Interview",
       url: "https://www.news24.com/truelove/boss-up/careers/get-to-know-the-woman-behind-proudly-sas-innovative-marketing-happy-ngidi-20240409",
-      image: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-8.jpg"
     },
     {
-      id: "happy-art-2",
+      id: "happy-art-3",
       headline: "'Babes Welocal' – Happy MaKhumalo Ngidi leads buy-local drive",
       publication: "Sowetan Live",
       date: "16 Apr 2025",
       action: "Read Story",
       url: "https://www.sowetanlive.co.za/s-mag/living/2025-04-16-babes-welocal-happy-makhumalo-ngidi/",
       image: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "happy-gal-1",
-      src: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-4.jpg",
-      alt: "Happy Ngidi speaking",
-      caption: "CMO Happy Ngidi addressing the Proudly SA summit",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "happy-gal-2",
-      src: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-5.jpg",
-      alt: "Bella Wines launch",
-      caption: "Launching Bella Wines personal brand in 2022",
-      className: ""
-    },
-    {
-      id: "happy-gal-3",
-      src: "/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-6.jpg",
-      alt: "PR masterclass",
-      caption: "Hosting a brand positioning masterclass",
-      className: ""
     }
   ];
 
@@ -113,12 +98,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Happy MaKhumalo Ngidi"
-      speakerTitle="Mrs"
+      speakerTitle=""
       speakerDesignation="Brand Activist, Marketing Strategist & Localization Advocate"
       speakerRole="CMO of Proudly South African, social entrepreneur, and BRICS WBA member."
       speakerRef="TSF-HN-08"
-      heroBackgroundImage="/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Happy Ngidi/happy_ngidi.jpg"
+      heroBackgroundImage="/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm-9.jpg"
+      biographyImage="/speakers/Happy Ngidi/Happy-MaKhumalo-Ngidi-The-Speakers-Firm.jpg"
       bioHook="“Localization is not just a marketing campaign; it is a critical engine of economic recovery and job creation.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -133,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="happy-makhumalo-ngidi-2" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Brand alignment dialogues, local enterprise development panels, and CMO briefs by Happy MaKhumalo Ngidi."
         customVideos={customVideos}
       />

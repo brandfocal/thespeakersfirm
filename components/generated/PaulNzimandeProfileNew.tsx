@@ -112,7 +112,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Paul Nzimande"
-      speakerTitle="Mr."
+      speakerTitle=""
       speakerDesignation="Life Coach, Author & Mental Wellness Advocate"
       speakerRole="Transformational Leadership Strategist & Executive Coach"
       speakerRef="TSF-PN-11"

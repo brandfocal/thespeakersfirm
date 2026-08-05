@@ -120,7 +120,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Thapelo Mokoena"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Speaker, MC, Moderator, Entrepreneur & Actor"
       speakerRole="Founder of Bakoena Brands & Nero Wine."
       speakerRef="TSF-TM-32"

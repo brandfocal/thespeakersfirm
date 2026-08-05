@@ -120,12 +120,12 @@ export const AboutTeamSection = () => {
 
   return (
     <SpeakerProfileTemplate
-      speakerName="Mpho Popps"
-      speakerTitle="Mpho Popps Modikoane"
+      speakerName="Mpho Popps Modikoane"
+      speakerTitle=""
       speakerDesignation="Charismatic Comedian, Actor, Presenter & Master of Ceremonies"
       speakerRole="One of South Africa's most charismatic, award-winning comedic personalities."
       speakerRef="TSF-MP-25"
-      heroBackgroundImage="/speakers/Mpho Popps/EAEZKeIWwAA_wBZ.jpg"
+      heroBackgroundImage="/speakers/Mpho Popps/Mpho-Popps-The-Speakers-Firm-7.jpg"
       biographyImage="/speakers/Mpho Popps/Mpho-Popps.jpg"
       bioHook="“Laughter is not just entertainment, it is a powerful form of connection, healing, and cultural celebration.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
@@ -141,7 +141,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="mpho-popps" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Versatile corporate comedy hosting, brand visibility strategy, and executive entertainment by Mpho Popps."
         customVideos={customVideos}
       />

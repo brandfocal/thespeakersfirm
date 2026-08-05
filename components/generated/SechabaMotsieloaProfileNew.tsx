@@ -86,7 +86,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Sechaba Motsieloa"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Corporate Affairs Director, Brand Strategist & Speaker"
       speakerRole="Executive Advisor, Communications Specialist & Purpose Advocate."
       speakerRef="TSF-SM-38"

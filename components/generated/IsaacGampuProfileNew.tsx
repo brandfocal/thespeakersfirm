@@ -83,7 +83,7 @@ export const AboutTeamSection = () => {
       date: "2022",
       action: "Read Article",
       url: "https://thespeakersfirm.co.za/comedy/isaac-gampu/",
-      image: "/speakers/Isaac Gampu/Isaac-Gampu-The-Speakers-Firm-four.jpg"
+      image: "/speakers/Isaac Gampu/Isaac-Gampu-The-Speakers-Firm-five.jpg"
     }
   ];
 
@@ -122,12 +122,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Isaac Gampu"
-      speakerTitle="Isaac"
+      speakerTitle=""
       speakerDesignation="Veteran Stand-Up Comedian, Actor & Radio Presenter"
       speakerRole="Pioneering multilingual stand-up comedian and television sitcom lead."
       speakerRef="TSF-IG-29"
-      heroBackgroundImage="/speakers/Isaac Gampu/IMG-20190728-WA0003.jpg"
-      biographyImage="/speakers/Isaac Gampu/Isaac-Gampu-South-African-comedian-1.jpg"
+      heroBackgroundImage="/speakers/Isaac Gampu/Isaac-Gampu-The-Speakers-Firm-seven.jpg"
+      biographyImage="/speakers/Isaac Gampu/Isaac-Gampu-The-Speakers-Firm-six.jpg"
       bioHook="“Vosloorus-born comedy exporter shaping modern satire and radio hosting across South African airwaves.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -142,7 +142,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="isaac-gampu" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Dynamic multilingual stand-up, celebrity emcee programs, and corporate culture advisory with Isaac Gampu."
         customVideos={customVideos}
       />

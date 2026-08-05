@@ -132,7 +132,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Timothy Maurice Webster"
-      speakerTitle="Mr."
+      speakerTitle=""
       speakerDesignation="Behavioral Strategist & Author"
       speakerRole="Global Keynote Speaker & Brand Architect"
       speakerRef="TSF-TMW-14"

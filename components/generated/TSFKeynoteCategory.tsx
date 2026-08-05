@@ -185,7 +185,7 @@ const speakers: Speaker[] = [{
   id: 'miles-kubheka',
   name: 'Miles Kubheka',
   role: 'Celebrated Chef, Author, Entrepreneur & Keynote Speaker',
-  image: '/speakers/Miles Kubheka/miles-kubheka-1.jpg',
+  image: '/speaker_thumbnails/miles-kubheka-the-speakers-firm.jpg',
   topics: ['Resilience', 'Transformation', 'Performance'],
   path: '/tracks/inspirational-keynote-speakers/miles-kubheka'
 }];

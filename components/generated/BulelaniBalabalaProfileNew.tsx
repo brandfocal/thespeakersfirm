@@ -113,7 +113,7 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Bulelani Balabala"
-      speakerTitle="Mr"
+      speakerTitle=""
       speakerDesignation="Founder of Township Entrepreneurs Alliance & CEO of IAF Brands"
       speakerRole="Award-winning entrepreneur, business speaker and township developer."
       speakerRef="TSF-BB-34"

@@ -63,7 +63,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Watch Interview",
       url: "https://www.youtube.com/watch?v=94c08GzcjEE",
-      image: "/speakers/Ntosh Madlingozi/Ntosh-Madingozi-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Ntosh Madlingozi/ntosh-madlingozi-the-speakers-firm.jpg"
     },
     {
       id: "ntosh-art-2",
@@ -72,7 +72,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Article",
       url: "https://www.gq.co.za/culture/entertainment/get-to-know-ntosh-madlingozi-the-comedy-prophet-ahead-of-jokers-in-july-festival-22f43dba-c53c-426d-9bd0-980f0de69aa7",
-      image: "/speakers/Ntosh Madlingozi/Ntosh-Madingozi-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-4.jpg"
     },
     {
       id: "ntosh-art-3",
@@ -81,31 +81,7 @@ export const AboutTeamSection = () => {
       date: "2020",
       action: "Read Article",
       url: "https://www.news24.com/life/arts-and-entertainment/music/comedian-ntosh-madlingozi-tells-us-about-sober-sex-and-male-privilege-20200227",
-      image: "/speakers/Ntosh Madlingozi/Ntosh-Madingozi-The-Speakers-Firm.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "ntosh-gal-1",
-      src: "/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-4.jpg",
-      alt: "Ntosh Madlingozi stage",
-      caption: "Performing live at a national comedy showcase.",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "ntosh-gal-2",
-      src: "/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-5.jpg",
-      alt: "Ntosh corporate MC",
-      caption: "Directing programs for blue-chip corporate engagements.",
-      className: ""
-    },
-    {
-      id: "ntosh-gal-3",
-      src: "/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-6.jpg",
-      alt: "Ntosh profile portrait",
-      caption: "Creative director and strategist profile photo.",
-      className: ""
+      image: "/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-6.jpg"
     }
   ];
 
@@ -119,12 +95,12 @@ export const AboutTeamSection = () => {
 
   return (
     <SpeakerProfileTemplate
-      speakerName="Ntosh Madlingozi"
-      speakerTitle="Ntobeko “Ntosh”"
+      speakerName="Ntobeko “Ntosh” Madlingozi"
+      speakerTitle=""
       speakerDesignation="Entrepreneur, Stand-Up Comedian & Master of Ceremonies"
       speakerRole="Comedy pioneer, versatile corporate MC, and media personality."
       speakerRef="TSF-NM-23"
-      heroBackgroundImage="/speakers/Ntosh Madlingozi/bg_ntosh.jpg"
+      heroBackgroundImage="/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm-11.jpg"
       biographyImage="/speakers/Ntosh Madlingozi/Ntobeko-Ntosh-Madlingozi.jpg"
       bioHook="“Understanding and adapting to the collective funny bone of an audience is where comedy transforms into connection.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
@@ -140,7 +116,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="ntosh-madlingozi" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Versatile corporate MC interventions, high-impact comedic panels and cultural advisory sessions by Ntosh Madlingozi."
         customVideos={customVideos}
       />

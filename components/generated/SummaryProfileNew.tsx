@@ -122,12 +122,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Summary"
-      speakerTitle="Summary"
+      speakerTitle=""
       speakerDesignation="Stand-Up Comedian, Event Emcee & Media Personality"
       speakerRole="Rising stand-up comedian bringing Orange Farm storytelling to national stages."
       speakerRef="TSF-SC-31"
-      heroBackgroundImage="/speakers/Summary/Summary-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Summary/Summary-The-Speakers-Firm-1.jpg"
+      heroBackgroundImage="/speakers/Summary/Summary-The-Speakers-Firm-4.jpg"
+      biographyImage="/speakers/Summary/Summary-The-Speakers-Firm.jpg"
       bioHook="“Using comedy wisely to make people laugh their problems away, and helping the next generation rise.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -142,7 +142,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="summary" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Corporate team building comedy, student emcee masterclasses, and community outreach engagements with Summary."
         customVideos={customVideos}
       />

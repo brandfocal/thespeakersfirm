@@ -73,7 +73,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Article",
       url: "https://www.theherald.co.za/news/2024-07-26-standup-comedy-legend-ndumiso-lindi-performing-in-nelson-mandela-bay/",
-      image: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-5.jpg"
     },
     {
       id: "ndumiso-art-3",
@@ -82,31 +82,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Article",
       url: "https://www.news24.com/drum/celebs/news/comedian-ndumiso-lindi-on-grief-loss-and-his-one-man-show-boys-dont-cry-20230123",
-      image: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-4.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "ndumiso-gal-1",
-      src: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-5.jpg",
-      alt: "Ndumiso stage",
-      caption: "Ndumiso live on stage during a stand-up performance.",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "ndumiso-gal-2",
-      src: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-6.jpg",
-      alt: "Ndumiso laugh",
-      caption: "Sharing a laugh during an event emcee session.",
-      className: ""
-    },
-    {
-      id: "ndumiso-gal-3",
-      src: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-7.jpg",
-      alt: "Ndumiso portrait",
-      caption: "Studio profile photo of Ndumiso Lindi.",
-      className: ""
+      image: "/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-6.jpg"
     }
   ];
 
@@ -121,12 +97,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Ndumiso Lindi"
-      speakerTitle="Ndumiso"
+      speakerTitle=""
       speakerDesignation="Stand-Up Comedian, Master of Ceremonies & Broadcaster"
       speakerRole="The Gentleman of South African comedy and narrative storyteller."
       speakerRef="TSF-NL-24"
-      heroBackgroundImage="/speakers/Ndumiso Lindi/31e682bc69204989b444b3b0a2ce4819.jpg"
-      biographyImage="/speakers/Ndumiso Lindi/Ndumiso-Lindi-1.jpg"
+      heroBackgroundImage="/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-8.jpg"
+      biographyImage="/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm-3.jpg"
       bioHook="“Understanding your audience and delivering down-to-earth stories is how you keep people laughing from the belly.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -141,7 +117,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="ndumiso-lindi" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Thoughtful comedy, premium corporate emceeing, and cross-cultural audience engagement sessions with Ndumiso Lindi."
         customVideos={customVideos}
       />

@@ -64,7 +64,7 @@ export const AboutTeamSection = () => {
       date: "2025",
       action: "Read Article",
       url: "https://www.timeslive.co.za/sunday-times-daily/lifestyle/2025-05-02-inside-sabbatical-sas-new-film-where-family-breaks-expose-hidden-truths/",
-      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-4.jpeg"
     },
     {
       id: "lediga-art-2",
@@ -73,7 +73,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Article",
       url: "https://iol.co.za/entertainment/celebrity-news/local/2024-12-04-mzansis-lebo-m-and-kagiso-lediga-lend-their-voices-to-the-mufasa-the-lion-king-soundtrack/",
-      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-4.jpg"
+      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-8.jpg"
     },
     {
       id: "lediga-art-3",
@@ -82,31 +82,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Article",
       url: "https://www.aljazeera.com/features/2024/2/24/how-kagiso-lediga-became-the-most-sought-after-filmmaker-in-south-africa",
-      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "lediga-gal-1",
-      src: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-6.jpg",
-      alt: "Kagiso Lediga director",
-      caption: "Lediga directing on-set for a major streaming feature.",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "lediga-gal-2",
-      src: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-7.jpg",
-      alt: "Kagiso Lediga profile",
-      caption: "Filmmaker portrait showing schoolboy charm and creative focus.",
-      className: ""
-    },
-    {
-      id: "lediga-gal-3",
-      src: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-8.jpg",
-      alt: "Kagiso Lediga media",
-      caption: "Keynote presentation at a global entertainment summit.",
-      className: ""
+      image: "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-11.jpg"
     }
   ];
 
@@ -121,12 +97,12 @@ export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
       speakerName="Kagiso Lediga"
-      speakerTitle="Kagiso"
+      speakerTitle=""
       speakerDesignation="Comedy Legend, Emmy-Nominated Director & Showrunner"
       speakerRole="Pioneering filmmaker, stand-up comedian, writer, and Netflix creator."
       speakerRef="TSF-KL-27"
-      heroBackgroundImage="/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm.jpg"
-      biographyImage="/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg"
+      heroBackgroundImage="/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-6.jpg"
+      biographyImage="/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm--10.png"
       bioHook="“Creative genius begins with schoolboy charm and ends in disruptive, groundbreaking storytelling.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
@@ -141,7 +117,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="kagiso-lediga" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Creative direction, screenwriting keynotes, and media innovation masterclasses by Kagiso Lediga."
         customVideos={customVideos}
       />

@@ -91,8 +91,8 @@ const customMedia = [
 export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
-      speakerName="Zukie Siyotula"
-      speakerTitle="Nozukiso"
+      speakerName="Nozukiso “Zukie” Siyotula"
+      speakerTitle=""
       speakerDesignation="Founding CEO of Siyotula Holdings & Professor of Practice"
       speakerRole="100% female-owned advisory and strategic investment leader."
       speakerRef="TSF-ZS-12"

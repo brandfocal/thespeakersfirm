@@ -65,40 +65,25 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Alumni Story",
       url: "https://www.tut.ac.za/latest-news/154-tut-enables-radio-gurus-dreams",
-      image: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-2.jpg"
+      image: "/speakers/Hector Motivator/Hector-Motivator-2.jpg"
     },
     {
       id: "hector-art-2",
+      headline: "Hector Motivator on Life, Leadership & Energy",
+      publication: "YouTube Show",
+      date: "2024",
+      action: "Watch Interview",
+      url: "https://www.youtube.com/watch?v=Y5uN_ZzcU0k",
+      image: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-3.jpg"
+    },
+    {
+      id: "hector-art-3",
       headline: "In Conversation with GPL Chairpersons on Provincial Government",
       publication: "Mail & Guardian",
       date: "30 Jun 2021",
       action: "Read Coverage",
       url: "https://mg.co.za/special-reports/2021-06-30-in-conversation-with-gpl-chairpersons-part-2-of-4/",
-      image: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-3.jpg"
-    }
-  ];
-
-  const customGallery = [
-    {
-      id: "hector-gal-1",
-      src: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-4.jpg",
-      alt: "Hector Motivator stage",
-      caption: "Hosting Ekurhuleni Comes Alive Concert live",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "hector-gal-2",
-      src: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-5.jpg",
-      alt: "Hector Motivator webinar",
-      caption: "Moderating Gauteng Provincial Legislature conversation",
-      className: ""
-    },
-    {
-      id: "hector-gal-3",
-      src: "/speakers/Hector Motivator/hector.jpg",
-      alt: "Hector Motivator portrait",
-      caption: "Respected radiopreneur and author profile",
-      className: ""
+      image: "/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-4.jpg"
     }
   ];
 
@@ -117,7 +102,7 @@ export const AboutTeamSection = () => {
       speakerDesignation="Speaker, MC & Charismatic Broadcaster"
       speakerRole="Pioneering radiopreneur, 17-year resident concert MC, and audience motivator."
       speakerRef="TSF-HM-11"
-      heroBackgroundImage="/speakers/Hector Motivator/hector_bg.jpg"
+      heroBackgroundImage="/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm-6.jpg"
       biographyImage="/speakers/Hector Motivator/Hector-Motivator-The-Speakers-Firm.jpg"
       bioHook="“Hosting is not just about keeping the mic warm; it is about creating a community of joy on the stage.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
@@ -133,7 +118,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="hector-motivator" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customIntroText="Broadcasting highlights, community gatherings and events direction by Hector Motivator."
         customVideos={customVideos}
       />
