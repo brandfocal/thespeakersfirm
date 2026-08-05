@@ -86,6 +86,16 @@ import { AboutTeamSection as VictorKgomoeswanaProfile } from "@/components/gener
 import { AboutTeamSection as GerryRantseliElsdonProfile } from "@/components/generated/GerryRantseliElsdonProfileNew";
 import { AboutTeamSection as DrMaandaTshifularoProfile } from "@/components/generated/DrMaandaTshifularoProfileNew";
 import { AboutTeamSection as TumiRamonotsiProfile } from "@/components/generated/TumiRamonotsiProfileNew";
+import { AboutTeamSection as BongiweZwaneProfile } from "@/components/generated/BongiweZwaneProfileNew";
+import { AboutTeamSection as KgomotsoMonyaiProfile } from "@/components/generated/KgomotsoMonyaiProfileNew";
+import { AboutTeamSection as KayiseNgqulaProfile } from "@/components/generated/KayiseNgqulaProfileNew";
+import { AboutTeamSection as NqabaMabeceProfile } from "@/components/generated/NqabaMabeceProfileNew";
+import { AboutTeamSection as HulisaniRaveleProfile } from "@/components/generated/HulisaniRaveleProfileNew";
+import { AboutTeamSection as DrRichieAchukwuProfile } from "@/components/generated/DrRichieAchukwuProfileNew";
+import { AboutTeamSection as HappyMaKhumaloNgidiProfile } from "@/components/generated/HappyMaKhumaloNgidiProfileNew";
+import { AboutTeamSection as GogoDineoNdlanziProfile } from "@/components/generated/GogoDineoNdlanziProfileNew";
+import { AboutTeamSection as DrBillySelekaneProfile } from "@/components/generated/DrBillySelekaneProfileNew";
+import { AboutTeamSection as HectorMotivatorProfile } from "@/components/generated/HectorMotivatorProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -577,6 +587,46 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "tumi-ramonotsi") {
     return <TumiRamonotsiProfile />;
+  }
+
+  if (speakerId === "bongiwe-zwane") {
+    return <BongiweZwaneProfile />;
+  }
+
+  if (speakerId === "kgomotso-monyai") {
+    return <KgomotsoMonyaiProfile />;
+  }
+
+  if (speakerId === "kayise-ngqula") {
+    return <KayiseNgqulaProfile />;
+  }
+
+  if (speakerId === "nqaba-mabece") {
+    return <NqabaMabeceProfile />;
+  }
+
+  if (speakerId === "hulisani-ravele") {
+    return <HulisaniRaveleProfile />;
+  }
+
+  if (speakerId === "dr-richie-achukwu" || speakerId === "richie-achukwu") {
+    return <DrRichieAchukwuProfile />;
+  }
+
+  if (speakerId === "happy-makhumalo-ngidi-2" || speakerId === "happy-makhumalo-ngidi" || speakerId === "happy-ngidi") {
+    return <HappyMaKhumaloNgidiProfile />;
+  }
+
+  if (speakerId === "gogo-dineo-ndlanzi") {
+    return <GogoDineoNdlanziProfile />;
+  }
+
+  if (speakerId === "dr-billy-selekane" || speakerId === "billy-selekane") {
+    return <DrBillySelekaneProfile />;
+  }
+
+  if (speakerId === "hector-motivator") {
+    return <HectorMotivatorProfile />;
   }
 
 

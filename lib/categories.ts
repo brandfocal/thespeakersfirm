@@ -235,7 +235,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "ndileka-mandela", "nene-molefi", "rikky-minyuku", "brian-mhlanga"
   ],
   "neuroscience-peak-performance-mental-agility": [
-    "paul-nzimande", "happy-makhumalo-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
+    "paul-nzimande", "happy-makhumalo-ngidi", "happy-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
     "victor-ramathesele", "zamo-mbele", "khaya-dlanga", "billy-selekane", "siphiwe-moyo",
     "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis"
   ],

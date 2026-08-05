@@ -1689,6 +1689,39 @@ const FEATURED_SPEAKERS_RAW: Array<{
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Gender Equality and Human Rights Advocate, Founder of Kuhluka Movement</span>
+}, {
+  id: 'happy-ngidi',
+  name: 'Happy MaKhumalo Ngidi',
+  category: 'Neuroscience',
+  image: '/speaker_thumbnails/Happy-MaKhumalo-Ngidi-The-Speakers-Firm.jpg',
+  alt: 'Happy MaKhumalo Ngidi',
+  quote: 'Brand alignment dialogues, local enterprise development panels, and CMO briefs.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>PR and Marketing Executive, Speaker, Cultural Advocate & Philanthropist</span>
+}, {
+  id: 'gogo-dineo-ndlanzi',
+  name: 'Gogo Dineo Ndlanzi',
+  category: 'Neuroscience',
+  image: '/speaker_thumbnails/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.jpg',
+  alt: 'Gogo Dineo Ndlanzi',
+  quote: 'African spiritual healing modalities offer critical, time-tested systems to restore collective wellness.',
+  youtubeId: '4xi6_idDthQ',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Traditional Healer, Spiritual Teacher, Cultural Practitioner, International Speaker & Change Agent</span>
+}, {
+  id: 'billy-selekane',
+  name: 'Dr Billy Selekane',
+  category: 'Neuroscience',
+  image: '/speaker_thumbnails/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
+  alt: 'Dr Billy Selekane',
+  quote: 'Transforming leadership effectiveness, team performance, and organisational culture.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>International Keynote Speaker, Executive Coach, Author & Leadership Guru</span>
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
