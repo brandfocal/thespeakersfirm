@@ -181,6 +181,13 @@ const speakers: Speaker[] = [{
   image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
+}, {
+  id: 'miles-kubheka',
+  name: 'Miles Kubheka',
+  role: 'Celebrated Chef, Author, Entrepreneur & Keynote Speaker',
+  image: '/speakers/Miles Kubheka/miles-kubheka-1.jpg',
+  topics: ['Resilience', 'Transformation', 'Performance'],
+  path: '/tracks/inspirational-keynote-speakers/miles-kubheka'
 }];
 
 const filterChips = [{

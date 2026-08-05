@@ -1722,6 +1722,116 @@ const FEATURED_SPEAKERS_RAW: Array<{
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>International Keynote Speaker, Executive Coach, Author & Leadership Guru</span>
+}, {
+  id: 'ntosh-madlingozi',
+  name: 'Ntosh Madlingozi',
+  category: 'Comedy',
+  image: '/speakers/Ntosh Madlingozi/Ntobeko-Ntosh-Madlingozi.jpg',
+  alt: 'Ntosh Madlingozi',
+  quote: 'Understanding and adapting to the collective funny bone of an audience is where comedy transforms into connection.',
+  youtubeId: 'nfS7SRV-gSs',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Entrepreneur, Stand-Up Comedian & Master of Ceremonies</span>
+}, {
+  id: 'ndumiso-lindi',
+  name: 'Ndumiso Lindi',
+  category: 'Comedy',
+  image: '/speakers/Ndumiso Lindi/Ndumiso-Lindi-1.jpg',
+  alt: 'Ndumiso Lindi',
+  quote: 'Understanding your audience and delivering down-to-earth stories is how you keep people laughing from the belly.',
+  youtubeId: 'I0_tDPmCALM',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Stand-Up Comedian, Master of Ceremonies & Broadcaster</span>
+}, {
+  id: 'mpho-popps',
+  name: 'Mpho Popps Modikoane',
+  category: 'Comedy',
+  image: '/speakers/Mpho Popps/Mpho-Popps.jpg',
+  alt: 'Mpho Popps Modikoane',
+  quote: 'Laughter is not just entertainment, it is a powerful form of connection, healing, and cultural celebration.',
+  youtubeId: 'x6t2e0roe2M',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Charismatic Comedian, Actor, Presenter & Master of Ceremonies</span>
+}, {
+  id: 'kagiso-kg-mokgadi',
+  name: 'Kagiso “KG” Mokgadi',
+  category: 'Comedy',
+  image: '/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg',
+  alt: 'Kagiso “KG” Mokgadi',
+  quote: 'Relatable material and minimalist delivery allow an audience to connect with the storytelling naturally.',
+  youtubeId: 't8OSpcpJkHY',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Award-Winning Stand-Up Comedian & Master of Ceremonies</span>
+}, {
+  id: 'kagiso-lediga',
+  name: 'Kagiso Lediga',
+  category: 'Comedy',
+  image: '/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg',
+  alt: 'Kagiso Lediga',
+  quote: 'Creative genius begins with schoolboy charm and ends in disruptive, groundbreaking storytelling.',
+  youtubeId: 'r_S7o66RndE',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Comedy Legend, Emmy-Nominated Director & Showrunner</span>
+}, {
+  id: 'eugene-khoza',
+  name: 'Eugene Khoza',
+  category: 'Comedy',
+  image: '/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg',
+  alt: 'Eugene Khoza',
+  quote: 'Understanding cultures and engaging them on a humorous level is the true art of connection.',
+  youtubeId: 'GhlhkbAtN1g',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Multilingual Stand-Up Comedian, TV Host & Cultural Analyst</span>
+}, {
+  id: 'isaac-gampu',
+  name: 'Isaac Gampu',
+  category: 'Comedy',
+  image: '/speakers/Isaac Gampu/Isaac-Gampu-South-African-comedian-1.jpg',
+  alt: 'Isaac Gampu',
+  quote: 'Vosloorus-born comedy exporter shaping modern satire and radio hosting across South African airwaves.',
+  youtubeId: 'cNEHNcItviY',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Veteran Stand-Up Comedian, Actor & Radio Presenter</span>
+}, {
+  id: 'tol-ass-mo',
+  name: 'Tol A$$ Mo',
+  category: 'Comedy',
+  image: '/speakers/Tol Ass Mo/Tol-Ass-Mo.jpg',
+  alt: 'Tol A$$ Mo',
+  quote: 'Laughter is the ultimate vehicle for cultural disruption and authentic brand expression.',
+  youtubeId: 'YWlD-KbLwnQ',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Celebrated Stand-Up Comedian, TV Personality & Entrepreneur</span>
+}, {
+  id: 'summary',
+  name: 'Summary',
+  category: 'Comedy',
+  image: '/speakers/Summary/Summary-The-Speakers-Firm-1.jpg',
+  alt: 'Summary',
+  quote: 'Using comedy wisely to make people laugh their problems away, and helping the next generation rise.',
+  youtubeId: 'LoZwKjm6X0M',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Stand-Up Comedian, Event Emcee & Media Personality</span>
+}, {
+  id: 'miles-kubheka',
+  name: 'Miles Kubheka',
+  category: 'Keynote',
+  image: '/speakers/Miles Kubheka/miles-kubheka-1.jpg',
+  alt: 'Miles Kubheka',
+  quote: 'Resilience, purpose-driven action, and turning bold ideas into transformative ventures.',
+  youtubeId: 'uVmBwO_ct7k',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Celebrated Chef, Author, Entrepreneur & Keynote Speaker</span>
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {

@@ -301,6 +301,105 @@ const speakers: Speaker[] = [
       "High-Energy Corporate Presentation"
     ],
     "path": "/tracks/mc-and-facilitators/aubrey-masango-mc"
+  },
+  {
+    "id": "ntosh-madlingozi",
+    "name": "Ntosh Madlingozi",
+    "role": "Entrepreneur, Stand-Up Comedian & Master of Ceremonies",
+    "image": "/speakers/Ntosh Madlingozi/Ntobeko-Ntosh-Madlingozi.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/ntosh-madlingozi"
+  },
+  {
+    "id": "ndumiso-lindi",
+    "name": "Ndumiso Lindi",
+    "role": "Stand-Up Comedian, Master of Ceremonies & Broadcaster",
+    "image": "/speakers/Ndumiso Lindi/Ndumiso-Lindi-1.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/ndumiso-lindi"
+  },
+  {
+    "id": "mpho-popps",
+    "name": "Mpho Popps Modikoane",
+    "role": "Charismatic Comedian, Actor, Presenter & Master of Ceremonies",
+    "image": "/speakers/Mpho Popps/Mpho-Popps.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/mpho-popps"
+  },
+  {
+    "id": "kagiso-kg-mokgadi",
+    "name": "Kagiso “KG” Mokgadi",
+    "role": "Award-Winning Stand-Up Comedian & Master of Ceremonies",
+    "image": "/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/kagiso-kg-mokgadi"
+  },
+  {
+    "id": "kagiso-lediga",
+    "name": "Kagiso Lediga",
+    "role": "Comedy Legend, Emmy-Nominated Director & Showrunner",
+    "image": "/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/kagiso-lediga"
+  },
+  {
+    "id": "eugene-khoza",
+    "name": "Eugene Khoza",
+    "role": "Multilingual Stand-Up Comedian, TV Host & Cultural Analyst",
+    "image": "/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/eugene-khoza"
+  },
+  {
+    "id": "isaac-gampu",
+    "name": "Isaac Gampu",
+    "role": "Veteran Stand-Up Comedian, Actor & Radio Presenter",
+    "image": "/speakers/Isaac Gampu/Isaac-Gampu-South-African-comedian-1.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/isaac-gampu"
+  },
+  {
+    "id": "tol-ass-mo",
+    "name": "Tol A$$ Mo",
+    "role": "Celebrated Stand-Up Comedian, TV Personality & Entrepreneur",
+    "image": "/speakers/Tol Ass Mo/Tol-Ass-Mo.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/tol-ass-mo"
+  },
+  {
+    "id": "summary",
+    "name": "Summary",
+    "role": "Stand-Up Comedian, Event Emcee & Media Personality",
+    "image": "/speakers/Summary/Summary-The-Speakers-Firm-1.jpg",
+    "topics": [
+      "Comedy & Satirical Disruption",
+      "Strategic Audience Engagement"
+    ],
+    "path": "/tracks/comedy/summary"
   }
 ];
 
@@ -309,7 +408,8 @@ const filterChips = [
   { id: 'topic-0', label: "Premium Event Facilitation & Hosting" },
   { id: 'topic-1', label: "Strategic Audience Engagement" },
   { id: 'topic-2', label: "High-Energy Corporate Presentation" },
-  { id: 'topic-3', label: "Brand Visibility & Credibility" }
+  { id: 'topic-3', label: "Brand Visibility & Credibility" },
+  { id: 'topic-4', label: "Comedy & Satirical Disruption" }
 ];
 
 const reveal = {

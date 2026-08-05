@@ -96,6 +96,16 @@ import { AboutTeamSection as HappyMaKhumaloNgidiProfile } from "@/components/gen
 import { AboutTeamSection as GogoDineoNdlanziProfile } from "@/components/generated/GogoDineoNdlanziProfileNew";
 import { AboutTeamSection as DrBillySelekaneProfile } from "@/components/generated/DrBillySelekaneProfileNew";
 import { AboutTeamSection as HectorMotivatorProfile } from "@/components/generated/HectorMotivatorProfileNew";
+import { AboutTeamSection as NtoshMadlingoziProfile } from "@/components/generated/NtoshMadlingoziProfileNew";
+import { AboutTeamSection as NdumisoLindiProfile } from "@/components/generated/NdumisoLindiProfileNew";
+import { AboutTeamSection as MphoPoppsProfile } from "@/components/generated/MphoPoppsProfileNew";
+import { AboutTeamSection as KagisoKGMokgadiProfile } from "@/components/generated/KagisoKGMokgadiProfileNew";
+import { AboutTeamSection as KagisoLedigaProfile } from "@/components/generated/KagisoLedigaProfileNew";
+import { AboutTeamSection as EugeneKhozaProfile } from "@/components/generated/EugeneKhozaProfileNew";
+import { AboutTeamSection as IsaacGampuProfile } from "@/components/generated/IsaacGampuProfileNew";
+import { AboutTeamSection as TolAssMoProfile } from "@/components/generated/TolAssMoProfileNew";
+import { AboutTeamSection as SummaryProfile } from "@/components/generated/SummaryProfileNew";
+import { AboutTeamSection as MilesKubhekaProfile } from "@/components/generated/MilesKubhekaProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -627,6 +637,46 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "hector-motivator") {
     return <HectorMotivatorProfile />;
+  }
+
+  if (speakerId === "ntosh-madlingozi") {
+    return <NtoshMadlingoziProfile />;
+  }
+
+  if (speakerId === "ndumiso-lindi") {
+    return <NdumisoLindiProfile />;
+  }
+
+  if (speakerId === "mpho-popps" || speakerId === "mpho-popps-modikoane") {
+    return <MphoPoppsProfile />;
+  }
+
+  if (speakerId === "kagiso-kg-mokgadi") {
+    return <KagisoKGMokgadiProfile />;
+  }
+
+  if (speakerId === "kagiso-lediga") {
+    return <KagisoLedigaProfile />;
+  }
+
+  if (speakerId === "eugene-khoza") {
+    return <EugeneKhozaProfile />;
+  }
+
+  if (speakerId === "isaac-gampu") {
+    return <IsaacGampuProfile />;
+  }
+
+  if (speakerId === "tol-ass-mo") {
+    return <TolAssMoProfile />;
+  }
+
+  if (speakerId === "summary") {
+    return <SummaryProfile />;
+  }
+
+  if (speakerId === "miles-kubheka" || speakerId === "miles-kubheka-2") {
+    return <MilesKubhekaProfile />;
   }
 
 

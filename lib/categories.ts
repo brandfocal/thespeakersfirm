@@ -215,12 +215,13 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb"
   ],
   "comedy": [
-    "mpho-popps", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
-    "kagiso-kg-mokgadi", "kagiso-lediga", "isaac-gampu", "tol-ass-mo"
+    "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
+    "kagiso-kg-mokgadi", "kagiso-lediga", "isaac-gampu", "tol-ass-mo", "summary"
   ],
   "inspirational-keynote-speakers": [
     "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
-    "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo"
+    "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
+    "miles-kubheka", "miles-kubheka-2"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "muzi-kuzwayo", "ndileka-mandela"
@@ -262,7 +263,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "entrepreneurship": [
     "rekgotsofetse-chikane", "lebo-gunguluza", "thokozani-nkosi", "anael-granoux",
     "joshua-maluleke", "bulelani-balabala", "eunice-cross", "proverb", "thuli-magubane",
-    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe"
+    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2"
   ],
   "masculinity": [
     "martin-pelders", "thato-tt-mbha", "apostle-kabelo-moroke", "mbuyiselo-botha",
