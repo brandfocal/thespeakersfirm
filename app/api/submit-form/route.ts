@@ -41,9 +41,7 @@ export async function POST(request: Request) {
         'User-Agent': userAgent,
         ...(forwardIp ? { 'X-Forwarded-For': forwardIp } : {})
       },
-      body: JSON.stringify({
-        input_values: formattedValues
-      })
+      body: JSON.stringify(formattedValues)
     });
 
     const contentType = response.headers.get("content-type") || "";

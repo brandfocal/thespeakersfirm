@@ -222,7 +222,19 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
         } else {
           const errData = await response.json().catch(() => ({}));
           console.error("Booking form submit failure", response.status, errData);
-          setErrors({ submit: "There was a validation issue submitting your booking. Please review your fields." });
+          let submitMsg = "There was a validation issue submitting your booking. Please review your fields.";
+          if (errData.error) {
+            submitMsg = errData.error;
+          }
+          if (errData.validation_messages) {
+            const details = Object.entries(errData.validation_messages)
+              .map(([fieldId, msg]) => `[Field ID ${fieldId}] ${msg}`)
+              .join(" | ");
+            if (details) {
+              submitMsg += ` Details: ${details}`;
+            }
+          }
+          setErrors({ submit: submitMsg });
         }
       } catch (err) {
         console.error("Booking form submit network error", err);
@@ -882,7 +894,7 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
                   .map(([key, msg]) => (
                     <li key={key}>{msg}</li>
                   ))}
-                {Object.keys(errors).length === 1 && errors.submit && (
+                {errors.submit && (
                   <li>{errors.submit}</li>
                 )}
               </ul>
