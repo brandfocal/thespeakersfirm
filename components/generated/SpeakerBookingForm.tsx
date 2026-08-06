@@ -160,12 +160,18 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
         let utm_source = "";
         let utm_medium = "";
         let utm_campaign = "";
+        let utm_term = "";
+        let utm_content = "";
+        let gclid = "";
 
         if (typeof window !== "undefined") {
           const params = new URLSearchParams(window.location.search);
           utm_source = params.get("utm_source") || "";
           utm_medium = params.get("utm_medium") || "";
           utm_campaign = params.get("utm_campaign") || "";
+          utm_term = params.get("utm_term") || "";
+          utm_content = params.get("utm_content") || "";
+          gclid = params.get("gclid") || "";
         }
 
         const response = await fetch("/api/submit-form", {
@@ -212,7 +218,10 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
               "input_38": enquiryRef,
               "input_19": utm_source,
               "input_20": utm_medium,
-              "input_21": utm_campaign
+              "input_21": utm_campaign,
+              "input_22": utm_term,
+              "input_23": utm_content,
+              "input_24": gclid
             }
           })
         });
