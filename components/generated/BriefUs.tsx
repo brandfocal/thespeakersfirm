@@ -447,10 +447,21 @@ export function BriefUs() {
                               <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[120px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
                             </label>
                           </div>
-                          <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300" type="submit">
-                              <span>Request Talent Recommendations</span>
+                           <div className="mt-4 flex justify-between">
+                            <button 
+                              disabled={isSubmitting} 
+                              className="text-[12px] font-bold uppercase text-[#686869] hover:text-black disabled:opacity-50 disabled:cursor-not-allowed" 
+                              type="button" 
+                              onClick={prevStep}
+                            >
+                              Back
+                            </button>
+                            <button 
+                              disabled={isSubmitting} 
+                              className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
+                              type="submit"
+                            >
+                              <span>{isSubmitting ? "Submitting..." : "Request Talent Recommendations"}</span>
                             </button>
                           </div>
                         </motion.fieldset>
