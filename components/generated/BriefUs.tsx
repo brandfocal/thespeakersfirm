@@ -162,14 +162,93 @@ export function BriefUs() {
     setStep(prev => Math.max(1, prev - 1));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  React.useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+
+    if (document.getElementById("recaptcha-script")) return;
+
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("recaptcha-script");
+      if (el) el.remove();
+      const badge = document.querySelector(".grecaptcha-badge");
+      if (badge) badge.remove();
+    };
+  }, []);
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateStep(3)) {
       setIsSubmitting(true);
-      setTimeout(() => {
+      try {
+        let recaptchaToken = "";
+        const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+        if (siteKey && typeof window !== "undefined" && (window as any).grecaptcha) {
+          try {
+            await new Promise<void>((resolve, reject) => {
+              (window as any).grecaptcha.ready(async () => {
+                try {
+                  recaptchaToken = await (window as any).grecaptcha.execute(siteKey, { action: 'submit_brief' });
+                  resolve();
+                } catch (err) {
+                  reject(err);
+                }
+              });
+            });
+          } catch (e) {
+            console.error("reCAPTCHA execution failed:", e);
+          }
+        }
+
+        const response = await fetch("/api/submit-form", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            formId: 7,
+            recaptchaToken,
+            values: {
+              "1": formData.fullName,
+              "3": formData.jobTitle,
+              "4": formData.organisation,
+              "5": formData.email,
+              "6": formData.mobile,
+              "7": formData.format,
+              "8": formData.eventDate,
+              "9": formData.city,
+              "10": formData.audienceSize,
+              "11": formData.budget,
+              "12": formData.expertise,
+              "13": formData.eventObjectives
+            }
+          })
+        });
+
+        if (response.ok) {
+          setIsSubmitted(true);
+        } else {
+          const errData = await response.json().catch(() => ({}));
+          console.error("Brief Us form submit failure", response.status, errData);
+          let submitMsg = "Submission failed.";
+          if (errData.error) {
+            submitMsg = errData.error;
+          } else if (errData.message) {
+            submitMsg = errData.message;
+          }
+          const rawDetails = JSON.stringify(errData);
+          setErrors({ submit: `${submitMsg} (Status: ${response.status}) Raw Error: ${rawDetails}` });
+        }
+      } catch (err) {
+        console.error("Brief Us form submit network error", err);
+        setErrors({ submit: "A network error occurred. Please try again." });
+      } finally {
         setIsSubmitting(false);
-        setIsSubmitted(true);
-      }, 1200);
+      }
     }
   };
 
@@ -377,6 +456,21 @@ export function BriefUs() {
                         </motion.fieldset>
                       )}
                     </AnimatePresence>
+                    {Object.keys(errors).length > 0 && (
+                      <div className="mt-6 rounded-xl border border-[#e30e04]/30 bg-[#e30e04]/10 p-4">
+                        <p className="text-sm font-bold text-[#e30e04] mb-2">Please correct the following errors:</p>
+                        <ul className="list-disc pl-5 space-y-1 text-xs text-[#e30e04]">
+                          {Object.entries(errors)
+                            .filter(([key]) => key !== "submit")
+                            .map(([key, msg]) => (
+                              <li key={key}>{msg}</li>
+                            ))}
+                          {errors.submit && (
+                            <li>{errors.submit}</li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
                   </form>
                 )}
               </div>
