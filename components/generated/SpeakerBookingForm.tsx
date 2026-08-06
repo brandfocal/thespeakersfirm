@@ -222,18 +222,14 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
         } else {
           const errData = await response.json().catch(() => ({}));
           console.error("Booking form submit failure", response.status, errData);
-          let submitMsg = "There was a validation issue submitting your booking. Please review your fields.";
+          let submitMsg = "Submission failed.";
           if (errData.error) {
             submitMsg = errData.error;
+          } else if (errData.message) {
+            submitMsg = errData.message;
           }
-          if (errData.validation_messages) {
-            const details = Object.entries(errData.validation_messages)
-              .map(([fieldId, msg]) => `[Field ID ${fieldId}] ${msg}`)
-              .join(" | ");
-            if (details) {
-              submitMsg += ` Details: ${details}`;
-            }
-          }
+          const rawDetails = JSON.stringify(errData);
+          submitMsg += ` (Status: ${response.status}) Raw Error: ${rawDetails}`;
           setErrors({ submit: submitMsg });
         }
       } catch (err) {
