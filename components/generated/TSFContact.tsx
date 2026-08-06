@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
@@ -307,7 +307,7 @@ export const TSFContact = () => {
     }
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     if (!siteKey) return;
 
