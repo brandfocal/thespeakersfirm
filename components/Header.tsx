@@ -173,11 +173,13 @@ export function Header() {
         params.delete("search");
       }
       
-      router.push(`/?${params.toString()}`, { scroll: false });
+      if (pathname === "/") {
+        router.push(`/?${params.toString()}`, { scroll: false });
+      }
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [inputValue, router]);
+  }, [inputValue, router, pathname]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const val = event.target.value;
@@ -185,27 +187,82 @@ export function Header() {
     window.dispatchEvent(new CustomEvent('tsf-search', { detail: val }));
   };
 
-  const filteredFaculty = inputValue.trim() === "" 
-    ? [] 
-    : FACULTY_LIST.filter(member => {
-        const q = inputValue.toLowerCase();
-        const nameMatch = member.name.toLowerCase().includes(q);
-        const designationMatch = member.designation.toLowerCase().includes(q);
+  const filteredFaculty = React.useMemo(() => {
+    if (inputValue.trim() === "") return [];
+    
+    const q = inputValue.toLowerCase();
+    
+    const scored = FACULTY_LIST.map(member => {
+      let score = 0;
+      const name = member.name.toLowerCase();
+      const designation = member.designation.toLowerCase();
+      
+      const nameMatch = name.includes(q);
+      const designationMatch = designation.includes(q);
+      
+      const categoryMatch = Array.isArray(member.category)
+        ? member.category.some(cat => cat.toLowerCase().includes(q))
+        : member.category.toLowerCase().includes(q);
         
-        const categoryMatch = Array.isArray(member.category)
-          ? member.category.some(cat => cat.toLowerCase().includes(q))
-          : member.category.toLowerCase().includes(q);
-          
-        const topicsMatch = Array.isArray(member.topics)
-          ? member.topics.some(topic => topic.toLowerCase().includes(q))
-          : false;
-          
-        return nameMatch || designationMatch || categoryMatch || topicsMatch;
-      });
+      const topicsMatch = Array.isArray(member.topics)
+        ? member.topics.some(topic => topic.toLowerCase().includes(q))
+        : false;
+        
+      if (!nameMatch && !designationMatch && !categoryMatch && !topicsMatch) {
+        return null;
+      }
+      
+      // Relevance scoring
+      if (name === q) {
+        score += 25; // Exact name match
+      } else if (name.startsWith(q)) {
+        score += 15; // Name starts with query
+      } else if (nameMatch) {
+        score += 10; // Name contains query
+      }
+      
+      if (designation.includes(q)) {
+        score += 5; // Designation contains query
+      }
+      
+      if (categoryMatch) {
+        score += 3; // Category contains query
+      }
+      
+      if (topicsMatch) {
+        score += 1; // Topics contain query
+      }
+      
+      return { member, score };
+    }).filter((item): item is { member: typeof FACULTY_LIST[0]; score: number } => item !== null);
+    
+    const sorted = scored.sort((a, b) => b.score - a.score);
+    const seen = new Set<string>();
+    const uniqueMembers: typeof FACULTY_LIST = [];
+    
+    for (const item of sorted) {
+      if (!seen.has(item.member.id)) {
+        seen.add(item.member.id);
+        uniqueMembers.push(item.member);
+      }
+    }
+    
+    return uniqueMembers;
+  }, [inputValue]);
 
   const handleSearchKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Escape') {
       setIsSearchExpanded(false);
+    } else if (event.key === 'Enter') {
+      event.preventDefault();
+      if (pathname !== "/") {
+        const params = new URLSearchParams();
+        if (inputValue) {
+          params.set("search", inputValue);
+        }
+        router.push(`/?${params.toString()}`);
+        setIsSearchExpanded(false);
+      }
     }
   };
 
@@ -243,7 +300,7 @@ export function Header() {
             href="/categories"
             className={cn(
               "flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
-              pathname === "/categories" 
+              pathname.startsWith("/categories") 
                 ? "text-[#e30e04]" 
                 : "text-[#686869] hover:text-[#e30e04]"
             )}
@@ -252,7 +309,7 @@ export function Header() {
             <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
             <span className={cn(
               "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
-              pathname === "/categories" 
+              pathname.startsWith("/categories") 
                 ? "scale-x-100" 
                 : "scale-x-0 origin-left group-hover:scale-x-100"
             )} />
@@ -297,7 +354,12 @@ export function Header() {
                         onClick={() => {
                           setIsMoreCategoriesOpen(false);
                         }}
-                        className="w-full text-left rounded-xl px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#686869] hover:bg-gray-50 hover:text-[#e30e04] transition-all"
+                        className={cn(
+                          "w-full text-left rounded-xl px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all",
+                          pathname === cat.path
+                            ? "bg-gray-50 text-[#e30e04]"
+                            : "text-[#686869] hover:bg-gray-50 hover:text-[#e30e04]"
+                        )}
                       >
                         {cat.name}
                       </Link>
@@ -545,7 +607,12 @@ export function Header() {
             <div className="flex flex-col gap-1 max-h-[300px] overflow-y-auto pr-1">
               <button 
                 onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                className={cn(
+                  "flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-colors",
+                  pathname.startsWith("/categories") 
+                    ? "text-[#e30e04]" 
+                    : "text-[#212121] active:text-[#e30e04]"
+                )}
               >
                 <span>Categories</span>
                 <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isMobileCategoriesOpen && "rotate-180")} />
@@ -604,7 +671,12 @@ export function Header() {
                             }
                             setIsMobileMenuOpen(false);
                           }}
-                          className="w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                          className={cn(
+                            "w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider transition-colors",
+                            pathname === routePath 
+                              ? "text-[#e30e04] bg-gray-50" 
+                              : "text-[#686869] active:text-[#e30e04]"
+                          )}
                         >
                           {cat.buttonLabel}
                         </button>
@@ -672,7 +744,12 @@ export function Header() {
                                   }
                                   setIsMobileMenuOpen(false);
                                 }}
-                                className="w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider text-[#686869] active:text-[#e30e04]"
+                                className={cn(
+                                  "w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                                  pathname === routePath 
+                                    ? "text-[#e30e04] bg-gray-50" 
+                                    : "text-[#686869] active:text-[#e30e04]"
+                                )}
                               >
                                 {cat.buttonLabel}
                               </button>
@@ -763,6 +840,7 @@ export function Header() {
                   id="mobile-nav-faculty-search" 
                   value={inputValue} 
                   onChange={handleSearchChange} 
+                  onKeyDown={handleSearchKeyDown}
                   type="search" 
                   placeholder="Search faculty..." 
                   className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" 
