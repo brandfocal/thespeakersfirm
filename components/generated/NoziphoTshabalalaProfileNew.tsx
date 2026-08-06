@@ -77,7 +77,7 @@ export const AboutTeamSection = () => {
       speakerDesignation="Global Moderator & Conversation Architect"
       speakerRole="CEO of Conversation Strategists, former CNBC anchor, and global dialogue facilitator."
       speakerRef="TSF-NT-05"
-      heroBackgroundImage="/speakers/Nozipho Tshabalala/Nozipho-Tshabalala-The-Speakers-Firm-9.jpg"
+      heroBackgroundImage="/speakers/Nozipho Tshabalala/Nozipho-Tshabalala-The-Speakers-Firm-11.jpg"
       biographyImage="/speakers/Nozipho Tshabalala/Nozipho-Tshabalala-The-Speakers-Firm.jpg"
       bioHook="“Designing conversations that drive measurable outcomes, accountability, and systemic change.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

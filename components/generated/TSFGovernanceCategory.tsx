@@ -196,9 +196,12 @@ export function TSFGovernanceCategory() {
       
       {/* Redesigned Hero complying with standard design limits */}
       <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
-        <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop" alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-30" />
-          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0.4)_50%,rgba(0,0,0,0.3)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[#000000]" aria-hidden="true">
+          <img src="/speakers/Nombasa Tsengwa/Nombasa-Tsengwa-The-Speakers-Firm-12.jpg" alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" />
+          <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
+          }} aria-hidden="true" />
         </div>
         <VerticalBorderLines isDark={true} isOutside={false} />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
