@@ -62,7 +62,6 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
     marketingConsent: false
   });
 
-  // Sync props to state if they change
   React.useEffect(() => {
     setFormData(prev => ({
       ...prev,
@@ -70,6 +69,26 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
       speakerRef
     }));
   }, [speakerName, speakerRef]);
+
+  React.useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+
+    if (document.getElementById("recaptcha-script")) return;
+
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("recaptcha-script");
+      if (el) el.remove();
+      const badge = document.querySelector(".grecaptcha-badge");
+      if (badge) badge.remove();
+    };
+  }, []);
 
   const [errors, setErrors] = React.useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -174,11 +193,31 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
           gclid = params.get("gclid") || "";
         }
 
+        let recaptchaToken = "";
+        const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+        if (siteKey && typeof window !== "undefined" && (window as any).grecaptcha) {
+          try {
+            await new Promise<void>((resolve, reject) => {
+              (window as any).grecaptcha.ready(async () => {
+                try {
+                  recaptchaToken = await (window as any).grecaptcha.execute(siteKey, { action: 'submit_booking' });
+                  resolve();
+                } catch (err) {
+                  reject(err);
+                }
+              });
+            });
+          } catch (e) {
+            console.error("reCAPTCHA execution failed:", e);
+          }
+        }
+
         const response = await fetch("/api/submit-form", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             formId: 1,
+            recaptchaToken,
             values: {
               "input_25": formData.fullName,
               "input_5": formData.jobTitle,

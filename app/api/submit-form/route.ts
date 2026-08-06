@@ -4,10 +4,37 @@ export async function POST(request: Request) {
   // Allow unauthorized/self-signed SSL certificates when connecting to WordPress
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   try {
-    const { formId, values } = await request.json();
+    const { formId, values, recaptchaToken } = await request.json();
     
     if (!formId) {
       return NextResponse.json({ error: "formId is required" }, { status: 400 });
+    }
+
+    // Google reCAPTCHA v3 verification
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (secretKey) {
+      if (!recaptchaToken) {
+        return NextResponse.json({ error: "reCAPTCHA verification token is missing" }, { status: 400 });
+      }
+
+      try {
+        const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
+        const verifyRes = await fetch(verifyUrl, { method: "POST" });
+        const verifyData = await verifyRes.json();
+
+        if (!verifyData.success || verifyData.score < 0.5) {
+          console.warn("reCAPTCHA verification failed:", verifyData);
+          return NextResponse.json({ 
+            error: "Security verification failed. Please try again.",
+            details: "Low score or invalid token."
+          }, { status: 400 });
+        }
+      } catch (err: any) {
+        console.error("reCAPTCHA validation error:", err);
+        return NextResponse.json({ error: "Failed to verify security token." }, { status: 500 });
+      }
+    } else {
+      console.warn("reCAPTCHA Secret Key not configured. Skipping validation.");
     }
 
     const formattedValues: Record<string, any> = {};
