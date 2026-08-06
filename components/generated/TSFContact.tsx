@@ -307,6 +307,26 @@ export const TSFContact = () => {
     }
   });
 
+  React.useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+
+    if (document.getElementById("recaptcha-script")) return;
+
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("recaptcha-script");
+      if (el) el.remove();
+      const badge = document.querySelector(".grecaptcha-badge");
+      if (badge) badge.remove();
+    };
+  }, []);
+
   const handleTabChange = (tabId: string) => {
     if (tabId === activeTab) {
       return;
@@ -383,11 +403,31 @@ export const TSFContact = () => {
         };
       }
 
+      let recaptchaToken = "";
+      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      if (siteKey && typeof window !== "undefined" && (window as any).grecaptcha) {
+        try {
+          await new Promise<void>((resolve, reject) => {
+            (window as any).grecaptcha.ready(async () => {
+              try {
+                recaptchaToken = await (window as any).grecaptcha.execute(siteKey, { action: 'submit_enquiry' });
+                resolve();
+              } catch (err) {
+                reject(err);
+              }
+            });
+          });
+        } catch (e) {
+          console.error("reCAPTCHA execution failed:", e);
+        }
+      }
+
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           formId,
+          recaptchaToken,
           values: payloadValues
         })
       });
@@ -413,11 +453,31 @@ export const TSFContact = () => {
     e.preventDefault();
     setNewsletterSubmitting(true);
     try {
+      let recaptchaToken = "";
+      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      if (siteKey && typeof window !== "undefined" && (window as any).grecaptcha) {
+        try {
+          await new Promise<void>((resolve, reject) => {
+            (window as any).grecaptcha.ready(async () => {
+              try {
+                recaptchaToken = await (window as any).grecaptcha.execute(siteKey, { action: 'submit_newsletter' });
+                resolve();
+              } catch (err) {
+                reject(err);
+              }
+            });
+          });
+        } catch (e) {
+          console.error("reCAPTCHA execution failed:", e);
+        }
+      }
+
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           formId: 2,
+          recaptchaToken,
           values: {
             "17": newsletterData.name,
             "14": newsletterData.email,
