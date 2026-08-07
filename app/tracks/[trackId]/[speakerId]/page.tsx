@@ -106,6 +106,11 @@ import { AboutTeamSection as IsaacGampuProfile } from "@/components/generated/Is
 import { AboutTeamSection as TolAssMoProfile } from "@/components/generated/TolAssMoProfileNew";
 import { AboutTeamSection as SummaryProfile } from "@/components/generated/SummaryProfileNew";
 import { AboutTeamSection as MilesKubhekaProfile } from "@/components/generated/MilesKubhekaProfileNew";
+import { AboutTeamSection as MolefePooeProfile } from "@/components/generated/MolefePooeProfileNew";
+import { AboutTeamSection as ManqobaZunguProfile } from "@/components/generated/ManqobaZunguProfileNew";
+import { AboutTeamSection as TrudyThelediProfile } from "@/components/generated/TrudyThelediProfileNew";
+import { AboutTeamSection as AndisaLibaProfile } from "@/components/generated/AndisaLibaProfileNew";
+import { AboutTeamSection as ThuliMagubaneProfile } from "@/components/generated/ThuliMagubaneProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -677,6 +682,26 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "miles-kubheka" || speakerId === "miles-kubheka-2") {
     return <MilesKubhekaProfile />;
+  }
+
+  if (speakerId === "molefe-pooe") {
+    return <MolefePooeProfile />;
+  }
+
+  if (speakerId === "manqoba-zungu") {
+    return <ManqobaZunguProfile />;
+  }
+
+  if (speakerId === "trudy-theledi") {
+    return <TrudyThelediProfile />;
+  }
+
+  if (speakerId === "andisa-liba") {
+    return <AndisaLibaProfile />;
+  }
+
+  if (speakerId === "thuli-magubane") {
+    return <ThuliMagubaneProfile />;
   }
 
 
