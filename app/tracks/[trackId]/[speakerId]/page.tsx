@@ -111,6 +111,21 @@ import { AboutTeamSection as ManqobaZunguProfile } from "@/components/generated/
 import { AboutTeamSection as TrudyThelediProfile } from "@/components/generated/TrudyThelediProfileNew";
 import { AboutTeamSection as AndisaLibaProfile } from "@/components/generated/AndisaLibaProfileNew";
 import { AboutTeamSection as ThuliMagubaneProfile } from "@/components/generated/ThuliMagubaneProfileNew";
+import { AboutTeamSection as RekgotsofetseChikaneProfile } from "@/components/generated/RekgotsofetseChikaneProfileNew";
+import { AboutTeamSection as DrEuniceCrossProfile } from "@/components/generated/DrEuniceCrossProfileNew";
+import { AboutTeamSection as ThokozaniNkosiProfile } from "@/components/generated/ThokozaniNkosiProfileNew";
+import { AboutTeamSection as AnaelGranouxProfile } from "@/components/generated/AnaelGranouxProfileNew";
+import { AboutTeamSection as DrDavidMolapoProfile } from "@/components/generated/DrDavidMolapoProfileNew";
+import { AboutTeamSection as ProfessorJJTabaneProfile } from "@/components/generated/ProfessorJJTabaneProfileNew";
+import { AboutTeamSection as PhathiswaMagopeniProfile } from "@/components/generated/PhathiswaMagopeniProfileNew";
+import { AboutTeamSection as ThembaMasekoProfile } from "@/components/generated/ThembaMasekoProfileNew";
+import { AboutTeamSection as PennyLebyaneProfile } from "@/components/generated/PennyLebyaneProfileNew";
+import { AboutTeamSection as ThembekileMrototoProfile } from "@/components/generated/ThembekileMrototoProfileNew";
+import { AboutTeamSection as RamiChueneProfile } from "@/components/generated/RamiChueneProfileNew";
+import { AboutTeamSection as NalediMoleoProfile } from "@/components/generated/NalediMoleoProfileNew";
+import { AboutTeamSection as CriseldaKanandaProfile } from "@/components/generated/CriseldaKanandaProfileNew";
+import { AboutTeamSection as PutcoMafaniProfile } from "@/components/generated/PutcoMafaniProfileNew";
+import { AboutTeamSection as ThaboTboTouchMolefeProfile } from "@/components/generated/ThaboTboTouchMolefeProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -702,6 +717,66 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "thuli-magubane") {
     return <ThuliMagubaneProfile />;
+  }
+
+  if (speakerId === "rekgotsofetse-chikane") {
+    return <RekgotsofetseChikaneProfile />;
+  }
+
+  if (speakerId === "dr-eunice-cross" || speakerId === "eunice-cross" || speakerId === "dr-eunice-cross-6") {
+    return <DrEuniceCrossProfile />;
+  }
+
+  if (speakerId === "thokozani-nkosi") {
+    return <ThokozaniNkosiProfile />;
+  }
+
+  if (speakerId === "anael-granoux") {
+    return <AnaelGranouxProfile />;
+  }
+
+  if (speakerId === "dr-david-molapo" || speakerId === "david-molapo") {
+    return <DrDavidMolapoProfile />;
+  }
+
+  if (speakerId === "professor-jj-tabane" || speakerId === "jj-tabane") {
+    return <ProfessorJJTabaneProfile />;
+  }
+
+  if (speakerId === "phathiswa-magopeni") {
+    return <PhathiswaMagopeniProfile />;
+  }
+
+  if (speakerId === "themba-maseko") {
+    return <ThembaMasekoProfile />;
+  }
+
+  if (speakerId === "penny-lebyane") {
+    return <PennyLebyaneProfile />;
+  }
+
+  if (speakerId === "thembekile-mrototo") {
+    return <ThembekileMrototoProfile />;
+  }
+
+  if (speakerId === "rami-chuene") {
+    return <RamiChueneProfile />;
+  }
+
+  if (speakerId === "naledi-moleo") {
+    return <NalediMoleoProfile />;
+  }
+
+  if (speakerId === "criselda-kananda") {
+    return <CriseldaKanandaProfile />;
+  }
+
+  if (speakerId === "putco-mafani") {
+    return <PutcoMafaniProfile />;
+  }
+
+  if (speakerId === "thabo-tbo-touch-molefe" || speakerId === "tbo-touch" || speakerId === "thabo-molefe") {
+    return <ThaboTboTouchMolefeProfile />;
   }
 
 
