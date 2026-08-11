@@ -119,7 +119,7 @@ export const AboutTeamSection = () => {
           id: "david-book-2",
           title: "Choose to Change",
           description: "Empowerment guide to take conscious control of decisions and drive meaningful change in life and work.",
-          coverImage: "/speakers/David Molapo/gfhk-1459-g850.1.front.1415309442.jpg",
+          coverImage: "/speakers/David Molapo/Choose-to-Change.jpg",
           url: "https://www.goodreads.com/book/show/16353501-choose-to-change"
         },
         {
