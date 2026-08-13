@@ -59,6 +59,39 @@ const leratoSitholeImages = [
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4726.JPG'
 ];
 
+const sizweMpofuWalshImages = [
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6796.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6793.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6785.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6784.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6776.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6736.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6717_1.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6710.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6705.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6697.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6673.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6670.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6665.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6657.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6648.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6645.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6644.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6618.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6609.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6594.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6584.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6583.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6581.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6575.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6560.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6550.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6542.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6490.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6489.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6476.jpg'
+];
+
 const galleryItems = [{
   id: 'lerato-sithole-aie-2026',
   title: 'Lerato Sithole - Africa Insurance Exchange 2026',
@@ -67,6 +100,14 @@ const galleryItems = [{
   image: '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4611.JPG',
   aspect: 'wide',
   images: leratoSitholeImages
+}, {
+  id: 'sizwe-mpofu-walsh-alf-2026',
+  title: 'Sizwe Mpofu-Walsh - African Leadership Festival 2026',
+  year: '2026',
+  category: 'International',
+  image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6657.jpg',
+  aspect: 'wide',
+  images: sizweMpofuWalshImages
 }];
 const videos = [{
   id: 'v1',
@@ -347,10 +388,33 @@ export const TSFGallery = () => {
           {filteredItems.map(item => <motion.figure key={item.id} {...reveal} className="group relative min-h-[320px] cursor-pointer" onClick={() => { setSelectedGallery(item); setActiveImageIndex(0); }}><div className="relative aspect-[4/3] min-h-[240px] overflow-hidden"><img className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src={item.image} alt={item.title} /><div className="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" /><div className="absolute bottom-5 left-5 right-5 translate-y-4 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><span className="block text-sm font-bold uppercase tracking-[0.08em]">{item.title}</span><span className="mt-1 block text-[11px] font-bold uppercase tracking-[0.12em] text-white/70">{item.category}</span></div><span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#e30e04] transition-all duration-500 group-hover:w-full" aria-hidden="true" /></div><figcaption className="border-t border-[rgba(33,33,33,0.14)] px-0 py-4"><strong className="block text-[13px] font-bold uppercase tracking-[0.08em] text-[#212121]">{item.title}</strong><span className="mt-1 block text-[11px] uppercase tracking-[0.1em] text-[#686869]">{item.year} / {item.category}</span></figcaption></motion.figure>)}
         </div>
       </section>
- 
-      <section id="events" className="relative bg-[#212121] px-6 py-16 text-[#F8F7F5] md:px-16 md:py-24 lg:py-32"><VerticalBorderLines isDark /><div className="mx-auto grid max-w-[1440px] items-center gap-12 md:grid-cols-12 lg:gap-20"><motion.div {...reveal} className="md:col-span-7"><img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=1400&auto=format&fit=crop" alt="World Leaders Forum 2024" className="aspect-[4/3] w-full object-cover object-center" /></motion.div><motion.div {...reveal} className="md:col-span-5"><SectionTag>Featured</SectionTag><h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">World Leaders<br />Forum 2024</h2><AnimatedRedRule className="mt-6 w-full" /><p className="mt-7 max-w-md text-base leading-relaxed text-[#F8F7F5]/70">A convening of influential voices, bold ideas, and the leaders building a more connected African future.</p><div className="my-9 grid grid-cols-1 gap-5 border-y border-[#F8F7F5]/15 py-5 min-[420px]:grid-cols-3">{eventStats.map(stat => <div key={stat.id}><strong className="block text-3xl font-bold tracking-[-0.05em]">{stat.value}</strong><span className="mt-1 block text-[10px] uppercase tracking-[0.12em] text-[#AFB0B0]">{stat.label}</span></div>)}</div><a href="/#brief-us" className="inline-flex items-center rounded-full bg-[#e30e04] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">View event story <ArrowRight className="ml-2 h-4 w-4" /></a></motion.div></div></section>
- 
-      <section className="relative mx-auto max-w-[1440px] px-6 py-16 md:px-16 md:py-24 lg:py-32"><VerticalBorderLines /><motion.div {...reveal}><SectionTag>Videos & Reels</SectionTag><h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">See the energy<br /><span className="text-[#686869]">in motion.</span></h2><AnimatedRedRule className="mt-6 w-full" /></motion.div><div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">{videos.map(video => <figure key={video.id} className="group w-full"><div className="relative aspect-[9/16] overflow-hidden"><img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} /><span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105"><span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors group-hover:bg-[#e30e04]"><Play className="ml-0.5 h-4 w-4 fill-current" /></span></span></div><figcaption className="pt-3 text-[12px] font-bold uppercase tracking-[0.08em]">{video.title}</figcaption></figure>)}</div></section>
+      <section className="relative bg-[#212121] text-[#F8F7F5] py-16 md:py-24 lg:py-32">
+        <VerticalBorderLines isDark />
+        <div className="mx-auto max-w-[1440px] px-6 md:px-16">
+          <motion.div {...reveal}>
+            <SectionTag>Videos & Reels</SectionTag>
+            <h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">
+              See the energy<br /><span className="text-[#AFB0B0]">in motion.</span>
+            </h2>
+            <AnimatedRedRule className="mt-6 w-full" />
+          </motion.div>
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+            {videos.map(video => (
+              <figure key={video.id} className="group w-full">
+                <div className="relative aspect-[9/16] overflow-hidden">
+                  <img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} />
+                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors group-hover:bg-[#e30e04]">
+                      <Play className="ml-0.5 h-4 w-4 fill-current" />
+                    </span>
+                  </span>
+                </div>
+                <figcaption className="pt-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#F8F7F5]">{video.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
  
       <section id="contact" className="relative border-t border-[rgba(33,33,33,0.14)] py-16 md:py-24 lg:py-28"><VerticalBorderLines /><motion.div {...reveal} className="mx-auto grid max-w-[1440px] gap-10 px-6 md:px-16 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-8"><SectionTag>Media Enquiries</SectionTag><h2 className="mt-7 text-[clamp(3rem,13vw,7rem)] font-bold uppercase leading-[0.86] tracking-[-0.055em]">Bring The Speakers Firm<br /><span className="text-[#686869]">to your stage.</span></h2><p className="mt-8 max-w-lg text-base leading-relaxed text-[#686869]">For press enquiries, event coverage, or to invite one of our speakers to your next gathering, our team would love to hear from you.</p></div><div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end"><Link href="/brief-us" className="inline-flex items-center rounded-full bg-[#e30e04] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">Brief Us Now <ArrowRight className="ml-2 h-4 w-4" /></Link><Link href="/contact" className="inline-flex items-center rounded-full border border-[#212121] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#212121]">Make An Enquiry</Link></div></motion.div></section>
 
