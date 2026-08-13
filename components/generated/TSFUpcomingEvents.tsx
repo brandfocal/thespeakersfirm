@@ -172,13 +172,21 @@ const VerticalBorderLines = ({
 const slideImages = [
   { 
     src: '/upcoming_events/empowawomen-desktop.jpg', 
+    mobileSrc: '/upcoming_events/empowawomen-desktop.jpg',
     alt: 'EmpowaWomen Initiative', 
     link: 'https://www.quicket.co.za/events/344315-empowawomen-leadership-summit-2026/#/' 
   },
   { 
     src: '/upcoming_events/empowamen-banner.jpg', 
+    mobileSrc: '/upcoming_events/empowamen-banner.jpg',
     alt: 'EmpowaMen Initiative', 
     link: 'https://www.quicket.co.za/events/370734-empowamen-2026/' 
+  },
+  {
+    src: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop-1.jpg',
+    mobileSrc: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Prof-Letlhokwa-George-Mpedi-Book-Launch-1.jpg',
+    alt: 'Prof Letlhokwa George Mpedi Book Launch',
+    link: 'https://thespeakersfirm.co.za/from-predator-to-prey-with-prof-lethlokwa-george-medi/'
   }
 ];
 
@@ -331,11 +339,14 @@ export const TSFUpcomingEvents = () => {
                 rel="noopener noreferrer"
                 className="block cursor-pointer hover:opacity-95 transition-opacity"
               >
-                <img 
-                  src={slideImages[activeSlide].src} 
-                  alt={slideImages[activeSlide].alt} 
-                  className="w-full h-auto block"
-                />
+                <picture>
+                  <source media="(min-width: 768px)" srcSet={slideImages[activeSlide].src} />
+                  <img 
+                    src={slideImages[activeSlide].mobileSrc} 
+                    alt={slideImages[activeSlide].alt} 
+                    className="w-full h-auto block"
+                  />
+                </picture>
               </a>
             </motion.div>
           </AnimatePresence>
