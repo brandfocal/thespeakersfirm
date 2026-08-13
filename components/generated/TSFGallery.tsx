@@ -92,9 +92,46 @@ const sizweMpofuWalshImages = [
   'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6476.jpg'
 ];
 
+const bonangMohaleImages = [
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5265.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5263.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5255.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5245.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5244.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5220.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5219.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5208.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5206.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5176.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5169.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5126.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5124.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5085.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5081.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5049.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5039.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5031.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5023.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5016.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5008.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_5005.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4994.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4988.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4981.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4977.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4976.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4972.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4868.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4853.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4824.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4822.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4816.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4795.jpg'
+];
+
 const galleryItems = [{
   id: 'lerato-sithole-aie-2026',
-  title: 'Lerato Sithole - Africa Insurance Exchange 2026',
+  title: 'Lerato Sithole - African Insurance Exchange - 2026',
   year: '2026',
   category: 'Corporate Events',
   image: '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4611.JPG',
@@ -108,6 +145,14 @@ const galleryItems = [{
   image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_6657.jpg',
   aspect: 'wide',
   images: sizweMpofuWalshImages
+}, {
+  id: 'prof-bonang-mohale-aie-2026',
+  title: 'Prof Bonang Mohale - African Insurance Exchange - 2026',
+  year: '2026',
+  category: 'Corporate Events',
+  image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4853.jpg',
+  aspect: 'wide',
+  images: bonangMohaleImages
 }];
 const videos = [{
   id: 'v1',
