@@ -27,17 +27,10 @@ const filters = [{
   label: 'International'
 }];
 const leratoSitholeImages = [
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4509.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4511.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4512.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4516.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4522.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4527.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4535.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4536.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4563.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4568.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4574.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4581.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4592.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4598.JPG',
@@ -48,34 +41,22 @@ const leratoSitholeImages = [
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4617.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4619.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4624.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4632.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4635.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4637.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4642.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4645.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4662.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4666.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4677.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4679.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4681.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4682.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4683.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4685.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4686.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4691.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4693.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4694.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4696.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4698.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4700.JPG',
   '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4723.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4724.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4726.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4731.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4740.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4744.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4751.JPG',
-  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4752.JPG'
+  '/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4726.JPG'
 ];
 
 const galleryItems = [{
