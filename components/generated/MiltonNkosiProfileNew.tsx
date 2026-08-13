@@ -53,7 +53,7 @@ const customMedia = [
     publication: "The Speakers Firm",
     date: "",
     url: "https://thespeakersfirm.co.za/media-brand-reputation/milton-nkosi/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Milton%20Nkosi/Milton-Nkosi-The-Speakers-Firm.jpg"
   }
 ];

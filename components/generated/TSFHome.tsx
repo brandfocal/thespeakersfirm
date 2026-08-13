@@ -149,7 +149,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
-  category: 'Governance',
+  category: ['Governance', 'Keynote', 'Motivation'],
   image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
   alt: 'Prof. Bonang Mohale',
   quote: 'Servant leadership is the ultimate competitive edge.',
@@ -3963,7 +3963,7 @@ export const TheSpeakersFirmHome = () => {
                           </p>
                           <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
                             <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>View Profile</span>
+                              <span>BOOK THE SPEAKER</span>
                               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
                             </Link>
                           </div>
@@ -4033,7 +4033,7 @@ export const TheSpeakersFirmHome = () => {
                             </p>
                           <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
                             <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>View Profile</span>
+                              <span>BOOK THE SPEAKER</span>
                               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
                             </Link>
                           </div>
@@ -4104,7 +4104,7 @@ export const TheSpeakersFirmHome = () => {
                             </p>
                           <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
                             <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>View Profile</span>
+                              <span>BOOK THE SPEAKER</span>
                               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
                             </Link>
                           </div>
@@ -4408,7 +4408,7 @@ export const TheSpeakersFirmHome = () => {
                       <span aria-hidden="true" className="mb-4 block h-[2px] w-14" style={{
                   backgroundColor: COLORS.red
                 }} />
-                      <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.14em] text-white"><span>View Profile</span><ArrowUpRight className="w-4 h-4" /></div>
+                      <div className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.14em] text-white"><span>BOOK THE SPEAKER</span><ArrowUpRight className="w-4 h-4" /></div>
                       <p className="text-[12px] font-normal leading-[1.6] max-w-[280px] mt-1" style={{
                   color: COLORS.silverAlt
                 }}>{member.snippet}</p>

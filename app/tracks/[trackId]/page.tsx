@@ -56,7 +56,7 @@ export default async function TrackPage({ params }: PageProps) {
                 href={`/tracks/${trackId}/speaker-placeholder`}
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#e30e04]"
               >
-                <span>View Profile</span>
+                <span>BOOK THE SPEAKER</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>

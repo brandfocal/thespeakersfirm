@@ -263,7 +263,7 @@ export const RecommendedSpeakers = () => {
                     href={`/tracks/${speaker.trackId}/${speaker.id}`}
                     className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#F8F7F5]/80 hover:text-white transition-colors duration-300"
                   >
-                    <span>View Profile</span>
+                    <span>BOOK THE SPEAKER</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>

@@ -53,7 +53,7 @@ const customMedia = [
     publication: "The Speakers Firm",
     date: "",
     url: "https://thespeakersfirm.co.za/media-brand-reputation/sechaba-motsieloa/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Sechaba%20Motsieloa/PHOTO-2019-07-22-10-10-59.jpg"
   }
 ];

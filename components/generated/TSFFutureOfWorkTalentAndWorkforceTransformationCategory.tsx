@@ -298,7 +298,7 @@ export function TSFFutureOfWorkTalentAndWorkforceTransformationCategory() {
                       <h3 className="text-sm font-bold text-white">{speaker.name}</h3>
                       <p className="mt-1 text-[10px] uppercase text-white/50">{speaker.role}</p>
                       <a href={speaker.path} className="mt-3 flex min-h-[36px] items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#e30e04]">
-                        <span>View Intelligence Profile</span>
+                        <span>BOOK THE SPEAKER</span>
                         <ArrowUpRight size={14} />
                       </a>
                     </div>

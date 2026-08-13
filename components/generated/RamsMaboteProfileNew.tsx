@@ -52,7 +52,7 @@ const customMedia = [
     publication: "The Speakers Firm",
     date: "",
     url: "https://thespeakersfirm.co.za/media-brand-reputation/rams-mabote/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Rams%20Mabote/Rams-Mabote-The-Speakers-Firm-7.jpg"
   }
 ];

@@ -219,7 +219,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "kagiso-kg-mokgadi", "kagiso-lediga", "isaac-gampu", "tol-ass-mo", "summary"
   ],
   "inspirational-keynote-speakers": [
-    "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
+    "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
     "miles-kubheka", "miles-kubheka-2"
   ],
@@ -298,7 +298,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "khanyisile-chaba", "thuli-madonsela-keynote", "ndileka-mandela"
   ],
   "motivation": [
-    "veli-ndaba", "hector-motivator", "richie-achukwu", "siphiwe-moyo", "saray-khumalo", "billy-selekane"
+    "bonang-mohale", "veli-ndaba", "hector-motivator", "richie-achukwu", "siphiwe-moyo", "saray-khumalo", "billy-selekane"
   ],
   "strategy-facilitators": [
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "lincoln-mali", "stafford-masie"

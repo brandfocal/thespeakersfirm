@@ -49,7 +49,7 @@ const customMedia = [
     publication: "The Speakers Firm",
     date: "",
     url: "https://thespeakersfirm.co.za/media-brand-reputation/lorato-tshenkeng-2/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Lorato%20Tshenkeng/Lorato-Tshenkeng-The-Speakers-Firm-2.jpg"
   }
 ];

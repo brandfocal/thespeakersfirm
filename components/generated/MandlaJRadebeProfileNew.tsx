@@ -64,7 +64,7 @@ const customMedia = [
     publication: "The Speakers Firm",
     date: "",
     url: "https://thespeakersfirm.co.za/media-brand-reputation/mandla-j-radebe/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Mandla%20J.%20Radebe/Prof-Mandla-J-Radebe-The-Speakers-Firm-3.jpg"
   }
 ];

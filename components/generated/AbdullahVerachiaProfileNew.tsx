@@ -60,7 +60,7 @@ const customMedia = [
     publication: "TechCentral",
     date: "",
     url: "https://techcentral.co.za/lesaka-lincoln-mali-fintech-opportunity/253827/",
-    action: "View Profile",
+    action: "BOOK THE SPEAKER",
     image: "/speakers/Abdullah%20Verachia/Abdullah-Verachia-The-Speakers-Firm-7.jpg"
   },
   {

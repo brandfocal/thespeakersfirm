@@ -184,7 +184,7 @@ export const WhyChooseUs = () => {
                 href="/brief-us" 
                 className="group relative inline-flex items-center gap-3 rounded-full bg-[#e30e04] hover:bg-white text-white hover:text-[#181818] px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-[0_12px_32px_rgba(227,14,4,0.18)] hover:shadow-none active:scale-98"
               >
-                <span>Start a Brief</span>
+                <span>START THE CONVERSATION</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </motion.div>
