@@ -417,6 +417,11 @@ export const TSFGallery = () => {
         </div>
       </section>
 
+      <section id="gallery" className="relative mx-auto max-w-[1440px] px-6 pt-16 md:px-16 md:pt-24 lg:pt-32">
+        <VerticalBorderLines />
+        <motion.div {...reveal} className="mb-12 flex flex-col items-start justify-between gap-6 sm:mb-16 md:flex-row md:items-end"><div><SectionTag>Highlights</SectionTag><h2 className="mt-6 max-w-2xl text-[clamp(2.5rem,12vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">A room full<br /><span className="text-[#686869]">of possibility.</span></h2><AnimatedRedRule className="mt-6 w-full" /></div><p className="hidden max-w-xs text-right text-sm leading-relaxed text-[#686869] md:block">A visual record of the ideas, conversations, and people shaping what comes next.</p></motion.div>
+      </section>
+
       <section className="relative border-y border-[rgba(33,33,33,0.14)] bg-[#ffffff]" aria-label="Gallery filters">
         <VerticalBorderLines />
         <div className="relative mx-auto max-w-[1440px] px-6 md:px-16 pt-5">
@@ -426,9 +431,8 @@ export const TSFGallery = () => {
         <div className="mx-auto flex max-w-[1440px] gap-2 overflow-x-auto px-6 md:px-16 py-5">{filters.map(filter => <button key={filter.id} type="button" onClick={() => setActiveFilter(filter.label)} className={`shrink-0 rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] transition-colors ${activeFilter === filter.label ? 'bg-[#212121] text-[#F8F7F5]' : 'border border-[#C7C7C8] text-[#686869] hover:border-[#212121] hover:text-[#212121]'}`}>{filter.label}</button>)}</div>
       </section>
 
-      <section id="gallery" className="relative mx-auto max-w-[1440px] px-6 py-16 md:px-16 md:py-24 lg:py-32">
+      <section className="relative mx-auto max-w-[1440px] px-6 pb-16 md:px-16 md:pb-24 lg:pb-32">
         <VerticalBorderLines />
-        <motion.div {...reveal} className="mb-12 flex flex-col items-start justify-between gap-6 sm:mb-16 md:flex-row md:items-end"><div><SectionTag>Highlights</SectionTag><h2 className="mt-6 max-w-2xl text-[clamp(2.5rem,12vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">A room full<br /><span className="text-[#686869]">of possibility.</span></h2><AnimatedRedRule className="mt-6 w-full" /></div><p className="hidden max-w-xs text-right text-sm leading-relaxed text-[#686869] md:block">A visual record of the ideas, conversations, and people shaping what comes next.</p></motion.div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map(item => <motion.figure key={item.id} {...reveal} className="group relative min-h-[320px] cursor-pointer" onClick={() => { setSelectedGallery(item); setActiveImageIndex(0); }}><div className="relative aspect-[4/3] min-h-[240px] overflow-hidden"><img className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src={item.image} alt={item.title} /><div className="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" /><div className="absolute bottom-5 left-5 right-5 translate-y-4 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><span className="block text-sm font-bold uppercase tracking-[0.08em]">{item.title}</span><span className="mt-1 block text-[11px] font-bold uppercase tracking-[0.12em] text-white/70">{item.category}</span></div><span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#e30e04] transition-all duration-500 group-hover:w-full" aria-hidden="true" /></div><figcaption className="border-t border-[rgba(33,33,33,0.14)] px-0 py-4"><strong className="block text-[13px] font-bold uppercase tracking-[0.08em] text-[#212121]">{item.title}</strong><span className="mt-1 block text-[11px] uppercase tracking-[0.1em] text-[#686869]">{item.year} / {item.category}</span></figcaption></motion.figure>)}
         </div>
