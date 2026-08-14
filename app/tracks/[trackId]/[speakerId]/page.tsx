@@ -125,6 +125,7 @@ import { AboutTeamSection as RamiChueneProfile } from "@/components/generated/Ra
 import { AboutTeamSection as NalediMoleoProfile } from "@/components/generated/NalediMoleoProfileNew";
 import { AboutTeamSection as CriseldaKanandaProfile } from "@/components/generated/CriseldaKanandaProfileNew";
 import { AboutTeamSection as PutcoMafaniProfile } from "@/components/generated/PutcoMafaniProfileNew";
+import { AboutTeamSection as ThaboTboTouchMolefeProfile } from "@/components/generated/ThaboTboTouchMolefeProfileNew";
 import { AboutTeamSection as SarayKhumaloProfile } from "@/components/generated/SarayKhumaloProfileNew";
 import { AboutTeamSection as SomadodaFikeniProfile } from "@/components/generated/SomadodaFikeniProfileNew";
 import { AboutTeamSection as SthembisoPhakathiProfile } from "@/components/generated/SthembisoPhakathiProfileNew";
