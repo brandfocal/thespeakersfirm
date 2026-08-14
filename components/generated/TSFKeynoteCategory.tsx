@@ -14,6 +14,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'saray-khumalo',
+  name: 'Saray Khumalo',
+  role: 'Mountaineer, Guinness World Record Holder, Author & Business Executive',
+  image: '/speaker_thumbnails/Saray-Khumalo-The-Speakers-Firm.jpg',
+  topics: ['Resilience', 'Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/inspirational-keynote-speakers/saray-khumalo'
+}, {
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   role: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',

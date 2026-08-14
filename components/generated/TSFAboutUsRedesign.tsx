@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -44,14 +44,14 @@ type Line = {
 const leaders: Leader[] = [{
   ordinal: '01',
   name: 'Simphiwe Masiza',
-  role: 'Founder and Managing Executive The Speakers Firm',
-  bio: 'Simphiwe founded The Speakers Firm to connect Africa\'s most influential voices with the audiences that need to hear them. With over a decade in the talent and events industry, she has built the firm into a premier speaker bureau.',
+  role: 'Founder and Chief Executive Officer',
+  bio: "Simphiwe founded The Speakers Firm to connect Africa's most influential voices with the audiences that need to hear them. With over a decade in the talent and events industry, she has built the firm into a premier speaker bureau.",
   image: '/Team/simphiwe-masiza.jpg'
 }, {
   ordinal: '02',
   name: 'Neo Mathebe',
-  role: 'Talent Manager',
-  bio: 'Neo manages the firm\'s speaker relationships and talent pipeline, matching every brief with the right voice. She brings a sharp eye for emerging talent and a deep understanding of what makes a speaker genuinely transformative.',
+  role: 'Managing Executive',
+  bio: "Neo manages the firm's speaker relationships and talent pipeline, matching every brief with the right voice. She brings a sharp eye for emerging talent and a deep understanding of what makes a speaker genuinely transformative.",
   image: '/Team/Neo-Mathebe.png'
 }, {
   ordinal: '03',
@@ -211,10 +211,12 @@ const AnimatedHeading = ({
       }} className={`mr-[0.22em] inline-block origin-bottom-left ${line.red ? 'text-[#e30e04]' : ''}`}>{word}</motion.span>)}</span>)}</Heading>;
 };
 
-export const TSFAboutUsRedesign = () => <div style={{
-  backgroundColor: COLORS.offWhite,
-  color: COLORS.black
-}} className="w-full overflow-x-hidden">
+export const TSFAboutUsRedesign = () => {
+
+  return <div style={{
+    backgroundColor: COLORS.offWhite,
+    color: COLORS.black
+  }} className="w-full overflow-x-hidden">
 
   <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh]" style={{
     backgroundColor: COLORS.black
@@ -360,6 +362,7 @@ export const TSFAboutUsRedesign = () => <div style={{
       <div className="grid gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8" role="list" aria-label="Leadership team members">
         {leaders.map((leader, order) => {
           const imageFirst = order % 2 === 1;
+
           return <motion.article key={leader.ordinal} role="listitem" initial={{
             opacity: 0,
             y: 32
@@ -373,12 +376,12 @@ export const TSFAboutUsRedesign = () => <div style={{
             duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
             delay: order * 0.1
-          }} className="group relative isolate grid min-h-0 overflow-hidden rounded-[22px] border border-[rgba(248,247,245,0.08)] bg-[linear-gradient(135deg,#333333_0%,#292929_54%,#1f1f1f_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:rounded-[28px] md:min-h-[340px] md:grid-cols-2 lg:min-h-[380px]">
+          }} className="group relative isolate grid min-h-0 overflow-hidden rounded-[22px] border border-[rgba(248,247,245,0.08)] bg-[linear-gradient(135deg,#333333_0%,#292929_54%,#1f1f1f_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:rounded-[28px] md:grid-cols-2 md:min-h-[340px] lg:min-h-[380px]">
           <div className={`${imageFirst ? 'md:order-2' : 'md:order-1'} relative z-10 aspect-[4/3] w-full overflow-hidden bg-[#000000] md:aspect-auto md:min-h-full`}>
             <img src={leader.image} alt={`${leader.name}, ${leader.role}`} className="block h-full w-full object-cover object-top grayscale transition duration-700 ease-out group-hover:scale-[1.04] group-hover:grayscale-0" />
           </div>
  
-          <div className={`${imageFirst ? 'md:order-1' : 'md:order-2'} relative z-10 flex min-h-[220px] flex-col justify-between overflow-hidden px-5 py-6 sm:min-h-[240px] sm:px-8 sm:py-8 md:min-h-full lg:p-10`}>
+          <div className={`${imageFirst ? 'md:order-1' : 'md:order-2'} relative z-10 flex min-h-[220px] flex-col justify-start overflow-hidden px-5 py-6 sm:min-h-[240px] sm:px-8 sm:py-8 md:min-h-full lg:p-10`}>
             <span className="pointer-events-none absolute bottom-0 left-0 z-0 text-[96px] font-bold leading-none tracking-[-0.08em] text-[#ffffff]/[0.035] sm:text-[132px] md:text-[150px] lg:text-[176px]">
               {leader.ordinal}
             </span>
@@ -387,16 +390,18 @@ export const TSFAboutUsRedesign = () => <div style={{
               {leader.ordinal}
             </span>
  
-            <div className="relative z-10 mt-10 sm:mt-12 md:mt-14 lg:mt-18">
+            <div className="relative z-10 mt-6 sm:mt-8">
               <h3 className="max-w-[360px] text-[clamp(1.625rem,7vw,2.625rem)] font-bold uppercase leading-[0.95] tracking-[-0.04em] text-[#ffffff] md:text-[clamp(1.75rem,3.6vw,2.625rem)]">
                 <span>{leader.name}</span>
               </h3>
               <p className="mt-4 max-w-[310px] text-[14px] leading-relaxed text-[#C9C9C6] sm:mt-5 sm:text-[15px] lg:text-[16px]">
                 <span>{leader.role}</span>
               </p>
-              <p className="mt-3 max-w-[560px] text-[13px] leading-relaxed text-[#A8A8A8] transition-colors duration-300 group-hover:text-[#C9C9C6] sm:text-[14px]">
-                <span>{leader.bio}</span>
-              </p>
+              <div className="mt-3 max-w-[560px] text-[13px] leading-relaxed text-[#A8A8A8] transition-colors duration-300 group-hover:text-[#C9C9C6] sm:text-[14px]">
+                {leader.bio.split('\n\n').map((para, idx) => (
+                  <p key={idx} className={idx > 0 ? "mt-3" : ""}>{para}</p>
+                ))}
+              </div>
             </div>
           </div>
         </motion.article>;
@@ -457,3 +462,4 @@ export const TSFAboutUsRedesign = () => <div style={{
   </section>
 
 </div>;
+};

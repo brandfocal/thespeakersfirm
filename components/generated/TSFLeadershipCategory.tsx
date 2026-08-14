@@ -14,6 +14,20 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'sthembiso-phakathi',
+  name: 'Sthembiso Phakathi',
+  role: 'Leadership Strategist, Transformation Expert & Keynote Speaker',
+  image: '/speaker_thumbnails/sthembiso-phakathi-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/sthembiso-phakathi'
+}, {
+  id: 'eric-mafuna',
+  name: 'Eric Mafuna',
+  role: 'Founder of BMF, Leadership Expert & Board Advisor',
+  image: '/speaker_thumbnails/Eric-Mafuna-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Leading Through Institutional Complexity'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/eric-mafuna'
+}, {
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   role: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',

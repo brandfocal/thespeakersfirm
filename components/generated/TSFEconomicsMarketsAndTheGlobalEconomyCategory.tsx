@@ -15,6 +15,30 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "zizipho-nyanga",
+    "name": "Zizipho Nyanga",
+    "role": "Chartered Accountant, Banking Executive & SME Specialist",
+    "image": "/speaker_thumbnails/Zizipho-Nyanga-CA(SA)--The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Macroeconomic Developments",
+      "Government Policy Implications"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/zizipho-nyanga"
+  },
+  {
+    "id": "somadoda-fikeni",
+    "name": "Dr. Somadoda Fikeni",
+    "role": "Political Analyst, Chairman of the PSC & Scholar",
+    "image": "/speaker_thumbnails/Dr-Somadoda-Fikeni-The-Speakers-Firm.jpg",
+    "topics": [
+      "Macroeconomic Developments",
+      "Government Policy Implications",
+      "Governance & Public Sector Leadership"
+    ],
+    "path": "/tracks/economics-and-politics/somadoda-fikeni"
+  },
+  {
     "id": "khaya-sithole",
     "name": "Khaya Sithole",
     "role": "Accountant, Broadcaster & Economic Analyst",

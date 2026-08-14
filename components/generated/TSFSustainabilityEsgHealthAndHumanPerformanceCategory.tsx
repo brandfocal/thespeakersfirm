@@ -15,6 +15,61 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-mpho-phalatse-nxumalo",
+    "name": "Dr. Mpho Phalatse-Nxumalo",
+    "role": "Medical Doctor, Former Mayor of Johannesburg & Pastor",
+    "image": "/speaker_thumbnails/Dr-Mpho-Phalatse-Nxumalo-The-Speakers-Firm.jpg",
+    "topics": [
+      "Corporate Wellbeing & Health",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/dr-mpho-phalatse-nxumalo"
+  },
+  {
+    "id": "sibulele-sibaca",
+    "name": "Sibulele Sibaca",
+    "role": "Social Entrepreneur, Health Advocate & International Speaker",
+    "image": "/speaker_thumbnails/Sibulele-Sibaca-The-Speakers-Firm.jpg",
+    "topics": [
+      "Corporate Wellbeing & Health",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/sibulele-sibaca"
+  },
+  {
+    "id": "olwethu-leshabane",
+    "name": "Olwethu Leshabane",
+    "role": "Media Entrepreneur, Author & Women's Advocate",
+    "image": "/speaker_thumbnails/Olwethu-Leshabane-The-Speakers-Firm.jpg",
+    "topics": [
+      "Corporate Wellbeing & Health",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/olwethu-leshabane"
+  },
+  {
+    "id": "dr-mothomang-diaho",
+    "name": "Dr. Mothomang Diaho",
+    "role": "Medical Doctor, Public Health Specialist & Wellness Thought Leader",
+    "image": "/speaker_thumbnails/Dr-Mothomang-Diaho-The-Speakers-Firm.jpg",
+    "topics": [
+      "Corporate Wellbeing & Health",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/dr-mothomang-diaho"
+  },
+  {
+    "id": "somadoda-fikeni",
+    "name": "Dr. Somadoda Fikeni",
+    "role": "Political Analyst, Chairman of the PSC & Scholar",
+    "image": "/speaker_thumbnails/Dr-Somadoda-Fikeni-The-Speakers-Firm.jpg",
+    "topics": [
+      "Sustainable Institutional Performance",
+      "Corporate Wellbeing & Health"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/somadoda-fikeni"
+  },
+  {
     "id": "khanyisile-chaba",
     "name": "Khanyisile Chaba",
     "role": "Head of Responsible Business, Old Mutual | Sustainability & Corporate Citizenship Strategist",
