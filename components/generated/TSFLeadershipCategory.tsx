@@ -188,6 +188,41 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Bafana-Khumalo-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/bafana-khumalo'
+}, {
+  id: 'dr-block-anele-siswana',
+  name: 'Dr Anele Siswana',
+  role: 'Clinical Psychologist & Cultural Scholar',
+  image: '/speaker_thumbnails/Dr-Anele-Siswana-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-anele-siswana'
+}, {
+  id: 'dr-block-jerry-gule',
+  name: 'Dr Jerry Gule',
+  role: 'Leadership & Transformation Expert',
+  image: '/speaker_thumbnails/Dr-Jerry-Gule-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-jerry-gule'
+}, {
+  id: 'joshua-makukule-mtanyelwa',
+  name: 'Joshua Makukule Mtanyelwa',
+  role: 'Men\'s Identity Advocate & Keynote Speaker',
+  image: '/speaker_thumbnails/Joshua-Makukule-Mtanyelwa-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/joshua-makukule-mtanyelwa'
+}, {
+  id: 'bongani-luvalo',
+  name: 'Bongani Luvalo',
+  role: 'Media Personality, Philanthropist & Activist',
+  image: '/speaker_thumbnails/Bongani-Luvalo-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/bongani-luvalo'
+}, {
+  id: 'sello-maake-ka-ncube-two',
+  name: 'Sello Maake Ka-Ncube',
+  role: 'Actor, Director & Cultural Ambassador',
+  image: '/speaker_thumbnails/Sello-Maake-Ka-Ncube-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/sello-maake-ka-ncube'
 }];
 
 const filterChips = [{
