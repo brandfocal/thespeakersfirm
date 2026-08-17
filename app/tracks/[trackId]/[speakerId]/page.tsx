@@ -136,6 +136,26 @@ import { AboutTeamSection as SibuleleSibacaProfile } from "@/components/generate
 import { AboutTeamSection as OlwethuLeshabaneProfile } from "@/components/generated/OlwethuLeshabaneProfileNew";
 import { AboutTeamSection as DrMothomangDiahoProfile } from "@/components/generated/DrMothomangDiahoProfileNew";
 import { AboutTeamSection as ZiziphoNyangaProfile } from "@/components/generated/ZiziphoNyangaProfileNew";
+import { AboutTeamSection as MandisaZavalaProfile } from "@/components/generated/MandisaZavalaProfileNew";
+import { AboutTeamSection as BusiSeleshoProfile } from "@/components/generated/BusiSeleshoProfileNew";
+import { AboutTeamSection as EuniceSibiyaProfile } from "@/components/generated/EuniceSibiyaProfileNew";
+import { AboutTeamSection as MaxMoyoProfile } from "@/components/generated/MaxMoyoProfileNew";
+import { AboutTeamSection as NdumiHadebeProfile } from "@/components/generated/NdumiHadebeProfileNew";
+import { AboutTeamSection as NkatekoKhozaProfile } from "@/components/generated/NkatekoKhozaProfileNew";
+import { AboutTeamSection as SamkeMhlongoProfile } from "@/components/generated/SamkeMhlongoProfileNew";
+import { AboutTeamSection as MlamuliMbamboProfile } from "@/components/generated/MlamuliMbamboProfileNew";
+import { AboutTeamSection as ZolaMbathaProfile } from "@/components/generated/ZolaMbathaProfileNew";
+import { AboutTeamSection as IsraelNokoProfile } from "@/components/generated/IsraelNokoProfileNew";
+import { AboutTeamSection as ViweTiniProfile } from "@/components/generated/ViweTiniProfileNew";
+import { AboutTeamSection as TebogoEdwardLeroleProfile } from "@/components/generated/TebogoEdwardLeroleProfileNew";
+import { AboutTeamSection as ThatoTTMbhaProfile } from "@/components/generated/ThatoTTMbhaProfileNew";
+import { AboutTeamSection as ApostleKabeloJMorokeProfile } from "@/components/generated/ApostleKabeloJMorokeProfileNew";
+import { AboutTeamSection as MartinPeldersProfile } from "@/components/generated/MartinPeldersProfileNew";
+import { AboutTeamSection as ProfessorKopanoRateleProfile } from "@/components/generated/ProfessorKopanoRateleProfileNew";
+import { AboutTeamSection as MbuleloDyasiProfile } from "@/components/generated/MbuleloDyasiProfileNew";
+import { AboutTeamSection as DrGugulethuXabaProfile } from "@/components/generated/DrGugulethuXabaProfileNew";
+import { AboutTeamSection as LeratoMakhethaProfile } from "@/components/generated/LeratoMakhethaProfileNew";
+import { AboutTeamSection as BafanaKhumaloProfile } from "@/components/generated/BafanaKhumaloProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -347,6 +367,86 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "zizipho-nyanga") {
     return <ZiziphoNyangaProfile />;
+  }
+
+  if (speakerId === "mandisa-zavala") {
+    return <MandisaZavalaProfile />;
+  }
+
+  if (speakerId === "busi-selesho") {
+    return <BusiSeleshoProfile />;
+  }
+
+  if (speakerId === "eunice-sibiya") {
+    return <EuniceSibiyaProfile />;
+  }
+
+  if (speakerId === "max-moyo") {
+    return <MaxMoyoProfile />;
+  }
+
+  if (speakerId === "ndumi-hadebe") {
+    return <NdumiHadebeProfile />;
+  }
+
+  if (speakerId === "nkateko-khoza") {
+    return <NkatekoKhozaProfile />;
+  }
+
+  if (speakerId === "samke-mhlongo" || speakerId === "samke-mhlongo-2") {
+    return <SamkeMhlongoProfile />;
+  }
+
+  if (speakerId === "mlamuli-mbambo") {
+    return <MlamuliMbamboProfile />;
+  }
+
+  if (speakerId === "zola-mbatha") {
+    return <ZolaMbathaProfile />;
+  }
+
+  if (speakerId === "israel-noko") {
+    return <IsraelNokoProfile />;
+  }
+
+  if (speakerId === "viwe-tini") {
+    return <ViweTiniProfile />;
+  }
+
+  if (speakerId === "tebogo-edward-lerole") {
+    return <TebogoEdwardLeroleProfile />;
+  }
+
+  if (speakerId === "thato-tt-mbha") {
+    return <ThatoTTMbhaProfile />;
+  }
+
+  if (speakerId === "apostle-kabelo-j-moroke" || speakerId === "apostle-kabelo-moroke") {
+    return <ApostleKabeloJMorokeProfile />;
+  }
+
+  if (speakerId === "martin-pelders") {
+    return <MartinPeldersProfile />;
+  }
+
+  if (speakerId === "professor-kopano-ratele" || speakerId === "kopano-ratele") {
+    return <ProfessorKopanoRateleProfile />;
+  }
+
+  if (speakerId === "mbulelo-dyasi") {
+    return <MbuleloDyasiProfile />;
+  }
+
+  if (speakerId === "dr-gugulethu-xaba" || speakerId === "gugulethu-xaba") {
+    return <DrGugulethuXabaProfile />;
+  }
+
+  if (speakerId === "lerato-makhetha") {
+    return <LeratoMakhethaProfile />;
+  }
+
+  if (speakerId === "bafana-khumalo") {
+    return <BafanaKhumaloProfile />;
   }
 
   if (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate") {

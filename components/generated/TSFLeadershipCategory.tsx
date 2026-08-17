@@ -125,6 +125,69 @@ const speakers: Speaker[] = [{
   image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Leading Through Institutional Complexity'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
+}, {
+  id: 'tebogo-edward-lerole',
+  name: 'Tebogo Edward Lerole',
+  role: 'Entrepreneur, Artist & Social Impact Advocate',
+  image: '/speaker_thumbnails/Tebogo-Edward-Lerole-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/tebogo-edward-lerole'
+}, {
+  id: 'thato-tt-mbha',
+  name: 'Thato “TT” Mbha',
+  role: 'Entrepreneur & Real Estate Visionary',
+  image: '/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/thato-tt-mbha'
+}, {
+  id: 'apostle-kabelo-j-moroke',
+  name: 'Apostle Kabelo J. Moroke',
+  role: 'Apostolic & Prophetic Leader',
+  image: '/speaker_thumbnails/Apostle-Kabelo-J-Moroke-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/apostle-kabelo-j-moroke'
+}, {
+  id: 'martin-pelders',
+  name: 'Martin Pelders',
+  role: 'Healing, Masculinity & Transformative Leadership',
+  image: '/speaker_thumbnails/Martin-Pelders-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'C-Suite & Executive Resilience'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/martin-pelders'
+}, {
+  id: 'professor-kopano-ratele',
+  name: 'Professor Kopano Ratele',
+  role: 'Psychologist & Scholar of Men & Masculinities Studies',
+  image: '/speaker_thumbnails/Professor-Kopano-Ratele-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/professor-kopano-ratele'
+}, {
+  id: 'mbulelo-dyasi',
+  name: 'Mbulelo Dyasi',
+  role: 'Gender & HIV/AIDS Activist',
+  image: '/speaker_thumbnails/Mbulelo-Dyasi-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/mbulelo-dyasi'
+}, {
+  id: 'dr-gugulethu-xaba',
+  name: 'Dr. Gugulethu Xaba',
+  role: 'Higher Education Leader & Student Affairs Expert',
+  image: '/speaker_thumbnails/Dr-Gugulethu-Xaba-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-gugulethu-xaba'
+}, {
+  id: 'lerato-makhetha',
+  name: 'Lerato Makhetha',
+  role: 'Versatile Artist, Media Personality & Producer',
+  image: '/speaker_thumbnails/Lerato-Makhetha-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/lerato-makhetha'
+}, {
+  id: 'bafana-khumalo',
+  name: 'Bafana Khumalo',
+  role: 'Co-Founder of Sonke Gender Justice',
+  image: '/speaker_thumbnails/Bafana-Khumalo-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/bafana-khumalo'
 }];
 
 const filterChips = [{

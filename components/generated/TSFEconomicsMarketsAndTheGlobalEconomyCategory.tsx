@@ -108,6 +108,121 @@ const speakers: Speaker[] = [
       "Government Policy Implications"
     ],
     "path": "/tracks/economics-and-politics/mncane-mthunzi"
+  },
+  {
+    "id": "mandisa-zavala",
+    "name": "Mandisa Zavala",
+    "role": "Wealth Management & Financial Inclusion Specialist",
+    "image": "/speaker_thumbnails/Mandisa-Zavala-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Macroeconomic Developments",
+      "Global Market Dynamics"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/mandisa-zavala"
+  },
+  {
+    "id": "busi-selesho",
+    "name": "Busi Selesho",
+    "role": "Money Coach, Author & Speaker",
+    "image": "/speaker_thumbnails/Busi-Selesho-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/busi-selesho"
+  },
+  {
+    "id": "eunice-sibiya",
+    "name": "Eunice Sibiya",
+    "role": "Financial & Life Coach",
+    "image": "/speaker_thumbnails/Eunice-Sibiya-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/eunice-sibiya"
+  },
+  {
+    "id": "max-moyo",
+    "name": "Max Moyo",
+    "role": "Transformation Specialist & Author",
+    "image": "/speaker_thumbnails/Max-Moyo-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/max-moyo"
+  },
+  {
+    "id": "ndumi-hadebe",
+    "name": "Ndumi Hadebe",
+    "role": "Financial Wellness Advocate & Author",
+    "image": "/speaker_thumbnails/Ndumi-Hadebe-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/ndumi-hadebe"
+  },
+  {
+    "id": "nkateko-khoza",
+    "name": "Nkateko Khoza",
+    "role": "CEO, Private Equity Partner & Governance Chair",
+    "image": "/speaker_thumbnails/Nkateko-Khoza-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Government Policy Implications"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/nkateko-khoza"
+  },
+  {
+    "id": "samke-mhlongo",
+    "name": "Samke Mhlongo",
+    "role": "Wealth Coach, Author & Board Director",
+    "image": "/speaker_thumbnails/Samke-Mhlongo-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/samke-mhlongo"
+  },
+  {
+    "id": "mlamuli-mbambo",
+    "name": "Mlamuli Mbambo",
+    "role": "Financial Educator & Wealth Strategist",
+    "image": "/speaker_thumbnails/Mlamuli-Mbambo-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/mlamuli-mbambo"
+  },
+  {
+    "id": "zola-mbatha",
+    "name": "Zola Mbatha",
+    "role": "Fiduciary & Estate Planning Specialist",
+    "image": "/speaker_thumbnails/Zola-Mbatha-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/zola-mbatha"
+  },
+  {
+    "id": "israel-noko",
+    "name": "Israel Noko",
+    "role": "Transformation Strategist & Corporate Governance Advisor",
+    "image": "/speaker_thumbnails/Israel-Noko-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Government Policy Implications"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/israel-noko"
+  },
+  {
+    "id": "viwe-tini",
+    "name": "Viwe Tini CA(SA)",
+    "role": "Finance Executive & Governance Specialist",
+    "image": "/speaker_thumbnails/Viwe-Tini-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Macroeconomic Developments"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/viwe-tini"
   }
 ];
 
