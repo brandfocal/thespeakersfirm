@@ -91,23 +91,6 @@ export const AboutTeamSection = () => {
     }
   ];
 
-  const customGallery = [
-    {
-      id: "mk-gal-1",
-      src: "/speakers/Mbuso Khoza/Mbuso-Khoza-The-Speakers-Firm-10.jpg",
-      alt: "Mbuso Khoza profile picture",
-      caption: "Mbuso Khoza",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "mk-gal-2",
-      src: "/speakers/Mbuso Khoza/Mbuso-Khoza-The-Speakers-Firm-9.jpg",
-      alt: "Mbuso Khoza performing live",
-      caption: "Mbuso Khoza performing live",
-      className: ""
-    }
-  ];
-
   return (
     <SpeakerProfileTemplate
       speakerName="Mbuso Khoza"
@@ -133,7 +116,6 @@ export const AboutTeamSection = () => {
         speakerId="mbuso-khoza" 
         customIntroText="Performances, African philosophy lectures, and cultural dialogues led by Mbuso Khoza."
         customVideos={customVideos}
-        customGallery={customGallery}
       />
     </SpeakerProfileTemplate>
   );
