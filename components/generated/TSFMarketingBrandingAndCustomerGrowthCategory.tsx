@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "alistair-mokoena",
     "name": "Dr Alistair Mokoena",
     "role": "The Architect of Digital Futures, Country Director: Google South Africa",
-    "image": "/speakers/FutureOfWork/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
     "topics": [
       "Building Distinctive Brands",
       "Consumer Authority & Positioning"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "mzamo-masito",
     "name": "Dr. Mzamo Masito",
     "role": "Africa Regional Lead, Canva | Founder, African Men Care",
-    "image": "/speakers/Branding/Mzamo-Masito-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mzamo-Masito-The-Speakers-Firm.jpg",
     "topics": [
       "Building Distinctive Brands",
       "Consumer Authority & Positioning"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "sylvester-chauke",
     "name": "Sylvester Chauke",
     "role": "Founder and Chief Architect, DNA Brand Architects | Professor of Practice, UJ",
-    "image": "/speakers/Branding/Sylvester-Chauke--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sylvester-Chauke--The-Speakers-Firm.jpg",
     "topics": [
       "Building Distinctive Brands",
       "Deepening Customer Relationships"
@@ -63,7 +63,7 @@ const speakers: Speaker[] = [
     "id": "sechaba-motsieloa",
     "name": "Sechaba Motsieloa",
     "role": "Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator",
-    "image": "/speakers/Branding/Sechaba-Motsielo-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sechaba-Motsielo-The-Speakers-Firm.jpg",
     "topics": [
       "Building Distinctive Brands",
       "Deepening Customer Relationships",
@@ -75,7 +75,7 @@ const speakers: Speaker[] = [
     "id": "femi-adebanji",
     "name": "Femi Adebanji",
     "role": "Leadership Speaker, Customer Experience Strategist & Expert",
-    "image": "/speakers/Governance/Femi-Adebanji-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Femi-Adebanji-The-Speakers-Firm.jpg",
     "topics": [
       "Deepening Customer Relationships",
       "Strategic Revenue Conversion"

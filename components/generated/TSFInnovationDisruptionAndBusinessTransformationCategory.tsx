@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "stafford-masie",
     "name": "Stafford Masie",
     "role": "Technology Futurist, Former CEO of Google SA & Angel Investor",
-    "image": "/image_marquee/stafford-masie-the-speakers-firm.jpg",
+    "image": "/speaker_thumbnails/stafford-masie-the-speakers-firm.jpg",
     "topics": [
       "Challenging Established Business Models",
       "Building Future-Ready Enterprises"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "john-sanei",
     "name": "John Sanei",
     "role": "Global Futurist, Best-Selling Author & Transformation Specialist",
-    "image": "/image_marquee/John-Sanei-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/John-Sanei-The-Speakers-Firm.jpg",
     "topics": [
       "Business & Operational Transformation",
       "Building Future-Ready Enterprises"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "puleng-mokhoalibe",
     "name": "Dr. Puleng Mokhoalibe",
     "role": "The Innovation Catalyst, Design Thinking & Future Strategy Specialist",
-    "image": "/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
     "topics": [
       "Challenging Established Business Models",
       "Unlocking New Commercial Value"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "victor-kgomoeswana",
     "name": "Victor Kgomoeswana",
     "role": "Africa Business Specialist, Author, Broadcaster & Conference Moderator",
-    "image": "/speakers/MCs/Victor-Kgomoeswana-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Victor-Kgomoeswana-The-Speakers-Firm.jpg",
     "topics": [
       "Business & Operational Transformation",
       "Unlocking New Commercial Value"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "delia-ndlovu",
     "name": "Delia Ndlovu",
     "role": "Strategic Business Transformation Leader & C-Suite Advisor",
-    "image": "/speakers/Governance/Delia-Ndlovu-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Delia-Ndlovu-The-Speakers-Firm.jpg",
     "topics": [
       "Business & Operational Transformation",
       "Building Future-Ready Enterprises"

@@ -42,7 +42,7 @@ const speakers: Speaker[] = [
     "id": "sindy-mabe",
     "name": "Sindy Mabe",
     "role": "Television News Anchor, Journalist, Moderator & Event Host",
-    "image": "/speakers/MCs/Sindy-Mabe-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sindy-Mabe-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -54,7 +54,7 @@ const speakers: Speaker[] = [
     "id": "michelle-craig",
     "name": "Michelle Craig",
     "role": "Broadcaster, Moderator, Conference Chairperson & Event Host",
-    "image": "/speakers/MCs/Michelle-Craig-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Michelle-Craig-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -66,7 +66,7 @@ const speakers: Speaker[] = [
     "id": "thami-ngubeni",
     "name": "Thami Ngubeni",
     "role": "Media Personality, Author, Producer, Moderator & Thought Leader",
-    "image": "/speakers/MCs/Thami-Ngubeni-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thami-Ngubeni-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -78,7 +78,7 @@ const speakers: Speaker[] = [
     "id": "thabo-mdluli",
     "name": "Thabo Mdluli",
     "role": "Television Presenter, Broadcaster, Moderator & Master of Ceremonies",
-    "image": "/speakers/MCs/Thabo-Mdluli-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thabo-Mdluli-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -90,7 +90,7 @@ const speakers: Speaker[] = [
     "id": "bongiwe-zwane",
     "name": "Bongiwe Zwane",
     "role": "News Anchor, Television Host, Journalist & Facilitator",
-    "image": "/speakers/MCs/Bongiwe-Zwane-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Bongiwe-Zwane-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -102,7 +102,7 @@ const speakers: Speaker[] = [
     "id": "kgomotso-monyai",
     "name": "Kgomotso Monyai",
     "role": "Television Broadcaster, Panel Moderator & Event Host",
-    "image": "/speakers/MCs/Kgomotso-Monyai-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Kgomotso-Monyai-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -114,7 +114,7 @@ const speakers: Speaker[] = [
     "id": "kayise-ngqula",
     "name": "Kayise Ngqula",
     "role": "Media Executive, Executive Producer, Broadcaster, Speaker & Social-Impact Advocate",
-    "image": "/speakers/MCs/Kayise-Ngqula-The-Speakers-Firm2.jpg",
+    "image": "/speaker_thumbnails/Kayise-Ngqula-The-Speakers-Firm2.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -126,7 +126,7 @@ const speakers: Speaker[] = [
     "id": "nqaba-mabece",
     "name": "Nqaba Mabece",
     "role": "Broadcaster, Legal and Policy Professional, Moderator & Strategic Stakeholder-Engagement Specialist",
-    "image": "/speakers/MCs/Nqaba-Mabece-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Nqaba-Mabece-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -138,7 +138,7 @@ const speakers: Speaker[] = [
     "id": "hulisani-ravele",
     "name": "Hulisani Ravele",
     "role": "Seasoned Broadcaster, Television Presenter, Moderator & Media Personality",
-    "image": "/speakers/MCs/Hulisani-Ravele-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Hulisani-Ravele-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -150,7 +150,7 @@ const speakers: Speaker[] = [
     "id": "penny-lebyane",
     "name": "Penny Lebyane",
     "role": "Radio Broadcaster, Media Facilitator, Moderator & Master of Ceremonies",
-    "image": "/speakers/MCs/Penny-Lebyane-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Penny-Lebyane-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -162,7 +162,7 @@ const speakers: Speaker[] = [
     "id": "khaya-dlanga",
     "name": "Khaya Dlanga",
     "role": "Author, Marketing Executive, Storyteller & Conference Facilitator",
-    "image": "/speakers/MCs/Khaya-Dlanga-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Khaya-Dlanga-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -174,7 +174,7 @@ const speakers: Speaker[] = [
     "id": "thembekile-mrototo",
     "name": "Thembekile Mrototo",
     "role": "News Anchor, Broadcaster, Moderator & Event Host",
-    "image": "/speakers/MCs/Thembekile-Mrototo-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thembekile-Mrototo-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -186,7 +186,7 @@ const speakers: Speaker[] = [
     "id": "rami-chuene",
     "name": "Rami Chuene",
     "role": "Actress, Author, Public Speaker, Master of Ceremonies & Voice-Over Artist",
-    "image": "/speakers/MCs/Rami-Chuene-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Rami-Chuene-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -198,7 +198,7 @@ const speakers: Speaker[] = [
     "id": "naledi-moleo",
     "name": "Naledi Moleo",
     "role": "News Anchor, Radio Host, Television Presenter, Producer & Moderator",
-    "image": "/speakers/MCs/Naledi-Moleo-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Naledi-Moleo-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -210,7 +210,7 @@ const speakers: Speaker[] = [
     "id": "criselda-kananda",
     "name": "Criselda Kananda",
     "role": "Broadcaster, Humanitarian, Health Advocate, Facilitator & Master of Ceremonies",
-    "image": "/speakers/MCs/Criselda-Kananda-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Criselda-Kananda-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -222,7 +222,7 @@ const speakers: Speaker[] = [
     "id": "putco-mafani",
     "name": "Putco Mafani",
     "role": "Radio Broadcaster, Motivational Speaker & Master of Ceremonies",
-    "image": "/speakers/MCs/Putco-Mafani-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Putco-Mafani-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -234,7 +234,7 @@ const speakers: Speaker[] = [
     "id": "tbo-touch",
     "name": "Thabo “Tbo Touch” Molefe",
     "role": "Media Entrepreneur, Broadcaster, Business Leader & Event Host",
-    "image": "/speakers/MCs/tbo-touch3.jpg",
+    "image": "/speaker_thumbnails/tbo-touch3.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -246,7 +246,7 @@ const speakers: Speaker[] = [
     "id": "peter-ndoro",
     "name": "Peter Ndoro",
     "role": "Veteran Broadcast Journalist, Conference Facilitator, Moderator & Master of Ceremonies",
-    "image": "/speakers/MCs/Peter-Ndoro-The-Speakers-Firm2.jpg",
+    "image": "/speaker_thumbnails/Peter-Ndoro-The-Speakers-Firm2.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -258,7 +258,7 @@ const speakers: Speaker[] = [
     "id": "sibusiso-molimi",
     "name": "Sibusiso Molimi",
     "role": "Master of Ceremonies, Keynote Speaker, Entrepreneur & Perspective-Shifter",
-    "image": "/speakers/MCs/Sibusiso-Molimi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sibusiso-Molimi-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -270,7 +270,7 @@ const speakers: Speaker[] = [
     "id": "noni-khumalo",
     "name": "Nonhlanhla “Noni” Khumalo",
     "role": "Radio and Television Broadcaster, Producer & Corporate Events MC",
-    "image": "/speakers/MCs/Noni-Khumalo-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Noni-Khumalo-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -282,7 +282,7 @@ const speakers: Speaker[] = [
     "id": "bridget-masinga-mc",
     "name": "Bridget Masinga",
     "role": "Radio Host, Television Personality, Producer, Public Speaker & Master of Ceremonies",
-    "image": "/speakers/MCs/Bridget-Masinga-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Bridget-Masinga-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -294,7 +294,7 @@ const speakers: Speaker[] = [
     "id": "aubrey-masango-mc",
     "name": "Aubrey Masango",
     "role": "Radio Personality, Broadcaster, Moderator & Master of Ceremonies",
-    "image": "/speakers/MCs/Aubrey-Masango-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Aubrey-Masango-The-Speakers-Firm.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",

@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "john-sanei",
     "name": "John Sanei",
     "role": "Global Futurist, Best-Selling Author & Transformation Specialist",
-    "image": "/image_marquee/John-Sanei-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/John-Sanei-The-Speakers-Firm.jpg",
     "topics": [
       "Technological & Social Trends",
       "Industry Reshaping & Evolution"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "stafford-masie",
     "name": "Stafford Masie",
     "role": "Technology Futurist, Former CEO of Google SA & Angel Investor",
-    "image": "/image_marquee/stafford-masie-the-speakers-firm.jpg",
+    "image": "/speaker_thumbnails/stafford-masie-the-speakers-firm.jpg",
     "topics": [
       "Technological & Social Trends",
       "Consumer Behaviour Trajectories"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "abdullah-verachia",
     "name": "Abdullah Verachia",
     "role": "Global Strategist, Author & Executive Director",
-    "image": "/image_marquee/leadership/Abdullah-Verachia-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Abdullah-Verachia-The-Speakers-Firm.jpg",
     "topics": [
       "Demographic Market Shifts",
       "Industry Reshaping & Evolution"

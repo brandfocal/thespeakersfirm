@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "azania-mosaka",
     "name": "Azania Mosaka",
     "role": "Broadcaster, Moderator, Strategic Communications Expert & Entrepreneur",
-    "image": "/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg",
     "topics": [
       "Protecting Institutional Trust",
       "Reputation Repair & Defense"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "themba-maseko",
     "name": "Themba Maseko",
     "role": "Former Government Spokesperson, Public Policy Commentator",
-    "image": "/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Themba-Maseko--The-Speakers-Firm.jpg",
     "topics": [
       "Protecting Institutional Trust",
       "Leading Decisively in Crisis"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "lorato-tshenkeng",
     "name": "Lorato Tshenkeng",
     "role": "CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert",
-    "image": "/speakers/Media/Lorato-Tshenkeng--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Lorato-Tshenkeng--The-Speakers-Firm.jpg",
     "topics": [
       "Protecting Institutional Trust",
       "Navigating Public Scrutiny",
@@ -52,7 +52,7 @@ const speakers: Speaker[] = [
     "id": "rams-mabote",
     "name": "Rams Mabote",
     "role": "Media Personality, Reputation Coach, Host & Facilitator",
-    "image": "/speakers/Media/Rams-Mabote-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Rams-Mabote-The-Speakers-Firm.jpg",
     "topics": [
       "Navigating Public Scrutiny",
       "Leading Decisively in Crisis",

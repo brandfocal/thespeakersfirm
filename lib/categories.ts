@@ -221,10 +221,10 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker"
   ],
   "spirituality-heritage-and-identity": [
-    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "muzi-kuzwayo", "ndileka-mandela"
+    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker"
   ],
   "economics-and-politics": [
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",
@@ -277,7 +277,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "ndileka-mandela", "azania-mosaka", "tryphosa-ramano", "gerry-rantseli-elsdon",
     "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "nene-molefi",
     "vumile-msweli", "linda-maqoma", "samke-mhlongo", "joy-machoene-kaapu", "delia-ndlovu",
-    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse"
+    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse", "gcina-mhlophe-becker"
   ],
   "futurists": [
     "mushambi-mutuma", "stafford-masie", "john-sanei", "tseliso-mohlomi", "puleng-mokhoalibe", "alistair-mokoena"

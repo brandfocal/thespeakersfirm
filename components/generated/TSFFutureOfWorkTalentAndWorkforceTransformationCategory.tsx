@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "vumile-msweli",
     "name": "Dr. Vumile Msweli",
     "role": "Chief Executive Officer, Hesed Consulting, International Keynote Speaker, Redefining People, Leadership & the Future of Work",
-    "image": "/speakers/FutureOfWork/Dr-Vumile-Msweli-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Vumile-Msweli-The-Speakers-Firm.jpg",
     "topics": [
       "Future Workplace Models",
       "Workforce & Talent Transformation"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "kgomotso-mamello-motshidi",
     "name": "Kgomotso Mamello Motshidi",
     "role": "The Capital Maven, Investment Entrepreneur & Wealth Builder",
-    "image": "/speakers/FutureOfWork/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg",
     "topics": [
       "Evolving Skill Requirements",
       "Workforce & Talent Transformation"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "tseliso-mohlomi",
     "name": "Tseliso Mohlomi",
     "role": "Senior Director, Institute for the Future of Work at TUT, Architect of Culture, Storytelling, and Ethical Futures",
-    "image": "/speakers/FutureOfWork/Tseliso-Mohlomi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Tseliso-Mohlomi-The-Speakers-Firm.jpg",
     "topics": [
       "Technological Adaptation & Integration",
       "Future Workplace Models"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "puleng-mokhoalibe",
     "name": "Dr. Puleng Mokhoalibe",
     "role": "The Innovation Catalyst, Design Thinking & Future Strategy Specialist",
-    "image": "/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
     "topics": [
       "Future Workplace Models",
       "Workforce & Talent Transformation"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "alistair-mokoena",
     "name": "Dr Alistair Mokoena",
     "role": "The Architect of Digital Futures, Country Director: Google South Africa",
-    "image": "/speakers/FutureOfWork/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
     "topics": [
       "Technological Adaptation & Integration",
       "Workforce & Talent Transformation"
@@ -73,7 +73,7 @@ const speakers: Speaker[] = [
     "id": "callan-abrahams",
     "name": "Callan Abrahams",
     "role": "The Voice of Resilience, Mental Health & Leadership Strategist",
-    "image": "/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Callan-Abrahams-The-Speakers-Firm.jpg",
     "topics": [
       "Technological Adaptation & Integration",
       "Workforce & Talent Transformation"
@@ -84,7 +84,7 @@ const speakers: Speaker[] = [
     "id": "boniwe-dunster",
     "name": "Boniwe Dunster",
     "role": "Executive Manager, Finalist, 2022 IPM HR Practitioner of the Year, Acclaimed Speaker, Facilitator",
-    "image": "/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Boniwe-Dunster-The-Speakers-Firm.jpg",
     "topics": [
       "Evolving Skill Requirements",
       "Workforce & Talent Transformation"
@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     "id": "andisa-liba",
     "name": "Andisa Liba",
     "role": "Chief People Officer, FloatPays, Award-Winning HR Executive & Conference Speaker",
-    "image": "/speakers/FutureOfWork/Andisa-Liba-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Andisa-Liba-The-Speakers-Firm.jpg",
     "topics": [
       "Future Workplace Models",
       "Workforce & Talent Transformation"
@@ -106,7 +106,7 @@ const speakers: Speaker[] = [
     "id": "manqoba-zungu",
     "name": "Manqoba Zungu",
     "role": "TEDx Speaker, WEF Young Global Leader, Part-Time Faculty at GIBS & AmazuluFC Business College, CEO, GetReadySkills & Business Executive, SoluGrowth",
-    "image": "/speakers/FutureOfWork/Manqoba-Zungu-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Manqoba-Zungu-The-Speakers-Firm.jpg",
     "topics": [
       "Evolving Skill Requirements",
       "Future Workplace Models"
@@ -117,7 +117,7 @@ const speakers: Speaker[] = [
     "id": "sizwe-mpofu-walsh",
     "name": "Dr. Sizwe Mpofu-Walsh",
     "role": "Lecturer in the Department of International Relations at Wits University, Podcaster, Author, Musician and Activist",
-    "image": "/speakers/FutureOfWork/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg",
     "topics": [
       "Technological Adaptation & Integration",
       "Future Workplace Models"
@@ -128,7 +128,7 @@ const speakers: Speaker[] = [
     "id": "mncane-mthunzi",
     "name": "Dr Mncane Mthunzi",
     "role": "Business Turnaround Strategist, Operational Excellence Practitioner and Scholar",
-    "image": "/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mncane-Mthunzi-The-Speakers-Firm.jpg",
     "topics": [
       "Evolving Skill Requirements",
       "Workforce & Talent Transformation"
@@ -139,7 +139,7 @@ const speakers: Speaker[] = [
     "id": "trudy-theledi",
     "name": "Trudy Theledi",
     "role": "MC, Broadcaster",
-    "image": "/speakers/Entrepreneurship/Trudy-Theledi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Trudy-Theledi-The-Speakers-Firm.jpg",
     "topics": [
       "Evolving Skill Requirements",
       "Workforce & Talent Transformation"

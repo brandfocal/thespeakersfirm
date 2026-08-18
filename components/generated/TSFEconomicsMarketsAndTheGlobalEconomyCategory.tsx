@@ -42,7 +42,7 @@ const speakers: Speaker[] = [
     "id": "khaya-sithole",
     "name": "Khaya Sithole",
     "role": "Accountant, Broadcaster & Economic Analyst",
-    "image": "/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Khaya-Sithole-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Financial Strategy & Investment",
@@ -54,7 +54,7 @@ const speakers: Speaker[] = [
     "id": "duma-gqubule",
     "name": "Duma Gqubule",
     "role": "Economist, Financial Commentator & Transformation Strategist",
-    "image": "/speakers/Economics/Duma-Gqubule-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Duma-Gqubule-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Financial Strategy & Investment",
@@ -66,7 +66,7 @@ const speakers: Speaker[] = [
     "id": "pali-lehohla",
     "name": "Dr. Pali Lehohla",
     "role": "Former Statistician-General & Development Economist",
-    "image": "/speakers/Economics/Pali-Lehohla-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Pali-Lehohla-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Financial Strategy & Investment",
@@ -78,7 +78,7 @@ const speakers: Speaker[] = [
     "id": "elias-masilela",
     "name": "Elias Masilela",
     "role": "Economist, Former PIC CEO & Policy Architect",
-    "image": "/speakers/Economics/Elias-Masilela-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Elias-Masilela-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Financial Strategy & Investment",
@@ -90,7 +90,7 @@ const speakers: Speaker[] = [
     "id": "sifiso-skenjana",
     "name": "Sifiso Skenjana",
     "role": "Economist, Entrepreneur & Inclusive Growth Strategist",
-    "image": "/speakers/Economics/Sifiso-Skenjana-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sifiso-Skenjana-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Financial Strategy & Investment",
@@ -102,7 +102,7 @@ const speakers: Speaker[] = [
     "id": "mncane-mthunzi",
     "name": "Dr Mncane Mthunzi",
     "role": "Business Turnaround Strategist, Operational Excellence Practitioner and Scholar",
-    "image": "/speakers/FutureOfWork/Mncane-Mthunzi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mncane-Mthunzi-The-Speakers-Firm.jpg",
     "topics": [
       "Macroeconomic Developments",
       "Government Policy Implications"

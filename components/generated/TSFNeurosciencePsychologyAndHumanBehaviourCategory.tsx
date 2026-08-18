@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "timothy-maurice-webster",
     "name": "Timothy Maurice Webster",
     "role": "Behavioural Psychology Author & Brand Influence Strategist",
-    "image": "/speakers/Neuroscience/Timothy-Maurice-Webster-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Timothy-Maurice-Webster-The-Speakers-Firm.jpg",
     "topics": [
       "Applied Behavioural Science",
       "Cognitive Decision-Making Frameworks",

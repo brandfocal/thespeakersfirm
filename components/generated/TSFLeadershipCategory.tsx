@@ -31,14 +31,14 @@ const speakers: Speaker[] = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   role: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',
-  image: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance', 'Leading Through Institutional Complexity'],
   path: '/tracks/leadership-governance-and-risk-intelligence/phumzile-mlambo-ngcuka'
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
   role: 'Corporate Statesman, Business Leader & Author',
-  image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution', 'Driving Organisational Performance', 'Leading Through Institutional Complexity'],
   path: '/tracks/leadership-governance-and-risk-intelligence/bonang-mohale'
 }, {
@@ -52,77 +52,77 @@ const speakers: Speaker[] = [{
   id: 'lincoln-mali',
   name: 'Lincoln Mali',
   role: 'Corporate Executive, Leadership Writer & CEO',
-  image: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/lincoln-mali'
 }, {
   id: 'tryphosa-ramano',
   name: 'Tryphosa Ramano',
   role: 'Corporate Executive, Financial Services Leader & Speaker',
-  image: '/speakers/Keynote/Tryphosa-Ramano-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Tryphosa-Ramano-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/tryphosa-ramano'
 }, {
   id: 'zukie-siyotula',
   name: 'Nozukiso “Zukie” Siyotula',
   role: 'Boardroom Power Broker, Inspirational Speaker & Executive',
-  image: '/speakers/Keynote/Zukie-Siyotula-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Zukie-Siyotula-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution'],
   path: '/tracks/leadership-governance-and-risk-intelligence/zukie-siyotula'
 }, {
   id: 'nombasa-tsengwa',
   name: 'Dr Nombasa Tsengwa',
   role: 'Mining Executive, Sustainability Leader & Advocate for Women',
-  image: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance', 'Leading Through Institutional Complexity'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nombasa-tsengwa'
 }, {
   id: 'thuli-madonsela',
   name: 'Prof. Thuli Madonsela',
   role: 'Former Public Protector, Global Voice for Integrity & Governance',
-  image: '/speakers/Governance/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Leading Through Institutional Complexity', 'C-Suite & Executive Resilience'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
   id: 'nene-molefi',
   name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
-  image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',
   role: 'Leadership Speaker, Customer Experience Strategist & Expert',
-  image: '/speakers/Governance/Femi-Adebanji-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Femi-Adebanji-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/femi-adebanji'
 }, {
   id: 'nyimpini-mabunda',
   name: 'Nyimpini Mabunda',
   role: 'Boardroom Strategist, Chief Executive, Author & Global Leader',
-  image: '/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nyimpini-mabunda'
 }, {
   id: 'maanda-tshifularo',
   name: 'Dr Maanda Tshifularo',
   role: 'Leadership Expert, Strategy Adviser & Practical Strategist',
-  image: '/speakers/Governance/Maanda-Tshifularo-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maanda-Tshifularo-The-Speakers-Firm.jpg',
   topics: ['Corporate Strategy Execution', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
   id: 'maurice-radebe',
   name: 'Prof. Maurice Radebe',
   role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speakers/Governance/Maurice-Radebe-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
 }, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
   role: 'Former Government Spokesperson, Public Policy Commentator',
-  image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making', 'Leading Through Institutional Complexity'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
 }, {
@@ -258,6 +258,55 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Tumisho-Masha-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/tumisho-masha'
+}, {
+  id: 'rikky-minyuku',
+  name: 'Rikky Minyuku',
+  role: 'Gender Specialist, Facilitator & Speaker',
+  image: '/speaker_thumbnails/Rikky-Minyuku-The-Speakers-Firm.jpg',
+  topics: ['Diversity, Equity & Inclusion', 'Feminist Leadership', 'Constitutional Law'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/rikky-minyuku'
+}, {
+  id: 'brian-mhlanga',
+  name: 'Brian Mhlanga',
+  role: 'DEI Specialist, Executive Coach & Lecturer',
+  image: '/speaker_thumbnails/Brian-Mhlanga-The-Speakers-Firm.jpg',
+  topics: ['Diversity & Belonging', 'Somatic Intelligence', 'Inclusive Leadership'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/brian-mhlanga'
+}, {
+  id: 'mary-bomela',
+  name: 'Mary Bomela',
+  role: 'Former CEO of MIC & Lead Independent Director',
+  image: '/speaker_thumbnails/Mary-Bomela-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/mary-bomela'
+}, {
+  id: 'zipho-sikhakhane',
+  name: 'Zipho Sikhakhane',
+  role: 'CEO of EMZ Advisory & Stanford MBA Alumnus',
+  image: '/speaker_thumbnails/Zipho-Sikhakhane-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/zipho-sikhakhane'
+}, {
+  id: 'yolisa-kani',
+  name: 'Yolisa Kani',
+  role: 'Chief Business Development Officer & Infrastructure Strategist',
+  image: '/speaker_thumbnails/Yolisa-Kani-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/yolisa-kani'
+}, {
+  id: 'ofentse-pitse',
+  name: 'Ofentse Pitse',
+  role: 'Orchestral Conductor & Architect',
+  image: '/speaker_thumbnails/Ofentse-Pitse-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/ofentse-pitse'
+}, {
+  id: 'linda-maqoma',
+  name: 'Linda Maqoma',
+  role: 'Auditor, Governance Strategist & BBC VP',
+  image: '/speaker_thumbnails/Linda-Maqoma-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/linda-maqoma'
 }];
 
 const filterChips = [{

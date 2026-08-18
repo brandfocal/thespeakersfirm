@@ -24,21 +24,21 @@ const speakers: Speaker[] = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   role: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',
-  image: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Resilience', 'Legacy'],
   path: '/tracks/leadership-governance-and-risk-intelligence/phumzile-mlambo-ngcuka'
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
   role: 'Corporate Statesman, Business Leader & Author',
-  image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance', 'Legacy'],
   path: '/tracks/leadership-governance-and-risk-intelligence/bonang-mohale'
 }, {
   id: 'nozipho-tshabalala',
   name: 'Nozipho Tshabalala',
   role: 'Global Moderator, Conversation Architect & Broadcast Journalist',
-  image: '/speakers/MCs/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/mc-and-facilitators/nozipho-tshabalala'
 }, {
@@ -52,14 +52,14 @@ const speakers: Speaker[] = [{
   id: 'sylvester-chauke',
   name: 'Sylvester Chauke',
   role: 'Founder and Chief Architect, DNA Brand Architects | Professor of Practice, UJ',
-  image: '/speakers/Branding/Sylvester-Chauke--The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Sylvester-Chauke--The-Speakers-Firm.jpg',
   topics: ['Transformation', 'Performance', 'Leadership'],
   path: '/tracks/marketing-branding-and-customer-growth/sylvester-chauke'
 }, {
   id: 'mzamo-masito',
   name: 'Dr Mzamo Masito',
   role: 'Africa Regional Lead, Canva | Founder, African Men Care',
-  image: '/speakers/Branding/Mzamo-Masito-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Mzamo-Masito-The-Speakers-Firm.jpg',
   topics: ['Branding', 'Performance', 'Transformation'],
   path: '/tracks/marketing-branding-and-customer-growth/mzamo-masito'
 }, {
@@ -73,119 +73,119 @@ const speakers: Speaker[] = [{
   id: 'mushambi-mutuma',
   name: 'Mushambi Mutuma',
   role: 'Keynote Speaker | Author | Executive Adviser & Tech Leader',
-  image: '/speakers/Keynote/Mushambi-Mutuma-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Mushambi-Mutuma-The-Speakers-Firm.jpg',
   topics: ['Transformation', 'Leadership', 'Performance'],
   path: '/tracks/digital-identity-cybersecurity-and-data-sovereignty/mushambi-mutuma'
 }, {
   id: 'tshilidzi-marwala',
   name: 'Prof. Tshilidzi Marwala',
   role: 'Rector, United Nations University | Under-Secretary-General, UN',
-  image: '/speakers/AI/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg',
   topics: ['AI', 'Performance', 'Transformation'],
   path: '/tracks/digital-identity-cybersecurity-and-data-sovereignty/tshilidzi-marwala'
 }, {
   id: 'sipho-maseko',
   name: 'Sipho Maseko',
   role: 'Investor | Turnaround Strategist | Former Group CEO, Telkom SA',
-  image: '/speakers/AI/Sipho-Maseko-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Sipho-Maseko-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/digital-identity-cybersecurity-and-data-sovereignty/sipho-maseko'
 }, {
   id: 'tryphosa-ramano',
   name: 'Tryphosa Ramano',
   role: 'Corporate Executive, Financial Services Leader & Speaker',
-  image: '/speakers/Keynote/Tryphosa-Ramano-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Tryphosa-Ramano-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/tryphosa-ramano'
 }, {
   id: 'zukie-siyotula',
   name: 'Nozukiso “Zukie” Siyotula',
   role: 'Boardroom Power Broker, Inspirational Speaker & Executive',
-  image: '/speakers/Keynote/Zukie-Siyotula-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Zukie-Siyotula-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/zukie-siyotula'
 }, {
   id: 'gerry-rantseli-elsdon',
   name: 'Gerry Rantseli-Elsdon',
   role: 'Business Executive, International Humanitarian, Television Personality & Master of Ceremonies',
-  image: '/speakers/MCs/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Gerry-Rantseli-Elsdon-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Resilience', 'Legacy'],
   path: '/tracks/mc-and-facilitators/gerry-rantseli-elsdon'
 }, {
   id: 'nombasa-tsengwa',
   name: 'Dr Nombasa Tsengwa',
   role: 'Mining Executive, Sustainability Leader & Advocate for Women',
-  image: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance', 'Legacy'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nombasa-tsengwa'
 }, {
   id: 'thuli-madonsela-keynote',
   name: 'Prof. Thuli Madonsela',
   role: 'Former Public Protector, Global Voice for Integrity & Governance',
-  image: '/speakers/Governance/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Resilience', 'Legacy'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
   id: 'nene-molefi',
   name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
-  image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Transformation'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'vumile-msweli',
   name: 'Dr. Vumile Msweli',
   role: 'Chief Executive Officer, Hesed Consulting, International Keynote Speaker, Redefining People, Leadership & the Future of Work',
-  image: '/speakers/FutureOfWork/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/future-of-work-talent-and-workforce-transformation/vumile-msweli'
 }, {
   id: 'azania-mosaka',
   name: 'Azania Mosaka',
   role: 'Broadcaster, Moderator, Strategic Communications Expert & Entrepreneur',
-  image: '/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/mc-and-facilitators/azania-mosaka'
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',
   role: 'Leadership Speaker, Customer Experience Strategist & Expert',
-  image: '/speakers/Governance/Femi-Adebanji-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Femi-Adebanji-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/femi-adebanji'
 }, {
   id: 'nyimpini-mabunda',
   name: 'Nyimpini Mabunda',
   role: 'Boardroom Strategist, Chief Executive, Author & Global Leader',
-  image: '/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nyimpini-mabunda'
 }, {
   id: 'maanda-tshifularo',
   name: 'Dr Maanda Tshifularo',
   role: 'Leadership Expert, Strategy Adviser & Practical Strategist',
-  image: '/speakers/Governance/Maanda-Tshifularo-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maanda-Tshifularo-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
   id: 'maurice-radebe',
   name: 'Prof. Maurice Radebe',
   role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speakers/Governance/Maurice-Radebe-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
 }, {
   id: 'andisa-liba',
   name: 'Andisa Liba',
   role: 'Chief People Officer, FloatPays, Award-Winning HR Executive & Conference Speaker',
-  image: '/speakers/FutureOfWork/Andisa-Liba-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Andisa-Liba-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/future-of-work-talent-and-workforce-transformation/andisa-liba'
 }, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
   role: 'Former Government Spokesperson, Public Policy Commentator',
-  image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
 }, {

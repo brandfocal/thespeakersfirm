@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "proverb",
     "name": "Tebogo “ProVerb” Thekisho",
     "role": "Media Personality, Author, Entrepreneur, Speaker & Master of Ceremonies",
-    "image": "/speakers/Entrepreneurship/Tebogo-ProVerb-Thekisho.jpg",
+    "image": "/speaker_thumbnails/Tebogo-ProVerb-Thekisho.jpg",
     "topics": [
       "Funding & Investment Strategy",
       "Sustaining High-Growth Businesses"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "thapelo-mokoena",
     "name": "Thapelo Mokoena",
     "role": "Actor, Entrepreneur, Producer, Speaker, Moderator & Master of Ceremonies",
-    "image": "/speakers/Entrepreneurship/Thapelo-Mokoena-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thapelo-Mokoena-The-Speakers-Firm.jpg",
     "topics": [
       "Scaling Enterprises & Operations",
       "Founder Leadership Dynamics"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "joshua-maluleke",
     "name": "Joshua Maluleke",
     "role": "Chief Executive Officer at Mayeke Holdings",
-    "image": "/speakers/Entrepreneurship/Joshua-Maluleke-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Joshua-Maluleke-The-Speakers-Firm.jpg",
     "topics": [
       "Sustaining High-Growth Businesses",
       "Founder Leadership Dynamics"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "bulelani-balabala",
     "name": "Bulelani Balabala",
     "role": "Founder of TEA",
-    "image": "/speakers/Entrepreneurship/Bulelani-Balabala-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Bulelani-Balabala-The-Speakers-Firm.jpg",
     "topics": [
       "Scaling Enterprises & Operations",
       "Founder Leadership Dynamics"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "lebo-gunguluza",
     "name": "Lebo Gunguluza",
     "role": "Entrepreneur, Turnaround Strategist, Business Speaker and Dragon Investor on SA’s Dragons Den TV Show",
-    "image": "/speakers/Entrepreneurship/Lebo-Gunguluza-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Lebo-Gunguluza-The-Speakers-Firm.jpg",
     "topics": [
       "Funding & Investment Strategy",
       "Sustaining High-Growth Businesses"
@@ -73,7 +73,7 @@ const speakers: Speaker[] = [
     "id": "thuli-magubane",
     "name": "Thuli Magubane",
     "role": "Entrepreneur, Business Strategist & Empowerment Speaker",
-    "image": "/speakers/Entrepreneurship/thuli-magubane-the-speakers-firm.jpg",
+    "image": "/speaker_thumbnails/thuli-magubane-the-speakers-firm.jpg",
     "topics": [
       "Funding & Investment Strategy",
       "Scaling Enterprises & Operations"
@@ -84,7 +84,7 @@ const speakers: Speaker[] = [
     "id": "eunice-cross",
     "name": "Dr. Eunice Cross",
     "role": "Attorney, Entrepreneur, and Founder of EC Advisory",
-    "image": "/speakers/Entrepreneurship/Dr-Eunice-Cross-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Eunice-Cross-The-Speakers-Firm.jpg",
     "topics": [
       "Funding & Investment Strategy",
       "Founder Leadership Dynamics"
@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     "id": "rekgotsofetse-chikane",
     "name": "Rekgotsofetse Chikane",
     "role": "Lecturer: Wits School of Governance & Research Associate: Wits Institute of Socio-Economic Research",
-    "image": "/speakers/Entrepreneurship/Rekgotsofetse-Chikane-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Rekgotsofetse-Chikane-The-Speakers-Firm.jpg",
     "topics": [
       "Funding & Investment Strategy",
       "Founder Leadership Dynamics"
@@ -106,7 +106,7 @@ const speakers: Speaker[] = [
     "id": "thokozani-nkosi",
     "name": "Thokozani Nkosi",
     "role": "Co-Founder and Chairman of Newzroom Afrika",
-    "image": "/speakers/Entrepreneurship/Thokozani-Nkosi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thokozani-Nkosi-The-Speakers-Firm.jpg",
     "topics": [
       "Scaling Enterprises & Operations",
       "Sustaining High-Growth Businesses"
@@ -117,7 +117,7 @@ const speakers: Speaker[] = [
     "id": "anael-granoux",
     "name": "Anael Granoux",
     "role": "Strategy Advisor, Lecturer & Speaker",
-    "image": "/speakers/Entrepreneurship/Anael-Granoux-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Anael-Granoux-The-Speakers-Firm.jpg",
     "topics": [
       "Sustaining High-Growth Businesses",
       "Founder Leadership Dynamics"
@@ -128,7 +128,7 @@ const speakers: Speaker[] = [
     "id": "musa-sono",
     "name": "Musa Sono",
     "role": "Inspirational Speaker, Entrepreneur & Disruption Catalyst",
-    "image": "/speakers/Entrepreneurship/Musa-Sono-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Musa-Sono-The-Speakers-Firm.jpg",
     "topics": [
       "Sustaining High-Growth Businesses",
       "Founder Leadership Dynamics"
@@ -139,7 +139,7 @@ const speakers: Speaker[] = [
     "id": "trudy-theledi",
     "name": "Trudy Theledi",
     "role": "MC, Broadcaster",
-    "image": "/speakers/Entrepreneurship/Trudy-Theledi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Trudy-Theledi-The-Speakers-Firm.jpg",
     "topics": [
       "Scaling Enterprises & Operations",
       "Founder Leadership Dynamics"
@@ -150,7 +150,7 @@ const speakers: Speaker[] = [
     "id": "molefe-pooe",
     "name": "Molefe Pooe",
     "role": "Accomplished Corporate Executive, Entrepreneur, Author, and Certified Business Coach",
-    "image": "/speakers/Entrepreneurship/Molefe-Pooe-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Molefe-Pooe-The-Speakers-Firm.jpg",
     "topics": [
       "Scaling Enterprises & Operations",
       "Sustaining High-Growth Businesses"

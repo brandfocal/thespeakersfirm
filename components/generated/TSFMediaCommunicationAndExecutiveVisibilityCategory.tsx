@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "mzamo-masito",
     "name": "Dr. Mzamo Masito",
     "role": "Africa Regional Lead, Canva | Founder, African Men Care",
-    "image": "/speakers/Branding/Mzamo-Masito-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mzamo-Masito-The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Authority, Clarity & Influence"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "lorato-tshenkeng",
     "name": "Lorato Tshenkeng",
     "role": "CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert",
-    "image": "/speakers/Media/Lorato-Tshenkeng--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Lorato-Tshenkeng--The-Speakers-Firm.jpg",
     "topics": [
       "Authority, Clarity & Influence",
       "Media Platform Mastery"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "sylvester-chauke",
     "name": "Sylvester Chauke",
     "role": "Founder and Chief Architect, DNA Brand Architects | Professor of Practice, UJ",
-    "image": "/speakers/Branding/Sylvester-Chauke--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sylvester-Chauke--The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Media Platform Mastery"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "mandla-radebe",
     "name": "Mandla J Radebe",
     "role": "Strategic Communication Professor, Author, Media Theorist",
-    "image": "/speakers/Media/Mandla-J-Radebe-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mandla-J-Radebe-The-Speakers-Firm.jpg",
     "topics": [
       "Authority, Clarity & Influence",
       "Media Platform Mastery"
@@ -73,7 +73,7 @@ const speakers: Speaker[] = [
     "id": "sechaba-motsieloa",
     "name": "Sechaba Motsieloa",
     "role": "Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator",
-    "image": "/speakers/Branding/Sechaba-Motsielo-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sechaba-Motsielo-The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Authority, Clarity & Influence"
@@ -84,7 +84,7 @@ const speakers: Speaker[] = [
     "id": "milton-nkosi",
     "name": "Milton Nkosi",
     "role": "Former BBC Africa Bureau Chief, Global Correspondent, Media Relations Specialist",
-    "image": "/speakers/Media/Milton-Nkosi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Milton-Nkosi-The-Speakers-Firm.jpg",
     "topics": [
       "Authority, Clarity & Influence",
       "Media Platform Mastery"
@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     "id": "rams-mabote",
     "name": "Rams Mabote",
     "role": "Media Personality, Reputation Coach, Host & Facilitator",
-    "image": "/speakers/Media/Rams-Mabote-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Rams-Mabote-The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Media Platform Mastery"
@@ -106,7 +106,7 @@ const speakers: Speaker[] = [
     "id": "jj-tabane",
     "name": "Professor JJ Tabane",
     "role": "Political Commentator, Media Owner, Narrative Influencer",
-    "image": "/speakers/Media/Prof-JJ-Tabane--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Prof-JJ-Tabane--The-Speakers-Firm.jpg",
     "topics": [
       "Authority, Clarity & Influence",
       "Media Platform Mastery"
@@ -117,7 +117,7 @@ const speakers: Speaker[] = [
     "id": "phathiswa-magopeni",
     "name": "Phathiswa Magopeni",
     "role": "Veteran Media Executive, Editorial Strategist, Public Broadcasting Advocate",
-    "image": "/speakers/Media/Phathiswa-Magopeni--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Phathiswa-Magopeni--The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Authority, Clarity & Influence"
@@ -128,7 +128,7 @@ const speakers: Speaker[] = [
     "id": "proverb",
     "name": "Tebogo “ProVerb” Thekisho",
     "role": "Media Personality, Author, Entrepreneur, Speaker & Master of Ceremonies",
-    "image": "/speakers/Entrepreneurship/Tebogo-ProVerb-Thekisho.jpg",
+    "image": "/speaker_thumbnails/Tebogo-ProVerb-Thekisho.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Media Platform Mastery"
@@ -139,7 +139,7 @@ const speakers: Speaker[] = [
     "id": "thapelo-mokoena",
     "name": "Thapelo Mokoena",
     "role": "Actor, Entrepreneur, Producer, Speaker, Moderator & Master of Ceremonies",
-    "image": "/speakers/Entrepreneurship/Thapelo-Mokoena-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Thapelo-Mokoena-The-Speakers-Firm.jpg",
     "topics": [
       "Strategic Executive Communication",
       "Authority, Clarity & Influence"

@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "lincoln-mali",
     "name": "Lincoln Mali",
     "role": "Corporate Executive, Leadership Writer & CEO",
-    "image": "/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg",
     "topics": [
       "Mobilising Human Capital",
       "Sustaining Performance in Uncertainty"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "linda-ntuli",
     "name": "Linda Ntuli",
     "role": "Management Consultant, Motivational Speaker, Trainer & Life Coach",
-    "image": "/speakers/Organisational Agility/Linda-Ntuli-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Linda-Ntuli-The-Speakers-Firm.jpg",
     "topics": [
       "Mobilising Human Capital",
       "Overcoming Resistance to Change"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "boniwe-dunster",
     "name": "Boniwe Dunster",
     "role": "Executive Manager, Finalist, 2022 IPM HR Practitioner of the Year, Acclaimed Speaker, Facilitator",
-    "image": "/speakers/FutureOfWork/Boniwe-Dunster-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Boniwe-Dunster-The-Speakers-Firm.jpg",
     "topics": [
       "Overcoming Resistance to Change",
       "Building Corporate Resilience"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "david-molapo",
     "name": "Dr David Molapo",
     "role": "The Leadership Mentor, Inspirational Speaker & Transformation Strategist",
-    "image": "/speakers/Governance/Dr-David-Molapo-The-Speakers-Firm-2.jpg",
+    "image": "/speaker_thumbnails/Dr-David-Molapo-The-Speakers-Firm-2.jpg",
     "topics": [
       "Mobilising Human Capital",
       "Sustaining Performance in Uncertainty"

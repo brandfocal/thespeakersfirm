@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "nyimpini-mabunda",
     "name": "Nyimpini Mabunda",
     "role": "Boardroom Strategist, Chief Executive, Author & Global Leader",
-    "image": "/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg",
     "topics": [
       "High-Stake Client Acquisition",
       "High-Performance Sales Strategy"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "sipho-maseko",
     "name": "Sipho Maseko",
     "role": "Investor | Turnaround Strategist | Former Group CEO, Telkom SA",
-    "image": "/speakers/AI/Sipho-Maseko-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sipho-Maseko-The-Speakers-Firm.jpg",
     "topics": [
       "Effective Corporate Negotiation",
       "Accelerating Revenue Growth"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "azania-mosaka",
     "name": "Azania Mosaka",
     "role": "Broadcaster, Moderator, Strategic Communications Expert & Entrepreneur",
-    "image": "/speakers/MCs/Azania-Mosaka-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg",
     "topics": [
       "High-Stake Client Acquisition",
       "Effective Corporate Negotiation"

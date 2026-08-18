@@ -166,6 +166,16 @@ import { AboutTeamSection as DrShimmyKotuProfile } from "@/components/generated/
 import { AboutTeamSection as DrStevenMolakengProfile } from "@/components/generated/DrStevenMolakengProfileNew";
 import { AboutTeamSection as LindaYendeProfile } from "@/components/generated/LindaYendeProfileNew";
 import { AboutTeamSection as TumishoMashaProfile } from "@/components/generated/TumishoMashaProfileNew";
+import { AboutTeamSection as MaryBomelaProfile } from "@/components/generated/MaryBomelaProfileNew";
+import { AboutTeamSection as ZiphoSikhakhaneProfile } from "@/components/generated/ZiphoSikhakhaneProfileNew";
+import { AboutTeamSection as YolisaKaniProfile } from "@/components/generated/YolisaKaniProfileNew";
+import { AboutTeamSection as OfentsePitseProfile } from "@/components/generated/OfentsePitseProfileNew";
+import { AboutTeamSection as LindaMaqomaProfile } from "@/components/generated/LindaMaqomaProfileNew";
+import { AboutTeamSection as RikkyMinyukuProfile } from "@/components/generated/RikkyMinyukuProfileNew";
+import { AboutTeamSection as BrianMhlangaProfile } from "@/components/generated/BrianMhlangaProfileNew";
+import { AboutTeamSection as MbusoKhozaProfile } from "@/components/generated/MbusoKhozaProfileNew";
+import { AboutTeamSection as GcinaMhlopheBeckerProfile } from "@/components/generated/GcinaMhlopheBeckerProfileNew";
+import { AboutTeamSection as JoshuaMapongaProfile } from "@/components/generated/JoshuaMapongaProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -495,8 +505,48 @@ export default async function SpeakerPage({ params }: PageProps) {
     return <LindaYendeProfile />;
   }
 
+  if (speakerId === "rikky-minyuku") {
+    return <RikkyMinyukuProfile />;
+  }
+
+  if (speakerId === "brian-mhlanga") {
+    return <BrianMhlangaProfile />;
+  }
+
+  if (speakerId === "mbuso-khoza") {
+    return <MbusoKhozaProfile />;
+  }
+
+  if (speakerId === "gcina-mhlophe-becker" || speakerId === "gcina-mhlophe") {
+    return <GcinaMhlopheBeckerProfile />;
+  }
+
+  if (speakerId === "joshua-maponga" || speakerId === "bishop-joshua-maponga" || speakerId === "joshua-maponga-2") {
+    return <JoshuaMapongaProfile />;
+  }
+
   if (speakerId === "tumisho-masha") {
     return <TumishoMashaProfile />;
+  }
+
+  if (speakerId === "mary-bomela") {
+    return <MaryBomelaProfile />;
+  }
+
+  if (speakerId === "zipho-sikhakhane") {
+    return <ZiphoSikhakhaneProfile />;
+  }
+
+  if (speakerId === "yolisa-kani") {
+    return <YolisaKaniProfile />;
+  }
+
+  if (speakerId === "ofentse-pitse") {
+    return <OfentsePitseProfile />;
+  }
+
+  if (speakerId === "linda-maqoma") {
+    return <LindaMaqomaProfile />;
   }
 
   if (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate") {

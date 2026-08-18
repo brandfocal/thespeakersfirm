@@ -31,84 +31,84 @@ const speakers: Speaker[] = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   role: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',
-  image: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/phumzile-mlambo-ngcuka'
 }, {
   id: 'bonang-mohale',
   name: 'Prof. Bonang Mohale',
   role: 'Corporate Statesman, Business Leader & Author',
-  image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/bonang-mohale'
 }, {
   id: 'tryphosa-ramano',
   name: 'Tryphosa Ramano',
   role: 'Corporate Executive, Financial Services Leader & Speaker',
-  image: '/speakers/Keynote/Tryphosa-Ramano-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Tryphosa-Ramano-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/tryphosa-ramano'
 }, {
   id: 'zukie-siyotula',
   name: 'Nozukiso “Zukie” Siyotula',
   role: 'Boardroom Power Broker, Inspirational Speaker & Executive',
-  image: '/speakers/Keynote/Zukie-Siyotula-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Zukie-Siyotula-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
   path: '/tracks/leadership-governance-and-risk-intelligence/zukie-siyotula'
 }, {
   id: 'nombasa-tsengwa',
   name: 'Dr Nombasa Tsengwa',
   role: 'Mining Executive, Sustainability Leader & Advocate for Women',
-  image: '/speakers/Keynote/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nombasa-Tsengwa-The-Speakers-Firm.jpg',
   topics: ['Ethical Corporate Stewardship', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nombasa-tsengwa'
 }, {
   id: 'thuli-madonsela',
   name: 'Prof. Thuli Madonsela',
   role: 'Former Public Protector, Global Voice for Integrity & Governance',
-  image: '/speakers/Governance/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Thuli-Madonsela-The-Speakers-Firm-The-Speakers-Firm.jpg',
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thuli-madonsela'
 }, {
   id: 'nene-molefi',
   name: 'Nene Molefi',
   role: 'The Inclusion Vanguard, Diversity & Cultural Specialist',
-  image: '/speakers/Governance/Nene-Molefi-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nene-Molefi-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nene-molefi'
 }, {
   id: 'femi-adebanji',
   name: 'Femi Adebanji',
   role: 'Leadership Speaker, Customer Experience Strategist & Expert',
-  image: '/speakers/Governance/Femi-Adebanji-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Femi-Adebanji-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/femi-adebanji'
 }, {
   id: 'nyimpini-mabunda',
   name: 'Nyimpini Mabunda',
   role: 'Boardroom Strategist, Chief Executive, Author & Global Leader',
-  image: '/speakers/Governance/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/nyimpini-mabunda'
 }, {
   id: 'maanda-tshifularo',
   name: 'Dr Maanda Tshifularo',
   role: 'Leadership Expert, Strategy Adviser & Practical Strategist',
-  image: '/speakers/Governance/Maanda-Tshifularo-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maanda-Tshifularo-The-Speakers-Firm.jpg',
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
   id: 'maurice-radebe',
   name: 'Prof. Maurice Radebe',
   role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speakers/Governance/Maurice-Radebe-The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
 }, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
   role: 'Former Government Spokesperson, Public Policy Commentator',
-  image: '/speakers/Keynote/Themba-Maseko--The-Speakers-Firm.jpg',
+  image: '/speaker_thumbnails/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
 }];

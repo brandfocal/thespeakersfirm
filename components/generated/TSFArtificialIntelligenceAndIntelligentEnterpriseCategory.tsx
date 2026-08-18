@@ -18,7 +18,7 @@ const speakers: Speaker[] = [
     "id": "alistair-mokoena",
     "name": "Dr Alistair Mokoena",
     "role": "The Architect of Digital Futures, Country Director: Google South Africa",
-    "image": "/speakers/FutureOfWork/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg",
     "topics": [
       "Responsible Enterprise AI Adoption",
       "AI Transformation Strategy"
@@ -29,7 +29,7 @@ const speakers: Speaker[] = [
     "id": "sipho-maseko",
     "name": "Sipho Maseko",
     "role": "The Corporate Turnaround General, Former Group CEO: Telkom South Africa, Investor & Industrialist",
-    "image": "/speakers/AI/Sipho-Maseko-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sipho-Maseko-The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Measurable Commercial Value"
@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
     "id": "john-sanei",
     "name": "John Sanei",
     "role": "The Futurist of Possibility, Global Trend Strategist & Author",
-    "image": "/image_marquee/John-Sanei-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/John-Sanei-The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Intelligent Enterprise Architecture"
@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     "id": "tshilidzi-marwala",
     "name": "Prof. Tshilidzi Marwala",
     "role": "The AI Statesman, Rector of the United Nations University & Under-Secretary-General of the UN",
-    "image": "/speakers/AI/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Prof-Tshilidzi-Marwala-The-Speakers-Firm.jpg",
     "topics": [
       "Responsible Enterprise AI Adoption",
       "AI Transformation Strategy"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     "id": "mushambi-mutuma",
     "name": "Mushambi Mutuma",
     "role": "Author, Speaker, Tech Leader",
-    "image": "/speakers/Keynote/Mushambi-Mutuma-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Mushambi-Mutuma-The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Intelligent Enterprise Architecture"
@@ -73,7 +73,7 @@ const speakers: Speaker[] = [
     "id": "callan-abrahams",
     "name": "Callan Abrahams",
     "role": "The Voice of Resilience, Mental Health & Leadership Strategist",
-    "image": "/speakers/FutureOfWork/Callan-Abrahams-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Callan-Abrahams-The-Speakers-Firm.jpg",
     "topics": [
       "Responsible Enterprise AI Adoption",
       "AI Transformation Strategy"
@@ -84,7 +84,7 @@ const speakers: Speaker[] = [
     "id": "kgomotso-mamello-motshidi",
     "name": "Kgomotso Mamello Motshidi",
     "role": "The Capital Maven, Investment Entrepreneur & Wealth Builder",
-    "image": "/speakers/FutureOfWork/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Kgomotso-Mamello-Motshidi-The-Speakers-Firm.jpg",
     "topics": [
       "Measurable Commercial Value",
       "Intelligent Enterprise Architecture"
@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     "id": "puleng-mokhoalibe",
     "name": "Dr. Puleng Mokhoalibe",
     "role": "The Innovation Catalyst, Design Thinking & Future Strategy Specialist",
-    "image": "/speakers/FutureOfWork/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Intelligent Enterprise Architecture"
@@ -106,7 +106,7 @@ const speakers: Speaker[] = [
     "id": "tumi-ramonotsi",
     "name": "Tumi Ramonotsi",
     "role": "Financial Steward, Risk, Governance & Leadership Strategist",
-    "image": "/speakers/AI/Tumi-Ramonotsi-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Tumi-Ramonotsi-The-Speakers-Firm.jpg",
     "topics": [
       "Responsible Enterprise AI Adoption",
       "Measurable Commercial Value",
@@ -118,7 +118,7 @@ const speakers: Speaker[] = [
     "id": "sid-peimer",
     "name": "Sid Peimer",
     "role": "Strategic Thinker, Creative Leader, Insights Explorer, and Proponent of Human Potential",
-    "image": "/speakers/AI/Sid-Peimer-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Sid-Peimer-The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Intelligent Enterprise Architecture"
@@ -129,7 +129,7 @@ const speakers: Speaker[] = [
     "id": "molefe-pooe",
     "name": "Molefe Pooe",
     "role": "Accomplished Corporate Executive, Entrepreneur, Author, and Certified Business Coach",
-    "image": "/speakers/Entrepreneurship/Molefe-Pooe-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Molefe-Pooe-The-Speakers-Firm.jpg",
     "topics": [
       "AI Transformation Strategy",
       "Intelligent Enterprise Architecture"
