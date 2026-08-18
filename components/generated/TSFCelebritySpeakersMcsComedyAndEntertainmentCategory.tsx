@@ -114,7 +114,7 @@ const speakers: Speaker[] = [
     "id": "kayise-ngqula",
     "name": "Kayise Ngqula",
     "role": "Media Executive, Executive Producer, Broadcaster, Speaker & Social-Impact Advocate",
-    "image": "/speaker_thumbnails/Kayise-Ngqula-The-Speakers-Firm2.jpg",
+    "image": "/speaker_thumbnails/Kayise-Ngcula-The-Speakers-Firm2.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
@@ -162,7 +162,7 @@ const speakers: Speaker[] = [
     "id": "khaya-dlanga",
     "name": "Khaya Dlanga",
     "role": "Author, Marketing Executive, Storyteller & Conference Facilitator",
-    "image": "/speaker_thumbnails/Khaya-Dlanga-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Khaya-Dlanga-The-Speakers-Firm-2.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",
