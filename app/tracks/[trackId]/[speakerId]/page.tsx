@@ -161,6 +161,11 @@ import { AboutTeamSection as DrJerryGuleProfile } from "@/components/generated/D
 import { AboutTeamSection as JoshuaMakukuleMtanyelwaProfile } from "@/components/generated/JoshuaMakukuleMtanyelwaProfileNew";
 import { AboutTeamSection as BonganiLuvaloProfile } from "@/components/generated/BonganiLuvaloProfileNew";
 import { AboutTeamSection as SelloMaakeKaNcubeProfile } from "@/components/generated/SelloMaakeKaNcubeProfileNew";
+import { AboutTeamSection as CaesarMolebatsiProfile } from "@/components/generated/CaesarMolebatsiProfileNew";
+import { AboutTeamSection as DrShimmyKotuProfile } from "@/components/generated/DrShimmyKotuProfileNew";
+import { AboutTeamSection as DrStevenMolakengProfile } from "@/components/generated/DrStevenMolakengProfileNew";
+import { AboutTeamSection as LindaYendeProfile } from "@/components/generated/LindaYendeProfileNew";
+import { AboutTeamSection as TumishoMashaProfile } from "@/components/generated/TumishoMashaProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -472,6 +477,26 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "sello-maake-ka-ncube") {
     return <SelloMaakeKaNcubeProfile />;
+  }
+
+  if (speakerId === "caesar-molebatsi") {
+    return <CaesarMolebatsiProfile />;
+  }
+
+  if (speakerId === "dr-shimmy-kotu" || speakerId === "shimmy-kotu") {
+    return <DrShimmyKotuProfile />;
+  }
+
+  if (speakerId === "dr-steven-molakeng" || speakerId === "steven-molakeng") {
+    return <DrStevenMolakengProfile />;
+  }
+
+  if (speakerId === "linda-yende") {
+    return <LindaYendeProfile />;
+  }
+
+  if (speakerId === "tumisho-masha") {
+    return <TumishoMashaProfile />;
   }
 
   if (speakerId === "bonang-mohale" || speakerId === "bonang-mohale-duplicate") {

@@ -59,7 +59,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Article",
       url: "https://www.ru.ac.za/latestnews/mentalhealthatthetopofanelesmind.html",
-      image: "/speakers/Dr Anele Siswana/Dr-Anele-Siswana-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Dr Anele Siswana/Dr-Anele-Siswana-The-Speakers-Firm-6.jpg"
     },
     {
       id: "siswana-art-2",
@@ -77,7 +77,7 @@ export const AboutTeamSection = () => {
       date: "2022",
       action: "Watch Discussion",
       url: "https://www.youtube.com/watch?v=Zq21hSTFVto",
-      image: "/speakers/Dr Anele Siswana/Dr-Anele-Siswana-The-Speakers-Firm-5.jpg"
+      image: "/speakers/Dr Anele Siswana/Dr-Anele-Siswana-The-Speakers-Firm-7.jpg"
     }
   ];
 

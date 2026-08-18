@@ -223,6 +223,41 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Sello-Maake-Ka-Ncube-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/sello-maake-ka-ncube'
+}, {
+  id: 'caesar-molebatsi',
+  name: 'Caesar Molebatsi',
+  role: 'Social Justice Pioneer & Broadcaster',
+  image: '/speaker_thumbnails/Caesar-Molebatsi-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/caesar-molebatsi'
+}, {
+  id: 'dr-shimmy-kotu',
+  name: 'Dr. Shimmy Kotu',
+  role: 'Life Coach, Marriage Counsellor & Strategist',
+  image: '/speaker_thumbnails/Dr-Shimmy-Kotu-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-shimmy-kotu'
+}, {
+  id: 'dr-steven-molakeng',
+  name: 'Dr. Steven Molakeng',
+  role: 'Chaplain, Therapist & Music Strategist',
+  image: '/speaker_thumbnails/Dr-Steven-Molakeng-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-steven-molakeng'
+}, {
+  id: 'linda-yende',
+  name: 'Linda Yende',
+  role: 'Relationship Coach, Author & Youth Mentor',
+  image: '/speaker_thumbnails/Linda-Yende-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/linda-yende'
+}, {
+  id: 'tumisho-masha',
+  name: 'Tumisho Masha',
+  role: 'TV Actor, MC & Premier Voice Artist',
+  image: '/speaker_thumbnails/Tumisho-Masha-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/tumisho-masha'
 }];
 
 const filterChips = [{
