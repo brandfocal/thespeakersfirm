@@ -111,6 +111,27 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Themba-Maseko--The-Speakers-Firm.jpg',
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/themba-maseko'
+}, {
+  id: 'mbuso-khoza',
+  name: 'Mbuso Khoza',
+  role: 'Heritage Musician & Cultural Preservationist',
+  image: '/speaker_thumbnails/Mbuso-Khoza-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship', 'Institutional Sustainability & Compliance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/mbuso-khoza'
+}, {
+  id: 'gcina-mhlophe-becker',
+  name: 'Dr. Gcina Mhlophe Becker',
+  role: 'Celebrated Storyteller, Author & Activist',
+  image: '/speaker_thumbnails/Gcina-Mhlophe-Becker-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship', 'Institutional Sustainability & Compliance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/gcina-mhlophe-becker'
+}, {
+  id: 'joshua-maponga',
+  name: 'Joshua Maponga',
+  role: 'Philosopher & Pan-African Cultural Visionary',
+  image: '/speaker_thumbnails/Joshua-Maponga-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/joshua-maponga'
 }];
 
 const filterChips = [{
