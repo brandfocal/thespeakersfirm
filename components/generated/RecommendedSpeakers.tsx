@@ -19,7 +19,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Dr. Phumzile Mlambo-Ngcuka',
     bio: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',
     quote: 'Education and equality are the cornerstones of progress.',
-    image: '/speakers/Governance/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
     trackId: 'governance',
     trackLabel: 'Governance'
   },
@@ -28,7 +28,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Prof. Bonang Mohale',
     bio: 'Corporate Statesman, Business Leader & Author',
     quote: 'Servant leadership is the ultimate competitive edge.',
-    image: '/speakers/Governance/Bonang-Mohale-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
     trackId: 'governance',
     trackLabel: 'Governance'
   },
@@ -37,7 +37,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Nozipho Tshabalala',
     bio: 'Global Moderator, Conversation Architect & Broadcast Journalist',
     quote: 'Facilitating conversations that matter for Africa’s development.',
-    image: '/speakers/MCs/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
     trackId: 'mcs',
     trackLabel: 'MCs & Facilitators'
   },
@@ -55,7 +55,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Clement Manyathela',
     bio: 'Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Dialogue Facilitator',
     quote: 'Conversations that shift minds and inspire outcomes.',
-    image: '/speakers/MCs/Clement-Manyathela-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg',
     trackId: 'mcs',
     trackLabel: 'MCs & Facilitators'
   },
@@ -64,7 +64,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Dr. Sizwe Mpofu-Walsh',
     bio: 'Lecturer in International Relations at Wits University, Author & Activist',
     quote: 'Dismantling old paradigms to rebuild robust institutions.',
-    image: '/speakers/FutureOfWork/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
     trackId: 'future-of-work',
     trackLabel: 'Future of Work'
   },
@@ -73,7 +73,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Khaya Sithole',
     bio: 'Accountant, Broadcaster & Economic Analyst',
     quote: 'Decoding public finance with accountability and transparency.',
-    image: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Khaya-Sithole-The-Speakers-Firm.jpg',
     trackId: 'economics',
     trackLabel: 'Economics'
   },
@@ -82,7 +82,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Siphiwe Moyo',
     bio: 'Global Speaker, Author & Organisational Development Specialist',
     quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
-    image: '/speakers/Governance/Siphiwe-Moyo-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg',
     trackId: 'leadership',
     trackLabel: 'Leadership'
   },
@@ -91,7 +91,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Lincoln Mali',
     bio: 'Corporate Executive, Leadership & Organisational Agility Specialist',
     quote: 'Leadership is a journey of influence, integrity, and impact.',
-    image: '/image_marquee/leadership/Lincoln-Mali-The-Speakers-Firm.jpg',
+    image: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
     trackId: 'leadership',
     trackLabel: 'Leadership'
   },
@@ -100,7 +100,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Stafford Masie',
     bio: 'Technology Futurist, Former CEO of Google SA & Angel Investor',
     quote: 'Technology is not about gadgets, it is about human empowerment.',
-    image: '/image_marquee/stafford-masie-the-speakers-firm.jpg',
+    image: '/speaker_thumbnails/stafford-masie-the-speakers-firm.jpg',
     trackId: 'futurists',
     trackLabel: 'Futurists'
   }
