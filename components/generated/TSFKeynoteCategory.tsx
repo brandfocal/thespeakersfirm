@@ -223,6 +223,20 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/TJ-Malamule-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/inspirational-keynote-speakers/tj-malamule'
+}, {
+  id: 'dr-paulina-mamogobo',
+  name: 'Dr. Paulina Mamogobo',
+  role: 'BRICS Summit Project Lead, Scholar & Policy Expert',
+  image: '/speaker_thumbnails/Dr-Paulina-Mamogobo-7.jpg',
+  topics: ['Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-paulina-mamogobo'
+}, {
+  id: 'felicia-mabuza-suttle',
+  name: 'Felicia Mabuza-Suttle',
+  role: 'First Lady of Talk, Bestselling Author & Entrepreneur',
+  image: '/speaker_thumbnails/felicia-mabuza-suttle-the-speakers-firm-14.jpg',
+  topics: ['Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/female-keynote-speakers/felicia-mabuza-suttle'
 }];
 
 const filterChips = [{

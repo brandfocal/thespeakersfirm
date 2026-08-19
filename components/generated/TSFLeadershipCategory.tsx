@@ -280,6 +280,13 @@ const speakers: Speaker[] = [{
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/monde-ndlovu'
 }, {
+  id: 'tebogo-mekgoe',
+  name: 'Tebogo Mekgoe',
+  role: 'Founder & CEO of Systemic Advisory, Leadership Strategist',
+  image: '/speaker_thumbnails/Tebogo-Mekgoe-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/tebogo-mekgoe'
+}, {
   id: 'mary-bomela',
   name: 'Mary Bomela',
   role: 'Former CEO of MIC & Lead Independent Director',

@@ -303,6 +303,30 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/aubrey-masango-mc"
   },
   {
+    "id": "lala-tuku",
+    "name": "Lala Tuku",
+    "role": "Head of Content at SABC, Creative Producer & MC",
+    "image": "/speaker_thumbnails/Lala-Tuku-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/mc-and-facilitators/lala-tuku"
+  },
+  {
+    "id": "liopelo-maphathe",
+    "name": "Liopelo Maphathe",
+    "role": "Acclaimed Actress, TV Presenter & Philanthropist",
+    "image": "/speaker_thumbnails/Liopelo-Maphathe-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/mc-and-facilitators/liopelo-maphathe"
+  },
+  {
     "id": "ntosh-madlingozi",
     "name": "Ntosh Madlingozi",
     "role": "Entrepreneur, Stand-Up Comedian & Master of Ceremonies",

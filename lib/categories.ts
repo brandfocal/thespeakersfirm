@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "luthando-daniels", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -221,7 +221,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker"
