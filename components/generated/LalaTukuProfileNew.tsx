@@ -68,7 +68,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Paper",
       url: "https://thespeakersfirm.co.za/mc-and-facilitators/lala-tuku/",
-      image: "/speakers/Lala Tuku/Lala-Tuku-The-Speakers-Firm-6.jpg"
+      image: "/speakers/Lala Tuku/Lala-Tuku-The-Speakers-Firm-11.jpg"
     },
     {
       id: "lt-art-3",
