@@ -156,6 +156,18 @@ const speakers: Speaker[] = [
       "Sustaining High-Growth Businesses"
     ],
     "path": "/tracks/economics-and-politics/molefe-pooe"
+  },
+  {
+    "id": "theo-baloyi",
+    "name": "Theo Baloyi",
+    "role": "Founder & Group CEO, Bathu Shoes",
+    "image": "/speaker_thumbnails/Theo-Baloyi-The-Speakers-Firm.jpg",
+    "topics": [
+      "Scaling Enterprises & Operations",
+      "Sustaining High-Growth Businesses",
+      "Founder Leadership Dynamics"
+    ],
+    "path": "/tracks/inspirational-keynote-speakers/theo-baloyi"
   }
 ];
 
