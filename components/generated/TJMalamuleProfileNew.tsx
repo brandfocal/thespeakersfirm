@@ -89,6 +89,23 @@ export const AboutTeamSection = () => {
     }
   ];
 
+  const customBooks = [
+    {
+      id: "unstoppable-together",
+      title: "Unstoppable Together",
+      description: "Supercharge your teams, elevate leadership capability, and build collaborative momentum to achieve unstoppable collective growth.",
+      coverImage: "/speakers/TJ Malamule/Unstoppable-Together-TJ-Malamule.png",
+      url: "https://tjmalamule.com/book"
+    },
+    {
+      id: "high-value-man",
+      title: "The Unstoppable High Value Man",
+      description: "A powerful blueprint for personal leadership, self-mastery, and unlocking peak potential in all spheres of life.",
+      coverImage: "/speakers/TJ Malamule/The-Unstoppable-High-Value-Man-TJ-Malamule.jpg",
+      url: "#"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="TJ Malamule"
@@ -96,12 +113,13 @@ export const AboutTeamSection = () => {
       speakerDesignation="CEO of TTI Group, Executive Coach & Author"
       speakerRole="International Keynote Speaker ('Mr. Supercharge')"
       speakerRef="TSF-TJM-68"
-      heroBackgroundImage="/speakers/TJ Malamule/TJ-Malamule-The-Speakers-Firm9.jpg"
+      heroBackgroundImage="/speakers/TJ Malamule/TJ-Malamule-The-Speakers-Firm10.jpg"
       biographyImage="/speakers/TJ Malamule/TJ-Malamule-the-speakers-firm.jpg"
       bioHook="“Mr. Supercharge: Empowering organizations and leaders to stand out, supercharge their destiny, and become unstoppable together.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
       strategicThemes={STRATEGIC_THEMES}
+      books={customBooks}
       socialProofLogos={SOCIAL_PROOF_LOGOS}
       mediaArticlesSlot={
         <ProfileAdditionalMediaSections 

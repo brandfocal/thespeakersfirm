@@ -71,30 +71,6 @@ const customMedia = [
   }
 ];
 
-const customGallery = [
-  {
-    id: "sindy-gal-1",
-    src: "/speakers/Sindy%20Mabe/Sindy-Mabe-The-Speakers-Firm-2.jpg",
-    alt: "Sindy Mabe Portrait",
-    caption: "Sindy Mabe",
-    className: ""
-  },
-  {
-    id: "sindy-gal-2",
-    src: "/speakers/Sindy%20Mabe/Sindy-Mabe-The-Speakers-Firm-6.jpg",
-    alt: "Sindy Mabe Presenting",
-    caption: "Morning Live Broadcast",
-    className: ""
-  },
-  {
-    id: "sindy-gal-3",
-    src: "/speakers/Sindy%20Mabe/Sindy-Mabe-The-Speakers-Firm-3.jpg",
-    alt: "Sindy Mabe Session",
-    caption: "Corporate MC Dialogue",
-    className: ""
-  }
-];
-
 export const AboutTeamSection = () => {
   return (
     <SpeakerProfileTemplate
@@ -116,7 +92,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="sindy-mabe" 
-        customGallery={customGallery} 
+        customGallery={[]} 
         customVideos={[
           {
             id: "sindy-video-1",
