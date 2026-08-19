@@ -486,17 +486,6 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Leadership Expert, Strategy Adviser & Practical Strategist</span>
 }, {
-  id: 'maurice-radebe',
-  name: 'Prof. Maurice Radebe',
-  category: ['Keynote', 'Governance'],
-  image: '/speakers/Governance/Maurice-Radebe-The-Speakers-Firm.jpg',
-  alt: 'Prof. Maurice Radebe',
-  quote: 'Energy pioneering and corporate leadership excellence.',
-  youtubeId: 'qp0HIF3SfI4',
-  topics: [],
-  tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>The Energy Pioneer, Corporate Leader & Academic Executive</span>
-}, {
   id: 'andisa-liba',
   name: 'Andisa Liba',
   category: ['Keynote', 'Future of Work'],
@@ -838,6 +827,30 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Radio Personality, Broadcaster, Moderator & Master of Ceremonies</span>
 }, {
+  id: 'bridget-masinga',
+  name: 'Bridget Masinga',
+  category: ['MCs'],
+  image: '/speakers/Bridget Masinga/Bridget-Masinga-The-Speakers-Firm3.jpg',
+  alt: 'Bridget Masinga',
+  quote: 'Live stages are spaces to build connections and elevate stories.',
+  youtubeId: 'lT4ihmin7mw',
+  topics: [],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Master of Ceremonies, Facilitator & Broadcaster</span>,
+  trackId: 'mc-and-facilitators'
+}, {
+  id: 'dr-brenda-kubheka',
+  name: 'Dr. Brenda Kubheka',
+  category: ['Governance', 'Workplace Wellness'],
+  image: '/speakers/Dr. Brenda Kubheka/Dr-Brenda-Kubheka-The-Speakers-Firm.jpg',
+  alt: 'Dr. Brenda Kubheka',
+  quote: 'Institutional resilience is built on the wellness and ethics of its people.',
+  youtubeId: 'rCgg4Jzoq7Y',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Medical Doctor, Bioethics Scholar & Governance Expert</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
   id: 'trudy-theledi',
   name: 'Trudy Theledi',
   category: ['MCs', 'Future of Work', 'Entrepreneurship', 'Organisational Agility'],
@@ -1013,17 +1026,6 @@ const FEATURED_SPEAKERS_RAW: Array<{
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>The Brand & Influence Architect | Marketing, Media & Leadership Specialist</span>
-}, {
-  id: 'luthando-daniels',
-  name: 'Luthando Daniels',
-  category: 'Governance',
-  image: '/speakers/Governance/Luthando-Daniels-The-Speakers-Firm.jpg',
-  alt: 'Luthando Daniels',
-  quote: 'Designing emerging leadership and youth advocate networks.',
-  youtubeId: 'qp0HIF3SfI4',
-  topics: [],
-  tint: 'rgba(72, 112, 166, 0.22)',
-  bio: <span>The Emerging Voices Architect, Youth Development & Leadership Advocate</span>
 }, {
   id: 'mazwe-majola',
   name: 'Prof Mazwe Majola',
@@ -1832,6 +1834,66 @@ const FEATURED_SPEAKERS_RAW: Array<{
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Celebrated Chef, Author, Entrepreneur & Keynote Speaker</span>
+}, {
+  id: 'olwethu-leshabane',
+  name: 'Olwethu Leshabane',
+  category: ['Sustainability', 'Health & Wellbeing'],
+  image: '/speakers/Olwethu Leshabane/Olwethu-Leshabane-The-Speakers-Firm.jpg',
+  alt: 'Olwethu Leshabane',
+  quote: 'Doing it all, but not all at once.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Corporate Wellbeing & Health', 'Sustainable Institutional Performance'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Media Entrepreneur, Author & Women’s Advocate</span>,
+  trackId: 'sustainability-esg-health-and-human-performance'
+}, {
+  id: 'dr-jerry-gule',
+  name: 'Dr Jerry Gule',
+  category: ['Leadership', 'Governance'],
+  image: '/speakers/Jerry Gule/Dr-Jerry-Gule-The-Speakers-Firm.jpg',
+  alt: 'Dr Jerry Gule',
+  quote: 'Lead with purpose, authenticity, and emotional intelligence.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Courageous Leadership & Decision Making'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>CEO of Institute of People Management & Leadership Expert</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
+  id: 'dr-paulina-mamogobo',
+  name: 'Dr. Paulina Mamogobo',
+  category: ['Keynote', 'Leadership'],
+  image: '/speakers/Dr. Paulina Mamogobo/Dr-Paulina-Mamogobo.jpg',
+  alt: 'Dr. Paulina Mamogobo',
+  quote: 'Empowering leadership through trade, diplomacy, and global strategy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Global Trade & Diplomatic Leadership'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Academic, Leadership Coach & International Policy Expert</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
+  id: 'felicia-mabuza-suttle',
+  name: 'Felicia Mabuza-Suttle',
+  category: ['Keynote', 'Motivation'],
+  image: '/speakers/Felicia Mabuza-Suttle/felicia-mabuza-suttle-the-speakers-firm.jpg',
+  alt: 'Felicia Mabuza-Suttle',
+  quote: 'Dare to dream and leave a legacy.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Personal Transformation', 'Female Leadership'],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Legendary Talk Show Hostess, Entrepreneur & Keynote Speaker</span>,
+  trackId: 'female-keynote-speakers'
+}, {
+  id: 'mbuyiselo-botha',
+  name: 'Mbuyiselo Botha',
+  category: ['Masculinity', 'Leadership'],
+  image: '/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm-6.jpg',
+  alt: 'Mbuyiselo Botha',
+  quote: 'Positive masculinity and active allyship are central to gender justice.',
+  youtubeId: 'X_uytsYrhrY',
+  topics: ['Positive Masculinity & Allyship'],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Positive Masculinity Pioneer, Co-Founder of Sonke Gender Justice & Broadcaster</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
@@ -1959,6 +2021,240 @@ const FACULTY = [{
   spanClassName: 'col-span-12 md:col-span-7',
   wipeDelay: 0.1,
   entryDelay: 0.36
+}, {
+  id: 'olwethu-leshabane',
+  name: 'Olwethu Leshabane',
+  designation: 'Media Entrepreneur & Author',
+  role: "Media Entrepreneur, Author & Women's Advocate",
+  image: '/speaker_thumbnails/Olwethu-Leshabane-The-Speakers-Firm.jpg',
+  trackId: 'sustainability-esg-health-and-human-performance',
+  tags: [{
+    id: 'corporate-wellbeing-health',
+    label: 'Corporate Wellbeing & Health'
+  }, {
+    id: 'sustainable-institutional-performance',
+    label: 'Sustainable Institutional Performance'
+  }],
+  snippet: 'Media entrepreneur, author, and women’s advocate promoting corporate wellbeing and sustainable performance.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.48
+}, {
+  id: 'dr-jerry-gule',
+  name: 'Dr Jerry Gule',
+  designation: 'Leadership & Transformation Expert',
+  role: 'CEO of Institute of People Management & Executive Coach',
+  image: '/speaker_thumbnails/Dr-Jerry-Gule-The-Speakers-Firm.jpg',
+  trackId: 'leadership-governance-and-risk-intelligence',
+  tags: [{
+    id: 'courageous-leadership',
+    label: 'Courageous Leadership'
+  }, {
+    id: 'transformation',
+    label: 'Transformation'
+  }],
+  snippet: 'Harvard-educated leadership expert, executive coach, and CEO of Institute of People Management driving organisational transformation.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.54
+}, {
+  id: 'dr-paulina-mamogobo',
+  name: 'Dr. Paulina Mamogobo',
+  designation: 'Leadership & Policy Expert',
+  role: 'Academic, Leadership Coach & International Policy Expert',
+  image: '/speaker_thumbnails/Dr-Paulina-Mamogobo.jpg',
+  trackId: 'leadership-governance-and-risk-intelligence',
+  tags: [{
+    id: 'diplomatic-leadership',
+    label: 'Diplomatic Leadership'
+  }, {
+    id: 'trade-policy',
+    label: 'Trade Policy'
+  }],
+  snippet: 'Respected academic and international policy expert coaching leaders in trade regulation and diplomatic strategy.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.1,
+  entryDelay: 0.15
+}, {
+  id: 'felicia-mabuza-suttle',
+  name: 'Felicia Mabuza-Suttle',
+  designation: 'Pioneering Broadcaster & Entrepreneur',
+  role: "Legendary Talk Show Hostess, Entrepreneur & International Keynote Speaker",
+  image: '/speaker_thumbnails/felicia-mabuza-suttle-the-speakers-firm.jpg',
+  trackId: 'female-keynote-speakers',
+  tags: [{
+    id: 'personal-transformation',
+    label: 'Personal Transformation'
+  }, {
+    id: 'female-leadership',
+    label: 'Female Leadership'
+  }],
+  snippet: 'South Africa’s "First Lady of Talk", legendary media personality, and entrepreneur driving socio-economic transformation.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'aubrey-masango',
+  name: 'Aubrey Masango',
+  designation: 'Moderator & Broadcaster',
+  role: 'Radio Personality, Broadcaster, Moderator & Master of Ceremonies',
+  image: '/speaker_thumbnails/Aubrey-Masango-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'intellectual-dialogue',
+    label: 'Intellectual Dialogue'
+  }, {
+    id: 'governance',
+    label: 'Governance'
+  }],
+  snippet: 'Respected broadcaster and moderator navigating complex national socioeconomic and leadership topics.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'bridget-masinga',
+  name: 'Bridget Masinga',
+  designation: 'Broadcaster & Premium Host',
+  role: 'Master of Ceremonies, Facilitator & Broadcaster',
+  image: '/speaker_thumbnails/Bridget-Masinga-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'premium-facilitation',
+    label: 'Premium Facilitation'
+  }, {
+    id: 'arts-culture',
+    label: 'Arts & Culture'
+  }],
+  snippet: 'Veteran broadcaster and elegant master of ceremonies hosting high-profile corporate galas and art events.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'dr-brenda-kubheka',
+  name: 'Dr. Brenda Kubheka',
+  designation: 'Bioethics Scholar & Governance Expert',
+  role: 'Medical Doctor, Bioethics Scholar & Governance Expert',
+  image: '/speaker_thumbnails/Dr-Brenda-Kubheka-The-Speakers-Firm.jpg',
+  trackId: 'leadership-governance-and-risk-intelligence',
+  tags: [{
+    id: 'workplace-wellness',
+    label: 'Workplace Wellness'
+  }, {
+    id: 'clinical-governance',
+    label: 'Clinical Governance'
+  }],
+  snippet: 'Medical doctor and bioethics scholar advising organizations on clinical risk, ethics, and corporate wellness.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.3,
+  entryDelay: 0.4
+}, {
+  id: 'dr-john-kani',
+  name: 'Dr. John Kani',
+  designation: 'Living Legend & Cultural Icon',
+  role: 'Living Legend, Actor, Playwright & Cultural Icon',
+  image: '/speaker_thumbnails/Dr-John-Kani-The-Speakers-Firm.jpg',
+  trackId: 'spirituality-heritage-and-identity',
+  tags: [{
+    id: 'cultural-heritage',
+    label: 'Cultural Heritage'
+  }, {
+    id: 'struggle-history',
+    label: 'Struggle History'
+  }],
+  snippet: 'World-renowned actor, playwright, and activist using the power of storytelling to shape cultural memory and leadership.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'dr-maureen-tong',
+  name: 'Dr. Maureen Tong',
+  designation: 'Governance & Institutional Reform Specialist',
+  role: 'Legal Scholar, Governance Authority & Coach',
+  image: '/speaker_thumbnails/Dr-Maureen-Tong-The-Speakers-Firm.jpg',
+  trackId: 'governance',
+  tags: [{
+    id: 'gender-power',
+    label: 'Gender Power'
+  }, {
+    id: 'constitutional-law',
+    label: 'Constitutional Law'
+  }],
+  snippet: 'Distinguished international legal scholar and leadership coach specializing in land reform, human rights, and gender power.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'dudu-msomi',
+  name: 'Dudu Msomi',
+  designation: 'Governance & Board Advisor',
+  role: 'Corporate Governance Authority, Board Advisor & Speaker',
+  image: '/speaker_thumbnails/Dudu-Msomi-The-Speakers-Firm.jpg',
+  trackId: 'governance',
+  tags: [{
+    id: 'corporate-governance',
+    label: 'Corporate Governance'
+  }, {
+    id: 'ethical-stewardship',
+    label: 'Ethical Stewardship'
+  }],
+  snippet: 'Corporate governance authority and strategy advisor counseling boards on ethical stewardship and resilient leadership.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'josina-machel',
+  name: 'Josina Z. Machel',
+  designation: 'Human Rights Defender & Gender Activist',
+  role: 'Human Rights Defender, Gender Activist & Founder of Kuhluka Movement',
+  image: '/speaker_thumbnails/Josina-Machel-The-Speakers-Firm3.jpg',
+  trackId: 'gender',
+  tags: [{
+    id: 'gender-equality',
+    label: 'Gender Equality'
+  }, {
+    id: 'gbv-advocacy',
+    label: 'GBV Advocacy'
+  }],
+  snippet: 'Global women’s rights defender and founder of Kuhluka Movement leading advocacy against gender-based violence.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'musa-sono',
+  name: 'Musa Sono',
+  designation: 'High Performance Coach & Paralympic Icon',
+  role: 'Paralympic Icon, High-Performance Coach & Accessibility Advocate',
+  image: '/speaker_thumbnails/Musa-Sono-The-Speakers-Firm.jpg',
+  trackId: 'entrepreneurship',
+  tags: [{
+    id: 'winning-mindset',
+    label: 'Winning Mindset'
+  }, {
+    id: 'disability-inclusion',
+    label: 'Disability Inclusion'
+  }],
+  snippet: 'Paralympic sports icon and high-performance coach translating athletic mindset frameworks into corporate team cohesion.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.3,
+  entryDelay: 0.4
+}, {
+  id: 'mbuyiselo-botha',
+  name: 'Mbuyiselo Botha',
+  designation: 'Positive Masculinity Pioneer',
+  role: 'Positive Masculinity Pioneer, Co-Founder of Sonke Gender Justice & Broadcaster',
+  image: '/speaker_thumbnails/Mbuyiselo-Botha-The-Speakers-Firm.jpg',
+  trackId: 'masculinity',
+  tags: [{
+    id: 'positive-masculinity',
+    label: 'Positive Masculinity'
+  }, {
+    id: 'gender-equity',
+    label: 'Gender Equity'
+  }],
+  snippet: 'Prominent gender activist and co-founder of Sonke Gender Justice leading national dialogues on positive masculinity and allyship.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
 }];
 const TESTIMONIAL_QUOTES = [{
   id: 'commanding-presence',

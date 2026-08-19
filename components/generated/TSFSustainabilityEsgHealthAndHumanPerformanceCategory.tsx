@@ -131,6 +131,17 @@ const speakers: Speaker[] = [
       "Sustainable Institutional Performance"
     ],
     "path": "/tracks/leadership-governance-and-risk-intelligence/buyani-zwane"
+  },
+  {
+    "id": "dr-brenda-kubheka",
+    "name": "Dr. Brenda Kubheka",
+    "role": "Medical Doctor, Bioethics Scholar & Governance Expert",
+    "image": "/speaker_thumbnails/Dr-Brenda-Kubheka-The-Speakers-Firm.jpg",
+    "topics": [
+      "Corporate Wellbeing & Health",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/leadership-governance-and-risk-intelligence/dr-brenda-kubheka"
   }
 ];
 

@@ -186,6 +186,15 @@ import { AboutTeamSection as LalaTukuProfile } from "@/components/generated/Lala
 import { AboutTeamSection as LiopeloMaphatheProfile } from "@/components/generated/LiopeloMaphatheProfileNew";
 import { AboutTeamSection as FeliciaMabuzaSuttleProfile } from "@/components/generated/FeliciaMabuzaSuttleProfileNew";
 import { AboutTeamSection as TebogoMekgoeProfile } from "@/components/generated/TebogoMekgoeProfileNew";
+import { AboutTeamSection as AubreyMasangoProfile } from "@/components/generated/AubreyMasangoProfileNew";
+import { AboutTeamSection as BridgetMasingaProfile } from "@/components/generated/BridgetMasingaProfileNew";
+import { AboutTeamSection as DrBrendaKubhekaProfile } from "@/components/generated/DrBrendaKubhekaProfileNew";
+import { AboutTeamSection as DrJohnKaniProfile } from "@/components/generated/DrJohnKaniProfileNew";
+import { AboutTeamSection as DrMaureenTongProfile } from "@/components/generated/DrMaureenTongProfileNew";
+import { AboutTeamSection as DuduMsomiProfile } from "@/components/generated/DuduMsomiProfileNew";
+import { AboutTeamSection as JosinaMachelProfile } from "@/components/generated/JosinaMachelProfileNew";
+import { AboutTeamSection as MusaSonoProfile } from "@/components/generated/MusaSonoProfileNew";
+import { AboutTeamSection as MbuyiseloBothaProfile } from "@/components/generated/MbuyiseloBothaProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -573,6 +582,42 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "tebogo-mekgoe") {
     return <TebogoMekgoeProfile />;
+  }
+
+  if (speakerId === "aubrey-masango" || speakerId === "aubrey-masango-mc") {
+    return <AubreyMasangoProfile />;
+  }
+
+  if (speakerId === "bridget-masinga" || speakerId === "bridget-masinga-mc") {
+    return <BridgetMasingaProfile />;
+  }
+
+  if (speakerId === "dr-brenda-kubheka" || speakerId === "brenda-kubheka") {
+    return <DrBrendaKubhekaProfile />;
+  }
+
+  if (speakerId === "dr-john-kani" || speakerId === "john-kani" || speakerId === "dr-john-kani-ois-obe") {
+    return <DrJohnKaniProfile />;
+  }
+
+  if (speakerId === "dr-maureen-tong" || speakerId === "maureen-tong") {
+    return <DrMaureenTongProfile />;
+  }
+
+  if (speakerId === "dudu-msomi") {
+    return <DuduMsomiProfile />;
+  }
+
+  if (speakerId === "josina-machel" || speakerId === "josina-z-machel") {
+    return <JosinaMachelProfile />;
+  }
+
+  if (speakerId === "musa-sono") {
+    return <MusaSonoProfile />;
+  }
+
+  if (speakerId === "mbuyiselo-botha") {
+    return <MbuyiseloBothaProfile />;
   }
 
   if (speakerId === "tumisho-masha") {

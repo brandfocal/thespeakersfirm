@@ -168,13 +168,6 @@ const speakers: Speaker[] = [{
   topics: ['Leadership', 'Governance', 'Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
-  id: 'maurice-radebe',
-  name: 'Prof. Maurice Radebe',
-  role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
-  topics: ['Leadership', 'Governance', 'Performance'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
-}, {
   id: 'andisa-liba',
   name: 'Andisa Liba',
   role: 'Chief People Officer, FloatPays, Award-Winning HR Executive & Conference Speaker',
@@ -227,14 +220,14 @@ const speakers: Speaker[] = [{
   id: 'dr-paulina-mamogobo',
   name: 'Dr. Paulina Mamogobo',
   role: 'BRICS Summit Project Lead, Scholar & Policy Expert',
-  image: '/speaker_thumbnails/Dr-Paulina-Mamogobo-7.jpg',
+  image: '/speaker_thumbnails/Dr-Paulina-Mamogobo.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/leadership-governance-and-risk-intelligence/dr-paulina-mamogobo'
 }, {
   id: 'felicia-mabuza-suttle',
   name: 'Felicia Mabuza-Suttle',
   role: 'First Lady of Talk, Bestselling Author & Entrepreneur',
-  image: '/speaker_thumbnails/felicia-mabuza-suttle-the-speakers-firm-14.jpg',
+  image: '/speaker_thumbnails/felicia-mabuza-suttle-the-speakers-firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/female-keynote-speakers/felicia-mabuza-suttle'
 }];

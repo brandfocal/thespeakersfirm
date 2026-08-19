@@ -199,9 +199,9 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "stafford-masie", "themba-maseko", "lincoln-mali", "saray-khumalo", "somadoda-fikeni",
     "andisa-liba", "abdullah-verachia", "sthembiso-phakathi", "maanda-tshifularo", "eric-mafuna",
     "mncane-mthunzi", "khanyisile-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
-    "luthando-daniels", "maurice-radebe", "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
+    "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
     "tebogo-mekgoe", "queen-ramotsehoa", "yolisa-kani", "anael-granoux", "lauren-davis",
-    "monde-ndlovu", "aubrey-masango-mc", "molefe-pooe"
+    "monde-ndlovu", "aubrey-masango-mc", "aubrey-masango", "molefe-pooe", "dr-jerry-gule"
   ],
   "digital-identity-cybersecurity-and-data-sovereignty": [
     "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
@@ -211,8 +211,8 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "mc-and-facilitators": [
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
-    "ayanda-allie", "luthando-daniels", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe"
+    "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -242,9 +242,9 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
-    "maurice-radebe", "phumzile-mlambo-ngcuka", "nene-molefi", "john-kani", "siphiwe-moyo",
+    "phumzile-mlambo-ngcuka", "nene-molefi", "john-kani", "dr-john-kani", "dr-john-kani-ois-obe", "siphiwe-moyo",
     "eunice-cross", "lerato-sithole", "mazwe-majola", "maanda-tshifularo", "femi-adebanji",
-    "sthembiso-phakathi", "luthando-daniels", "maureen-tong", "david-molapo", "abner-mariri"
+    "sthembiso-phakathi", "maureen-tong", "dr-maureen-tong", "david-molapo", "abner-mariri"
   ],
   "gender": [
     "zanele-luvuno", "josina-machel", "pastor-tebogo-moema", "ndileka-mandela"
@@ -252,7 +252,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "workplace-wellness": [
     "mpho-phalatse-nxumalo", "criselda-kananda", "ndileka-mandela", "boniwe-dunster",
     "victor-ramathesele", "gugulethu-xaba", "sibulele-sibaca", "olwethu-leshabane",
-    "mothomang-diaho", "zizipho-nyanga", "brenda-kubheka", "lerato-makhetha", "shingai-mutambirwa",
+    "mothomang-diaho", "zizipho-nyanga", "brenda-kubheka", "dr-brenda-kubheka", "lerato-makhetha", "shingai-mutambirwa",
     "lauren-davis", "malebo-mashaba"
   ],
   "financial-inclusion": [
@@ -304,9 +304,9 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "lincoln-mali", "stafford-masie"
   ],
   "respectful-workplaces": [
-    "martin-pelders", "bafana-khumalo", "nene-molefi", "brenda-kubheka"
+    "martin-pelders", "bafana-khumalo", "nene-molefi", "brenda-kubheka", "dr-brenda-kubheka"
   ],
   "celebrity-speakers": [
-    "proverb", "john-kani", "doctor-khumalo", "leanne-manas", "bongani-bingwa"
+    "proverb", "john-kani", "dr-john-kani", "dr-john-kani-ois-obe", "doctor-khumalo", "leanne-manas", "bongani-bingwa"
   ]
 };

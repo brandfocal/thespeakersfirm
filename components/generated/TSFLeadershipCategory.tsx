@@ -112,13 +112,6 @@ const speakers: Speaker[] = [{
   topics: ['Corporate Strategy Execution', 'Driving Organisational Performance'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
-  id: 'maurice-radebe',
-  name: 'Prof. Maurice Radebe',
-  role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
-  topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution', 'Driving Organisational Performance'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
-}, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
   role: 'Former Government Spokesperson, Public Policy Commentator',
@@ -321,6 +314,34 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Linda-Maqoma-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/linda-maqoma'
+}, {
+  id: 'aubrey-masango',
+  name: 'Aubrey Masango',
+  role: 'Radio Personality, Broadcaster, Moderator & Master of Ceremonies',
+  image: '/speaker_thumbnails/Aubrey-Masango-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/aubrey-masango'
+}, {
+  id: 'dr-john-kani',
+  name: 'Dr. John Kani',
+  role: 'Living Legend, Actor, Playwright & Cultural Icon',
+  image: '/speaker_thumbnails/Dr-John-Kani-The-Speakers-Firm.jpg',
+  topics: ['Leading Through Institutional Complexity'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-john-kani-ois-obe'
+}, {
+  id: 'mbuyiselo-botha',
+  name: 'Mbuyiselo Botha',
+  role: 'Positive Masculinity Pioneer & Broadcaster',
+  image: '/speaker_thumbnails/Mbuyiselo-Botha-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/mbuyiselo-botha'
+}, {
+  id: 'josina-machel',
+  name: 'Josina Z. Machel',
+  role: 'Human Rights Defender & Gender Activist',
+  image: '/speaker_thumbnails/Josina-Machel-The-Speakers-Firm3.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/josina-machel'
 }];
 
 const filterChips = [{

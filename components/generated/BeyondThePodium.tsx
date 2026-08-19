@@ -136,13 +136,6 @@ const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
     speakerName: "EmpowaMen Reel",
     youtubeId: "tZ-ick_bEGw",
     description: "Visual highlights of the community dialogue, mentorship workshops, and leadership interventions."
-  },
-  {
-    id: "maurice-radebe",
-    title: "Head & Director: Wits Business School (WBS) Keynote",
-    speakerName: "Prof. Maurice Radebe",
-    youtubeId: "7iUZ-E1OZ0U",
-    description: "Focusing on corporate energy transformation, leadership agility, and academic excellence in Africa."
   }
 ];
 

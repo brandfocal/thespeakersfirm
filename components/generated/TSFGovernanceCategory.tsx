@@ -98,13 +98,6 @@ const speakers: Speaker[] = [{
   topics: ['Ethical Corporate Stewardship', 'Executive Accountability'],
   path: '/tracks/leadership-governance-and-risk-intelligence/maanda-tshifularo'
 }, {
-  id: 'maurice-radebe',
-  name: 'Prof. Maurice Radebe',
-  role: 'The Energy Pioneer, Corporate Leader & Academic Executive',
-  image: '/speaker_thumbnails/Maurice-Radebe-The-Speakers-Firm.jpg',
-  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability'],
-  path: '/tracks/leadership-governance-and-risk-intelligence/maurice-radebe'
-}, {
   id: 'themba-maseko',
   name: 'Themba Maseko',
   role: 'Former Government Spokesperson, Public Policy Commentator',
@@ -132,6 +125,27 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Joshua-Maponga-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
   path: '/tracks/leadership-governance-and-risk-intelligence/joshua-maponga'
+}, {
+  id: 'dr-john-kani',
+  name: 'Dr. John Kani',
+  role: 'Living Legend, Actor, Playwright & Cultural Icon',
+  image: '/speaker_thumbnails/Dr-John-Kani-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-john-kani-ois-obe'
+}, {
+  id: 'dr-maureen-tong',
+  name: 'Dr. Maureen Tong',
+  role: 'Legal Scholar, Governance Authority & Coach',
+  image: '/speaker_thumbnails/Dr-Maureen-Tong-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dr-maureen-tong'
+}, {
+  id: 'dudu-msomi',
+  name: 'Dudu Msomi',
+  role: 'Corporate Governance Authority, Board Advisor & Speaker',
+  image: '/speaker_thumbnails/Dudu-Msomi-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/dudu-msomi'
 }];
 
 const filterChips = [{
