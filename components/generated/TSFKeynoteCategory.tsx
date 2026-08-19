@@ -195,6 +195,34 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/miles-kubheka-the-speakers-firm.jpg',
   topics: ['Resilience', 'Transformation', 'Performance'],
   path: '/tracks/inspirational-keynote-speakers/miles-kubheka'
+}, {
+  id: 'theo-baloyi',
+  name: 'Theo Baloyi',
+  role: 'Founder & Group CEO, Bathu Shoes',
+  image: '/speaker_thumbnails/Theo-Baloyi-The-Speakers-Firm.jpg',
+  topics: ['Resilience', 'Transformation', 'Performance'],
+  path: '/tracks/inspirational-keynote-speakers/theo-baloyi'
+}, {
+  id: 'gaby-magomola',
+  name: 'Gaby Magomola',
+  role: 'Chairman of Thamaga Holdings & Author',
+  image: '/speaker_thumbnails/Gaby-Magomola-The-Speakers-Firm.jpg',
+  topics: ['Resilience', 'Leadership', 'Legacy'],
+  path: '/tracks/inspirational-keynote-speakers/gaby-magomola'
+}, {
+  id: 'sir-max',
+  name: 'Sir Max',
+  role: 'Leadership Captain, Academic & Author',
+  image: '/speaker_thumbnails/Sir-Max-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/inspirational-keynote-speakers/sir-max'
+}, {
+  id: 'tj-malamule',
+  name: 'TJ Malamule',
+  role: 'CEO of TTI Group, Executive Coach & Author',
+  image: '/speaker_thumbnails/TJ-Malamule-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/inspirational-keynote-speakers/tj-malamule'
 }];
 
 const filterChips = [{

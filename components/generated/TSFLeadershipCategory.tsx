@@ -273,6 +273,13 @@ const speakers: Speaker[] = [{
   topics: ['Diversity & Belonging', 'Somatic Intelligence', 'Inclusive Leadership'],
   path: '/tracks/leadership-governance-and-risk-intelligence/brian-mhlanga'
 }, {
+  id: 'monde-ndlovu',
+  name: 'Monde Ndlovu',
+  role: 'Managing Director of the Black Management Forum (BMF)',
+  image: '/speaker_thumbnails/Monde-Ndlovu-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/monde-ndlovu'
+}, {
   id: 'mary-bomela',
   name: 'Mary Bomela',
   role: 'Former CEO of MIC & Lead Independent Director',
