@@ -2447,6 +2447,204 @@ const FACULTY = [{
   spanClassName: 'col-span-12 md:col-span-7',
   wipeDelay: 0.15,
   entryDelay: 0.25
+}, {
+  id: 'monde-ndlovu',
+  name: 'Monde Ndlovu',
+  designation: 'Managing Director of the Black Management Forum',
+  role: 'Managing Director of the BMF, Business Leader & Strategist',
+  image: '/speaker_thumbnails/Monde-Ndlovu-The-Speakers-Firm.jpg',
+  trackId: 'leadership-governance-and-risk-intelligence',
+  tags: [{
+    id: 'black-leadership',
+    label: 'Black Leadership'
+  }, {
+    id: 'transformation',
+    label: 'Transformation'
+  }],
+  snippet: 'Managing Director of the Black Management Forum leading socioeconomic development and corporate transformation roadmaps.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'sid-peimer',
+  name: 'Sid Peimer',
+  designation: 'Executive Director of the Cape Chamber of Commerce',
+  role: 'Executive Director of Cape Chamber of Commerce, Pitching Strategist & Author',
+  image: '/speaker_thumbnails/Sid-Peimer-The-Speakers-Firm.jpg',
+  trackId: 'digital-identity-cybersecurity-and-data-sovereignty',
+  tags: [{
+    id: 'business-pitching',
+    label: 'Business Pitching'
+  }, {
+    id: 'corporate-strategy',
+    label: 'Corporate Strategy'
+  }],
+  snippet: 'Executive Director of the Cape Chamber of Commerce and pitching expert helping organizations design winning strategies.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'sibusiso-molimi',
+  name: 'Sibusiso Molimi',
+  designation: 'Corporate Master of Ceremonies',
+  role: 'Corporate Master of Ceremonies, Host & Facilitator',
+  image: '/speaker_thumbnails/Sibusiso-Molimi-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'corporate-hosting',
+    label: 'Corporate Hosting'
+  }, {
+    id: 'panel-facilitation',
+    label: 'Panel Facilitation'
+  }],
+  snippet: 'Polished corporate master of ceremonies facilitating high-level panels and executive events.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'ndileka-mandela',
+  name: 'Ndileka Mandela',
+  designation: 'Social Activist & Author',
+  role: 'Social Activist, Author & Founder of Thembelihle Development Foundation',
+  image: '/speaker_thumbnails/Ndileka-Mandela-The-Speakers-Firm.jpg',
+  trackId: 'gender',
+  tags: [{
+    id: 'gender-equality',
+    label: 'Gender Equality'
+  }, {
+    id: 'social-justice',
+    label: 'Social Justice'
+  }],
+  snippet: 'Social activist, author, and founder of Thembelihle Development Foundation driving development in rural schools.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'noni-khumalo',
+  name: 'Noni Khumalo',
+  designation: 'Premium Master of Ceremonies',
+  role: 'Premium Master of Ceremonies, Panel Facilitator & TV Host',
+  image: '/speaker_thumbnails/Noni-Khumalo-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'premium-hosting',
+    label: 'Premium Hosting'
+  }, {
+    id: 'panel-facilitation',
+    label: 'Panel Facilitation'
+  }],
+  snippet: 'Highly polished master of ceremonies facilitating high-impact corporate discussions and panel sessions.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'gcina-mhlophe-becker',
+  name: 'Dr. Gcina Mhlophe Becker',
+  designation: 'Celebrated Storyteller, Author & Activist',
+  role: 'Founder of the Nozincwadi Literacy Campaign, Storyteller & Activist',
+  image: '/speaker_thumbnails/Gcina-Mhlophe-Becker-The-Speakers-Firm.jpg',
+  trackId: 'spirituality-heritage-and-identity',
+  tags: [{
+    id: 'literacy-campaign',
+    label: 'Literacy Campaign'
+  }, {
+    id: 'cultural-heritage',
+    label: 'Cultural Heritage'
+  }],
+  snippet: 'World-renowned storyteller, activist, and founder of the Nozincwadi Literacy Campaign promoting reading across Africa.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'linda-maqoma',
+  name: 'Linda Maqoma',
+  designation: 'Black Business Council VP & Audit Specialist',
+  role: 'VP of Black Business Council, Audit Committee Chair & Corporate Strategist',
+  image: '/speaker_thumbnails/Linda-Maqoma-The-Speakers-Firm.jpg',
+  trackId: 'leadership-governance-and-risk-intelligence',
+  tags: [{
+    id: 'corporate-leadership',
+    label: 'Corporate Leadership'
+  }, {
+    id: 'financial-audit',
+    label: 'Financial Audit'
+  }],
+  snippet: 'Black Business Council VP and strategic committee chairperson driving auditing and organizational governance.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'theo-baloyi',
+  name: 'Theo Baloyi',
+  designation: 'Founder & CEO of Bathu Sneakers',
+  role: 'Retail Pioneer, Entrepreneur & Founder of Bathu',
+  image: '/speaker_thumbnails/Theo-Baloyi-The-Speakers-Firm.jpg',
+  trackId: 'entrepreneurship-investment-and-business-growth',
+  tags: [{
+    id: 'retail-entrepreneurship',
+    label: 'Retail Entrepreneurship'
+  }, {
+    id: 'job-creation',
+    label: 'Job Creation'
+  }],
+  snippet: 'Pioneering retail entrepreneur and founder of Bathu sneakers driving job creation and brand building across South Africa.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'gaby-magomola',
+  name: 'Gaby Magomola',
+  designation: 'Veteran Businessman & Author',
+  role: 'Former Political Prisoner, Wall Street Banker, Author & Hotelier',
+  image: '/speaker_thumbnails/Gaby-Magomola-The-Speakers-Firm.jpg',
+  trackId: 'inspirational-keynote-speakers',
+  tags: [{
+    id: 'political-history',
+    label: 'Political History'
+  }, {
+    id: 'corporate-finance',
+    label: 'Corporate Finance'
+  }],
+  snippet: 'Respected corporate pioneer, former political prisoner, and author sharing lessons from Robben Island to Wall Street.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'sir-max',
+  name: 'Sir Max',
+  designation: 'Motivational Speaker & Lateral Thinker',
+  role: 'Motivational Speaker, Lateral Thinking Specialist & Broadcaster',
+  image: '/speaker_thumbnails/Sir-Max-The-Speakers-Firm.jpg',
+  trackId: 'inspirational-keynote-speakers',
+  tags: [{
+    id: 'mind-power',
+    label: 'Mind Power'
+  }, {
+    id: 'lateral-thinking',
+    label: 'Lateral Thinking'
+  }],
+  snippet: 'Dynamic motivational speaker and radio host coaching audiences in mind power and lateral corporate strategy.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'tj-malamule',
+  name: 'TJ Malamule',
+  designation: 'NLP Coach & Team Building Expert',
+  role: 'Bestselling Author, NLP Coach & Team Performance Advisor',
+  image: '/speaker_thumbnails/TJ-Malamule-The-Speakers-Firm.jpg',
+  trackId: 'inspirational-keynote-speakers',
+  tags: [{
+    id: 'nlp-coaching',
+    label: 'NLP Coaching'
+  }, {
+    id: 'high-performance',
+    label: 'High Performance'
+  }],
+  snippet: 'Bestselling author and executive coach helping teams maximize output using neuro-linguistic programming.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
 }];
 const TESTIMONIAL_QUOTES = [{
   id: 'commanding-presence',
