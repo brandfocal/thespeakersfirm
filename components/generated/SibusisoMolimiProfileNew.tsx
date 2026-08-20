@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Corporate Event Executive",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/sibusiso-molimi/",
+      url: "https://www.youtube.com/watch?v=GXS_eTC4g4o",
       image: "/speakers/Sibusiso Molimi/Sibusiso-Molimi-The-Speakers-Firm.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Strategic Management Monthly",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/sibusiso-molimi/",
+      url: "https://www.youtube.com/watch?v=MNluzpbS2sg",
       image: "/speakers/Sibusiso Molimi/Sibusiso-Molimi-The-Speakers-Firm4.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Mindset & Leadership Journal",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/sibusiso-molimi/",
+      url: "https://www.mediaupdate.co.za/media/121528/sibusiso-molimi-a-new-breed-of-motivational-speaker",
       image: "/speakers/Sibusiso Molimi/Sibusiso-Molimi-The-Speakers-Firm8.jpg"
     }
   ];

@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Public Administration Review",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/prof-mazwe-majola/",
+      url: "https://omny.fm/shows/ukhozi-current-affairs-sabcnews/abasiki-bebunda-anc-is-feeling-the-pressure-prof-mazwe-majola-leadership-expert-on-anc-roll-call-meeting#description",
       image: "/speakers/Prof. Mazwe Majola/Prof-Mazwe-Majola-The-Speakers-Firm-2.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Socio-Economic Development Journal",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/prof-mazwe-majola/",
+      url: "https://www.youtube.com/watch?v=T7MaIUK6yxw",
       image: "/speakers/Prof. Mazwe Majola/Prof-Mazwe-Majola-The-Speakers-Firm-4.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Institutional Governance Quarterly",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/prof-mazwe-majola/",
+      url: "https://www.youtube.com/watch?v=FFxf3bVdlss",
       image: "/speakers/Prof. Mazwe Majola/Prof-Mazwe-Majola-The-Speakers-Firm.jpg"
     }
   ];

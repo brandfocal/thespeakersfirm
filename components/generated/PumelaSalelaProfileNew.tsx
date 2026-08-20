@@ -56,8 +56,8 @@ export const AboutTeamSection = () => {
       headline: "Dr. Pumela Salela on the future of economic diplomacy and African market entry",
       publication: "Economic Diplomacy Today",
       date: "2024",
-      action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      action: "Watch Address",
+      url: "https://www.youtube.com/watch?v=KbUE6f9wiZQ",
       image: "/speakers/Dr Pumela Salela/Pamela-Salela-The-Speakers-Firm3.jpg"
     },
     {
@@ -65,8 +65,8 @@ export const AboutTeamSection = () => {
       headline: "Country branding as a strategic economic lever for FDI attraction",
       publication: "International Trade & Investment Review",
       date: "2024",
-      action: "Read Article",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      action: "Watch Discussion",
+      url: "https://www.youtube.com/watch?v=zxNAW5qHT90",
       image: "/speakers/Dr Pumela Salela/Pamela-Salela-The-Speakers-Firm4.jpg"
     },
     {
@@ -74,8 +74,8 @@ export const AboutTeamSection = () => {
       headline: "Strategic Partnerships Across Borders: Bridging public and private sectors",
       publication: "Global Business Journal",
       date: "2023",
-      action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      action: "Watch Forum",
+      url: "https://www.youtube.com/watch?v=LluKbHgHIKU",
       image: "/speakers/Dr Pumela Salela/Pamela-Salela-The-Speakers-Firm5.jpg"
     }
   ];
@@ -85,21 +85,6 @@ export const AboutTeamSection = () => {
       id: "pumela-vid-1",
       label: "Dr. Pumela Salela on Investment & Economic Diplomacy",
       youtubeId: "SEeymv8o9OY"
-    },
-    {
-      id: "pumela-vid-2",
-      label: "Brand South Africa UK Address",
-      youtubeId: "KbUE6f9wiZQ"
-    },
-    {
-      id: "pumela-vid-3",
-      label: "Economic Diplomacy Discussion",
-      youtubeId: "zxNAW5qHT90"
-    },
-    {
-      id: "pumela-vid-4",
-      label: "AfCFTA and Regional Integration Forum",
-      youtubeId: "LluKbHgHIKU"
     }
   ];
 

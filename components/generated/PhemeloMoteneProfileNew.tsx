@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Corporate Wellness Magazine",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/phemelo-motene/",
+      url: "https://iol.co.za/lifestyle/style-beauty/beauty/2025-08-18-body-image-womens-month-and-the-power-of-choice-phemelo-motene-speaks-out/",
       image: "/speakers/Phemelo Motene/Phemelo-Motene-The-Speakers-Firm-5.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Broadcasting Today",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/phemelo-motene/",
+      url: "https://iono.fm/e/1590351",
       image: "/speakers/Phemelo Motene/Phemelo-Motene-The-Speakers-Firm-6.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Media & Arts Weekly",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/phemelo-motene/",
+      url: "https://www.kaya959.co.za/lineup/point-of-view/exclusive-paying-tribute-to-thabiso-sikwane/",
       image: "/speakers/Phemelo Motene/Phemelo-Motene.jpg"
     }
   ];

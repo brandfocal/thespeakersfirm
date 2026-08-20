@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Family & Values Quarterly",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/gender/pastor-tebogo-moema/",
+      url: "https://www.youtube.com/watch?v=A8U-QILsK_M",
       image: "/speakers/Tebogo Moema/Tebogo-Moema-The-Speakers-Firm2.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Social Development Journal",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/gender/pastor-tebogo-moema/",
+      url: "https://inkanyiso.org/2019/02/06/legendary-pastor-moema-shares-his-journey-with-inkanyiso-org/",
       image: "/speakers/Tebogo Moema/Tebogo-Moema-The-Speakers-Firm3.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Counseling & Growth Review",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/gender/pastor-tebogo-moema/",
+      url: "https://www.youtube.com/watch?v=7Tl45S14c14",
       image: "/speakers/Tebogo Moema/Tebogo-Moema-The-Speakers-Firm5.jpg"
     }
   ];

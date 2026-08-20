@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Business Strategy & Growth Review",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      url: "https://www.chaifm.com/podcast/2025-05-20-guest-sid-peimer-executive-director-of-the-cape-town-chamber-of-commerce-and-industry/",
       image: "/speakers/Sid Peimer/Sid-Peimer-The-Speakers-Firm2.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Digital Economy Quarterly",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      url: "https://www.leader.co.za/article.aspx?s=209&a=9781&title=AI",
       image: "/speakers/Sid Peimer/Sid-Peimer-The-Speakers-Firm3.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Agency Leaders Review",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/digital-identity-cybersecurity-and-data-sovereignty/sid-peimer/",
+      url: "https://www.leader.co.za/event.aspx?s=3&f=1&ei=286",
       image: "/speakers/Sid Peimer/Sid-Peimer-The-Speakers-Firm5.jpg"
     }
   ];

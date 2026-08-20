@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Lifestyle & Media Insider",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/nonhlanhla-noni-khumalo/",
+      url: "https://www.snl24.com/dailysun/celebs/noni-khumalo-from-party-starter-to-star-producer-on-sabcs-trendx-live-20240718",
       image: "/speakers/Noni Khumalo/Noni-Khumalo-The-Speakers-Firm9.jpeg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Event Management Review",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/nonhlanhla-noni-khumalo/",
+      url: "https://www.news24.com/drum/celebs/news/sabc-trendz-welcomes-2-new-broadcast-talent-to-live-tv-20240405",
       image: "/speakers/Noni Khumalo/Noni-Khumalo-The-Speakers-Firm10.jpeg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Broadcasting Weekly",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/nonhlanhla-noni-khumalo/",
+      url: "https://www.citizen.co.za/roodepoort-record/news-headlines/local-news/2025/08/17/witpoortjie-radio-star-bags-another-award-at-basadi-in-music-awards/",
       image: "/speakers/Noni Khumalo/Noni-Khumalo-The-Speakers-Firm11.jpg"
     }
   ];

@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Legacy & Human Rights Review",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/ndileka-mandela/",
+      url: "https://iol.co.za/news/2019-10-28-nelson-mandelas-granddaughter-says-being-a-mandela-is-no-walk-in-the-park/",
       image: "/speakers/Ndileka Mandela/Ndileka-Mandela-The-Speakers-Firm-6.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Rural Development Journal",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/ndileka-mandela/",
+      url: "https://www.thestar.com/opinion/contributors/ndileka-mandela-without-intervention-india-risks-becoming-an-apartheid-state/article_c3a4a11b-1022-5e55-be61-d2a6613f361a.html",
       image: "/speakers/Ndileka Mandela/Ndileka-Mandela-The-Speakers-Firm-7.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "African Literary Review",
       date: "2023",
       action: "Read Review",
-      url: "https://thespeakersfirm.co.za/ndileka-mandela/",
+      url: "https://www.polity.org.za/article/i-am-ndileka-more-than-my-surname-ndileka-mandela-2019-11-20",
       image: "/speakers/Ndileka Mandela/Ndileka-Mandela-The-Speakers-Firm.jpg"
     }
   ];

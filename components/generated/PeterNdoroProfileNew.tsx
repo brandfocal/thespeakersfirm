@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Broadcasting Africa Monthly",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/peter-ndoro/",
+      url: "https://www.timeslive.co.za/tshisa-live/tshisa-live/2025-04-03-peter-ndoro-bags-new-sabc-show/",
       image: "/speakers/Peter Ndoro/Peter-Ndoro-The-Speakers-Firm.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Executive Convening Journal",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/peter-ndoro/",
+      url: "https://iharare.com/the-impressive-qualifications-and-experience-that-landed-zimbabwes-news-anchor-peter-ndoro-the-job-at-sabc/",
       image: "/speakers/Peter Ndoro/Peter-Ndoro-The-Speakers-Firm2.png"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Media Legacy Review",
       date: "2023",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/peter-ndoro/",
+      url: "https://iol.co.za/news/south-africa/2023-12-31-sabc-says-documentary-25-years-on-brings-to-life-the-close-bond-between-south-africa-and-china/",
       image: "/speakers/Peter Ndoro/Peter-Ndoro-The-Speakers-Firm7.jpg"
     }
   ];
