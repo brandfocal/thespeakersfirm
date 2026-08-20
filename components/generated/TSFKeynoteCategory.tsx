@@ -230,6 +230,13 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/felicia-mabuza-suttle-the-speakers-firm.jpg',
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/female-keynote-speakers/felicia-mabuza-suttle'
+}, {
+  id: 'jabulile-khumalo',
+  name: 'Jabulile Khumalo',
+  role: 'Head of Client Relationship Management, Author & Leadership Speaker',
+  image: '/speaker_thumbnails/Jabulile-Khumalo-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Performance', 'Transformation'],
+  path: '/tracks/inspirational-keynote-speakers/jabulile-khumalo'
 }];
 
 const filterChips = [{

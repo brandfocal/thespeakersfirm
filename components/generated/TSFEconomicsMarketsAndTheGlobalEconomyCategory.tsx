@@ -223,6 +223,18 @@ const speakers: Speaker[] = [
       "Macroeconomic Developments"
     ],
     "path": "/tracks/economics-markets-and-the-global-economy/viwe-tini"
+  },
+  {
+    "id": "pumela-salela",
+    "name": "Dr. Pumela Salela",
+    "role": "CEO of Invest Global, Economic Diplomacy Expert & Keynote Speaker",
+    "image": "/speaker_thumbnails/Dr-Pumela-Salela-The-Speakers-Firm.jpg",
+    "topics": [
+      "Macroeconomic Developments",
+      "Global Market Dynamics",
+      "Government Policy Implications"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/pumela-salela"
   }
 ];
 

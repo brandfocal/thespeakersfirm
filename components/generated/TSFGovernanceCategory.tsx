@@ -146,6 +146,27 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Dudu-Msomi-The-Speakers-Firm.jpg',
   topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship'],
   path: '/tracks/leadership-governance-and-risk-intelligence/dudu-msomi'
+}, {
+  id: 'prof-mazwe-majola',
+  name: 'Prof. Mazwe Majola',
+  role: 'Gender Governance Authority & Scholar',
+  image: '/speaker_thumbnails/Prof-Mazwe-Majola-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship', 'Executive Accountability'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/prof-mazwe-majola'
+}, {
+  id: 'ndileka-mandela',
+  name: 'Ndileka Mandela',
+  role: 'Social Activist, Author & Founder of Thembelihle Development Foundation',
+  image: '/speaker_thumbnails/Ndileka-Mandela-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/ndileka-mandela'
+}, {
+  id: 'pumela-salela',
+  name: 'Dr. Pumela Salela',
+  role: 'CEO of Invest Global, Economic Diplomacy Expert & Keynote Speaker',
+  image: '/speaker_thumbnails/Dr-Pumela-Salela-The-Speakers-Firm.jpg',
+  topics: ['Ethical Corporate Stewardship', 'Executive Accountability'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/pumela-salela'
 }];
 
 const filterChips = [{

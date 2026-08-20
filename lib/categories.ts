@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -221,7 +221,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker"
@@ -230,10 +230,10 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",
     "jj-tabane", "phathiswa-magopeni", "david-molapo", "mlamuli-mbambo",
     "sifiso-skenjana", "elias-masilela", "duma-gqubule", "pali-lehohla",
-    "thembisa-fakude", "mcebisi-ndletyana", "ralph-mathekga", "ebrahim-fakir", "siphamandla-zondi"
+    "thembisa-fakude", "mcebisi-ndletyana", "ralph-mathekga", "ebrahim-fakir", "siphamandla-zondi", "pumela-salela"
   ],
   "diversity": [
-    "ndileka-mandela", "nene-molefi", "rikky-minyuku", "brian-mhlanga"
+    "ndileka-mandela", "nene-molefi", "rikky-minyuku", "brian-mhlanga", "jabulile-khumalo"
   ],
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "happy-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
@@ -244,10 +244,10 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
     "phumzile-mlambo-ngcuka", "nene-molefi", "john-kani", "dr-john-kani", "dr-john-kani-ois-obe", "siphiwe-moyo",
     "eunice-cross", "lerato-sithole", "mazwe-majola", "maanda-tshifularo", "femi-adebanji",
-    "sthembiso-phakathi", "maureen-tong", "dr-maureen-tong", "david-molapo", "abner-mariri"
+    "sthembiso-phakathi", "maureen-tong", "dr-maureen-tong", "david-molapo", "abner-mariri", "pumela-salela"
   ],
   "gender": [
-    "zanele-luvuno", "josina-machel", "pastor-tebogo-moema", "ndileka-mandela"
+    "zanele-luvuno", "josina-machel", "pastor-tebogo-moema", "ndileka-mandela", "jabulile-khumalo"
   ],
   "workplace-wellness": [
     "mpho-phalatse-nxumalo", "criselda-kananda", "ndileka-mandela", "boniwe-dunster",

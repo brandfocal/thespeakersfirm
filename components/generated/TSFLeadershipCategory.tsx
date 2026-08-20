@@ -342,6 +342,27 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Josina-Machel-The-Speakers-Firm3.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/josina-machel'
+}, {
+  id: 'ndileka-mandela',
+  name: 'Ndileka Mandela',
+  role: 'Social Activist, Author & Founder of Thembelihle Development Foundation',
+  image: '/speaker_thumbnails/Ndileka-Mandela-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Diversity, Equity & Inclusion'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/ndileka-mandela'
+}, {
+  id: 'pastor-tebogo-moema',
+  name: 'Pastor Tebogo Moema',
+  role: 'Spiritual Leader & Relationship Counselor',
+  image: '/speaker_thumbnails/Tebogo-Moema-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/pastor-tebogo-moema'
+}, {
+  id: 'jabulile-khumalo',
+  name: 'Jabulile Khumalo',
+  role: 'Head of Client Relationship Management, Author & Leadership Speaker',
+  image: '/speaker_thumbnails/Jabulile-Khumalo-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Diversity, Equity & Inclusion'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/jabulile-khumalo'
 }];
 
 const filterChips = [{

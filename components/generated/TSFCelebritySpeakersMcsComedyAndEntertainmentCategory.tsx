@@ -303,6 +303,18 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/aubrey-masango-mc"
   },
   {
+    "id": "phemelo-motene",
+    "name": "Phemelo Motene",
+    "role": "Broadcaster, Actress, Master of Ceremonies & Communication Specialist",
+    "image": "/speaker_thumbnails/Phemelo-Motene-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/mc-and-facilitators/phemelo-motene"
+  },
+  {
     "id": "lala-tuku",
     "name": "Lala Tuku",
     "role": "Head of Content at SABC, Creative Producer & MC",

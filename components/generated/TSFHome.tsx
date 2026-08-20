@@ -1894,6 +1894,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Positive Masculinity Pioneer, Co-Founder of Sonke Gender Justice & Broadcaster</span>,
   trackId: 'leadership-governance-and-risk-intelligence'
+}, {
+  id: 'phemelo-motene',
+  name: 'Phemelo Motene',
+  category: ['MCs', 'Media'],
+  image: '/speakers/Phemelo Motene/Phemelo-Motene-The-Speakers-Firm-4.jpg',
+  alt: 'Phemelo Motene',
+  quote: 'Connecting with an audience requires authenticity.',
+  youtubeId: '4dBygPZkY2s',
+  topics: ['Media Strategy & Live Dialogue', 'Women Empowerment & Wellness'],
+  tint: 'rgba(180, 127, 48, 0.22)',
+  bio: <span>Broadcaster, Actress, Master of Ceremonies & Communication Specialist</span>,
+  trackId: 'mc-and-facilitators'
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
@@ -2252,6 +2264,186 @@ const FACULTY = [{
     label: 'Gender Equity'
   }],
   snippet: 'Prominent gender activist and co-founder of Sonke Gender Justice leading national dialogues on positive masculinity and allyship.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'ndileka-mandela',
+  name: 'Ndileka Mandela',
+  designation: 'Social Activist & Author',
+  role: 'Social Activist, Author & Founder of Thembelihle Development Foundation',
+  image: '/speaker_thumbnails/Ndileka-Mandela-The-Speakers-Firm.jpg',
+  trackId: 'gender',
+  tags: [{
+    id: 'gender-equality',
+    label: 'Gender Equality'
+  }, {
+    id: 'social-justice',
+    label: 'Social Justice'
+  }],
+  snippet: 'Social activist and author of "I Am Ndileka" directing development programs for rural schools and communities.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'noni-khumalo',
+  name: 'Noni Khumalo',
+  designation: 'Premium Master of Ceremonies',
+  role: 'Professional Master of Ceremonies, Panel Facilitator & TV Host',
+  image: '/speaker_thumbnails/Noni-Khumalo-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'premium-hosting',
+    label: 'Premium Hosting'
+  }, {
+    id: 'panel-facilitation',
+    label: 'Panel Facilitation'
+  }],
+  snippet: 'Polished master of ceremonies and television presenter facilitating corporate award evenings and global summits.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'peter-ndoro',
+  name: 'Peter Ndoro',
+  designation: 'Veteran Broadcast Journalist & Host',
+  role: 'Veteran Broadcaster, News Anchor & Professional Moderator',
+  image: '/speaker_thumbnails/Peter-Ndoro-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'summit-moderation',
+    label: 'Summit Moderation'
+  }, {
+    id: 'news-anchor',
+    label: 'News Anchor'
+  }],
+  snippet: 'Highly respected television newsman and anchor facilitating strategic panels and international summits globally.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.3,
+  entryDelay: 0.4
+}, {
+  id: 'phemelo-motene',
+  name: 'Phemelo Motene',
+  designation: 'Broadcaster & Actress',
+  role: 'Broadcaster, Actress, Master of Ceremonies & Communication Specialist',
+  image: '/speaker_thumbnails/Phemelo-Motene-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'media-dialogue',
+    label: 'Media Dialogue'
+  }, {
+    id: 'women-empowerment',
+    label: 'Women Empowerment'
+  }],
+  snippet: 'Veteran radio host and television personality facilitating high-engagement corporate panels and communication workshops.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'mazwe-majola',
+  name: 'Prof. Mazwe Majola',
+  designation: 'Gender Governance Specialist',
+  role: 'Academic Scholar, Gender Governance Expert & Policy Analyst',
+  image: '/speaker_thumbnails/Prof-Mazwe-Majola-The-Speakers-Firm.jpg',
+  trackId: 'governance',
+  tags: [{
+    id: 'gender-governance',
+    label: 'Gender Governance'
+  }, {
+    id: 'public-policy',
+    label: 'Public Policy'
+  }],
+  snippet: 'Distinguished professor and consultant advising public departments and corporate boards on gender development.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.15,
+  entryDelay: 0.25
+}, {
+  id: 'sid-peimer',
+  name: 'Sid Peimer',
+  designation: 'Business Pitch Consultant & Author',
+  role: 'Business Pitch Consultant, Strategist & Bestselling Author',
+  image: '/speaker_thumbnails/Sid-Peimer-The-Speakers-Firm.jpg',
+  trackId: 'digital-identity-cybersecurity-and-data-sovereignty',
+  tags: [{
+    id: 'pitching-excellence',
+    label: 'Pitching Excellence'
+  }, {
+    id: 'tech-disruption',
+    label: 'Tech Disruption'
+  }],
+  snippet: 'Business pitch strategist and author of "The Clear Win" advising companies on strategic proposal design and communication.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
+}, {
+  id: 'sibusiso-molimi',
+  name: 'Sibusiso Molimi',
+  designation: 'Master of Ceremonies & Speaker',
+  role: 'Master of Ceremonies, Keynote Speaker, Entrepreneur & Perspective-Shifter',
+  image: '/speaker_thumbnails/Sibusiso-Molimi-The-Speakers-Firm.jpg',
+  trackId: 'mc-and-facilitators',
+  tags: [{
+    id: 'premium-hosting',
+    label: 'Premium Hosting'
+  }, {
+    id: 'perspective-shift',
+    label: 'Perspective Shift'
+  }],
+  snippet: 'Polished master of ceremonies and motivational speaker guiding corporate teams on accountability and perspective alignment.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.25,
+  entryDelay: 0.35
+}, {
+  id: 'pastor-tebogo-moema',
+  name: 'Pastor Tebogo Moema',
+  designation: 'Spiritual Leader & Counselor',
+  role: 'Spiritual Leader, Relationship Counselor & Bestselling Author',
+  image: '/speaker_thumbnails/Tebogo-Moema-The-Speakers-Firm.jpg',
+  trackId: 'gender',
+  tags: [{
+    id: 'family-dynamics',
+    label: 'Family Dynamics'
+  }, {
+    id: 'relationship-counseling',
+    label: 'Relationship Counseling'
+  }],
+  snippet: 'Spiritual leader and relationship counselor facilitating workshops on family dynamics, domestic communication, and personal values.',
+  spanClassName: 'col-span-12 md:col-span-7',
+  wipeDelay: 0.3,
+  entryDelay: 0.4
+}, {
+  id: 'pumela-salela',
+  name: 'Dr. Pumela Salela',
+  designation: 'CEO of Invest Global & Speaker',
+  role: 'CEO of Invest Global, Economic Diplomacy Expert & Keynote Speaker',
+  image: '/speaker_thumbnails/Dr-Pumela-Salela-The-Speakers-Firm.jpg',
+  trackId: 'economics-and-politics',
+  tags: [{
+    id: 'economic-diplomacy',
+    label: 'Economic Diplomacy'
+  }, {
+    id: 'country-branding',
+    label: 'Country Branding'
+  }],
+  snippet: 'Internationally recognized authority in economic diplomacy, trade integration, and attracting Foreign Direct Investment.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.1,
+  entryDelay: 0.2
+}, {
+  id: 'jabulile-khumalo',
+  name: 'Jabulile Khumalo',
+  designation: 'Leadership Speaker & Author',
+  role: 'Head of Client Relationship Management, Author & Leadership Speaker',
+  image: '/speaker_thumbnails/Jabulile-Khumalo-The-Speakers-Firm.jpg',
+  trackId: 'leadership',
+  tags: [{
+    id: 'human-systems',
+    label: 'Human-Centered Leadership'
+  }, {
+    id: 'client-experience',
+    label: 'Client Experience'
+  }],
+  snippet: 'Executive leader and author of "The Uncomfortable Grace of Becoming" bridging business operations with emotional intelligence.',
   spanClassName: 'col-span-12 md:col-span-7',
   wipeDelay: 0.15,
   entryDelay: 0.25
