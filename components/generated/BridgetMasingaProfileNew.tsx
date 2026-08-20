@@ -51,7 +51,7 @@ const SOCIAL_PROOF_LOGOS = [
 ];
 
 export const AboutTeamSection = () => {
-  const customMedia = [];
+  const customMedia: any[] = [];
 
   const customVideos = [
     {
