@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Gender Dialogues Quarterly",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/masculinity/mbuyiselo-botha/",
+      url: "https://www.sowetanlive.co.za/opinion/columnists/2019-06-12-absent-fathers-are-major-catalyst-for-social-problems-in-our-country/",
       image: "/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Socio-Cultural Transformation",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/masculinity/mbuyiselo-botha/",
+      url: "https://www.sowetanlive.co.za/opinion/columnists/2019-06-19-women-dying-with-protection-orders-in-their-handbags/",
       image: "/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm-second.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Corporate Culture Today",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/masculinity/mbuyiselo-botha/",
+      url: "https://www.sowetanlive.co.za/opinion/columnists/2019-06-26-father-and-child-relationship-is-rewarding-but-equally-challenging/",
       image: "/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm-third.jpg"
     }
   ];

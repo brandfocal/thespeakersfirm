@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "North West FM / YouTube",
       date: "2024",
       action: "Watch Presentation",
-      url: "https://www.youtube.com/watch?v=UWBKtLwMPcI",
+      url: "https://www.youtube.com/watch?v=_g0r1Bbc-Q0",
       image: "/speakers/Sir Max/Sir-Max-The-Speakers-Firm5.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Sir Max Corporation Journal",
       date: "2023",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/sir-max/",
+      url: "https://taungdailynews.com/2016/07/13/north-west-fm-presenter-inspires-the-youth/",
       image: "/speakers/Sir Max/Sir-Max-The-Speakers-Firm6.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "North West University Academic Press",
       date: "2024",
       action: "Read Profile",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/sir-max/",
+      url: "https://www.listennotes.com/podcasts/sir-max-network/sirmaxnetwork-podcast-guest-28xNsmKyT0h/",
       image: "/speakers/Sir Max/Sir-Max-The-Speakers-Firm10.jpg"
     }
   ];

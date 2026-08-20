@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "Theatre & Arts Quarterly",
       date: "2024",
       action: "Read Interview",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/dr-john-kani-ois-obe/",
+      url: "https://www.citizen.co.za/lifestyle/south-african-legend-john-kani-joins-the-oscars-voting-body-flying-the-african-flag-high/",
       image: "/speakers/John Kani/dr-john-kani-the-speakers-firm-12.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Cultural Studies Journal",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/dr-john-kani-ois-obe/",
+      url: "https://mg.co.za/friday/2023-05-12-john-kani-still-questions-about-the-truth-after-21-years/",
       image: "/speakers/John Kani/dr-john-kani-the-speakers-firm-5.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Arts & Society Review",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/dr-john-kani-ois-obe/",
+      url: "https://www.goodthingsguy.com/people/dr-john-kani-honoured-with-an-international-shakespeare-award/",
       image: "/speakers/John Kani/dr-john-kani-the-speakers-firm-14.jpg"
     }
   ];

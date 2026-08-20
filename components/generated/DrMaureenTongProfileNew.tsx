@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Legal & Society Quarterly",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dr-maureen-tong/",
+      url: "https://ndabaonline.ukzn.ac.za/UkzndabaStory/Vol6-Issue44/Bridging%20the%20Gender%20Gap%20Vital%20for%20Prosperity/",
       image: "/speakers/Maureen Tong/Dr-Maureen-Tong-The-Speakers-Firm-2.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Literary Leadership Review",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/dr-maureen-tong/",
+      url: "https://soundcloud.com/user-313329433/meet-the-overcomers-01082018-dr-maureen-tong-part-1",
       image: "/speakers/Maureen Tong/Dr-Maureen-Tong-The-Speakers-Firm-3.jpg"
     },
     {
@@ -85,7 +85,7 @@ export const AboutTeamSection = () => {
       publication: "International Law Digest",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dr-maureen-tong/",
+      url: "https://amybanda.blogspot.com/2017/06/dr-maureen-tong-i-hope-au-will-invest.html",
       image: "/speakers/Maureen Tong/Dr-Maureen-Tong-The-Speakers-Firm-6.jpg"
     }
   ];

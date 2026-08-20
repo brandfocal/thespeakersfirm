@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Corporate Governance Review",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dr-brenda-kubheka/",
+      url: "https://cohsasa.co.za/cohsasa-appoints-new-board-members/",
       image: "/speakers/Dr. Brenda Kubheka/Dr-Brenda-Kubheka-Chauke.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Clinical Safety Journal",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/dr-brenda-kubheka/",
+      url: "https://www.news24.com/citypress/Voices/the-practice-of-medicine-is-inherently-risky-not-everything-is-predictable-20200108",
       image: "/speakers/Dr. Brenda Kubheka/Dr-Brenda-Kubheka-Chauke-3.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Workplace Wellness Quarterly",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dr-brenda-kubheka/",
+      url: "https://www.sowetanlive.co.za/opinion/columnists/2023-11-23-thandiwe-baleni-tshowa-kabala-faaiza-gangat-and-dr-brenda-khubeka-forced-relocation-of-the-elderly-stripsthem-of-their-identity-and-social-circles/",
       image: "/speakers/Dr. Brenda Kubheka/Dr-Brenda-Kubheka-The-Speakers-Firm-4.jpg"
     }
   ];

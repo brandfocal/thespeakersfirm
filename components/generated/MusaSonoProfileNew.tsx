@@ -50,35 +50,7 @@ const SOCIAL_PROOF_LOGOS = [
 ];
 
 export const AboutTeamSection = () => {
-  const customMedia = [
-    {
-      id: "musa-art-1",
-      headline: "Musa Sono on translating sports psychology into corporate success",
-      publication: "High Performance Business Monthly",
-      date: "2024",
-      action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/musa-sono/",
-      image: "/speakers/Musa Sono/Musa-Sono-The-Speakers-Firm.jpg"
-    },
-    {
-      id: "musa-art-2",
-      headline: "Unlocking human capital through disability inclusion in the workplace",
-      publication: "Inclusive Workforce Review",
-      date: "2024",
-      action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/musa-sono/",
-      image: "/speakers/Musa Sono/Musa-Sono-The-Speakers-Firm2.jpg"
-    },
-    {
-      id: "musa-art-3",
-      headline: "Building team cohesion under high-pressure conditions",
-      publication: "Sports Administration Quarterly",
-      date: "2023",
-      action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/musa-sono/",
-      image: "/speakers/Musa Sono/Musa-Sono-The-Speakers-Firm3.jpg"
-    }
-  ];
+  const customMedia = [];
 
   const customVideos = [
     {

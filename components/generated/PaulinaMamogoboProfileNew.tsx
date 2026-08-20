@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "BRICS Summit Review / YouTube",
       date: "2023",
       action: "Watch Presentation",
-      url: "https://www.youtube.com/watch?v=F4IHHn2duBw",
+      url: "https://omny.fm/shows/evening-show/profile-interview-with-dr-kgathane-paulina-mamogobo-a-leader-in-trade-investment-and-economic-policy#description",
       image: "/speakers/Dr. Paulina Mamogobo/Dr-Paulina-Mamogobo-3.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "GIBS Policy Research Journal",
       date: "2024",
       action: "Read Paper",
-      url: "https://thespeakersfirm.co.za/dr-paulina-mamogobo-2/",
+      url: "https://200youngsouthafricans.co.za/kgathane-paulina-mamogobo-33-2022/",
       image: "/speakers/Dr. Paulina Mamogobo/Dr-Paulina-Mamogobo-6.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Trade & Industry Quarterly",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/dr-paulina-mamogobo-2/",
+      url: "https://futurecitiesafrica.com/episode/91/bright-young-minds-paulina-mamogobo",
       image: "/speakers/Dr. Paulina Mamogobo/Dr-Paulina-Mamogobo-7.jpg"
     }
   ];

@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Entertainment Weekly Africa",
       date: "2023",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/liopelo-maphathe/",
+      url: "https://www.news24.com/life/arts-and-entertainment/celebrities/actor-liopelo-maphathe-reflects-on-the-challenges-faced-by-women-in-the-creative-arts-industry-20220609",
       image: "/speakers/Liopelo Maphathe/Liopelo-Maphathe-The-Speakers-Firm3.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Child Rights & Family Advocacy Journal",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/liopelo-maphathe/",
+      url: "https://www.news24.com/drum/news/liopelo-maphathe-the-best-mom-20170728",
       image: "/speakers/Liopelo Maphathe/Liopelo-Maphathe-The-Speakers-Firm4.jpg"
     }
   ];

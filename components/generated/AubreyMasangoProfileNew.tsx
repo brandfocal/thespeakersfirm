@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Strategic Dialogue Quarterly",
       date: "2024",
       action: "Read Interview",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/aubrey-masango/",
+      url: "https://omny.fm/shows/evening-show/talkers-open-line-taxi-marshals-stop-commuters-from-using-buses#description",
       image: "/speakers/Aubrey Masango/Aubrey-Masango-The-Speakers-Firm.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Media & Society Journal",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/aubrey-masango/",
+      url: "https://omny.fm/shows/evening-show/change-your-mindset-dont-wait-until-the-voice-is-gone-the-conversations-you-ll-wish-you-had-while-there-s-still-time-to-have-them-because-your-parents-were-people-before-they-were-parents#description",
       image: "/speakers/Aubrey Masango/Aubrey-Masango-The-Speakers-Firm2.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Broadcasters Digest",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/aubrey-masango/",
+      url: "https://tshwanetalks.com/702s-iconic-aubrey-masango-is-original-in-his-presentation/",
       image: "/speakers/Aubrey Masango/Aubrey-Masango-The-Speakers-Firm3.jpg"
     }
   ];

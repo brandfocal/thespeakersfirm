@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "BMF Executive Forum / YouTube",
       date: "2024",
       action: "Watch Discussion",
-      url: "https://www.youtube.com/watch?v=BNpWJAZZst4",
+      url: "https://bmfonline.co.za/media-release/mr-monde-ndlovus-appointment-as-managing-director-of-the-black-management/",
       image: "/speakers/Monde Ndlovu/Monde-Ndlovu-The-Speakers-Firm2.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "702/Eyewitness News Contributions",
       date: "2023",
       action: "Read Contributions",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/monde-ndlovu/",
+      url: "https://www.ewn.co.za/2023/10/26/monde-ndlovu-the-next-30-years-black-leadership-must-help-build-sas-roadmap",
       image: "/speakers/Monde Ndlovu/Monde-Ndlovu-The-Speakers-Firm3.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "ICABA World Network Spotlight",
       date: "2024",
       action: "Read Profile",
-      url: "https://thespeakersfirm.co.za/leadership-governance-and-risk-intelligence/monde-ndlovu/",
+      url: "https://www.citizen.co.za/business/tired-of-political-rhetoric-ndlovu-wants-to-develop-a-new-leaders/",
       image: "/speakers/Monde Ndlovu/Monde-Ndlovu-The-Speakers-Firm4.jpg"
     }
   ];

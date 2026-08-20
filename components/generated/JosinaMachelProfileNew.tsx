@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Gender Justice Review",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/gender/josina-z-machel/",
+      url: "https://myafrikamag.com/josina-z-machel-a-legacy-of-activism-and-a-relentless-fight-for-justice/",
       image: "/speakers/Josina Machel/Josina-Machel-The-Speakers-Firm3.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "African Women's Advocacy Quarterly",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/gender/josina-z-machel/",
+      url: "https://newafricanmagazine.com/voices-of-african-women/josina-z-machel-we-must-end-gender-based-violence/",
       image: "/speakers/Josina Machel/Josina-Machel-The-Speakers-Firm5.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Socio-Economic History Journal",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/gender/josina-z-machel/",
+      url: "https://clubofmozambique.com/news/mozambiques-josina-z-machel-on-bbcs-100-most-influential-women-of-2020-178528/",
       image: "/speakers/Josina Machel/Josina-Machel-The-Speakers-Firm6.jpg"
     }
   ];

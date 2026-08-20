@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "The Speakers Firm",
       date: "2024",
       action: "Listen to Podcast",
-      url: "https://thespeakersfirm.co.za",
+      url: "https://www.citizen.co.za/entertainment/im-an-action-woman-meetings-will-bore-me-gcina-mhlophe-urges-action-at-national-dialogue/",
       image: "/speakers/Gcina Mhlophe Becker/Gcina-Mhlophe-Becker-The-Speakers-Firm-4.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "DUT News",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za",
+      url: "https://witness.co.za/news/2021/05/24/mam-gcina-recognised-for-her-lifes-work-20210523/",
       image: "/speakers/Gcina Mhlophe Becker/Gcina-Mhlophe-Becker-The-Speakers-Firm-5.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Nozincwadi Trust",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za",
+      url: "https://www.puku.co.za/2018/05/02/looking-for-more-of-author-gcina-mhlophes-books/",
       image: "/speakers/Gcina Mhlophe Becker/Gcina-Mhlophe-Becker-The-Speakers-Firm-8.jpg"
     }
   ];

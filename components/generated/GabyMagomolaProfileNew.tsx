@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "Thamaga Holdings News",
       date: "2024",
       action: "Watch Discussion",
-      url: "https://www.youtube.com/watch?v=GoFpDfLxYPM",
+      url: "https://www.youtube.com/watch?v=zcm_uzbCMdA",
       image: "/speakers/Gaby Magomola/Gaby-Magomola-The-Speakers-Firm2.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Global Asset Management Profile",
       date: "2023",
       action: "Read Profile",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/gaby-magomola/",
+      url: "https://www.citizen.co.za/bedfordview-edenvale-news/news-headlines/2018/07/18/former-political-prisoner-now-summer-place-boutique-hotel-owner/",
       image: "/speakers/Gaby Magomola/Gaby-Magomola-The-Speakers-Firm4.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "History of BEE Feature",
       date: "2024",
       action: "Read Memoir Excerpt",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/gaby-magomola/",
+      url: "https://www.unizulu.ac.za/robben-island-to-wall-street-author-conferred-with-an-honorary-doctorate-in-economics/",
       image: "/speakers/Gaby Magomola/Gaby-Magomola-The-Speakers-Firm6.jpg"
     }
   ];

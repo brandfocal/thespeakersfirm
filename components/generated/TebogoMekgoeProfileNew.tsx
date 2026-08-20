@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "Systemic Advisory Insights / YouTube",
       date: "2024",
       action: "Watch Presentation",
-      url: "https://www.youtube.com/watch?v=dn4DuJtt7mI",
+      url: "https://iono.fm/e/1468192",
       image: "/speakers/Tebogo Mekgoe/Tebogo-Mekgoe-The-Speakers-Firm.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Executive Dialogues Quarterly",
       date: "2023",
       action: "Read Paper",
-      url: "https://thespeakersfirm.co.za/tebogo-mekgoe/",
+      url: "https://iono.fm/e/1194774",
       image: "/speakers/Tebogo Mekgoe/Tebogo-Mekgoe-The-Speakers-Firm-3.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Leadership & Governance Review",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/tebogo-mekgoe/",
+      url: "https://businesstech.co.za/news/mobile/60315/acsa-launches-app-for-nine-sa-airports/",
       image: "/speakers/Tebogo Mekgoe/Tebogo-Mekgoe-The-Speakers-Firm-5.jpg"
     }
   ];

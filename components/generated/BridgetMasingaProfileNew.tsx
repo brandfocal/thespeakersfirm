@@ -51,35 +51,7 @@ const SOCIAL_PROOF_LOGOS = [
 ];
 
 export const AboutTeamSection = () => {
-  const customMedia = [
-    {
-      id: "bridget-art-1",
-      headline: "Bridget Masinga on the evolution of South African lifestyle media",
-      publication: "Lifestyle & Culture Review",
-      date: "2024",
-      action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/bridget-masinga/",
-      image: "/speakers/Bridget Masinga/Bridget-Masina-The-Speakers-Firm.jpeg"
-    },
-    {
-      id: "bridget-art-2",
-      headline: "Championing African artists on global platforms",
-      publication: "Arts & Business Monthly",
-      date: "2024",
-      action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/bridget-masinga/",
-      image: "/speakers/Bridget Masinga/Bridget-Masina-The-Speakers-Firm11.jpg"
-    },
-    {
-      id: "bridget-art-3",
-      headline: "The business of creativity: Building sustainable careers in media",
-      publication: "Creative Industries Executive",
-      date: "2023",
-      action: "Read Article",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/bridget-masinga/",
-      image: "/speakers/Bridget Masinga/Bridget-Masinga-The-Speakers-Firm8.png"
-    }
-  ];
+  const customMedia = [];
 
   const customVideos = [
     {

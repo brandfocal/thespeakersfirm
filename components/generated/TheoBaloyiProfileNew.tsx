@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "Forbes Africa / YouTube",
       date: "2024",
       action: "Watch Feature",
-      url: "https://www.youtube.com/watch?v=Yjts81cW5GI",
+      url: "https://www.marvin.co.za/2023/09/27/theo-baloyi/",
       image: "/speakers/Theo Baloyi/Theo-Baloyi-The-Speakers-Firm.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "PwC Entrepreneurship Spotlight",
       date: "2023",
       action: "Read Story",
-      url: "https://thespeakersfirm.co.za/theo-baloyi/",
+      url: "https://www.howwemadeitinafrica.com/an-african-sneaker-brand-founder-of-bathu-explains-how-he-built-his-business/74205/",
       image: "/speakers/Theo Baloyi/Theo-Baloyi-The-Speakers-Firm-3.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "UNISA Alumni Spotlight",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/theo-baloyi/",
+      url: "https://startupmag.co.za/2020/09/10-things-you-should-know-about-theo-baloyi/",
       image: "/speakers/Theo Baloyi/Theo-Baloyi-The-Speakers-Firm-4.jpg"
     }
   ];

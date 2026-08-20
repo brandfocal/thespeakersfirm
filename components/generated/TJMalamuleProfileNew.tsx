@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "TTI Leadership Summit / YouTube",
       date: "2024",
       action: "Watch Address",
-      url: "https://www.youtube.com/watch?v=B4aNuVl5bH8",
+      url: "https://www.youtube.com/watch?v=_rM5yM191hU",
       image: "/speakers/TJ Malamule/TJ-Malamule-The-Speakers-Firm5.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Business Transformation Journal",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/tj-malamule/",
+      url: "https://www.youtube.com/watch?v=bdbEerbXFSA",
       image: "/speakers/TJ Malamule/TJ-Malamule-The-Speakers-Firm6.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Global Coaching Leaders Review",
       date: "2024",
       action: "Read Spotlight",
-      url: "https://thespeakersfirm.co.za/inspirational-keynote-speakers/tj-malamule/",
+      url: "https://www.snl24.com/dailysun/news/limpopo-businessman-and-philanthropist-thomas-malamule-inspires-mzansi-20250831",
       image: "/speakers/TJ Malamule/TJ-Malamule-the-speakers-firm-second.jpg"
     }
   ];

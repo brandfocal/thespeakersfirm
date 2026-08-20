@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Nomatshawe Consulting Insights",
       date: "2024",
       action: "Read Brief",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/linda-maqoma-2/",
+      url: "https://www.youtube.com/watch?v=xCFSwG5K090",
       image: "/speakers/Linda Maqoma/Linda Maqoma.jpeg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Black Business Council News",
       date: "2024",
       action: "Read Release",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/linda-maqoma-2/",
+      url: "https://abmagazine.accaglobal.com/global/articles/2022/may/practice/the-long-road-to-inclusion.html",
       image: "/speakers/Linda Maqoma/Linda-Maqoma-The-Speakers-Firm-11.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Drum Magazine / The Speakers Firm",
       date: "2023",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/linda-maqoma-2/",
+      url: "https://transformsa.co.za/2023/05/abasa-signs-a-memorandum-of-understanding-with-fasset/",
       image: "/speakers/Linda Maqoma/Linda-Maqoma-The-Speakers-Firm-12.jpg"
     }
   ];

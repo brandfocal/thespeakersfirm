@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "SABC Archives / YouTube",
       date: "2024",
       action: "Watch Retrospective",
-      url: "https://www.youtube.com/watch?v=HmA8suXVIck",
+      url: "https://www.citizen.co.za/lifestyle/entertainment/the-hairdo-symbolised-black-confidence-felicia-mabuza-suttle-after-being-honoured-for-her-90s-hair/",
       image: "/speakers/Felicia Mabuza-Suttle/felicia-mabuza-suttle-the-speakers-firm-8.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "Female Keynote Speakers Monthly",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/female-keynote-speakers/felicia-mabuza-suttle/",
+      url: "https://www.msn.com/en-za/news/other/felicia-mabuza-suttle-honoured-for-celebrating-african-women-s-hair-in-the-90s/ar-AA1Ovor6",
       image: "/speakers/Felicia Mabuza-Suttle/felicia-mabuza-suttle-the-speakers-firm-11.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Entrepreneurial Pioneers Review",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/female-keynote-speakers/felicia-mabuza-suttle/",
+      url: "https://iol.co.za/entertainment/celebrity-news/local/2020-09-23-felicia-mabuza-suttle-south-africas-first-lady-of-talk/",
       image: "/speakers/Felicia Mabuza-Suttle/felicia-mabuza-suttle-the-speakers-firm-13.jpg"
     }
   ];

@@ -57,7 +57,7 @@ export const AboutTeamSection = () => {
       publication: "Corporate Governance Review",
       date: "2024",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dudu-msomi/",
+      url: "http://www.busaraleadershippartners.co.za/blog/eskom-state-owned-company-boards-cannot-play-politics/",
       image: "/speakers/Dudu Msomi/Dudu-Msomi-The-Speakers-Firm-2.jpg"
     },
     {
@@ -66,7 +66,7 @@ export const AboutTeamSection = () => {
       publication: "Strategic Leadership Journal",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/dudu-msomi/",
+      url: "https://ynaija.com/live-authentic-life-i-make-conscious-choices-i-no-regrets-dudu-msomi-busara-leadership-partners-ceo-speaks-leading-ladies-africa/",
       image: "/speakers/Dudu Msomi/Dudu-Msomi-The-Speakers-Firm-4.jpg"
     },
     {
@@ -75,7 +75,7 @@ export const AboutTeamSection = () => {
       publication: "Busara Leadership Partners Review",
       date: "2023",
       action: "Read Article",
-      url: "https://thespeakersfirm.co.za/dudu-msomi/",
+      url: "https://www.moneyweb.co.za/in-depth/fnb-business-leadership/the-dudu-msomi-business-leadership-journey/",
       image: "/speakers/Dudu Msomi/Dudu-Msomi-The-Speakers-Firm-9.jpg"
     }
   ];

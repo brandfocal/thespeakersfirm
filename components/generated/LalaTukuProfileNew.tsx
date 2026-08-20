@@ -58,7 +58,7 @@ export const AboutTeamSection = () => {
       publication: "SABC News Interview",
       date: "2024",
       action: "Watch Interview",
-      url: "https://www.youtube.com/watch?v=9cDoOckCoeM",
+      url: "https://www.glamour.co.za/lifestyle/women-in-charge/women-in-charge-lala-tuku-is-breaking-boundaries-and-rewriting-the-narrative-in-broadcasting-da4ef5a9-77c2-42ad-be98-7fb8242d86c3",
       image: "/speakers/Lala Tuku/Lala-Tuku-The-Speakers-Firm-3.jpg"
     },
     {
@@ -67,7 +67,7 @@ export const AboutTeamSection = () => {
       publication: "NFVF Annual Industry Review",
       date: "2023",
       action: "Read Paper",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/lala-tuku/",
+      url: "https://www.news24.com/truelove/celebrity/sabcs-lala-tuku-on-creating-tv-content-20250414",
       image: "/speakers/Lala Tuku/Lala-Tuku-The-Speakers-Firm-11.jpg"
     },
     {
@@ -76,7 +76,7 @@ export const AboutTeamSection = () => {
       publication: "Creative Executive Quarterly",
       date: "2024",
       action: "Read Feature",
-      url: "https://thespeakersfirm.co.za/mc-and-facilitators/lala-tuku/",
+      url: "https://sundayworld.co.za/celebrity-news/profound-honour-as-lala-tuku-takes-seat-at-the-academy/",
       image: "/speakers/Lala Tuku/Lala-Tuku-The-Speakers-Firm-8.jpg"
     }
   ];
