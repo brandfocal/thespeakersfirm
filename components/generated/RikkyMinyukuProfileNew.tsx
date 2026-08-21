@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "25 years of working in development, human rights and social justice in Africa has enabled Rikky Minyuku to develop a systems-thinking lens and broad perspective on gender equality. Working with a wide range of organisations and formations has honed Rikky’s skills as a facilitator, researcher, writer and programme developer.",
   "Leadership roles and running her own consultancy have strengthened organisational skills, fundraising and financial management; while working with people from all walks of life has sharpened her feminist leadership practices. All combine to support or lead organisations through change.",
-  "Book Rikky Minyuku through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to guide your organization through gender equality, human rights advocacy, and diversity, equity, and belonging initiatives."
+  "Book Rikky Minyuku through The Speakers Firm, A Leading African Speakers Bureau, to guide your organization through gender equality, human rights advocacy, and diversity, equity, and belonging initiatives."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

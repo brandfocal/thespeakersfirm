@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "With a deep understanding of business development and market expansion, he has played a crucial role in empowering African enterprises, fostering job creation, and driving sustainable growth across multiple industries. His work reflects a strong belief in Africa’s potential and the importance of homegrown solutions to global challenges.",
   "Mlamuli’s journey into entrepreneurship was fueled by his passion for economic empowerment. Recognizing the need for African businesses to scale and compete in international markets, he has dedicated his career to building and supporting ventures that prioritize innovation, efficiency, and long-term impact.",
   "He serves as the Africa Head of Financial Education for the Informal Economy Development Forum (IEDF), working in partnership with his bestselling book to drive financial literacy across Africa's informal economy. He is also the founder of Money Fundi, a leading financial advisory and wellness firm.",
-  "Book Mlamuli Mbambo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring visionary wealth strategizing, corporate financial wellness masterclasses, and informal economy inclusion workshops to your organization."
+  "Book Mlamuli Mbambo through The Speakers Firm, A Leading African Speakers Bureau, to bring visionary wealth strategizing, corporate financial wellness masterclasses, and informal economy inclusion workshops to your organization."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

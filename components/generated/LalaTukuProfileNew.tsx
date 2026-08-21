@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Lala Tuku is a highly acclaimed creative industry executive, producer, strategic communications leader, and master of ceremonies with over two decades of experience in the media and broadcasting landscape. She currently serves as the Head of Content at the South African Broadcasting Corporation (SABC), overseeing the public broadcaster's creative vision, content portfolios, and commissioning strategy.",
   "Lala’s career spans performing, production management, and executive board governance. Previously, she was the Managing Director at Clive Morris Productions, where she led the execution of major national television drama and soap opera projects including *The Estate* and *Isono*. In addition, she is a board member of the National Film and Video Foundation (NFVF), contributing significantly to national creative industry policy.",
   "As a professional program director and panel facilitator, Lala is renowned for bringing poise, precision, and presence to high-profile events. She has successfully facilitated presidential galas, ministerial conferences, and major industry award ceremonies, bridging corporate strategy with engaging audience connection.",
-  "Book Lala Tuku through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring seasoned executive presence, creative industry expertise, and professional event facilitation to your next high-level conference or gala."
+  "Book Lala Tuku through The Speakers Firm, A Leading African Speakers Bureau, to bring seasoned executive presence, creative industry expertise, and professional event facilitation to your next high-level conference or gala."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

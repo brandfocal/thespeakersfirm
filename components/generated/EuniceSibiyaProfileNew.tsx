@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Eunice Sibiya is a Financial and Life Coach. She is the former Head of Consumer Education at FNB, a division which is responsible for educating South Africans on basic financial concepts and promoting financial literacy across the country.",
   "Qualifications: BComm: Marketing Management (UP). Ms Sibiya provides a fresh approach to content and has a calm thoughtful demeanour in dealing with clients, audiences and anyone she comes into contact with. Her attention to detail and focus on adding value will no doubt prove her to be an asset to any assignment in your organization.",
   "Throughout her career, Eunice has been passionate about driving financial inclusion and empowering individuals to take control of their economic destiny. She uses practical, real-world examples to make complex financial concepts digestible, helping audiences overcome debt traps and design sustainable lifestyles.",
-  "Book Eunice Sibiya through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring structured consumer financial education, interactive budgeting masterclasses, and executive life coaching to your corporate events, training programs, and conferences."
+  "Book Eunice Sibiya through The Speakers Firm, A Leading African Speakers Bureau, to bring structured consumer financial education, interactive budgeting masterclasses, and executive life coaching to your corporate events, training programs, and conferences."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

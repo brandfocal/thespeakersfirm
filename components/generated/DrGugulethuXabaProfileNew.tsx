@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. Gugulethu Xaba is the Director of Student Governance and Leadership Development at Tshwane University of Technology (TUT). He is a seasoned higher education leader, academic, and community builder with over 20 years of experience in student affairs, organizational development, and youth empowerment.",
   "Over his distinguished career, Dr. Xaba has served as the President of the National Association of Student Development Practitioners (NASDEV) and was a founding member of the South African Federation of Student Affairs and Services (SAFSAS). His research and leadership practices focus on creating sustainable governance structures that bridge student representation and university administration.",
   "Committed to active citizenship and civic engagement, Dr. Xaba frequently facilitates dialogues on the aftermath of historic student movements, such as Fees Must Fall, and advises institutional boards on public health, community service, and student welfare. He is a passionate advocate for mentorship, helping develop the next generation of African leaders.",
-  "Book Dr. Gugulethu Xaba through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive academic leadership insights, student governance workshops, and transformative youth development keynotes to your institution or conference."
+  "Book Dr. Gugulethu Xaba through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive academic leadership insights, student governance workshops, and transformative youth development keynotes to your institution or conference."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

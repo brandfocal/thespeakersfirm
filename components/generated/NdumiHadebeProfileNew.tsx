@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "The more Time-Money-Energy she invested working on this book, the more she realised that boundaries are the basis of self-preservation and self-love; and concluded that it’s impossible to lead yourself in the direction of your vision or goals without a clear assertion of boundaries in the various areas of life.",
   "She has more than a decade of corporate experience and another as an entrepreneur – consulting in as a capacity development expert for world renowned brands such Ernst & Young, Nordex SA, Sasfin Bank, University of Johannesburg and Bureau Veritas Zambia. Her business endeavours are supported by a BCom in Marketing and an NLP Certificate for Coaches and a deliberate ongoing lifestyle of learning and healing.",
   "Through her workshops and talks, Ndumi guides professionals to manage expectations, negotiate healthy support structures, and break free from toxic financial dynamics to enable true financial independence for both sides.",
-  "Book Ndumi Hadebe through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring boundary integration, financial wellness mastery, and transformative relationship coaching to your next corporate wellness day or leadership seminar."
+  "Book Ndumi Hadebe through The Speakers Firm, A Leading African Speakers Bureau, to bring boundary integration, financial wellness mastery, and transformative relationship coaching to your next corporate wellness day or leadership seminar."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

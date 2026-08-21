@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Musa Sono is a celebrated South African Paralympic athlete, sports administrator, social entrepreneur, and high-performance coach. Renowned for his extraordinary physical and mental resilience, Musa has translated his experiences on elite global athletic stages into transformative frameworks for corporate performance.",
   "Musa specializes in executive coaching and team-building interventions. He leverages sports psychology to help corporate teams build a shared vision, improve communication under pressure, and establish winning behaviors.",
   "As an advocate for accessibility and inclusion, Musa counsels organizations on disability integration, inclusive HR policies, and creating supportive workspace cultures that celebrate diverse talent.",
-  "Book Musa Sono through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver powerful keynote addresses on team synergy, the winning mindset, and disability inclusion."
+  "Book Musa Sono through The Speakers Firm, A Leading African Speakers Bureau, to deliver powerful keynote addresses on team synergy, the winning mindset, and disability inclusion."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

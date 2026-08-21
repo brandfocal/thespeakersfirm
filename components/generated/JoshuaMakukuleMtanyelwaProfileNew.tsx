@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "A leading South African voice on men’s identity and culture change, Joshua challenges outdated narratives of manhood and equips men to lead with empathy, emotional intelligence, and integrity. His keynotes move beyond motivation, they shift culture, restore confidence, and ignite leadership from the inside out.",
   "A gifted communicator and community transformer, Joshua’s work bridges the worlds of faith, leadership, and healing. Through Men of Purpose, he has built safe spaces for men to reflect, rebuild, and re-engage, turning vulnerability into strength and silence into leadership. His talks resonate across corporate platforms, youth summits, community dialogues, and faith-based gatherings.",
   "Aligned with The Speakers Firm’s philosophy of curating internationally acclaimed keynote speakers who activate transformation across strategy, culture, and legacy, Joshua Makukule Mtanyelwa inspires audiences to embrace authenticity, accountability, and legacy in family and nation building.",
-  "Book Joshua Makukule Mtanyelwa through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring inspirational keynote addresses, men's identity dialogues, and family leadership masterclasses to your next corporate or community event."
+  "Book Joshua Makukule Mtanyelwa through The Speakers Firm, A Leading African Speakers Bureau, to bring inspirational keynote addresses, men's identity dialogues, and family leadership masterclasses to your next corporate or community event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

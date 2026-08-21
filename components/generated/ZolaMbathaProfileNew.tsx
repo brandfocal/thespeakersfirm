@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Zola has administered ultra-high-net-worth estates and played a leading role in regulatory compliance across multiple sectors. Notably, she obtained a GN5 (Banking through Partnership) License from the Prudential Authority while serving as Head of Compliance for a FinTech operating in three global jurisdictions. She also established and led a Quality Assurance Division, incorporating compliance, risk, legal, and fraud management systems from the ground up.",
   "In the media, Zola is a trusted legal voice, frequently invited as a guest on radio, podcasts, television, and YouTube to simplify complex legal matters for the public. Her “legal clinic through the media” platform has become a powerful tool for legal education, and she was the featured fiduciary commentator on the estate of the late former Deputy President David “DD” Mabuza.",
   "Zola is also a sought-after public speaker, having addressed platforms such as the Africa Financial Inclusion Conference, Old Mutual Black Distributors Trust, and numerous corporate and women’s empowerment events, where she provides legal and financial clarity rooted in current legislation.",
-  "Book Zola Mbatha through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring expert estate planning guidance, fiduciary compliance insight, and empowering legal workshops to your team or organization."
+  "Book Zola Mbatha through The Speakers Firm, A Leading African Speakers Bureau, to bring expert estate planning guidance, fiduciary compliance insight, and empowering legal workshops to your team or organization."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

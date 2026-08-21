@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Phemelo Motene is a widely recognized South African broadcaster, actress, Master of Ceremonies, and communication specialist. With over two decades in the media industry, she has hosted major radio programs on Metro FM and SAFM, and starred in celebrated television dramas.",
   "Phemelo's natural warmth, quick intellect, and ability to connect with audiences make her a highly sought-after host and panel facilitator for corporate retreats, brand activations, and national conferences.",
   "In addition to her media work, Phemelo offers media training and executive voice coaching, helping corporate professionals develop powerful presentation and communication skills.",
-  "Book Phemelo Motene through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring the professional charisma, warmth, and structure of a media icon to your next event."
+  "Book Phemelo Motene through The Speakers Firm, A Leading African Speakers Bureau, to bring the professional charisma, warmth, and structure of a media icon to your next event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

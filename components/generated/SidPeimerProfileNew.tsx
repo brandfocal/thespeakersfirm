@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Sid Peimer is a highly regarded business strategy consultant, pitch coach, author, and speaker specializing in strategic communication and corporate growth. With decades of experience advising corporate teams and advertising agencies, he helps organizations construct persuasive pitches and win high-value accounts.",
   "As the author of 'The Clear Win: Pitching for New Business', Sid translates complex marketing and communication theories into actionable, step-by-step frameworks that corporate leaders and sales teams can execute under pressure.",
   "Sid is also a commentator on digital identity, technology trends, and market disruption, guiding boards on strategic adaptation in the modern digital economy.",
-  "Book Sid Peimer through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver high-impact workshops, keynotes, and masterclasses on pitching excellence and strategic presentation."
+  "Book Sid Peimer through The Speakers Firm, A Leading African Speakers Bureau, to deliver high-impact workshops, keynotes, and masterclasses on pitching excellence and strategic presentation."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

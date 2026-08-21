@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "He is the Founder of the Cool Dads Foundation, a groundbreaking movement mobilising young fathers to become emotionally present, responsible, and engaged parents. Through this initiative, Bongani is shaping a generation of men who lead with empathy, integrity, and purpose, advancing positive masculinity as a cornerstone of family and national development.",
   "As a media personality and social commentator, Bongani is a familiar voice on Kaya FM, SAfm, and Power FM, where he leads thought-provoking conversations on leadership, masculinity, and fatherhood. Having addressed audiences on global stages such as the World Council of Churches Peace Conference (Jamaica) and COP17 (Durban), Bongani continues to amplify Africa’s voice in global conversations about leadership, morality, and humanity.",
   "With academic credentials in Theology, Project Management, Corporate Communication, and ongoing studies in Business Management, he brings intellectual depth, moral conviction, and practical insight to every engagement.",
-  "Book Bongani Luvalo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring responsible fatherhood keynotes, youth development seminars, and leadership workshops to your organization."
+  "Book Bongani Luvalo through The Speakers Firm, A Leading African Speakers Bureau, to bring responsible fatherhood keynotes, youth development seminars, and leadership workshops to your organization."
 ];
 
 const BOOKS = [

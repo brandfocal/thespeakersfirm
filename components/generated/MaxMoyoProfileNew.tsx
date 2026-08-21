@@ -43,7 +43,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Before becoming a global transformation voice, Max built a distinguished career in financial services, serving in leadership roles at Old Mutual, Sanlam Life, Discovery Health, Liberty Active, and Allan Gray Limited. His corporate experience gave him a deep understanding of organisational behaviour, leadership psychology, and cultural alignment, insights that now underpin his groundbreaking work in leadership and human capital development.",
   "As a sought after speaker and consultant, Max has partnered with prestigious organisations including Standard Bank, SuperSport, DStv, the Law Association of Zambia, and the Guardian Life Group (Jamaica), as well as various governments and institutions across Africa and the diaspora. His work transcends motivation, it is a call to consciousness, courage, and clarity of purpose.",
   "Through his bestselling books, keynote addresses, and corporate interventions, Max Moyo continues to inspire a movement of leaders who choose authenticity over conformity and transformation over transaction.",
-  "Book Max Moyo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring transformational insight, purpose driven leadership, and authentic inspiration to your next corporate retreat, leadership summit, or personal development engagement."
+  "Book Max Moyo through The Speakers Firm, A Leading African Speakers Bureau, to bring transformational insight, purpose driven leadership, and authentic inspiration to your next corporate retreat, leadership summit, or personal development engagement."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

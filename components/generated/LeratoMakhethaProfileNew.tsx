@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Born in the vibrant township of Soweto and honing his skills in the cultural melting pot of New York before returning to Johannesburg, Lerato’s artistic journey began early in life. At the age of 10, he secured a coveted spot at the esteemed Drakensberg Boys’ Choir School, where he received rigorous classical training in piano and vocal performance, laying the foundation for his future success. He continued his education at the National School of the Arts.",
   "With over two decades of experience in the music industry, Lerato has evolved into a seasoned pianist, music producer, and collaborator with renowned artists such as HHP, Tuks Sengaga, JR, Unathi Msengana, and Kabomo. In addition to his musical prowess, Lerato has featured in Netflix, Showmax, and Mzansi films including Real Estate Sisters, A Safe Bet, and Baby Mamas.",
   "Embracing the digital era, Lerato has successfully expanded his brand into the online space with The Makhs, a thriving YouTube and Podcast platform that engages audiences globally. As a devoted family man and role model, he inspires aspiring creatives to build excellence, resilience, and multi-dimensional careers.",
-  "Book Lerato Makhetha through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring inspirational keynote addresses, creative entrepreneurship panels, and authentic storytelling sessions to your next summit or event."
+  "Book Lerato Makhetha through The Speakers Firm, A Leading African Speakers Bureau, to bring inspirational keynote addresses, creative entrepreneurship panels, and authentic storytelling sessions to your next summit or event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Tebogo Mekgoe is the Founder and CEO of Systemic Advisory, a leading consultancy specializing in bespoke systemic design, executive facilitation, and organizational development. As a premier leadership strategist and culture transformation advisor, he acts as a key architect in designing and guiding strategic conversations for large corporates and medium-sized enterprises.",
   "Integrating systems thinking, complexity theory, and practical organizational development, Tebogo has built a reputation for crafting highly tailored executive workshops, strategy alignment sessions, and leadership retreats. His methodology helps executive teams navigate structural and market complexity by identifying leverage points and aligning organizational design with execution.",
   "His mission is to bring profound clarity to leaders and their teams, creating psychological safety and open dialogue to drive trust and alignment. Before founding Systemic Advisory, he acquired years of operational and corporate governance experience, positioning him as a trusted advisor on risk intelligence and executive performance.",
-  "Book Tebogo Mekgoe through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to facilitate your next executive strategy retreat, board alignment session, or lead keynotes on systems leadership."
+  "Book Tebogo Mekgoe through The Speakers Firm, A Leading African Speakers Bureau, to facilitate your next executive strategy retreat, board alignment session, or lead keynotes on systems leadership."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

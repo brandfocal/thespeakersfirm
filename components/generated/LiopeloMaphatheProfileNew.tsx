@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Liopelo Maphathe is a Lesotho-born actress, television presenter, MC, moderator, producer, voice-over artist, and dedicated philanthropist who has been a prominent figure in the South African entertainment industry since the early 2000s. She holds a degree in Performing Arts from the University of the Free State.",
   "Liopelo achieved her breakout role as Luyanda on the hit soapie *Backstage*. Her extensive acting portfolio includes leading roles in popular television series such as Netflix's *Kings of Jo'burg*, *Durban Gen*, *Gomora*, *Nikiwe*, *Muvhango*, *Rhythm City*, and *Nna Sajene Kokobela*. In addition, she has hosted lifestyle and musical shows such as *AfroCafe*.",
   "Beyond her artistic work, Liopelo is deeply passionate about social advocacy and youth development. She hosts the impactful show *Madi-Aka* on Moja Love, which advocates for children caught in the middle of parental conflict or difficult divorces, helping families heal and build healthier relationships.",
-  "Book Liopelo Maphathe through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring seasoned entertainment industry perspectives, professional event facilitation, and compassionate advocacy talks to your next conference."
+  "Book Liopelo Maphathe through The Speakers Firm, A Leading African Speakers Bureau, to bring seasoned entertainment industry perspectives, professional event facilitation, and compassionate advocacy talks to your next conference."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -37,7 +37,7 @@ const FULL_BIO_PARAGRAPHS = [
   "A journalist of global standing, Milton became the first-ever recipient of the One BBC Global Ambassador Award in 2004, recognising his contribution to international journalism and his role in strengthening cross-continental newsroom collaboration. Over the years, he has interviewed and reported on global leaders, liberation icons, and emerging changemakers, offering sharp analysis on Africa’s political and socio-economic developments.",
   "Beyond the newsroom, Milton continues to influence the field of journalism through his leadership roles as a board member of the Southern Africa Foreign Correspondents Association and a member of the South African National Editors’ Forum (SANEF). His commitment to ethical reporting, freedom of the press, and mentorship of young journalists reflects his dedication to advancing responsible journalism across Africa.",
   "As a speaker, moderator, and media advisor, Milton brings unmatched insight into African geopolitics, global media, and democracy, offering audiences a nuanced understanding of how narratives shape nations and influence international perception.",
-  "Book Milton Nkosi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, for your next leadership dialogue, media forum, or global affairs conference, and engage with a journalist whose storytelling bridges continents and generations."
+  "Book Milton Nkosi through The Speakers Firm, A Leading African Speakers Bureau, for your next leadership dialogue, media forum, or global affairs conference, and engage with a journalist whose storytelling bridges continents and generations."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

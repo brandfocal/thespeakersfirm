@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Brian Mhlanga is a DEI specialist, an executive coach, educator, facilitator, mediator, speaker and leadership development practitioner with more than 15 years of experience working in higher education, finance, project management, international relations, communications, and advocacy.",
   "He works systemically with individuals, teams and organisations to improve performance, grow leadership competence, emotional and somatic intelligence. He works as an adjunct faculty lecturer at Henley Business School, Wits Business School (WBS), Duke CE & Johannesburg Business School (University of Johannesburg). He is also a senior researcher at the Henley Centre for Leadership (Africa).",
   "He is one of four Deep Coaches on the African continent in private practise and has extensive experience working with the private and public sector. Brian also serves on a few boards.",
-  "Book Brian Mhlanga through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to guide your leadership team through diversity, equity, and inclusion, somatic intelligence, and systemic organizational transformation."
+  "Book Brian Mhlanga through The Speakers Firm, A Leading African Speakers Bureau, to guide your leadership team through diversity, equity, and inclusion, somatic intelligence, and systemic organizational transformation."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

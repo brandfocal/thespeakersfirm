@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Aubrey Masango is one of South Africa's most respected radio personalities, broadcasters, facilitators, and public speakers. Famously known for hosting late-night talk shows on 702, Aubrey has built a reputation for navigating complex, high-stakes national and international topics with deep intellectual curiosity, composure, and nuance.",
   "Leveraging over a decade of media and corporate experience, Aubrey is a highly sought-after moderator and master of ceremonies. He has anchored critical panel discussions involving national policymakers, corporate executives, and civic leaders, steering complex debates toward actionable conclusions.",
   "As an advisor and speaker, Aubrey focuses heavily on the concepts of self-mastery, active citizenship, and ethical corporate leadership. He challenges leadership teams to build open, collaborative cultures that respect diverse perspectives while maintaining absolute focus on strategic execution.",
-  "Book Aubrey Masango through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to elevate your next conference, panel discussion, or corporate retreat with definitive facilitation and executive leadership keynotes."
+  "Book Aubrey Masango through The Speakers Firm, A Leading African Speakers Bureau, to elevate your next conference, panel discussion, or corporate retreat with definitive facilitation and executive leadership keynotes."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

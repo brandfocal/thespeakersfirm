@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Professor Mbulelo Dyasi is a highly respected gender and HIV/AIDS activist, serving as the Secretary General of the South African Men’s Sector and the National Convenor of the National Men’s Forums of South Africa. He has dedicated his career to human rights advocacy, policy formulation, and community healthcare campaigns across Southern Africa.",
   "Prof. Dyasi is a leading champion of positive masculinity, arguing that active and continuous conversations are essential to evaluate if men are truly absorbing the anti-GBV messages. Through national forums, he engages traditional and religious leaders, government bodies, and civil society organizations to promote gender equality, combat domestic violence, and improve healthcare access.",
   "His work highlights the transforming role of men in contemporary families, advocating for a shift away from traditional rigid gender norms toward inclusive, emotionally intelligent, and supportive partnerships. He is also the author of the memoir Dignity in the Darkness: A Journey of Resilience, Resistance, and Redemption, documenting his long-standing work in humanitarian development.",
-  "Book Prof. Mbulelo Dyasi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive positive masculinity workshops, public health leadership briefings, and gender equity seminars to your organization."
+  "Book Prof. Mbulelo Dyasi through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive positive masculinity workshops, public health leadership briefings, and gender equity seminars to your organization."
 ];
 
 const BOOKS = [

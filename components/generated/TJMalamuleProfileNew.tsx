@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "TJ Malamule (known to many as 'Mr. Supercharge') is a highly acclaimed international keynote speaker, executive coach, bestselling author, and entrepreneur. He is the CEO of the TTI Group, a premier organization focused on skills development, corporate education, and enterprise transformation. An expert in Neuro-Linguistic Programming (NLP), TJ holds an MBA from Henley Business School.",
   "With a reputation for high-energy, humorous, and deeply practical presentations, TJ has addressed corporate audiences across major sectors including banking, automotive, telecommunications, and retail. His professional coaching excellence has earned him recognition as one of the 'Top 100 Global Coaching Leaders' by the Global HRD Congress, helping executives unlock peak performance and align personal growth with strategic corporate objectives.",
   "TJ is the author of several impactful books, including *Unstoppable Together*, *Stand Out or Don't Bother*, and *Supercharge Your Destiny*. He is also the founder of Rihanyo Holdings and dedicates significant time to philanthropy, supporting community upliftment and youth education through the TJ Malamule Foundation.",
-  "Book TJ Malamule through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring high-impact motivation, sales acceleration, and leadership transformation to your next corporate convention or team development session."
+  "Book TJ Malamule through The Speakers Firm, A Leading African Speakers Bureau, to bring high-impact motivation, sales acceleration, and leadership transformation to your next corporate convention or team development session."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

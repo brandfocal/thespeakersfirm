@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Tebogo Edward Lerole is a distinguished entrepreneur, musician, and social impact advocate. Widely known for bridging creativity and social change, he has built a powerful reputation as one of South Africa's most prominent voices for positive masculinity, community restoration, and active citizenship.",
   "As the founder of the Act Now Foundation, Tebogo leads critical campaigns addressing Gender-Based Violence and Femicide (GBVF). Under his leadership, the foundation has mobilized communities to demand justice for survivors, and campaigned extensively to involve men in conquering GBVF, asserting that men are the missing element in the fight.",
   "A passionate believer in restoring dignity to the vulnerable, Tebogo frequently leverages benefit concerts and cultural events to provide direct aid and raise awareness for community causes. His efforts bring together leading artists, corporate sponsors, and social enterprises to build sustainable support systems for communities in need.",
-  "Book Tebogo Edward Lerole through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive social transformation keynotes, community development insights, and active citizenship workshops to your next event or summit."
+  "Book Tebogo Edward Lerole through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive social transformation keynotes, community development insights, and active citizenship workshops to your next event or summit."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

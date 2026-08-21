@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Sir Max is a highly sought-after 'knowledgepreneur', leadership captain, academic, and philosopher who has been professionally speaking since 2003. He is also a lecturer at the North West University (Mafikeng Campus) and a popular on-air personality at North West FM. He is the founder of the Sir Max Corporation and an honorary member of the Golden Key International Honor Society.",
   "With a rich academic background, Sir Max holds a BA in Tourism Management, a Postgraduate Diploma in Business Management, and an MA in International Relations, and has also pursued PhD research. As a strategic and lateral thinker, he specializes in inspirational talks, team building, strategic planning, leadership coaching, management consulting, and organizational development.",
   "Sir Max is the author of two bestselling books: *Become your portrait* and *It’s your mentality, not your ability*. His core philosophy is centered on the 'powers of the mind' and shifting organizational thinking to add immense value to investors, customers, and employees alike. His life's assignment is helping people find answers in their hearts and true meaning for their lives.",
-  "Book Sir Max through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver high-impact leadership lectures, mindset shift keynotes, and strategic planning sessions at your next corporate event."
+  "Book Sir Max through The Speakers Firm, A Leading African Speakers Bureau, to deliver high-impact leadership lectures, mindset shift keynotes, and strategic planning sessions at your next corporate event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

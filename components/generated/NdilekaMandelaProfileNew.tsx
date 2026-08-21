@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Ndileka Mandela is a prominent social activist, healthcare professional, writer, and the eldest grandchild of Nelson Mandela. With a rich background in nursing and community development, she dedicates her life to continuing the Mandela family's legacy of struggle, integrity, and social justice.",
   "As the founder and CEO of The Thembelihle Development Foundation, Ndileka spearheads projects aimed at improving education, healthcare facilities, and agricultural resources in rural South African communities.",
   "Her memoir, 'I Am Ndileka', offers a powerful, deeply personal account of her life, detailing the trials and triumphs of growing up Mandela, and highlighting her advocacy for women's empowerment and rural development.",
-  "Book Ndileka Mandela through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver deeply moving keynotes on legacy preservation, social justice, and personal resilience."
+  "Book Ndileka Mandela through The Speakers Firm, A Leading African Speakers Bureau, to deliver deeply moving keynotes on legacy preservation, social justice, and personal resilience."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

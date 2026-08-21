@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. Brenda Kubheka is a highly respected South African medical doctor, public health specialist, bioethics scholar, and corporate governance authority. With an extensive career spanning clinical practice, management consulting, and executive board advisory, Dr. Brenda is a leading voice on ethical leadership and wellness.",
   "Dr. Brenda holds multiple academic qualifications, including a medical degree and advanced business credentials. She has successfully led healthcare strategy formulation, risk management, and clinical compliance programs across major public and private health institutions.",
   "Deeply passionate about workplace safety and corporate wellness, Dr. Brenda guides executives on constructing supportive workspaces that prevent professional exhaustion and cultivate mental health. She bridges the gap between scientific wellness frameworks and corporate strategy.",
-  "Book Dr. Brenda Kubheka through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver critical keynote sessions on workplace wellness, clinical governance, and ethical corporate cultures."
+  "Book Dr. Brenda Kubheka through The Speakers Firm, A Leading African Speakers Bureau, to deliver critical keynote sessions on workplace wellness, clinical governance, and ethical corporate cultures."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

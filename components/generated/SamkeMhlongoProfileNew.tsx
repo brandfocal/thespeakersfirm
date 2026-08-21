@@ -43,7 +43,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Her business accolades include being named MIPAD Top 100 Most Influential Persons of African Descent Class of 2018, Entrepreneur Magazine Top 50 Black African Women Entrepreneurs to Watch 2018, and Brand SA “Play Your Part” Ambassador in the field of Entrepreneurship.",
   "Mhlongo also promotes financial literacy as resident finance columnist for BONA magazine; a South African glossy with over 3million readers; and as presenter of the daily FreshBIZ report on Metro FM, South Africa’s largest commercial radio station with over 4million listeners.",
   "Mhlongo sharpened her finance expertise during her 7-year tenure at Investec Specialist Bank and Asset Manager. She is also the youngest board member of state-owned mineral research technology agency MINTEK and sits on its Audit & Risk Committee. She holds an UCT Accounting degree, Wits Business School Postgraduate Diploma in Management, and an MBA with a focus on factors contributing to over-indebtedness of black South African females.",
-  "Book Samke Mhlongo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring dynamic wealth coaching, small business financial wellness, and inspirational financial consciousness keynotes to your next event."
+  "Book Samke Mhlongo through The Speakers Firm, A Leading African Speakers Bureau, to bring dynamic wealth coaching, small business financial wellness, and inspirational financial consciousness keynotes to your next event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -37,7 +37,7 @@ const FULL_BIO_PARAGRAPHS = [
   "On radio, Thami continues to inspire as a long-standing voice on Metro FM, where she hosts the beloved and spiritually uplifting show “The Sacred Space.” Her ability to weave spirituality, purpose, and practical wisdom into relatable dialogue has made her a trusted companion to listeners across generations.",
   "As an author, entrepreneur, and content creator, Thami co-authored My Sacred Spaces (Penguin Books), a profound reflection on faith and inner renewal, and she leads Tamzin Media, a boutique production company producing purposeful content across television, film, radio, and print. Her editorial leadership also includes her tenure as Editor of O, The Oprah Magazine South Africa, where she championed narratives of empowerment and authenticity.",
   "A sought-after keynote speaker, moderator, and media strategist, Thami brings intellectual depth, emotional resonance, and spiritual clarity to every engagement. Her speaking themes include Faith and Leadership, Women and Purpose, The Art of Meaningful Media, and Cultural and Emotional Intelligence in Leadership, empowering audiences to lead, create, and live with intention.",
-  "Book Thami Ngubeni through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, for your next leadership retreat, women’s conference, or faith-based dialogue, and experience a voice that enlightens, uplifts, and transforms."
+  "Book Thami Ngubeni through The Speakers Firm, A Leading African Speakers Bureau, for your next leadership retreat, women’s conference, or faith-based dialogue, and experience a voice that enlightens, uplifts, and transforms."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Sibusiso Molimi is a highly celebrated South African Master of Ceremonies, keynote speaker, entrepreneur, and 'perspective-shifter'. Known for his infectious energy, charismatic stage presence, and ability to connect with audiences, Sibusiso has become a preferred host for corporate giants and national associations.",
   "With an extensive background in business management and entrepreneurship, Sibusiso delivers keynotes that inspire corporate teams to take accountability, adapt to change, and execute with focus.",
   "He specializes in facilitating high-level board panels, corporate retreat debates, and annual gala awards, ensuring smooth, professional, and memorable event execution.",
-  "Book Sibusiso Molimi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring the professional energy, composure, and inspiring perspective of a master host to your next event."
+  "Book Sibusiso Molimi through The Speakers Firm, A Leading African Speakers Bureau, to bring the professional energy, composure, and inspiring perspective of a master host to your next event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

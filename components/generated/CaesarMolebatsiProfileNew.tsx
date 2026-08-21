@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Caesar Molebatsi is a long standing champion for social justice and empowerment in South Africa, and has worked in youth and economic development on many fronts. His media involvement include facilitating ‘Two Way’, a popular television audience participation show, reflecting and encouraging the “pulse” of South Africa. He also facilitated the television series, ‘Search for Common Ground’, and the Peace Radio programme, ‘The Full Story’.",
   "Caesar is a corporate consultant and international speaker on such issues as Transformation, Justice & Reconciliation, Human Rights, Social Responsibility, Management of Diversity, Organisational Communication, Empowerment: The Product of Good Business, African Renaissance, & Youth Leadership Training. He has a Masters in Communications from Wheaton Graduate School, and chairs a number of key development and business organisations within the South African context, including the Accountability Institute.",
-  "Book Caesar Molebatsi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring inspirational keynote addresses, strategic transformation briefings, and diversity management seminars to your next corporate or community event."
+  "Book Caesar Molebatsi through The Speakers Firm, A Leading African Speakers Bureau, to bring inspirational keynote addresses, strategic transformation briefings, and diversity management seminars to your next corporate or community event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

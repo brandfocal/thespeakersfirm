@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Bafana Khumalo is the Director of Strategic Partnerships at Sonke Gender Justice and one of the organisation’s co-founders. Bafana has a long and accomplished track record in the NGO sector. He was senior gender technical advisor for EngenderHealth South Africa, working with SANAC and the National Department of Health to integrate gender into public health strategies.",
   "From 2000 to 2011, Bafana served as a Commissioner at the National Commission for Gender Equality (CGE). At the CGE, he was instrumental in assisting National and Provincial Departments of Government to plan and coordinate activities related to men, gender, and HIV/AIDS, including national dialogues on gender-based violence.",
   "Bafana is highly recognized for his work with traditional and religious leaders across South Africa’s provinces, building the National Gender Machinery Working Group on Men and Gender Equality. For his tireless contributions to human rights and gender justice, Bafana was honored with the prestigious Vital Voices Solidarity Award.",
-  "Book Bafana Khumalo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive policy advocacy insights, gender equity frameworks, and community mobilization keynotes to your organization or conference."
+  "Book Bafana Khumalo through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive policy advocacy insights, gender equity frameworks, and community mobilization keynotes to your organization or conference."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

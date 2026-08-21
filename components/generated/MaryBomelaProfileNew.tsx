@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Mary Bomela is a world-class executive who previously held the role of CEO for Mineworker’s Investment Company (MIC). With over ten years of experience as CEO and sixteen years in senior management roles, Mary has proven herself to be a commercial executive with a reputation of unlocking shareholder value through not only implementing focused and driven strategies, but also creating strong operational teams to implement these turnaround initiatives.",
   "Mary has accumulated an impressive career that continues to develop in stature and influence. Her current portfolio includes non-executive directorships within businesses across industry sectors such as media, telecoms, mining and industrial. Her ability to immerse herself as a commercial leader and in a capacity as a non-executive director and effect large-scale business turnarounds in highly complex corporate cultures has proven to be her greatest strength.",
-  "Book Mary Bomela through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring high-level corporate strategy insights, turnaround leadership keynotes, and inclusive growth briefings to your boardroom or summit."
+  "Book Mary Bomela through The Speakers Firm, A Leading African Speakers Bureau, to bring high-level corporate strategy insights, turnaround leadership keynotes, and inclusive growth briefings to your boardroom or summit."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

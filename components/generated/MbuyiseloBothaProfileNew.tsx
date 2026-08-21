@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Mbuyiselo Botha is one of South Africa's most prominent gender activists, commentators, and pioneers in positive masculinity. As a co-founder of Sonke Gender Justice, he has spent decades driving national and continental dialogues on gender equality, allyship, and the role of men in social transformation.",
   "Mbuyiselo is highly regarded for his ability to facilitate courageous, Nuanced conversations around male identity, gender relations, and domestic justice on national broadcasts and in corporate boardrooms.",
   "Through his advisory work and keynote addresses, Mbuyiselo counsels leadership teams on hardwiring gender equity into organizational culture, building inclusive workspaces, and fostering collaborative relationships between men and women allies.",
-  "Book Mbuyiselo Botha through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver definitive workshops, keynotes, and panel dialogues on masculinity, gender justice, and inclusive leadership."
+  "Book Mbuyiselo Botha through The Speakers Firm, A Leading African Speakers Bureau, to deliver definitive workshops, keynotes, and panel dialogues on masculinity, gender justice, and inclusive leadership."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

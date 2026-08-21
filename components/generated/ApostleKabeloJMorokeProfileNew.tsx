@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Apostle Kabelo J. Moroke is the visionary and founder of Charisma Life Tabernacle, an apostolic and prophetic ministry, and Kairos Apostolic Relationship, which is a network of over 40 churches. Residing in Pretoria, Gauteng, South Africa, Kabelo is married to Nompumelelo Moroke, and together they lead a dynamic spiritual community focused on spiritual transformation and empowerment.",
   "With an apostolic and prophetic calling confirmed by various seasoned servants of God, Apostle Moroke has dedicated his life to equipping church leaders, fostering community accountability, and redefining positive masculinity in faith-based spaces. His ministries focus on spiritual maturity, family alignment, and ethical leadership.",
   "A respected educator and theologian, Apostle Moroke is also known for his teaching on biblical hermeneutics, worship theology, and the principles of contentment over covetousness. Those who have sat under his ministry testify of his deep commitment to revelation knowledge and practical spiritual execution that transforms both individuals and organizations.",
-  "Book Apostle Kabelo J. Moroke through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring inspirational spiritual keynotes, leadership development teachings, and family alignment seminars to your next conference or event."
+  "Book Apostle Kabelo J. Moroke through The Speakers Firm, A Leading African Speakers Bureau, to bring inspirational spiritual keynotes, leadership development teachings, and family alignment seminars to your next conference or event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

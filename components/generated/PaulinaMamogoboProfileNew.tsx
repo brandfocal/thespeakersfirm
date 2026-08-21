@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. Paulina Mamogobo is a highly accomplished academic, leadership coach, and international policy expert with over 15 years of experience in policy, regulation, and international relations. She holds a Doctorate in Business Administration from the prestigious Gordon Institute of Business Science (GIBS).",
   "With a strong operational background, Paulina has over 8 years of hands-on experience in the manufacturing and services sectors, both locally and globally. She has specialized in industrial, incentive, foreign, trade, and investment policy, making her a trusted advisor on economic development and industrial strategies.",
   "A key milestone in her career includes serving as the project lead for the 2023 15th BRICS Summit in South Africa. This critical role enhanced her expertise in high-level diplomacy, global collaboration, stakeholder relations, and international negotiations.",
-  "Book Dr. Paulina Mamogobo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver insightful keynotes on trade policy, diplomatic leadership, and global industrial strategy at your next corporate summit."
+  "Book Dr. Paulina Mamogobo through The Speakers Firm, A Leading African Speakers Bureau, to deliver insightful keynotes on trade policy, diplomatic leadership, and global industrial strategy at your next corporate summit."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

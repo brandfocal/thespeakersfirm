@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Nonhlanhla 'Noni' Khumalo is a highly acclaimed Master of Ceremonies, panel facilitator, and television presenter. Known for her elegant presence, articulation, and dynamic hosting style, she has become a preferred host for blue-chip corporates and major media networks across South Africa.",
   "With extensive experience directing programmes for government conferences, corporate award galas, and global summits, Noni specializes in creating polished, engaging environments that ensure events run seamlessly.",
   "Noni also advises executives on public presentation, media training, and communication, helping leaders build their personal brand and speak with clarity on public platforms.",
-  "Book Nonhlanhla 'Noni' Khumalo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to elevate your next conference, awards evening, or corporate panel discussion."
+  "Book Nonhlanhla 'Noni' Khumalo through The Speakers Firm, A Leading African Speakers Bureau, to elevate your next conference, awards evening, or corporate panel discussion."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

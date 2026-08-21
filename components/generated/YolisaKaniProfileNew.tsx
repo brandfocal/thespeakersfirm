@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Ms. Yolisa Kani is an executive with over twenty years of experience in the transport and logistics sector, the built environment and infrastructure development. She currently holds the position of Chief Business Development Officer (CBDO) at a State Owned Entity responsible for group commercial and the Africa business. Yolisa is an international speaker and has been on a few occasions invited as a guest lecturer by the London School of Economics. From earlier on, she has always enjoyed using her voice to engage on everyday issues that affect women in leadership roles and in society and is no stranger to difficult conversations.",
   "Yolisa enjoys reading and the great outdoors, she summited both Mt Kilimanjaro and Salkantay in South America. Her leadership is defined by courage, high executive posture, and a deep commitment to sustainable infrastructure development in Africa.",
-  "Book Yolisa Kani through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring infrastructure strategy briefings, crisis leadership keynotes, and women-in-leadership conversations to your next boardroom or conference."
+  "Book Yolisa Kani through The Speakers Firm, A Leading African Speakers Bureau, to bring infrastructure strategy briefings, crisis leadership keynotes, and women-in-leadership conversations to your next boardroom or conference."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

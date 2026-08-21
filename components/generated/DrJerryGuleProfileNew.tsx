@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr Jerry Gule is a Harvard-educated leadership expert, CEO of the Institute of People Management (IPM), and one of Africa’s most respected authorities on leadership, transformation, and men’s empowerment. A seasoned executive coach, mentor, and thought leader, Dr Gule challenges men to lead with purpose, authenticity, and emotional intelligence.",
   "Dr Gule draws on decades of senior leadership experience, from pioneering transformation at TOTAL South Africa to steering national impact as CEO of IPM. His work bridges corporate excellence with human-centred leadership, offering insight that speaks to both heart and strategy.",
   "Recognised globally as a Harvard-educated leadership and men’s development coach in South Africa, Dr Gule delivers deeply engaging sessions that explore leadership, fatherhood, ethics, and purpose, blending international best practice with African wisdom. As the Chairman of The Love Trust, he also campaigns for the sustainable growth and decolonial transformation of South African NPOs.",
-  "Book Dr Jerry Gule through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive transformation workshops, ethical leadership masterclasses, and executive coaching frameworks to your organization."
+  "Book Dr Jerry Gule through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive transformation workshops, ethical leadership masterclasses, and executive coaching frameworks to your organization."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

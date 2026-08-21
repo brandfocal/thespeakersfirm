@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Viwe Tini CA(SA) is the Chief Executive Officer Designate at Vunani based in Sandton, Johannesburg. She is an ambitious and dynamic leader with 17 years of experience in financial services, widely recognized for her drive, adaptability, and ethical integrity. Fluent in five South African languages, Viwe is deeply committed to fostering equitable, inclusive growth across corporate and public sectors.",
   "Previously, Viwe served as a Consultant at Pretoria Portland Cement Company (PPC) and also held executive positions at Grant Thornton and SizweNtsaluba VSP. Her career includes key roles such as Acting Head of Finance at PPC Cement and Director at SNG Grant Thornton, where her expertise in audit and IFRS frameworks spanned multiple complex industries.",
   "With a strong focus on corporate strategy, financial stewardship, and team leadership, Viwe has been a pivotal force in promoting inclusion and transformation. She has contributed to diversity initiatives at both SNG Grant Thornton and Vunani Securities. Her unique background bridges the gap between rigorous financial management and purposeful organizational culture.",
-  "Book Viwe Tini CA(SA) through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring definitive financial leadership, corporate governance insight, and transformation strategies to your next event or boardroom."
+  "Book Viwe Tini CA(SA) through The Speakers Firm, A Leading African Speakers Bureau, to bring definitive financial leadership, corporate governance insight, and transformation strategies to your next event or boardroom."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

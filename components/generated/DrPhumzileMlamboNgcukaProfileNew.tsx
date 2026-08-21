@@ -54,7 +54,7 @@ const FULL_BIO_PARAGRAPHS = [
   "In South Africa, Dr. Mlambo-Ngcuka’s public service journey has been equally remarkable. From Member of Parliament to Deputy Minister of Trade and Industry, Minister of Minerals and Energy, and ultimately Deputy President of South Africa (2005 to 2008), she played a pivotal role in shaping policies that reduced inequality, strengthened governance, and fostered national transformation.",
   "A Hauser Leader at Harvard Kennedy School’s Center for Public Leadership and Chancellor of the University of Johannesburg, Dr. Mlambo-Ngcuka continues to inspire leaders, educators, and institutions to drive social innovation and equality in the Fourth Industrial Revolution era. Through her Umlambo Foundation, she champions education reform and digital literacy for educators across Africa.",
   "Her keynotes deliver unmatched insight into leadership, inclusion, education, and empowerment, making her the ideal choice for year-end functions, executive retreats, and strategy sessions seeking depth, inspiration, and global perspective.",
-  "Book Dr. Phumzile Mlambo-Ngcuka through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, and bring world class leadership insight, authenticity, and influence to your next event."
+  "Book Dr. Phumzile Mlambo-Ngcuka through The Speakers Firm, A Leading African Speakers Bureau, and bring world class leadership insight, authenticity, and influence to your next event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

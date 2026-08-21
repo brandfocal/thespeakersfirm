@@ -44,7 +44,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Mushambi has delivered powerful, future-focused sessions for global brands such as Facebook, Salesforce, Coca-Cola, PwC, Dell, QuickBooks, Workday, and Huawei. His engaging style and thought-provoking frameworks enable leaders to recode the DNA of their organisations, cultivating agility, creativity, and resilience in the face of disruption.",
   "Most recently, Mushambi led Accenture’s Commerce and Innovation practice, overseeing large scale digital transformation projects for Fortune 500 companies. Today, he serves as Partner at Blue Ocean TNS, advising enterprises on growth, transactions, and scalability across the US and Africa, and as Chief Technology Officer of the Black Fleet Network, advancing equity, ownership, and innovation in logistics and mobility.",
   "Whether working with startups or C-suite executives, Mushambi delivers keynotes that are transformative, actionable, and future ready, ideal for year-end functions, leadership strategy sessions, and teambuilding retreats.",
-  "Book Mushambi Mutuma through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, and empower your leaders to innovate fearlessly, lead with clarity, and thrive in the digital age."
+  "Book Mushambi Mutuma through The Speakers Firm, A Leading African Speakers Bureau, and empower your leaders to innovate fearlessly, lead with clarity, and thrive in the digital age."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

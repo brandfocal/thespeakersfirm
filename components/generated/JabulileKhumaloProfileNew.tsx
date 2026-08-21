@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Jabulile Khumalo is a strategic leadership speaker, author, executive leader, and human systems thinker whose work sits at the intersection of leadership, financial inclusion, emotional intelligence, and human-centered business strategy.",
   "Currently serving as the Head of Client Relationship Management at Old Mutual Foundation Market, Jabulile leads strategic initiatives across operational effectiveness, retention strategy, and client experience. Throughout her 20+ year leadership journey, she has steered major turnaround strategies and governance alignments within the financial services sector.",
   "Jabulile's book, 'The Uncomfortable Grace of Becoming', is a deeply reflective account of healing, self-discovery, and transition, bridging corporate leadership insights with emotional and human realities.",
-  "Book Jabulile Khumalo through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver deeply moving keynotes on human-centered leadership, emotional intelligence, and client experience strategy."
+  "Book Jabulile Khumalo through The Speakers Firm, A Leading African Speakers Bureau, to deliver deeply moving keynotes on human-centered leadership, emotional intelligence, and client experience strategy."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

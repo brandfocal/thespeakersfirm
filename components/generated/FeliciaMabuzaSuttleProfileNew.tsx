@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Felicia Mabuza-Suttle (widely known as South Africa's 'First Lady of Talk') is a legendary talk show hostess, entrepreneur, and international keynote speaker. She began her pioneering television career at the SABC in 1992, hosting Top Level, which later evolved into the iconic The Felicia Show (1995) and ultimately Felicia (2000), which captivated millions by addressing critical social issues and entertainment.",
   "Beyond her legendary television status, Felicia is a successful and dynamic entrepreneur. She has launched numerous business ventures including FMS Productions, Pamodzi Investments, the popular Back of the Moon restaurant, and a highly regarded line of signature apparel and accessories. Her business successes have continuously funded her extensive humanitarian initiatives.",
   "As a highly sought-after global keynote speaker and bestselling author, Felicia is passionate about leadership, self-actualization, and socio-economic transformation. She continuously advocates for drug and crime prevention, using her platforms and resources to mentor young leaders and support community development campaigns.",
-  "Book Felicia Mabuza-Suttle through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver powerful keynote addresses on personal transformation, female leadership, and entrepreneurial resilience."
+  "Book Felicia Mabuza-Suttle through The Speakers Firm, A Leading African Speakers Bureau, to deliver powerful keynote addresses on personal transformation, female leadership, and entrepreneurial resilience."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

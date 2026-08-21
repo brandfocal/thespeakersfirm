@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Peter Ndoro is one of Africa's most prominent, recognized, and respected broadcast journalists. With a career spanning over three decades in television and radio news anchoring, he has been a steady voice delivering global current affairs, business updates, and political analyses to millions of homes across the continent.",
   "Peter has worked with leading broadcasters including SABC News, CNBC Africa, and M-Net. He is highly sought after as a master of ceremonies and panel moderator for prestigious local and international summits, including the World Economic Forum (WEF) Africa, state banquets, and continental corporate retreats.",
   "Drawing on his deep expertise in communication, Peter also guides corporate executives on crisis communication, media strategy, and building executive presence in public forums.",
-  "Book Peter Ndoro through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring the unmatched authority, grace, and professionalism of a broadcasting legend to your next conference."
+  "Book Peter Ndoro through The Speakers Firm, A Leading African Speakers Bureau, to bring the unmatched authority, grace, and professionalism of a broadcasting legend to your next conference."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -36,7 +36,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Renowned for his dynamic style and impeccable professionalism, Nimrod has become a first-choice MC for corporate functions, awards ceremonies, team-building events, and private celebrations. His mastery of television and corporate in-house game shows has earned him the title of “The Ultimate Games Master,” with clients repeatedly booking him for his unmatched ability to bring energy, humour, and seamless flow to every occasion.",
   "Nimrod’s multi-lingual fluency, in English, isiZulu, isiXhosa, siSwati, Sesotho, and Tshivenda, allows him to connect authentically with South Africa’s richly diverse audiences, making him a true national treasure. His engaging yet tasteful comedic flair ensures that every event is memorable, uplifting, and inclusive.",
   "Known for his scandal-free reputation, Nimrod represents the highest standards of integrity and reliability in the entertainment industry. Feedback from clients consistently describes him as charismatic, articulate, professional, loyal, passionate, punctual, multi-talented, and humble, qualities that have cemented his place as one of the most respected and trusted personalities in South African entertainment.",
-  "Book Nimrod Nkosi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, for your next corporate event, awards gala, or brand activation, and experience an MC who delivers excellence, laughter, and connection with every audience he encounters."
+  "Book Nimrod Nkosi through The Speakers Firm, A Leading African Speakers Bureau, for your next corporate event, awards gala, or brand activation, and experience an MC who delivers excellence, laughter, and connection with every audience he encounters."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

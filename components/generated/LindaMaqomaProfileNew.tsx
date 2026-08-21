@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Linda Maqoma is a formidable voice in leadership, governance, and transformation, whose influence continues to redefine excellence across Africa’s corporate, public, and civic sectors. With over 17 years of experience in audit, finance, and strategic leadership, she is the Founder and Director of Nomatshawe Consulting Group. She currently serves as Interim Chair and Non-Executive Director at Cornerstone Performance Solutions, Vice President for Professionals at the Black Business Council, and Global Advisory Board Member at Makosi Audit.",
   "Linda is a Fellow of the Young African Leadership Initiative (YALI) and is aligned with the Aspen Global Leadership Network. Her accolades include being an Honorary Member of the Golden Key International Honour Society, a 2024 Global Women of Influence Awards nominee, and an honouree on the Drum Magazine Top 50 Women Power List. From early on, she has always enjoyed using her voice to engage on everyday issues that affect women in leadership roles and in society, and is no stranger to difficult conversations.",
-  "Book Linda Maqoma through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring corporate governance briefings, leadership transformation keynotes, and ethical transformation seminars to your next corporate or civic event."
+  "Book Linda Maqoma through The Speakers Firm, A Leading African Speakers Bureau, to bring corporate governance briefings, leadership transformation keynotes, and ethical transformation seminars to your next corporate or civic event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

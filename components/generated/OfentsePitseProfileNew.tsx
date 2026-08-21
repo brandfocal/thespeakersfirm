@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Ofentse Pitse is a creative visionary who, though enchanted by the continent she comes from, possesses a wide-eyed enthusiasm for the world of architecture, music, and curated experiences. Hailing from the capital city of South Africa – Pretoria; her musical roots stem from her beloved late mother’s love for old school music, as well as her family’s deep heritage in The Salvation Army church, with her grandfather being one of the most prominent jazz trumpeters and a co-founder of the iconic Sophiatown jazz band – The Jazz Maniacs.",
   "Pitse’s curiosity and love for music, led her to the introduction of the trumpet at just twelve-years of age. She received mentorship and earned the title of – 'the first young, black female conductor of an all-black orchestra and choir in Africa.' Her hard work and dedication have seen her break barriers in the orchestra world, garnering recognition from global brands such as Veuve Clicquot, Forbes Africa, CHANEL, Woolworths, Bidvest, Toyota Global, Netflix, and Redbull. One of her most notable collaborations was that of conducting and taking part in the recording with a 74-piece global female orchestra of color for the Netflix series Queen Charlotte.",
-  "Book Ofentse Pitse through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring creative innovation keynotes, diversity and assertion briefings, and custom performance curations to your next corporate summit."
+  "Book Ofentse Pitse through The Speakers Firm, A Leading African Speakers Bureau, to bring creative innovation keynotes, diversity and assertion briefings, and custom performance curations to your next corporate summit."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dudu Msomi is one of South Africa's most respected corporate governance authorities, strategy advisors, and board facilitators. With a distinguished career advising executive boards and leadership teams across private, public, and non-profit sectors, she offers invaluable perspectives on ethical stewardship and organizational resilience.",
   "As the founder and CEO of Busara Leadership Partners, Dudu has designed and implemented numerous executive development, mentorship, and corporate strategy programs, empowering the next generation of business leaders.",
   "Dudu is a passionate advocate for diversity, equity, and inclusion in the boardroom. She frequently speaks and writes on shifting leadership archetypes, strategic transformation, and building values-driven organizations that achieve sustainable growth.",
-  "Book Dudu Msomi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver critical keynote sessions on boardroom ethics, strategic transformation, and inclusive governance."
+  "Book Dudu Msomi through The Speakers Firm, A Leading African Speakers Bureau, to deliver critical keynote sessions on boardroom ethics, strategic transformation, and inclusive governance."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

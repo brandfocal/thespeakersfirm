@@ -48,7 +48,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Renowned for his high-energy keynotes, research-driven insights, and engaging delivery, Femi has worked with some of Africa’s most prestigious organisations including The Office of the Presidency, Barclays Africa, Tiger Brands, Unilever, Standard Bank, Old Mutual, Nedbank, FNB, Tsogo Sun, and Duke Corporate Education, among many others.",
   "As Research Director at The Mind Advance, a pioneering think tank consultancy, Femi leads research and strategy in unlocking human potential and organisational performance. His proprietary Mind Advance Maxima System™ is a globally benchmarked methodology used to help companies transform productivity, leadership, and business culture.",
   "Whether addressing executive leadership teams, corporate retreats, or large-scale conferences, Femi delivers actionable insights that inspire teams to elevate performance, embrace change, and build future-fit organisations. His sessions are perfect for year-end functions, leadership strategy sessions, and high-impact teambuilding retreats.",
-  "Book Femi Adebanji through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, and empower your teams to perform with purpose, innovate with passion, and lead with excellence."
+  "Book Femi Adebanji through The Speakers Firm, A Leading African Speakers Bureau, and empower your teams to perform with purpose, innovate with passion, and lead with excellence."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

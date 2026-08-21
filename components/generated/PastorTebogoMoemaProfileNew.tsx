@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Pastor Tebogo Moema is a highly respected South African spiritual leader, relationship counselor, author, and speaker. With a deep commitment to family building and community development, he has spent decades guiding couples and individuals towards marital alignment and personal growth.",
   "As an expert in family counseling and marriage coaching, Pastor Tebogo facilitates courageous dialogues around domestic communication, emotional maturity, and deconstructing limiting relationship archetypes.",
   "He frequently hosts relationship seminars, couples' retreats, and community upliftment forums, providing practical guidance that helps build values-driven families and cohesive communities.",
-  "Book Pastor Tebogo Moema through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver deeply inspiring seminars, workshops, and keynotes on relationship dynamics and family values."
+  "Book Pastor Tebogo Moema through The Speakers Firm, A Leading African Speakers Bureau, to deliver deeply inspiring seminars, workshops, and keynotes on relationship dynamics and family values."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

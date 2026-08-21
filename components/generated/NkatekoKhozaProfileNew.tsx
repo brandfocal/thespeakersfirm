@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "In 2002, she joined Barloworld Information Systems and AVIS Car Rental, where she successfully led the implementation of various CRM and ERP systems. Her strategic capabilities led her to a consulting role in 2006 at the Gauteng Shared Services Centre, where she served as the Lead Account Director.",
   "In 2014, Nkateko co-founded Dzana Investments, a Family Office investment holding company where she serves as Chief Executive Officer, with diversified interests in commercial property, renewable energy, private equity, and strategic sectors. She also co-founded Hlayisani Capital, a private equity and venture capital firm that invests in high-growth businesses across Sub-Saharan Africa, focused on catalysing socio-economic transformation and global competitiveness.",
   "Nkateko has served for seven years on the board of Italtile, where she chaired the Group Social and Ethics Committee. She is the Chairperson of the National Mentorship Movement, sits on the board of Endeavor South Africa, and serves as Chairperson of the Board of Mzansi Ballet NPC. Reflecting her deep commitment to rural development, she has driven multiple rural commercial property development and mixed-use initiatives since 2012.",
-  "Book Nkateko Khoza through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring strategic investment insights, corporate governance expertise, and passionate advocacy for inclusive growth to your next leadership event."
+  "Book Nkateko Khoza through The Speakers Firm, A Leading African Speakers Bureau, to bring strategic investment insights, corporate governance expertise, and passionate advocacy for inclusive growth to your next leadership event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

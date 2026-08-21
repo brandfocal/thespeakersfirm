@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Prof. Mazwe Majola is a highly distinguished South African academic, policy analyst, and governance consultant. Specializing in gender development, diversity integration, and national social policy, he has spent decades advising corporate boards and government departments on strategic transformation.",
   "As a public intellectual, Prof. Majola focuses on deconstructing systemic institutional barriers to foster inclusive leadership cultures, ethical governance models, and corporate gender equity.",
   "He frequently facilitates board evaluations, diversity workshops, and policy roundtables, helping organizations align their operational structures with progressive social values and modern compliance standards.",
-  "Book Prof. Mazwe Majola through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver authoritative lectures, board advisories, and governance keynotes."
+  "Book Prof. Mazwe Majola through The Speakers Firm, A Leading African Speakers Bureau, to deliver authoritative lectures, board advisories, and governance keynotes."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

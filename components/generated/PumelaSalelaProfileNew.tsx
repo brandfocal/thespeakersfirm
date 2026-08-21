@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. Pumela Salela, MBA, PhD, is an internationally recognized expert in trade, investment, and economic diplomacy. Currently serving as the CEO of Invest Global, she is the executive voice behind high-level conversations that shape trade and economic policies across Africa and the world.",
   "Previously, Dr. Salela served as the Country Head for the United Kingdom at Brand South Africa, where she promoted South Africa internationally, attracted Foreign Direct Investment (FDI), and strengthened the country's global reputation. Her career also includes senior executive roles within the South African Government and advisory consultations for the World Bank and the Rockefeller Foundation.",
   "Dr. Salela combines academic excellence as a Nelson Mandela Scholar with decades of lived executive experience negotiating international partnerships, advising senior policymakers, and moderating CEO roundtables at global forums.",
-  "Book Dr. Pumela Salela through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver authoritative keynotes, board advisories, and strategic moderations at international summits."
+  "Book Dr. Pumela Salela through The Speakers Firm, A Leading African Speakers Bureau, to deliver authoritative keynotes, board advisories, and strategic moderations at international summits."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

@@ -43,7 +43,7 @@ const FULL_BIO_PARAGRAPHS = [
   "From his beginnings in Eshowe, KwaZulu-Natal, to performances across Europe and Africa, Mbuso’s journey reflects resilience and reawakening. His acclaimed albums Zilindile and Ifa Lomkhono fuse Afro-jazz and Zulu folk to create a sonic landscape of transformation, a soundtrack to leadership, healing, and belonging.",
   "Armed with a master’s in arts Heritage from Wits University, Mbuso lectures and advises on African philosophy, cultural intelligence, and leadership. As founder of the AfrikanHeritage Ensemble and visionary behind the Mbuso Khoza Institute for Heritage and Cultural Studies, he mentors emerging leaders to anchor power in identity and empathy.",
   "A survivor of depression and vocal advocate for men’s mental health, Mbuso speaks candidly about the intersection of culture, vulnerability, and wholeness. His weekly feature on Ukhozi FM and his podcast Ikhosomba Lezincithabuchopho continue to inspire national conversations on identity, healing, and manhood.",
-  "Book Mbuso Khoza through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring heritage music, African philosophy lectures, and authentic masculinity dialogues to your next summit or corporate gathering."
+  "Book Mbuso Khoza through The Speakers Firm, A Leading African Speakers Bureau, to bring heritage music, African philosophy lectures, and authentic masculinity dialogues to your next summit or corporate gathering."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

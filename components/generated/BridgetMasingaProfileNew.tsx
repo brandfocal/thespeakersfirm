@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Bridget Masinga is one of South Africa’s most recognizable and respected media personalities, veterans of television and radio broadcasting, and cultural entrepreneurs. With a career spanning over 20 years, she has hosted major national broadcasts, high-profile corporate galas, and key cultural events.",
   "Highly regarded for her elegance, versatility, and strategic command of live stages, Bridget is an exceptional master of ceremonies and panel facilitator. She has led discussions featuring prominent leaders in business, governance, and the arts, ensuring dynamic, highly engaging event execution.",
   "Beyond her on-screen and on-air presence, Bridget is a passionate advocate for the development of Africa’s creative economy. She frequently speaks on the value of cultural heritage, brand building, and building supportive ecosystems for creative talent and female leaders.",
-  "Book Bridget Masinga through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring premium event facilitation, brand launches, and inspirational keynote moderation to your next summit."
+  "Book Bridget Masinga through The Speakers Firm, A Leading African Speakers Bureau, to bring premium event facilitation, brand launches, and inspirational keynote moderation to your next summit."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

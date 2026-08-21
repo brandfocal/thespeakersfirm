@@ -40,7 +40,7 @@ const STRATEGIC_THEMES = [
 const FULL_BIO_PARAGRAPHS = [
   "Zipho Sikhakhane is a sought-after global speaker, thought leader, writer, business strategist, and CEO of EMZ Advisory, a management consulting firm dedicated to enhancing organisational effectiveness and productivity. Her insights on leadership, change, and organisation culture have positively impacted multinationals operating in emerging markets. She has traveled to over 35 countries and worked in 6 continents. She also serves on several boards and has a Master of Business Administration from Stanford University in the United States, completed on a full merit scholarship.",
   "She founded EMZ Advisory, a 100% black female owned consulting firm in 2015 with the vision of creating a firm that will enable business leaders to unleash their business potential. Through an advisory partnership that delivers customised, strategic solutions for private and public sector clients. She has managed to fund the employment of over 30 specialists, graduates, trainers and facilitators in line with her passion of developing the youth within South Africa.",
-  "Book Zipho Sikhakhane through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring global business strategies, grounded optimism frameworks, and youth leadership keynotes to your next event or corporate session."
+  "Book Zipho Sikhakhane through The Speakers Firm, A Leading African Speakers Bureau, to bring global business strategies, grounded optimism frameworks, and youth leadership keynotes to your next event or corporate session."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

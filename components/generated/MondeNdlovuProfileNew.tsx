@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Monde Ndlovu is the Managing Director of the Black Management Forum (BMF), a premier South African professional organization dedicated to management development and socio-economic transformation. He previously served as the BMF's first Head of Thought Leadership and has sat on its National Events, Editorial, and Policy and Research Exco committees.",
   "In addition to his leadership at the BMF, Monde serves as the Chairperson of the Henley Business School Johannesburg Alumni Chapter and is a Board Trustee of the Maduke Lot Ndlovu Legacy Trust. He is also a Non-executive Board member of the PGA of South Africa, where he chairs the Transformation Committee.",
   "An active contributor to public discourse, Monde regularly writes on leadership, economic transformation, and policy for Eyewitness News and 702. He co-leads the equality stream for V20 South Africa and, in 2024, was honored as one of the global 100 leading black professionals by the ICABA World Network. He holds qualifications from UNISA and Henley Business School.",
-  "Book Monde Ndlovu through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver corporate leadership keynotes, transformation strategy workshops, and ethical governance panel moderation at your next corporate event."
+  "Book Monde Ndlovu through The Speakers Firm, A Leading African Speakers Bureau, to deliver corporate leadership keynotes, transformation strategy workshops, and ethical governance panel moderation at your next corporate event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

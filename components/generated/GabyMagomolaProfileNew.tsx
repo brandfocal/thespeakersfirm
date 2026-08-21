@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Gaby Magomola is a highly respected South African business leader, author, and political activist who has dedicated over 30 years to corporate finance, banking, and general management across multiple countries. He currently serves as the Chairman of Thamaga Holdings and is a Director and Chairman of the Audit Committee for Global Asset Management, which is listed on the JSE.",
   "Gaby’s journey is one of incredible resilience. He spent six years as a political prisoner on Robben Island. Following his release, he was awarded a prestigious Fulbright-Hayes Fellowship, allowing him to pursue an MBA in International Finance from Ball State University (USA) and gain valuable financial experience in the United States, including an internship and tenure at Citibank.",
   "Upon returning to South Africa in the mid-1980s, Gaby became a central figure in business transformation, heading African Bank and chairing FABCOS (a coalition of black business organizations). He also served as a Divisional Director at the CSIR and played a pivotal role in early initiatives that led to the development of Black Economic Empowerment (BEE).",
-  "Book Gaby Magomola through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring seasoned business leadership, corporate governance insights, and powerful stories of personal resilience to your next conference or corporate event."
+  "Book Gaby Magomola through The Speakers Firm, A Leading African Speakers Bureau, to bring seasoned business leadership, corporate governance insights, and powerful stories of personal resilience to your next conference or corporate event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

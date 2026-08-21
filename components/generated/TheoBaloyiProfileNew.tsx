@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Theo Baloyi is a visionary South African entrepreneur and the founder of Bathu, Africa’s premium sneaker brand, where he currently serves as Group CEO. Originally from Phake, a small town on the outskirts of Pretoria, Theo matriculated from Mabothe Senior Secondary School before going on to earn his BCom Accounting Sciences degree from the University of South Africa (UNISA).",
   "Before embarking on his entrepreneurial path, Theo spent several years in the corporate finance sector. He worked at PwC South Africa in asset management, strategy, and financial management, and was subsequently seconded to PwC Middle East (based in Dubai and Saudi Arabia) for three years. This global corporate experience gave him deep insights into international business dynamics and institutional operations.",
   "In 2015, driven by a desire to create a premium sneaker brand that Africans could proudly identify with while generating employment opportunities for local youth, he returned to South Africa to establish Bathu. Under his leadership, Bathu has grown from a single room in Alexandra to a national retail powerhouse with dozens of stores across South Africa, becoming a symbol of hope and aspiration.",
-  "Book Theo Baloyi through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring inspirational keynote addresses, entrepreneurship strategy sessions, and brand-building insights to your next corporate or community event."
+  "Book Theo Baloyi through The Speakers Firm, A Leading African Speakers Bureau, to bring inspirational keynote addresses, entrepreneurship strategy sessions, and brand-building insights to your next corporate or community event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

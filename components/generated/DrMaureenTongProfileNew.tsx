@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. Maureen Tong is a highly distinguished international legal scholar, corporate governance authority, leadership coach, and author. Renowned as a powerhouse in gender empowerment and institutional reform, Dr. Maureen has spent over two decades advising governments, corporates, and civil society.",
   "She holds advanced academic law credentials and has steered major research initiatives on land reform, human rights, and constitutional law across Africa and Europe.",
   "Dr. Maureen is the author of the bestselling book 'POUR INTO YOUR SOUL: Overflow'. She actively coaches senior executives and women leaders, helping them build professional resilience and lead values-driven teams.",
-  "Book Dr. Maureen Tong through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver authoritative keynotes on governance, gender power dynamics, and constitutional leadership."
+  "Book Dr. Maureen Tong through The Speakers Firm, A Leading African Speakers Bureau, to deliver authoritative keynotes on governance, gender power dynamics, and constitutional leadership."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

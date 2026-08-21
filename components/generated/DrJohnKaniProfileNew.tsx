@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Dr. John Kani is a world-renowned South African actor, playwright, director, and activist. Known globally for his seminal protest plays such as 'Sizwe Banzi is Dead' and 'The Island' (co-authored with Athol Fugard and Winston Ntshona), Kani's work has defined and challenged global cultural narratives.",
   "His highly distinguished career spans international stage performances, critically acclaimed roles in Hollywood blockbusters (including 'Black Panther' and 'The Lion King'), and leadership of major cultural institutions such as the Market Theatre.",
   "As a public intellectual and speaker, Dr. Kani focuses on the power of cultural memory, storytelling, and active civic participation. He challenges corporate, academic, and governmental leadership to support the arts and build inclusive national identities.",
-  "Book Dr. John Kani through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to bring the lived wisdom, authority, and inspiring stories of a global cultural legend to your event."
+  "Book Dr. John Kani through The Speakers Firm, A Leading African Speakers Bureau, to bring the lived wisdom, authority, and inspiring stories of a global cultural legend to your event."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

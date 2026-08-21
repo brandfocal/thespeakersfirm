@@ -42,7 +42,7 @@ const FULL_BIO_PARAGRAPHS = [
   "A distinguished figure in African business, Tryphosa has held senior executive roles at National Treasury, WIPHOLD, and South African Airways, and served as Chief Financial Officer (CFO) at PPC Ltd, where she led the company’s major expansion across Zimbabwe, Botswana, the DRC, Ethiopia, and Rwanda. Her strategic foresight and financial stewardship safeguarded PPC’s growth trajectory and market capitalisation during this period of bold continental expansion.",
   "Currently an independent consultant and Board Member for the IWFSA and the Solidarity Fund, Tryphosa continues to shape policy and corporate strategy at the highest levels. She is a former President of the Association of Black Securities and Investment Professionals (ABSIP) and Chairperson of the Black Business Council, with board experience spanning ACSA, DBSA, SAA, Sasria, Adcorp, Land Bank, and the African Union Board of Auditors.",
   "Her keynotes deliver powerful insight into leadership, governance, women in finance, and sustainable business growth, making her the ideal choice for year-end corporate events, executive retreats, and strategy sessions.",
-  "Book Tryphosa Ramano through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, and empower your leadership teams to think boldly, govern with integrity, and build sustainable legacies of performance and impact."
+  "Book Tryphosa Ramano through The Speakers Firm, A Leading African Speakers Bureau, and empower your leadership teams to think boldly, govern with integrity, and build sustainable legacies of performance and impact."
 ];
 
 const SOCIAL_PROOF_LOGOS = [

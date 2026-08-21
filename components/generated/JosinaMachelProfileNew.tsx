@@ -41,7 +41,7 @@ const FULL_BIO_PARAGRAPHS = [
   "Josina Z. Machel is a highly recognized Mozambican and South African human rights defender, gender activist, and founder of the Kuhluka Movement. Continuing a proud family legacy of social justice and liberation, Josina focuses her work on championing women’s rights and ending gender-based violence (GBV) across Africa.",
   "As a survivor of domestic violence herself, Josina has channeled her personal experiences into global advocacy, speaking before international bodies and community forums to call for stronger laws and support structures for GBV survivors.",
   "Through the Kuhluka Movement, Josina works to establish safe havens, provide psychological support, and foster economic independence for women escaping domestic abuse, helping them build sustainable and self-reliant futures.",
-  "Book Josina Z. Machel through The Speakers Firm, Africa’s #1 Strategic Speakers Bureau, to deliver deeply inspiring keynotes on gender equality, personal resilience, and community advocacy."
+  "Book Josina Z. Machel through The Speakers Firm, A Leading African Speakers Bureau, to deliver deeply inspiring keynotes on gender equality, personal resilience, and community advocacy."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
