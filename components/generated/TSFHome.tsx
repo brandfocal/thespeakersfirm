@@ -4741,13 +4741,13 @@ export const TheSpeakersFirmHome = () => {
               {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
                 <div 
                   key={`${speaker.id}-${index}`}
-                  className="relative aspect-[16/10] md:aspect-[21/9] w-[calc(100vw-48px)] md:w-[calc(100vw-160px)] md:max-h-[580px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
+                  className="relative aspect-[16/10] md:aspect-[21/9] w-[calc(100vw-48px)] md:w-[calc(100vw-160px)] md:max-h-[580px] shrink-0 rounded-[28px] overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
                 >
                   {/* Speaker Background Image */}
                   <img 
                     src={speaker.image} 
                     alt={speaker.name} 
-                    className="absolute inset-0 h-full w-full object-contain bg-black transition-transform duration-700 group-hover/card:scale-[1.02]"
+                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 group-hover/card:scale-[1.02]"
                   />
                   {/* Speaker Info and CTA */}
                   <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
