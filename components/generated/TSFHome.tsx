@@ -4756,7 +4756,7 @@ export const TheSpeakersFirmHome = () => {
                       href={speaker.profileUrl} 
                       whileHover={{ scale: 1.02 }} 
                       whileTap={{ scale: 0.98 }} 
-                      className="inline-flex w-fit self-start mt-5 cursor-pointer"
+                      className="inline-flex w-fit self-center mt-5 cursor-pointer"
                       style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
                     >
                       <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
