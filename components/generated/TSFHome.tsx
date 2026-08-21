@@ -1918,32 +1918,102 @@ export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
 
 const WELCOME_SPEAKERS = [
   {
+    id: "clement-manyathela",
+    name: "Clement Manyathela",
+    role: "Broadcaster, Panel Facilitator & MC",
+    image: "/welcome_slides/clement-manyathela.jpg",
+    profileUrl: "/tracks/mc-and-facilitators/clement-manyathela"
+  },
+  {
+    id: "dr-anele-siswana",
+    name: "Dr. Anele Siswana",
+    role: "Clinical Psychologist & Decolonial Scholar",
+    image: "/welcome_slides/dr-anele-siswana.jpg",
+    profileUrl: "/tracks/masculinity/anele-siswana"
+  },
+  {
+    id: "dr-david-molapo",
+    name: "Dr. David Molapo",
+    role: "Management Consultant & Educationalist",
+    image: "/welcome_slides/dr-david-molapo.jpg",
+    profileUrl: "/tracks/inspirational-keynote-speakers/david-molapo"
+  },
+  {
+    id: "dr-mncane-mthunzi",
+    name: "Dr. Mncane Mthunzi",
+    role: "Corporate Governance, Transformation & Leadership",
+    image: "/welcome_slides/dr-mncane-mthunzi.jpg",
+    profileUrl: "/tracks/future-of-work/dr-mncane-mthunzi"
+  },
+  {
+    id: "dr-mzamo-masito",
+    name: "Dr. Mzamo Masito",
+    role: "Global Marketing Director & Brand Strategist",
+    image: "/welcome_slides/dr-mzamo-masito.jpg",
+    profileUrl: "/tracks/media-brand-reputation/mzamo-masito"
+  },
+  {
+    id: "dr-nombasa-tsengwa",
+    name: "Dr. Nombasa Tsengwa",
+    role: "CEO of Exxaro Resources & Business Leader",
+    image: "/welcome_slides/dr-nombasa-tsengwa.jpg",
+    profileUrl: "/tracks/female-keynote-speakers/nombasa-tsengwa"
+  },
+  {
     id: "dr-pali-lehohla",
     name: "Dr. Pali Lehohla",
     role: "Economics, Policy & National Statistics",
-    image: "/welcome_slides/Dr-Pali-Lehohla.jpg",
+    image: "/welcome_slides/dr-pali-lehohla.jpg",
     profileUrl: "/tracks/economics-and-politics/dr-pali-lehohla"
   },
   {
-    id: "pumela-salela",
+    id: "dr-pumela-salela",
     name: "Dr. Pumela Salela",
     role: "Global Competitiveness, ESG & Brand Architecture",
-    image: "/welcome_slides/Dr-Pumela-Salela.jpg",
+    image: "/welcome_slides/dr-pumela-salela.jpg",
     profileUrl: "/tracks/economics-and-politics/pumela-salela"
   },
   {
     id: "dr-shingai-mutambirwa",
     name: "Dr. Shingai Mutambirwa",
     role: "Clinical Wellness, Urology & Healthcare Leadership",
-    image: "/welcome_slides/Dr-Shingai-Mutambirwa.jpg",
+    image: "/welcome_slides/dr-shingai-mutambirwa.jpg",
     profileUrl: "/tracks/workplace-wellness/dr-shingai-mutambirwa"
   },
   {
-    id: "mncane-mthunzi",
-    name: "Mncane Mthunzi",
-    role: "Corporate Governance, Transformation & Leadership",
-    image: "/welcome_slides/Mncane-Mthunzi.jpg",
-    profileUrl: "/tracks/future-of-work/dr-mncane-mthunzi"
+    id: "dr-steven-molakeng",
+    name: "Dr. Steven Molakeng",
+    role: "Academic, Music Business Specialist & Author",
+    image: "/welcome_slides/dr-steven-molakeng.jpg",
+    profileUrl: "/tracks/masculinity/steven-molakeng"
+  },
+  {
+    id: "musa-sono",
+    name: "Musa Sono",
+    role: "Inspirational Speaker & Disability Activist",
+    image: "/welcome_slides/musa-sono.jpg",
+    profileUrl: "/tracks/entrepreneurship/musa-sono"
+  },
+  {
+    id: "noni-khumalo",
+    name: "Noni Khumalo",
+    role: "Global Business Executive & Strategy Facilitator",
+    image: "/welcome_slides/noni-khumalo.jpg",
+    profileUrl: "/tracks/female-keynote-speakers/noni-khumalo"
+  },
+  {
+    id: "paul-nzimande",
+    name: "Paul Nzimande",
+    role: "Executive Coach & Human Performance Specialist",
+    image: "/welcome_slides/paul-nzimande.jpg",
+    profileUrl: "/tracks/neuroscience-peak-performance-mental-agility/paul-nzimande"
+  },
+  {
+    id: "samke-mhlongo",
+    name: "Samke Mhlongo",
+    role: "Wealth Advisor & Personal Finance Author",
+    image: "/welcome_slides/samke-mhlongo.jpg",
+    profileUrl: "/tracks/financial-inclusion/samke-mhlongo"
   }
 ];
 
