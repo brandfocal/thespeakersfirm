@@ -4050,6 +4050,14 @@ export const TheSpeakersFirmHome = () => {
 
   React.useEffect(() => {
     const c = welcomeCarouselRef.current;
+    if (c) {
+      const loopPoint = c.scrollWidth / 3;
+      if (loopPoint > 0) c.scrollLeft = loopPoint;
+    }
+  }, []);
+
+  React.useEffect(() => {
+    const c = welcomeCarouselRef.current;
     if (!c || prefersReducedMotion) {
       return undefined;
     }
@@ -4064,6 +4072,9 @@ export const TheSpeakersFirmHome = () => {
         c.scrollLeft += speed * deltaSeconds;
         if (seamlessLoopPoint > 0 && c.scrollLeft >= seamlessLoopPoint * 2) {
           c.scrollLeft -= seamlessLoopPoint;
+        }
+        if (seamlessLoopPoint > 0 && c.scrollLeft <= 10) {
+          c.scrollLeft += seamlessLoopPoint;
         }
       }
       animationFrame = window.requestAnimationFrame(scrollStep);
