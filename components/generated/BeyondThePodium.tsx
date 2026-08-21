@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 /**
  * BeyondThePodium Component
  * A premium, dark-themed section for The Speakers Firm featuring
- * strategic interventions and executive roundtables.
+ * strategic showcases and speaker action reels.
  */
 
 interface DialogueSeries {
@@ -19,130 +19,48 @@ interface DialogueSeries {
 
 const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
   {
-    id: "sifiso-nene",
-    title: "Sifiso Nene | Stand Up Comedian",
-    speakerName: "Sifiso Nene",
-    youtubeId: "fI2uQHu8C3A",
-    description: "Hilarious stand-up comedy and storytelling capturing everyday experiences."
-  },
-  {
-    id: "tumi-ramonotsi",
-    title: "Tumi Ramonotsi - Oracle",
-    speakerName: "Tumi Ramonotsi",
-    youtubeId: "Xb2VPORlJ5U",
-    description: "Insightful keynote on cloud technology, digital transformation, and business strategy."
-  },
-  {
-    id: "lincoln-mali-blazing-a-trail",
-    title: "Author of 'Blazing A Trail' Book Roundtable",
-    speakerName: "Lincoln Mali",
-    youtubeId: "KaDKu8ChKYs",
-    description: "Lesaka Technologies CEO discussing his book 'Blazing A Trail' and executive leadership."
-  },
-  {
-    id: "lincoln-mali-leadership",
-    title: "Lincoln Mali Leadership Dialogue Series",
-    speakerName: "Lincoln Mali",
-    youtubeId: "bjcHrXaccTY",
-    description: "Debating structural integrity, accountability, and the demands of ethical servant leadership in corporate governance."
-  },
-  {
-    id: "mteto-nyati",
-    title: "Chairman of Eskom at the 'Blazing A Trail' Book Roundtable",
-    speakerName: "Mteto Nyati",
-    youtubeId: "9GQaaOlowW0",
-    description: "Discussing institutional turnarounds, corporate governance, and leadership during energy crises."
-  },
-  {
-    id: "blazing-a-trail-experience",
-    title: "Official Experience Reel | 'Blazing a Trail' Exclusive Book Roundtable",
-    speakerName: "Roundtable Reel",
-    youtubeId: "UcACoBam75o",
-    description: "A premium overview of the exclusive 2025 book roundtable with industry captains."
-  },
-  {
-    id: "bonang-mohale-autobiography",
-    title: "‘Coming in From the Cold - An Autobiography’ Book Launch",
+    id: "bonang-mohale-aic",
+    title: "Prof. Bonang Mohale at the AIC",
     speakerName: "Prof. Bonang Mohale",
-    youtubeId: "O6_1XH3MMcE",
-    description: "Reflections on his autobiography, detailing the struggles and triumphs of black leadership in corporate South Africa."
+    youtubeId: "WAoB-9naCiI",
+    description: "Keynote address delivered at the African Insurance Conference (AIC)."
   },
   {
-    id: "tebogo-mekgoe",
-    title: "EmpowaGrowth Workshop | Business Model Innovation",
-    speakerName: "Tebogo Mekgoe",
-    youtubeId: "dn4DuJtt7mI",
-    description: "Exploring systemic alignment, organizational health, and leadership performance in business strategy."
+    id: "lerato-sithole-aie-2026",
+    title: "Closing Address | African Insurance Exchange 2026",
+    speakerName: "Lerato Sithole",
+    youtubeId: "fOa-tocKI1U",
+    description: "Lerato Sithole delivering the closing address at the African Insurance Exchange 2026."
   },
   {
-    id: "mary-bomela",
-    title: "CEO and Director of Companies at TUT’s IFOW 4th Annual Dialogue",
-    speakerName: "Mary Bomela",
-    youtubeId: "INOSSwpIlv8",
-    description: "Insights on female leadership, board strategy, and driving value across diverse investment portfolios."
-  },
-  {
-    id: "bonang-mohale-tut",
-    title: "4th Annual TUT Future of Work Keynote Address",
+    id: "bonang-mohale-leadership-decisions",
+    title: "Leadership & Decisions Highlight",
     speakerName: "Prof. Bonang Mohale",
-    youtubeId: "2s5CXK-w0AQ",
-    description: "Unpacking ethical corporate leadership, human-centric strategies, and socio-economic transformation for the future of work."
-  },
-  {
-    id: "reuel-khoza-roundtable",
-    title: "The 2025 Book Roundtable Series - Legacy Beyond Leadership",
-    speakerName: "Dr. Reuel Khoza",
-    youtubeId: "0ij-23dNHvM",
-    description: "A deep dive roundtable dialogue into Dr. Reuel Khoza's perspective on legacy beyond leadership, ethics, and corporate governance."
-  },
-  {
-    id: "zola-mbatha",
-    title: "Orange Farm EmpowaMen Experience",
-    speakerName: "Zola Mbatha",
-    youtubeId: "yA5_vrN2vM0",
-    description: "Addressing positive masculinity, community development, and leadership in social change spaces."
-  },
-  {
-    id: "john-kani",
-    title: "Dr Bonisile John Kani OIS OBE Keynote",
-    speakerName: "Dr. John Kani",
-    youtubeId: "4pwj3RCt2RI",
-    description: "Acclaimed actor and playwright sharing insights on cultural identity, heritage, and the power of storytelling."
-  },
-  {
-    id: "bonang-mohale-transnet",
-    title: "Professor Bonang Mohale - Transnet Keynote",
-    speakerName: "Prof. Bonang Mohale",
-    youtubeId: "z20ciVNtc8A",
-    description: "Strategic insights on economic development, corporate governance, and state-owned enterprise transformation."
-  },
-  {
-    id: "muzi-kuzwayo",
-    title: "Muzi Kuzwayo - Orange Farm EmpowaMen Programme",
-    speakerName: "Muzi Kuzwayo",
-    youtubeId: "3xJJ0IQQFCw",
-    description: "Speaking on brand strategy, socio-economic empowerment, and positive role models in society."
-  },
-  {
-    id: "bonang-mohale-empowamen",
-    title: "Bonang Mohale - Orange Farm EmpowaMen Programme",
-    speakerName: "Prof. Bonang Mohale",
-    youtubeId: "Txr0O_M6bb0",
-    description: "Addressing leadership accountability, community mentorship, and empowering the next generation."
-  },
-  {
-    id: "empowamen-experience",
-    title: "Experience Reel - Orange Farm EmpowaMen Programme",
-    speakerName: "EmpowaMen Reel",
-    youtubeId: "tZ-ick_bEGw",
-    description: "Visual highlights of the community dialogue, mentorship workshops, and leadership interventions."
+    youtubeId: "IaZvJjCg8uQ",
+    description: "A powerful perspective explaining why leadership is defined by the decisions you make."
   }
 ];
+
+const VerticalBorderLines: React.FC<{ isDark?: boolean }> = ({ isDark = false }) => {
+  const borderColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(33, 33, 33, 0.14)';
+  const capColor = isDark ? '#FFFFFF' : '#000000';
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+      <div className="h-full mx-auto max-w-[1440px] relative px-6 md:px-16">
+        <div className="absolute left-6 md:left-16 top-0 bottom-0 w-[1px]" style={{ backgroundColor: borderColor }}>
+          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{ backgroundColor: capColor }} />
+        </div>
+        <div className="absolute right-6 md:right-16 top-0 bottom-0 w-[1px]" style={{ backgroundColor: borderColor }}>
+          <div className="absolute -top-[3.5px] left-1/2 -translate-x-1/2 w-[7px] h-[7px]" style={{ backgroundColor: capColor }} />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export const BeyondThePodium: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
-  const [showAll, setShowAll] = React.useState<boolean>(false);
   
   const isInView = useInView(containerRef, {
     once: true,
@@ -193,13 +111,13 @@ export const BeyondThePodium: React.FC = () => {
     })
   };
 
-  const displayedVideos = showAll ? DIALOGUE_SERIES_DATA : DIALOGUE_SERIES_DATA.slice(0, 6);
+  const displayedVideos = DIALOGUE_SERIES_DATA;
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-screen bg-[#0F0F0F] text-[#F5F5F0] overflow-hidden" aria-labelledby="beyond-the-podium-heading">
+    <section ref={containerRef} className="relative w-full min-h-screen bg-[#000000] text-[#F5F5F0] overflow-hidden border-b border-white/10" aria-labelledby="beyond-the-podium-heading">
       <style>{`
         .tsf-cinematic-preview {
-          background-color: #080808;
+          background-color: #000000;
           isolation: isolate;
         }
         .tsf-cinematic-preview::before {
@@ -215,8 +133,8 @@ export const BeyondThePodium: React.FC = () => {
         }
       `}</style>
       
-      {/* Signature Vertical Motif - Left Border Rule */}
-      <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[#333333] z-10 hidden md:block" aria-hidden="true" />
+      {/* Signature Vertical Motifs */}
+      <VerticalBorderLines isDark />
 
       {/* Video Modal Player */}
       <AnimatePresence>
@@ -255,12 +173,24 @@ export const BeyondThePodium: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="container mx-auto px-6 py-20 sm:py-24 md:px-12 md:py-28 lg:py-[140px] flex flex-col justify-center min-h-screen max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-20 sm:py-24 md:px-16 md:py-28 lg:py-[140px] flex flex-col justify-center min-h-screen">
         
         {/* Header Section */}
         <div className="mb-14 max-w-4xl sm:mb-16 md:mb-24 lg:mb-32">
+          {/* Eyebrow Standards */}
+          <div className="mb-6 flex">
+            <div className="inline-flex items-center border border-l-[4px] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] shadow-none" style={{
+              backgroundColor: '#000000',
+              borderColor: 'rgba(255, 255, 255, 0.18)',
+              borderLeftColor: '#e30e04',
+              color: '#ffffff'
+            }}>
+              <span>Speakers in Action</span>
+            </div>
+          </div>
+
           <motion.h2 id="beyond-the-podium-heading" initial="hidden" animate={isInView ? "visible" : "hidden"} variants={headlineVariants} className="text-[clamp(2.875rem,11vw,4.75rem)] font-bold uppercase tracking-[-0.05em] leading-[0.95] mb-6">
-            Beyond the Podium.
+            Speakers in Action.
           </motion.h2>
 
           {/* Animated Red Rule */}
@@ -281,8 +211,7 @@ export const BeyondThePodium: React.FC = () => {
             duration: 1,
             delay: 1.2
           }} className="text-lg md:text-xl text-[#AAAAAA] leading-relaxed max-w-2xl font-sans">
-            We orchestrate closed-door Executive Roundtables, Book Dialogues, and high-level 
-            intellectual ecosystems that move organisations past surface-level talk and into strategic momentum.
+            Experience our world-class speakers live on stage. Explore action reels and keynote showcases from premier global events.
           </motion.p>
         </div>
 
@@ -340,29 +269,6 @@ export const BeyondThePodium: React.FC = () => {
             </motion.article>
           ))}
         </div>
-
-        {/* Call to Action */}
-        <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={isInView ? {
-          opacity: 1,
-          y: 0
-        } : {
-          opacity: 0,
-          y: 20
-        }} transition={{
-          duration: 0.8,
-          delay: 1.5
-        }} className="mt-16 md:mt-24 lg:mt-32">
-          <button 
-            onClick={() => setShowAll(!showAll)}
-            className="group relative flex items-center gap-3 px-7 py-4 sm:px-8 border border-[#F5F5F0] rounded-full text-[#F5F5F0] transition-all duration-300 hover:bg-[#F5F5F0] hover:text-[#0F0F0F] font-sans font-medium uppercase tracking-widest text-xs"
-          >
-            <span>{showAll ? "Show Less Interventions" : "View All Strategic Interventions"}</span>
-            <ArrowRight className={cn("w-4 h-4 transition-transform", showAll ? "-rotate-90" : "group-hover:translate-x-1")} />
-          </button>
-        </motion.div>
       </div>
     </section>
   );

@@ -830,7 +830,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'bridget-masinga',
   name: 'Bridget Masinga',
   category: ['MCs'],
-  image: '/speakers/Bridget Masinga/Bridget-Masinga-The-Speakers-Firm3.jpg',
+  image: '/speakers/Bridget Masinga/Bridget-Masinga-The-Speakers-Firm.jpg',
   alt: 'Bridget Masinga',
   quote: 'Live stages are spaces to build connections and elevate stories.',
   youtubeId: 'lT4ihmin7mw',
@@ -1728,7 +1728,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'ntosh-madlingozi',
   name: 'Ntosh Madlingozi',
   category: 'Comedy',
-  image: '/speakers/Ntosh Madlingozi/Ntobeko-Ntosh-Madlingozi.jpg',
+  image: '/speakers/Ntosh Madlingozi/Ntosh-Madlingozi-The-Speakers-Firm.jpg',
   alt: 'Ntosh Madlingozi',
   quote: 'Understanding and adapting to the collective funny bone of an audience is where comedy transforms into connection.',
   youtubeId: 'nfS7SRV-gSs',
@@ -1739,7 +1739,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'ndumiso-lindi',
   name: 'Ndumiso Lindi',
   category: 'Comedy',
-  image: '/speakers/Ndumiso Lindi/Ndumiso-Lindi-1.jpg',
+  image: '/speakers/Ndumiso Lindi/Ndumiso-Lindi-The-Speakers-Firm.jpg',
   alt: 'Ndumiso Lindi',
   quote: 'Understanding your audience and delivering down-to-earth stories is how you keep people laughing from the belly.',
   youtubeId: 'I0_tDPmCALM',
@@ -1750,7 +1750,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'mpho-popps',
   name: 'Mpho Popps Modikoane',
   category: 'Comedy',
-  image: '/speakers/Mpho Popps/Mpho-Popps.jpg',
+  image: '/speakers/Mpho Popps/Mpho-Popps-The-Speakers-Firm.jpg',
   alt: 'Mpho Popps Modikoane',
   quote: 'Laughter is not just entertainment, it is a powerful form of connection, healing, and cultural celebration.',
   youtubeId: 'x6t2e0roe2M',
@@ -1761,7 +1761,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'kagiso-kg-mokgadi',
   name: 'Kagiso “KG” Mokgadi',
   category: 'Comedy',
-  image: '/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi.jpg',
+  image: '/speakers/Kagiso KG Mokgadi/Kagiso-KG-Mokgadi-The-Speakers-Firm.jpg',
   alt: 'Kagiso “KG” Mokgadi',
   quote: 'Relatable material and minimalist delivery allow an audience to connect with the storytelling naturally.',
   youtubeId: 't8OSpcpJkHY',
@@ -1772,7 +1772,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'kagiso-lediga',
   name: 'Kagiso Lediga',
   category: 'Comedy',
-  image: '/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm-2.jpg',
+  image: '/speakers/Kagiso Lediga/Kagiso-Lediga-The-Speakers-Firm.jpg',
   alt: 'Kagiso Lediga',
   quote: 'Creative genius begins with schoolboy charm and ends in disruptive, groundbreaking storytelling.',
   youtubeId: 'r_S7o66RndE',
@@ -1783,7 +1783,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'eugene-khoza',
   name: 'Eugene Khoza',
   category: 'Comedy',
-  image: '/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg',
+  image: '/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm.jpg',
   alt: 'Eugene Khoza',
   quote: 'Understanding cultures and engaging them on a humorous level is the true art of connection.',
   youtubeId: 'GhlhkbAtN1g',
@@ -1794,7 +1794,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'isaac-gampu',
   name: 'Isaac Gampu',
   category: 'Comedy',
-  image: '/speakers/Isaac Gampu/Isaac-Gampu-South-African-comedian-1.jpg',
+  image: '/speakers/Isaac Gampu/Isaac-Gampu-The-Speakers-Firm.jpg',
   alt: 'Isaac Gampu',
   quote: 'Vosloorus-born comedy exporter shaping modern satire and radio hosting across South African airwaves.',
   youtubeId: 'cNEHNcItviY',
@@ -1805,7 +1805,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'tol-ass-mo',
   name: 'Tol A$$ Mo',
   category: 'Comedy',
-  image: '/speakers/Tol Ass Mo/Tol-Ass-Mo.jpg',
+  image: '/speakers/Tol Ass Mo/Tol-As-Mo-The-Speakers-Firm.jpg',
   alt: 'Tol A$$ Mo',
   quote: 'Laughter is the ultimate vehicle for cultural disruption and authentic brand expression.',
   youtubeId: 'YWlD-KbLwnQ',
@@ -1816,7 +1816,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'summary',
   name: 'Summary',
   category: 'Comedy',
-  image: '/speakers/Summary/Summary-The-Speakers-Firm-1.jpg',
+  image: '/speakers/Summary/Summary-The-Speakers-Firm.jpg',
   alt: 'Summary',
   quote: 'Using comedy wisely to make people laugh their problems away, and helping the next generation rise.',
   youtubeId: 'LoZwKjm6X0M',
@@ -1827,7 +1827,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'miles-kubheka',
   name: 'Miles Kubheka',
   category: 'Keynote',
-  image: '/speakers/Miles Kubheka/miles-kubheka-1.jpg',
+  image: '/speakers/Miles Kubheka/miles-kubheka-the-speakers-firm.jpg',
   alt: 'Miles Kubheka',
   quote: 'Resilience, purpose-driven action, and turning bold ideas into transformative ventures.',
   youtubeId: 'uVmBwO_ct7k',
@@ -1886,7 +1886,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'mbuyiselo-botha',
   name: 'Mbuyiselo Botha',
   category: ['Masculinity', 'Leadership'],
-  image: '/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm-6.jpg',
+  image: '/speakers/Mbuyiselo Botha/Mbuyiselo-Botha-The-Speakers-Firm.jpg',
   alt: 'Mbuyiselo Botha',
   quote: 'Positive masculinity and active allyship are central to gender justice.',
   youtubeId: 'X_uytsYrhrY',
@@ -1898,7 +1898,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   id: 'phemelo-motene',
   name: 'Phemelo Motene',
   category: ['MCs', 'Media'],
-  image: '/speakers/Phemelo Motene/Phemelo-Motene-The-Speakers-Firm-4.jpg',
+  image: '/speakers/Phemelo Motene/Phemelo-Motene-The-Speakers-Firm.jpg',
   alt: 'Phemelo Motene',
   quote: 'Connecting with an audience requires authenticity.',
   youtubeId: '4dBygPZkY2s',
@@ -4633,7 +4633,7 @@ export const TheSpeakersFirmHome = () => {
                         <img 
                           src={speaker.image} 
                           onError={(e) => {
-                            e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                            e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
                           }}
                           alt="" 
                           aria-hidden="true" 
@@ -4703,7 +4703,7 @@ export const TheSpeakersFirmHome = () => {
                           <img 
                             src={speaker.image} 
                             onError={(e) => {
-                              e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                              e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
                             }}
                             alt="" 
                             aria-hidden="true" 
@@ -4774,7 +4774,7 @@ export const TheSpeakersFirmHome = () => {
                           <img 
                             src={speaker.image} 
                             onError={(e) => {
-                              e.currentTarget.src = '/image_marquee/Abner-Mariri-The-Speakers-Firm.jpg';
+                              e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
                             }}
                             alt="" 
                             aria-hidden="true" 
@@ -5121,7 +5121,7 @@ export const TheSpeakersFirmHome = () => {
       </section>
 
       <div id="dialogues" className="overflow-hidden">
-        {/* <BeyondThePodium /> */}
+        <BeyondThePodium />
       </div>
 
       <section id="roundtable" className="relative w-full border-t border-b" style={{

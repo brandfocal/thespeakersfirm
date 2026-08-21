@@ -275,17 +275,30 @@ export function Header() {
   };
 
   return (
-    <nav 
-      className="fixed top-4 left-0 right-0 mx-auto z-50 flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff] px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl md:top-6 lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
-      style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
-    >
-      <div className="flex items-center cursor-pointer shrink-0" onClick={() => router.push("/")}>
+    <div className="fixed top-4 left-0 right-0 z-50 flex items-center justify-center gap-3 pointer-events-none md:top-6">
+      {/* Standalone Brand Logo - Circle and enlarged next to the navbar (1.5x) */}
+      <Link 
+        href="/" 
+        className="pointer-events-auto hidden lg:flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-full border border-[#C7C7C8]/30 bg-white/95 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-300 hover:border-black/20 select-none cursor-pointer"
+      >
         <img 
           src="/the-speakers-firm-logo.png" 
           alt="The Speakers Firm Logo" 
-          className="h-10 w-auto object-contain"
+          className="h-[60px] w-[60px] object-contain rounded-full scale-[1.15]"
         />
-      </div>
+      </Link>
+
+      <nav 
+        className="pointer-events-auto flex min-h-[56px] w-[calc(100vw-24px)] max-w-[calc(100vw-24px)] items-center rounded-[28px] border bg-[#ffffff] px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl lg:h-[56px] lg:w-fit lg:rounded-full lg:px-6" 
+        style={{ borderColor: 'rgba(199, 199, 200, 0.6)' }}
+      >
+        <div className="flex items-center cursor-pointer shrink-0 lg:hidden" onClick={() => router.push("/")}>
+          <img 
+            src="/the-speakers-firm-logo.png" 
+            alt="The Speakers Firm Logo" 
+            className="h-10 w-auto object-contain"
+          />
+        </div>
       
       {/* Desktop categories nav bar */}
       <div className="hidden lg:flex items-center gap-6 mx-8">
@@ -897,5 +910,6 @@ export function Header() {
       )}
     </AnimatePresence>
     </nav>
+    </div>
   );
 }
