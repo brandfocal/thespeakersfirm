@@ -4628,13 +4628,13 @@ export const TheSpeakersFirmHome = () => {
             ref={welcomeCarouselRef}
             onPointerEnter={() => setIsWelcomeHovered(true)}
             onPointerLeave={() => setIsWelcomeHovered(false)}
-            className="flex gap-[30px] overflow-x-hidden scrollbar-none snap-x snap-mandatory scroll-smooth pb-4 px-6 md:px-16"
+            className="flex gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-6 md:px-16"
           >
             {/* Render duplicated list for seamless loop */}
             {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
               <div 
                 key={`${speaker.id}-${index}`}
-                className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] snap-start group/card"
+                className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] group/card"
               >
                 {/* Speaker Background Image */}
                 <img 
