@@ -3706,7 +3706,6 @@ export const TheSpeakersFirmHome = () => {
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
-  const [isWelcomeHovered, setIsWelcomeHovered] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
   const facultySearchQuery = searchParams.get("search") || "";
   const [localSearch, setLocalSearch] = React.useState(facultySearchQuery);
@@ -4047,41 +4046,6 @@ export const TheSpeakersFirmHome = () => {
     if (speakerCarouselRef3.current) speakerCarouselRef3.current.scrollLeft = 0;
     return undefined;
   }, [activeSpeakerCategory]);
-
-  React.useEffect(() => {
-    const c = welcomeCarouselRef.current;
-    if (c) {
-      const loopPoint = c.scrollWidth / 3;
-      if (loopPoint > 0) c.scrollLeft = loopPoint;
-    }
-  }, []);
-
-  React.useEffect(() => {
-    const c = welcomeCarouselRef.current;
-    if (!c || prefersReducedMotion) {
-      return undefined;
-    }
-    let animationFrame = 0;
-    let previousTimestamp = window.performance.now();
-    const scrollStep = (timestamp: number) => {
-      const deltaSeconds = (timestamp - previousTimestamp) / 1000;
-      previousTimestamp = timestamp;
-      const speed = 40; // Pixels per second
-      if (!isWelcomeHovered && c) {
-        const seamlessLoopPoint = c.scrollWidth / 3;
-        c.scrollLeft += speed * deltaSeconds;
-        if (seamlessLoopPoint > 0 && c.scrollLeft >= seamlessLoopPoint * 2) {
-          c.scrollLeft -= seamlessLoopPoint;
-        }
-        if (seamlessLoopPoint > 0 && c.scrollLeft <= 10) {
-          c.scrollLeft += seamlessLoopPoint;
-        }
-      }
-      animationFrame = window.requestAnimationFrame(scrollStep);
-    };
-    animationFrame = window.requestAnimationFrame(scrollStep);
-    return () => window.cancelAnimationFrame(animationFrame);
-  }, [isWelcomeHovered, prefersReducedMotion]);
 
   React.useEffect(() => {
     const c1 = speakerCarouselRef1.current;
@@ -4555,12 +4519,12 @@ export const TheSpeakersFirmHome = () => {
 
       <RecommendedSpeakers />
 
-                  <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
+                        <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
       backgroundColor: '#ffffff',
       borderColor: SOFT_RULE_COLOR
     }}>
         <VerticalBorderLines />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-0 sm:pt-24 sm:pb-0 md:px-16 md:pt-32 md:pb-0">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-16 sm:pt-24 sm:pb-20 md:px-16 md:pt-32 md:pb-24">
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -4610,74 +4574,71 @@ export const TheSpeakersFirmHome = () => {
         }} className="mt-10 h-[1px] w-full origin-left md:mt-12" style={{
           backgroundColor: COLORS.borderGray
         }} />
-        </div>
 
-        {/* Carousel container - Bleeds full-width outside the max-width wrapper */}
-        <div className="relative w-full mt-10 pb-16 sm:pb-20 md:pb-24 group/welcome-carousel overflow-hidden">
-          {/* Scroll Navigation Chevrons */}
-          <button 
-            type="button" 
-            aria-label="Scroll welcome carousel left" 
-            onClick={() => handleWelcomeCarouselScroll('left')} 
-            className="absolute left-4 top-[220px] z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
-            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button 
-            type="button" 
-            aria-label="Scroll welcome carousel right" 
-            onClick={() => handleWelcomeCarouselScroll('right')} 
-            className="absolute right-4 top-[220px] z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
-            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
+          {/* Carousel container - Restored inside grid bounds */}
+          <div className="relative w-full mt-10 group/welcome-carousel">
+            {/* Scroll Navigation Chevrons */}
+            <button 
+              type="button" 
+              aria-label="Scroll welcome carousel left" 
+              onClick={() => handleWelcomeCarouselScroll('left')} 
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
+              style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button 
+              type="button" 
+              aria-label="Scroll welcome carousel right" 
+              onClick={() => handleWelcomeCarouselScroll('right')} 
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
+              style={{ borderColor: 'rgba(0,0,0,0.1)' }}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
 
-          {/* Scrollable Row */}
-          <div 
-            ref={welcomeCarouselRef}
-            onPointerEnter={() => setIsWelcomeHovered(true)}
-            onPointerLeave={() => setIsWelcomeHovered(false)}
-            className="flex gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-6 md:px-16"
-          >
-            {/* Render duplicated list for seamless loop */}
-            {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
-              <div 
-                key={`${speaker.id}-${index}`}
-                className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] group/card"
-              >
-                {/* Speaker Background Image */}
-                <img 
-                  src={speaker.image} 
-                  alt={speaker.name} 
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/card:scale-105"
-                />
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
-                
-                {/* Speaker Info and CTA */}
-                <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
-                  <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#e30e04]">New Addition</span>
-                  <h3 className="text-xl font-bold uppercase tracking-tight text-white mt-1">{speaker.name}</h3>
-                  <p className="text-[11px] font-medium uppercase tracking-widest text-[#AFB0B0] mt-1.5 leading-relaxed">{speaker.role}</p>
+            {/* Scrollable Row */}
+            <div 
+              ref={welcomeCarouselRef}
+              className="flex gap-[30px] overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-4 px-2"
+            >
+              {WELCOME_SPEAKERS.map((speaker) => (
+                <div 
+                  key={speaker.id}
+                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] snap-start group/card"
+                >
+                  {/* Speaker Background Image */}
+                  <img 
+                    src={speaker.image} 
+                    alt={speaker.name} 
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/card:scale-105"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
                   
-                  {/* Book This Speaker Primary CTA button complying with AGENTS.md rule */}
-                  <motion.a 
-                    href={speaker.profileUrl} 
-                    whileHover={{ scale: 1.02 }} 
-                    whileTap={{ scale: 0.98 }} 
-                    className="inline-flex w-full mt-5 cursor-pointer"
-                    style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
-                  >
-                    <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
-                      <span>Book This Speaker</span>
-                      <ArrowRight size={14} className="text-[#e30e04]" />
-                    </span>
-                  </motion.a>
+                  {/* Speaker Info and CTA */}
+                  <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
+                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#e30e04]">New Addition</span>
+                    <h3 className="text-xl font-bold uppercase tracking-tight text-white mt-1">{speaker.name}</h3>
+                    <p className="text-[11px] font-medium uppercase tracking-widest text-[#AFB0B0] mt-1.5 leading-relaxed">{speaker.role}</p>
+                    
+                    {/* Book This Speaker Primary CTA button complying with AGENTS.md rule */}
+                    <motion.a 
+                      href={speaker.profileUrl} 
+                      whileHover={{ scale: 1.02 }} 
+                      whileTap={{ scale: 0.98 }} 
+                      className="inline-flex w-full mt-5 cursor-pointer"
+                      style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
+                    >
+                      <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+                        <span>Book This Speaker</span>
+                        <ArrowRight size={14} className="text-[#e30e04]" />
+                      </span>
+                    </motion.a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
