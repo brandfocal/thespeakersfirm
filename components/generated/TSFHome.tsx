@@ -3776,7 +3776,6 @@ export const TheSpeakersFirmHome = () => {
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
-  const [isWelcomeHovered, setIsWelcomeHovered] = React.useState(false);
   const [isWelcomeInteracting, setIsWelcomeInteracting] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
   const facultySearchQuery = searchParams.get("search") || "";
@@ -4127,38 +4126,57 @@ export const TheSpeakersFirmHome = () => {
 
   React.useEffect(() => {
     const c = welcomeCarouselRef.current;
-    if (c) {
-      const loopPoint = c.scrollWidth / 5;
-      if (loopPoint > 0) c.scrollLeft = loopPoint;
-    }
-  }, []);
+    if (!c || prefersReducedMotion) return undefined;
 
-  React.useEffect(() => {
-    const c = welcomeCarouselRef.current;
-    if (!c || prefersReducedMotion) {
-      return undefined;
-    }
-    let animationFrame = 0;
-    let previousTimestamp = window.performance.now();
-    const scrollStep = (timestamp: number) => {
-      const deltaSeconds = (timestamp - previousTimestamp) / 1000;
-      previousTimestamp = timestamp;
-      const speed = 40; // Pixels per second
-      if (!isWelcomeHovered && !isWelcomeInteracting && c) {
-        const seamlessLoopPoint = c.scrollWidth / 5;
-        c.scrollLeft += speed * deltaSeconds;
-        if (seamlessLoopPoint > 0 && c.scrollLeft >= seamlessLoopPoint * 3) {
-          c.scrollLeft -= seamlessLoopPoint;
-        }
-        if (seamlessLoopPoint > 0 && c.scrollLeft <= 10) {
-          c.scrollLeft += seamlessLoopPoint;
-        }
-      }
-      animationFrame = window.requestAnimationFrame(scrollStep);
+    const gap = window.innerWidth >= 768 ? 30 : 20;
+    
+    const initializeScroll = () => {
+      const children = c.children;
+      if (children.length === 0) return;
+      const cardElement = children[0] as HTMLDivElement;
+      const cardWidth = cardElement.clientWidth + gap;
+      c.scrollLeft = 28 * cardWidth;
     };
-    animationFrame = window.requestAnimationFrame(scrollStep);
-    return () => window.cancelAnimationFrame(animationFrame);
-  }, [isWelcomeHovered, isWelcomeInteracting, prefersReducedMotion]);
+    
+    // Set initial position to start of 3rd loop set
+    setTimeout(initializeScroll, 150);
+    
+    let currentIndex = 28;
+    
+    const interval = setInterval(() => {
+      if (isWelcomeInteracting) return;
+      
+      const children = c.children;
+      if (children.length === 0) return;
+      const cardElement = children[0] as HTMLDivElement;
+      const currentCardWidth = cardElement.clientWidth + gap;
+      
+      currentIndex++;
+      const targetLeft = currentIndex * currentCardWidth;
+      
+      c.scrollTo({
+        left: targetLeft,
+        behavior: 'smooth'
+      });
+      
+      // If we scroll past the 3rd set, jump back to 2nd set seamlessly
+      if (currentIndex >= 42) {
+        setTimeout(() => {
+          currentIndex = 28;
+          if (c) {
+            c.scrollTo({
+              left: 28 * currentCardWidth,
+              behavior: 'auto'
+            });
+          }
+        }, 1000);
+      }
+    }, 4500); // 3.5s pause + 1s smooth slide out
+    
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isWelcomeInteracting, prefersReducedMotion]);
 
   React.useEffect(() => {
     const c1 = speakerCarouselRef1.current;
@@ -4718,20 +4736,18 @@ export const TheSpeakersFirmHome = () => {
             {/* Scrollable Row */}
             <div 
               ref={welcomeCarouselRef}
-              onPointerEnter={() => setIsWelcomeHovered(true)}
-              onPointerLeave={() => setIsWelcomeHovered(false)}
-              className="flex gap-0 overflow-x-hidden scrollbar-none pb-4 px-0"
+              className="flex gap-5 md:gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-0"
             >
               {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
                 <div 
                   key={`${speaker.id}-${index}`}
-                  className="relative aspect-[16/10] md:aspect-[21/9] w-screen md:max-h-[580px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
+                  className="relative aspect-[16/10] md:aspect-[21/9] w-[calc(100vw-48px)] md:w-[calc(100vw-160px)] md:max-h-[580px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
                 >
                   {/* Speaker Background Image */}
                   <img 
                     src={speaker.image} 
                     alt={speaker.name} 
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/card:scale-105"
+                    className="absolute inset-0 h-full w-full object-contain bg-black transition-transform duration-700 group-hover/card:scale-[1.02]"
                   />
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
