@@ -4749,15 +4749,8 @@ export const TheSpeakersFirmHome = () => {
                     alt={speaker.name} 
                     className="absolute inset-0 h-full w-full object-contain bg-black transition-transform duration-700 group-hover/card:scale-[1.02]"
                   />
-                  {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
-                  
                   {/* Speaker Info and CTA */}
                   <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
-                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#e30e04]">New Addition</span>
-                    <h3 className="text-xl font-bold uppercase tracking-tight text-white mt-1">{speaker.name}</h3>
-                    <p className="text-[11px] font-medium uppercase tracking-widest text-[#AFB0B0] mt-1.5 leading-relaxed">{speaker.role}</p>
-                    
                     {/* Book This Speaker Primary CTA button complying with AGENTS.md rule */}
                     <motion.a 
                       href={speaker.profileUrl} 
