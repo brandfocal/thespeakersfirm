@@ -4638,7 +4638,7 @@ export const TheSpeakersFirmHome = () => {
       borderColor: SOFT_RULE_COLOR
     }}>
         <VerticalBorderLines />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-16 sm:pt-24 sm:pb-20 md:px-16 md:pt-32 md:pb-24">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-0 sm:pt-24 sm:pb-0 md:px-16 md:pt-32 md:pb-0">
           <motion.div initial={{
           opacity: 0,
           y: 20
@@ -4712,9 +4712,10 @@ export const TheSpeakersFirmHome = () => {
               </button>
             </div>
           </div>
+        </div>
 
-          {/* Carousel container - Restored inside grid bounds */}
-          <div className="relative w-full mt-6 group/welcome-carousel">
+        {/* Carousel container - Bleeds full-width edge-to-edge */}
+        <div className="relative w-full mt-6 pb-16 sm:pb-20 md:pb-24 group/welcome-carousel overflow-hidden">
             {/* Scrollable Row */}
             <div 
               ref={welcomeCarouselRef}
@@ -4760,8 +4761,7 @@ export const TheSpeakersFirmHome = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section id="methodology" className="relative w-full" style={{
       backgroundColor: COLORS.black,
