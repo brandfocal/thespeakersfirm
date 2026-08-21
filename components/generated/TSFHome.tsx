@@ -3997,7 +3997,8 @@ export const TheSpeakersFirmHome = () => {
     if (!c) return;
     
     setIsWelcomeInteracting(true);
-    const scrollAmount = 370; // Card width (340px) + gap (30px)
+    const gap = window.innerWidth >= 768 ? 30 : 20;
+    const scrollAmount = c.clientWidth - gap;
     
     c.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
@@ -4718,12 +4719,12 @@ export const TheSpeakersFirmHome = () => {
               ref={welcomeCarouselRef}
               onPointerEnter={() => setIsWelcomeHovered(true)}
               onPointerLeave={() => setIsWelcomeHovered(false)}
-              className="flex gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-2"
+              className="flex gap-5 md:gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-2"
             >
               {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
                 <div 
                   key={`${speaker.id}-${index}`}
-                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
+                  className="relative aspect-[4/5] w-[calc(50vw-34px)] md:w-[calc(50vw-79px)] md:max-h-[640px] md:min-h-[420px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
                 >
                   {/* Speaker Background Image */}
                   <img 
