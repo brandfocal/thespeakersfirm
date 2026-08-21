@@ -3706,6 +3706,8 @@ export const TheSpeakersFirmHome = () => {
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
+  const [isWelcomeHovered, setIsWelcomeHovered] = React.useState(false);
+  const [isWelcomeInteracting, setIsWelcomeInteracting] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
   const facultySearchQuery = searchParams.get("search") || "";
   const [localSearch, setLocalSearch] = React.useState(facultySearchQuery);
@@ -3921,13 +3923,18 @@ export const TheSpeakersFirmHome = () => {
   };
 
   const handleWelcomeCarouselScroll = (direction: 'left' | 'right') => {
-    if (welcomeCarouselRef.current) {
-      const scrollAmount = 370; // Card width (340px) + gap (30px)
-      welcomeCarouselRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
+    const c = welcomeCarouselRef.current;
+    if (!c) return;
+    
+    setIsWelcomeInteracting(true);
+    const scrollAmount = 370; // Card width (340px) + gap (30px)
+    
+    c.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+    
+    window.setTimeout(() => setIsWelcomeInteracting(false), 900);
   };
 
   const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
@@ -4046,6 +4053,41 @@ export const TheSpeakersFirmHome = () => {
     if (speakerCarouselRef3.current) speakerCarouselRef3.current.scrollLeft = 0;
     return undefined;
   }, [activeSpeakerCategory]);
+
+  React.useEffect(() => {
+    const c = welcomeCarouselRef.current;
+    if (c) {
+      const loopPoint = c.scrollWidth / 5;
+      if (loopPoint > 0) c.scrollLeft = loopPoint;
+    }
+  }, []);
+
+  React.useEffect(() => {
+    const c = welcomeCarouselRef.current;
+    if (!c || prefersReducedMotion) {
+      return undefined;
+    }
+    let animationFrame = 0;
+    let previousTimestamp = window.performance.now();
+    const scrollStep = (timestamp: number) => {
+      const deltaSeconds = (timestamp - previousTimestamp) / 1000;
+      previousTimestamp = timestamp;
+      const speed = 40; // Pixels per second
+      if (!isWelcomeHovered && !isWelcomeInteracting && c) {
+        const seamlessLoopPoint = c.scrollWidth / 5;
+        c.scrollLeft += speed * deltaSeconds;
+        if (seamlessLoopPoint > 0 && c.scrollLeft >= seamlessLoopPoint * 3) {
+          c.scrollLeft -= seamlessLoopPoint;
+        }
+        if (seamlessLoopPoint > 0 && c.scrollLeft <= 10) {
+          c.scrollLeft += seamlessLoopPoint;
+        }
+      }
+      animationFrame = window.requestAnimationFrame(scrollStep);
+    };
+    animationFrame = window.requestAnimationFrame(scrollStep);
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [isWelcomeHovered, isWelcomeInteracting, prefersReducedMotion]);
 
   React.useEffect(() => {
     const c1 = speakerCarouselRef1.current;
@@ -4519,7 +4561,7 @@ export const TheSpeakersFirmHome = () => {
 
       <RecommendedSpeakers />
 
-                        <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
+                              <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
       backgroundColor: '#ffffff',
       borderColor: SOFT_RULE_COLOR
     }}>
@@ -4559,6 +4601,7 @@ export const TheSpeakersFirmHome = () => {
               </p>
             </div>
           </motion.div>
+          
           <motion.div initial={{
           scaleX: 0,
           opacity: 0
@@ -4575,37 +4618,42 @@ export const TheSpeakersFirmHome = () => {
           backgroundColor: COLORS.borderGray
         }} />
 
-          {/* Carousel container - Restored inside grid bounds */}
-          <div className="relative w-full mt-10 group/welcome-carousel">
-            {/* Scroll Navigation Chevrons */}
-            <button 
-              type="button" 
-              aria-label="Scroll welcome carousel left" 
-              onClick={() => handleWelcomeCarouselScroll('left')} 
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
-              style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button 
-              type="button" 
-              aria-label="Scroll welcome carousel right" 
-              onClick={() => handleWelcomeCarouselScroll('right')} 
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
-              style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+          {/* Controls Bar above the carousel */}
+          <div className="flex items-center justify-between mt-10">
+            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#686869]">Slide to explore new talent</p>
+            <div className="flex items-center gap-2">
+              <button 
+                type="button" 
+                aria-label="Scroll welcome carousel left"
+                onClick={() => handleWelcomeCarouselScroll('left')} 
+                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-black hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] transition-all duration-300"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button 
+                type="button" 
+                aria-label="Scroll welcome carousel right"
+                onClick={() => handleWelcomeCarouselScroll('right')} 
+                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-black hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] transition-all duration-300"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
 
+          {/* Carousel container - Restored inside grid bounds */}
+          <div className="relative w-full mt-6 group/welcome-carousel">
             {/* Scrollable Row */}
             <div 
               ref={welcomeCarouselRef}
-              className="flex gap-[30px] overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-4 px-2"
+              onPointerEnter={() => setIsWelcomeHovered(true)}
+              onPointerLeave={() => setIsWelcomeHovered(false)}
+              className="flex gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-2"
             >
-              {WELCOME_SPEAKERS.map((speaker) => (
+              {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
                 <div 
-                  key={speaker.id}
-                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] snap-start group/card"
+                  key={`${speaker.id}-${index}`}
+                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] group/card"
                 >
                   {/* Speaker Background Image */}
                   <img 
