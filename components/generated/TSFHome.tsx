@@ -1916,6 +1916,37 @@ export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
   };
 });
 
+const WELCOME_SPEAKERS = [
+  {
+    id: "dr-pali-lehohla",
+    name: "Dr. Pali Lehohla",
+    role: "Economics, Policy & National Statistics",
+    image: "/welcome_slides/Dr-Pali-Lehohla.jpg",
+    profileUrl: "/tracks/economics-and-politics/dr-pali-lehohla"
+  },
+  {
+    id: "pumela-salela",
+    name: "Dr. Pumela Salela",
+    role: "Global Competitiveness, ESG & Brand Architecture",
+    image: "/welcome_slides/Dr-Pumela-Salela.jpg",
+    profileUrl: "/tracks/economics-and-politics/pumela-salela"
+  },
+  {
+    id: "dr-shingai-mutambirwa",
+    name: "Dr. Shingai Mutambirwa",
+    role: "Clinical Wellness, Urology & Healthcare Leadership",
+    image: "/welcome_slides/Dr-Shingai-Mutambirwa.jpg",
+    profileUrl: "/tracks/workplace-wellness/dr-shingai-mutambirwa"
+  },
+  {
+    id: "mncane-mthunzi",
+    name: "Mncane Mthunzi",
+    role: "Corporate Governance, Transformation & Leadership",
+    image: "/welcome_slides/Mncane-Mthunzi.jpg",
+    profileUrl: "/tracks/future-of-work/dr-mncane-mthunzi"
+  }
+];
+
 const FEATURED_SPEAKERS_HEADING_LINES = [{
   id: 'signature-speakers-heading',
   words: [{
@@ -3670,10 +3701,12 @@ export const TheSpeakersFirmHome = () => {
   const speakerCarouselRef1 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
+  const welcomeCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const testimonialCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
   const [isHoveredRow3, setIsHoveredRow3] = React.useState(false);
+  const [isWelcomeHovered, setIsWelcomeHovered] = React.useState(false);
   const clipIframeRef = React.useRef<HTMLIFrameElement | null>(null);
   const facultySearchQuery = searchParams.get("search") || "";
   const [localSearch, setLocalSearch] = React.useState(facultySearchQuery);
@@ -3888,6 +3921,16 @@ export const TheSpeakersFirmHome = () => {
     router.push(`/?${params.toString()}`, { scroll: false });
   };
 
+  const handleWelcomeCarouselScroll = (direction: 'left' | 'right') => {
+    if (welcomeCarouselRef.current) {
+      const scrollAmount = 370; // Card width (340px) + gap (30px)
+      welcomeCarouselRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
     let carousel: HTMLDivElement | null = null;
     let dirMultiplier = 1;
@@ -4004,6 +4047,30 @@ export const TheSpeakersFirmHome = () => {
     if (speakerCarouselRef3.current) speakerCarouselRef3.current.scrollLeft = 0;
     return undefined;
   }, [activeSpeakerCategory]);
+
+  React.useEffect(() => {
+    const c = welcomeCarouselRef.current;
+    if (!c || prefersReducedMotion) {
+      return undefined;
+    }
+    let animationFrame = 0;
+    let previousTimestamp = window.performance.now();
+    const scrollStep = (timestamp: number) => {
+      const deltaSeconds = (timestamp - previousTimestamp) / 1000;
+      previousTimestamp = timestamp;
+      const speed = 40; // Pixels per second
+      if (!isWelcomeHovered && c) {
+        const seamlessLoopPoint = c.scrollWidth / 3;
+        c.scrollLeft += speed * deltaSeconds;
+        if (seamlessLoopPoint > 0 && c.scrollLeft >= seamlessLoopPoint * 2) {
+          c.scrollLeft -= seamlessLoopPoint;
+        }
+      }
+      animationFrame = window.requestAnimationFrame(scrollStep);
+    };
+    animationFrame = window.requestAnimationFrame(scrollStep);
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [isWelcomeHovered, prefersReducedMotion]);
 
   React.useEffect(() => {
     const c1 = speakerCarouselRef1.current;
@@ -4477,8 +4544,8 @@ export const TheSpeakersFirmHome = () => {
 
       <RecommendedSpeakers />
 
-      <section aria-labelledby="featured-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
-      backgroundColor: COLORS.offWhite,
+                  <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
+      backgroundColor: '#ffffff',
       borderColor: SOFT_RULE_COLOR
     }}>
         <VerticalBorderLines />
@@ -4497,11 +4564,11 @@ export const TheSpeakersFirmHome = () => {
         }} className="grid grid-cols-1 gap-7 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
               <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-                <span>Spotlight</span>
+                <span>New Additions</span>
               </div>
-              <AnimatedWordHeading as="h2" id="featured-speakers-heading" lines={FEATURED_SPEAKERS_HEADING_LINES} className="mt-6 max-w-[780px] text-[clamp(3rem,12vw,6.75rem)] font-bold uppercase leading-[0.86] tracking-[-0.075em]" style={{
-              color: COLORS.black
-            }} wordClassName="mr-[0.11em]" />
+              <h2 id="welcome-speakers-heading" className="mt-6 max-w-[780px] text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-[#000000]">
+                Welcoming New Voices.
+              </h2>
             </div>
             <div className="block lg:col-span-1 lg:self-stretch">
               <div className="h-[1px] w-full lg:h-full lg:w-[1px]" style={{
@@ -4509,15 +4576,11 @@ export const TheSpeakersFirmHome = () => {
             }} />
             </div>
             <div className="flex flex-col justify-end lg:col-span-4">
-              <p aria-hidden="true" className="mb-3 font-serif text-[28px] italic leading-none tracking-[-0.06em] sm:text-[34px] lg:mb-5" style={{
-              color: COLORS.silver
-            }}>
-                <span>Voices of Authority</span>
+              <p aria-hidden="true" className="mb-3 font-serif text-[28px] italic leading-none tracking-[-0.06em] sm:text-[34px] lg:mb-5 text-[#AFB0B0]">
+                <span>Fresh Perspectives</span>
               </p>
-              <p className="max-w-[520px] text-[17px] font-normal leading-[1.55] md:text-[22px]" style={{
-              color: COLORS.gray
-            }}>
-                <span>Keynote voices shaping the global discourse on artificial intelligence, systemic change, and leadership.</span>
+              <p className="max-w-[520px] text-[17px] font-normal leading-[1.55] md:text-[20px] text-[#686869]">
+                <span>Authoritative global figures and visionary strategists joining the bureau.</span>
               </p>
             </div>
           </motion.div>
@@ -4538,279 +4601,73 @@ export const TheSpeakersFirmHome = () => {
         }} />
         </div>
 
-        {/* Category Filter Chips with Prev/Next buttons */}
-        <div className="mx-auto max-w-[1440px] px-6 md:px-16 mt-8 relative z-20 flex items-center gap-3">
-          <button
-            type="button"
-            aria-label="Scroll categories left"
-            onClick={() => {
-              if (refCategoryContainer.current) {
-                refCategoryContainer.current.scrollBy({ left: -200, behavior: 'smooth' });
-              }
-            }}
-            className="flex h-9 w-9 shrink-0 place-items-center justify-center rounded-full border border-black/10 bg-white shadow-sm text-black hover:bg-black hover:text-white transition-colors"
+        {/* Carousel container - Bleeds full-width outside the max-width wrapper */}
+        <div className="relative w-full mt-10 pb-16 sm:pb-20 md:pb-24 group/welcome-carousel overflow-hidden">
+          {/* Scroll Navigation Chevrons */}
+          <button 
+            type="button" 
+            aria-label="Scroll welcome carousel left" 
+            onClick={() => handleWelcomeCarouselScroll('left')} 
+            className="absolute left-4 top-[220px] z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
+            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
-          
-          <div 
-            ref={refCategoryContainer}
-            className="flex-grow flex flex-nowrap overflow-x-auto scrollbar-none gap-2.5 pb-2 select-none scroll-smooth"
+          <button 
+            type="button" 
+            aria-label="Scroll welcome carousel right" 
+            onClick={() => handleWelcomeCarouselScroll('right')} 
+            className="absolute right-4 top-[220px] z-30 grid h-12 w-12 place-items-center rounded-full border bg-white shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/welcome-carousel:opacity-100 focus:opacity-100"
+            style={{ borderColor: 'rgba(0,0,0,0.1)' }}
           >
-            <button
-              type="button"
-              onClick={() => handleFeaturedSpeakerFilterChange('All')}
-              className={cn(
-                "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
-                activeSpeakerCategory === 'All'
-                  ? "bg-[#e30e04] text-white border-[#e30e04]"
-                  : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
-              )}
-            >
-              All
-            </button>
-            {CATEGORIES_CONFIG.map((cat) => (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => handleFeaturedSpeakerFilterChange(cat.id)}
-                className={cn(
-                  "px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.12em] transition-all duration-300 border shrink-0",
-                  activeSpeakerCategory === cat.id
-                    ? "bg-[#e30e04] text-white border-[#e30e04]"
-                    : "bg-white text-black border-black/10 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04]"
-                )}
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          {/* Scrollable Row */}
+          <div 
+            ref={welcomeCarouselRef}
+            onPointerEnter={() => setIsWelcomeHovered(true)}
+            onPointerLeave={() => setIsWelcomeHovered(false)}
+            className="flex gap-[30px] overflow-x-hidden scrollbar-none snap-x snap-mandatory scroll-smooth pb-4 px-6 md:px-16"
+          >
+            {/* Render duplicated list for seamless loop */}
+            {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
+              <div 
+                key={`${speaker.id}-${index}`}
+                className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] snap-start group/card"
               >
-                {cat.buttonLabel}
-              </button>
+                {/* Speaker Background Image */}
+                <img 
+                  src={speaker.image} 
+                  alt={speaker.name} 
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/card:scale-105"
+                />
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
+                
+                {/* Speaker Info and CTA */}
+                <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#e30e04]">New Addition</span>
+                  <h3 className="text-xl font-bold uppercase tracking-tight text-white mt-1">{speaker.name}</h3>
+                  <p className="text-[11px] font-medium uppercase tracking-widest text-[#AFB0B0] mt-1.5 leading-relaxed">{speaker.role}</p>
+                  
+                  {/* Book This Speaker Primary CTA button complying with AGENTS.md rule */}
+                  <motion.a 
+                    href={speaker.profileUrl} 
+                    whileHover={{ scale: 1.02 }} 
+                    whileTap={{ scale: 0.98 }} 
+                    className="inline-flex w-full mt-5 cursor-pointer"
+                    style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
+                  >
+                    <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+                      <span>Book This Speaker</span>
+                      <ArrowRight size={14} className="text-[#e30e04]" />
+                    </span>
+                  </motion.a>
+                </div>
+              </div>
             ))}
           </div>
-
-          <button
-            type="button"
-            aria-label="Scroll categories right"
-            onClick={() => {
-              if (refCategoryContainer.current) {
-                refCategoryContainer.current.scrollBy({ left: 200, behavior: 'smooth' });
-              }
-            }}
-            className="flex h-9 w-9 shrink-0 place-items-center justify-center rounded-full border border-black/10 bg-white shadow-sm text-black hover:bg-black hover:text-white transition-colors"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </div>
-
-        <div className="relative w-full mt-6 flex flex-col gap-0 overflow-hidden md:mt-8">
-            {/* Row 1 */}
-            <div className="relative group/row w-full">
-              <button 
-                type="button" 
-                aria-label="Show previous speakers" 
-                onClick={() => handleSpeakerCarouselAdvance(1, 'previous')} 
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <div 
-                ref={speakerCarouselRef1} 
-                onPointerEnter={() => setIsHoveredRow1(true)} 
-                onPointerLeave={() => setIsHoveredRow1(false)}
-                className="scrollbar-none w-full overflow-x-hidden" 
-                aria-label="Auto-scrolling Signature Speakers carousel row 1"
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div 
-                    key={activeSpeakerCategory}
-                    initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex w-max gap-0 py-0 pl-6 md:pl-16"
-                  >
-                    {carouselRow1.map((speaker) => (
-                      <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
-                        <img 
-                          src={speaker.image} 
-                          onError={(e) => {
-                            e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
-                          }}
-                          alt="" 
-                          aria-hidden="true" 
-                          className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-                        />
-                        <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                        <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                          <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                            <span>{speaker.name}</span>
-                          </h3>
-                          <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                            {speaker.bio}
-                          </p>
-                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>BOOK THE SPEAKER</span>
-                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                            </Link>
-                          </div>
-                        </div>
-                      </motion.article>
-                    ))}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-              <button 
-                type="button" 
-                aria-label="Show next speakers" 
-                onClick={() => handleSpeakerCarouselAdvance(1, 'next')} 
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
-
-            {/* Row 2 */}
-            {row2Speakers.length > 0 && (
-              <div className="relative group/row w-full">
-                <button 
-                  type="button" 
-                  aria-label="Show previous speakers" 
-                  onClick={() => handleSpeakerCarouselAdvance(2, 'previous')} 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                  style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <div 
-                  ref={speakerCarouselRef2} 
-                  onPointerEnter={() => setIsHoveredRow2(true)} 
-                  onPointerLeave={() => setIsHoveredRow2(false)}
-                  className="scrollbar-none w-full overflow-x-hidden" 
-                  aria-label="Auto-scrolling Signature Speakers carousel row 2"
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.div 
-                      key={activeSpeakerCategory}
-                      initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
-                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                      className="flex w-max gap-0 py-0 pl-6 md:pl-16"
-                    >
-                      {carouselRow2.map((speaker) => (
-                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
-                          <img 
-                            src={speaker.image} 
-                            onError={(e) => {
-                              e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
-                            }}
-                            alt="" 
-                            aria-hidden="true" 
-                            className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-                          />
-                          <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                          <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                              <span>{speaker.name}</span>
-                            </h3>
-                            <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                              {speaker.bio}
-                            </p>
-                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>BOOK THE SPEAKER</span>
-                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                            </Link>
-                          </div>
-                          </div>
-                        </motion.article>
-                      ))}
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-                <button 
-                  type="button" 
-                  aria-label="Show next speakers" 
-                  onClick={() => handleSpeakerCarouselAdvance(2, 'next')} 
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-black hover:text-white md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                  style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-            )}
-
-            {/* Row 3 */}
-            {row3Speakers.length > 0 && (
-              <div className="relative group/row w-full">
-                <button 
-                  type="button" 
-                  aria-label="Show previous speakers" 
-                  onClick={() => handleSpeakerCarouselAdvance(3, 'previous')} 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                  style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <div 
-                  ref={speakerCarouselRef3} 
-                  onPointerEnter={() => setIsHoveredRow3(true)} 
-                  onPointerLeave={() => setIsHoveredRow3(false)}
-                  className="scrollbar-none w-full overflow-x-hidden" 
-                  aria-label="Auto-scrolling Signature Speakers carousel row 3"
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.div 
-                      key={activeSpeakerCategory}
-                      initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: prefersReducedMotion ? 0 : -20 }}
-                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                      className="flex w-max gap-0 py-0 pl-6 md:pl-16"
-                    >
-                      {carouselRow3.map((speaker) => (
-                        <motion.article data-speaker-card="true" key={speaker.loopId} aria-label={`${speaker.name}, ${speaker.category}`} className="tsf-signature-speaker-card group relative isolate flex h-[280px] w-[280px] shrink-0 cursor-default overflow-hidden border border-[#C7C7C8]/45 bg-[#e5e5e5] transition-[border-color,box-shadow] duration-[350ms] ease-in-out hover:border-[#e30e04]/70 hover:shadow-[0_28px_70px_rgba(33,33,33,0.34)] min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[360px] sm:w-[360px] md:h-[400px] md:w-[400px] lg:h-[420px] lg:w-[420px]" style={{ backgroundColor: '#e5e5e5' }}>
-                          <img 
-                            src={speaker.image} 
-                            onError={(e) => {
-                              e.currentTarget.src = '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg';
-                            }}
-                            alt="" 
-                            aria-hidden="true" 
-                            className="tsf-competency-visual absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-                          />
-                          <div aria-hidden="true" className="tsf-competency-overlay absolute inset-0 z-10" />
-                          <div className="tsf-competency-content relative z-20 mt-auto flex min-h-[54%] w-full flex-col justify-end px-4 py-6 sm:px-5 sm:py-8 md:px-7 lg:px-8">
-                            <h3 className="tsf-signature-speaker-name origin-left mt-2 text-[22px] font-bold leading-tight tracking-[-0.04em] text-[#F8F7F5] sm:text-[26px] md:text-[34px]">
-                              <span>{speaker.name}</span>
-                            </h3>
-                            <p className="mt-3 max-w-[560px] text-[13px] font-normal leading-[1.6] text-[#AFAFBA] md:text-base md:leading-[1.65]">
-                              {speaker.bio}
-                            </p>
-                          <div className="mt-5 flex flex-col items-stretch gap-2 md:mt-6 md:flex-row md:items-center">
-                            <Link href={`/tracks/${speaker.trackId || 'leadership-governance-and-risk-intelligence'}/${speaker.id}`} className="tsf-competency-cta inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F8F7F5]/30 bg-black/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F8F7F5] backdrop-blur-sm transition-all duration-[400ms] ease-in-out md:w-fit">
-                              <span>BOOK THE SPEAKER</span>
-                              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
-                            </Link>
-                          </div>
-                          </div>
-                        </motion.article>
-                      ))}
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-                <button 
-                  type="button" 
-                  aria-label="Show next speakers" 
-                  onClick={() => handleSpeakerCarouselAdvance(3, 'next')} 
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border bg-white/90 shadow-lg text-black transition-all duration-300 hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] md:opacity-0 md:group-hover/row:opacity-100 focus:opacity-100"
-                  style={{ borderColor: 'rgba(0,0,0,0.1)' }}
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-            )}
         </div>
       </section>
 
