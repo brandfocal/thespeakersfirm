@@ -4653,7 +4653,7 @@ export const TheSpeakersFirmHome = () => {
               {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
                 <div 
                   key={`${speaker.id}-${index}`}
-                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] border border-black/10 bg-black overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] group/card"
+                  className="relative h-[485px] w-[340px] shrink-0 rounded-[28px] bg-black overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
                 >
                   {/* Speaker Background Image */}
                   <img 
