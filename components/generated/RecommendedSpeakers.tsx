@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, Quote } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 interface RecommendedSpeaker {
@@ -13,96 +13,86 @@ interface RecommendedSpeaker {
   trackLabel: string;
 }
 
+const SECTION_TAG_CLASS = 'inline-flex items-center border border-l-[4px] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] shadow-none';
+const SECTION_TAG_STYLE = {
+  backgroundColor: '#000000',
+  borderColor: '#000000',
+  borderLeftColor: '#e30e04',
+  color: '#ffffff'
+};
+
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
-    id: 'phumzile-mlambo-ngcuka',
-    name: 'Dr. Phumzile Mlambo-Ngcuka',
-    bio: 'Global Stateswoman, Former UN Under-Secretary-General & Deputy President',
-    quote: 'Education and equality are the cornerstones of progress.',
-    image: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
-    trackId: 'governance',
-    trackLabel: 'Governance'
+    id: 'dr-john-kani',
+    name: 'Dr. John Kani',
+    bio: 'Theatre legend, playwright and cultural activist.',
+    quote: '',
+    image: '/speaker_thumbnails/Dr-John-Kani-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
   },
   {
-    id: 'bonang-mohale',
-    name: 'Prof. Bonang Mohale',
-    bio: 'Corporate Statesman, Business Leader & Author',
-    quote: 'Servant leadership is the ultimate competitive edge.',
-    image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
-    trackId: 'governance',
-    trackLabel: 'Governance'
+    id: 'mbuso-khoza',
+    name: 'Mbuso Khoza',
+    bio: 'Vocalist, cultural historian and custodian of African oral traditions.',
+    quote: '',
+    image: '/speaker_thumbnails/Mbuso-Khoza-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
   },
   {
-    id: 'nozipho-tshabalala',
-    name: 'Nozipho Tshabalala',
-    bio: 'Global Moderator, Conversation Architect & Broadcast Journalist',
-    quote: 'Facilitating conversations that matter for Africa’s development.',
-    image: '/speaker_thumbnails/Nozipho-Tshabalala-The-Speakers-Firm.jpg',
-    trackId: 'mcs',
-    trackLabel: 'MCs & Facilitators'
+    id: 'gcina-mhlophe-becker',
+    name: 'Dr. Gcina Mhlophe',
+    bio: 'International storyteller, author and guardian of African folklore.',
+    quote: '',
+    image: '/speaker_thumbnails/Gcina-Mhlophe-Becker-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
   },
   {
-    id: 'prince-mashele',
-    name: 'Prince Mashele',
-    bio: 'Political Analyst, Columnist & Public Intellectual',
-    quote: 'Understanding political dynamics is key to future stability.',
-    image: '/speaker_thumbnails/Prince-Mashele-The-Speakers-Firm.jpg',
-    trackId: 'geopolitics',
-    trackLabel: 'Geopolitics'
+    id: 'gogo-dineo-ndlanzi',
+    name: 'Gogo Dineo Ndlanzi',
+    bio: 'Traditional healer, spiritual teacher and advocate for African indigenous knowledge.',
+    quote: '',
+    image: '/speaker_thumbnails/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
   },
   {
-    id: 'clement-manyathela',
-    name: 'Clement Manyathela',
-    bio: 'Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Dialogue Facilitator',
-    quote: 'Conversations that shift minds and inspire outcomes.',
-    image: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg',
-    trackId: 'mcs',
-    trackLabel: 'MCs & Facilitators'
+    id: 'joshua-maponga',
+    name: 'Joshua Maponga',
+    bio: 'Author and speaker on African identity, spirituality, leadership and decolonisation.',
+    quote: '',
+    image: '/speaker_thumbnails/Joshua-Maponga-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
   },
   {
-    id: 'sizwe-mpofu-walsh',
-    name: 'Dr. Sizwe Mpofu-Walsh',
-    bio: 'Lecturer in International Relations at Wits University, Author & Activist',
-    quote: 'Dismantling old paradigms to rebuild robust institutions.',
-    image: '/speaker_thumbnails/Sizwe-Mpofu-Walsh-The-Speakers-Firm.jpg',
-    trackId: 'future-of-work',
-    trackLabel: 'Future of Work'
+    id: 'nene-molefi',
+    name: 'Nene Molefi',
+    bio: 'Thought leader on diversity, inclusion, culture, identity and organisational transformation.',
+    quote: '',
+    image: '/speaker_thumbnails/Nene-Molefi-The-Speakers-Firm.jpg',
+    trackId: 'diversity',
+    trackLabel: 'Diversity'
   },
   {
-    id: 'khaya-sithole',
-    name: 'Khaya Sithole',
-    bio: 'Accountant, Broadcaster & Economic Analyst',
-    quote: 'Decoding public finance with accountability and transparency.',
-    image: '/speaker_thumbnails/Khaya-Sithole-The-Speakers-Firm.jpg',
-    trackId: 'economics',
-    trackLabel: 'Economics'
-  },
-  {
-    id: 'siphiwe-moyo',
-    name: 'Siphiwe Moyo',
-    bio: 'Global Speaker, Author & Organisational Development Specialist',
-    quote: 'Resilience is not about bouncing back, it is about bouncing forward.',
-    image: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg',
-    trackId: 'leadership',
+    id: 'sello-maake-ka-ncube',
+    name: 'Sello Maake kaNcube',
+    bio: 'Veteran actor, director and advocate for African theatre.',
+    quote: '',
+    image: '/speaker_thumbnails/Sello-Maake-Ka-Ncube-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
     trackLabel: 'Leadership'
   },
   {
-    id: 'lincoln-mali',
-    name: 'Lincoln Mali',
-    bio: 'Corporate Executive, Leadership & Organisational Agility Specialist',
-    quote: 'Leadership is a journey of influence, integrity, and impact.',
-    image: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
-    trackId: 'leadership',
-    trackLabel: 'Leadership'
-  },
-  {
-    id: 'stafford-masie',
-    name: 'Stafford Masie',
-    bio: 'Technology Futurist, Former CEO of Google SA & Angel Investor',
-    quote: 'Technology is not about gadgets, it is about human empowerment.',
-    image: '/speaker_thumbnails/stafford-masie-the-speakers-firm.jpg',
-    trackId: 'futurists',
-    trackLabel: 'Futurists'
+    id: 'billy-selekane',
+    name: 'Billy Selekane',
+    bio: 'International keynote speaker, author and leadership authority whose work connects personal mastery, African values, purpose, transformation and human potential.',
+    quote: '',
+    image: '/speaker_thumbnails/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
+    trackId: 'inspirational-keynote-speakers',
+    trackLabel: 'Keynote'
   }
 ];
 
@@ -147,7 +137,7 @@ export const RecommendedSpeakers = () => {
       const delta = (time - lastTime) / 1000;
       lastTime = time;
       
-      const scrollSpeed = 50; // pixels per second
+      const scrollSpeed = 40; // pixels per second
       container.scrollLeft += scrollSpeed * delta;
       
       const halfWidth = container.scrollWidth / 2;
@@ -163,12 +153,13 @@ export const RecommendedSpeakers = () => {
   }, [isPaused]);
 
   return (
-    <section aria-labelledby="recommended-heading" className="relative w-full overflow-hidden bg-[#0A0A0A] py-20 sm:py-24 md:py-32 border-t border-white/[0.05]">
+    <section aria-labelledby="recommended-heading" className="relative w-full overflow-hidden bg-[#000000] py-20 sm:py-24 md:py-32 border-t border-white/[0.05]">
       <style>{`
         .scrollbar-none::-webkit-scrollbar {
           display: none;
         }
       `}</style>
+      
       {/* Subtle Noise Texture */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.015]" style={{
         backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
@@ -179,22 +170,36 @@ export const RecommendedSpeakers = () => {
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-16">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
-          <div>
-            <div className="inline-flex items-center border border-l-[4px] border-[#222] border-l-[#e30e04] bg-[#222] px-4 py-2 text-[12px] font-bold uppercase tracking-[0.12em] text-[#F8F7F5] mb-6">
-              <span>CURATED SELECTION</span>
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-12 md:mb-16 gap-8">
+          <div className="flex-1">
+            <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
+              <span>SEPTEMBER | HERITAGE MONTH</span>
             </div>
-            <h2 id="recommended-heading" className="text-[clamp(2.5rem,7vw,4rem)] font-light uppercase leading-[1.02] tracking-[-0.04em] text-[#F8F7F5]">
-              Recommended <br className="hidden md:block" />
-              <span className="font-bold text-[#e30e04]">Speakers of the Month</span>
+            <h2 id="recommended-heading" className="mt-6 text-[clamp(2rem,5vw,3rem)] font-light uppercase leading-[1.1] tracking-[-0.03em] text-white">
+              Book Influential African Voices. <br />
+              <span className="font-bold text-[#e30e04]">Shape the Future Through Heritage.</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base text-[#8E8E93] max-w-[500px]">
-              Handpicked keynotes, moderators, and facilitators commanding global attention for July 2026.
-            </p>
+            <div className="mt-6 space-y-4 text-sm md:text-base text-neutral-400 max-w-[800px] leading-relaxed">
+              <p>
+                Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion.
+              </p>
+              <p>
+                The Speakers Firm™ connects organisations with distinguished cultural leaders, historians, artists, storytellers and thought leaders, strategically matched to your audience and objectives.
+              </p>
+              <p>
+                From corporate events and leadership dialogues to masterclasses and cultural forums, we curate voices that deepen understanding, inspire action and create lasting institutional value.
+              </p>
+              <p>
+                This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
+              </p>
+              <p className="font-bold text-white tracking-wider mt-6 text-xs uppercase border-l-[4px] border-[#e30e04] pl-4 py-1">
+                BOOK THE RIGHT VOICE. HONOUR HERITAGE. INSPIRE PROGRESS.
+              </p>
+            </div>
           </div>
           
           {/* Navigation Arrows */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 self-end lg:self-start lg:mt-2">
             <button 
               type="button" 
               onClick={scrollLeft}
@@ -229,17 +234,17 @@ export const RecommendedSpeakers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: (index % RECOMMENDED_SPEAKERS.length) * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative w-[280px] min-[375px]:w-[310px] md:w-[350px] shrink-0 snap-start bg-[#121212] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-white/10 transition-colors duration-300"
+              className="group relative w-[280px] min-[375px]:w-[310px] md:w-[350px] shrink-0 snap-start bg-[#000000] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-white/20 transition-colors duration-300"
             >
               {/* Image & Track Badge */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-950">
                 <img 
                   src={speaker.image} 
                   alt={speaker.name}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-85" />
                 
                 <span className="absolute bottom-4 left-4 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#e30e04] border border-[#e30e04]/20 z-10">
                   {speaker.trackLabel}
@@ -247,21 +252,20 @@ export const RecommendedSpeakers = () => {
               </div>
 
               {/* Info Area */}
-              <div className="p-6 md:p-8 flex flex-col justify-between min-h-[190px]">
+              <div className="p-6 md:p-8 flex flex-col justify-between min-h-[200px]">
                 <div>
-                  <h3 className="text-lg font-bold text-[#F8F7F5] group-hover:text-[#e30e04] transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white group-hover:text-[#e30e04] transition-colors duration-300">
                     {speaker.name}
                   </h3>
-                  <p className="mt-2 text-xs text-[#8E8E93] line-clamp-2">
+                  <p className="mt-2 text-xs text-neutral-400 line-clamp-3 leading-relaxed">
                     {speaker.bio}
                   </p>
-                  
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/[0.04] flex items-center justify-between">
+                <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between">
                   <Link 
                     href={`/tracks/${speaker.trackId}/${speaker.id}`}
-                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#F8F7F5]/80 hover:text-white transition-colors duration-300"
+                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors duration-300"
                   >
                     <span>BOOK THE SPEAKER</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
@@ -276,3 +280,4 @@ export const RecommendedSpeakers = () => {
     </section>
   );
 };
+
