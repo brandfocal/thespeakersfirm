@@ -17,6 +17,8 @@ import { AboutTeamSection as KhayaProfile } from "@/components/generated/KhayaSi
 import { AboutTeamSection as SiphiweProfile } from "@/components/generated/SiphiweMoyoProfileNew";
 import { AboutTeamSection as LincolnProfile } from "@/components/generated/LincolnMaliProfileNew";
 import { AboutTeamSection as StaffordProfile } from "@/components/generated/StaffordMasieProfileNew";
+import { AboutTeamSection as PitikaProfile } from "@/components/generated/ProfPitikaNtuliProfileNew";
+import { AboutTeamSection as WallyProfile } from "@/components/generated/MonganeWallySeroteProfileNew";
 import { AboutTeamSection as MarwalaProfile } from "@/components/generated/ProfTshilidziMarwalaProfileNew";
 import { AboutTeamSection as SylvesterProfile } from "@/components/generated/SylvesterChaukeProfileNew";
 import { AboutTeamSection as MzamoProfile } from "@/components/generated/MzamoMasitoProfileNew";
@@ -736,6 +738,14 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "stafford-masie") {
     return <StaffordProfile />;
+  }
+
+  if (speakerId === "pitika-ntuli" || speakerId === "prof-pitika-ntuli") {
+    return <PitikaProfile />;
+  }
+
+  if (speakerId === "mongane-wally-serote" || speakerId === "wally-serote") {
+    return <WallyProfile />;
   }
 
   if (speakerId === "tshilidzi-marwala") {

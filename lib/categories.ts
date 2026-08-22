@@ -224,7 +224,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo"
   ],
   "spirituality-heritage-and-identity": [
-    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker"
+    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote"
   ],
   "economics-and-politics": [
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",
