@@ -251,6 +251,20 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Mongane-Wally-Serote-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Transformation', 'Heritage'],
   path: '/tracks/spirituality-heritage-and-identity/mongane-wally-serote'
+}, {
+  id: 'zolani-mkiva',
+  name: 'Zolani Mkiva',
+  role: 'International Praise Poet, Cultural Practitioner & Social Commentator',
+  image: '/speaker_thumbnails/zolani-mkiva.jpg',
+  topics: ['Heritage', 'Transformation', 'Identity'],
+  path: '/tracks/spirituality-heritage-and-identity/zolani-mkiva'
+}, {
+  id: 'dick-khoza',
+  name: 'Bishop Dick Khoza',
+  role: 'Cultural Commentator, Compelling Speaker & Community Leader',
+  image: '/speaker_thumbnails/Bishop-Dick-Khoza-The-Speakers-Firm.jpg',
+  topics: ['Heritage', 'Identity', 'Spirituality'],
+  path: '/tracks/spirituality-heritage-and-identity/dick-khoza'
 }];
 
 const filterChips = [{

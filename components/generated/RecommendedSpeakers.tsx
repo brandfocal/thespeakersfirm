@@ -23,6 +23,24 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
+    id: 'zolani-mkiva',
+    name: 'Zolani Mkiva',
+    bio: 'International praise poet, cultural practitioner and social commentator.',
+    quote: '',
+    image: '/speaker_thumbnails/zolani-mkiva.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
+  },
+  {
+    id: 'dick-khoza',
+    name: 'Bishop Dick Khoza',
+    bio: 'Cultural commentator and compelling speaker on African spirituality, indigenous wisdom, identity, values and community leadership.',
+    quote: '',
+    image: '/speaker_thumbnails/Bishop-Dick-Khoza-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
+  },
+  {
     id: 'pitika-ntuli',
     name: 'Prof. Pitika Ntuli',
     bio: 'Sculptor, poet and authority on African indigenous knowledge systems.',
