@@ -27,7 +27,7 @@ const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
     name: 'Zolani Mkiva',
     bio: 'International praise poet, cultural practitioner and social commentator.',
     quote: '',
-    image: '/speaker_thumbnails/zolani-mkiva.jpg',
+    image: '/speaker_thumbnails/Zolani-Mkiva-The-Speakers-Firm.jpg',
     trackId: 'spirituality-heritage-and-identity',
     trackLabel: 'Spirituality'
   },

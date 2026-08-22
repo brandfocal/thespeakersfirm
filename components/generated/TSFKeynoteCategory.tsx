@@ -255,7 +255,7 @@ const speakers: Speaker[] = [{
   id: 'zolani-mkiva',
   name: 'Zolani Mkiva',
   role: 'International Praise Poet, Cultural Practitioner & Social Commentator',
-  image: '/speaker_thumbnails/zolani-mkiva.jpg',
+  image: '/speaker_thumbnails/Zolani-Mkiva-The-Speakers-Firm.jpg',
   topics: ['Heritage', 'Transformation', 'Identity'],
   path: '/tracks/spirituality-heritage-and-identity/zolani-mkiva'
 }, {
