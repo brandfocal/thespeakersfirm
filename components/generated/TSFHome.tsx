@@ -3779,6 +3779,7 @@ export const TheSpeakersFirmHome = () => {
   const speakerCarouselRef2 = React.useRef<HTMLDivElement | null>(null);
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
   const welcomeCarouselRef = React.useRef<HTMLDivElement | null>(null);
+  const welcomeIndexRef = React.useRef(30);
   const testimonialCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
@@ -4003,13 +4004,35 @@ export const TheSpeakersFirmHome = () => {
     if (!c) return;
     
     setIsWelcomeInteracting(true);
-    // Scroll exactly by 1 card width (100vw)
-    const scrollAmount = c.clientWidth;
+    const gap = window.innerWidth >= 768 ? 30 : 20;
+    const children = c.children;
+    if (children.length === 0) return;
+    const cardElement = children[0] as HTMLDivElement;
+    const currentCardWidth = cardElement.clientWidth + gap;
     
-    c.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
+    if (direction === 'right') {
+      welcomeIndexRef.current++;
+    } else {
+      welcomeIndexRef.current--;
+    }
+    
+    c.scrollTo({
+      left: welcomeIndexRef.current * currentCardWidth,
       behavior: 'smooth'
     });
+    
+    // Check boundaries seamlessly
+    if (welcomeIndexRef.current >= 45) {
+      window.setTimeout(() => {
+        welcomeIndexRef.current = 30;
+        if (c) c.scrollTo({ left: 30 * currentCardWidth, behavior: 'auto' });
+      }, 900);
+    } else if (welcomeIndexRef.current <= 15) {
+      window.setTimeout(() => {
+        welcomeIndexRef.current = 30;
+        if (c) c.scrollTo({ left: 30 * currentCardWidth, behavior: 'auto' });
+      }, 900);
+    }
     
     window.setTimeout(() => setIsWelcomeInteracting(false), 900);
   };
@@ -4142,13 +4165,11 @@ export const TheSpeakersFirmHome = () => {
       if (children.length === 0) return;
       const cardElement = children[0] as HTMLDivElement;
       const cardWidth = cardElement.clientWidth + gap;
-      c.scrollLeft = 30 * cardWidth;
+      c.scrollLeft = welcomeIndexRef.current * cardWidth;
     };
     
     // Set initial position to start of 3rd loop set
     setTimeout(initializeScroll, 150);
-    
-    let currentIndex = 30;
     
     const interval = setInterval(() => {
       if (isWelcomeInteracting) return;
@@ -4158,8 +4179,8 @@ export const TheSpeakersFirmHome = () => {
       const cardElement = children[0] as HTMLDivElement;
       const currentCardWidth = cardElement.clientWidth + gap;
       
-      currentIndex++;
-      const targetLeft = currentIndex * currentCardWidth;
+      welcomeIndexRef.current++;
+      const targetLeft = welcomeIndexRef.current * currentCardWidth;
       
       c.scrollTo({
         left: targetLeft,
@@ -4167,9 +4188,9 @@ export const TheSpeakersFirmHome = () => {
       });
       
       // If we scroll past the 3rd set, jump back to 2nd set seamlessly
-      if (currentIndex >= 45) {
+      if (welcomeIndexRef.current >= 45) {
         setTimeout(() => {
-          currentIndex = 30;
+          welcomeIndexRef.current = 30;
           if (c) {
             c.scrollTo({
               left: 30 * currentCardWidth,
