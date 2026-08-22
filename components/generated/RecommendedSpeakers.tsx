@@ -23,6 +23,24 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
+    id: 'pitika-ntuli',
+    name: 'Prof. Pitika Ntuli',
+    bio: 'Sculptor, poet and authority on African indigenous knowledge systems.',
+    quote: '',
+    image: '/speaker_thumbnails/Prof-Pitika-Ntuli-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
+  },
+  {
+    id: 'mongane-wally-serote',
+    name: 'Dr. Wally Serote',
+    bio: 'National Poet Laureate, author and cultural activist.',
+    quote: '',
+    image: '/speaker_thumbnails/Mongane-Wally-Serote-The-Speakers-Firm.jpg',
+    trackId: 'spirituality-heritage-and-identity',
+    trackLabel: 'Spirituality'
+  },
+  {
     id: 'dr-john-kani',
     name: 'Dr. John Kani',
     bio: 'Theatre legend, playwright and cultural activist.',
