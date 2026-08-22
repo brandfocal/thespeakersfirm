@@ -3780,6 +3780,37 @@ export const TheSpeakersFirmHome = () => {
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
   const welcomeCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const welcomeIndexRef = React.useRef(30);
+  const animateWelcomeScroll = (targetLeft: number, duration: number = 1000) => {
+    const c = welcomeCarouselRef.current;
+    if (!c) return () => {};
+    
+    const startLeft = c.scrollLeft;
+    const distance = targetLeft - startLeft;
+    const startTime = window.performance.now();
+    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+    
+    let animationFrame = 0;
+    const step = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutCubic(progress);
+      
+      if (c) c.scrollLeft = startLeft + distance * easedProgress;
+      
+      if (progress < 1) {
+        animationFrame = window.requestAnimationFrame(step);
+      }
+    };
+    
+    animationFrame = window.requestAnimationFrame(step);
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+    };
+  };
+
+  const welcomeAnimationCancelRef = React.useRef<(() => void) | null>(null);
+  const welcomeInteractingTimeoutRef = React.useRef<number | null>(null);
+  const welcomeBoundaryTimeoutRef = React.useRef<number | null>(null);
   const testimonialCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const [isHoveredRow1, setIsHoveredRow1] = React.useState(false);
   const [isHoveredRow2, setIsHoveredRow2] = React.useState(false);
@@ -4004,6 +4035,12 @@ export const TheSpeakersFirmHome = () => {
     if (!c) return;
     
     setIsWelcomeInteracting(true);
+    
+    // Clear any pending interaction resets
+    if (welcomeInteractingTimeoutRef.current) window.clearTimeout(welcomeInteractingTimeoutRef.current);
+    if (welcomeBoundaryTimeoutRef.current) window.clearTimeout(welcomeBoundaryTimeoutRef.current);
+    if (welcomeAnimationCancelRef.current) welcomeAnimationCancelRef.current();
+    
     const gap = window.innerWidth >= 768 ? 30 : 20;
     const children = c.children;
     if (children.length === 0) return;
@@ -4016,25 +4053,25 @@ export const TheSpeakersFirmHome = () => {
       welcomeIndexRef.current--;
     }
     
-    c.scrollTo({
-      left: welcomeIndexRef.current * currentCardWidth,
-      behavior: 'smooth'
-    });
+    const targetLeft = welcomeIndexRef.current * currentCardWidth;
+    welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1000);
     
-    // Check boundaries seamlessly
+    // Check boundaries and reset index seamlessly after the smooth scroll finishes (1000ms)
     if (welcomeIndexRef.current >= 45) {
-      window.setTimeout(() => {
+      welcomeBoundaryTimeoutRef.current = window.setTimeout(() => {
         welcomeIndexRef.current = 30;
-        if (c) c.scrollTo({ left: 30 * currentCardWidth, behavior: 'auto' });
-      }, 900);
+        if (c) c.scrollLeft = 30 * currentCardWidth;
+      }, 1050) as any;
     } else if (welcomeIndexRef.current <= 15) {
-      window.setTimeout(() => {
+      welcomeBoundaryTimeoutRef.current = window.setTimeout(() => {
         welcomeIndexRef.current = 30;
-        if (c) c.scrollTo({ left: 30 * currentCardWidth, behavior: 'auto' });
-      }, 900);
+        if (c) c.scrollLeft = 30 * currentCardWidth;
+      }, 1050) as any;
     }
     
-    window.setTimeout(() => setIsWelcomeInteracting(false), 900);
+    welcomeInteractingTimeoutRef.current = window.setTimeout(() => {
+      setIsWelcomeInteracting(false);
+    }, 1200) as any;
   };
 
   const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
@@ -4179,30 +4216,26 @@ export const TheSpeakersFirmHome = () => {
       const cardElement = children[0] as HTMLDivElement;
       const currentCardWidth = cardElement.clientWidth + gap;
       
+      if (welcomeAnimationCancelRef.current) welcomeAnimationCancelRef.current();
+      
       welcomeIndexRef.current++;
       const targetLeft = welcomeIndexRef.current * currentCardWidth;
-      
-      c.scrollTo({
-        left: targetLeft,
-        behavior: 'smooth'
-      });
+      welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1000);
       
       // If we scroll past the 3rd set, jump back to 2nd set seamlessly
       if (welcomeIndexRef.current >= 45) {
         setTimeout(() => {
           welcomeIndexRef.current = 30;
-          if (c) {
-            c.scrollTo({
-              left: 30 * currentCardWidth,
-              behavior: 'auto'
-            });
-          }
-        }, 1000);
+          if (c) c.scrollLeft = 30 * currentCardWidth;
+        }, 1050);
       }
     }, 4500); // 3.5s pause + 1s smooth slide out
     
     return () => {
       clearInterval(interval);
+      if (welcomeInteractingTimeoutRef.current) window.clearTimeout(welcomeInteractingTimeoutRef.current);
+      if (welcomeBoundaryTimeoutRef.current) window.clearTimeout(welcomeBoundaryTimeoutRef.current);
+      if (welcomeAnimationCancelRef.current) welcomeAnimationCancelRef.current();
     };
   }, [isWelcomeInteracting, prefersReducedMotion]);
 
