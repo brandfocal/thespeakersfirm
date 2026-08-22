@@ -2014,6 +2014,13 @@ const WELCOME_SPEAKERS = [
     role: "Wealth Advisor & Personal Finance Author",
     image: "/welcome_slides/samke-mhlongo.jpg",
     profileUrl: "/tracks/financial-inclusion/samke-mhlongo"
+  },
+  {
+    id: "stafford-masie",
+    name: "Stafford Masie",
+    role: "Technology Futurist, AI Innovator & Business Strategist",
+    image: "/welcome_slides/stafford-massie.jpg",
+    profileUrl: "/tracks/future-of-work/stafford-masie"
   }
 ];
 
@@ -4135,13 +4142,13 @@ export const TheSpeakersFirmHome = () => {
       if (children.length === 0) return;
       const cardElement = children[0] as HTMLDivElement;
       const cardWidth = cardElement.clientWidth + gap;
-      c.scrollLeft = 28 * cardWidth;
+      c.scrollLeft = 30 * cardWidth;
     };
     
     // Set initial position to start of 3rd loop set
     setTimeout(initializeScroll, 150);
     
-    let currentIndex = 28;
+    let currentIndex = 30;
     
     const interval = setInterval(() => {
       if (isWelcomeInteracting) return;
@@ -4160,12 +4167,12 @@ export const TheSpeakersFirmHome = () => {
       });
       
       // If we scroll past the 3rd set, jump back to 2nd set seamlessly
-      if (currentIndex >= 42) {
+      if (currentIndex >= 45) {
         setTimeout(() => {
-          currentIndex = 28;
+          currentIndex = 30;
           if (c) {
             c.scrollTo({
-              left: 28 * currentCardWidth,
+              left: 30 * currentCardWidth,
               behavior: 'auto'
             });
           }
