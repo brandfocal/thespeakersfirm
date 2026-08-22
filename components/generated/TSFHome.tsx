@@ -4047,6 +4047,13 @@ export const TheSpeakersFirmHome = () => {
     const cardElement = children[0] as HTMLDivElement;
     const currentCardWidth = cardElement.clientWidth + gap;
     
+    const expectedCurrentLeft = welcomeIndexRef.current * currentCardWidth;
+    
+    // Sync check: if c.scrollLeft is not where we expect, snap it to the starting card instantly first
+    if (Math.abs(c.scrollLeft - expectedCurrentLeft) > currentCardWidth * 0.5) {
+      c.scrollLeft = expectedCurrentLeft;
+    }
+
     if (direction === 'right') {
       welcomeIndexRef.current++;
     } else {
@@ -4217,6 +4224,11 @@ export const TheSpeakersFirmHome = () => {
       const currentCardWidth = cardElement.clientWidth + gap;
       
       if (welcomeAnimationCancelRef.current) welcomeAnimationCancelRef.current();
+      
+      const expectedCurrentLeft = welcomeIndexRef.current * currentCardWidth;
+      if (Math.abs(c.scrollLeft - expectedCurrentLeft) > currentCardWidth * 0.5) {
+        c.scrollLeft = expectedCurrentLeft;
+      }
       
       welcomeIndexRef.current++;
       const targetLeft = welcomeIndexRef.current * currentCardWidth;
