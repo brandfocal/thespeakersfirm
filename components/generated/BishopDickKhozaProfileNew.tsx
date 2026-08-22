@@ -37,12 +37,7 @@ const STRATEGIC_THEMES = [
   }
 ];
 
-const FULL_BIO_PARAGRAPHS = [
-  "Bishop Dick Khoza is a prominent South African spiritual leader, cultural commentator, and compelling speaker. He has dedicated his life to addressing core issues of African spirituality, indigenous wisdom, identity, values, and community leadership. As a respected Bishop, he acts as a moral compass, advising both community organizations and media platforms on ethical development.",
-  "Leveraging deep roots in indigenous systems, Bishop Khoza advocates for moral regeneration and family restoration. He is frequently invited to speak at cultural forums and leadership summits, guiding audiences on how to harmonize traditional African values with contemporary social and corporate responsibilities.",
-  "His work focuses heavily on building unified, resilient community structures. Through his keynotes and dialogues, he promotes a return to core values such as integrity, respect, and shared responsibility, inspiring a new generation of ethical leaders who honor their heritage while driving societal progress.",
-  "Book Bishop Dick Khoza through The Speakers Firm, A Leading African Speakers Bureau, to deliver deeply moving keynotes on African identity, moral leadership, and community values at your next conference."
-];
+const FULL_BIO_PARAGRAPHS: string[] = [];
 
 const SOCIAL_PROOF_LOGOS = [
   { id: "community", name: "ETHICAL LEADERSHIP COLLABORATIVE" },
