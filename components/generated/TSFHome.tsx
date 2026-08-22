@@ -3780,20 +3780,20 @@ export const TheSpeakersFirmHome = () => {
   const speakerCarouselRef3 = React.useRef<HTMLDivElement | null>(null);
   const welcomeCarouselRef = React.useRef<HTMLDivElement | null>(null);
   const welcomeIndexRef = React.useRef(30);
-  const animateWelcomeScroll = (targetLeft: number, duration: number = 1000) => {
+  const animateWelcomeScroll = (targetLeft: number, duration: number = 1400) => {
     const c = welcomeCarouselRef.current;
     if (!c) return () => {};
     
     const startLeft = c.scrollLeft;
     const distance = targetLeft - startLeft;
     const startTime = window.performance.now();
-    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+    const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     
     let animationFrame = 0;
     const step = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutCubic(progress);
+      const easedProgress = easeInOutCubic(progress);
       
       if (c) c.scrollLeft = startLeft + distance * easedProgress;
       
@@ -4054,24 +4054,24 @@ export const TheSpeakersFirmHome = () => {
     }
     
     const targetLeft = welcomeIndexRef.current * currentCardWidth;
-    welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1000);
+    welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1400);
     
-    // Check boundaries and reset index seamlessly after the smooth scroll finishes (1000ms)
+    // Check boundaries and reset index seamlessly after the smooth scroll finishes (1400ms)
     if (welcomeIndexRef.current >= 45) {
       welcomeBoundaryTimeoutRef.current = window.setTimeout(() => {
         welcomeIndexRef.current = 30;
         if (c) c.scrollLeft = 30 * currentCardWidth;
-      }, 1050) as any;
+      }, 1450) as any;
     } else if (welcomeIndexRef.current <= 15) {
       welcomeBoundaryTimeoutRef.current = window.setTimeout(() => {
         welcomeIndexRef.current = 30;
         if (c) c.scrollLeft = 30 * currentCardWidth;
-      }, 1050) as any;
+      }, 1450) as any;
     }
     
     welcomeInteractingTimeoutRef.current = window.setTimeout(() => {
       setIsWelcomeInteracting(false);
-    }, 1200) as any;
+    }, 1600) as any;
   };
 
   const handleSpeakerCarouselAdvance = (rowNum: 1 | 2 | 3, direction: 'previous' | 'next') => {
@@ -4220,16 +4220,16 @@ export const TheSpeakersFirmHome = () => {
       
       welcomeIndexRef.current++;
       const targetLeft = welcomeIndexRef.current * currentCardWidth;
-      welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1000);
+      welcomeAnimationCancelRef.current = animateWelcomeScroll(targetLeft, 1400);
       
       // If we scroll past the 3rd set, jump back to 2nd set seamlessly
       if (welcomeIndexRef.current >= 45) {
         setTimeout(() => {
           welcomeIndexRef.current = 30;
           if (c) c.scrollLeft = 30 * currentCardWidth;
-        }, 1050);
+        }, 1450);
       }
-    }, 4500); // 3.5s pause + 1s smooth slide out
+    }, 5000); // 3.6s pause + 1.4s smooth slide out
     
     return () => {
       clearInterval(interval);
