@@ -64,8 +64,6 @@ const SUBMENU_CATEGORIES = CATEGORIES_CONFIG.slice(11);
 
 const FOOTER_NAV_LINKS = [
   { id: 'home', label: 'Home', href: '/' },
-  { id: 'faculty', label: 'Faculty', href: '/#faculty' },
-  { id: 'methodology', label: 'Methodology', href: '/#methodology' },
   { id: 'executive-dialogues', label: 'Executive Dialogues', href: '/#dialogues' },
   { id: 'find-speaker', label: 'Brief Us Now', href: '/brief-us-now' }
 ];

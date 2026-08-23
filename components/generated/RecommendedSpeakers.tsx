@@ -183,9 +183,9 @@ export const RecommendedSpeakers = () => {
           <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
             <span>SEPTEMBER | HERITAGE MONTH</span>
           </div>
-          <h2 id="recommended-heading" className="mt-6 text-[clamp(2rem,5vw,3rem)] font-light uppercase leading-[1.1] tracking-[-0.03em] text-white">
-            Book Influential African Voices. <br />
-            <span className="font-bold text-[#e30e04]">Shape the Future Through Heritage.</span>
+          <h2 id="recommended-heading" className="mt-6 text-[clamp(2.5rem,5vw,3.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-white">
+            <span>Book Influential African Voices.</span><br />
+            <span className="text-[#e30e04]">Shape the Future Through Heritage.</span>
           </h2>
           <div className="mt-6 space-y-4 text-sm md:text-base text-neutral-400 max-w-none leading-relaxed">
             <p>
@@ -200,7 +200,7 @@ export const RecommendedSpeakers = () => {
             <p>
               This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
             </p>
-            <p className="font-bold text-white tracking-wider mt-6 text-xs uppercase border-l-[4px] border-[#e30e04] pl-4 py-1">
+            <p className="font-bold text-[#e30e04] tracking-wider mt-6 text-xs uppercase">
               BOOK THE RIGHT VOICE. HONOUR HERITAGE. INSPIRE PROGRESS.
             </p>
           </div>
