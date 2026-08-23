@@ -417,34 +417,10 @@ export const TSFGallery = () => {
         </div>
       </section>
 
+      {/* Highlights (Dark Section) */}
       <section className="relative bg-[#212121] text-[#F8F7F5] py-16 md:py-24 lg:py-32">
         <VerticalBorderLines isDark />
         <div className="mx-auto max-w-[1440px] px-6 md:px-16">
-          <motion.div {...reveal}>
-            <SectionTag>Videos & Reels</SectionTag>
-            <h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl">
-              See the energy<br /><span className="text-[#AFB0B0]">in motion.</span>
-            </h2>
-            <AnimatedRedRule className="mt-6 w-full" />
-          </motion.div>
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
-            {videos.map(video => (
-              <figure key={video.id} className="group w-full">
-                <div className="relative aspect-[9/16] overflow-hidden">
-                  <img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} />
-                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors group-hover:bg-[#e30e04]">
-                      <Play className="ml-0.5 h-4 w-4 fill-current" />
-                    </span>
-                  </span>
-                </div>
-                <figcaption className="pt-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#F8F7F5]">{video.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-
-          <div className="my-16 md:my-24 h-[1px] w-full bg-white/10" />
-
           <motion.div {...reveal} id="gallery" className="mb-12 flex flex-col items-start justify-between gap-6 sm:mb-16 md:flex-row md:items-end">
             <div>
               <SectionTag>Highlights</SectionTag>
@@ -496,6 +472,35 @@ export const TSFGallery = () => {
                   <span className="mt-1 block text-[11px] uppercase tracking-[0.1em] text-[#AFB0B0]">{item.year} / {item.category}</span>
                 </figcaption>
               </motion.figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Videos & Reels (Light Section) */}
+      <section className="relative bg-[#ffffff] text-[#212121] py-16 md:py-24 lg:py-32 border-t border-[rgba(33,33,33,0.14)]">
+        <VerticalBorderLines />
+        <div className="mx-auto max-w-[1440px] px-6 md:px-16">
+          <motion.div {...reveal}>
+            <SectionTag>Videos & Reels</SectionTag>
+            <h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] sm:text-6xl text-[#212121]">
+              See the energy<br /><span className="text-[#686869]">in motion.</span>
+            </h2>
+            <AnimatedRedRule className="mt-6 w-full" />
+          </motion.div>
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+            {videos.map(video => (
+              <figure key={video.id} className="group w-full">
+                <div className="relative aspect-[9/16] overflow-hidden">
+                  <img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} />
+                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/20 text-black transition-colors group-hover:bg-[#e30e04] group-hover:text-white group-hover:border-[#e30e04]">
+                      <Play className="ml-0.5 h-4 w-4 fill-current" />
+                    </span>
+                  </span>
+                </div>
+                <figcaption className="pt-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#212121]">{video.title}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
