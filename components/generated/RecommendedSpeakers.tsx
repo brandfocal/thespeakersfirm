@@ -189,16 +189,7 @@ export const RecommendedSpeakers = () => {
           </h2>
           <div className="mt-6 space-y-4 text-sm md:text-base text-white/60 max-w-none leading-relaxed">
             <p>
-              Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion.
-            </p>
-            <p>
-              The Speakers Firm™ connects organisations with distinguished cultural leaders, historians, artists, storytellers and thought leaders, strategically matched to your audience and objectives.
-            </p>
-            <p>
-              From corporate events and leadership dialogues to masterclasses and cultural forums, we curate voices that deepen understanding, inspire action and create lasting institutional value.
-            </p>
-            <p>
-              This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
+              Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion. The Speakers Firm™ connects organisations with distinguished cultural leaders, historians, artists, storytellers and thought leaders, strategically matched to your audience and objectives. From corporate events and leadership dialogues to masterclasses and cultural forums, we curate voices that deepen understanding, inspire action and create lasting institutional value. This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
             </p>
             <p className="font-bold text-[#e30e04] tracking-wider mt-6 text-xs uppercase">
               BOOK THE RIGHT VOICE. HONOUR HERITAGE. INSPIRE PROGRESS.
