@@ -482,7 +482,7 @@ export const TSFGallery = () => {
                 className="group relative min-h-[320px] cursor-pointer" 
                 onClick={() => { setSelectedGallery(item); setActiveImageIndex(0); }}
               >
-                <div className="relative aspect-[9/16] overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <img className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src={item.image} alt={item.title} />
                   <div className="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="absolute bottom-5 left-5 right-5 translate-y-4 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
