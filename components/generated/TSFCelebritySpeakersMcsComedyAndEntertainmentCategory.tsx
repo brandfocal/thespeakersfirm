@@ -337,105 +337,6 @@ const speakers: Speaker[] = [
       "High-Energy Corporate Presentation"
     ],
     "path": "/tracks/mc-and-facilitators/liopelo-maphathe"
-  },
-  {
-    "id": "ntosh-madlingozi",
-    "name": "Ntosh Madlingozi",
-    "role": "Entrepreneur, Stand-Up Comedian & Master of Ceremonies",
-    "image": "/speaker_thumbnails/Ntosh-Madlingozi-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/ntosh-madlingozi"
-  },
-  {
-    "id": "ndumiso-lindi",
-    "name": "Ndumiso Lindi",
-    "role": "Stand-Up Comedian, Master of Ceremonies & Broadcaster",
-    "image": "/speaker_thumbnails/Ndumiso-Lindi-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/ndumiso-lindi"
-  },
-  {
-    "id": "mpho-popps",
-    "name": "Mpho Popps Modikoane",
-    "role": "Charismatic Comedian, Actor, Presenter & Master of Ceremonies",
-    "image": "/speaker_thumbnails/Mpho-Popps-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/mpho-popps"
-  },
-  {
-    "id": "kagiso-kg-mokgadi",
-    "name": "Kagiso “KG” Mokgadi",
-    "role": "Award-Winning Stand-Up Comedian & Master of Ceremonies",
-    "image": "/speaker_thumbnails/Kagiso-KG-Mokgadi-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/kagiso-kg-mokgadi"
-  },
-  {
-    "id": "kagiso-lediga",
-    "name": "Kagiso Lediga",
-    "role": "Comedy Legend, Emmy-Nominated Director & Showrunner",
-    "image": "/speaker_thumbnails/Kagiso-Lediga-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/kagiso-lediga"
-  },
-  {
-    "id": "eugene-khoza",
-    "name": "Eugene Khoza",
-    "role": "Multilingual Stand-Up Comedian, TV Host & Cultural Analyst",
-    "image": "/speaker_thumbnails/Eugene-Khoza-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/eugene-khoza"
-  },
-  {
-    "id": "isaac-gampu",
-    "name": "Isaac Gampu",
-    "role": "Veteran Stand-Up Comedian, Actor & Radio Presenter",
-    "image": "/speaker_thumbnails/Isaac-Gampu-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/isaac-gampu"
-  },
-  {
-    "id": "tol-ass-mo",
-    "name": "Tol A$$ Mo",
-    "role": "Celebrated Stand-Up Comedian, TV Personality & Entrepreneur",
-    "image": "/speaker_thumbnails/Tol-As-Mo-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/tol-ass-mo"
-  },
-  {
-    "id": "summary",
-    "name": "Summary",
-    "role": "Stand-Up Comedian, Event Emcee & Media Personality",
-    "image": "/speaker_thumbnails/Summary-The-Speakers-Firm.jpg",
-    "topics": [
-      "Comedy & Satirical Disruption",
-      "Strategic Audience Engagement"
-    ],
-    "path": "/tracks/comedy/summary"
   }
 ];
 
@@ -444,8 +345,7 @@ const filterChips = [
   { id: 'topic-0', label: "Premium Event Facilitation & Hosting" },
   { id: 'topic-1', label: "Strategic Audience Engagement" },
   { id: 'topic-2', label: "High-Energy Corporate Presentation" },
-  { id: 'topic-3', label: "Brand Visibility & Credibility" },
-  { id: 'topic-4', label: "Comedy & Satirical Disruption" }
+  { id: 'topic-3', label: "Brand Visibility & Credibility" }
 ];
 
 const reveal = {
@@ -541,7 +441,7 @@ export function TSFCelebritySpeakersMcsComedyAndEntertainmentCategory() {
               Bringing Visibility, Energy, and Unforgettable Engagement.
             </p>
             <p className="text-sm leading-6 text-white/60">
-              Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.
+              Acclaimed public figures, broadcasters, actors, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.
             </p>
           </div>
         </div>

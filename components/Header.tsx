@@ -358,7 +358,8 @@ export function Header() {
                     { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
                     { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
                     { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
-                    { name: 'MCs & Entertainment', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' }
+                    { name: 'MCs & Facilitators', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' },
+                    { name: 'Comedy', path: '/categories/comedy' }
                   ].map(cat => {
                     return (
                       <Link
@@ -660,7 +661,7 @@ export function Header() {
                         "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
                         "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
                         "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
-                        "comedy": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                        "comedy": "/categories/comedy",
                         "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
                         "diversity": "/categories/leadership-strategy-and-executive-performance",
                         "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
@@ -733,7 +734,7 @@ export function Header() {
                               "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
                               "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
                               "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
-                              "comedy": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
+                              "comedy": "/categories/comedy",
                               "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
                               "diversity": "/categories/leadership-strategy-and-executive-performance",
                               "media-brand-reputation": "/categories/media-communication-and-executive-visibility",

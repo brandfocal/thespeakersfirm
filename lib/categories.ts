@@ -28,7 +28,7 @@ export const CATEGORIES_CONFIG: CategoryConfig[] = [
     id: "mc-and-facilitators",
     buttonLabel: "MC's",
     fullTitle: "Masters of Ceremonies, Facilitators & Panel Chairpersons",
-    description: "Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event."
+    description: "Acclaimed public figures, broadcasters, actors, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event."
   },
   {
     id: "comedy",

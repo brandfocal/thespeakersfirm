@@ -132,11 +132,17 @@ const categories: Category[] = [{
   path: '/categories/sustainability-esg-health-and-human-performance'
 }, {
   number: '20',
-  name: 'Celebrity Speakers, MCs, Comedy and Entertainment',
-  description: 'Acclaimed public figures, broadcasters, actors, comedians, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.',
+  name: 'Celebrity Speakers, MCs and Facilitators',
+  description: 'Acclaimed public figures, broadcasters, actors, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.',
   seed: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg',
   path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment'
-}                        ];
+}, {
+  number: '21',
+  name: 'Comedy, Culture & Strategic Disruption',
+  description: 'Comedians, humorists, and disruptive creatives using storytelling, comedy, and cultural insights to challenge corporate norms and foster human connection.',
+  seed: '/speaker_thumbnails/Mpho-Popps-The-Speakers-Firm.jpg',
+  path: '/categories/comedy'
+}]
 
 const marqueeNames = categories.map(category => category.name);
 

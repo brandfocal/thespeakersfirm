@@ -27,7 +27,8 @@ const CATEGORIES = [
   { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
   { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
   { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
-  { name: 'MCs & Entertainment', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' }
+  { name: 'MCs & Facilitators', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' },
+  { name: 'Comedy', path: '/categories/comedy' }
 ];
 
 export function BottomCategoryMenu() {
