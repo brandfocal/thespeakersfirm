@@ -291,7 +291,7 @@ export const TSFAboutUsRedesign = () => {
   <FloatingNav />
 
   <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh] bg-black">
-    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000&auto=format&fit=crop" alt="Audience gathered at a live event" className="absolute inset-0 h-full w-full object-cover object-center" />
+    <img src="/hero_backgrounds/about-us.jpg" alt="Audience gathered at a live event" className="absolute inset-0 h-full w-full object-cover object-center" />
     <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/72 via-[#000000]/42 to-[#000000]/92" aria-hidden="true" />
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: NOISE_TEXTURE
