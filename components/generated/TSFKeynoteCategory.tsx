@@ -238,27 +238,6 @@ const speakers: Speaker[] = [{
   topics: ['Leadership', 'Performance', 'Transformation'],
   path: '/tracks/inspirational-keynote-speakers/jabulile-khumalo'
 }, {
-  id: 'pitika-ntuli',
-  name: 'Prof. Pitika Ntuli',
-  role: 'Celebrated Sculptor, Poet, Writer & Academic',
-  image: '/speaker_thumbnails/Prof-Pitika-Ntuli-The-Speakers-Firm.jpg',
-  topics: ['Leadership', 'Transformation', 'Heritage'],
-  path: '/tracks/spirituality-heritage-and-identity/pitika-ntuli'
-}, {
-  id: 'mongane-wally-serote',
-  name: 'Dr. Wally Serote',
-  role: 'National Poet Laureate, Acclaimed Novelist & Activist',
-  image: '/speaker_thumbnails/Mongane-Wally-Serote-The-Speakers-Firm.jpg',
-  topics: ['Leadership', 'Transformation', 'Heritage'],
-  path: '/tracks/spirituality-heritage-and-identity/mongane-wally-serote'
-}, {
-  id: 'zolani-mkiva',
-  name: 'Zolani Mkiva',
-  role: 'International Praise Poet, Cultural Practitioner & Social Commentator',
-  image: '/speaker_thumbnails/Zolani-Mkiva-The-Speakers-Firm.jpg',
-  topics: ['Heritage', 'Transformation', 'Identity'],
-  path: '/tracks/spirituality-heritage-and-identity/zolani-mkiva'
-}, {
   id: 'dick-khoza',
   name: 'Bishop Dick Khoza',
   role: 'Cultural Commentator, Compelling Speaker & Community Leader',

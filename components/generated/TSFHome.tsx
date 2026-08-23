@@ -101,9 +101,9 @@ const HERO_SLIDES = [{
   alt: 'Dr. Phumzile Mlambo-Ngcuka',
   position: 'object-center'
 }, {
-  id: 'khaya-sithole',
-  image: '/hero_backgrounds/khaya-sithole.jpg',
-  alt: 'Khaya Sithole',
+  id: 'john-sanei',
+  image: '/speakers/John Sanei/John-Sanei-The-Speakers-Firm-6.jpg',
+  alt: 'John Sanei',
   position: 'object-center'
 }, {
   id: 'sizwe-mpofu-walsh',
@@ -2834,7 +2834,7 @@ const HERO_HEADLINE_LINES = [{
   className: 'block text-[clamp(54px,18vw,72px)] md:text-[106px] lg:text-[138px] leading-[0.9] tracking-[-0.065em]',
   words: [{
     id: 'africas-1-word',
-    text: "Africa’s #1",
+    text: "A Leading",
     isRed: false
   }]
 }, {
@@ -2842,7 +2842,7 @@ const HERO_HEADLINE_LINES = [{
   className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
     id: 'strategic-word',
-    text: 'Strategic',
+    text: 'African',
     isRed: false
   }]
 }, {
@@ -4723,126 +4723,20 @@ export const TheSpeakersFirmHome = () => {
 
       <RecommendedSpeakers />
 
-                              <section aria-labelledby="welcome-speakers-heading" className="relative w-full overflow-hidden border-b" style={{
-      backgroundColor: '#ffffff',
-      borderColor: SOFT_RULE_COLOR
-    }}>
-        <VerticalBorderLines />
-        <div className="relative z-10 mx-auto max-w-[1440px] px-6 pt-20 pb-0 sm:pt-24 sm:pb-0 md:px-16 md:pt-32 md:pb-0">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: prefersReducedMotion ? 0.35 : 0.6,
-          ease: HEADING_EASE
-        }} className="grid grid-cols-1 gap-7 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-7">
-              <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-                <span>New Additions</span>
-              </div>
-              <h2 id="welcome-speakers-heading" className="mt-6 max-w-[780px] text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-[#000000]">
-                Welcoming New Voices.
-              </h2>
-            </div>
-            <div className="block lg:col-span-1 lg:self-stretch">
-              <div className="h-[1px] w-full lg:h-full lg:w-[1px]" style={{
-              backgroundColor: COLORS.borderGray
-            }} />
-            </div>
-            <div className="flex flex-col justify-end lg:col-span-4">
-              <p aria-hidden="true" className="mb-3 font-serif text-[28px] italic leading-none tracking-[-0.06em] sm:text-[34px] lg:mb-5 text-[#AFB0B0]">
-                <span>Fresh Perspectives</span>
-              </p>
-              <p className="max-w-[520px] text-[17px] font-normal leading-[1.55] md:text-[20px] text-[#686869]">
-                <span>Authoritative global figures and visionary strategists joining the bureau.</span>
-              </p>
-            </div>
-          </motion.div>
-          
-          <motion.div initial={{
-          scaleX: 0,
-          opacity: 0
-        }} whileInView={{
-          scaleX: 1,
-          opacity: 1
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: prefersReducedMotion ? 0.35 : 0.85,
-          delay: 0.08,
-          ease: HEADING_EASE
-        }} className="mt-10 h-[1px] w-full origin-left md:mt-12" style={{
-          backgroundColor: COLORS.borderGray
-        }} />
-
-          {/* Controls Bar above the carousel */}
-          <div className="flex items-center justify-between mt-10">
-            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#686869]">Slide to explore new talent</p>
-            <div className="flex items-center gap-2">
-              <button 
-                type="button" 
-                aria-label="Scroll welcome carousel left"
-                onClick={() => handleWelcomeCarouselScroll('left')} 
-                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-black hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] transition-all duration-300"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button 
-                type="button" 
-                aria-label="Scroll welcome carousel right"
-                onClick={() => handleWelcomeCarouselScroll('right')} 
-                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white text-black hover:bg-[#e30e04] hover:text-white hover:border-[#e30e04] transition-all duration-300"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
+      <section className="relative w-full overflow-hidden border-b bg-[#000000]" style={{
+        borderColor: SOFT_RULE_COLOR
+      }}>
+        <VerticalBorderLines isDark />
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-12 md:px-16 md:py-20">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[28px] border border-white/10 shadow-2xl">
+            <img 
+              src="/upcoming_events/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop.jpg" 
+              alt="Prof. Letlhokwa George Mpedi Book Launch" 
+              className="h-full w-full object-cover object-center"
+            />
           </div>
         </div>
-
-        {/* Carousel container - Bleeds full-width edge-to-edge */}
-        <div className="relative w-full mt-6 pb-16 sm:pb-20 md:pb-24 group/welcome-carousel overflow-hidden">
-            {/* Scrollable Row */}
-            <div 
-              ref={welcomeCarouselRef}
-              className="flex gap-5 md:gap-[30px] overflow-x-hidden scrollbar-none pb-4 px-0"
-            >
-              {[...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS, ...WELCOME_SPEAKERS].map((speaker, index) => (
-                <div 
-                  key={`${speaker.id}-${index}`}
-                  className="relative aspect-[16/10] md:aspect-[21/9] w-[calc(100vw-48px)] md:w-[calc(100vw-160px)] md:max-h-[580px] shrink-0 rounded-[28px] overflow-hidden shadow-[0_10px_35px_rgba(0,0,0,0.06)] transition-[transform,box-shadow] duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] group/card"
-                >
-                  {/* Speaker Background Image */}
-                  <img 
-                    src={speaker.image} 
-                    alt={speaker.name} 
-                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 group-hover/card:scale-[1.02]"
-                  />
-                  {/* Speaker Info and CTA */}
-                  <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end h-full">
-                    {/* Book This Speaker Primary CTA button complying with AGENTS.md rule */}
-                    <motion.a 
-                      href={speaker.profileUrl} 
-                      whileHover={{ scale: 1.02 }} 
-                      whileTap={{ scale: 0.98 }} 
-                      className="inline-flex w-fit self-center mt-5 cursor-pointer"
-                      style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
-                    >
-                      <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
-                        <span>Book This Speaker</span>
-                        <ArrowRight size={14} className="text-[#e30e04]" />
-                      </span>
-                    </motion.a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      </section>
 
       <section id="methodology" className="relative w-full" style={{
       backgroundColor: COLORS.black,

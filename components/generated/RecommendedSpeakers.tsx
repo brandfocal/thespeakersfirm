@@ -23,38 +23,11 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
-    id: 'zolani-mkiva',
-    name: 'Zolani Mkiva',
-    bio: 'International praise poet, cultural practitioner and social commentator.',
-    quote: '',
-    image: '/speaker_thumbnails/Zolani-Mkiva-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
     id: 'dick-khoza',
     name: 'Bishop Dick Khoza',
     bio: 'Cultural commentator and compelling speaker on African spirituality, indigenous wisdom, identity, values and community leadership.',
     quote: '',
     image: '/speaker_thumbnails/Bishop-Dick-Khoza-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'pitika-ntuli',
-    name: 'Prof. Pitika Ntuli',
-    bio: 'Sculptor, poet and authority on African indigenous knowledge systems.',
-    quote: '',
-    image: '/speaker_thumbnails/Prof-Pitika-Ntuli-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'mongane-wally-serote',
-    name: 'Dr. Wally Serote',
-    bio: 'National Poet Laureate, author and cultural activist.',
-    quote: '',
-    image: '/speaker_thumbnails/Mongane-Wally-Serote-The-Speakers-Firm.jpg',
     trackId: 'spirituality-heritage-and-identity',
     trackLabel: 'Spirituality'
   },
@@ -214,7 +187,7 @@ export const RecommendedSpeakers = () => {
             Book Influential African Voices. <br />
             <span className="font-bold text-[#e30e04]">Shape the Future Through Heritage.</span>
           </h2>
-          <div className="mt-6 space-y-4 text-sm md:text-base text-neutral-400 max-w-[800px] leading-relaxed">
+          <div className="mt-6 space-y-4 text-sm md:text-base text-neutral-400 max-w-none leading-relaxed">
             <p>
               Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion.
             </p>
@@ -279,10 +252,6 @@ export const RecommendedSpeakers = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-85" />
-                
-                <span className="absolute bottom-4 left-4 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#e30e04] border border-[#e30e04]/20 z-10">
-                  {speaker.trackLabel}
-                </span>
               </div>
 
               {/* Info Area */}
