@@ -4723,16 +4723,16 @@ export const TheSpeakersFirmHome = () => {
 
       <RecommendedSpeakers />
 
-      <section className="relative w-full overflow-hidden border-b bg-[#000000]" style={{
+      <section className="relative w-full overflow-hidden border-b bg-[#ffffff]" style={{
         borderColor: SOFT_RULE_COLOR
       }}>
-        <VerticalBorderLines isDark />
+        <VerticalBorderLines />
         <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-12 md:px-16 md:py-20">
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[28px] border border-white/10 shadow-2xl">
+          <div className="relative w-full overflow-hidden rounded-[28px] border border-black/10 shadow-2xl bg-white">
             <img 
               src="/upcoming_events/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop.jpg" 
               alt="Prof. Letlhokwa George Mpedi Book Launch" 
-              className="h-full w-full object-cover object-center"
+              className="w-full h-auto block"
             />
           </div>
         </div>
