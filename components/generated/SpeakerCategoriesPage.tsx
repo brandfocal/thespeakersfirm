@@ -50,7 +50,7 @@ const categories: Category[] = [{
   number: '06',
   name: 'Economics, Markets and the Global Economy',
   description: 'Respected economists and financial strategists translating complex economic developments into clear implications for boards, investors, governments and business leaders.',
-  seed: '/speakers/Economics/Khaya-Sithole-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Pali-Lehohla-The-Speakers-Firm.jpg',
   path: '/categories/economics-markets-and-the-global-economy'
 }, {
   number: '07',

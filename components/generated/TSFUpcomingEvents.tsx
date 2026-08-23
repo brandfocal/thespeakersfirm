@@ -170,18 +170,6 @@ const VerticalBorderLines = ({
 };
 
 const slideImages = [
-  { 
-    src: '/upcoming_events/empowawomen-desktop.jpg', 
-    mobileSrc: '/upcoming_events/empowawomen-desktop.jpg',
-    alt: 'EmpowaWomen Initiative', 
-    link: 'https://www.quicket.co.za/events/344315-empowawomen-leadership-summit-2026/#/' 
-  },
-  { 
-    src: '/upcoming_events/empowamen-banner.jpg', 
-    mobileSrc: '/upcoming_events/empowamen-banner.jpg',
-    alt: 'EmpowaMen Initiative', 
-    link: 'https://www.quicket.co.za/events/370734-empowamen-2026/' 
-  },
   {
     src: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop-1.jpg',
     mobileSrc: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Prof-Letlhokwa-George-Mpedi-Book-Launch-1.jpg',
@@ -352,17 +340,19 @@ export const TSFUpcomingEvents = () => {
           </AnimatePresence>
 
           {/* Slide Indicator Dots */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-            {slideImages.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                aria-label={`Go to slide ${i + 1}`}
-                onClick={() => setActiveSlide(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === i ? 'w-8 bg-[#e30e04]' : 'w-2.5 bg-black/40 hover:bg-black/60'}`}
-              />
-            ))}
-          </div>
+          {slideImages.length > 1 && (
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+              {slideImages.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Go to slide ${i + 1}`}
+                  onClick={() => setActiveSlide(i)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === i ? 'w-8 bg-[#e30e04]' : 'w-2.5 bg-black/40 hover:bg-black/60'}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
