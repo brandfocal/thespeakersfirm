@@ -187,7 +187,7 @@ export const RecommendedSpeakers = () => {
             <span>Book Influential African Voices.</span><br />
             <span className="text-[#e30e04]">Shape the Future Through Heritage.</span>
           </h2>
-          <div className="mt-6 space-y-4 text-sm md:text-base text-neutral-400 max-w-none leading-relaxed">
+          <div className="mt-6 space-y-4 text-sm md:text-base text-white/60 max-w-none leading-relaxed">
             <p>
               Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion.
             </p>
