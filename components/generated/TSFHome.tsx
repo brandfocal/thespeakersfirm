@@ -4728,6 +4728,17 @@ export const TheSpeakersFirmHome = () => {
       }}>
         <VerticalBorderLines />
         <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-12 md:px-16 md:py-20">
+          <div className="mb-10 max-w-[800px]">
+            <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
+              <span>Featured Event</span>
+            </div>
+            <h2 className="mt-6 text-[clamp(2.5rem,5vw,3.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-[#000000]">
+              Upcoming Book Launch.
+            </h2>
+            <p className="mt-4 text-sm md:text-base text-[#686869] leading-relaxed">
+              Engaging with authoritative leadership voices, strategic ideas, and transformative literature shaping the future of African society, administration, and organizational design.
+            </p>
+          </div>
           <div className="relative w-full overflow-hidden rounded-[28px] border border-black/10 shadow-2xl bg-white">
             <img 
               src="/upcoming_events/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop.jpg" 
