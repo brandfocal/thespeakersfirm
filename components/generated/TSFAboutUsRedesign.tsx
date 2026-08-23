@@ -136,12 +136,12 @@ const VerticalBorderLines = ({
   edge?: 'both' | 'left' | 'right';
 }) => <div className="pointer-events-none absolute inset-0 z-20" aria-hidden="true">
     <div className="relative mx-auto h-full max-w-[1440px]">
-      {(edge === 'both' || edge === 'left') && <div className="absolute bottom-0 left-4 top-0 w-px sm:left-6 lg:left-10" style={{
+      {(edge === 'both' || edge === 'left') && <div className="absolute bottom-0 left-6 top-0 w-px md:left-10" style={{
       backgroundColor: 'rgba(255,255,255,0.08)'
     }}><span className="absolute -top-[3.5px] -left-[3px] h-[7px] w-[7px]" style={{
         backgroundColor: isDark ? '#F5F5F5' : '#666666'
       }} /></div>}
-      {(edge === 'both' || edge === 'right') && <div className="absolute bottom-0 right-4 top-0 w-px sm:right-6 lg:right-10" style={{
+      {(edge === 'both' || edge === 'right') && <div className="absolute bottom-0 right-6 top-0 w-px md:right-10" style={{
       backgroundColor: 'rgba(255,255,255,0.08)'
     }}><span className="absolute -top-[3.5px] -left-[3px] h-[7px] w-[7px]" style={{
         backgroundColor: isDark ? '#F5F5F5' : '#666666'
@@ -290,15 +290,15 @@ export const TSFAboutUsRedesign = () => {
   <style>{"@import url('https://api.fontshare.com/v2/css?f[]=kontora@400,500,700&display=swap');"}</style>
   <FloatingNav />
 
-  <section id="top" className="relative min-h-[680px] overflow-hidden sm:min-h-screen">
+  <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh] bg-black">
     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2000&auto=format&fit=crop" alt="Audience gathered at a live event" className="absolute inset-0 h-full w-full object-cover object-center" />
     <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/72 via-[#000000]/42 to-[#000000]/92" aria-hidden="true" />
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: NOISE_TEXTURE
       }} aria-hidden="true" />
     <VerticalBorderLines isDark />
-    <div className="relative z-30 flex min-h-[680px] items-end px-6 pb-16 pt-28 sm:min-h-screen sm:pb-20 md:px-16 md:pb-28">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
+      <div className="w-full">
         <SectionTag className="mb-6 sm:mb-8">About The Speakers Firm</SectionTag>
         <AnimatedHeading lines={HERO_LINES} as="h1" className="max-w-[1060px] text-[clamp(3rem,13vw,6.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#F5F5F5] sm:text-[clamp(3.75rem,10vw,6.5rem)]" />
         <motion.p initial={{
