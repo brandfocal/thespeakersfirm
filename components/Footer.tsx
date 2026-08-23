@@ -14,7 +14,7 @@ const FOOTER_NAV_LINKS = [
   { id: 'upcoming-events', label: 'Upcoming Events', href: '/upcoming-events' },
   { id: 'gallery', label: 'Gallery', href: '/gallery' },
   { id: 'media', label: 'Media', href: '/media' },
-  { id: 'brief-bureau', label: 'Brief the Bureau', href: '/contact' },
+  { id: 'brief-bureau', label: 'Brief the Bureau', href: '/brief-us' },
   { id: 'join', label: 'Join The Speakers Firm', href: '/contact' }
 ];
 
@@ -25,7 +25,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-8 pb-10 md:pb-12">
           
           {/* Logo & Headline */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-4 space-y-4">
             <img 
               src="/the-speakers-firm-logo.png" 
               alt="The Speakers Firm Logo" 
@@ -37,11 +37,11 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <nav className="md:col-span-3" aria-label="Footer navigation">
+          <nav className="md:col-span-4" aria-label="Footer navigation">
             <h3 className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#ffffff]">
               Navigate
             </h3>
-            <div className="mt-5 flex flex-col items-start gap-3">
+            <div className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
               {FOOTER_NAV_LINKS.map(item => (
                 <Link 
                   key={`footer-${item.id}`} 
