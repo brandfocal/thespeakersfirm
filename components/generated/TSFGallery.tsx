@@ -162,22 +162,22 @@ const videos = [
   },
   {
     id: 'XiRZfz001Og',
-    title: 'John Sanei Profile',
+    title: 'Prince Mashele Profile',
     image: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
   },
   {
     id: 'gR9vlxv_y4o',
-    title: 'Prof. Bonang Mohale Profile',
+    title: 'Noni Khumalo Profile',
     image: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
   },
   {
     id: 'A05nON7UWKg',
-    title: 'Sizwe Mpofu-Walsh Profile',
+    title: 'Ntsoaki Sibiya Profile',
     image: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
   },
   {
     id: 'BW1M_Pa8DJo',
-    title: 'Pali Lehohla Profile',
+    title: 'Musa Sono Profile',
     image: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
   }
 ];

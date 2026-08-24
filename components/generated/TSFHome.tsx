@@ -2864,35 +2864,35 @@ const SPEAKER_VIDEOS = [
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela',
     subtitle: 'UK Country Head, Brand South Africa',
-    description: 'Strategic country branding, global investment positioning, and sustainable leadership.',
+    description: 'Pumela Salela has built a distinguished career at the intersection of business, investment, leadership and global strategy. When Pumela Salela takes the stage, she equips audiences with practical strategies to lead confidently, think globally and unlock growth opportunities that matter.',
     thumbnail: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
   },
   {
     id: 'XiRZfz001Og',
-    title: 'John Sanei',
-    subtitle: 'Global Futurist & Keynote Speaker',
-    description: 'Navigating future trends, human behavior, organizational agility, and strategic foresight.',
+    title: 'Prince Mashele',
+    subtitle: 'Political Scientist, Author & Public Intellectual',
+    description: 'Prince Mashele, one of South Africa’s most influential political scientists, authors and public intellectuals, is represented by The Speakers Firm™️. Bring incisive political intelligence, bold strategic insight and thought-provoking perspectives to your next board meeting, strategy session, leadership conference, or stakeholder dialogue. Book Prince Mashele and equip your leaders to understand today’s realities, anticipate tomorrow’s shifts, and make better-informed decisions.',
     thumbnail: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
   },
   {
     id: 'gR9vlxv_y4o',
-    title: 'Prof. Bonang Mohale',
-    subtitle: 'Chancellor of the University of the Free State',
-    description: 'Ethical leadership, business transformation, and building sustainable socioeconomic impact across Africa.',
+    title: 'Noni Khumalo',
+    subtitle: 'Broadcaster, Producer & MC',
+    description: 'From award-winning broadcaster and television producer to sought-after MC and speaker, Noni Khumalo embodies the power of purpose, presence, and possibility. Here’s a behind-the-scenes look at one of South Africa’s most dynamic voices as she continues to inspire audiences on every stage.',
     thumbnail: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
   },
   {
     id: 'A05nON7UWKg',
-    title: 'Sizwe Mpofu-Walsh',
-    subtitle: 'Author & Academic',
-    description: 'Deep-dive political analysis, governance strategy, policy insights, and the future of South Africa.',
+    title: 'Ntsoaki Sibiya',
+    subtitle: 'Mentorship Maven, Enterprise & Founder Development',
+    description: 'She doesn’t speak to fill the room. She speaks to move it. AWARD-WINNING MENTORSHIP MAVEN🏆ENTERPRISE & FOUNDER DEVELOPMENT is known for asking the questions others avoid, challenging conventional thinking, and reminding leaders that sustainable growth begins with courageous leadership and capable people.',
     thumbnail: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
   },
   {
     id: 'BW1M_Pa8DJo',
-    title: 'Pali Lehohla',
-    subtitle: 'Former Statistician-General of South Africa',
-    description: 'Economic trends, data-driven policymaking, population growth, and strategic continental planning.',
+    title: 'Musa Sono',
+    subtitle: 'Agripreneur & Motivational Speaker',
+    description: 'Young. Driven. Grounded in purpose. Musa Sono represents a new generation of African leaders turning ambition into action. An entrepreneur, law student, visionary agripreneur and motivational speaker, Musa brings a fresh voice to conversations around discipline, faith, purpose and youth leadership. At The Speakers Firm, we’re proud to amplify voices shaping what comes next. Meet Musa Sono. A young voice with a powerful message.',
     thumbnail: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
   }
 ];
