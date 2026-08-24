@@ -476,9 +476,22 @@ export function Header() {
           )} 
         >
           <span>Contact Us</span>
+        </Link>
+
+        {/* Join Us Link */}
+        <Link 
+          href="/join-the-speakers-firm" 
+          className={cn(
+            "text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
+            pathname === "/join-the-speakers-firm" 
+              ? "text-[#e30e04]" 
+              : "text-[#686869] hover:text-[#e30e04]"
+          )} 
+        >
+          <span>Join Us</span>
           <span className={cn(
             "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
-            pathname === "/contact" 
+            pathname === "/join-the-speakers-firm" 
               ? "scale-x-100" 
               : "scale-x-0 origin-left group-hover:scale-x-100"
           )} />
@@ -838,6 +851,16 @@ export function Header() {
                 className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
               >
                 <span>Contact Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Join Us */}
+              <Link 
+                href="/join-the-speakers-firm" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+              >
+                <span>Join Us</span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
               </Link>
             </div>
