@@ -58,14 +58,6 @@ const leaders: Leader[] = [{
   image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Boitumelo-Mmakou.jpg',
   expertise: 'Organisational Culture & Transformation',
   location: 'Johannesburg, South Africa'
-}, {
-  ordinal: '04',
-  name: 'Bonnie Maponya',
-  role: 'Chief of Staff',
-  bio: 'Bonnie keeps the firm\'s operations running with precision, overseeing internal processes, client relations, and event logistics so that every engagement is executed flawlessly from brief to close.',
-  image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/Bonnie-Maponya.jpg',
-  expertise: 'Business Strategy & Innovation',
-  location: 'Durban, South Africa'
 }];
 const metrics: Metric[] = [{
   id: 'voices',
