@@ -567,7 +567,7 @@ export function Header() {
         </div>
 
         <div className="absolute -top-6 right-2 flex items-center gap-3 whitespace-nowrap">
-          <span className="hidden lg:inline text-[8.5px] font-bold uppercase tracking-[0.12em] text-[#686869]">
+          <span className="hidden lg:inline text-[8.5px] font-bold uppercase tracking-[0.12em] text-[#e30e04]">
             Motivational Speakers | Keynote Speakers | Business Speakers
           </span>
           <span className="hidden lg:inline text-[#C7C7C8]/60 text-[8.5px] font-light">|</span>
