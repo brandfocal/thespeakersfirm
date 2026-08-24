@@ -425,6 +425,173 @@ export const BiographySection = () => {
       </div>
     </section>;
 };
+export const WhatSetsUsApartSection = () => {
+  return (
+    <section id="what-sets-us-apart" className="relative bg-[#FFFFFF] px-4 py-16 sm:px-6 sm:py-24 md:py-32 lg:px-8" aria-labelledby="what-sets-us-apart-heading">
+      <div className="mx-auto max-w-[1312px]">
+        <p className="inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-widest sm:px-4 sm:text-xs mb-6 w-fit" style={{
+          backgroundColor: "#111111",
+          borderColor: "#1E1E1E",
+          borderLeftColor: "#e30e04",
+          color: "#FFFFFF"
+        }}><span>What Sets Us Apart</span></p>
+        <h2 id="what-sets-us-apart-heading" className="font-['Kontora',sans-serif] max-w-4xl text-2xl font-bold uppercase leading-[0.9] tracking-[-0.05em] sm:text-3xl md:text-4xl lg:text-5xl text-[#0A0A0A]">
+          <span>Precision. Discretion. Impact - At the Highest Level.</span>
+        </h2>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-[#FAF9F5] p-6 rounded-[22px] border border-[#E5E5E5] shadow-sm">
+            <h3 className="font-bold text-base uppercase tracking-tight text-black mb-3">Closed-Door, NDA-Protected Briefings</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">For cabinet strategy, sovereign planning, or institutional pivots, we ensure airtight confidentiality from consultation to delivery.</p>
+          </div>
+          <div className="bg-[#FAF9F5] p-6 rounded-[22px] border border-[#E5E5E5] shadow-sm">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Executive-Only Strategy Sessions</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">No spectators. No dilution. Just elite intelligence for decision-makers shaping capital, policy, and national direction.</p>
+          </div>
+          <div className="bg-[#FAF9F5] p-6 rounded-[22px] border border-[#E5E5E5] shadow-sm">
+            <h3 className="font-bold text-base uppercase tracking-tight text-black mb-3">Crisis-Proven Delivery</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">Post-crisis, mid-transition, or under scrutiny, we deploy trusted voices that rebuild trust, navigate complexity, and recalibrate vision.</p>
+          </div>
+          <div className="bg-[#FAF9F5] p-6 rounded-[22px] border border-[#E5E5E5] shadow-sm">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Bespoke Curation</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">From fintech to feminist economics, cybersecurity to statecraft, every speaker is precision-picked to meet your mission, market, and moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const WhyOurEngagementsStandApartSection = () => {
+  return (
+    <section id="why-engagements-stand-apart" className="relative bg-[#0A0A0A] px-4 py-16 sm:px-6 sm:py-24 md:py-32 lg:px-8 text-white" aria-labelledby="why-engagements-stand-apart-heading">
+      <div className="mx-auto max-w-[1312px]">
+        <p className="inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-widest sm:px-4 sm:text-xs mb-6 w-fit" style={{
+          backgroundColor: "#111111",
+          borderColor: "#1E1E1E",
+          borderLeftColor: "#e30e04",
+          color: "#FFFFFF"
+        }}><span>Why Our Engagements Stand Apart</span></p>
+        <h2 id="why-engagements-stand-apart-heading" className="font-['Kontora',sans-serif] max-w-4xl text-2xl font-bold uppercase leading-[0.9] tracking-[-0.05em] sm:text-3xl md:text-4xl lg:text-5xl text-white">
+          <span>Stand Apart.</span>
+        </h2>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Exclusivity by Design</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">Our platforms are not open to all, they’re intentionally built for high-stakes environments where discretion, precision, and strategic intent are paramount.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">No Volume. Just Velocity.</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">We don’t traffic in quantity, we deliver decisive impact. Every engagement is a calibrated move toward institutional or national outcomes.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Fortified Protocols</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">Our processes are built for leaders who cannot afford leaks, delays, or misalignment. Confidentiality is absolute. Execution is exact.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">At the Table</h3>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">Our speakers don’t sit in catalogues, they sit at the table where power moves. You’ll find them behind presidential podiums, in closed-door boardrooms under pressure, at summits where GDPs shift, and in rooms where silence commands respect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const BookingProcessSection = () => {
+  return (
+    <section id="booking-process" className="relative bg-[#FFFFFF] px-4 py-16 sm:px-6 sm:py-24 md:py-32 lg:px-8" aria-labelledby="booking-process-heading">
+      <div className="mx-auto max-w-[1312px]">
+        <p className="inline-flex items-center border border-l-[4px] px-3 py-2 text-[10px] font-bold uppercase tracking-widest sm:px-4 sm:text-xs mb-6 w-fit" style={{
+          backgroundColor: "#111111",
+          borderColor: "#1E1E1E",
+          borderLeftColor: "#e30e04",
+          color: "#FFFFFF"
+        }}><span>Booking Process</span></p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 border-b border-[#E5E5E5] pb-12">
+          <div className="lg:col-span-7">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#e30e04] block mb-2">The Speakers Firm</span>
+            <h2 id="booking-process-heading" className="font-['Kontora',sans-serif] text-2xl font-bold uppercase leading-[0.9] tracking-[-0.05em] sm:text-3xl md:text-4xl lg:text-5xl text-[#0A0A0A]">
+              <span>This Isn’t Click-to-Book, It’s Command-Level Curation</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-5 flex flex-col justify-end">
+            <p className="text-base font-bold text-[#0A0A0A] leading-snug mb-3">
+              We Don’t Just Book Speakers. We Engineer Moments of Power.
+            </p>
+            <p className="text-xs leading-relaxed text-[#9A9A9A]">
+              Forget everything you know about speaker bureaus. We are not middlemen. We’re your elite partner in transformation, trusted by boardrooms, institutions, and global brands that don’t just want a speaker… they want a strategic weapon.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-lg font-bold uppercase tracking-tight text-black mb-8">Our Booking Process is Built for Impact</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="border border-[#E5E5E5] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">01. STRATEGIC INTELLIGENCE</span>
+              <h4 className="font-bold text-sm uppercase text-black mb-2">Strategic Intelligence First</h4>
+              <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We don’t start with a list, we start with your mission, message, and momentum goals. We decode your brief like a blueprint and then find the voice to shift the room and sharpen the outcome.</p>
+            </div>
+            <div className="border border-[#E5E5E5] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">02. PRECISION CURATION</span>
+              <h4 className="font-bold text-sm uppercase text-black mb-2">Precision Curation</h4>
+              <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We handpick speakers who don’t just “fit the theme”, they elevate the stakes, command credibility, and leave audiences changed. This is curation with consequences.</p>
+            </div>
+            <div className="border border-[#E5E5E5] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">03. ACCESS &amp; NEGOTIATION</span>
+              <h4 className="font-bold text-sm uppercase text-black mb-2">Hard-Nosed Negotiation</h4>
+              <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We fight for maximum value, optimal terms, and absolute excellence, because we sit on your side of the table. Every time.</p>
+            </div>
+            <div className="border border-[#E5E5E5] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">04. FLAWLESS EXECUTION</span>
+              <h4 className="font-bold text-sm uppercase text-black mb-2">Flawless Execution</h4>
+              <p className="text-[11px] leading-relaxed text-[#9A9A9A]">From contracts to keynote delivery, flights to finesse, our logistics unit runs the backend, so you own the spotlight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 bg-[#0A0A0A] text-white p-8 md:p-12 rounded-[28px] border border-[#1E1E1E]">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e30e04] block mb-2">WHAT YOU GET</span>
+            <h3 className="text-lg md:text-xl font-bold uppercase tracking-tight text-white mb-4">
+              This isn’t speaker sourcing. It’s strategic activation, engineered for moments where precision is non-negotiable.
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 border-t border-white/10 pt-8">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Mission-Aligned Strategic Briefing</h4>
+                <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We begin with your reality, not a form, but a focused intelligence session that uncovers your mandate, internal dynamics, pressure points, and political sensitivities. We define it with you, from the inside out.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Seismic Thinker-to-Moment Match</h4>
+                <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We don’t send names. We deploy operatives. Every speaker is matched with intent — based on lived expertise, system fluency, and the ability to deliver under pressure. Not a good talk, but the right intervention for the right moment.</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Institutional Terrain Mapping</h4>
+                <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We map the room, the ripple, and the resistance. Who’s in play? Who needs shifting? What narratives need rewriting? Whether you’re navigating public sentiment, internal politics, or global optics — we ensure every message is tactically calibrated for maximum institutional effect.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Impact Engineering + Debrief</h4>
+                <p className="text-[11px] leading-relaxed text-[#9A9A9A]">We don’t close engagements. We compound them. Every activation ends with insight, measuring resonance, tracking influence, and building momentum into your next strategic move. Intelligence doesn’t stop at the podium. It loops forward into future action.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+            <div className="space-y-1">
+              <p className="text-xs font-bold uppercase tracking-wider text-white">This is not logistics. It’s leadership infrastructure.</p>
+              <p className="text-[10px] text-[#9A9A9A]">You don’t book a speaker. You activate a strategy. You don’t fill a slot. You shift the system. This is The Speakers Firm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const ProfileAdditionalSections = () => {
   const [activeGalleryImage, setActiveGalleryImage] = React.useState<GalleryImage | null>(null);
   const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
@@ -747,6 +914,10 @@ export const ProfileAdditionalSections = () => {
           </div>
         </div>
       </section>
+
+      <WhatSetsUsApartSection />
+      <WhyOurEngagementsStandApartSection />
+      <BookingProcessSection />
 
       {activeGalleryImage ? <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/82 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Gallery image lightbox">
           <button type="button" className="absolute inset-0 cursor-default" onClick={closeLightbox} aria-label="Close gallery image" />
