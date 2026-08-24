@@ -5318,16 +5318,16 @@ export const TheSpeakersFirmHome = () => {
           >
             <div>
               <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-                <span>FACULTY IN ACTION</span>
+                <span>FACULTY IN PROFILE</span>
               </div>
               <h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-white sm:text-6xl">
-                See the energy<br />
-                <span className="text-[#686869]">on stage.</span>
+                MEET OUR LEADING<br />
+                <span className="text-[#686869]">VOICES.</span>
               </h2>
               <motion.div initial={{ width: 0 }} whileInView={{ width: '100%' }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="h-[2px] bg-[#e30e04] mt-6" />
             </div>
             <p className="hidden max-w-xs text-right text-sm leading-relaxed text-[#AFB0B0] md:block">
-              Watch our leading African speakers, futurists, and industry-defining minds deliver transformational keynotes.
+              Explore the background, vision, and strategic insights of our distinguished speakers and thought leaders.
             </p>
           </motion.div>
 
