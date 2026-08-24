@@ -701,14 +701,23 @@ export const TSFContact = () => {
             once: true,
             amount: 0.25
           }} variants={reveal} className="newsletter-copy flex-1">
-            <span className="inline-flex border-l-4 border-[#e30e04] bg-[#2C2C2C] px-4 py-2 text-[10px] font-bold tracking-[0.2em] text-[#F8F7F5] mb-4">STAY INFORMED</span>
-            <h2 id="newsletter-heading" className="mt-4">Stay in the<br /><em>conversation.</em></h2>
+            <span className="inline-flex border-l-4 border-[#e30e04] bg-[#2C2C2C] px-4 py-2 text-[10px] font-bold tracking-[0.2em] text-[#F8F7F5] mb-4">SUBSCRIBE TO OUR NEWSLETTER</span>
+            <h2 id="newsletter-heading" className="mt-4 text-2xl md:text-3xl font-bold uppercase tracking-tight text-white leading-tight">
+              INSIGHTFUL VOICES.<br />
+              STRATEGIC INTELLIGENCE.<br />
+              EXPONENTIAL GROWTH.
+            </h2>
+            <p className="mt-6 text-sm text-[#AFB0B0] leading-relaxed max-w-xl">
+              Stay connected to the influential speakers, bold ideas and emerging trends shaping leadership, business, government, and society.
+            </p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{
             once: true,
             amount: 0.25
           }} variants={reveal} className="newsletter-form flex-1 w-full">
-            <p>Receive useful ideas, speaker updates, and invitation-only moments from The Speakers Firm.</p>
+            <p className="text-white/80 text-sm leading-relaxed mb-6">
+              Subscribe for exclusive access to featured speakers, executive insights, industry intelligence, upcoming engagements, and high-impact opportunities from The Speakers Firm™.
+            </p>
             {newsletterSubmitted ? (
               <div className="rounded-2xl border border-white/[0.08] bg-[#2C2C2C]/30 p-6 text-center text-white">
                 <p className="font-serif text-[20px] italic">Thank you for subscribing. You have been added to our network.</p>
@@ -736,13 +745,13 @@ export const TSFContact = () => {
                 </div>
                 <motion.button type="submit" disabled={newsletterSubmitting} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="mt-2 inline-flex items-center self-start" style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}>
                   <span className="flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#c00b03] transition-colors disabled:opacity-50">
-                    <span>{newsletterSubmitting ? "Subscribing..." : "Subscribe"}</span>
+                    <span>{newsletterSubmitting ? "Subscribing..." : "SUBSCRIBE NOW"}</span>
                     <ArrowRight size={16} />
                   </span>
                 </motion.button>
               </form>
             )}
-            <small className="block mt-4 text-[#B0ADA8] text-[10px]">By subscribing, you agree to receive updates from The Speakers Firm. Unsubscribe anytime.</small>
+            <small className="block mt-4 text-[#B0ADA8] text-[10px]">Stay informed. Lead decisively. Drive exponential growth.</small>
           </motion.div>
         </div>
       </section>

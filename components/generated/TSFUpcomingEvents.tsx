@@ -458,13 +458,20 @@ export const TSFUpcomingEvents = () => {
       <div className="mx-auto max-w-[1440px] px-6 md:px-16 grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-6">
           <div className="mb-4">
-            <span className="inline-flex items-center border border-l-[4px] border-black/20 border-l-[#e30e04] bg-[#000000]/5 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#000000] sm:px-4 sm:text-[12px] font-mono">Stay informed</span>
+            <span className="inline-flex items-center border border-l-[4px] border-black/20 border-l-[#e30e04] bg-[#000000]/5 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#000000] sm:px-4 sm:text-[12px] font-mono">SUBSCRIBE TO OUR NEWSLETTER</span>
           </div>
-          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold tracking-tight leading-[0.95] uppercase text-black">Never miss<br /><em>an event.</em></h2>
+          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold tracking-tight leading-[0.95] uppercase text-black">
+            INSIGHTFUL VOICES.<br />
+            STRATEGIC INTELLIGENCE.<br />
+            EXPONENTIAL GROWTH.
+          </h2>
+          <p className="mt-6 text-sm text-[#686869] leading-relaxed max-w-xl">
+            Stay connected to the influential speakers, bold ideas and emerging trends shaping leadership, business, government, and society.
+          </p>
         </div>
         <div className="md:col-span-6 flex flex-col gap-6">
-          <p className="text-[#686869] text-[16px] leading-relaxed">
-            Get the latest conversations, invitations, and ideas from The Speakers Firm, delivered with intention.
+          <p className="text-[#686869] text-[15px] leading-relaxed">
+            Subscribe for exclusive access to featured speakers, executive insights, industry intelligence, upcoming engagements, and high-impact opportunities from The Speakers Firm™.
           </p>
           {newsletterSubmitted ? (
             <div className="rounded-2xl border border-black/5 bg-black/[0.02] p-6 text-center text-black">
@@ -492,12 +499,12 @@ export const TSFUpcomingEvents = () => {
                 </label>
               </div>
               <button type="submit" disabled={newsletterSubmitting} className="mt-2 inline-flex items-center self-start rounded-full bg-[#e30e04] text-white px-7 py-3 text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-black transition-colors disabled:opacity-50">
-                <span>{newsletterSubmitting ? "Subscribing..." : "Subscribe"}</span>
+                <span>{newsletterSubmitting ? "Subscribing..." : "SUBSCRIBE NOW"}</span>
                 <ArrowRight size={16} className="ml-2" />
               </button>
             </form>
           )}
-          <small className="text-[10px] text-black/40">By subscribing, you agree to receive updates from The Speakers Firm. Unsubscribe anytime.</small>
+          <small className="text-[10px] text-black/40">Stay informed. Lead decisively. Drive exponential growth.</small>
         </div>
       </div>
     </section>
