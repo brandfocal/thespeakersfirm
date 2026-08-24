@@ -236,7 +236,7 @@ export const TSFUpcomingEvents = () => {
     <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh] bg-black">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-65"
-        style={{ backgroundImage: "url('/hero_backgrounds/Prince-Mashele.jpg')" }}
+        style={{ backgroundImage: "url('/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4598.JPG')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
       <VerticalBorderLines isDark={true} />
