@@ -154,27 +154,33 @@ const galleryItems = [{
   aspect: 'wide',
   images: bonangMohaleImages
 }];
-const videos = [{
-  id: 'v1',
-  title: 'World Leaders Forum',
-  image: 'https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=600&auto=format&fit=crop'
-}, {
-  id: 'v2',
-  title: 'Tech Futures Summit',
-  image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop'
-}, {
-  id: 'v3',
-  title: 'Leadership In Action',
-  image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop'
-}, {
-  id: 'v4',
-  title: 'African Business Roundtable',
-  image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=600&auto=format&fit=crop'
-}, {
-  id: 'v5',
-  title: 'Women In Leadership',
-  image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop'
-}];
+const videos = [
+  {
+    id: 'SEeymv8o9OY',
+    title: 'Pumela Salela Profile',
+    image: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
+  },
+  {
+    id: 'XiRZfz001Og',
+    title: 'John Sanei Profile',
+    image: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
+  },
+  {
+    id: 'gR9vlxv_y4o',
+    title: 'Prof. Bonang Mohale Profile',
+    image: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
+  },
+  {
+    id: 'A05nON7UWKg',
+    title: 'Sizwe Mpofu-Walsh Profile',
+    image: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
+  },
+  {
+    id: 'BW1M_Pa8DJo',
+    title: 'Pali Lehohla Profile',
+    image: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+  }
+];
 const eventStats = [{
   id: 'delegates',
   value: '500+',
@@ -336,6 +342,7 @@ export const TSFGallery = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedGallery, setSelectedGallery] = useState<any | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
 
   useEffect(() => {
     if (!selectedGallery) return;
@@ -490,7 +497,7 @@ export const TSFGallery = () => {
           </motion.div>
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
             {videos.map(video => (
-              <figure key={video.id} className="group w-full">
+              <figure key={video.id} className="group w-full cursor-pointer" onClick={() => setActiveVideoId(video.id)}>
                 <div className="relative aspect-[9/16] overflow-hidden">
                   <img className="absolute inset-0 h-full w-full object-cover object-center" src={video.image} alt={video.title} />
                   <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
@@ -588,6 +595,38 @@ export const TSFGallery = () => {
             </motion.div>
           );
         })()}
+        {activeVideoId && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveVideoId(null)}
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 p-4 sm:p-6"
+          >
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              onClick={e => e.stopPropagation()}
+              className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl bg-black border border-white/10 shadow-2xl"
+            >
+              <button 
+                type="button" 
+                onClick={() => setActiveVideoId(null)}
+                className="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/80 text-white hover:bg-[#e30e04] hover:border-[#e30e04] transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+              <iframe 
+                src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1`}
+                title="Speaker Video" 
+                className="h-full w-full border-0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen 
+              />
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </main>;
 };
