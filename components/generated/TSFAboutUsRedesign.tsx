@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, Globe2, Handshake, Menu, Mic2, SearchCheck, X } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Globe2, Handshake, Menu, Mic2, SearchCheck, X, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 const NOISE_TEXTURE = "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")";
 const DARK_RULE_COLOR = 'rgba(255,255,255,0.08)';
@@ -268,6 +268,167 @@ const FloatingNavDisabled = () => {
     </div>
   </motion.nav>;
 };
+export const WhatSetsUsApartSection = () => {
+  return (
+    <section id="what-sets-us-apart" className="relative bg-[#000000] px-6 py-16 sm:px-12 sm:py-24 md:py-32 md:px-16 border-b border-[rgba(255,255,255,0.08)]" aria-labelledby="what-sets-us-apart-heading">
+      <VerticalBorderLines isDark />
+      <div className="mx-auto max-w-[1312px] relative z-10">
+        <div className="mb-6 flex">
+          <SectionTag>What Sets Us Apart</SectionTag>
+        </div>
+        <h2 id="what-sets-us-apart-heading" className="max-w-4xl text-[clamp(2rem,6vw,4rem)] font-bold uppercase leading-[0.95] tracking-[-0.05em] text-[#F5F5F5]">
+          <span>Precision. Discretion. Impact - At the Highest Level.</span>
+        </h2>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Closed-Door, NDA-Protected Briefings</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">For cabinet strategy, sovereign planning, or institutional pivots, we ensure airtight confidentiality from consultation to delivery.</p>
+          </div>
+          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Executive-Only Strategy Sessions</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">No spectators. No dilution. Just elite intelligence for decision-makers shaping capital, policy, and national direction.</p>
+          </div>
+          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Crisis-Proven Delivery</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">Post-crisis, mid-transition, or under scrutiny, we deploy trusted voices that rebuild trust, navigate complexity, and recalibrate vision.</p>
+          </div>
+          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Bespoke Curation</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">From fintech to feminist economics, cybersecurity to statecraft, every speaker is precision-picked to meet your mission, market, and moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const WhyOurEngagementsStandApartSection = () => {
+  return (
+    <section id="why-engagements-stand-apart" className="relative bg-[#000000] px-6 py-16 sm:px-12 sm:py-24 md:py-32 md:px-16 border-b border-[rgba(255,255,255,0.08)] text-white" aria-labelledby="why-engagements-stand-apart-heading">
+      <VerticalBorderLines isDark />
+      <div className="mx-auto max-w-[1312px] relative z-10">
+        <div className="mb-6 flex">
+          <SectionTag>Why Our Engagements Stand Apart</SectionTag>
+        </div>
+        <h2 id="why-engagements-stand-apart-heading" className="max-w-4xl text-[clamp(2rem,6vw,4rem)] font-bold uppercase leading-[0.95] tracking-[-0.05em] text-white">
+          <span>Stand Apart.</span>
+        </h2>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Exclusivity by Design</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">Our platforms are not open to all, they’re intentionally built for high-stakes environments where discretion, precision, and strategic intent are paramount.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">No Volume. Just Velocity.</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">We don’t traffic in quantity, we deliver decisive impact. Every engagement is a calibrated move toward institutional or national outcomes.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Fortified Protocols</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">Our processes are built for leaders who cannot afford leaks, delays, or misalignment. Confidentiality is absolute. Execution is exact.</p>
+          </div>
+          <div className="border border-white/10 bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">At the Table</h3>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">Our speakers don’t sit in catalogues, they sit at the table where power moves. You’ll find them behind presidential podiums, in closed-door boardrooms under pressure, at summits where GDPs shift, and in rooms where silence commands respect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const BookingProcessSection = () => {
+  return (
+    <section id="booking-process" className="relative bg-[#000000] px-6 py-16 sm:px-12 sm:py-24 md:py-32 md:px-16 border-b border-[rgba(255,255,255,0.08)]" aria-labelledby="booking-process-heading">
+      <VerticalBorderLines isDark />
+      <div className="mx-auto max-w-[1312px] relative z-10">
+        <div className="mb-6 flex">
+          <SectionTag>Booking Process</SectionTag>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 border-b border-[rgba(255,255,255,0.08)] pb-12">
+          <div className="lg:col-span-7">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#e30e04] block mb-2">The Speakers Firm</span>
+            <h2 id="booking-process-heading" className="text-2xl font-bold uppercase leading-[0.9] tracking-[-0.05em] sm:text-3xl md:text-4xl lg:text-5xl text-white">
+              <span>This Isn’t Click-to-Book, It’s Command-Level Curation</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-5 flex flex-col justify-end">
+            <p className="text-base font-bold text-white leading-snug mb-3">
+              We Don’t Just Book Speakers. We Engineer Moments of Power.
+            </p>
+            <p className="text-xs leading-relaxed text-[#A0A0A0]">
+              Forget everything you know about speaker bureaus. We are not middlemen. We’re your elite partner in transformation, trusted by boardrooms, institutions, and global brands that don’t just want a speaker… they want a strategic weapon.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-lg font-bold uppercase tracking-tight text-white mb-8">Our Booking Process is Built for Impact</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.01] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">01. STRATEGIC INTELLIGENCE</span>
+              <h4 className="font-bold text-sm uppercase text-white mb-2">Strategic Intelligence First</h4>
+              <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We don’t start with a list, we start with your mission, message, and momentum goals. We decode your brief like a blueprint and then find the voice to shift the room and sharpen the outcome.</p>
+            </div>
+            <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.01] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">02. PRECISION CURATION</span>
+              <h4 className="font-bold text-sm uppercase text-white mb-2">Precision Curation</h4>
+              <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We handpick speakers who don’t just “fit the theme”, they elevate the stakes, command credibility, and leave audiences changed. This is curation with consequences.</p>
+            </div>
+            <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.01] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">03. ACCESS &amp; NEGOTIATION</span>
+              <h4 className="font-bold text-sm uppercase text-white mb-2">Hard-Nosed Negotiation</h4>
+              <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We fight for maximum value, optimal terms, and absolute excellence, because we sit on your side of the table. Every time.</p>
+            </div>
+            <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.01] p-6 rounded-[22px]">
+              <span className="text-[#e30e04] font-bold text-xs block mb-4">04. FLAWLESS EXECUTION</span>
+              <h4 className="font-bold text-sm uppercase text-white mb-2">Flawless Execution</h4>
+              <p className="text-[11px] leading-relaxed text-[#A0A0A0]">From contracts to keynote delivery, flights to finesse, our logistics unit runs the backend, so you own the spotlight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 bg-[#0A0A0A] text-white p-8 md:p-12 rounded-[28px] border border-[rgba(255,255,255,0.08)]">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e30e04] block mb-2">WHAT YOU GET</span>
+            <h3 className="text-lg md:text-xl font-bold uppercase tracking-tight text-white mb-4">
+              This isn’t speaker sourcing. It’s strategic activation, engineered for moments where precision is non-negotiable.
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 border-t border-white/10 pt-8">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Mission-Aligned Strategic Briefing</h4>
+                <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We begin with your reality, not a form, but a focused intelligence session that uncovers your mandate, internal dynamics, pressure points, and political sensitivities. We define it with you, from the inside out.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Seismic Thinker-to-Moment Match</h4>
+                <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We don’t send names. We deploy operatives. Every speaker is matched with intent — based on lived expertise, system fluency, and the ability to deliver under pressure. Not a good talk, but the right intervention for the right moment.</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Institutional Terrain Mapping</h4>
+                <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We map the room, the ripple, and the resistance. Who’s in play? Who needs shifting? What narratives need rewriting? Whether you’re navigating public sentiment, internal politics, or global optics — we ensure every message is tactically calibrated for maximum institutional effect.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-xs uppercase text-[#e30e04] mb-2">Impact Engineering + Debrief</h4>
+                <p className="text-[11px] leading-relaxed text-[#A0A0A0]">We don’t close engagements. We compound them. Every activation ends with insight, measuring resonance, tracking influence, and building momentum into your next strategic move. Intelligence doesn’t stop at the podium. It loops forward into future action.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+            <div className="space-y-1">
+              <p className="text-xs font-bold uppercase tracking-wider text-white">This is not logistics. It’s leadership infrastructure.</p>
+              <p className="text-[10px] text-[#A0A0A0]">You don’t book a speaker. You activate a strategy. You don’t fill a slot. You shift the system. This is The Speakers Firm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const TSFAboutUsRedesign = () => {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const [expandedLeaderIds, setExpandedLeaderIds] = React.useState<string[]>([]);
@@ -601,6 +762,10 @@ export const TSFAboutUsRedesign = () => {
       </div>
     </div>
   </section>
+
+  <WhatSetsUsApartSection />
+  <WhyOurEngagementsStandApartSection />
+  <BookingProcessSection />
 
   <section className="relative -mt-px overflow-hidden bg-[#000000] text-[#F5F5F5]">
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
