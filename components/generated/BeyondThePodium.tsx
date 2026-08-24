@@ -33,11 +33,11 @@ const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
     description: "Lerato Sithole delivering the closing address at the African Insurance Exchange 2026."
   },
   {
-    id: "bonang-mohale-leadership-decisions",
-    title: "Leadership & Decisions Highlight",
-    speakerName: "Prof. Bonang Mohale",
+    id: "sizwe-mpofu-walsh-leadership-decisions",
+    title: "Leadership is not defined by the titles you hold, but by the decisions you make.",
+    speakerName: "Dr. Sizwe Mpofu-Walsh",
     youtubeId: "IaZvJjCg8uQ",
-    description: "A powerful perspective explaining why leadership is defined by the decisions you make."
+    description: "Dr Sizwe Mpofu Walsh joined the African Leadership Festival in conversation with Hatim Eltayeb, CEO of the African Leadership Academy, for a thought-provoking dialogue on leadership, education, ethical decision-making and Africa’s future. Addressing emerging leaders from across the continent, the conversation challenged young Africans to think deeply, lead with conviction and transform potential into meaningful action."
   }
 ];
 
