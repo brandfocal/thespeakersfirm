@@ -2858,6 +2858,45 @@ const HERO_HEADLINE_LINES = [{
     isRed: true
   }]
 }];
+
+const SPEAKER_VIDEOS = [
+  {
+    id: 'SEeymv8o9OY',
+    title: 'Prof. Letlhokwa George Mpedi',
+    subtitle: 'Vice-Chancellor & Principal, UJ',
+    description: 'Transformative leadership, technology, and the future of higher education in the Fourth Industrial Revolution.',
+    thumbnail: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
+  },
+  {
+    id: 'XiRZfz001Og',
+    title: 'John Sanei',
+    subtitle: 'Global Futurist & Keynote Speaker',
+    description: 'Navigating future trends, human behavior, organizational agility, and strategic foresight.',
+    thumbnail: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
+  },
+  {
+    id: 'gR9vlxv_y4o',
+    title: 'Prof. Bonang Mohale',
+    subtitle: 'Chancellor of the University of the Free State',
+    description: 'Ethical leadership, business transformation, and building sustainable socioeconomic impact across Africa.',
+    thumbnail: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
+  },
+  {
+    id: 'A05nON7UWKg',
+    title: 'Sizwe Mpofu-Walsh',
+    subtitle: 'Author & Academic',
+    description: 'Deep-dive political analysis, governance strategy, policy insights, and the future of South Africa.',
+    thumbnail: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
+  },
+  {
+    id: 'BW1M_Pa8DJo',
+    title: 'Pali Lehohla',
+    subtitle: 'Former Statistician-General of South Africa',
+    description: 'Economic trends, data-driven policymaking, population growth, and strategic continental planning.',
+    thumbnail: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+  }
+];
+
 const FOOTER_NAV_LINKS = [{
   id: 'home',
   label: 'Home',
@@ -3722,6 +3761,7 @@ export const TheSpeakersFirmHome = () => {
   const [activeClipSpeakerId, setActiveClipSpeakerId] = React.useState<string | null>(null);
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
   const [activeInviteImage, setActiveInviteImage] = React.useState<string | null>(null);
+  const [activeHomeVideoId, setActiveHomeVideoId] = React.useState<string | null>(null);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -5265,6 +5305,68 @@ export const TheSpeakersFirmHome = () => {
         </div>
       </section>
 
+      {/* Faculty in Action (Speaker Videos) */}
+      <section className="relative w-full border-b bg-[#000000] text-[#ffffff] py-16 md:py-24 lg:py-32" style={{ borderColor: '#212121' }}>
+        <VerticalBorderLines isDark />
+        <div className="max-w-[1440px] mx-auto px-6 md:px-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 flex flex-col items-start justify-between gap-6 sm:mb-16 md:flex-row md:items-end"
+          >
+            <div>
+              <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
+                <span>FACULTY IN ACTION</span>
+              </div>
+              <h2 className="mt-6 text-[clamp(2.5rem,11vw,3.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-white sm:text-6xl">
+                See the energy<br />
+                <span className="text-[#686869]">on stage.</span>
+              </h2>
+              <motion.div initial={{ width: 0 }} whileInView={{ width: '100%' }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="h-[2px] bg-[#e30e04] mt-6" />
+            </div>
+            <p className="hidden max-w-xs text-right text-sm leading-relaxed text-[#AFB0B0] md:block">
+              Watch our leading African speakers, futurists, and industry-defining minds deliver transformational keynotes.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {SPEAKER_VIDEOS.map((video) => (
+              <motion.figure 
+                key={video.id} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="group relative cursor-pointer" 
+                onClick={() => setActiveHomeVideoId(video.id)}
+              >
+                <div className="relative aspect-video overflow-hidden rounded-[18px] border border-[#212121]">
+                  <img 
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                    src={video.thumbnail} 
+                    alt={video.title} 
+                  />
+                  <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/60" />
+                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/40 bg-black/30 text-white transition-colors group-hover:bg-[#e30e04] group-hover:border-[#e30e04]">
+                      <Play className="ml-1 h-5 w-5 fill-current" />
+                    </span>
+                  </span>
+                  <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#e30e04] transition-all duration-500 group-hover:w-full" aria-hidden="true" />
+                </div>
+                <figcaption className="px-0 py-4">
+                  <strong className="block text-[15px] font-bold uppercase tracking-[0.08em] text-[#F8F7F5]">{video.title}</strong>
+                  <span className="mt-1 block text-[11px] uppercase tracking-[0.1em] text-[#e30e04] font-bold">{video.subtitle}</span>
+                  <p className="mt-2 text-[13px] leading-relaxed text-[#AFB0B0] font-light">{video.description}</p>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pre-Footer Master CTA */}
       <section id="master-cta" className="relative w-full border-b" style={{
         backgroundColor: COLORS.black,
@@ -5338,6 +5440,38 @@ export const TheSpeakersFirmHome = () => {
                 src={activeInviteImage} 
                 alt="Enlarged Roundtable invite" 
                 className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+        {activeHomeVideoId && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveHomeVideoId(null)}
+            className="fixed inset-0 z-[500] flex items-center justify-center bg-black/90 p-4 sm:p-6"
+          >
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              onClick={e => e.stopPropagation()}
+              className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl bg-black border border-white/10 shadow-2xl"
+            >
+              <button 
+                type="button" 
+                onClick={() => setActiveHomeVideoId(null)}
+                className="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/80 text-white hover:bg-[#e30e04] hover:border-[#e30e04] transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+              <iframe 
+                src={`https://www.youtube.com/embed/${activeHomeVideoId}?autoplay=1`}
+                title="Speaker Video" 
+                className="h-full w-full border-0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen 
               />
             </motion.div>
           </motion.div>
