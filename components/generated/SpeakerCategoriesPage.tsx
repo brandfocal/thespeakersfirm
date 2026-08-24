@@ -21,127 +21,127 @@ const categories: Category[] = [{
   name: 'Keynote and Motivational Speakers',
   description: 'Influential global voices, accomplished leaders, inspiring change-makers and exceptional storytellers who challenge conventional thinking, energise audiences and turn inspiration into meaningful action.',
   seed: '/speaker_thumbnails/Phumzile-Mlambo-Ngcuka-The-Speakers-Firm.jpg',
-  path: '/categories/inspirational-keynote-speakers'
+  path: '/find-a-speaker/inspirational-keynote-speakers'
 }, {
   number: '02',
   name: 'Leadership, Strategy and Executive Performance',
   description: 'World-class CEOs, board chairs and executive leaders offering decisive insights into courageous leadership, strategy execution, organisational performance and leading through complexity.',
   seed: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
-  path: '/categories/leadership-strategy-and-executive-performance'
+  path: '/find-a-speaker/leadership-strategy-and-executive-performance'
 }, {
   number: '03',
   name: 'Boards, Governance and Boardroom Influence',
   description: 'Distinguished directors and governance authorities strengthening board effectiveness, ethical stewardship, executive accountability and institutional sustainability.',
   seed: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
-  path: '/categories/boards-governance-and-boardroom-influence'
+  path: '/find-a-speaker/boards-governance-and-boardroom-influence'
 }, {
   number: '04',
   name: 'Artificial Intelligence and Intelligent Enterprise',
   description: 'AI pioneers and transformation leaders helping organisations move from experimentation to responsible, enterprise-wide adoption and measurable commercial value.',
   seed: '/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
-  path: '/categories/artificial-intelligence-and-intelligent-enterprise'
+  path: '/find-a-speaker/artificial-intelligence-and-intelligent-enterprise'
 }, {
   number: '05',
   name: 'Future of Work, Talent and Workforce Transformation',
   description: 'Leading authorities preparing organisations and people for rapidly changing technologies, skills requirements, employee expectations and workplace models.',
   seed: '/speaker_thumbnails/Dr-Vumile-Msweli-The-Speakers-Firm.jpg',
-  path: '/categories/future-of-work-talent-and-workforce-transformation'
+  path: '/find-a-speaker/future-of-work-talent-and-workforce-transformation'
 }, {
   number: '06',
   name: 'Economics, Markets and the Global Economy',
   description: 'Respected economists and financial strategists translating complex economic developments into clear implications for boards, investors, governments and business leaders.',
   seed: '/speaker_thumbnails/Pali-Lehohla-The-Speakers-Firm.jpg',
-  path: '/categories/economics-markets-and-the-global-economy'
+  path: '/find-a-speaker/economics-markets-and-the-global-economy'
 }, {
   number: '07',
   name: 'Futurists, Trends and Strategic Foresight',
   description: 'Futurists and trend specialists identifying the technological, demographic, economic and social forces that will reshape industries, consumers and societies.',
   seed: '/image_marquee/John-Sanei-The-Speakers-Firm.jpg',
-  path: '/categories/futurists-trends-and-strategic-foresight'
+  path: '/find-a-speaker/futurists-trends-and-strategic-foresight'
 }, {
   number: '08',
   name: 'Geopolitics, Policy and Global Affairs',
   description: 'Diplomats, political leaders, journalists and analysts helping decision-makers understand geopolitical risk, policy shifts and the evolving global order.',
   seed: '/speaker_thumbnails/Prince-Mashele-The-Speakers-Firm.jpg',
-  path: '/categories/geopolitics-policy-and-global-affairs'
+  path: '/find-a-speaker/geopolitics-policy-and-global-affairs'
 }, {
   number: '09',
   name: 'Innovation, Disruption and Business Transformation',
   description: 'Proven innovators equipping organisations to challenge established models, unlock new value and build future-ready enterprises.',
   seed: '/speaker_thumbnails/Dr-Puleng-Mokhoalibe--The-Speakers-Firm.jpg',
-  path: '/categories/innovation-disruption-and-business-transformation'
+  path: '/find-a-speaker/innovation-disruption-and-business-transformation'
 }, {
   number: '10',
   name: 'Entrepreneurship, Investment and Business Growth',
   description: 'Accomplished founders, investors and enterprise leaders sharing practical strategies for funding, scaling and sustaining high-growth businesses.',
   seed: '/speaker_thumbnails/Tebogo-ProVerb-Thekisho.jpg',
-  path: '/categories/entrepreneurship-investment-and-business-growth'
+  path: '/find-a-speaker/entrepreneurship-investment-and-business-growth'
 }, {
   number: '11',
   name: 'Change, Resilience and Organisational Agility',
   description: 'Change specialists helping leaders mobilise people, overcome resistance and sustain organisational performance through disruption and uncertainty.',
   seed: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg',
-  path: '/categories/change-resilience-and-organisational-agility'
+  path: '/find-a-speaker/change-resilience-and-organisational-agility'
 }, {
   number: '12',
   name: 'Media, Communication and Executive Visibility',
   description: 'Broadcasters, journalists and communication strategists empowering leaders to communicate with authority, clarity and influence across every platform.',
   seed: '/speaker_thumbnails/Cathy-Mohlahlana--The-Speakers-Firm-The-Speakers-Firm.jpg',
-  path: '/categories/media-communication-and-executive-visibility'
+  path: '/find-a-speaker/media-communication-and-executive-visibility'
 }, {
   number: '13',
   name: 'Reputation, Crisis and Trust Leadership',
   description: 'Reputation and crisis specialists helping organisations protect institutional trust, navigate scrutiny and lead decisively when credibility is at stake.',
   seed: '/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg',
-  path: '/categories/reputation-crisis-and-trust-leadership'
+  path: '/find-a-speaker/reputation-crisis-and-trust-leadership'
 }, {
   number: '14',
   name: 'Marketing, Branding and Customer Growth',
   description: 'Visionary marketers and consumer authorities demonstrating how organisations can build distinctive brands, deepen customer relationships and convert relevance into revenue.',
   seed: '/speaker_thumbnails/Sylvester-Chauke--The-Speakers-Firm.jpg',
-  path: '/categories/marketing-branding-and-customer-growth'
+  path: '/find-a-speaker/marketing-branding-and-customer-growth'
 }, {
   number: '15',
   name: 'Sales, Negotiation and Commercial Performance',
   description: 'High-performing commercial leaders equipping teams to win clients, negotiate effectively and accelerate sustainable revenue growth.',
   seed: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
-  path: '/categories/sales-negotiation-and-commercial-performance'
+  path: '/find-a-speaker/sales-negotiation-and-commercial-performance'
 }, {
   number: '16',
   name: 'Neuroscience, Psychology and Human Behaviour',
   description: 'Neuroscientists, psychologists and behavioural experts translating science into practical strategies for leadership, learning, decision-making and performance.',
   seed: '/speaker_thumbnails/Timothy-Maurice-Webster-The-Speakers-Firm.jpg',
-  path: '/categories/neuroscience-psychology-and-human-behaviour'
+  path: '/find-a-speaker/neuroscience-psychology-and-human-behaviour'
 }, {
   number: '17',
   name: 'High-Performance Teams and Team-Building Experiences',
   description: 'Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions.',
   seed: '/speaker_thumbnails/Queen-Ramotsehoa-The-Speakers-Firm.jpg',
-  path: '/categories/high-performance-teams-and-team-building-experiences'
+  path: '/find-a-speaker/high-performance-teams-and-team-building-experiences'
 }, {
   number: '18',
   name: 'Sports, Coaching and the Winning Mindset',
   description: 'Elite athletes, championship coaches and sporting icons translating lessons from world-class competition into compelling leadership and business insights.',
   seed: '/speaker_thumbnails/Neil-Tovey-The-Speakers-Firm.jpg',
-  path: '/categories/sports-coaching-and-the-winning-mindset'
+  path: '/find-a-speaker/sports-coaching-and-the-winning-mindset'
 }, {
   number: '19',
   name: 'Sustainability, ESG, Health and Human Performance',
   description: 'Sustainability, climate, health and wellbeing authorities helping organisations build resilient businesses, healthier cultures and sustainable performance.',
   seed: '/speaker_thumbnails/Khanyi-Chaba-The-Speakers-Firm.jpg',
-  path: '/categories/sustainability-esg-health-and-human-performance'
+  path: '/find-a-speaker/sustainability-esg-health-and-human-performance'
 }, {
   number: '20',
   name: 'Celebrity Speakers, MCs and Facilitators',
   description: 'Acclaimed public figures, broadcasters, actors, musicians and professional presenters bringing visibility, credibility, energy and unforgettable engagement to every event.',
   seed: '/speaker_thumbnails/Clement-Manyathela-The-Speakers-Firm.jpg',
-  path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment'
+  path: '/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment'
 }, {
   number: '21',
   name: 'Comedy, Culture & Strategic Disruption',
   description: 'Comedians, humorists, and disruptive creatives using storytelling, comedy, and cultural insights to challenge corporate norms and foster human connection.',
   seed: '/speaker_thumbnails/Mpho-Popps-The-Speakers-Firm.jpg',
-  path: '/categories/comedy'
+  path: '/find-a-speaker/comedy'
 }]
 
 const marqueeNames = categories.map(category => category.name);

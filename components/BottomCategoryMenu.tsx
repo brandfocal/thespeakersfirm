@@ -8,27 +8,27 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 const CATEGORIES = [
-  { name: 'Keynote', path: '/categories/inspirational-keynote-speakers' },
-  { name: 'Leadership', path: '/categories/leadership-strategy-and-executive-performance' },
-  { name: 'Governance', path: '/categories/boards-governance-and-boardroom-influence' },
-  { name: 'A.I.', path: '/categories/artificial-intelligence-and-intelligent-enterprise' },
-  { name: 'Future of Work', path: '/categories/future-of-work-talent-and-workforce-transformation' },
-  { name: 'Economics', path: '/categories/economics-markets-and-the-global-economy' },
-  { name: 'Futurists', path: '/categories/futurists-trends-and-strategic-foresight' },
-  { name: 'Geopolitics', path: '/categories/geopolitics-policy-and-global-affairs' },
-  { name: 'Innovation', path: '/categories/innovation-disruption-and-business-transformation' },
-  { name: 'Entrepreneurship', path: '/categories/entrepreneurship-investment-and-business-growth' },
-  { name: 'Change & Resilience', path: '/categories/change-resilience-and-organisational-agility' },
-  { name: 'Media & Executive visibility', path: '/categories/media-communication-and-executive-visibility' },
-  { name: 'Reputation & Trust', path: '/categories/reputation-crisis-and-trust-leadership' },
-  { name: 'Marketing & Brand', path: '/categories/marketing-branding-and-customer-growth' },
-  { name: 'Sales & Negotiation', path: '/categories/sales-negotiation-and-commercial-performance' },
-  { name: 'Neuroscience', path: '/categories/neuroscience-psychology-and-human-behaviour' },
-  { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
-  { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
-  { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
-  { name: 'MCs & Facilitators', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' },
-  { name: 'Comedy', path: '/categories/comedy' }
+  { name: 'Keynote', path: '/find-a-speaker/inspirational-keynote-speakers' },
+  { name: 'Leadership', path: '/find-a-speaker/leadership-strategy-and-executive-performance' },
+  { name: 'Governance', path: '/find-a-speaker/boards-governance-and-boardroom-influence' },
+  { name: 'A.I.', path: '/find-a-speaker/artificial-intelligence-and-intelligent-enterprise' },
+  { name: 'Future of Work', path: '/find-a-speaker/future-of-work-talent-and-workforce-transformation' },
+  { name: 'Economics', path: '/find-a-speaker/economics-markets-and-the-global-economy' },
+  { name: 'Futurists', path: '/find-a-speaker/futurists-trends-and-strategic-foresight' },
+  { name: 'Geopolitics', path: '/find-a-speaker/geopolitics-policy-and-global-affairs' },
+  { name: 'Innovation', path: '/find-a-speaker/innovation-disruption-and-business-transformation' },
+  { name: 'Entrepreneurship', path: '/find-a-speaker/entrepreneurship-investment-and-business-growth' },
+  { name: 'Change & Resilience', path: '/find-a-speaker/change-resilience-and-organisational-agility' },
+  { name: 'Media & Executive visibility', path: '/find-a-speaker/media-communication-and-executive-visibility' },
+  { name: 'Reputation & Trust', path: '/find-a-speaker/reputation-crisis-and-trust-leadership' },
+  { name: 'Marketing & Brand', path: '/find-a-speaker/marketing-branding-and-customer-growth' },
+  { name: 'Sales & Negotiation', path: '/find-a-speaker/sales-negotiation-and-commercial-performance' },
+  { name: 'Neuroscience', path: '/find-a-speaker/neuroscience-psychology-and-human-behaviour' },
+  { name: 'Teams & Collaboration', path: '/find-a-speaker/high-performance-teams-and-team-building-experiences' },
+  { name: 'Sports Coaching', path: '/find-a-speaker/sports-coaching-and-the-winning-mindset' },
+  { name: 'Sustainability & ESG', path: '/find-a-speaker/sustainability-esg-health-and-human-performance' },
+  { name: 'MCs & Facilitators', path: '/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment' },
+  { name: 'Comedy', path: '/find-a-speaker/comedy' }
 ];
 
 export function BottomCategoryMenu() {

@@ -295,10 +295,10 @@ export function Header() {
           onMouseLeave={() => setIsMoreCategoriesOpen(false)}
         >
           <Link 
-            href="/categories"
+            href="/find-a-speaker"
             className={cn(
               "flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors relative py-1 group",
-              pathname.startsWith("/categories") 
+              pathname.startsWith("/find-a-speaker") 
                 ? "text-[#e30e04]" 
                 : "text-[#686869] hover:text-[#e30e04]"
             )}
@@ -307,7 +307,7 @@ export function Header() {
             <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMoreCategoriesOpen && "rotate-180")} />
             <span className={cn(
               "absolute bottom-0 left-0 w-full h-[1.5px] bg-[#e30e04] transition-transform duration-300",
-              pathname.startsWith("/categories") 
+              pathname.startsWith("/find-a-speaker") 
                 ? "scale-x-100" 
                 : "scale-x-0 origin-left group-hover:scale-x-100"
             )} />
@@ -324,27 +324,27 @@ export function Header() {
               >
                 <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-left max-h-[420px] overflow-y-auto pr-2 scrollbar-thin">
                   {[
-                    { name: 'Keynote', path: '/categories/inspirational-keynote-speakers' },
-                    { name: 'Leadership', path: '/categories/leadership-strategy-and-executive-performance' },
-                    { name: 'Governance', path: '/categories/boards-governance-and-boardroom-influence' },
-                    { name: 'A.I.', path: '/categories/artificial-intelligence-and-intelligent-enterprise' },
-                    { name: 'Future of Work', path: '/categories/future-of-work-talent-and-workforce-transformation' },
-                    { name: 'Economics', path: '/categories/economics-markets-and-the-global-economy' },
-                    { name: 'Futurists', path: '/categories/futurists-trends-and-strategic-foresight' },
-                    { name: 'Geopolitics', path: '/categories/geopolitics-policy-and-global-affairs' },
-                    { name: 'Innovation', path: '/categories/innovation-disruption-and-business-transformation' },
-                    { name: 'Entrepreneurship', path: '/categories/entrepreneurship-investment-and-business-growth' },
-                    { name: 'Change & Resilience', path: '/categories/change-resilience-and-organisational-agility' },
-                    { name: 'Media & Executive visibility', path: '/categories/media-communication-and-executive-visibility' },
-                    { name: 'Reputation & Trust', path: '/categories/reputation-crisis-and-trust-leadership' },
-                    { name: 'Marketing & Brand', path: '/categories/marketing-branding-and-customer-growth' },
-                    { name: 'Sales & Negotiation', path: '/categories/sales-negotiation-and-commercial-performance' },
-                    { name: 'Neuroscience', path: '/categories/neuroscience-psychology-and-human-behaviour' },
-                    { name: 'Teams & Collaboration', path: '/categories/high-performance-teams-and-team-building-experiences' },
-                    { name: 'Sports Coaching', path: '/categories/sports-coaching-and-the-winning-mindset' },
-                    { name: 'Sustainability & ESG', path: '/categories/sustainability-esg-health-and-human-performance' },
-                    { name: 'MCs & Facilitators', path: '/categories/celebrity-speakers-mcs-comedy-and-entertainment' },
-                    { name: 'Comedy', path: '/categories/comedy' }
+                    { name: 'Keynote', path: '/find-a-speaker/inspirational-keynote-speakers' },
+                    { name: 'Leadership', path: '/find-a-speaker/leadership-strategy-and-executive-performance' },
+                    { name: 'Governance', path: '/find-a-speaker/boards-governance-and-boardroom-influence' },
+                    { name: 'A.I.', path: '/find-a-speaker/artificial-intelligence-and-intelligent-enterprise' },
+                    { name: 'Future of Work', path: '/find-a-speaker/future-of-work-talent-and-workforce-transformation' },
+                    { name: 'Economics', path: '/find-a-speaker/economics-markets-and-the-global-economy' },
+                    { name: 'Futurists', path: '/find-a-speaker/futurists-trends-and-strategic-foresight' },
+                    { name: 'Geopolitics', path: '/find-a-speaker/geopolitics-policy-and-global-affairs' },
+                    { name: 'Innovation', path: '/find-a-speaker/innovation-disruption-and-business-transformation' },
+                    { name: 'Entrepreneurship', path: '/find-a-speaker/entrepreneurship-investment-and-business-growth' },
+                    { name: 'Change & Resilience', path: '/find-a-speaker/change-resilience-and-organisational-agility' },
+                    { name: 'Media & Executive visibility', path: '/find-a-speaker/media-communication-and-executive-visibility' },
+                    { name: 'Reputation & Trust', path: '/find-a-speaker/reputation-crisis-and-trust-leadership' },
+                    { name: 'Marketing & Brand', path: '/find-a-speaker/marketing-branding-and-customer-growth' },
+                    { name: 'Sales & Negotiation', path: '/find-a-speaker/sales-negotiation-and-commercial-performance' },
+                    { name: 'Neuroscience', path: '/find-a-speaker/neuroscience-psychology-and-human-behaviour' },
+                    { name: 'Teams & Collaboration', path: '/find-a-speaker/high-performance-teams-and-team-building-experiences' },
+                    { name: 'Sports Coaching', path: '/find-a-speaker/sports-coaching-and-the-winning-mindset' },
+                    { name: 'Sustainability & ESG', path: '/find-a-speaker/sustainability-esg-health-and-human-performance' },
+                    { name: 'MCs & Facilitators', path: '/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment' },
+                    { name: 'Comedy', path: '/find-a-speaker/comedy' }
                   ].map(cat => {
                     return (
                       <Link
@@ -626,7 +626,7 @@ export function Header() {
                 onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
                 className={cn(
                   "flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-colors",
-                  pathname.startsWith("/categories") 
+                  pathname.startsWith("/find-a-speaker") 
                     ? "text-[#e30e04]" 
                     : "text-[#212121] active:text-[#e30e04]"
                 )}
@@ -645,35 +645,35 @@ export function Header() {
                   >
                     {MAIN_CATEGORIES.map(cat => {
                       const slugMap: Record<string, string> = {
-                        "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
-                        "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
-                        "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
-                        "digital-identity-cybersecurity-and-data-sovereignty": "/categories/artificial-intelligence-and-intelligent-enterprise",
-                        "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
-                        "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
-                        "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
-                        "comedy": "/categories/comedy",
-                        "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
-                        "diversity": "/categories/leadership-strategy-and-executive-performance",
-                        "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
-                        "neuroscience-peak-performance-mental-agility": "/categories/neuroscience-psychology-and-human-behaviour",
-                        "governance": "/categories/boards-governance-and-boardroom-influence",
-                        "gender": "/categories/leadership-strategy-and-executive-performance",
-                        "workplace-wellness": "/categories/sustainability-esg-health-and-human-performance",
-                        "financial-inclusion": "/categories/economics-markets-and-the-global-economy",
-                        "entrepreneurship": "/categories/entrepreneurship-investment-and-business-growth",
-                        "masculinity": "/categories/leadership-strategy-and-executive-performance",
-                        "female-keynote-speakers": "/categories/inspirational-keynote-speakers",
-                        "futurists": "/categories/futurists-trends-and-strategic-foresight",
-                        "sales": "/categories/sales-negotiation-and-commercial-performance",
-                        "marketing": "/categories/marketing-branding-and-customer-growth",
-                        "sustainability": "/categories/sustainability-esg-health-and-human-performance",
-                        "education": "/categories/leadership-strategy-and-executive-performance",
-                        "citizenship": "/categories/boards-governance-and-boardroom-influence",
-                        "motivation": "/categories/inspirational-keynote-speakers",
-                        "strategy-facilitators": "/categories/boards-governance-and-boardroom-influence",
-                        "respectful-workplaces": "/categories/leadership-strategy-and-executive-performance",
-                        "celebrity-speakers": "/categories/celebrity-speakers-mcs-comedy-and-entertainment"
+                        "inspirational-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                        "leadership-governance-and-risk-intelligence": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "boards-governance-and-boardroom-influence": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "digital-identity-cybersecurity-and-data-sovereignty": "/find-a-speaker/artificial-intelligence-and-intelligent-enterprise",
+                        "future-of-work": "/find-a-speaker/future-of-work-talent-and-workforce-transformation",
+                        "economics-and-politics": "/find-a-speaker/economics-markets-and-the-global-economy",
+                        "mc-and-facilitators": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment",
+                        "comedy": "/find-a-speaker/comedy",
+                        "spirituality-heritage-and-identity": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "diversity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "media-brand-reputation": "/find-a-speaker/media-communication-and-executive-visibility",
+                        "neuroscience-peak-performance-mental-agility": "/find-a-speaker/neuroscience-psychology-and-human-behaviour",
+                        "governance": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "gender": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "workplace-wellness": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                        "financial-inclusion": "/find-a-speaker/economics-markets-and-the-global-economy",
+                        "entrepreneurship": "/find-a-speaker/entrepreneurship-investment-and-business-growth",
+                        "masculinity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "female-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                        "futurists": "/find-a-speaker/futurists-trends-and-strategic-foresight",
+                        "sales": "/find-a-speaker/sales-negotiation-and-commercial-performance",
+                        "marketing": "/find-a-speaker/marketing-branding-and-customer-growth",
+                        "sustainability": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                        "education": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "citizenship": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "motivation": "/find-a-speaker/inspirational-keynote-speakers",
+                        "strategy-facilitators": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "respectful-workplaces": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "celebrity-speakers": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment"
                       };
                       const routePath = slugMap[cat.id];
                       return (
@@ -718,35 +718,35 @@ export function Header() {
                         >
                           {SUBMENU_CATEGORIES.map(cat => {
                             const slugMap: Record<string, string> = {
-                              "inspirational-keynote-speakers": "/categories/inspirational-keynote-speakers",
-                              "leadership-governance-and-risk-intelligence": "/categories/leadership-strategy-and-executive-performance",
-                              "boards-governance-and-boardroom-influence": "/categories/boards-governance-and-boardroom-influence",
-                              "digital-identity-cybersecurity-and-data-sovereignty": "/categories/artificial-intelligence-and-intelligent-enterprise",
-                              "future-of-work": "/categories/future-of-work-talent-and-workforce-transformation",
-                              "economics-and-politics": "/categories/economics-markets-and-the-global-economy",
-                              "mc-and-facilitators": "/categories/celebrity-speakers-mcs-comedy-and-entertainment",
-                              "comedy": "/categories/comedy",
-                              "spirituality-heritage-and-identity": "/categories/boards-governance-and-boardroom-influence",
-                              "diversity": "/categories/leadership-strategy-and-executive-performance",
-                              "media-brand-reputation": "/categories/media-communication-and-executive-visibility",
-                              "neuroscience-peak-performance-mental-agility": "/categories/neuroscience-psychology-and-human-behaviour",
-                              "governance": "/categories/boards-governance-and-boardroom-influence",
-                              "gender": "/categories/leadership-strategy-and-executive-performance",
-                              "workplace-wellness": "/categories/sustainability-esg-health-and-human-performance",
-                              "financial-inclusion": "/categories/economics-markets-and-the-global-economy",
-                              "entrepreneurship": "/categories/entrepreneurship-investment-and-business-growth",
-                              "masculinity": "/categories/leadership-strategy-and-executive-performance",
-                              "female-keynote-speakers": "/categories/inspirational-keynote-speakers",
-                              "futurists": "/categories/futurists-trends-and-strategic-foresight",
-                              "sales": "/categories/sales-negotiation-and-commercial-performance",
-                              "marketing": "/categories/marketing-branding-and-customer-growth",
-                              "sustainability": "/categories/sustainability-esg-health-and-human-performance",
-                              "education": "/categories/leadership-strategy-and-executive-performance",
-                              "citizenship": "/categories/boards-governance-and-boardroom-influence",
-                              "motivation": "/categories/inspirational-keynote-speakers",
-                              "strategy-facilitators": "/categories/boards-governance-and-boardroom-influence",
-                              "respectful-workplaces": "/categories/leadership-strategy-and-executive-performance",
-                              "celebrity-speakers": "/categories/celebrity-speakers-mcs-comedy-and-entertainment"
+                              "inspirational-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                              "leadership-governance-and-risk-intelligence": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "boards-governance-and-boardroom-influence": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "digital-identity-cybersecurity-and-data-sovereignty": "/find-a-speaker/artificial-intelligence-and-intelligent-enterprise",
+                              "future-of-work": "/find-a-speaker/future-of-work-talent-and-workforce-transformation",
+                              "economics-and-politics": "/find-a-speaker/economics-markets-and-the-global-economy",
+                              "mc-and-facilitators": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment",
+                              "comedy": "/find-a-speaker/comedy",
+                              "spirituality-heritage-and-identity": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "diversity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "media-brand-reputation": "/find-a-speaker/media-communication-and-executive-visibility",
+                              "neuroscience-peak-performance-mental-agility": "/find-a-speaker/neuroscience-psychology-and-human-behaviour",
+                              "governance": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "gender": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "workplace-wellness": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                              "financial-inclusion": "/find-a-speaker/economics-markets-and-the-global-economy",
+                              "entrepreneurship": "/find-a-speaker/entrepreneurship-investment-and-business-growth",
+                              "masculinity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "female-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                              "futurists": "/find-a-speaker/futurists-trends-and-strategic-foresight",
+                              "sales": "/find-a-speaker/sales-negotiation-and-commercial-performance",
+                              "marketing": "/find-a-speaker/marketing-branding-and-customer-growth",
+                              "sustainability": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                              "education": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "citizenship": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "motivation": "/find-a-speaker/inspirational-keynote-speakers",
+                              "strategy-facilitators": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "respectful-workplaces": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "celebrity-speakers": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment"
                             };
                             const routePath = slugMap[cat.id];
                             return (

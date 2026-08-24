@@ -243,7 +243,7 @@ export function TSFSalesNegotiationAndCommercialPerformanceCategory() {
                   <ArrowRight size={16} />
                 </span>
               </motion.a>
-              <a href="/categories" className="border border-white/25 hover:border-white/50 backdrop-blur-sm px-7 py-4 rounded-full text-[11px] font-bold uppercase tracking-[0.1em] text-white flex items-center justify-center">
+              <a href="/find-a-speaker" className="border border-white/25 hover:border-white/50 backdrop-blur-sm px-7 py-4 rounded-full text-[11px] font-bold uppercase tracking-[0.1em] text-white flex items-center justify-center">
                 <span>Explore All Categories</span>
               </a>
             </div>
