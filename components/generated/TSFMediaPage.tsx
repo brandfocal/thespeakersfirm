@@ -37,26 +37,41 @@ const MEDIA_HERO_HEADING_LINES = [{
 }];
 
 const pressFeatures = [{
+  id: 'podcast-spotlight',
+  source: 'EVENING SHOW / OMNY.FM',
+  title: 'In The Spotlight with Simphiwe Masiza',
+  speaker: 'Simphiwe Masiza',
+  date: '24 AUG 2026',
+  image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1200&auto=format&fit=crop',
+  link: 'https://omny.fm/shows/evening-show/in-the-spotlight-with-simphiwe-masiza',
+  linkLabel: 'Listen Now'
+}, {
   id: 'times',
   source: 'THE TIMES',
   title: '“The future of African leadership is being rewritten.”',
   speaker: 'Bonang Mohale',
   date: '18 MAY 2025',
-  image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop'
+  image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop',
+  link: '#news',
+  linkLabel: 'Read Article'
 }, {
   id: 'business-day',
   source: 'BUSINESS DAY',
   title: 'The voices shaping the next chapter of business.',
   speaker: 'Lebo Gunguluza',
   date: '04 APR 2025',
-  image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop'
+  image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop',
+  link: '#news',
+  linkLabel: 'Read Article'
 }, {
   id: 'forbes',
   source: 'FORBES AFRICA',
   title: 'Why influence has become the new currency.',
   speaker: 'Vusi Thembekwayo',
   date: '26 FEB 2025',
-  image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200&auto=format&fit=crop'
+  image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200&auto=format&fit=crop',
+  link: '#news',
+  linkLabel: 'Read Article'
 }];
 
 const reels = [{
@@ -135,16 +150,6 @@ const news = [{
   date: '14 OCT 2024'
 }];
 
-const podcasts = [
-  {
-    id: 'p1',
-    source: 'EVENING SHOW / OMNY.FM',
-    title: 'In The Spotlight with Simphiwe Masiza',
-    description: 'Siyabonga Motha is joined by Simphiwe Masiza, Founder and Chief Executive Officer of The Speakers Firm to discuss building platforms for African voices, his vision for leadership, and more.',
-    date: '24 AUG 2026',
-    link: 'https://omny.fm/shows/evening-show/in-the-spotlight-with-simphiwe-masiza'
-  }
-];
 
 const quotes = [{
   id: 'q1',
@@ -346,69 +351,46 @@ export const TSFMediaPage = () => {
     }}>
         <VerticalBorderLines isDark={false} />
         <div className="mx-auto max-w-[1440px] px-6 md:px-16"><SectionTag>FEATURED</SectionTag><Reveal><h2 className="mt-7 max-w-3xl text-3xl font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#000000] sm:text-4xl md:text-5xl lg:text-6xl">Where The Speakers Firm Speakers Make News.</h2></Reveal>
-          <div className="mt-12 grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-3 md:mt-16">{pressFeatures.map((item, index) => <Reveal key={item.id} delay={index * 0.1}><article className="group relative flex aspect-[4/3] w-full flex-col justify-between overflow-hidden border border-white/10 bg-[#000000] p-5 text-white transition-transform duration-500 hover:-translate-y-2 sm:p-6 md:p-7" style={{
-              backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.94)), url(${item.image})`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover'
-            }}><div className="flex items-center justify-between"><span className="text-[11px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.source}</span><ArrowUpRight size={18} className="text-[#e30e04] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></div><div><h3 className="max-w-sm text-2xl font-bold leading-[1.03] tracking-[-0.03em] md:text-3xl">{item.title}</h3><div className="mt-5 flex items-end justify-between gap-4 border-t border-white/20 pt-4 md:mt-7"><div><p className="text-sm text-[#AFB0B0]">{item.speaker}</p><p className="mt-1 text-[10px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.date}</p></div><a href="#news" className="text-[11px] font-bold uppercase tracking-widest text-[#e30e04]">Read Article <ArrowRight className="ml-1 inline" size={14} /></a></div></div></article></Reveal>)}</div>
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-16">
+            {pressFeatures.map((item, index) => (
+              <Reveal key={item.id} delay={index * 0.1}>
+                <a 
+                  href={item.link} 
+                  target={item.link.startsWith('http') ? '_blank' : undefined} 
+                  rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="group relative flex aspect-[4/3] w-full flex-col justify-between overflow-hidden border border-white/10 bg-[#000000] p-5 text-white transition-transform duration-500 hover:-translate-y-2 sm:p-6 md:p-7 rounded-[18px]" 
+                  style={{
+                    backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.94)), url(${item.image})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                  }}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.source}</span>
+                    <ArrowUpRight size={18} className="text-[#e30e04] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </div>
+                  <div>
+                    <h3 className="max-w-sm text-lg sm:text-xl font-bold leading-[1.1] tracking-[-0.03em]">{item.title}</h3>
+                    <div className="mt-5 flex items-end justify-between gap-4 border-t border-white/20 pt-4 md:mt-6">
+                      <div>
+                        <p className="text-xs text-[#AFB0B0]">{item.speaker}</p>
+                        <p className="mt-1 text-[9px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.date}</p>
+                      </div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#e30e04]">
+                        {item.linkLabel} <ArrowRight className="ml-1 inline h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
       <section id="media" className="relative py-12 sm:py-16 md:py-24 lg:py-32" style={{
       backgroundColor: COLORS.black
     }}><VerticalBorderLines isDark={true} /><div className="mx-auto max-w-[1440px] px-6 md:px-16"><SectionTag dark>WATCH &amp; LISTEN</SectionTag><Reveal><h2 className="mt-7 max-w-3xl text-3xl font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] sm:text-4xl md:text-5xl lg:text-6xl">Talks That Move the Room.</h2></Reveal><div className="mt-12 flex flex-nowrap gap-4 overflow-x-auto pb-3 md:mt-16 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">{reels.map((item, index) => <Reveal key={item.id} delay={index * 0.08}><article className="group w-[260px] flex-shrink-0 sm:w-[300px] md:w-[320px]"><div className="relative aspect-[4/3] overflow-hidden bg-[#393939]"><img src={item.image} alt={`${item.title} by ${item.speaker}`} className="h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" /><button type="button" aria-label={`Play ${item.title}`} className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#e30e04] text-white transition-transform group-hover:scale-110 md:h-16 md:w-16"><Play size={21} fill="currentColor" /></button><span className="absolute bottom-4 right-4 bg-[#000000] px-2 py-1 text-[10px] font-bold tracking-widest text-[#ffffff]">{item.duration}</span></div><h3 className="mt-5 max-w-lg text-xl font-bold leading-tight text-white md:text-2xl">{item.title}</h3><p className="mt-2 text-sm text-[#AFB0B0]">{item.speaker}</p></article></Reveal>)}</div></div></section>
-
-      {/* Podcast Interviews (Light Section) */}
-      <section id="podcasts" className="relative py-12 sm:py-16 md:py-24 lg:py-32 bg-[#ffffff]" style={{
-        borderBottom: '1px solid rgba(0,0,0,0.08)'
-      }}>
-        <VerticalBorderLines isDark={false} />
-        <div className="mx-auto max-w-[1440px] px-6 md:px-16">
-          <SectionTag>PODCASTS &amp; BROADCASTS</SectionTag>
-          <Reveal>
-            <h2 className="mt-7 max-w-3xl text-3xl font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#000000] sm:text-4xl md:text-5xl lg:text-6xl">
-              Voice in the Airwaves.
-            </h2>
-          </Reveal>
-          
-          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2 md:mt-16">
-            {podcasts.map((item, index) => (
-              <Reveal key={item.id} delay={index * 0.1}>
-                <div className="group relative flex flex-col justify-between border border-[#C7C7C8] bg-white p-6 transition-all duration-300 hover:border-[#e30e04] hover:shadow-lg sm:p-8 rounded-[18px]">
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold tracking-[0.12em] text-[#e30e04]">{item.source}</span>
-                      <span className="text-[10px] font-bold tracking-[0.12em] text-[#686869]">{item.date}</span>
-                    </div>
-                    <h3 className="mt-5 text-2xl font-bold leading-tight tracking-[-0.025em] text-black md:text-3xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-4 text-sm leading-relaxed text-[#686869]">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="mt-8 border-t border-[#C7C7C8]/40 pt-6">
-                    <motion.a 
-                      href={item.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.02 }} 
-                      whileTap={{ scale: 0.98 }} 
-                      className="inline-flex items-center" 
-                      style={{ borderColor: 'rgba(33, 33, 33, 0.18)' }}
-                    >
-                      <span className="flex items-center justify-center gap-3 rounded-full bg-[#000000] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-colors hover:bg-[#e30e04]">
-                        <span>Listen to Interview</span>
-                        <ArrowUpRight size={14} />
-                      </span>
-                    </motion.a>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="relative py-12 sm:py-16 md:py-24 lg:py-32" style={{
       backgroundColor: COLORS.offWhite
