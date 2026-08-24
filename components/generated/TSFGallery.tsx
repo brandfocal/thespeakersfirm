@@ -179,6 +179,21 @@ const videos = [
     id: 'BW1M_Pa8DJo',
     title: 'Musa Sono Profile',
     image: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+  },
+  {
+    id: 'wIt-HmG5RwQ',
+    title: 'Dr. Tumelo Chaka Profile',
+    image: 'https://img.youtube.com/vi/wIt-HmG5RwQ/hqdefault.jpg'
+  },
+  {
+    id: 'YVgFd5ljYJI',
+    title: 'Apostle Dr. Steven Thebe Molakeng Profile',
+    image: 'https://img.youtube.com/vi/YVgFd5ljYJI/hqdefault.jpg'
+  },
+  {
+    id: 'VHrJM-9U_IM',
+    title: 'Jessica Dube Profile',
+    image: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
   }
 ];
 const eventStats = [{

@@ -2894,6 +2894,27 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Agripreneur & Motivational Speaker',
     description: 'A dynamic young leader, entrepreneur, and motivational speaker bringing a fresh voice to conversations around purpose and discipline.',
     thumbnail: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+  },
+  {
+    id: 'wIt-HmG5RwQ',
+    title: 'Dr. Tumelo Chaka',
+    subtitle: 'The Brand Economist™',
+    description: 'Meet Dr. Tumelo Chaka, sharing insights at the intersection of brand strategy, consumer culture, and commercial growth.',
+    thumbnail: 'https://img.youtube.com/vi/wIt-HmG5RwQ/hqdefault.jpg'
+  },
+  {
+    id: 'YVgFd5ljYJI',
+    title: 'Apostle Dr. Steven Thebe Molakeng',
+    subtitle: 'Thought Leader, Pastor & Speaker',
+    description: 'Apostle Dr. Steven Thebe Molakeng brings together insight, purpose, and lived experience to create conversations that challenge and inspire.',
+    thumbnail: 'https://img.youtube.com/vi/YVgFd5ljYJI/hqdefault.jpg'
+  },
+  {
+    id: 'VHrJM-9U_IM',
+    title: 'Jessica Dube',
+    subtitle: 'Broadcast Producer, Presenter & Global Voice Artist',
+    description: 'Jessica Dube brings versatility, presence, and a deep understanding of storytelling, media production, and compelling communication.',
+    thumbnail: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
   }
 ];
 
