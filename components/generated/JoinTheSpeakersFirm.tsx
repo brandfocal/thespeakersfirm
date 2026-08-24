@@ -243,59 +243,59 @@ export function JoinTheSpeakersFirm() {
         </section>
 
         {/* Section 4: Information & Protocols */}
-        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.offWhite }}>
-          <VerticalBorderLines isDark={false} />
-          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Column 1: Important Information */}
+        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16 bg-[#000000] text-white border-t border-white/10">
+          <VerticalBorderLines isDark={true} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            {/* Column 1: Important Information (Compliance Protocol) */}
             <div className="space-y-8">
-              <div className="border-l-4 border-[#e30e04] pl-6">
+              <div className="border-l-[4px] border-[#e30e04] pl-6">
                 <span className="block text-[11px] font-bold uppercase tracking-widest text-[#e30e04] mb-1">COMPLIANCE PROTOCOL</span>
-                <h3 className="text-2xl font-bold uppercase tracking-tight text-black">IMPORTANT INFORMATION</h3>
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white">IMPORTANT INFORMATION</h3>
               </div>
               
-              <div className="space-y-6 text-sm text-[#686869] leading-relaxed">
-                <div className="flex items-start gap-4">
-                  <span className="text-[#e30e04] mt-0.5"><AlertTriangle size={18} /></span>
-                  <p>We receive a high volume of submissions. Candidates who meet our strategic, commercial and quality requirements will be contacted within three to four weeks.</p>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-[#e30e04] block mb-2">01. SUBMISSION TIMELINE</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">We receive a high volume of submissions. Candidates who meet our strategic, commercial and quality requirements will be contacted within three to four weeks.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-[#e30e04] mt-0.5"><AlertTriangle size={18} /></span>
-                  <p>Incomplete submissions will not be considered.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-[#e30e04] block mb-2">02. COMPLETE PROFILES ONLY</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">Incomplete submissions will not be considered under any circumstances.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-[#e30e04] mt-0.5"><AlertTriangle size={18} /></span>
-                  <p>We do not accept printed materials, physical press kits or unsolicited packages. All submissions and communication must be digital.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-[#e30e04] block mb-2">03. DIGITAL CHANNELS ONLY</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">We do not accept printed materials, physical press kits or unsolicited packages. All submissions and communication must be digital.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-[#e30e04] mt-0.5"><AlertTriangle size={18} /></span>
-                  <p>Representation by The Speakers Firm™ is intentionally selective. Our roster is curated to include individuals with the credibility, intellectual authority, commercial relevance and stage command required to operate at the highest level.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-[#e30e04] block mb-2">04. SELECTIVE ROSTER</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">Representation by The Speakers Firm™ is intentionally selective. Our roster is curated to include individuals with the credibility, intellectual authority, commercial relevance and stage command required to operate at the highest level.</p>
                 </div>
               </div>
             </div>
 
-            {/* Column 2: What to Expect */}
+            {/* Column 2: What to Expect (Roster Progression) */}
             <div className="space-y-8">
-              <div className="border-l-4 border-black pl-6">
-                <span className="block text-[11px] font-bold uppercase tracking-widest text-black mb-1">ROSTER PROGRESSION</span>
-                <h3 className="text-2xl font-bold uppercase tracking-tight text-black">WHAT TO EXPECT</h3>
+              <div className="border-l-[4px] border-white/40 pl-6">
+                <span className="block text-[11px] font-bold uppercase tracking-widest text-white/50 mb-1">ROSTER PROGRESSION</span>
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white">WHAT TO EXPECT</h3>
               </div>
               
-              <div className="space-y-6 text-sm text-[#686869] leading-relaxed">
-                <div className="flex items-start gap-4">
-                  <span className="text-black mt-0.5"><CheckCircle size={18} /></span>
-                  <p>Every complete submission is assessed for potential inclusion in our private strategic roster, which is accessed by our agents when responding to high-profile and high-stakes client briefs.</p>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-white/60 block mb-2">STAGE 01. INITIAL ASSESSMENT</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">Every complete submission is assessed for potential inclusion in our private strategic roster, which is accessed by our agents when responding to high-profile and high-stakes client briefs.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-black mt-0.5"><CheckCircle size={18} /></span>
-                  <p>If your expertise and positioning align with a current opportunity, we will contact you directly to request additional information or initiate partnership discussions.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-white/60 block mb-2">STAGE 02. DIRECT MATCHING</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">If your expertise and positioning align with a current opportunity, we will contact you directly to request additional information or initiate partnership discussions.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-black mt-0.5"><CheckCircle size={18} /></span>
-                  <p>Submission or roster inclusion does not guarantee formal representation or confirmed engagements. Progression depends on your relevance, resonance, professionalism and demonstrated real-world impact.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-white/60 block mb-2">STAGE 03. PROGRESSION FACTORS</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">Submission or roster inclusion does not guarantee formal representation or confirmed engagements. Progression depends on your relevance, resonance, professionalism and demonstrated real-world impact.</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-black mt-0.5"><CheckCircle size={18} /></span>
-                  <p>As your profile, market relevance and influence grow, you may be invited to enter into a formal, long-term representation partnership with The Speakers Firm™.</p>
+                <div className="border border-white/10 bg-white/[0.01] p-6 rounded-[20px] hover:border-white/20 transition-colors">
+                  <span className="text-xs font-bold text-white/60 block mb-2">STAGE 04. FORMAL REPRESENTATION</span>
+                  <p className="text-xs leading-relaxed text-[#AFB0B0]">As your profile, market relevance and influence grow, you may be invited to enter into a formal, long-term representation partnership with The Speakers Firm™.</p>
                 </div>
               </div>
             </div>
