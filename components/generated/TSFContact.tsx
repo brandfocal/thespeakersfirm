@@ -700,7 +700,7 @@ export const TSFContact = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{
             once: true,
             amount: 0.25
-          }} variants={reveal} className="newsletter-copy flex-1">
+          }} variants={reveal} className="contact-newsletter-copy flex-1">
             <span className="inline-flex border-l-4 border-[#e30e04] bg-[#2C2C2C] px-4 py-2 text-[10px] font-bold tracking-[0.2em] text-[#F8F7F5] mb-4">SUBSCRIBE TO OUR NEWSLETTER</span>
             <h2 id="newsletter-heading" className="mt-4 text-[clamp(2rem,5vw,3.5rem)] font-bold uppercase tracking-tight text-white leading-[0.95]">
               INSIGHTFUL VOICES.<br />
