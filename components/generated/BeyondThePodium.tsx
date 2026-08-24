@@ -34,10 +34,10 @@ const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
   },
   {
     id: "sizwe-mpofu-walsh-leadership-decisions",
-    title: "Leadership is not defined by the titles you hold, but by the decisions you make.",
+    title: "Leadership & Education Dialogue | African Leadership Festival",
     speakerName: "Dr. Sizwe Mpofu-Walsh",
     youtubeId: "IaZvJjCg8uQ",
-    description: "Dr Sizwe Mpofu Walsh joined the African Leadership Festival in conversation with Hatim Eltayeb, CEO of the African Leadership Academy, for a thought-provoking dialogue on leadership, education, ethical decision-making and Africa’s future. Addressing emerging leaders from across the continent, the conversation challenged young Africans to think deeply, lead with conviction and transform potential into meaningful action."
+    description: "Dr. Sizwe Mpofu-Walsh in conversation with Hatim Eltayeb on leadership, education, and Africa’s future."
   }
 ];
 
