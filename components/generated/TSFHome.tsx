@@ -2862,9 +2862,9 @@ const HERO_HEADLINE_LINES = [{
 const SPEAKER_VIDEOS = [
   {
     id: 'SEeymv8o9OY',
-    title: 'Prof. Letlhokwa George Mpedi',
-    subtitle: 'Vice-Chancellor & Principal, UJ',
-    description: 'Transformative leadership, technology, and the future of higher education in the Fourth Industrial Revolution.',
+    title: 'Pumela Salela',
+    subtitle: 'UK Country Head, Brand South Africa',
+    description: 'Strategic country branding, global investment positioning, and sustainable leadership.',
     thumbnail: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
   },
   {
