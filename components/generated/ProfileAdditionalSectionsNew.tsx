@@ -915,9 +915,11 @@ export const ProfileAdditionalSections = () => {
         </div>
       </section>
 
+      {/*
       <WhatSetsUsApartSection />
       <WhyOurEngagementsStandApartSection />
       <BookingProcessSection />
+      */}
 
       {activeGalleryImage ? <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/82 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Gallery image lightbox">
           <button type="button" className="absolute inset-0 cursor-default" onClick={closeLightbox} aria-label="Close gallery image" />
