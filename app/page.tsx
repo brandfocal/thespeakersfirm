@@ -22,31 +22,8 @@ export const metadata: Metadata = {
   }
 };
 
-// Dynamically import the homepage component with SSR disabled to prevent hydration mismatches
-const TheSpeakersFirmHome = dynamic(
-  () => import("@/components/generated/TSFHome").then((mod) => mod.TheSpeakersFirmHome),
-  { 
-    ssr: false,
-    loading: () => (
-      <div className="min-h-screen w-full flex items-center justify-center bg-[#ffffff]">
-        <div className="text-sm font-mono tracking-widest uppercase animate-pulse text-[#686869]">
-          Loading experience...
-        </div>
-      </div>
-    )
-  }
-);
+import { HomeClientWrapper } from "@/components/HomeClientWrapper";
 
 export default function Home() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen w-full flex items-center justify-center bg-[#ffffff]">
-        <div className="text-sm font-mono tracking-widest uppercase animate-pulse text-[#686869]">
-          Loading experience...
-        </div>
-      </div>
-    }>
-      <TheSpeakersFirmHome />
-    </Suspense>
-  );
+  return <HomeClientWrapper />;
 }
