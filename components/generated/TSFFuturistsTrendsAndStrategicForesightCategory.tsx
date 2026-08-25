@@ -126,7 +126,10 @@ export function TSFFuturistsTrendsAndStrategicForesightCategory() {
     <main id="top" className="min-h-screen overflow-hidden bg-[#212121] text-[#f8f7f5] font-[Kontora,sans-serif] selection:bg-[#e30e04] selection:text-white">
       <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
         <div className="absolute inset-0 z-0 bg-[#000000]" aria-hidden="true">
-          <img src="/speakers/Abdullah Verachia/Abdullah-Verachia-The-Speakers-Firm-9.jpg" alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
+                    <picture className="absolute inset-0 h-full w-full">
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/futurists-mobile.jpg" />
+            <img src="/speakers/Abdullah Verachia/Abdullah-Verachia-The-Speakers-Firm-9.jpg" alt="" className="h-full w-full object-cover object-center" />
+          </picture>
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
             backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
