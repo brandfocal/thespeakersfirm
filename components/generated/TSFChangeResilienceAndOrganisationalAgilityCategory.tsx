@@ -156,7 +156,7 @@ export function TSFChangeResilienceAndOrganisationalAgilityCategory() {
         </div>
         <VerticalBorderLines isDark={true} isOutside={false} />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 md:px-16">
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+          <motion.div className="hidden md:block" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
             <SectionTag>ORGANISATIONAL AGILITY</SectionTag>
           </motion.div>
           
