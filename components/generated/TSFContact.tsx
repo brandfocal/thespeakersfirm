@@ -504,7 +504,10 @@ export const TSFContact = () => {
       {/* Redesigned Hero complying with standard design limits */}
       <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          <img src="/hero_backgrounds/contact-us.jpg" alt="" className="absolute inset-0 h-full w-full object-cover object-top opacity-30" />
+          <picture className="absolute inset-0 h-full w-full opacity-30">
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/contact-us-mobile.jpg" />
+            <img src="/hero_backgrounds/contact-us.jpg" alt="" className="h-full w-full object-cover object-top" />
+          </picture>
           <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.3)_100%)]" />
         </div>
         <VerticalBorderLines isDark={true} />

@@ -103,6 +103,7 @@ const HERO_SLIDES = [{
 }, {
   id: 'john-sanei',
   image: '/speakers/John Sanei/John-Sanei-The-Speakers-Firm-6.jpg',
+  mobileImage: '/hero_backgrounds/John-Sanei-mobile.jpg',
   alt: 'John Sanei',
   position: 'object-center'
 }, {
@@ -3824,6 +3825,16 @@ const BriefBureauFormSection = () => {
     </section>;
 };
 export const TheSpeakersFirmHome = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [hoveredId, setHoveredId] = React.useState<string | null>(null);
   const [activeHeroSlide, setActiveHeroSlide] = React.useState(0);
   const [activeSpeakerCategory, setActiveSpeakerCategory] = React.useState('All');
@@ -4726,7 +4737,7 @@ export const TheSpeakersFirmHome = () => {
       backgroundColor: COLORS.black
     }}>
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          {HERO_SLIDES.map((slide, slideIndex) => <motion.img key={slide.id} src={slide.image} alt="" aria-hidden="true" className={cn("absolute inset-0 h-full w-full object-cover", slide.position || "object-center")} initial={false} animate={{
+          {HERO_SLIDES.map((slide, slideIndex) => <motion.img key={slide.id} src={isMobile && (slide as any).mobileImage ? (slide as any).mobileImage : slide.image} alt="" aria-hidden="true" className={cn("absolute inset-0 h-full w-full object-cover", slide.position || "object-center")} initial={false} animate={{
           opacity: activeHeroSlide === slideIndex ? 1 : 0,
           scale: activeHeroSlide === slideIndex ? 1 : 1.035
         }} transition={{

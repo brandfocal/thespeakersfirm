@@ -381,7 +381,10 @@ export const TSFGallery = () => {
       backgroundColor: '#000000'
     }}>
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
-          <img src="/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4698.JPG" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <picture className="absolute inset-0 h-full w-full">
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/gallery-mobile.jpg" />
+            <img src="/galleries/LeratoSithole-AfricaInsuranceConference2026/DSC_4698.JPG" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
+          </picture>
           <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_42px)] opacity-[0.16]" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
         </div>

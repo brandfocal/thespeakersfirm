@@ -272,7 +272,10 @@ export function ExecutiveDialogues() {
     </AnimatePresence>
 
     <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden sm:min-h-[720px] lg:h-[100vh] bg-black">
-      <img src="/hero_backgrounds/executive-dialogues.jpg" alt="Roundtable discussion banner" className="absolute inset-0 h-full w-full object-cover object-top opacity-65" />
+      <picture className="absolute inset-0 h-full w-full opacity-65">
+        <source media="(max-width: 767px)" srcSet="/hero_backgrounds/executive-dialogues-mobile.jpg" />
+        <img src="/hero_backgrounds/executive-dialogues.jpg" alt="Roundtable discussion banner" className="h-full w-full object-cover object-top" />
+      </picture>
       <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
       <VerticalBorderLines isDark={true} />
       <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-20 px-6 pt-20 sm:pt-24 md:px-16 md:pt-28 lg:pt-24">
