@@ -634,7 +634,7 @@ export function Header() {
             className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff] p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" 
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
-            <div className="flex flex-col gap-1 max-h-[300px] overflow-y-auto pr-1">
+            <div className="flex flex-col gap-1 max-h-[500px] overflow-y-auto pr-1">
               <div className="flex items-center justify-between rounded-2xl px-2 py-1">
                 <Link 
                   href="/find-a-speaker"
@@ -873,6 +873,24 @@ export function Header() {
                 <span>Join Us</span>
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
               </Link>
+
+              {/* Action CTA Buttons */}
+              <div className="mt-4 flex flex-col gap-3 px-2 pt-2">
+                <Link 
+                  href="/brief-us" 
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#e30e04] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all active:scale-95 shadow-[0_8px_20px_rgba(227,14,4,0.2)]"
+                >
+                  <span>Brief Us Now</span>
+                </Link>
+                <Link 
+                  href="/book-a-speaker" 
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#000000] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all active:scale-95 border border-white/10 hover:bg-[#1E1E1E]"
+                >
+                  <span>Book A Speaker</span>
+                </Link>
+              </div>
             </div>
 
 

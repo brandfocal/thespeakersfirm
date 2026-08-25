@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { AnimatePresence, motion, useAnimationControls, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Menu, Play, Quote, Search, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BeyondThePodium } from './BeyondThePodium';
 import { WhyChooseUs } from './WhyChooseUs';
@@ -3245,12 +3245,19 @@ const VerticalBorderLines = ({
       </div>
     </div>;
 };
+const MAIN_CATEGORIES = CATEGORIES_CONFIG.slice(0, 11);
+const SUBMENU_CATEGORIES = CATEGORIES_CONFIG.slice(11);
+
 const FloatingNav = ({
   searchQuery,
   onSearchQueryChange
 }: FloatingNavProps) => {
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMobileCategoriesOpen, setIsMobileCategoriesOpen] = React.useState(false);
+  const [isMobileMoreOpen, setIsMobileMoreOpen] = React.useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
   const searchInputRef = React.useRef<HTMLInputElement | null>(null);
   React.useEffect(() => {
     if (isSearchExpanded) {
@@ -3359,13 +3366,269 @@ const FloatingNav = ({
       }} className="absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[26px] border bg-[#ffffff]/95 p-5 shadow-[0_18px_48px_rgba(0,0,0,0.12)] backdrop-blur-xl lg:hidden" style={{
         borderColor: 'rgba(199, 199, 200, 0.72)'
       }}>
-            <div className="flex flex-col gap-1">
-              {FOOTER_NAV_LINKS.slice(1, 5).map(item => <a key={`mobile-nav-${item.id}`} href={item.href} onClick={handleMobileMenuClose} className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-colors active:text-[#e30e04]" style={{
-            color: COLORS.black
-          }}>
-                  <span>{item.label}</span>
-                  <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-                </a>)}
+            <div className="flex flex-col gap-1 max-h-[500px] overflow-y-auto pr-1">
+              <div className="flex items-center justify-between rounded-2xl px-2 py-1">
+                <Link 
+                  href="/find-a-speaker"
+                  onClick={handleMobileMenuClose}
+                  className={cn(
+                    "text-[13px] font-bold uppercase tracking-[0.12em] transition-colors flex-grow text-left py-2",
+                    pathname.startsWith("/find-a-speaker") 
+                      ? "text-[#e30e04]" 
+                      : "text-[#212121] active:text-[#e30e04]"
+                  )}
+                  style={{ color: COLORS.black }}
+                >
+                  Find a Speaker
+                </Link>
+                <button 
+                  type="button"
+                  aria-label="Toggle categories list"
+                  onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
+                  className="p-2 text-[#212121] active:text-[#e30e04] transition-colors"
+                >
+                  <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isMobileCategoriesOpen && "rotate-180")} />
+                </button>
+              </div>
+
+              <AnimatePresence>
+                {isMobileCategoriesOpen && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
+                  >
+                    {MAIN_CATEGORIES.map(cat => {
+                      const slugMap: Record<string, string> = {
+                        "inspirational-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                        "leadership-governance-and-risk-intelligence": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "boards-governance-and-boardroom-influence": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "digital-identity-cybersecurity-and-data-sovereignty": "/find-a-speaker/artificial-intelligence-and-intelligent-enterprise",
+                        "future-of-work": "/find-a-speaker/future-of-work-talent-and-workforce-transformation",
+                        "economics-and-politics": "/find-a-speaker/economics-markets-and-the-global-economy",
+                        "mc-and-facilitators": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment",
+                        "comedy": "/find-a-speaker/comedy",
+                        "spirituality-heritage-and-identity": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "diversity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "media-brand-reputation": "/find-a-speaker/media-communication-and-executive-visibility",
+                        "neuroscience-peak-performance-mental-agility": "/find-a-speaker/neuroscience-psychology-and-human-behaviour",
+                        "governance": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "gender": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "workplace-wellness": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                        "financial-inclusion": "/find-a-speaker/economics-markets-and-the-global-economy",
+                        "entrepreneurship": "/find-a-speaker/entrepreneurship-investment-and-business-growth",
+                        "masculinity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "female-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                        "futurists": "/find-a-speaker/futurists-trends-and-strategic-foresight",
+                        "sales": "/find-a-speaker/sales-negotiation-and-commercial-performance",
+                        "marketing": "/find-a-speaker/marketing-branding-and-customer-growth",
+                        "sustainability": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                        "education": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "citizenship": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "motivation": "/find-a-speaker/inspirational-keynote-speakers",
+                        "strategy-facilitators": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                        "respectful-workplaces": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                        "celebrity-speakers": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment"
+                      };
+                      const routePath = slugMap[cat.id];
+                      return (
+                        <button
+                          key={cat.id}
+                          onClick={() => {
+                            if (routePath) {
+                              router.push(routePath);
+                            } else {
+                              window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                              router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                            }
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={cn(
+                            "w-full text-left rounded-xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider transition-colors",
+                            pathname === routePath 
+                              ? "text-[#e30e04] bg-gray-50" 
+                              : "text-[#686869] active:text-[#e30e04]"
+                          )}
+                        >
+                          {cat.buttonLabel}
+                        </button>
+                      );
+                    })}
+                    
+                    <button 
+                      onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
+                      className="flex items-center justify-between rounded-2xl px-2 py-2 text-[11px] font-bold uppercase tracking-wider text-[#212121]"
+                    >
+                      <span>More Categories</span>
+                      <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-300", isMobileMoreOpen && "rotate-180")} />
+                    </button>
+
+                    <AnimatePresence>
+                      {isMobileMoreOpen && (
+                        <motion.div 
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden pl-4 flex flex-col gap-1 border-l border-gray-100"
+                        >
+                          {SUBMENU_CATEGORIES.map(cat => {
+                            const slugMap: Record<string, string> = {
+                              "inspirational-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                              "leadership-governance-and-risk-intelligence": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "boards-governance-and-boardroom-influence": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "digital-identity-cybersecurity-and-data-sovereignty": "/find-a-speaker/artificial-intelligence-and-intelligent-enterprise",
+                              "future-of-work": "/find-a-speaker/future-of-work-talent-and-workforce-transformation",
+                              "economics-and-politics": "/find-a-speaker/economics-markets-and-the-global-economy",
+                              "mc-and-facilitators": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment",
+                              "comedy": "/find-a-speaker/comedy",
+                              "spirituality-heritage-and-identity": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "diversity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "media-brand-reputation": "/find-a-speaker/media-communication-and-executive-visibility",
+                              "neuroscience-peak-performance-mental-agility": "/find-a-speaker/neuroscience-psychology-and-human-behaviour",
+                              "governance": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "gender": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "workplace-wellness": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                              "financial-inclusion": "/find-a-speaker/economics-markets-and-the-global-economy",
+                              "entrepreneurship": "/find-a-speaker/entrepreneurship-investment-and-business-growth",
+                              "masculinity": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "female-keynote-speakers": "/find-a-speaker/inspirational-keynote-speakers",
+                              "futurists": "/find-a-speaker/futurists-trends-and-strategic-foresight",
+                              "sales": "/find-a-speaker/sales-negotiation-and-commercial-performance",
+                              "marketing": "/find-a-speaker/marketing-branding-and-customer-growth",
+                              "sustainability": "/find-a-speaker/sustainability-esg-health-and-human-performance",
+                              "education": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "citizenship": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "motivation": "/find-a-speaker/inspirational-keynote-speakers",
+                              "strategy-facilitators": "/find-a-speaker/boards-governance-and-boardroom-influence",
+                              "respectful-workplaces": "/find-a-speaker/leadership-strategy-and-executive-performance",
+                              "celebrity-speakers": "/find-a-speaker/celebrity-speakers-mcs-comedy-and-entertainment"
+                            };
+                            const routePath = slugMap[cat.id];
+                            return (
+                              <button
+                                key={cat.id}
+                                onClick={() => {
+                                  if (routePath) {
+                                    router.push(routePath);
+                                  } else {
+                                    window.dispatchEvent(new CustomEvent("tsf-select-category", { detail: cat.buttonLabel }));
+                                    router.push(`/?category=${encodeURIComponent(cat.buttonLabel)}`);
+                                  }
+                                  setIsMobileMenuOpen(false);
+                                }}
+                                className={cn(
+                                  "w-full text-left rounded-xl px-2 py-2 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                                  pathname === routePath 
+                                    ? "text-[#e30e04] bg-gray-50" 
+                                    : "text-[#686869] active:text-[#e30e04]"
+                                )}
+                              >
+                                {cat.buttonLabel}
+                              </button>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* About Us */}
+              <Link 
+                href="/about" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>About Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Executive Dialogues */}
+              <Link 
+                href="/executive-dialogues" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Executive Dialogues</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Upcoming Events */}
+              <Link 
+                href="/upcoming-events" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Upcoming Events</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Gallery */}
+              <Link 
+                href="/gallery" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Gallery</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Media */}
+              <Link 
+                href="/media" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Media</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Contact Us */}
+              <Link 
+                href="/contact" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Contact Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Join Us */}
+              <Link 
+                href="/join-the-speakers-firm" 
+                onClick={handleMobileMenuClose}
+                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
+                style={{ color: COLORS.black }}
+              >
+                <span>Join Us</span>
+                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+
+              {/* Action CTA Buttons */}
+              <div className="mt-4 flex flex-col gap-3 px-2 pt-2">
+                <Link 
+                  href="/brief-us" 
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#e30e04] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all active:scale-95 shadow-[0_8px_20px_rgba(227,14,4,0.2)]"
+                >
+                  <span>Brief Us Now</span>
+                </Link>
+                <Link 
+                  href="/book-a-speaker" 
+                  onClick={handleMobileMenuClose}
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#000000] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all active:scale-95 border border-white/10 hover:bg-[#1E1E1E]"
+                >
+                  <span>Book A Speaker</span>
+                </Link>
+              </div>
             </div>
             <form className="mt-4 border-t pt-5" role="search" onSubmit={event => event.preventDefault()} style={{
           borderColor: COLORS.borderGray
