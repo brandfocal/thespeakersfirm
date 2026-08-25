@@ -635,6 +635,62 @@ export function Header() {
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
             <div className="flex flex-col gap-1 max-h-[500px] overflow-y-auto pr-1">
+              {/* Mobile Search input at the top to prevent virtual keyboard overlaps */}
+              <div 
+                className="mb-4 border-b pb-5" 
+                style={{ borderColor: COLORS.borderGray }}
+              >
+                <label htmlFor="mobile-nav-faculty-search" className="sr-only">Search faculty</label>
+                <div 
+                  className="flex items-center gap-3 rounded-full border bg-white/60 px-4 py-3" 
+                  style={{ borderColor: COLORS.borderGray }}
+                >
+                  <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{ color: COLORS.red }} />
+                  <input 
+                    id="mobile-nav-faculty-search" 
+                    value={inputValue} 
+                    onChange={handleSearchChange} 
+                    onKeyDown={handleSearchKeyDown}
+                    type="search" 
+                    placeholder="Find a speaker" 
+                    className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" 
+                    style={{ color: COLORS.black }} 
+                  />
+                </div>
+
+                {/* Mobile Search Suggestions List */}
+                {inputValue.trim().length > 0 && (
+                  <div className="mt-3 max-h-[220px] overflow-y-auto divide-y divide-[#C7C7C8]/20 bg-white/70 rounded-2xl p-2 border border-[#C7C7C8]/20">
+                    {filteredFaculty.length > 0 ? (
+                      filteredFaculty.map((member) => (
+                        <Link
+                          key={`mobile-suggest-${member.id}`}
+                          href={`/tracks/${member.trackId}/${member.id}`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setInputValue("");
+                          }}
+                          className="flex items-center gap-3 py-2 px-1 hover:bg-gray-100 transition-colors text-left"
+                        >
+                          <img 
+                            src={member.image} 
+                            alt={member.name} 
+                            className="w-8 h-8 rounded-lg object-cover grayscale shrink-0" 
+                          />
+                          <div className="min-w-0 flex-1">
+                            <h4 className="text-xs font-bold text-[#212121] truncate">{member.name}</h4>
+                            <p className="text-[9px] text-[#686869] truncate">{member.designation}</p>
+                          </div>
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="text-xs text-[#686869] p-4 text-center">
+                        No matching speakers found
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
               {[
                 { label: "Find a Speaker", href: "/find-a-speaker" },
                 { label: "About Us", href: "/about" },
@@ -684,61 +740,7 @@ export function Header() {
             </div>
 
 
-            <div 
-              className="mt-4 border-t pt-5" 
-              style={{ borderColor: COLORS.borderGray }}
-            >
-              <label htmlFor="mobile-nav-faculty-search" className="sr-only">Search faculty</label>
-              <div 
-                className="flex items-center gap-3 rounded-full border bg-white/60 px-4 py-3" 
-                style={{ borderColor: COLORS.borderGray }}
-              >
-                <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{ color: COLORS.red }} />
-                <input 
-                  id="mobile-nav-faculty-search" 
-                  value={inputValue} 
-                  onChange={handleSearchChange} 
-                  onKeyDown={handleSearchKeyDown}
-                  type="search" 
-                  placeholder="Find a speaker" 
-                  className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" 
-                  style={{ color: COLORS.black }} 
-                />
-              </div>
 
-              {/* Mobile Search Suggestions List */}
-              {inputValue.trim().length > 0 && (
-                <div className="mt-3 max-h-[220px] overflow-y-auto divide-y divide-[#C7C7C8]/20 bg-white/70 rounded-2xl p-2 border border-[#C7C7C8]/20">
-                  {filteredFaculty.length > 0 ? (
-                    filteredFaculty.map((member) => (
-                      <Link
-                        key={`mobile-suggest-${member.id}`}
-                        href={`/tracks/${member.trackId}/${member.id}`}
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setInputValue("");
-                        }}
-                        className="flex items-center gap-3 py-2 px-1 hover:bg-gray-100 transition-colors text-left"
-                      >
-                        <img 
-                          src={member.image} 
-                          alt={member.name} 
-                          className="w-8 h-8 rounded-lg object-cover grayscale shrink-0" 
-                        />
-                        <div className="min-w-0 flex-1">
-                          <h4 className="text-xs font-bold text-[#212121] truncate">{member.name}</h4>
-                          <p className="text-[9px] text-[#686869] truncate">{member.designation}</p>
-                        </div>
-                      </Link>
-                    ))
-                  ) : (
-                    <div className="text-xs text-[#686869] p-4 text-center">
-                    No matching speakers found
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
         </motion.div>
       )}
     </AnimatePresence>

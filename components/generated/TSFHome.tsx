@@ -3367,6 +3367,23 @@ const FloatingNav = ({
         borderColor: 'rgba(199, 199, 200, 0.72)'
       }}>
             <div className="flex flex-col gap-1 max-h-[500px] overflow-y-auto pr-1">
+              {/* Mobile Search input at the top to prevent virtual keyboard overlaps */}
+              <form className="mb-4 border-b pb-5" role="search" onSubmit={event => event.preventDefault()} style={{
+                borderColor: COLORS.borderGray
+              }}>
+                <label htmlFor="mobile-nav-faculty-search" className="sr-only">Search faculty</label>
+                <div className="flex items-center gap-3 rounded-full border bg-white/60 px-4 py-3" style={{
+                  borderColor: COLORS.borderGray
+                }}>
+                  <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{
+                    color: COLORS.red
+                  }} />
+                  <input id="mobile-nav-faculty-search" value={searchQuery} onChange={handleMobileSearchChange} type="search" placeholder="Find a speaker" className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" style={{
+                    color: COLORS.black
+                  }} />
+                </div>
+              </form>
+
               {[
                 { label: "Find a Speaker", href: "/find-a-speaker" },
                 { label: "About Us", href: "/about" },
@@ -3415,21 +3432,6 @@ const FloatingNav = ({
                 </Link>
               </div>
             </div>
-            <form className="mt-4 border-t pt-5" role="search" onSubmit={event => event.preventDefault()} style={{
-          borderColor: COLORS.borderGray
-        }}>
-              <label htmlFor="mobile-nav-faculty-search" className="sr-only">Search faculty</label>
-              <div className="flex items-center gap-3 rounded-full border bg-white/60 px-4 py-3" style={{
-            borderColor: COLORS.borderGray
-          }}>
-                <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{
-              color: COLORS.red
-            }} />
-                <input id="mobile-nav-faculty-search" value={searchQuery} onChange={handleMobileSearchChange} type="search" placeholder="Find a speaker" className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" style={{
-              color: COLORS.black
-            }} />
-              </div>
-            </form>
           </motion.div>}
       </AnimatePresence>
     </motion.nav>;
