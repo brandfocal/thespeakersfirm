@@ -156,8 +156,8 @@ export const SpeakerProfileTemplate = ({
         {/* Spacer for the site's main floating header */}
         <div className="pt-24 sm:pt-28" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1312px]">
-          <div className="grid items-center gap-8 py-4 md:py-6 lg:h-[calc(100vh-140px)] lg:min-h-[550px] lg:max-h-[660px] lg:grid-cols-12 lg:gap-10">
+        <div className="relative z-10 mx-auto w-full max-w-[1312px] flex-grow flex flex-col justify-end pb-12 lg:pb-0 lg:justify-center">
+          <div className="grid items-end lg:items-center gap-8 py-4 md:py-6 lg:h-[calc(100vh-140px)] lg:min-h-[550px] lg:max-h-[660px] lg:grid-cols-12 lg:gap-10 w-full">
             <motion.div 
               initial={{ opacity: 0, y: 20 }} 
               whileInView={{ opacity: 1, y: 0 }} 
@@ -166,7 +166,7 @@ export const SpeakerProfileTemplate = ({
                 duration: 0.6,
                 ease: [0.22, 1, 0.36, 1]
               }} 
-              className="flex flex-col justify-center space-y-4 pt-0 lg:col-span-12 lg:h-full"
+              className="flex flex-col justify-end lg:justify-center space-y-4 pt-0 lg:col-span-12 lg:h-full"
             >
               <div className="space-y-4">
                 <h1 id="speaker-profile-heading" className="max-w-4xl text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em]" style={{
