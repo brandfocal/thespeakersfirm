@@ -213,7 +213,7 @@ export function TSFArtificialIntelligenceAndIntelligentEnterpriseCategory() {
 
   return (
     <main id="top" className="min-h-screen overflow-hidden bg-[#212121] text-[#f8f7f5] font-[Kontora,sans-serif] selection:bg-[#e30e04] selection:text-white">
-      <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
+      <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-0 md:pb-28 md:pt-24 lg:pb-44 bg-[#000000]">
         <div className="absolute inset-0 z-0 bg-[#000000]" aria-hidden="true">
                     <picture className="absolute inset-0 h-full w-full">
             <source media="(max-width: 767px)" srcSet="/hero_backgrounds/AI-mobile.jpg" />
