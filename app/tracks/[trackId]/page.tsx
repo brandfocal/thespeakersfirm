@@ -2,8 +2,26 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, User } from "lucide-react";
 
+import type { Metadata } from "next";
+
 interface PageProps {
   params: Promise<{ trackId: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { trackId } = await params;
+  const trackName = trackId
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  return {
+    title: `${trackName} Keynote Speakers | The Speakers Firm`,
+    description: `Browse world-class keynote speakers, executive performance trainers, and governance authorities specializing in ${trackName}.`,
+    alternates: {
+      canonical: `https://thespeakersfirm.co.za/tracks/${trackId}`,
+    }
+  };
 }
 
 export default async function TrackPage({ params }: PageProps) {

@@ -272,8 +272,31 @@ async function getWordPressSpeaker(slug: string) {
   return await fetchAPI(query, { id: slug });
 }
 
+import { Metadata } from "next";
+
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { trackId, speakerId } = await params;
+  const name = speakerId
+    .split("-")
+    .map((word) => {
+      if (word === "dr" || word === "prof") {
+        return word.charAt(0).toUpperCase() + word.slice(1) + ".";
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+
+  return {
+    title: `${name} | The Speakers Firm Faculty Profile`,
+    description: `Read the profile, biography, keynote performance themes, and booking details of ${name}, a strategic voice and boardroom authority represented by The Speakers Firm.`,
+    alternates: {
+      canonical: `https://thespeakersfirm.co.za/tracks/${trackId}/${speakerId}`,
+    }
+  };
 }
 
 export default async function SpeakerPage({ params }: PageProps) {

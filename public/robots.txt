@@ -1,0 +1,31 @@
+# Googlebot
+User-agent: Googlebot
+Disallow: /api/
+Allow: /
+
+# GPTBot (ChatGPT crawler)
+User-agent: GPTBot
+Disallow: /api/
+Allow: /
+
+# ClaudeBot (Anthropic crawler)
+User-agent: ClaudeBot
+Disallow: /api/
+Allow: /
+
+# Google-Extended (Gemini API training data scraper)
+User-agent: Google-Extended
+Disallow: /api/
+Allow: /
+
+# PerplexityBot (Perplexity Search crawler)
+User-agent: PerplexityBot
+Disallow: /api/
+Allow: /
+
+# All other user agents
+User-agent: *
+Disallow: /api/
+Allow: /
+
+Sitemap: https://thespeakersfirm.co.za/sitemap.xml
