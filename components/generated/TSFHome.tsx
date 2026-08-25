@@ -3332,7 +3332,7 @@ const FloatingNav = ({
           ease: 'easeOut'
         }} className="overflow-hidden">
             <label htmlFor="nav-faculty-search" className="sr-only">Search faculty</label>
-            <input ref={searchInputRef} id="nav-faculty-search" value={searchQuery} onChange={handleSearchChange} onKeyDown={handleSearchKeyDown} type="search" placeholder="Search faculty..." className="w-[240px] border-b bg-transparent pb-1 text-[14px] font-normal outline-none placeholder:text-[#686869]" style={{
+            <input ref={searchInputRef} id="nav-faculty-search" value={searchQuery} onChange={handleSearchChange} onKeyDown={handleSearchKeyDown} type="search" placeholder="Find a speaker" className="w-[240px] border-b bg-transparent pb-1 text-[14px] font-normal outline-none placeholder:text-[#686869]" style={{
             borderColor: COLORS.borderGray,
             color: COLORS.black
           }} />
@@ -3640,7 +3640,7 @@ const FloatingNav = ({
                 <Search aria-hidden="true" className="h-4 w-4 shrink-0" style={{
               color: COLORS.red
             }} />
-                <input id="mobile-nav-faculty-search" value={searchQuery} onChange={handleMobileSearchChange} type="search" placeholder="Search faculty..." className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" style={{
+                <input id="mobile-nav-faculty-search" value={searchQuery} onChange={handleMobileSearchChange} type="search" placeholder="Find a speaker" className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" style={{
               color: COLORS.black
             }} />
               </div>

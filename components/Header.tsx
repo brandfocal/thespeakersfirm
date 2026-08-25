@@ -525,7 +525,7 @@ export function Header() {
                 onChange={handleSearchChange} 
                 onKeyDown={handleSearchKeyDown} 
                 type="search" 
-                placeholder="Search faculty..." 
+                placeholder="Find a speaker" 
                 className="w-[240px] border-b bg-transparent pb-1 text-[14px] font-normal outline-none placeholder:text-[#686869]" 
                 style={{ borderColor: COLORS.borderGray, color: COLORS.black }} 
               />
@@ -910,7 +910,7 @@ export function Header() {
                   onChange={handleSearchChange} 
                   onKeyDown={handleSearchKeyDown}
                   type="search" 
-                  placeholder="Search faculty..." 
+                  placeholder="Find a speaker" 
                   className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#686869]" 
                   style={{ color: COLORS.black }} 
                 />
