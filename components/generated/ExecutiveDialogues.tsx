@@ -275,7 +275,7 @@ export function ExecutiveDialogues() {
       <img src="/hero_backgrounds/executive-dialogues.jpg" alt="Roundtable discussion banner" className="absolute inset-0 h-full w-full object-cover object-top opacity-65" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
       <VerticalBorderLines isDark={true} />
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-20 px-6 pt-20 sm:pt-24 md:px-16 md:pt-28 lg:pt-24">
         <Reveal><SectionTag>DIALOGUES &amp; ROUNDTABLES</SectionTag></Reveal>
         <Reveal delay={0.1}><h1 className="font-bold uppercase max-w-full drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] text-[#ffffff] text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.95] tracking-[-0.055em]">ECOSYSTEMS OF<br /><em className="text-[#e30e04] not-italic">THOUGHT LEADERSHIP.</em></h1></Reveal>
         <Reveal delay={0.2}><p className="mt-6 text-[15px] font-normal leading-[1.6] md:text-[20px] md:leading-[1.65] drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] text-[#ffffff]/90 max-w-[620px]">Convening the right minds, behind closed doors, to decode the future.</p></Reveal>

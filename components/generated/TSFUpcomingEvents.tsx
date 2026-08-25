@@ -240,7 +240,7 @@ export const TSFUpcomingEvents = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
       <VerticalBorderLines isDark={true} />
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-20 px-6 pt-20 sm:pt-24 md:px-16 md:pt-28 lg:pt-24">
         <motion.div initial="hidden" animate="visible" variants={reveal} className="mb-2">
           <SectionTag>Upcoming Events</SectionTag>
         </motion.div>

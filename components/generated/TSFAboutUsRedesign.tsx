@@ -450,7 +450,7 @@ export const TSFAboutUsRedesign = () => {
         backgroundImage: NOISE_TEXTURE
       }} aria-hidden="true" />
     <VerticalBorderLines isDark />
-    <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-center px-6 pb-20 pt-20 sm:pb-24 sm:pt-24 md:px-16 md:pb-20 md:pt-28 lg:pb-16 lg:pt-24">
+    <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-20 px-6 pt-20 sm:pt-24 md:px-16 md:pt-28 lg:pt-24">
       <div className="w-full">
         <SectionTag className="mb-6 sm:mb-8">About The Speakers Firm</SectionTag>
         <AnimatedHeading lines={HERO_LINES} as="h1" className="max-w-[1060px] text-[clamp(3rem,13vw,6.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#F5F5F5] sm:text-[clamp(3.75rem,10vw,6.5rem)]" />

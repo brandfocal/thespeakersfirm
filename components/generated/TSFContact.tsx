@@ -508,7 +508,7 @@ export const TSFContact = () => {
           <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.3)_100%)]" />
         </div>
         <VerticalBorderLines isDark={true} />
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 md:px-16">
           <motion.div initial="hidden" animate="visible" variants={reveal}>
             <SectionTag>CONTACT US</SectionTag>
           </motion.div>
