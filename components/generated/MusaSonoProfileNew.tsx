@@ -6,9 +6,9 @@ import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./Pro
 
 const CREDENTIAL_BADGES = [
   {
-    id: "musa-sports",
-    label: "Paralympic Sports Icon",
-    subtitle: "Highly decorated athlete and sports strategist representing South Africa on major global athletic stages."
+    id: "musa-farmer",
+    label: "Farmer & Entrepreneur",
+    subtitle: "Successful commercial farmer and entrepreneur establishing agricultural ventures and driving social enterprises."
   },
   {
     id: "musa-coaching",
@@ -17,8 +17,8 @@ const CREDENTIAL_BADGES = [
   },
   {
     id: "musa-entrepreneur",
-    label: "Social Entrepreneur",
-    subtitle: "Founder of ventures focused on human capital optimization, disability inclusion, and sports development."
+    label: "Social Innovator",
+    subtitle: "Founder of ventures focused on human capital optimization, disability inclusion, and agricultural growth."
   }
 ];
 
@@ -27,7 +27,7 @@ const STRATEGIC_THEMES = [
     id: "winning-mindset",
     number: "Theme 01",
     title: "The Winning Mindset & Performance.",
-    copy: "Translating athletic high-performance frameworks into actionable corporate strategies to build resilient, unified teams."
+    copy: "Translating agricultural development, entrepreneurial ventures and high-performance business frameworks into actionable strategies to build resilient, unified teams."
   },
   {
     id: "disability-inclusion",
@@ -38,14 +38,14 @@ const STRATEGIC_THEMES = [
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Musa Sono is a celebrated South African Paralympic athlete, sports administrator, social entrepreneur, and high-performance coach. Renowned for his extraordinary physical and mental resilience, Musa has translated his experiences on elite global athletic stages into transformative frameworks for corporate performance.",
-  "Musa specializes in executive coaching and team-building interventions. He leverages sports psychology to help corporate teams build a shared vision, improve communication under pressure, and establish winning behaviors.",
+  "Musa Sono is a celebrated South African farmer, entrepreneur, social innovator, and high-performance business coach. Renowned for his extraordinary operational and mental resilience, Musa has translated his experiences in agricultural commerce and business ventures into transformative frameworks for corporate performance.",
+  "Musa specializes in executive coaching, enterprise mentoring, and team-building interventions. He leverages organizational psychology to help corporate teams build a shared vision, improve communication under pressure, and establish sustainable business behaviors.",
   "As an advocate for accessibility and inclusion, Musa counsels organizations on disability integration, inclusive HR policies, and creating supportive workspace cultures that celebrate diverse talent.",
   "Book Musa Sono through The Speakers Firm, A Leading African Speakers Bureau, to deliver powerful keynote addresses on team synergy, the winning mindset, and disability inclusion."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
-  { id: "paralympic", name: "Paralympics SA" },
+  { id: "agri-sa", name: "Agri SA Network" },
   { id: "sports-dept", name: "SA Sports Dept" }
 ];
 
@@ -64,8 +64,8 @@ export const AboutTeamSection = () => {
     <SpeakerProfileTemplate
       speakerName="Musa Sono"
       speakerTitle=""
-      speakerDesignation="Paralympic Icon, High-Performance Coach & Accessibility Advocate"
-      speakerRole="Sports Strategist & High-Performance Team Builder"
+      speakerDesignation="Farmer, High-Performance Entrepreneur & Social Innovator"
+      speakerRole="Agricultural Entrepreneur & High-Performance Team Builder"
       speakerRef="TSF-MS-32"
       heroBackgroundImage="/speakers/Musa Sono/Musa-Sono-The-Speakers-Firm4.jpg"
       biographyImage="/speakers/Musa Sono/Musa-Sono-The-Speakers-Firm3.jpg"

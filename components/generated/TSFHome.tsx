@@ -2343,8 +2343,8 @@ const FACULTY = [{
 }, {
   id: 'musa-sono',
   name: 'Musa Sono',
-  designation: 'High Performance Coach & Paralympic Icon',
-  role: 'Paralympic Icon, High-Performance Coach & Accessibility Advocate',
+  designation: 'Farmer, High-Performance Entrepreneur & Social Innovator',
+  role: 'Farmer, High-Performance Entrepreneur & Accessibility Advocate',
   image: '/speaker_thumbnails/Musa-Sono-The-Speakers-Firm.jpg',
   trackId: 'entrepreneurship',
   tags: [{
@@ -2354,7 +2354,7 @@ const FACULTY = [{
     id: 'disability-inclusion',
     label: 'Disability Inclusion'
   }],
-  snippet: 'Paralympic sports icon and high-performance coach translating athletic mindset frameworks into corporate team cohesion.',
+  snippet: 'Celebrated agricultural entrepreneur and business coach translating enterprise growth and high-performance frameworks into corporate team cohesion.',
   spanClassName: 'col-span-12 md:col-span-5',
   wipeDelay: 0.3,
   entryDelay: 0.4
