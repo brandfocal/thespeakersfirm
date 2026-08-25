@@ -219,7 +219,7 @@ export function SpeakerCategoriesPage() {
           <motion.div initial="hidden" animate="visible" variants={reveal}>
             <SectionTag>THE GLOBAL PORTFOLIO</SectionTag>
           </motion.div>
-          <motion.h1 initial="hidden" animate="visible" transition={{ delay: 0.12 }} variants={reveal} className="text-[clamp(3.5rem,11vw,6.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
+          <motion.h1 initial="hidden" animate="visible" transition={{ delay: 0.12 }} variants={reveal} className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
             <span>The Global</span><br />
             <span className="text-[#e30e04]">Portfolio</span>
           </motion.h1>

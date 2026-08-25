@@ -227,7 +227,7 @@ export function TSFArtificialIntelligenceAndIntelligentEnterpriseCategory() {
             <SectionTag>ARTIFICIAL INTELLIGENCE</SectionTag>
           </motion.div>
           
-          <h1 className="text-[clamp(3.5rem,11vw,6.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
+          <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
             <span>ARTIFICIAL</span><br />
             <span className="text-[#e30e04]">INTELLIGENCE.</span>
           </h1>

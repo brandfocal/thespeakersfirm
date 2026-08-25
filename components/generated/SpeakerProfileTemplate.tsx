@@ -169,7 +169,7 @@ export const SpeakerProfileTemplate = ({
               className="flex flex-col justify-center space-y-4 pt-0 lg:col-span-12 lg:h-full"
             >
               <div className="space-y-4">
-                <h1 id="speaker-profile-heading" className="max-w-4xl text-[clamp(2.45rem,15vw,4.5rem)] font-bold uppercase leading-[0.84] tracking-[-0.065em]" style={{
+                <h1 id="speaker-profile-heading" className="max-w-4xl text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em]" style={{
                   color: "#F8F7F5"
                 }}>
                   <span>{speakerTitle} {speakerName.split(" ")[0]}</span>
