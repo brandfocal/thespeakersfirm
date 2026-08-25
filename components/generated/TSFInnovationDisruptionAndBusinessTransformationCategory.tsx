@@ -218,7 +218,7 @@ export function TSFInnovationDisruptionAndBusinessTransformationCategory() {
                       <img src={speaker.image} alt={speaker.name} className="h-full w-full object-cover grayscale contrast-[1.06] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" />
                     </div>
                     <div className="border-t border-white/[0.08] p-4 bg-[#1e1e1e]">
-                      <h3 className="text-sm font-bold text-white">{speaker.name}</h3>
+                      <h3 className="text-sm font-bold text-white normal-case">{speaker.name}</h3>
                       <p className="mt-1 text-[10px] uppercase text-white/50">{speaker.role}</p>
                       <a href={speaker.path} className="mt-3 flex min-h-[36px] items-center gap-2 text-[10px] font-bold uppercase tracking-[0.08em] text-[#e30e04]">
                         <span>BOOK THE SPEAKER</span>

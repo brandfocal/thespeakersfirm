@@ -320,7 +320,7 @@ export function SpeakerCategoriesPage() {
                       <p className="mb-2 text-[clamp(2rem,10vw,2.25rem)] font-black tracking-[-0.08em] text-[#e30e04]">{category.number}</p>
                       <h3 className="max-w-[260px] text-[clamp(1.05rem,5vw,1.125rem)] font-black uppercase leading-[0.94] tracking-[-0.045em]">{category.name}</h3>
                     </div>
-                     <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
+                     <div className="absolute inset-0 z-20 hidden md:flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
                       <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
                       <Link href={category.path || "/contact"} className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
                         Explore Speakers <ArrowUpRight size={15} />
