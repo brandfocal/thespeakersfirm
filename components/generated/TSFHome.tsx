@@ -3367,93 +3367,35 @@ const FloatingNav = ({
         borderColor: 'rgba(199, 199, 200, 0.72)'
       }}>
             <div className="flex flex-col gap-1 max-h-[500px] overflow-y-auto pr-1">
-              {/* Find a Speaker */}
-              <Link 
-                href="/find-a-speaker"
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Find a Speaker</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* About Us */}
-              <Link 
-                href="/about" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>About Us</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Executive Dialogues */}
-              <Link 
-                href="/executive-dialogues" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Executive Dialogues</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Upcoming Events */}
-              <Link 
-                href="/upcoming-events" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Upcoming Events</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Gallery */}
-              <Link 
-                href="/gallery" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Gallery</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Media */}
-              <Link 
-                href="/media" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Media</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Contact Us */}
-              <Link 
-                href="/contact" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Contact Us</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
-
-              {/* Join Us */}
-              <Link 
-                href="/join-the-speakers-firm" 
-                onClick={handleMobileMenuClose}
-                className="flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[#212121] transition-colors active:text-[#e30e04]"
-                style={{ color: COLORS.black }}
-              >
-                <span>Join Us</span>
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Link>
+              {[
+                { label: "Find a Speaker", href: "/find-a-speaker" },
+                { label: "About Us", href: "/about" },
+                { label: "Executive Dialogues", href: "/executive-dialogues" },
+                { label: "Upcoming Events", href: "/upcoming-events" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Media", href: "/media" },
+                { label: "Contact Us", href: "/contact" },
+                { label: "Join Us", href: "/join-the-speakers-firm" }
+              ].map((link) => {
+                const isActive = pathname.startsWith(link.href);
+                return (
+                  <Link 
+                    key={link.href}
+                    href={link.href}
+                    onClick={handleMobileMenuClose}
+                    className={cn(
+                      "flex items-center justify-between rounded-2xl px-3 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-all duration-200 active:text-[#e30e04]",
+                      isActive 
+                        ? "text-[#e30e04] bg-gray-50/60 font-extrabold" 
+                        : "text-[#212121] hover:text-[#e30e04]"
+                    )}
+                    style={{ color: isActive ? COLORS.red : COLORS.black }}
+                  >
+                    <span>{link.label}</span>
+                    <ArrowUpRight aria-hidden="true" className={cn("h-4 w-4 transition-transform", isActive ? "text-[#e30e04] translate-x-0.5 -translate-y-0.5" : "text-[#212121]/45")} style={{ color: isActive ? COLORS.red : undefined }} />
+                  </Link>
+                );
+              })}
 
               {/* Action CTA Buttons */}
               <div className="mt-4 flex flex-col gap-3 px-2 pt-2">
