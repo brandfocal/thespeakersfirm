@@ -635,18 +635,28 @@ export function Header() {
             style={{ borderColor: 'rgba(199, 199, 200, 0.72)' }}
           >
             <div className="flex flex-col gap-1 max-h-[300px] overflow-y-auto pr-1">
-              <button 
-                onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
-                className={cn(
-                  "flex items-center justify-between rounded-2xl px-2 py-3 text-[13px] font-bold uppercase tracking-[0.12em] transition-colors",
-                  pathname.startsWith("/find-a-speaker") 
-                    ? "text-[#e30e04]" 
-                    : "text-[#212121] active:text-[#e30e04]"
-                )}
-              >
-                <span>Find a Speaker</span>
-                <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isMobileCategoriesOpen && "rotate-180")} />
-              </button>
+              <div className="flex items-center justify-between rounded-2xl px-2 py-1">
+                <Link 
+                  href="/find-a-speaker"
+                  onClick={handleMobileMenuClose}
+                  className={cn(
+                    "text-[13px] font-bold uppercase tracking-[0.12em] transition-colors flex-grow text-left py-2",
+                    pathname.startsWith("/find-a-speaker") 
+                      ? "text-[#e30e04]" 
+                      : "text-[#212121] active:text-[#e30e04]"
+                  )}
+                >
+                  Find a Speaker
+                </Link>
+                <button 
+                  type="button"
+                  aria-label="Toggle categories list"
+                  onClick={() => setIsMobileCategoriesOpen(!isMobileCategoriesOpen)}
+                  className="p-2 text-[#212121] active:text-[#e30e04] transition-colors"
+                >
+                  <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isMobileCategoriesOpen && "rotate-180")} />
+                </button>
+              </div>
 
               <AnimatePresence>
                 {isMobileCategoriesOpen && (
