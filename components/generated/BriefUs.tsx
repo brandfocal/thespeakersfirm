@@ -263,12 +263,12 @@ export function BriefUs() {
             backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
           }} aria-hidden="true" />
           <VerticalBorderLines isDark={true} />
-          <div className="relative z-10 mx-auto flex min-h-[40vh] max-w-[1440px] flex-col justify-center px-6 md:px-16">
+          <div className="relative z-10 mx-auto flex min-h-[40vh] max-w-[1440px] flex-col justify-end pb-8 md:justify-center md:pb-0 px-6 md:px-16">
             <Reveal>
               <SectionTag>Brief Us Now (The Curation Route)</SectionTag>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="text-[clamp(3rem,12vw,7rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
+              <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
                 <span>Brief The</span><br />
                 <span>Bureau.</span>
               </h1>

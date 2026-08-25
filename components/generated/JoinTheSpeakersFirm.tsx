@@ -135,7 +135,7 @@ export function JoinTheSpeakersFirm() {
               <SectionTag>JOIN THE SPEAKERS FIRM™</SectionTag>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold uppercase leading-[0.95] tracking-[-0.05em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
+              <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
                 READY TO SPEAK WITH POWER? START HERE.
               </h1>
               <p className="text-[#e30e04] text-xs md:text-sm font-bold uppercase tracking-[0.2em] mt-3">

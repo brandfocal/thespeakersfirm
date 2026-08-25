@@ -163,12 +163,12 @@ export function BookASpeaker() {
           }} aria-hidden="true" />
           <VerticalBorderLines isDark={true} />
           
-          <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-center px-6 md:px-16">
+          <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 md:px-16">
             <Reveal>
               <SectionTag>BOOK A SPEAKER</SectionTag>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold uppercase leading-[0.95] tracking-[-0.050em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
+              <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
                 BOOK THE VOICE THAT COMMANDS THE ROOM, SHAPES DECISIONS AND MOVES YOUR INSTITUTION FORWARD.
               </h1>
             </Reveal>
