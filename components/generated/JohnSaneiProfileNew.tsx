@@ -93,6 +93,7 @@ export const AboutTeamSection = () => {
       speakerRole="The Futurist of Possibility."
       speakerRef="TSF-JS-19"
       heroBackgroundImage="/speakers/John%20Sanei/John-Sanei-The-Speakers-Firm-2.jpg"
+      heroMobileBackgroundImage="/speakers/John%20Sanei/john-sanei-mobile.jpg"
       biographyImage="/speakers/John%20Sanei/John-Sanei-The-Speakers-Firm.jpg"
       bioHook="“Transforming the way we think about the future and building the courage to lean into uncertainty.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

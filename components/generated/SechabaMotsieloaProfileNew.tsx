@@ -91,6 +91,7 @@ export const AboutTeamSection = () => {
       speakerRole="Executive Advisor, Communications Specialist & Purpose Advocate."
       speakerRef="TSF-SM-38"
       heroBackgroundImage="/speakers/Sechaba%20Motsieloa/Sechaba-Motsieloa-The-Speakers-Firm.jpg"
+      heroMobileBackgroundImage="/speakers/Sechaba%20Motsieloa/sechana-motsieloa-mobile.jpg"
       biographyImage="/speakers/Sechaba%20Motsieloa/Sechaba%20Motsielaoa.jpg"
       bioHook="“Authentic corporate reputation is not created in public relations campaigns—it is built in every operational decision.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

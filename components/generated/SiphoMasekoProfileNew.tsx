@@ -96,6 +96,7 @@ export const AboutTeamSection = () => {
       speakerRole="The Corporate Turnaround General."
       speakerRef="TSF-SM-18"
       heroBackgroundImage="/speakers/Sipho%20Maseko/final/sipho-maseko-the-speakers-firm-fourth.jpg"
+      heroMobileBackgroundImage="/speakers/Sipho%20Maseko/sipho-maseko-mobile.jpg"
       biographyImage="/speakers/Sipho%20Maseko/final/sipho-maseko-the-speakers-firm.jpg"
       bioHook="“Resilient leadership modernises legacy institutions and transforms industries.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

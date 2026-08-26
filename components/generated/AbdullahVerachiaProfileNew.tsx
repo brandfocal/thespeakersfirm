@@ -116,6 +116,7 @@ export const AboutTeamSection = () => {
       speakerRole="Global Strategist & Future-Fit Leader"
       speakerRef="TSF-AV-32"
       heroBackgroundImage="/speakers/Abdullah%20Verachia/Abdullah-Verachia-The-Speakers-Firm-9.jpg"
+      heroMobileBackgroundImage="/speakers/Abdullah%20Verachia/abdullah-verachia-mobile.jpg"
       biographyImage="/speakers/Abdullah%20Verachia/Abdullah-Verachia-The-Speakers-Firm-3.jpg"
       bioHook="“Navigating complexity, disruption, and change requires crafting competitive future-ready strategies built on digital agility and robust leadership.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

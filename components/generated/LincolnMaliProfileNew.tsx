@@ -128,6 +128,7 @@ export const AboutTeamSection = () => {
       speakerRole="Experienced banking executive, CEO, and writer on values-driven leadership."
       speakerRef="TSF-LM-10"
       heroBackgroundImage="/speakers/Lincoln Mali/Lincoln-Mali-The-Speakers-Firm9.jpg"
+      heroMobileBackgroundImage="/speakers/Lincoln%20Mali/lincoln-mali-mobile.jpg"
       biographyImage="/speakers/Lincoln Mali/Lincoln-Mali-The-Speakers-Firm.jpg"
       bioHook="“Leadership is not a title; it is a commitment to lead with values, courage, and accountability.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

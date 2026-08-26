@@ -110,6 +110,7 @@ export const AboutTeamSection = () => {
       speakerRole="Respected Broadcast Host & Policy Moderator"
       speakerRef="TSF-CM-28"
       heroBackgroundImage="/speakers/Cathy%20Mohlahlana/Cathy-Mohlahlana-The-Speakers-Firm-2.jpg"
+      heroMobileBackgroundImage="/speakers/Cathy%20Mohlahlana/cathy-mohlahlana-mobile.jpg"
       biographyImage="/speakers/Cathy%20Mohlahlana/Cathy-Mohlahlana-The-Speakers-Firm-5.jpg"
       bioHook="“Informed dialogue coupled with concrete opportunity holds the transformational power to change lives and build legacy.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

@@ -114,6 +114,7 @@ export const AboutTeamSection = () => {
       speakerRole="Executive Coach & Leadership Development Pioneer"
       speakerRef="TSF-QR-50"
       heroBackgroundImage="/speakers/Queen%20Ramotsehoa/Queen-Ramotsehoa-The-Speakers-Firm-8.jpg"
+      heroMobileBackgroundImage="/speakers/Queen%20Ramotsehoa/queen-ramotsehoa-mobile.jpg"
       biographyImage="/speakers/Queen%20Ramotsehoa/Queen-Ramotsehoa-The-Speakers-Firm-7.jpg"
       bioHook="“Leadership anchored in consciousness is a big deal. High performance lies in coaching the client's relationship to issues.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

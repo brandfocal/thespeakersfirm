@@ -97,6 +97,7 @@ export const AboutTeamSection = () => {
       speakerRole="IPM HR Practitioner of the Year Finalist."
       speakerRef="TSF-BD-25"
       heroBackgroundImage="/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm-three.jpg"
+      heroMobileBackgroundImage="/speakers/Boniwe%20Dunster/boniwe-dunster-mobile.jpg"
       biographyImage="/speakers/Boniwe%20Dunster/boniwe-dunster-the-speakers-firm-four.jpg"
       bioHook="“Simplifying HR concepts and educating the workforce to navigate everyday career dynamics.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

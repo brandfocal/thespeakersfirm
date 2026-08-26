@@ -118,6 +118,7 @@ export const AboutTeamSection = () => {
       speakerRole="Award-winning entrepreneur, business speaker and township developer."
       speakerRef="TSF-BB-34"
       heroBackgroundImage="/speakers/Bulelani%20Balabala/Bulelani-Balabala-The-Speakers-Firm-2.jpg"
+      heroMobileBackgroundImage="/speakers/Bulelani%20Balabala/bulelani-balabala-mobile.jpg"
       biographyImage="/speakers/Bulelani%20Balabala/Bulelani-Balabala-The-Speakers-Firm.jpg"
       bioHook="“Get things done! Empowering local township and rural businesses is the heartbeat of economic growth.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

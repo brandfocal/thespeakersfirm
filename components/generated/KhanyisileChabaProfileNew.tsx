@@ -104,6 +104,7 @@ export const AboutTeamSection = () => {
       speakerRole="ESG Leader & Sustainability Advocate"
       speakerRef="TSF-KC-33"
       heroBackgroundImage="/speakers/Khanyisile%20Chaba/Khanyi-Chaba-The-Speakers-Firm-4.jpg"
+      heroMobileBackgroundImage="/speakers/Khanyisile%20Chaba/khanyisile-chaba-mobile.jpg"
       biographyImage="/speakers/Khanyisile%20Chaba/Khanyi-Chaba-The-Speakers-Firm-7.jpg"
       bioHook="“Driving sustainability, ESG integration, and shared value strategies requires combining technical design with corporate citizenship leadership.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

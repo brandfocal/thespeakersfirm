@@ -119,6 +119,7 @@ export const AboutTeamSection = () => {
         speakerRole="Facilitating dialogue that transforms perspectives, scaling creative brands, and executing global advocacy."
         speakerRef="TSF-AM-01"
         heroBackgroundImage="/speakers/Azania Mosaka/Azania-Mosaka-The-Speakers-Firm-14.jpg"
+      heroMobileBackgroundImage="/speakers/Azania%20Mosaka/azania-mosaka-media.jpg"
         biographyImage="/speakers/Azania Mosaka/Azania-Mosaka-The-Speakers-Firm-16.jpg"
         bioHook="“Merge visibility with purpose, influence with integrity, and power with empathy.”"
         fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

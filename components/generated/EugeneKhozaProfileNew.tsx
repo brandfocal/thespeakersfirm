@@ -126,6 +126,7 @@ export const AboutTeamSection = () => {
       speakerRole="Highly sought-after multilingual stand-up comedian and television presenter."
       speakerRef="TSF-EK-28"
       heroBackgroundImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-2.jpg"
+      heroMobileBackgroundImage="/speakers/Eugene%20Khoza/eugene-khoza-mobile.jpg"
       biographyImage="/speakers/Eugene Khoza/Eugene-Khoza-The-Speakers-Firm-9.png"
       bioHook="“Understanding cultures and engaging them on a humorous level is the true art of connection.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

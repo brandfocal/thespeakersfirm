@@ -81,6 +81,7 @@ export const AboutTeamSection = () => {
       speakerRole="Chairperson of FCASA & Research Fellow at Al Sharq Forum."
       speakerRef="TSF-TF-26"
       heroBackgroundImage="/speakers/Thembisa%20Fakude/Thembisa-Fakude-The-Speakers-Firm-6.jpg"
+      heroMobileBackgroundImage="/speakers/Thembisa%20Fakude/thembisa-fakude-mobile.jpg"
       biographyImage="/speakers/Thembisa%20Fakude/Thembisa-Fakude-The-Speakers-Firm.jpg"
       bioHook="“Foreign policy must remain committed to the advancement of human rights and international solidarity.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

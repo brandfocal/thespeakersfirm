@@ -142,6 +142,7 @@ export const AboutTeamSection = () => {
       speakerRole="Award-winning entrepreneur, founder of DNA Brand Architects, and cultural trend strategist."
       speakerRef="TSF-SC-13"
       heroBackgroundImage="/speakers/Sylvester Chauke/sylvester-chauke-the-speakers-firm7.jpg"
+      heroMobileBackgroundImage="/speakers/Sylvester%20Chauke/sylvester-chauke-mobile.jpg"
       biographyImage="/speakers/Sylvester Chauke/Sylvester-Chauke-The-Speakers-Firm.jpg"
       bioHook="“Stand out or fade out. In a weaponized brand landscape, conformity is the ultimate commercial risk.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

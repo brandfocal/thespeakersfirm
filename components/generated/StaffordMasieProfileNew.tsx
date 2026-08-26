@@ -138,6 +138,7 @@ export const AboutTeamSection = () => {
       speakerRole="Global technology strategist, Google veteran, and payment systems pioneer."
       speakerRef="TSF-SM-11"
       heroBackgroundImage="/speakers/Stafford Masie/Stafford-Masie.jpg"
+      heroMobileBackgroundImage="/speakers/Stafford%20Masie/stafford-masie-mobile.jpg"
       biographyImage="/speakers/Stafford Masie/stafford-masie-the-speakers-firm.jpg"
       bioHook="“Technology is not about gadgets; it is about absolute human empowerment and decentralized freedom.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

@@ -104,6 +104,7 @@ export const AboutTeamSection = () => {
       speakerRole="CEO of Medipost Holdings & Healthcare Commentator"
       speakerRef="TSF-VR-15"
       heroBackgroundImage="/speakers/Victor%20Ramathesele/dr-victor-ramathesele-the-speakers-firm-11.jpg"
+      heroMobileBackgroundImage="/speakers/Victor%20Ramathesele/victor-ramathesele-media.jpg"
       biographyImage="/speakers/Victor%20Ramathesele/dr-victor-ramathesele-the-speakers-firm-3.jpg"
       bioHook="“Stewardship in healthcare is about ensuring market access and digital delivery while preserving human-centered medical care.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

@@ -137,6 +137,7 @@ export const AboutTeamSection = () => {
       speakerRole="Global Keynote Speaker & Brand Architect"
       speakerRef="TSF-TMW-14"
       heroBackgroundImage="/speakers/Timothy%20Maurice%20Webster/Timothy-Maurice-Webster-The-Speakers-Firm-8.jpg"
+      heroMobileBackgroundImage="/speakers/Timothy%20Maurice%20Webster/timothy-maurice-webster-mobile.jpg"
       biographyImage="/speakers/Timothy%20Maurice%20Webster/Timothy-Maurice-Webster-The-Speakers-Firm-3.jpg"
       bioHook="“Understanding the intersection of neuroscience and human behavior is the key to building brands that truly move people.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}

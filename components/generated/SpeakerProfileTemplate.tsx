@@ -66,6 +66,7 @@ export interface SpeakerProfileTemplateProps {
   speakerRole: string;
   speakerRef: string;
   heroBackgroundImage: string;
+  heroMobileBackgroundImage?: string;
   heroImagePosition?: string;
   biographyImage?: string;
   bioHook: string;
@@ -93,6 +94,7 @@ export const SpeakerProfileTemplate = ({
   speakerRole,
   speakerRef,
   heroBackgroundImage,
+  heroMobileBackgroundImage,
   heroImagePosition = "object-top",
   biographyImage,
   bioHook,
@@ -132,12 +134,17 @@ export const SpeakerProfileTemplate = ({
         
         {/* Hero Background Static Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroBackgroundImage}
-            alt=""
-            aria-hidden="true"
-            className={`absolute inset-0 h-full w-full object-cover ${heroImagePosition}`}
-          />
+          <picture className="absolute inset-0 h-full w-full">
+            {heroMobileBackgroundImage && (
+              <source media="(max-width: 767px)" srcSet={heroMobileBackgroundImage} />
+            )}
+            <img
+              src={heroBackgroundImage}
+              alt=""
+              aria-hidden="true"
+              className={`absolute inset-0 h-full w-full object-cover ${heroImagePosition}`}
+            />
+          </picture>
           <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.45)_46%,rgba(0,0,0,0.4)_100%)] z-[1]" />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_36%,rgba(0,0,0,0.08),transparent_34%),linear-gradient(90deg,rgba(0,0,0,0.52)_0%,rgba(0,0,0,0.2)_42%,rgba(0,0,0,0.6)_100%)] z-[1]" />
         </div>
