@@ -1917,7 +1917,7 @@ export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
   };
 });
 
-const WELCOME_SPEAKERS = [
+export const WELCOME_SPEAKERS = [
   {
     id: "clement-manyathela",
     name: "Clement Manyathela",
@@ -2055,7 +2055,7 @@ const ROUNDTABLE_INVITES = [
   { id: 'tinyiko', src: '/roundtable/tinyiko.jpg', alt: 'Tinyiko Roundtable Discussion' }
 ];
 
-const FACULTY = [{
+export const FACULTY = [{
   id: 'phumzile-mlambo-ngcuka',
   name: 'Dr. Phumzile Mlambo-Ngcuka',
   designation: 'Global Stateswoman',

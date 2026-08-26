@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, Search, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import { FEATURED_SPEAKERS } from "./generated/TSFHome";
+import { FEATURED_SPEAKERS, WELCOME_SPEAKERS, FACULTY } from "./generated/TSFHome";
 
 
 const COLORS = {
@@ -42,19 +42,85 @@ const getTrackIdForSpeaker = (speakerId: string): string => {
   return "leadership-governance-and-risk-intelligence";
 };
 
-const FACULTY_LIST = FEATURED_SPEAKERS.map(s => {
-  const bioText = getTextFromNode(s.bio);
-  const trackId = getTrackIdForSpeaker(s.id);
-  return {
-    id: s.id,
-    name: s.name,
-    designation: bioText,
-    image: s.image,
-    trackId: trackId,
-    category: s.category,
-    topics: s.topics
-  };
-});
+const getThumbnailForSpeaker = (speakerId: string, originalImage: string): string => {
+  if (originalImage.includes('/speaker_thumbnails/')) {
+    return originalImage;
+  }
+  
+  const filename = originalImage.split('/').pop() || "";
+  const nameWithoutExt = filename.replace(/\.[^/.]+$/, "");
+  const titleCased = nameWithoutExt
+    .split('-')
+    .map(word => {
+      if (word.toLowerCase() === 'ca(sa)') return 'CA(SA)';
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join('-');
+    
+  return `/speaker_thumbnails/${titleCased}-The-Speakers-Firm.jpg`;
+};
+
+const FACULTY_LIST = (() => {
+  const seen = new Set<string>();
+  const list: any[] = [];
+  
+  // 1. Process FEATURED_SPEAKERS
+  FEATURED_SPEAKERS.forEach(s => {
+    if (!seen.has(s.id)) {
+      seen.add(s.id);
+      const bioText = getTextFromNode(s.bio);
+      const trackId = s.trackId || getTrackIdForSpeaker(s.id);
+      list.push({
+        id: s.id,
+        name: s.name,
+        designation: bioText || s.quote || "",
+        image: getThumbnailForSpeaker(s.id, s.image),
+        trackId: trackId,
+        category: Array.isArray(s.category) ? s.category : (s.category ? [s.category] : []),
+        topics: s.topics || []
+      });
+    }
+  });
+
+  // 2. Process WELCOME_SPEAKERS
+  WELCOME_SPEAKERS.forEach(s => {
+    const urlParts = s.profileUrl ? s.profileUrl.split('/') : [];
+    const speakerId = urlParts.length > 0 ? urlParts[urlParts.length - 1] : s.id;
+    
+    if (!seen.has(speakerId)) {
+      seen.add(speakerId);
+      const trackId = urlParts.length > 2 ? urlParts[urlParts.length - 2] : getTrackIdForSpeaker(speakerId);
+      list.push({
+        id: speakerId,
+        name: s.name,
+        designation: s.role || "",
+        image: getThumbnailForSpeaker(speakerId, s.image),
+        trackId: trackId,
+        category: [],
+        topics: []
+      });
+    }
+  });
+
+  // 3. Process FACULTY
+  FACULTY.forEach(s => {
+    if (!seen.has(s.id)) {
+      seen.add(s.id);
+      const trackId = s.trackId || getTrackIdForSpeaker(s.id);
+      list.push({
+        id: s.id,
+        name: s.name,
+        designation: s.designation || s.role || "",
+        image: getThumbnailForSpeaker(s.id, s.image),
+        trackId: trackId,
+        category: s.tags ? s.tags.map((t: any) => t.label) : [],
+        topics: []
+      });
+    }
+  });
+
+  return list;
+})();
 
 
 // We split categories into 11 main ones and 7 submenu ones
@@ -199,11 +265,11 @@ export function Header() {
       const designationMatch = designation.includes(q);
       
       const categoryMatch = Array.isArray(member.category)
-        ? member.category.some(cat => cat.toLowerCase().includes(q))
+        ? member.category.some((cat: string) => cat.toLowerCase().includes(q))
         : member.category.toLowerCase().includes(q);
         
       const topicsMatch = Array.isArray(member.topics)
-        ? member.topics.some(topic => topic.toLowerCase().includes(q))
+        ? member.topics.some((topic: string) => topic.toLowerCase().includes(q))
         : false;
         
       if (!nameMatch && !designationMatch && !categoryMatch && !topicsMatch) {

@@ -96,7 +96,8 @@ export const AboutTeamSection = () => {
       speakerRole="Global Trade & Investment Authority"
       speakerRef="TSF-PS-77"
       heroBackgroundImage="/speakers/Dr Pumela Salela/Pamela-Salela-The-Speakers-Firm7.jpg"
-      biographyImage="/speakers/Dr Pumela Salela/Pamela-Salela-The-Speakers-Firm.jpg"
+      heroMobileBackgroundImage="/speakers/Dr Pumela Salela/pumela-salela-mobile.jpg"
+      biographyImage="/speakers/Dr Pumela Salela/Pumela-Salela-The-Speakers-Firm9.jpg"
       bioHook="“Economic diplomacy is not just about negotiating trade agreements; it is about building strategic partnerships that drive inclusive and sustainable development.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
