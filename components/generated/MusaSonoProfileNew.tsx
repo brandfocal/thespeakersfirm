@@ -56,7 +56,7 @@ export const AboutTeamSection = () => {
     {
       id: "musa-vid-1",
       label: "Musa Sono on Resilience and Performance",
-      youtubeId: "APMVUbEYulY"
+      youtubeId: "BW1M_Pa8DJo"
     }
   ];
 

@@ -96,7 +96,7 @@ export const AboutTeamSection = () => {
           {
             id: "pali-video-1",
             label: "Experience Reel",
-            youtubeId: "F77KhNFtTb0"
+            youtubeId: "-HcMmGoYGHc"
           }
         ]}
       />

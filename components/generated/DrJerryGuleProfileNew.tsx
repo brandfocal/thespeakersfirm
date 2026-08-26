@@ -85,7 +85,7 @@ export const AboutTeamSection = () => {
     {
       id: "gule-vid-1",
       label: "Dr Jerry Gule on Corporate Governance & Transformation",
-      youtubeId: "2yPhBAePjP0"
+      youtubeId: "gVh6u7s6yR4"
     }
   ];
 

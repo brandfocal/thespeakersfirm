@@ -84,7 +84,7 @@ export const AboutTeamSection = () => {
     {
       id: "noni-vid-1",
       label: "Noni Khumalo Hosting Reel",
-      youtubeId: "1Bn6-V5BX3E"
+      youtubeId: "gR9vlxv_y4o"
     }
   ];
 

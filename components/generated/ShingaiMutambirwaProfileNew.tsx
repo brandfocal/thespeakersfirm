@@ -122,7 +122,7 @@ export const AboutTeamSection = () => {
           {
             id: "shingai-video-1",
             label: "Dr. Shingai Mutambirwa Medical Reel",
-            youtubeId: "9QQ2w3y7jj8"
+            youtubeId: "QVZzW-RGj0g"
           }
         ]}
       />

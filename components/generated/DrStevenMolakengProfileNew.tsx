@@ -84,7 +84,7 @@ export const AboutTeamSection = () => {
     {
       id: "sm-vid-1",
       label: "Dr. Steven Molakeng: Kingdom Wellness & Spiritual Health",
-      youtubeId: "zlydsZaIOXc"
+      youtubeId: "34_15Ci9a9c"
     }
   ];
 
