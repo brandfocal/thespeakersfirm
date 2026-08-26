@@ -194,6 +194,26 @@ const videos = [
     id: 'VHrJM-9U_IM',
     title: 'Jessica Dube Profile',
     image: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
+  },
+  {
+    id: 'STtoaFX7A-I',
+    title: 'Dr. Pali Lehohla Profile',
+    image: 'https://img.youtube.com/vi/STtoaFX7A-I/hqdefault.jpg'
+  },
+  {
+    id: 'UOeqwEC-nxA',
+    title: 'Palesa Dooms Profile',
+    image: 'https://img.youtube.com/vi/UOeqwEC-nxA/hqdefault.jpg'
+  },
+  {
+    id: 'QVZzW-RGj0g',
+    title: 'Prof. Shingai Mutambirwa Profile',
+    image: 'https://img.youtube.com/vi/QVZzW-RGj0g/hqdefault.jpg'
+  },
+  {
+    id: 'gVh6u7s6yR4',
+    title: 'Dr. Jerry Gule Profile',
+    image: 'https://img.youtube.com/vi/gVh6u7s6yR4/hqdefault.jpg'
   }
 ];
 const eventStats = [{

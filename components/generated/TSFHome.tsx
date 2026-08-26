@@ -2916,6 +2916,34 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Broadcast Producer, Presenter & Global Voice Artist',
     description: 'Jessica Dube brings versatility, presence, and a deep understanding of storytelling, media production, and compelling communication.',
     thumbnail: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
+  },
+  {
+    id: 'STtoaFX7A-I',
+    title: 'Dr. Pali Lehohla',
+    subtitle: 'Economist & Former Statistician-General of South Africa',
+    description: 'Connecting statistical data to the realities of society, leadership, and public policy.',
+    thumbnail: 'https://img.youtube.com/vi/STtoaFX7A-I/hqdefault.jpg'
+  },
+  {
+    id: 'UOeqwEC-nxA',
+    title: 'Palesa Dooms',
+    subtitle: 'Public Speaking Coach, Speaker & Founder of Unforgettable Speakers',
+    description: 'An award-winning public speaking coach helping leaders craft unforgettable messages and command the stage with confidence.',
+    thumbnail: 'https://img.youtube.com/vi/UOeqwEC-nxA/hqdefault.jpg'
+  },
+  {
+    id: 'QVZzW-RGj0g',
+    title: 'Prof. Shingai Mutambirwa',
+    subtitle: 'Head of Urology, Sefako Makgatho Health Sciences University',
+    description: 'A leading urologist, academic, and health advocate sharing vital insights on men\'s health, wellness, and medical innovation.',
+    thumbnail: 'https://img.youtube.com/vi/QVZzW-RGj0g/hqdefault.jpg'
+  },
+  {
+    id: 'gVh6u7s6yR4',
+    title: 'Dr. Jerry Gule',
+    subtitle: 'Director & Executive Coach, Gule Executive Coaching',
+    description: 'An experienced executive coach and business leader guiding professionals in strategic development, leadership, and organizational growth.',
+    thumbnail: 'https://img.youtube.com/vi/gVh6u7s6yR4/hqdefault.jpg'
   }
 ];
 
