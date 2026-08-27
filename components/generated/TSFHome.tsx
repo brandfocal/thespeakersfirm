@@ -2944,6 +2944,27 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Director & Executive Coach, Gule Executive Coaching',
     description: 'An experienced executive coach and business leader guiding professionals in strategic development, leadership, and organizational growth.',
     thumbnail: 'https://img.youtube.com/vi/gVh6u7s6yR4/hqdefault.jpg'
+  },
+  {
+    id: '7783OZjC6go',
+    title: 'Lerato Sithole',
+    subtitle: 'CEO of Think & Grow Rich Africa & Visionary Coach',
+    description: 'Lerato Sithole continues to champion a new generation of African thinkers, entrepreneurs and leaders who are ready to turn possibility into progress.',
+    thumbnail: 'https://img.youtube.com/vi/7783OZjC6go/hqdefault.jpg'
+  },
+  {
+    id: '6gnc4UHJNpQ',
+    title: 'Amanda John-Ncube',
+    subtitle: 'Leadership Coach & Speaker',
+    description: 'Amanda John-Ncube brings a strong voice to conversations that shape the future of leadership and organizational potential.',
+    thumbnail: 'https://img.youtube.com/vi/6gnc4UHJNpQ/hqdefault.jpg'
+  },
+  {
+    id: '_aQG5xdGL34',
+    title: 'Dr. David Molapo',
+    subtitle: 'Founder of I Can Leadership Institute Africa & Human Potential Strategist',
+    description: 'Dr. David Molapo brings energy, wisdom and a distinctly African perspective to global platforms, inspiring leaders to unlock human potential.',
+    thumbnail: 'https://img.youtube.com/vi/_aQG5xdGL34/hqdefault.jpg'
   }
 ];
 

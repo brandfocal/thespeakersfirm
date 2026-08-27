@@ -28,20 +28,6 @@ interface DialogueSeries {
 
 const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
   {
-    id: "sifiso-nene",
-    title: "Sifiso Nene | Stand Up Comedian",
-    speakerName: "Sifiso Nene",
-    youtubeId: "fI2uQHu8C3A",
-    description: "Hilarious stand-up comedy and storytelling capturing everyday experiences."
-  },
-  {
-    id: "tumi-ramonotsi",
-    title: "Tumi Ramonotsi - Oracle",
-    speakerName: "Tumi Ramonotsi",
-    youtubeId: "Xb2VPORlJ5U",
-    description: "Insightful keynote on cloud technology, digital transformation, and business strategy."
-  },
-  {
     id: "lincoln-mali-blazing-a-trail",
     title: "Author of 'Blazing A Trail' Book Roundtable",
     speakerName: "Lincoln Mali",
@@ -77,74 +63,11 @@ const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
     description: "Reflections on his autobiography, detailing the struggles and triumphs of black leadership in corporate South Africa."
   },
   {
-    id: "tebogo-mekgoe",
-    title: "EmpowaGrowth Workshop | Business Model Innovation",
-    speakerName: "Tebogo Mekgoe",
-    youtubeId: "dn4DuJtt7mI",
-    description: "Exploring systemic alignment, organizational health, and leadership performance in business strategy."
-  },
-  {
-    id: "mary-bomela",
-    title: "CEO and Director of Companies at TUT’s IFOW 4th Annual Dialogue",
-    speakerName: "Mary Bomela",
-    youtubeId: "INOSSwpIlv8",
-    description: "Insights on female leadership, board strategy, and driving value across diverse investment portfolios."
-  },
-  {
-    id: "bonang-mohale-tut",
-    title: "4th Annual TUT Future of Work Keynote Address",
-    speakerName: "Prof. Bonang Mohale",
-    youtubeId: "2s5CXK-w0AQ",
-    description: "Unpacking ethical corporate leadership, human-centric strategies, and socio-economic transformation for the future of work."
-  },
-  {
     id: "reuel-khoza-roundtable",
     title: "The 2025 Book Roundtable Series - Legacy Beyond Leadership",
     speakerName: "Dr. Reuel Khoza",
     youtubeId: "0ij-23dNHvM",
     description: "A deep dive roundtable dialogue into Dr. Reuel Khoza's perspective on legacy beyond leadership, ethics, and corporate governance."
-  },
-  {
-    id: "zola-mbatha",
-    title: "Orange Farm EmpowaMen Experience",
-    speakerName: "Zola Mbatha",
-    youtubeId: "yA5_vrN2vM0",
-    description: "Addressing positive masculinity, community development, and leadership in social change spaces."
-  },
-  {
-    id: "john-kani",
-    title: "Dr Bonisile John Kani OIS OBE Keynote",
-    speakerName: "Dr. John Kani",
-    youtubeId: "4pwj3RCt2RI",
-    description: "Acclaimed actor and playwright sharing insights on cultural identity, heritage, and the power of storytelling."
-  },
-  {
-    id: "bonang-mohale-transnet",
-    title: "Professor Bonang Mohale - Transnet Keynote",
-    speakerName: "Prof. Bonang Mohale",
-    youtubeId: "z20ciVNtc8A",
-    description: "Strategic insights on economic development, corporate governance, and state-owned enterprise transformation."
-  },
-  {
-    id: "muzi-kuzwayo",
-    title: "Muzi Kuzwayo - Orange Farm EmpowaMen Programme",
-    speakerName: "Muzi Kuzwayo",
-    youtubeId: "3xJJ0IQQFCw",
-    description: "Speaking on brand strategy, socio-economic empowerment, and positive role models in society."
-  },
-  {
-    id: "bonang-mohale-empowamen",
-    title: "Bonang Mohale - Orange Farm EmpowaMen Programme",
-    speakerName: "Prof. Bonang Mohale",
-    youtubeId: "Txr0O_M6bb0",
-    description: "Addressing leadership accountability, community mentorship, and empowering the next generation."
-  },
-  {
-    id: "empowamen-experience",
-    title: "Experience Reel - Orange Farm EmpowaMen Programme",
-    speakerName: "EmpowaMen Reel",
-    youtubeId: "tZ-ick_bEGw",
-    description: "Visual highlights of the community dialogue, mentorship workshops, and leadership interventions."
   }
 ];
 

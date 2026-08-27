@@ -92,6 +92,11 @@ export const AboutTeamSection = () => {
       id: "lerato-vid-1",
       label: "Lerato Sithole in Action",
       youtubeId: "85HEq8FYHY8"
+    },
+    {
+      id: "lerato-vid-2",
+      label: "Lerato Sithole continues to champion a new generation of African thinkers",
+      youtubeId: "7783OZjC6go"
     }
   ];
 

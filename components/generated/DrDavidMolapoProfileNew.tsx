@@ -144,6 +144,11 @@ export const AboutTeamSection = () => {
             id: "david-video-1",
             label: "Dr David Molapo on Effective Leadership & Significance",
             youtubeId: "FpUu96LvGCw"
+          },
+          {
+            id: "david-video-2",
+            label: "Dr David Molapo brings energy, wisdom and a distinctly African perspective",
+            youtubeId: "_aQG5xdGL34"
           }
         ]}
       />
