@@ -74,7 +74,7 @@ const categories: Category[] = [{
   number: '10',
   name: 'Entrepreneurship, Investment and Business Growth',
   description: 'Accomplished founders, investors and enterprise leaders sharing practical strategies for funding, scaling and sustaining high-growth businesses.',
-  seed: '/speaker_thumbnails/Tebogo-ProVerb-Thekisho.jpg',
+  seed: '/speaker_thumbnails/Theo-Baloyi-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/entrepreneurship-investment-and-business-growth'
 }, {
   number: '11',
@@ -92,7 +92,7 @@ const categories: Category[] = [{
   number: '13',
   name: 'Reputation, Crisis and Trust Leadership',
   description: 'Reputation and crisis specialists helping organisations protect institutional trust, navigate scrutiny and lead decisively when credibility is at stake.',
-  seed: '/speaker_thumbnails/Azania-Mosaka-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Milton-Nkosi-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/reputation-crisis-and-trust-leadership'
 }, {
   number: '14',
@@ -104,7 +104,7 @@ const categories: Category[] = [{
   number: '15',
   name: 'Sales, Negotiation and Commercial Performance',
   description: 'High-performing commercial leaders equipping teams to win clients, negotiate effectively and accelerate sustainable revenue growth.',
-  seed: '/speaker_thumbnails/Nyimpini-Mabunda-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Sipho-Maseko-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/sales-negotiation-and-commercial-performance'
 }, {
   number: '16',
@@ -116,13 +116,13 @@ const categories: Category[] = [{
   number: '17',
   name: 'High-Performance Teams and Team-Building Experiences',
   description: 'Expert facilitators and coaches transforming groups into aligned, accountable and high-performing teams through powerful experiential interventions.',
-  seed: '/speaker_thumbnails/Queen-Ramotsehoa-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/high-performance-teams-and-team-building-experiences'
 }, {
   number: '18',
   name: 'Sports, Coaching and the Winning Mindset',
   description: 'Elite athletes, championship coaches and sporting icons translating lessons from world-class competition into compelling leadership and business insights.',
-  seed: '/speaker_thumbnails/Neil-Tovey-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Doctor-Khumalo-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/sports-coaching-and-the-winning-mindset'
 }, {
   number: '19',
@@ -140,7 +140,7 @@ const categories: Category[] = [{
   number: '21',
   name: 'Comedy, Culture & Strategic Disruption',
   description: 'Comedians, humorists, and disruptive creatives using storytelling, comedy, and cultural insights to challenge corporate norms and foster human connection.',
-  seed: '/speaker_thumbnails/Mpho-Popps-The-Speakers-Firm.jpg',
+  seed: '/speaker_thumbnails/Ntosh-Madlingozi-The-Speakers-Firm.jpg',
   path: '/find-a-speaker/comedy'
 }]
 
@@ -307,7 +307,7 @@ export function SpeakerCategoriesPage() {
                 return matchesTheme && matchesSearch;
               })
               .map((category, categoryIndex) => (
-                <div key={category.number} className="group grid min-h-[340px] overflow-hidden border border-white/[0.08] bg-[#161616] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#e30e04]/40 hover:shadow-[0_24px_56px_rgba(0,0,0,0.5)] sm:min-h-[365px]" style={{
+                <Link key={category.number} href={category.path || "/contact"} className="group grid min-h-[340px] overflow-hidden border border-white/[0.08] bg-[#161616] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#e30e04]/40 hover:shadow-[0_24px_56px_rgba(0,0,0,0.5)] sm:min-h-[365px]" style={{
                   gridTemplateRows: '1fr auto'
                 }}>
                   <div className="relative grid min-h-[250px] overflow-hidden bg-cover bg-center sm:min-h-[280px]" style={{
@@ -320,18 +320,18 @@ export function SpeakerCategoriesPage() {
                       <p className="mb-2 text-[clamp(2rem,10vw,2.25rem)] font-black tracking-[-0.08em] text-[#e30e04]">{category.number}</p>
                       <h3 className="max-w-[260px] text-[clamp(1.05rem,5vw,1.125rem)] font-black uppercase leading-[0.94] tracking-[-0.045em]">{category.name}</h3>
                     </div>
-                     <div className="absolute inset-0 z-20 hidden md:flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
+                    <div className="absolute inset-0 z-20 hidden md:flex translate-y-full flex-col justify-end bg-[rgba(0,0,0,0.92)] p-5 transition-transform duration-500 ease-out group-hover:translate-y-0 sm:p-6 lg:p-5">
                       <p className="text-[13px] leading-5 text-white/85 sm:text-xs">{category.description}</p>
-                      <Link href={category.path || "/contact"} className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
+                      <span className="mt-5 flex min-h-11 items-center justify-between border-t border-white/15 pt-4 text-[10px] font-bold uppercase tracking-[0.12em] text-[#e30e04] opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">
                         Explore Speakers <ArrowUpRight size={15} />
-                      </Link>
+                      </span>
                     </div>
                   </div>
-                  <Link href={category.path || "/contact"} className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d] hover:bg-[#0f0f0f] transition-colors cursor-pointer">
+                  <div className="flex min-h-14 items-center justify-between gap-3 border-t border-white/[0.08] p-4 bg-[#0d0d0d] hover:bg-[#0f0f0f] transition-colors">
                     <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/45">Category {categoryIndex + 1}</span>
                     <ArrowUpRight size={16} className="text-[#e30e04]" />
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               ))}
           </div>
         </div>

@@ -27,11 +27,8 @@ export function Footer() {
             <img 
               src="/the-speakers-firm-logo.png" 
               alt="The Speakers Firm Logo" 
-              className="h-16 w-auto object-contain brightness-0 invert"
+              className="h-32 w-auto object-contain brightness-0 invert"
             />
-            <p className="max-w-[360px] text-[15px] font-normal leading-[1.65] text-[#F5F5F0]">
-              Deploying Africa&apos;s most authoritative voices.
-            </p>
           </div>
 
           {/* Navigation */}

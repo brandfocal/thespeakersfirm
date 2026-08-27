@@ -226,47 +226,51 @@ export const RecommendedSpeakers = () => {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {[...RECOMMENDED_SPEAKERS, ...RECOMMENDED_SPEAKERS].map((speaker, index) => (
-            <motion.article 
+            <Link 
               key={`${speaker.id}-${index}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: (index % RECOMMENDED_SPEAKERS.length) * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative w-[280px] min-[375px]:w-[310px] md:w-[350px] shrink-0 snap-start bg-[#000000] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-white/20 transition-colors duration-300"
+              href={`/tracks/${speaker.trackId}/${speaker.id}`}
+              className="block shrink-0 snap-start"
             >
-              {/* Image & Track Badge */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-950">
-                <img 
-                  src={speaker.image} 
-                  alt={speaker.name}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-85" />
-              </div>
-
-              {/* Info Area */}
-              <div className="p-6 md:p-8 flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-[#e30e04] transition-colors duration-300">
-                    {speaker.name}
-                  </h3>
-                  <p className="mt-2 text-xs text-neutral-400 line-clamp-3 leading-relaxed">
-                    {speaker.bio}
-                  </p>
+              <motion.article 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.6, delay: (index % RECOMMENDED_SPEAKERS.length) * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                className="group relative w-[280px] min-[375px]:w-[310px] md:w-[350px] bg-[#000000] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-white/20 transition-colors duration-300 h-full"
+              >
+                {/* Image & Track Badge */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-950">
+                  <img 
+                    src={speaker.image} 
+                    alt={speaker.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-85" />
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                  <Link 
-                    href={`/tracks/${speaker.trackId}/${speaker.id}`}
-                    className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors duration-300"
-                  >
-                    <span>BOOK THE SPEAKER</span>
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </Link>
+                {/* Info Area */}
+                <div className="p-6 md:p-8 flex flex-col justify-between min-h-[200px]">
+                  <div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-[#e30e04] transition-colors duration-300">
+                      {speaker.name}
+                    </h3>
+                    <p className="mt-2 text-xs text-neutral-400 line-clamp-3 leading-relaxed">
+                      {speaker.bio}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+                    <span 
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors duration-300"
+                    >
+                      <span>BOOK THE SPEAKER</span>
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.article>
+              </motion.article>
+            </Link>
           ))}
         </div>
         
