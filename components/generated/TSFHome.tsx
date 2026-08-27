@@ -2832,7 +2832,7 @@ const TICKER_IMAGES = {
 };
 const HERO_HEADLINE_LINES = [{
   id: 'africas-1',
-  className: 'block text-[clamp(54px,18vw,72px)] md:text-[106px] lg:text-[138px] leading-[0.9] tracking-[-0.065em]',
+  className: 'block text-[clamp(52px,18vw,70px)] md:text-[104px] lg:text-[136px] leading-[0.9] tracking-[-0.065em]',
   words: [{
     id: 'africas-1-word',
     text: "A Leading",
@@ -2840,7 +2840,7 @@ const HERO_HEADLINE_LINES = [{
   }]
 }, {
   id: 'strategic',
-  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  className: 'block max-w-none text-[clamp(32px,9.2vw,56px)] sm:text-[clamp(50px,8.6vw,70px)] md:text-[clamp(66px,8.6vw,102px)] lg:text-[clamp(90px,9.4vw,116px)] xl:text-[120px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
     id: 'strategic-word',
     text: 'African',
@@ -2848,7 +2848,7 @@ const HERO_HEADLINE_LINES = [{
   }]
 }, {
   id: 'speakers-bureau',
-  className: 'block max-w-none text-[clamp(34px,9.2vw,58px)] sm:text-[clamp(52px,8.6vw,72px)] md:text-[clamp(68px,8.6vw,104px)] lg:text-[clamp(92px,9.4vw,118px)] xl:text-[122px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
+  className: 'block max-w-none text-[clamp(32px,9.2vw,56px)] sm:text-[clamp(50px,8.6vw,70px)] md:text-[clamp(66px,8.6vw,102px)] lg:text-[clamp(90px,9.4vw,116px)] xl:text-[120px] leading-[0.9] tracking-[-0.055em] -ml-1 md:-ml-2 lg:-ml-3',
   words: [{
     id: 'speakers-word',
     text: 'Speakers',
@@ -2861,6 +2861,13 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
+  {
+    id: 'AdQjV5ex1jM',
+    title: 'Callan Abrahams',
+    subtitle: 'AI Ambassador, Tech Speaker & Data Strategist',
+    description: 'These highlights capture Callan Abrahams in her element at the SACAA Gender Summit',
+    thumbnail: 'https://img.youtube.com/vi/AdQjV5ex1jM/hqdefault.jpg'
+  },
   {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela',
