@@ -487,7 +487,7 @@ export const TSFAboutUsRedesign = () => {
         <header className="flex max-w-[560px] flex-col justify-between gap-8 rounded-[32px] border border-[rgba(255,255,255,0.06)] bg-[#000000] p-5 sm:p-7 lg:p-8">
           <div>
             <SectionTag className="mb-5">At a Glance</SectionTag>
-            <h2 id="metrics-heading" className="text-balance text-[clamp(2.25rem,9vw,4.75rem)] font-bold uppercase leading-[0.93] tracking-[-0.055em] text-[#F5F5F5]">
+            <h2 id="metrics-heading" className="text-balance text-[clamp(2rem,6vw,3.25rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#F5F5F5]">
               <span>A dashboard for influence.</span>
             </h2>
             <p className="mt-5 max-w-[430px] text-[15px] leading-[1.75] text-[#A0A0A0] sm:text-[17px]">
@@ -530,7 +530,7 @@ export const TSFAboutUsRedesign = () => {
                 <span className="rounded-full border border-[#e30e04]/30 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#ff4a42]">Curated</span>
               </div>
               <div>
-                <p className="text-[clamp(5rem,21vw,11rem)] font-bold uppercase leading-[0.78] tracking-[-0.11em] text-[#F5F5F5]">
+                <p className="text-[clamp(3.5rem,14vw,7rem)] font-bold uppercase leading-[0.8] tracking-[-0.09em] text-[#F5F5F5]">
                   <span>{metrics[0].value}</span>
                 </p>
                 <p className="mt-5 max-w-[360px] text-[11px] font-bold uppercase leading-[1.45] tracking-[0.12em] text-[#A0A0A0] sm:text-[12px]">
@@ -554,7 +554,7 @@ export const TSFAboutUsRedesign = () => {
                   ease: CARD_EASE,
                   delay: order * 0.08
                 }} className="group grid min-h-[126px] grid-cols-[auto_1fr] items-end gap-4 rounded-[28px] border border-[rgba(255,255,255,0.06)] bg-[#000000]/92 p-5 transition-colors hover:border-[#e30e04]/30 hover:bg-[#000000] sm:min-h-[138px] sm:p-6">
-                <p className="text-[clamp(2.5rem,10vw,5rem)] font-bold uppercase leading-[0.82] tracking-[-0.08em] text-[#F5F5F5]">
+                <p className="text-[clamp(2rem,7vw,3.8rem)] font-bold uppercase leading-[0.85] tracking-[-0.06em] text-[#F5F5F5]">
                   <span>{metric.value}</span>
                 </p>
                 <div className="min-w-0 border-l border-[rgba(255,255,255,0.08)] pl-4 transition-colors group-hover:border-[#e30e04]/40">
