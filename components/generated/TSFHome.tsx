@@ -2862,13 +2862,6 @@ const HERO_HEADLINE_LINES = [{
 
 const SPEAKER_VIDEOS = [
   {
-    id: 'AdQjV5ex1jM',
-    title: 'Callan Abrahams',
-    subtitle: 'AI Ambassador, Tech Speaker & Data Strategist',
-    description: 'These highlights capture Callan Abrahams in her element at the SACAA Gender Summit',
-    thumbnail: 'https://img.youtube.com/vi/AdQjV5ex1jM/hqdefault.jpg'
-  },
-  {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela',
     subtitle: 'UK Country Head, Brand South Africa',

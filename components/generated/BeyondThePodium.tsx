@@ -19,6 +19,13 @@ interface DialogueSeries {
 
 const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
   {
+    id: "callan-abrahams-sacaa",
+    title: "Highlights at the SACAA Gender Summit",
+    speakerName: "Callan Abrahams",
+    youtubeId: "AdQjV5ex1jM",
+    description: "These highlights capture Callan Abrahams in her element at the SACAA Gender Summit."
+  },
+  {
     id: "bonang-mohale-aic",
     title: "Prof. Bonang Mohale at the AIC",
     speakerName: "Prof. Bonang Mohale",
