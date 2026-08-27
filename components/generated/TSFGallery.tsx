@@ -242,7 +242,8 @@ const heroHeadingLines = [{
     text: 'THAT'
   }, {
     id: 'move-word',
-    text: 'MOVE'
+    text: 'MOVE',
+    isRed: true
   }]
 }, {
   id: 'the-world',
@@ -341,7 +342,7 @@ const AnimatedWordHeading = ({
             delay: wordOrder * 0.09,
             ease: [0.22, 1, 0.36, 1]
           }} className={`inline-block origin-bottom-left last:mr-0 ${wordClassName}`}>
-                <span>{word.text}</span>
+                <span className={word.isRed ? "text-[#e30e04]" : ""}>{word.text}</span>
               </motion.span>
               <span aria-hidden="true" className="inline-block">&nbsp;</span>
             </span>;

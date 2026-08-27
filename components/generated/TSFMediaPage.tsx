@@ -32,7 +32,7 @@ const MEDIA_HERO_HEADING_LINES = [{
   delay: 0.5
 }, {
   id: 'press-line',
-  text: 'Press.',
+  text: <span className="text-[#e30e04]">Press.</span>,
   delay: 0.68
 }];
 
@@ -213,7 +213,7 @@ const AnimatedWordHeading = ({
 }: {
   lines: Array<{
     id: string;
-    text: string;
+    text: React.ReactNode;
     delay: number;
   }>;
   className: string;

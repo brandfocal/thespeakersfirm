@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, ChevronDown } from 'lucide-react';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 
 const COLORS = {
   black: '#000000',
@@ -251,41 +250,31 @@ export function BriefUs() {
       }
     }
   };
-
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000] flex flex-col justify-between">
       <Header />
-      
-      <div className="flex-grow">
-        <section id="top" className="relative min-h-[70vh] w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-36 bg-[#000000]">
-          <img src="/hero_backgrounds/sizwe-mpofu-walsh.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-top" />
+        <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
+          <picture className="absolute inset-0 h-full w-full">
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/brief-us-mobile.jpg" />
+            <img src="/hero_backgrounds/brief-us-hero.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-top" />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
             backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
           }} aria-hidden="true" />
           <VerticalBorderLines isDark={true} />
-          <div className="relative z-10 mx-auto flex min-h-[40vh] max-w-[1440px] flex-col justify-end pb-8 md:justify-center md:pb-0 px-6 md:px-16">
+          <div className="relative z-10 mx-auto flex min-h-[calc(100vh-10rem)] max-w-[1440px] flex-col justify-end pb-12 md:justify-center md:pb-0 px-6 md:px-16">
             <Reveal>
               <SectionTag>Brief Us Now (The Curation Route)</SectionTag>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
                 <span>Brief The</span><br />
-                <span>Bureau.</span>
+                <span className="text-[#e30e04]">Bureau.</span>
               </h1>
             </Reveal>
             <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
-            <div className="mt-8 flex max-w-[720px] flex-col gap-3">
-              <Reveal delay={0.2}>
-                <p className="text-[18px] font-bold leading-tight text-[#ffffff] md:text-[22px] mb-2">
-                  Challenge Us to Find the Perfect Fit.
-                </p>
-              </Reveal>
+            <div className="mt-8">
               <Reveal delay={0.3}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-                  Your event deserves the right voice. If you require expert curation, provide your engagement parameters below. We will assess your strategic objectives and deliver a curated shortlist of talent—whether from our published portfolio or our extended global network.
-                </p>
-              </Reveal>
-              <Reveal delay={0.4} className="mt-4">
                 <a href="#brief-form" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-black">
                   <span>Start Strategic Briefing</span>
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -295,8 +284,29 @@ export function BriefUs() {
           </div>
         </section>
 
-        <section id="brief-form" className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.offWhite }}>
-          <VerticalBorderLines isDark={false} />
+        {/* Section: Overview (Moved from Hero) */}
+        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.black }}>
+          <VerticalBorderLines isDark={true} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-start">
+              <Reveal>
+                <h2 className="text-2xl md:text-3xl font-bold uppercase leading-tight text-white">
+                  Challenge Us to Find the Perfect Fit.
+                </h2>
+              </Reveal>
+              <div className="space-y-6 text-[15px] font-normal leading-[1.6] text-white/80 md:text-[16px] md:leading-[1.65]">
+                <Reveal delay={0.1}>
+                  <p>
+                    Your event deserves the right voice. If you require expert curation, provide your engagement parameters below. We will assess your strategic objectives and deliver a curated shortlist of talent—whether from our published portfolio or our extended global network.
+                  </p>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="brief-form" className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.black }}>
+          <VerticalBorderLines isDark={true} />
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.8fr] lg:gap-20">
               
@@ -304,15 +314,21 @@ export function BriefUs() {
               <div>
                 <SectionTag>STRATEGIC MATCHING</SectionTag>
                 
-                <div className="mt-8 border-l-4 border-[#e30e04] pl-6 py-2">
-                  <p className="text-lg font-normal italic leading-relaxed text-[#212121]">
-                    "The Speakers Firm was not restricted by its existing portfolio. They searched the market, challenged conventional choices and secured the perfect talent for our audience and objectives. Give them your most demanding brief and allow them to find the voice your event deserves."
-                  </p>
+                <div className="mt-8 relative bg-white/5 rounded-2xl p-8 border border-white/10">
+                  <span className="absolute top-6 left-6 text-6xl leading-none text-[#e30e04] opacity-25 font-serif select-none">“</span>
+                  <blockquote className="relative z-10 pl-6">
+                    <p className="text-base md:text-lg font-medium leading-relaxed text-white/90">
+                      The Speakers Firm was not restricted by its existing portfolio. They searched the market, challenged conventional choices and secured the perfect talent for our audience and objectives. Give them your most demanding brief and allow them to find the voice your event deserves.
+                    </p>
+                    <footer className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-[#e30e04]">
+                      — Head of Brand &amp; Events, Corporate Client
+                    </footer>
+                  </blockquote>
                 </div>
 
-                <div className="mt-8 rounded-2xl bg-gray-50 border border-black/10 p-5 space-y-3">
+                <div className="mt-8 rounded-2xl bg-white/5 border border-white/10 p-5 space-y-3">
                   <p className="text-[10px] font-bold uppercase tracking-wider text-[#e30e04]">VALUE PROPOSITION</p>
-                  <p className="text-sm font-bold text-black leading-snug">
+                  <p className="text-sm font-bold text-white leading-snug">
                     Initial response and curated recommendations within 24 hours.
                   </p>
                 </div>
@@ -321,22 +337,21 @@ export function BriefUs() {
               {/* Form Column */}
               <div>
                 {isSubmitted ? (
-                  <div className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-center">
+                  <div className="border border-white/10 bg-[#0A0A0A] p-6 md:p-10 shadow-lg rounded-2xl text-center text-white">
                     <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e30e04]">
                       <CheckCircle className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold uppercase text-black">Brief Submitted</h3>
-                    <p className="mt-4 text-[#686869] text-sm leading-relaxed">
-                      Thank you for briefing The Speakers Firm™. Reference: <strong className="text-black">{enquiryRef}</strong>
+                    <h3 className="text-xl font-bold uppercase text-white">Brief Submitted</h3>
+                    <p className="mt-4 text-[#AFB0B0] text-sm leading-relaxed">
+                      Thank you for briefing The Speakers Firm™. Reference: <strong className="text-white">{enquiryRef}</strong>
                     </p>
-                    <button onClick={() => { setStep(1); setIsSubmitted(false); }} className="mt-8 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300">
+                    <button onClick={() => { setStep(1); setIsSubmitted(false); }} className="mt-8 inline-flex items-center gap-2 rounded-full border border-white px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-white hover:text-black transition-colors duration-300">
                       Submit Another Brief
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleFormSubmit} className="border border-black/10 bg-white p-6 md:p-10 shadow-lg rounded-2xl text-black">
-                    {/* Step Tracker */}
-                    <div className="mb-6 pb-4 border-b border-black/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#686869]">
+                  <form onSubmit={handleFormSubmit} className="border border-white/10 bg-[#0A0A0A] p-6 md:p-10 shadow-lg rounded-2xl text-white">
+                    <div className="mb-6 pb-4 border-b border-white/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#AFB0B0]">
                       <span>Step {step} of 3</span>
                       <span className="text-[#e30e04]">{step === 1 ? 'Identity' : step === 2 ? 'Logistics' : 'Strategic'}</span>
                     </div>
@@ -344,32 +359,32 @@ export function BriefUs() {
                     <AnimatePresence mode="wait">
                       {step === 1 && (
                         <motion.fieldset key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Institutional Identity</h3>
+                          <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/10 pb-3">Institutional Identity</h3>
                           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Full Name*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Full Name*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
                               {errors.fullName && <p className="text-[#e30e04] text-xs">{errors.fullName}</p>}
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Designation*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Corporate Designation*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Organisation Name*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Organisation Name*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Email*</span>
-                              <input required type="email" className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Corporate Email*</span>
+                              <input required type="email" className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
                             </label>
                             <label className="flex flex-col gap-2 sm:col-span-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Direct Contact Number*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Direct Contact Number*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
                             </label>
                           </div>
                           <div className="mt-4 flex justify-end">
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                            <button className="flex items-center gap-2 rounded-full border border-white px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-white hover:text-black transition-colors duration-300" type="button" onClick={nextStep}>
                               <span>Next Step</span>
                               <ArrowRight size={14} />
                             </button>
@@ -379,11 +394,11 @@ export function BriefUs() {
 
                       {step === 2 && (
                         <motion.fieldset key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Engagement Logistics</h3>
+                          <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/10 pb-3">Engagement Logistics</h3>
                           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Nature of Engagement*</span>
-                              <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Nature of Engagement*</span>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
                                 <option value="" disabled>Select option...</option>
                                 <option value="Executive Boardroom Strategy">Executive Boardroom Strategy</option>
                                 <option value="Annual General Meeting">Annual General Meeting</option>
@@ -395,16 +410,16 @@ export function BriefUs() {
                               </select>
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Proposed Date(s)*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 September 2026" />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Proposed Date(s)*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 September 2026" />
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Location*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Location*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Estimated Audience Size*</span>
-                              <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Estimated Audience Size*</span>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
                                 <option value="" disabled>Select range...</option>
                                 <option value="Under 50 (Executive/Closed Door)">Under 50 (Executive/Closed Door)</option>
                                 <option value="50-200">50–200</option>
@@ -413,8 +428,8 @@ export function BriefUs() {
                               </select>
                             </label>
                             <label className="flex flex-col gap-2 sm:col-span-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Allocated Talent Budget*</span>
-                              <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Allocated Talent Budget*</span>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
                                 <option value="" disabled>Select range...</option>
                                 <option value="To be Determined">To be Determined</option>
                                 <option value="R20k–R40k">R20k–R40k</option>
@@ -425,8 +440,8 @@ export function BriefUs() {
                             </label>
                           </div>
                           <div className="mt-4 flex justify-between">
-                            <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                            <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                            <button className="text-[12px] font-bold uppercase text-[#AFB0B0] hover:text-black" type="button" onClick={prevStep}>Back</button>
+                            <button className="flex items-center gap-2 rounded-full border border-white px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-white hover:text-black transition-colors duration-300" type="button" onClick={nextStep}>
                               <span>Next Step</span>
                               <ArrowRight size={14} />
                             </button>
@@ -436,21 +451,21 @@ export function BriefUs() {
 
                       {step === 3 && (
                         <motion.fieldset key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                          <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">The Strategic Brief</h3>
+                          <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/10 pb-3">The Strategic Brief</h3>
                           <div className="grid grid-cols-1 gap-6">
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Topic / Theme Required*</span>
-                              <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. AI Transformation, Macroeconomics" />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Topic / Theme Required*</span>
+                              <input required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. AI Transformation, Macroeconomics" />
                             </label>
                             <label className="flex flex-col gap-2">
-                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Strategic Objective &amp; Context*</span>
-                              <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[120px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
+                              <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Strategic Objective &amp; Context*</span>
+                              <textarea required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[120px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
                             </label>
                           </div>
                            <div className="mt-4 flex justify-between">
                             <button 
                               disabled={isSubmitting} 
-                              className="text-[12px] font-bold uppercase text-[#686869] hover:text-black disabled:opacity-50 disabled:cursor-not-allowed" 
+                              className="text-[12px] font-bold uppercase text-[#AFB0B0] hover:text-black disabled:opacity-50 disabled:cursor-not-allowed" 
                               type="button" 
                               onClick={prevStep}
                             >
@@ -489,8 +504,6 @@ export function BriefUs() {
             </div>
           </div>
         </section>
-      </div>
 
-      <Footer />
     </main>;
 }

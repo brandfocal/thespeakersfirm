@@ -4,7 +4,6 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, AlertTriangle, CheckCircle, HelpCircle } from 'lucide-react';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 
 const COLORS = {
   black: '#000000',
@@ -119,13 +118,10 @@ export function JoinTheSpeakersFirm() {
 
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000] flex flex-col justify-between">
       <Header />
-      
-      <div className="flex-grow">
-        {/* Section 1: Hero Section */}
-        <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16 flex flex-col justify-center">
+        <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16">
           <picture className="absolute inset-0 h-full w-full">
             <source media="(max-width: 767px)" srcSet="/hero_backgrounds/join-us-mobile.jpg" />
-            <img src="/galleries/bonang-mohale/bonang-mohale.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
+            <img src="/hero_backgrounds/join-us.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/60 via-[#000000]/30 to-[#000000]/85" aria-hidden="true" />
           <VerticalBorderLines isDark={true} />
@@ -136,7 +132,7 @@ export function JoinTheSpeakersFirm() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
-                READY TO SPEAK WITH POWER? START HERE.
+                READY TO SPEAK WITH <span className="text-[#e30e04]">POWER?</span> START HERE.
               </h1>
               <p className="text-[#e30e04] text-xs md:text-sm font-bold uppercase tracking-[0.2em] mt-3">
                 Prospective Speaker and Talent Submissions
@@ -144,33 +140,44 @@ export function JoinTheSpeakersFirm() {
             </Reveal>
             <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
             
-            <div className="mt-8 flex max-w-[800px] flex-col gap-4">
+            <div className="mt-8">
               <Reveal delay={0.3}>
-                <p className="text-[18px] md:text-[22px] font-bold leading-tight text-[#ffffff] mb-2">
-                  We do not work with everyone. We partner with game-changers.
-                </p>
-              </Reveal>
-              <Reveal delay={0.4}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-                  The Speakers Firm™ represents influential voices that do more than inspire. They challenge convention, shape decisions, influence institutions and ignite meaningful change.
-                </p>
-              </Reveal>
-              <Reveal delay={0.5}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-                  Our speakers, thought leaders, practitioners and provocateurs are trusted in boardrooms under pressure, institutions undergoing transformation and global forums where markets, mandates and futures are being shaped.
-                </p>
-              </Reveal>
-              <Reveal delay={0.6}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[16px] md:leading-[1.65]">
-                  If you possess the credibility, expertise and commanding presence to move minds, markets and institutions, we welcome the opportunity to explore strategic alignment.
-                </p>
-              </Reveal>
-              <Reveal delay={0.7} className="mt-4">
                 <motion.a href="#requirements" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-black">
                   <span>View Submission Requirements</span>
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </motion.a>
               </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Section: Overview (Moved from Hero) */}
+        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16 bg-[#e30e04] text-white">
+          <VerticalBorderLines isDark={true} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-start">
+              <Reveal>
+                <h2 className="text-2xl md:text-3xl font-bold uppercase leading-tight text-white">
+                  We do not work with everyone. We partner with game-changers.
+                </h2>
+              </Reveal>
+              <div className="space-y-6 text-[15px] font-normal leading-[1.6] text-white/90 md:text-[16px] md:leading-[1.65]">
+                <Reveal delay={0.1}>
+                  <p>
+                    The Speakers Firm™ represents influential voices that do more than inspire. They challenge convention, shape decisions, influence institutions and ignite meaningful change.
+                  </p>
+                </Reveal>
+                <Reveal delay={0.2}>
+                  <p>
+                    Our speakers, thought leaders, practitioners and provocateurs are trusted in boardrooms under pressure, institutions undergoing transformation and global forums where markets, mandates and futures are being shaped.
+                  </p>
+                </Reveal>
+                <Reveal delay={0.3}>
+                  <p>
+                    If you possess the credibility, expertise and commanding presence to move minds, markets and institutions, we welcome the opportunity to explore strategic alignment.
+                  </p>
+                </Reveal>
+              </div>
             </div>
           </div>
         </section>
@@ -363,8 +370,5 @@ export function JoinTheSpeakersFirm() {
             </div>
           </div>
         </section>
-      </div>
-
-      <Footer />
     </main>;
 }

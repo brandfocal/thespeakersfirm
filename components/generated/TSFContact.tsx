@@ -516,7 +516,7 @@ export const TSFContact = () => {
             <SectionTag>CONTACT US</SectionTag>
           </motion.div>
           <motion.h1 initial="hidden" animate="visible" transition={{ delay: 0.12 }} variants={reveal} className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6">
-            <span>Institutional Access.</span>
+            <span>Institutional <span className="text-[#e30e04]">Access.</span></span>
           </motion.h1>
           <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.74 }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
           <div className="mt-8 flex max-w-[720px] flex-col gap-3">

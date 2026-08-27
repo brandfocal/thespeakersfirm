@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { SpeakerBookingForm } from './SpeakerBookingForm';
 
 const COLORS = {
@@ -152,11 +151,12 @@ export function BookASpeaker() {
 
   return <main className="min-h-screen w-full selection:bg-[#e30e04] selection:text-white font-[Kontora,sans-serif] overflow-x-hidden bg-[#ffffff] text-[#000000] flex flex-col justify-between">
       <Header />
-      
-      <div className="flex-grow">
         {/* Section 1: Hero Section */}
         <section id="top" className="relative min-h-screen w-full overflow-hidden pt-20 pb-28 md:pt-24 lg:pb-44 bg-[#000000] px-6 md:px-16 flex flex-col justify-center">
-          <img src="/hero_backgrounds/media.jpg" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 grayscale" />
+          <picture className="absolute inset-0 h-full w-full opacity-40 grayscale">
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/book-a-speaker-mobile.jpg" />
+            <img src="/hero_backgrounds/book-a-speaker-hero.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/80 via-[#000000]/60 to-[#000000]/95" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
             backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")"
@@ -169,21 +169,35 @@ export function BookASpeaker() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.055em] text-[#ffffff] drop-shadow-[0_8px_34px_rgba(0,0,0,0.38)] mt-6 max-w-5xl">
-                BOOK THE VOICE THAT COMMANDS THE ROOM, SHAPES DECISIONS AND MOVES YOUR INSTITUTION FORWARD.
+                BOOK THE VOICE THAT <span className="text-[#e30e04]">COMMANDS THE ROOM</span>, SHAPES DECISIONS AND MOVES YOUR INSTITUTION FORWARD.
               </h1>
             </Reveal>
             <motion.div aria-hidden="true" initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ delay: 1.0, duration: 0.74, ease: 'easeOut' }} className="mt-5 h-[3px] w-28 origin-left bg-[#e30e04] md:mt-7 md:w-40" />
-            <div className="mt-8 flex max-w-[800px] flex-col gap-3">
+            <div className="mt-8">
               <Reveal delay={0.3}>
-                <p className="text-[15px] font-normal leading-[1.6] text-[#ffffff]/80 drop-shadow-[0_6px_22px_rgba(0,0,0,0.45)] md:text-[17px] md:leading-[1.65]">
-                  Partner with The Speakers Firm™ to secure influential speakers and exceptional talent who transform important moments into strategic influence, measurable impact and enduring institutional value. Make your next platform impossible to ignore.
-                </p>
-              </Reveal>
-              <Reveal delay={0.4} className="mt-6">
                 <motion.a href="#brief" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white transition-all hover:bg-white hover:text-black">
                   <span>Start Booking Process</span>
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </motion.a>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Section: Overview (Moved from Hero) */}
+        <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-16" style={{ backgroundColor: COLORS.black }}>
+          <VerticalBorderLines isDark={true} />
+          <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-start">
+              <Reveal>
+                <h2 className="text-2xl md:text-3xl font-bold uppercase leading-tight text-white">
+                  Make your next platform impossible to ignore.
+                </h2>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="text-[15px] font-normal leading-[1.6] text-white/80 md:text-[17px] md:leading-[1.65]">
+                  Partner with The Speakers Firm™ to secure influential speakers and exceptional talent who transform important moments into strategic influence, measurable impact and enduring institutional value.
+                </p>
               </Reveal>
             </div>
           </div>
@@ -194,35 +208,44 @@ export function BookASpeaker() {
           <VerticalBorderLines isDark={false} />
           <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16">
             <SectionTag>CLIENTS &amp; PARTNERSHIPS</SectionTag>
-            <Reveal>
-              <h2 className="mt-6 text-[clamp(1.8rem,5vw,3rem)] font-bold uppercase leading-[0.95] tracking-[-0.04em] text-[#000000] max-w-4xl">
-                WE PARTNER WITH BRANDS THAT DO NOT SIMPLY JOIN THE CONVERSATION. THEY OWN THE ROOM.
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-black/80 max-w-5xl font-medium">
-                Our clients are market makers, movement builders and institutional powerhouses, including global corporations, government institutions, multinationals, foundations, nonprofit organisations and leading agencies that refuse to settle for visibility without value or conversation without consequence.
-              </p>
-            </Reveal>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 items-start mt-8">
+              <Reveal>
+                <h2 className="text-2xl md:text-3xl font-bold uppercase leading-tight text-black">
+                  WE PARTNER WITH BRANDS THAT DO NOT SIMPLY JOIN THE CONVERSATION. THEY OWN THE ROOM.
+                </h2>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="text-[15px] font-normal leading-[1.6] text-black/80 md:text-[16px] md:leading-[1.65]">
+                  Our clients are market makers, movement builders and institutional powerhouses, including global corporations, government institutions, multinationals, foundations, nonprofit organisations and leading agencies that refuse to settle for visibility without value or conversation without consequence.
+                </p>
+              </Reveal>
+            </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-black/10 pt-12">
-              <Reveal delay={0.2} className="space-y-4">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-[#e30e04]">Beyond Events</h3>
-                <p className="text-sm leading-relaxed text-[#686869]">
-                  They are not simply staging events. They are strengthening brands, shaping markets, transforming institutional cultures and building legacies that influence the future of leadership.
-                </p>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Reveal delay={0.2} className="group border border-black/10 bg-black/5 p-6 rounded-[20px] hover:border-[#e30e04] hover:bg-black/10 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold uppercase tracking-wider text-[#e30e04] mb-3 group-hover:text-black transition-colors">Beyond Events</h3>
+                  <p className="text-xs leading-relaxed text-black/80">
+                    They are not simply staging events. They are strengthening brands, shaping markets, transforming institutional cultures and building legacies that influence the future of leadership.
+                  </p>
+                </div>
               </Reveal>
-              <Reveal delay={0.3} className="space-y-4">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-[#e30e04]">More Than Speakers</h3>
-                <p className="text-sm leading-relaxed text-[#686869]">
-                  They choose The Speakers Firm™ because we deliver more than speakers. We provide influential thought leaders, exceptional talent, strategic thinkers and catalysts for transformation who command attention, challenge conventional thinking, and generate momentum that extends far beyond the room.
-                </p>
+              <Reveal delay={0.3} className="group border border-black/10 bg-black/5 p-6 rounded-[20px] hover:border-[#e30e04] hover:bg-black/10 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold uppercase tracking-wider text-[#e30e04] mb-3 group-hover:text-black transition-colors">More Than Speakers</h3>
+                  <p className="text-xs leading-relaxed text-black/80">
+                    They choose The Speakers Firm™ because we deliver more than speakers. We provide influential thought leaders, exceptional talent, strategic thinkers and catalysts for transformation who command attention, challenge conventional thinking, and generate momentum that extends far beyond the room.
+                  </p>
+                </div>
               </Reveal>
-              <Reveal delay={0.4} className="space-y-4">
-                <h3 className="text-lg font-bold uppercase tracking-wider text-[#e30e04]">Together We Move</h3>
-                <p className="text-sm leading-relaxed text-[#686869]">
-                  WE PROVIDE THE VOICES. YOU CREATE THE MOMENT. TOGETHER, WE MOVE INSTITUTIONS. Influential speakers. Exceptional talent. High impact formats that shape conversations, inspire decisive action and deliver measurable institutional value.
-                </p>
+              <Reveal delay={0.4} className="group border border-black/10 bg-black/5 p-6 rounded-[20px] hover:border-[#e30e04] hover:bg-black/10 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold uppercase tracking-wider text-[#e30e04] mb-3 group-hover:text-black transition-colors">Together We Move</h3>
+                  <p className="text-xs leading-relaxed text-black/80">
+                    We provide the voices. You create the moment. Together, we move institutions. Influential speakers. Exceptional talent. High impact formats that shape conversations, inspire decisive action and deliver measurable institutional value.
+                  </p>
+                </div>
               </Reveal>
             </div>
           </div>
@@ -289,12 +312,7 @@ export function BookASpeaker() {
                   </p>
                 </Reveal>
                 
-                <div className="mt-8 border-l-4 border-[#e30e04] pl-6 py-2">
-                  <p className="text-base font-bold uppercase text-[#e30e04] tracking-wider mb-2">PARTNER WITH US</p>
-                  <p className="text-sm font-semibold italic leading-relaxed text-[#212121]">
-                    "PARTNER WITH US TO TURN THE RIGHT VOICE INTO LASTING IMPACT. Book the right voice. Command the room. Influence decisions. Move institutions. Create lasting impact."
-                  </p>
-                </div>
+
 
                 <div className="mt-8 rounded-2xl bg-black/5 border border-black/10 p-6 space-y-3">
                   <p className="text-[11px] font-bold uppercase tracking-wider text-[#e30e04]">DIRECT BOARD DESK</p>
@@ -312,8 +330,5 @@ export function BookASpeaker() {
             </div>
           </div>
         </section>
-      </div>
-
-      <Footer />
     </main>;
 }
