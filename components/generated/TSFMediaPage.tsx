@@ -41,8 +41,8 @@ const pressFeatures = [{
   source: 'EVENING SHOW / OMNY.FM',
   title: 'In The Spotlight with Simphiwe Masiza',
   speaker: 'Simphiwe Masiza',
-  date: '24 AUG 2026',
-  image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1200&auto=format&fit=crop',
+  date: '15 AUG 2026',
+  image: '/hero_backgrounds/media-hero2.jpg',
   link: 'https://omny.fm/shows/evening-show/in-the-spotlight-with-simphiwe-masiza',
   linkLabel: 'Listen Now'
 }, {
@@ -270,8 +270,8 @@ export const TSFMediaPage = () => {
     }}>
         <div className="absolute inset-0 z-0 bg-[#111111]" aria-hidden="true">
           <picture className="absolute inset-0 h-full w-full">
-            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/media-mobile.jpg" />
-            <img src="/hero_backgrounds/media.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
+            <source media="(max-width: 767px)" srcSet="/hero_backgrounds/media-hero-mobile.jpg" />
+            <img src="/hero_backgrounds/media-hero.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
           </picture>
           <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.3)_100%)]" />
           <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_18%_36%,rgba(0,0,0,0.08),transparent_34%),linear-gradient(90deg,rgba(0,0,0,0.42)_0%,rgba(0,0,0,0.2)_42%,rgba(0,0,0,0.52)_100%)]" />
@@ -361,20 +361,20 @@ export const TSFMediaPage = () => {
                   href={item.link} 
                   target={item.link.startsWith('http') ? '_blank' : undefined} 
                   rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group relative flex aspect-[4/3] w-full flex-col justify-between overflow-hidden border border-white/10 bg-[#000000] p-5 text-white transition-transform duration-500 hover:-translate-y-2 sm:p-6 md:p-7 rounded-[18px]" 
+                  className="group relative flex aspect-[3/4] w-full flex-col justify-end overflow-hidden border border-white/10 bg-[#000000] p-5 text-white transition-transform duration-500 hover:-translate-y-2 sm:p-6 md:p-7 rounded-[18px]" 
                   style={{
-                    backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.94)), url(${item.image})`,
+                    backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.96)), url(${item.image})`,
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
                   }}
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.source}</span>
+                  <div className="absolute top-5 right-5 sm:top-6 sm:right-6 md:top-7 md:right-7">
                     <ArrowUpRight size={18} className="text-[#e30e04] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </div>
                   <div>
+                    <span className="mb-2 block text-[11px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.source}</span>
                     <h3 className="max-w-sm text-lg sm:text-xl font-bold leading-[1.1] tracking-[-0.03em]">{item.title}</h3>
-                    <div className="mt-5 flex items-end justify-between gap-4 border-t border-white/20 pt-4 md:mt-6">
+                    <div className="mt-4 flex items-end justify-between gap-4 border-t border-white/20 pt-4 md:mt-5">
                       <div>
                         <p className="text-xs text-[#AFB0B0]">{item.speaker}</p>
                         <p className="mt-1 text-[9px] font-bold tracking-[0.12em] text-[#AFB0B0]">{item.date}</p>
@@ -391,9 +391,9 @@ export const TSFMediaPage = () => {
         </div>
       </section>
 
-      <section id="media" className="relative py-12 sm:py-16 md:py-24 lg:py-32" style={{
+      {/* <section id="media" className="relative py-12 sm:py-16 md:py-24 lg:py-32" style={{
       backgroundColor: COLORS.black
-    }}><VerticalBorderLines isDark={true} /><div className="mx-auto max-w-[1440px] px-6 md:px-16"><SectionTag dark>WATCH &amp; LISTEN</SectionTag><Reveal><h2 className="mt-7 max-w-3xl text-3xl font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] sm:text-4xl md:text-5xl lg:text-6xl">Talks That Move the Room.</h2></Reveal><div className="mt-12 flex flex-nowrap gap-4 overflow-x-auto pb-3 md:mt-16 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">{reels.map((item, index) => <Reveal key={item.id} delay={index * 0.08}><article className="group w-[260px] flex-shrink-0 sm:w-[300px] md:w-[320px]"><div className="relative aspect-[4/3] overflow-hidden bg-[#393939]"><img src={item.image} alt={`${item.title} by ${item.speaker}`} className="h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" /><button type="button" aria-label={`Play ${item.title}`} className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#e30e04] text-white transition-transform group-hover:scale-110 md:h-16 md:w-16"><Play size={21} fill="currentColor" /></button><span className="absolute bottom-4 right-4 bg-[#000000] px-2 py-1 text-[10px] font-bold tracking-widest text-[#ffffff]">{item.duration}</span></div><h3 className="mt-5 max-w-lg text-xl font-bold leading-tight text-white md:text-2xl">{item.title}</h3><p className="mt-2 text-sm text-[#AFB0B0]">{item.speaker}</p></article></Reveal>)}</div></div></section>
+    }}><VerticalBorderLines isDark={true} /><div className="mx-auto max-w-[1440px] px-6 md:px-16"><SectionTag dark>WATCH &amp; LISTEN</SectionTag><Reveal><h2 className="mt-7 max-w-3xl text-3xl font-bold uppercase leading-[0.9] tracking-[-0.055em] text-[#ffffff] sm:text-4xl md:text-5xl lg:text-6xl">Talks That Move the Room.</h2></Reveal><div className="mt-12 flex flex-nowrap gap-4 overflow-x-auto pb-3 md:mt-16 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">{reels.map((item, index) => <Reveal key={item.id} delay={index * 0.08}><article className="group w-[260px] flex-shrink-0 sm:w-[300px] md:w-[320px]"><div className="relative aspect-[4/3] overflow-hidden bg-[#393939]"><img src={item.image} alt={`${item.title} by ${item.speaker}`} className="h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" /><button type="button" aria-label={`Play ${item.title}`} className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#e30e04] text-white transition-transform group-hover:scale-110 md:h-16 md:w-16"><Play size={21} fill="currentColor" /></button><span className="absolute bottom-4 right-4 bg-[#000000] px-2 py-1 text-[10px] font-bold tracking-widest text-[#ffffff]">{item.duration}</span></div><h3 className="mt-5 max-w-lg text-xl font-bold leading-tight text-white md:text-2xl">{item.title}</h3><p className="mt-2 text-sm text-[#AFB0B0]">{item.speaker}</p></article></Reveal>)}</div></div></section> */}
 
       <section className="relative py-12 sm:py-16 md:py-24 lg:py-32" style={{
       backgroundColor: COLORS.offWhite
