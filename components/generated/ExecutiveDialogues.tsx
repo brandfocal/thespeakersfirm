@@ -172,6 +172,26 @@ export function ExecutiveDialogues() {
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [errorMsg, setErrorMsg] = React.useState("");
 
+  React.useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+
+    if (document.getElementById("recaptcha-script")) return;
+
+    const script = document.createElement("script");
+    script.id = "recaptcha-script";
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("recaptcha-script");
+      if (el) el.remove();
+      const badge = document.querySelector(".grecaptcha-badge");
+      if (badge) badge.remove();
+    };
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

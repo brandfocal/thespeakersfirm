@@ -57,16 +57,11 @@ export async function POST(request: Request) {
 
     console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(formattedValues));
 
-    const userAgent = request.headers.get('user-agent') || '';
-    const forwardIp = request.headers.get('x-forwarded-for') || '';
-
     const response = await fetch(gfUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': authHeader,
-        'User-Agent': userAgent,
-        ...(forwardIp ? { 'X-Forwarded-For': forwardIp } : {})
+        'Authorization': authHeader
       },
       body: JSON.stringify(formattedValues)
     });
