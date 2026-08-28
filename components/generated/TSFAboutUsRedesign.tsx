@@ -270,8 +270,8 @@ const FloatingNavDisabled = () => {
 };
 export const WhatSetsUsApartSection = () => {
   return (
-    <section id="what-sets-us-apart" className="relative bg-[#000000] px-6 py-16 sm:px-12 sm:py-24 md:py-32 md:px-16 border-b border-[rgba(255,255,255,0.08)]" aria-labelledby="what-sets-us-apart-heading">
-      <VerticalBorderLines isDark />
+    <section id="what-sets-us-apart" className="relative bg-[#e30e04] px-6 py-16 sm:px-12 sm:py-24 md:py-32 md:px-16 border-b border-white/10" aria-labelledby="what-sets-us-apart-heading">
+      <VerticalBorderLines />
       <div className="mx-auto max-w-[1312px] relative z-10">
         <div className="mb-6 flex">
           <SectionTag>What Sets Us Apart</SectionTag>
@@ -280,21 +280,21 @@ export const WhatSetsUsApartSection = () => {
           <span>Precision. Discretion. Impact - At the Highest Level.</span>
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+          <div className="border border-white/20 bg-white/10 p-6 rounded-[22px] hover:border-white transition-all">
             <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Closed-Door, NDA-Protected Briefings</h3>
-            <p className="text-xs leading-relaxed text-[#A0A0A0]">For cabinet strategy, sovereign planning, or institutional pivots, we ensure airtight confidentiality from consultation to delivery.</p>
+            <p className="text-xs leading-relaxed text-white/90">For cabinet strategy, sovereign planning, or institutional pivots, we ensure airtight confidentiality from consultation to delivery.</p>
           </div>
-          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
-            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Executive-Only Strategy Sessions</h3>
-            <p className="text-xs leading-relaxed text-[#A0A0A0]">No spectators. No dilution. Just elite intelligence for decision-makers shaping capital, policy, and national direction.</p>
+          <div className="border border-white/20 bg-white/10 p-6 rounded-[22px] hover:border-white transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Executive-Only Strategy Sessions</h3>
+            <p className="text-xs leading-relaxed text-white/90">No spectators. No dilution. Just elite intelligence for decision-makers shaping capital, policy, and national direction.</p>
           </div>
-          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
+          <div className="border border-white/20 bg-white/10 p-6 rounded-[22px] hover:border-white transition-all">
             <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Crisis-Proven Delivery</h3>
-            <p className="text-xs leading-relaxed text-[#A0A0A0]">Post-crisis, mid-transition, or under scrutiny, we deploy trusted voices that rebuild trust, navigate complexity, and recalibrate vision.</p>
+            <p className="text-xs leading-relaxed text-white/90">Post-crisis, mid-transition, or under scrutiny, we deploy trusted voices that rebuild trust, navigate complexity, and recalibrate vision.</p>
           </div>
-          <div className="border border-[rgba(255,255,255,0.08)] bg-white/[0.02] p-6 rounded-[22px] hover:border-[#e30e04] transition-all">
-            <h3 className="font-bold text-base uppercase tracking-tight text-[#e30e04] mb-3">Bespoke Curation</h3>
-            <p className="text-xs leading-relaxed text-[#A0A0A0]">From fintech to feminist economics, cybersecurity to statecraft, every speaker is precision-picked to meet your mission, market, and moment.</p>
+          <div className="border border-white/20 bg-white/10 p-6 rounded-[22px] hover:border-white transition-all">
+            <h3 className="font-bold text-base uppercase tracking-tight text-white mb-3">Bespoke Curation</h3>
+            <p className="text-xs leading-relaxed text-white/90">From fintech to feminist economics, cybersecurity to statecraft, every speaker is precision-picked to meet your mission, market, and moment.</p>
           </div>
         </div>
       </div>
@@ -800,11 +800,11 @@ export const TSFAboutUsRedesign = () => {
     </div>
   </section>
 
-  <section id="brief-us" className="relative -mt-px overflow-hidden bg-[#000000] text-[#F5F5F5]">
+  <section id="brief-us" className="relative -mt-px overflow-hidden bg-[#e30e04] text-[#F5F5F5]">
     <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: NOISE_TEXTURE
       }} aria-hidden="true" />
-    <VerticalBorderLines isDark />
+    <VerticalBorderLines />
     <div className="relative z-30 mx-auto max-w-[1440px] px-6 py-12 sm:py-20 md:px-16 md:py-28 lg:py-32">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-8">
@@ -812,7 +812,7 @@ export const TSFAboutUsRedesign = () => {
           <AnimatedHeading lines={CTA_LINES} className="max-w-[960px] text-[clamp(2rem,10vw,4rem)] font-bold uppercase leading-[0.97] tracking-[-0.04em] sm:leading-[0.95]" />
         </div>
         <div className="flex items-center lg:col-span-4 lg:justify-end">
-          <Link href="/brief-us" className="flex w-full items-center justify-center gap-3 rounded-full bg-[#e30e04] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_16px_40px_rgba(227,14,4,0.3)] transition-all hover:-translate-y-1 hover:bg-[#c00c03] sm:w-auto sm:px-8 sm:py-5 sm:text-[12px]">
+          <Link href="/brief-us" className="flex w-full items-center justify-center gap-3 rounded-full bg-[#000000] px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-black/80 sm:w-auto sm:px-8 sm:py-5 sm:text-[12px]">
             <span>Brief The Speakers Firm</span>
             <ArrowUpRight className="h-4 w-4" />
           </Link>

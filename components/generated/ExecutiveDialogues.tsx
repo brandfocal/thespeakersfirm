@@ -68,6 +68,13 @@ const DIALOGUE_SERIES_DATA: DialogueSeries[] = [
     speakerName: "Dr. Reuel Khoza",
     youtubeId: "0ij-23dNHvM",
     description: "A deep dive roundtable dialogue into Dr. Reuel Khoza's perspective on legacy beyond leadership, ethics, and corporate governance."
+  },
+  {
+    id: "prof-mpedi-basics",
+    title: "Return to the basics, honour African wisdom, and learn from the eagle",
+    speakerName: "Prof. Letlhokwa Mpedi",
+    youtubeId: "K1pIbt8_ARQ",
+    description: "Prof. Mpedi reminds us to return to core values, respect African heritage, and glean guidance from the flight and habits of the eagle."
   }
 ];
 
@@ -153,6 +160,48 @@ import { X } from "lucide-react";
 export function ExecutiveDialogues() {
   const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
   const [showAll, setShowAll] = React.useState<boolean>(false);
+
+  // Subscription Form states
+  const [formData, setFormData] = React.useState({
+    fullName: "",
+    email: "",
+    company: "",
+    designation: ""
+  });
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMsg("");
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formId: 8,
+          values: {
+            "17": formData.fullName,
+            "14": formData.email,
+            "15": formData.company,
+            "16": formData.designation
+          }
+        })
+      });
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        const errData = await response.json().catch(() => ({}));
+        setErrorMsg(errData.error || "Failed to submit subscription.");
+      }
+    } catch (err) {
+      setErrorMsg("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const displayedVideos = showAll ? DIALOGUE_SERIES_DATA : DIALOGUE_SERIES_DATA.slice(0, 6);
   const activeVideo = activeVideoId ? DIALOGUE_SERIES_DATA.find(v => v.id === activeVideoId) : null;
@@ -379,31 +428,89 @@ export function ExecutiveDialogues() {
       </div>
     </section>
 
-    <section id="brief-us" className="relative -mt-px overflow-hidden bg-[#ffffff] py-20 lg:py-32">
+    <section id="brief-us" className="relative -mt-px overflow-hidden bg-[#e30e04] py-20 lg:py-32 text-white">
       <VerticalBorderLines />
-      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 text-center">
-        <Reveal>
-          <h2 className="text-[clamp(2.5rem,7vw,4.5rem)] font-bold tracking-tight leading-[1.05] uppercase mx-auto max-w-[1080px] text-black">
-            READY TO CONVENE<br />YOUR <span className="text-[#e30e04]">ECOSYSTEM?</span>
-          </h2>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mx-auto mt-6 max-w-[720px] text-[16px] sm:text-[18px] font-light leading-[1.65] text-[#686869]">
-            Contact The Speakers Firm to discuss bespoke roundtable design, speaker curation, and facilitation.
-          </p>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#e30e04] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-black" href="/brief-us">
-              <span>BRIEF US</span>
-              <ArrowRight size={16} />
-            </Link>
-            <Link className="inline-flex items-center justify-center gap-3 rounded-full border border-black/20 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.14em] text-black transition-colors duration-300 hover:bg-black hover:text-white" href="/find-a-speaker">
-              <span>EXPLORE SPEAKERS</span>
-              <ArrowRight size={16} />
-            </Link>
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-16 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="lg:col-span-5 text-left">
+          <Reveal>
+            <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-bold uppercase leading-[0.95] tracking-[-0.05em] text-white">
+              Future Executive Dialogues.
+            </h2>
+            <p className="mt-6 max-w-md text-white/90 text-sm md:text-base leading-relaxed font-light">
+              Subscribe to receive private invitations, briefing papers, and strategic intelligence from our closed-door roundtable dialogues.
+            </p>
+          </Reveal>
+        </div>
+        <div className="lg:col-span-7">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 backdrop-blur-sm">
+            {isSubmitted ? (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center py-8">
+                <h3 className="text-xl md:text-2xl font-serif italic text-white mb-2">Thank you for subscribing.</h3>
+                <p className="text-sm text-white/80">You have been added to the Executive Dialogues registry.</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <label className="flex flex-col gap-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Full Name*</span>
+                    <input 
+                      required 
+                      type="text"
+                      placeholder="e.g. Sipho Nkosi"
+                      className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors placeholder-white/40"
+                      value={formData.fullName}
+                      onChange={e => setFormData({ ...formData, fullName: e.target.value })}
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Email Address*</span>
+                    <input 
+                      required 
+                      type="email"
+                      placeholder="e.g. sipho@company.co.za"
+                      className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors placeholder-white/40"
+                      value={formData.email}
+                      onChange={e => setFormData({ ...formData, email: e.target.value })}
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Company / Organisation*</span>
+                    <input 
+                      required 
+                      type="text"
+                      placeholder="e.g. Standard Bank"
+                      className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors placeholder-white/40"
+                      value={formData.company}
+                      onChange={e => setFormData({ ...formData, company: e.target.value })}
+                    />
+                  </label>
+                  <label className="flex flex-col gap-1.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Designation / Role*</span>
+                    <input 
+                      required 
+                      type="text"
+                      placeholder="e.g. Head of Strategy"
+                      className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors placeholder-white/40"
+                      value={formData.designation}
+                      onChange={e => setFormData({ ...formData, designation: e.target.value })}
+                    />
+                  </label>
+                </div>
+                {errorMsg && <p className="text-black font-bold text-xs bg-white/90 px-3 py-1.5 rounded-lg self-start">{errorMsg}</p>}
+                <div className="mt-2 flex justify-end">
+                  <button 
+                    disabled={isSubmitting} 
+                    type="submit" 
+                    className="flex items-center justify-center gap-3 rounded-full bg-[#000000] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.1em] text-white shadow-lg transition-all hover:bg-black/80 disabled:opacity-50"
+                  >
+                    <span>{isSubmitting ? "Subscribing..." : "Subscribe Now"}</span>
+                    <ArrowRight size={14} />
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   </div>;

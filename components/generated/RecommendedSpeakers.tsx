@@ -179,19 +179,21 @@ export const RecommendedSpeakers = () => {
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-16">
         
         {/* Section Header */}
-        <div className="mb-10">
-          <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-            <span>SEPTEMBER | HERITAGE MONTH</span>
+        <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start">
+          <div className="lg:col-span-6">
+            <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
+              <span>SEPTEMBER | HERITAGE MONTH</span>
+            </div>
+            <h2 id="recommended-heading" className="mt-6 text-[clamp(2.5rem,5vw,3.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-white">
+              <span>Book Influential African Voices.</span><br />
+              <span className="text-[#e30e04]">Shape the Future Through Heritage.</span>
+            </h2>
           </div>
-          <h2 id="recommended-heading" className="mt-6 text-[clamp(2.5rem,5vw,3.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-white">
-            <span>Book Influential African Voices.</span><br />
-            <span className="text-[#e30e04]">Shape the Future Through Heritage.</span>
-          </h2>
-          <div className="mt-6 space-y-4 text-sm md:text-base text-white/60 max-w-none leading-relaxed">
-            <p>
+          <div className="lg:col-span-6 lg:mt-14">
+            <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
               Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion. The Speakers Firm™ connects organisations with distinguished cultural leaders, historians, artists, storytellers and thought leaders, strategically matched to your audience and objectives. From corporate events and leadership dialogues to masterclasses and cultural forums, we curate voices that deepen understanding, inspire action and create lasting institutional value. This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
             </p>
-            <p className="font-bold text-[#e30e04] tracking-wider mt-6 text-xs uppercase">
+            <p className="font-bold text-[#e30e04] tracking-widest mt-6 text-xs uppercase border-l-2 border-[#e30e04] pl-4">
               BOOK THE RIGHT VOICE. HONOUR HERITAGE. INSPIRE PROGRESS.
             </p>
           </div>

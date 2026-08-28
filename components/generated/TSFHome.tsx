@@ -3690,8 +3690,7 @@ const BriefBureauFormSection = () => {
     }
   };
 
-  return <section id="brief-us" className="relative w-full border-t" style={{
-    backgroundColor: COLORS.offWhite,
+  return <section id="brief-us" className="relative w-full border-t bg-[#e30e04]" style={{
     borderColor: SOFT_RULE_COLOR
   }}>
       <VerticalBorderLines />
@@ -3699,7 +3698,7 @@ const BriefBureauFormSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
           <div className="lg:col-span-5">
             <AnimatedWordHeading as="h2" lines={BRIEF_HEADING_LINES} className="text-[clamp(2.75rem,11vw,4rem)] font-bold tracking-[-0.05em] leading-[0.95] uppercase" style={{
-            color: COLORS.black
+            color: COLORS.offWhite
           }} />
             <motion.p initial={{
             opacity: 0,
@@ -3712,12 +3711,12 @@ const BriefBureauFormSection = () => {
           }} transition={{
             delay: 0.16
           }} className="text-[18px] md:text-[22px] font-normal leading-[1.55] mt-8 max-w-[440px]" style={{
-            color: COLORS.gray
+            color: 'rgba(255, 255, 255, 0.9)'
           }}>
               Tell us about your event. We will find the right voice for it.
             </motion.p>
           </div>
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 text-white">
             <AnimatePresence mode="wait">
               {!isSubmitted && <motion.form key="brief-form" initial={{
               opacity: 1,
@@ -3731,40 +3730,40 @@ const BriefBureauFormSection = () => {
             }} onSubmit={handleSubmit} className="flex flex-col gap-6" aria-label="Brief the Bureau contact form">
                   
                   {/* Step Tracker */}
-                  <div className="pb-4 border-b border-black/5 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-[#686869]">
+                  <div className="pb-4 border-b border-white/10 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-white/60">
                     <span>Step {step} of 3</span>
-                    <span className="text-[#e30e04]">{step === 1 ? 'Identity' : step === 2 ? 'Logistics' : 'Strategic'}</span>
+                    <span className="text-black font-extrabold bg-white px-2 py-0.5 rounded">{step === 1 ? 'Identity' : step === 2 ? 'Logistics' : 'Strategic'}</span>
                   </div>
 
                   <AnimatePresence mode="wait">
                     {step === 1 && (
                       <motion.fieldset key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Institutional Identity</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/15 pb-3">Institutional Identity</h3>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Full Name*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
-                            {errors.fullName && <p className="text-[#e30e04] text-xs">{errors.fullName}</p>}
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Full Name*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.fullName} onChange={e => handleFieldChange("fullName", e.target.value)} />
+                            {errors.fullName && <p className="text-black text-xs font-bold">{errors.fullName}</p>}
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Designation*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Corporate Designation*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.jobTitle} onChange={e => handleFieldChange("jobTitle", e.target.value)} />
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Organisation Name*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Organisation Name*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.organisation} onChange={e => handleFieldChange("organisation", e.target.value)} />
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Corporate Email*</span>
-                            <input required type="email" className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Corporate Email*</span>
+                            <input required type="email" className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.email} onChange={e => handleFieldChange("email", e.target.value)} />
                           </label>
                           <label className="flex flex-col gap-2 sm:col-span-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Direct Contact Number*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Direct Contact Number*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.mobile} onChange={e => handleFieldChange("mobile", e.target.value)} />
                           </label>
                         </div>
                         <div className="mt-4 flex justify-end">
-                          <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                          <button className="flex items-center gap-2 rounded-full bg-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black/80 transition-colors duration-300" type="button" onClick={nextStep}>
                             <span>Next Step</span>
                             <ArrowRight size={14} />
                           </button>
@@ -3774,54 +3773,54 @@ const BriefBureauFormSection = () => {
 
                     {step === 2 && (
                       <motion.fieldset key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">Engagement Logistics</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/15 pb-3">Engagement Logistics</h3>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Nature of Engagement*</span>
-                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
-                              <option value="" disabled>Select option...</option>
-                              <option value="Executive Boardroom Strategy">Executive Boardroom Strategy</option>
-                              <option value="Annual General Meeting">Annual General Meeting</option>
-                              <option value="Leadership Summit">Leadership Summit</option>
-                              <option value="Brand Campaign">Brand Campaign</option>
-                              <option value="Keynote Address">Keynote Address</option>
-                              <option value="Panel Facilitation">Panel Facilitation</option>
-                              <option value="Virtual Broadcast">Virtual Broadcast</option>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Nature of Engagement*</span>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
+                              <option value="" disabled className="text-black bg-white">Select option...</option>
+                              <option value="Executive Boardroom Strategy" className="text-black bg-white">Executive Boardroom Strategy</option>
+                              <option value="Annual General Meeting" className="text-black bg-white">Annual General Meeting</option>
+                              <option value="Leadership Summit" className="text-black bg-white">Leadership Summit</option>
+                              <option value="Brand Campaign" className="text-black bg-white">Brand Campaign</option>
+                              <option value="Keynote Address" className="text-black bg-white">Keynote Address</option>
+                              <option value="Panel Facilitation" className="text-black bg-white">Panel Facilitation</option>
+                              <option value="Virtual Broadcast" className="text-black bg-white">Virtual Broadcast</option>
                             </select>
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Proposed Date(s)*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 September 2026" />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Proposed Date(s)*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.eventDate} onChange={e => handleFieldChange("eventDate", e.target.value)} placeholder="e.g. 15 September 2026" />
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Location*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Location*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.city} onChange={e => handleFieldChange("city", e.target.value)} placeholder="e.g. Johannesburg, South Africa" />
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Estimated Audience Size*</span>
-                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
-                              <option value="" disabled>Select range...</option>
-                              <option value="Under 50 (Executive/Closed Door)">Under 50 (Executive/Closed Door)</option>
-                              <option value="50-200">50–200</option>
-                              <option value="200-500">200–500</option>
-                              <option value="500+ (Large Scale Summit)">500+ (Large Scale Summit)</option>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Estimated Audience Size*</span>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
+                              <option value="" disabled className="text-black bg-white">Select range...</option>
+                              <option value="Under 50 (Executive/Closed Door)" className="text-black bg-white">Under 50 (Executive/Closed Door)</option>
+                              <option value="50-200" className="text-black bg-white">50–200</option>
+                              <option value="200-500" className="text-black bg-white">200–500</option>
+                              <option value="500+ (Large Scale Summit)" className="text-black bg-white">500+ (Large Scale Summit)</option>
                             </select>
                           </label>
                           <label className="flex flex-col gap-2 sm:col-span-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Allocated Talent Budget*</span>
-                            <select required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors animate-none" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
-                              <option value="" disabled>Select range...</option>
-                              <option value="To be Determined">To be Determined</option>
-                              <option value="R20k–R40k">R20k–R40k</option>
-                              <option value="R40k–R80k">R40k–R80k</option>
-                              <option value="R80k–R150k">R80k–R150k</option>
-                              <option value="R150k+">R150k+</option>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Allocated Talent Budget*</span>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
+                              <option value="" disabled className="text-black bg-white">Select range...</option>
+                              <option value="To be Determined" className="text-black bg-white">To be Determined</option>
+                              <option value="R20k–R40k" className="text-black bg-white">R20k–R40k</option>
+                              <option value="R40k–R80k" className="text-black bg-white">R40k–R80k</option>
+                              <option value="R80k–R150k" className="text-black bg-white">R80k–R150k</option>
+                              <option value="R150k+" className="text-black bg-white">R150k+</option>
                             </select>
                           </label>
                         </div>
                         <div className="mt-4 flex justify-between">
-                          <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                          <button className="flex items-center gap-2 rounded-full border border-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-black hover:bg-black hover:text-white transition-colors duration-300" type="button" onClick={nextStep}>
+                          <button className="text-[12px] font-bold uppercase text-white/60 hover:text-white" type="button" onClick={prevStep}>Back</button>
+                          <button className="flex items-center gap-2 rounded-full bg-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black/80 transition-colors duration-300" type="button" onClick={nextStep}>
                             <span>Next Step</span>
                             <ArrowRight size={14} />
                           </button>
@@ -3831,20 +3830,20 @@ const BriefBureauFormSection = () => {
 
                     {step === 3 && (
                       <motion.fieldset key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-6">
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-black border-b pb-3">The Strategic Brief</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/15 pb-3">The Strategic Brief</h3>
                         <div className="grid grid-cols-1 gap-6">
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Topic / Theme Required*</span>
-                            <input required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. AI Transformation, Macroeconomics" />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Topic / Theme Required*</span>
+                            <input required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors placeholder-white/40" value={formData.expertise} onChange={e => handleFieldChange("expertise", e.target.value)} placeholder="e.g. AI Transformation, Macroeconomics" />
                           </label>
                           <label className="flex flex-col gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#686869]">Strategic Objective &amp; Context*</span>
-                            <textarea required className="border border-black/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors min-h-[120px] resize-none" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Strategic Objective &amp; Context*</span>
+                            <textarea required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors min-h-[120px] resize-none placeholder-white/40" value={formData.eventObjectives} onChange={e => handleFieldChange("eventObjectives", e.target.value)} placeholder="What specific shift must this engagement achieve?" />
                           </label>
                         </div>
                         <div className="mt-4 flex justify-between">
-                          <button className="text-[12px] font-bold uppercase text-[#686869] hover:text-black" type="button" onClick={prevStep}>Back</button>
-                          <button disabled={isSubmitting} className="flex items-center gap-2 rounded-full border border-red bg-[#e30e04] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black hover:border-black transition-colors duration-300 disabled:opacity-50" type="submit">
+                          <button className="text-[12px] font-bold uppercase text-white/60 hover:text-white" type="button" onClick={prevStep}>Back</button>
+                          <button disabled={isSubmitting} className="flex items-center gap-2 rounded-full bg-black px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-black/80 transition-colors duration-300 disabled:opacity-50" type="submit">
                             <span>{isSubmitting ? "Requesting..." : "Request Talent Recommendations"}</span>
                           </button>
                         </div>
@@ -3863,9 +3862,7 @@ const BriefBureauFormSection = () => {
               duration: 0.45,
               ease: [0.22, 1, 0.36, 1]
             }} className="min-h-[360px] flex items-center justify-center text-center">
-                  <p className="font-serif text-[34px] md:text-[48px] italic tracking-[-0.04em] leading-[1.15] max-w-[720px]" style={{
-                color: COLORS.black
-              }}>We have received your brief. Expect a response within 24 hours.</p>
+                  <p className="font-serif text-[34px] md:text-[48px] italic tracking-[-0.04em] leading-[1.15] max-w-[720px] text-white">We have received your brief. Expect a response within 24 hours.</p>
                 </motion.div>}
             </AnimatePresence>
           </div>
@@ -5213,15 +5210,15 @@ export const TheSpeakersFirmHome = () => {
       */}
 
       <section aria-label="Placement principle" className="relative w-full" style={{
-      backgroundColor: COLORS.offWhite
+      backgroundColor: COLORS.red
     }}>
         <VerticalBorderLines />
         <div className="relative z-10 mx-auto max-w-[1440px] px-6 py-8 text-center sm:py-10 md:px-16 md:py-12">
           <AnimatedWordHeading as="h2" lines={BRIDGE_HEADING_LINES} className="mx-auto max-w-[1180px] font-serif text-[clamp(3rem,15vw,7.625rem)] font-light italic leading-[0.98] tracking-[-0.06em]" style={{
-          color: COLORS.black
+          color: COLORS.offWhite
         }} />
           <p className="mx-auto mt-4 max-w-[640px] text-[18px] font-light leading-[1.7] md:text-[22px]" style={{
-          color: COLORS.gray
+          color: 'rgba(255, 255, 255, 0.9)'
         }}>The right voice for the right room, every time.</p>
         </div>
       </section>
