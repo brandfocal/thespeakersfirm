@@ -44,15 +44,18 @@ export async function POST(request: Request) {
       formattedValues[`input_${cleanKey}`] = values[key];
     });
 
-    const username = process.env.GF_CONSUMER_KEY || '';
-    const password = process.env.GF_CONSUMER_SECRET || '';
-    
+    const username = process.env.GF_CONSUMER_KEY || process.env.WP_CONSUMER_KEY || process.env.WP_GF_CONSUMER_KEY || '';
+    const password = process.env.GF_CONSUMER_SECRET || process.env.WP_CONSUMER_SECRET || process.env.WP_GF_CONSUMER_SECRET || '';
+    const gfApiUrl = process.env.GF_API_URL || process.env.WP_API_URL || 'https://cms.thespeakersfirm.co.za/wp-json/gf/v2';
+
     if (!username || !password) {
-      console.warn("Gravity Forms REST API keys are not configured. Submissions will fail.");
+      console.error("Gravity Forms REST API credentials are missing from environment variables.");
+      return NextResponse.json({ 
+        error: "Server Configuration Error: Missing Gravity Forms API keys (GF_CONSUMER_KEY / GF_CONSUMER_SECRET) in environment variables. Please configure these in your local environment or Vercel dashboard." 
+      }, { status: 500 });
     }
 
     const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
-    const gfApiUrl = process.env.GF_API_URL || 'https://yourdomain.com/wp-json/gf/v2';
     const separator = gfApiUrl.includes('?') ? '&' : '?';
     const gfUrl = `${gfApiUrl}/forms/${formId}/submissions${separator}consumer_key=${username}&consumer_secret=${password}`;
 
