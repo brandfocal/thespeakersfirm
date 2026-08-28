@@ -176,12 +176,33 @@ export function ExecutiveDialogues() {
     e.preventDefault();
     setIsSubmitting(true);
     setErrorMsg("");
+
+    let recaptchaToken = "";
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (siteKey && typeof window !== "undefined" && (window as any).grecaptcha) {
+      try {
+        await new Promise<void>((resolve, reject) => {
+          (window as any).grecaptcha.ready(async () => {
+            try {
+              recaptchaToken = await (window as any).grecaptcha.execute(siteKey, { action: 'submit_enquiry' });
+              resolve();
+            } catch (err) {
+              reject(err);
+            }
+          });
+        });
+      } catch (e) {
+        console.error("reCAPTCHA execution failed:", e);
+      }
+    }
+
     try {
       const response = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           formId: 8,
+          recaptchaToken,
           values: {
             "17": formData.fullName,
             "14": formData.email,
