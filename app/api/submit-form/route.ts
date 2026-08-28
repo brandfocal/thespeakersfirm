@@ -53,7 +53,8 @@ export async function POST(request: Request) {
 
     const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
     const gfApiUrl = process.env.GF_API_URL || 'https://yourdomain.com/wp-json/gf/v2';
-    const gfUrl = `${gfApiUrl}/forms/${formId}/submissions`;
+    const separator = gfApiUrl.includes('?') ? '&' : '?';
+    const gfUrl = `${gfApiUrl}/forms/${formId}/submissions${separator}consumer_key=${username}&consumer_secret=${password}`;
 
     console.log("Submitting to Gravity Forms. Endpoint:", gfUrl, "Payload:", JSON.stringify(formattedValues));
 
@@ -62,7 +63,7 @@ export async function POST(request: Request) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': authHeader,
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Vercel-Serverless-Proxy'
       },
       body: JSON.stringify(formattedValues)
     });
