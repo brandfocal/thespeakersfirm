@@ -620,6 +620,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   bio: <span>Broadcast Producer, Executive MC, Moderator & Global Voice Artist</span>,
   trackId: 'mc-and-facilitators'
 }, {
+  id: 'ntsoaki-sibiya',
+  name: 'Ntsoaki Sibiya',
+  category: ['Keynote', 'Leadership'],
+  image: '/speaker_thumbnails/Ntsoaki-Sibiya-The-Speakers-Firm.jpg',
+  alt: 'Ntsoaki Sibiya',
+  quote: 'Growth is not automatic. Growth is a managed process — if you are going to grow, it has to be intentional.',
+  youtubeId: 'A05nON7UWKg',
+  topics: [],
+  tint: 'rgba(84, 133, 96, 0.22)',
+  bio: <span>Award-Winning Mentorship Maven, Enterprise Strategist & Founder</span>,
+  trackId: 'inspirational-keynote-speakers'
+}, {
   id: 'penny-lebyane',
   name: 'Penny Lebyane',
   category: 'MCs',

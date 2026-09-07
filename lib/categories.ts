@@ -263,7 +263,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "entrepreneurship": [
     "rekgotsofetse-chikane", "lebo-gunguluza", "thokozani-nkosi", "anael-granoux",
     "joshua-maluleke", "bulelani-balabala", "eunice-cross", "proverb", "thuli-magubane",
-    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi"
+    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya"
   ],
   "masculinity": [
     "martin-pelders", "thato-tt-mbha", "apostle-kabelo-moroke", "mbuyiselo-botha",
@@ -277,7 +277,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "ndileka-mandela", "azania-mosaka", "tryphosa-ramano", "gerry-rantseli-elsdon",
     "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "nene-molefi",
     "vumile-msweli", "linda-maqoma", "samke-mhlongo", "joy-machoene-kaapu", "delia-ndlovu",
-    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse", "gcina-mhlophe-becker", "jessica-dube"
+    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse", "gcina-mhlophe-becker", "jessica-dube", "ntsoaki-sibiya"
   ],
   "futurists": [
     "mushambi-mutuma", "stafford-masie", "john-sanei", "tseliso-mohlomi", "puleng-mokhoalibe", "alistair-mokoena"

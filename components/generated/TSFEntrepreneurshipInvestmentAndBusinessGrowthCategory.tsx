@@ -169,6 +169,18 @@ const speakers: Speaker[] = [
       "Founder Leadership Dynamics"
     ],
     "path": "/tracks/inspirational-keynote-speakers/theo-baloyi"
+  },
+  {
+    "id": "ntsoaki-sibiya",
+    "name": "Ntsoaki Sibiya",
+    "role": "Award-Winning Mentorship Maven & Enterprise Strategist",
+    "image": "/speaker_thumbnails/Ntsoaki-Sibiya-The-Speakers-Firm.jpg",
+    "topics": [
+      "Scaling Enterprises & Operations",
+      "Sustaining High-Growth Businesses",
+      "Founder Leadership Dynamics"
+    ],
+    "path": "/tracks/inspirational-keynote-speakers/ntsoaki-sibiya"
   }
 ];
 

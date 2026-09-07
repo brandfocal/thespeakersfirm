@@ -71,6 +71,13 @@ const speakers: Speaker[] = [{
   topics: ['Courageous Leadership & Decision Making', 'Corporate Strategy Execution'],
   path: '/tracks/leadership-governance-and-risk-intelligence/zukie-siyotula'
 }, {
+  id: 'ntsoaki-sibiya',
+  name: 'Ntsoaki Sibiya',
+  role: 'Award-Winning Mentorship Maven & Enterprise Strategist',
+  image: '/speaker_thumbnails/Ntsoaki-Sibiya-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/ntsoaki-sibiya'
+}, {
   id: 'nombasa-tsengwa',
   name: 'Dr Nombasa Tsengwa',
   role: 'Mining Executive, Sustainability Leader & Advocate for Women',
