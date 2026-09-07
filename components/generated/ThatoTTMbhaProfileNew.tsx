@@ -80,7 +80,7 @@ export const AboutTeamSection = () => {
       date: "2023",
       action: "Read Article",
       url: "https://vutivibusiness.co.za/business/mbhas-entrepreneurship-journey/",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpeg"
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-16.jpg"
     },
     {
       id: "mbha-art-2",
@@ -89,7 +89,7 @@ export const AboutTeamSection = () => {
       date: "28 Jul 2023",
       action: "Read Article",
       url: "https://www.snl24.com/dailysun/celebs/south-african-businessman-to-hand-over-five-school-libraries-20230728/",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-5.jpg"
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-17.jpg"
     }
   ];
 
@@ -113,8 +113,8 @@ export const AboutTeamSection = () => {
       speakerDesignation="Social Entrepreneur, Master Practitioner in Real Estate MP(RE) & Chartered Marketer CM(SA)"
       speakerRole="Founder & CEO of Mzansi Cribs, TTMBHA Financial Services & Amatyma Community Drive NPC"
       speakerRef="TSF-TM-36"
-      heroBackgroundImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-11.jpg"
-      biographyImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-12.jpeg"
+      heroBackgroundImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-12.jpg"
+      biographyImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-13.jpg"
       bioHook="“Umuntu Ngumuntu Ngabantu: Empowering communities through real estate, financial accessibility, and purpose-driven brotherhood.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}

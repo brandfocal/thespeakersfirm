@@ -2879,133 +2879,133 @@ const SPEAKER_VIDEOS = [
     title: 'Callan Abrahams',
     subtitle: 'The Voice of Resilience & Leadership Strategist',
     description: 'Callan Abrahams shares decisive insights on leveraging data strategy, machine learning, and applied data science to drive business value.',
-    thumbnail: 'https://img.youtube.com/vi/yuEmR7eAaHo/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/yuEmR7eAaHo/maxresdefault.jpg'
   },
   {
     id: 'GKwul25BeYM',
     title: 'Kayise Ngqula',
     subtitle: 'Media Executive, Broadcaster & Autism Advocate',
     description: 'Kayise Ngqula’s work spans broadcasting, media production, and social impact advocacy, bringing authentic conversation and stage presence to every room.',
-    thumbnail: 'https://img.youtube.com/vi/GKwul25BeYM/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/GKwul25BeYM/maxresdefault.jpg'
   },
   {
     id: '_uVqIYGAjEQ',
     title: 'Thato "TT" Mbha',
     subtitle: 'Social Entrepreneur, MP(RE) & CM(SA)',
     description: 'TT Mbha is an award-winning social entrepreneur, Master Practitioner in Real Estate MP(RE), and Chartered Marketer CM(SA) with a 25-year track record across real estate, financial empowerment, and media.',
-    thumbnail: 'https://img.youtube.com/vi/_uVqIYGAjEQ/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/_uVqIYGAjEQ/maxresdefault.jpg'
   },
   {
     id: '-vGv50Cq8Nw',
     title: 'Dr. Billy Selekane',
     subtitle: 'Keynote Speaker, Author & Organisational Culture Specialist',
     description: 'Dr. Billy Selekane is an internationally acclaimed inspirational speaker and organizational culture expert, transforming leadership effectiveness and team performance.',
-    thumbnail: 'https://img.youtube.com/vi/-vGv50Cq8Nw/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/-vGv50Cq8Nw/maxresdefault.jpg'
   },
   {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela',
     subtitle: 'UK Country Head, Brand South Africa',
     description: 'Equipping leaders with practical strategies at the intersection of business, investment, and global strategy.',
-    thumbnail: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/SEeymv8o9OY/maxresdefault.jpg'
   },
   {
     id: 'XiRZfz001Og',
     title: 'Prince Mashele',
     subtitle: 'Political Scientist, Author & Public Intellectual',
     description: 'Delivering bold political intelligence, strategic insights, and thought-provoking perspectives to help leaders navigate today\'s realities.',
-    thumbnail: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/XiRZfz001Og/maxresdefault.jpg'
   },
   {
     id: 'gR9vlxv_y4o',
     title: 'Noni Khumalo',
     subtitle: 'Broadcaster, Producer & MC',
     description: 'An award-winning broadcaster and dynamic speaker embodying the power of purpose, presence, and possibility.',
-    thumbnail: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/gR9vlxv_y4o/maxresdefault.jpg'
   },
   {
     id: 'A05nON7UWKg',
     title: 'Ntsoaki Sibiya',
     subtitle: 'Mentorship Maven, Enterprise & Founder Development',
     description: 'An award-winning mentor challenging conventional thinking and reminding leaders that growth begins with capable people.',
-    thumbnail: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/A05nON7UWKg/maxresdefault.jpg'
   },
   {
     id: 'BW1M_Pa8DJo',
     title: 'Musa Sono',
     subtitle: 'Agripreneur & Motivational Speaker',
     description: 'A dynamic young leader, entrepreneur, and motivational speaker bringing a fresh voice to conversations around purpose and discipline.',
-    thumbnail: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/BW1M_Pa8DJo/maxresdefault.jpg'
   },
   {
     id: 'wIt-HmG5RwQ',
     title: 'Dr. Tumelo Chaka',
     subtitle: 'The Brand Economist™',
     description: 'Meet Dr. Tumelo Chaka, sharing insights at the intersection of brand strategy, consumer culture, and commercial growth.',
-    thumbnail: 'https://img.youtube.com/vi/wIt-HmG5RwQ/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/wIt-HmG5RwQ/maxresdefault.jpg'
   },
   {
     id: 'YVgFd5ljYJI',
     title: 'Apostle Dr. Steven Thebe Molakeng',
     subtitle: 'Thought Leader, Pastor & Speaker',
     description: 'Apostle Dr. Steven Thebe Molakeng brings together insight, purpose, and lived experience to create conversations that challenge and inspire.',
-    thumbnail: 'https://img.youtube.com/vi/YVgFd5ljYJI/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/YVgFd5ljYJI/maxresdefault.jpg'
   },
   {
     id: 'VHrJM-9U_IM',
     title: 'Jessica Dube',
     subtitle: 'Broadcast Producer, Presenter & Global Voice Artist',
     description: 'Jessica Dube brings versatility, presence, and a deep understanding of storytelling, media production, and compelling communication.',
-    thumbnail: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/VHrJM-9U_IM/maxresdefault.jpg'
   },
   {
     id: 'STtoaFX7A-I',
     title: 'Dr. Pali Lehohla',
     subtitle: 'Economist & Former Statistician-General of South Africa',
     description: 'Connecting statistical data to the realities of society, leadership, and public policy.',
-    thumbnail: 'https://img.youtube.com/vi/STtoaFX7A-I/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/STtoaFX7A-I/maxresdefault.jpg'
   },
   {
     id: 'UOeqwEC-nxA',
     title: 'Palesa Dooms',
     subtitle: 'Public Speaking Coach, Speaker & Founder of Unforgettable Speakers',
     description: 'An award-winning public speaking coach helping leaders craft unforgettable messages and command the stage with confidence.',
-    thumbnail: 'https://img.youtube.com/vi/UOeqwEC-nxA/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/UOeqwEC-nxA/maxresdefault.jpg'
   },
   {
     id: 'QVZzW-RGj0g',
     title: 'Prof. Shingai Mutambirwa',
     subtitle: 'Head of Urology, Sefako Makgatho Health Sciences University',
     description: 'A leading urologist, academic, and health advocate sharing vital insights on men\'s health, wellness, and medical innovation.',
-    thumbnail: 'https://img.youtube.com/vi/QVZzW-RGj0g/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/QVZzW-RGj0g/maxresdefault.jpg'
   },
   {
     id: 'gVh6u7s6yR4',
     title: 'Dr. Jerry Gule',
     subtitle: 'Director & Executive Coach, Gule Executive Coaching',
     description: 'An experienced executive coach and business leader guiding professionals in strategic development, leadership, and organizational growth.',
-    thumbnail: 'https://img.youtube.com/vi/gVh6u7s6yR4/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/gVh6u7s6yR4/maxresdefault.jpg'
   },
   {
     id: '7783OZjC6go',
     title: 'Lerato Sithole',
     subtitle: 'CEO of Think & Grow Rich Africa & Visionary Coach',
     description: 'Lerato Sithole continues to champion a new generation of African thinkers, entrepreneurs and leaders who are ready to turn possibility into progress.',
-    thumbnail: 'https://img.youtube.com/vi/7783OZjC6go/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/7783OZjC6go/maxresdefault.jpg'
   },
   {
     id: '6gnc4UHJNpQ',
     title: 'Amanda John-Ncube',
     subtitle: 'Leadership Coach & Speaker',
     description: 'Amanda John-Ncube brings a strong voice to conversations that shape the future of leadership and organizational potential.',
-    thumbnail: 'https://img.youtube.com/vi/6gnc4UHJNpQ/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/6gnc4UHJNpQ/maxresdefault.jpg'
   },
   {
     id: '_aQG5xdGL34',
     title: 'Dr. David Molapo',
     subtitle: 'Founder of I Can Leadership Institute Africa & Human Potential Strategist',
     description: 'Dr. David Molapo brings energy, wisdom and a distinctly African perspective to global platforms, inspiring leaders to unlock human potential.',
-    thumbnail: 'https://img.youtube.com/vi/_aQG5xdGL34/hqdefault.jpg'
+    thumbnail: 'https://img.youtube.com/vi/_aQG5xdGL34/maxresdefault.jpg'
   }
 ];
 

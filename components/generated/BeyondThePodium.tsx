@@ -315,7 +315,11 @@ export const BeyondThePodium: React.FC = () => {
                 <div className="tsf-cinematic-preview relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-[18px] border border-[#333333] transition-colors duration-300 group-hover:border-[#e30e04]/70" aria-label={`${series.speakerName} cinematic video preview`} role="img">
                   {/* YouTube Thumbnail Background with Grayscale-to-Color Transition */}
                   <img 
-                    src={`https://img.youtube.com/vi/${series.youtubeId}/hqdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${series.youtubeId}/maxresdefault.jpg`}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = `https://img.youtube.com/vi/${series.youtubeId}/hqdefault.jpg`;
+                    }}
                     alt={`${series.speakerName} video thumbnail`}
                     className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
                   />

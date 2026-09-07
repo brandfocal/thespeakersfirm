@@ -158,82 +158,82 @@ const videos = [
   {
     id: 'yuEmR7eAaHo',
     title: 'Callan Abrahams Profile',
-    image: 'https://img.youtube.com/vi/yuEmR7eAaHo/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/yuEmR7eAaHo/maxresdefault.jpg'
   },
   {
     id: 'GKwul25BeYM',
     title: 'Kayise Ngqula Profile',
-    image: 'https://img.youtube.com/vi/GKwul25BeYM/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/GKwul25BeYM/maxresdefault.jpg'
   },
   {
     id: '_uVqIYGAjEQ',
     title: 'Thato "TT" Mbha Profile',
-    image: 'https://img.youtube.com/vi/_uVqIYGAjEQ/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/_uVqIYGAjEQ/maxresdefault.jpg'
   },
   {
     id: '-vGv50Cq8Nw',
     title: 'Dr. Billy Selekane Profile',
-    image: 'https://img.youtube.com/vi/-vGv50Cq8Nw/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/-vGv50Cq8Nw/maxresdefault.jpg'
   },
   {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela Profile',
-    image: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/SEeymv8o9OY/maxresdefault.jpg'
   },
   {
     id: 'XiRZfz001Og',
     title: 'Prince Mashele Profile',
-    image: 'https://img.youtube.com/vi/XiRZfz001Og/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/XiRZfz001Og/maxresdefault.jpg'
   },
   {
     id: 'gR9vlxv_y4o',
     title: 'Noni Khumalo Profile',
-    image: 'https://img.youtube.com/vi/gR9vlxv_y4o/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/gR9vlxv_y4o/maxresdefault.jpg'
   },
   {
     id: 'A05nON7UWKg',
     title: 'Ntsoaki Sibiya Profile',
-    image: 'https://img.youtube.com/vi/A05nON7UWKg/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/A05nON7UWKg/maxresdefault.jpg'
   },
   {
     id: 'BW1M_Pa8DJo',
     title: 'Musa Sono Profile',
-    image: 'https://img.youtube.com/vi/BW1M_Pa8DJo/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/BW1M_Pa8DJo/maxresdefault.jpg'
   },
   {
     id: 'wIt-HmG5RwQ',
     title: 'Dr. Tumelo Chaka Profile',
-    image: 'https://img.youtube.com/vi/wIt-HmG5RwQ/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/wIt-HmG5RwQ/maxresdefault.jpg'
   },
   {
     id: 'YVgFd5ljYJI',
     title: 'Apostle Dr. Steven Thebe Molakeng Profile',
-    image: 'https://img.youtube.com/vi/YVgFd5ljYJI/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/YVgFd5ljYJI/maxresdefault.jpg'
   },
   {
     id: 'VHrJM-9U_IM',
     title: 'Jessica Dube Profile',
-    image: 'https://img.youtube.com/vi/VHrJM-9U_IM/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/VHrJM-9U_IM/maxresdefault.jpg'
   },
   {
     id: 'STtoaFX7A-I',
     title: 'Dr. Pali Lehohla Profile',
-    image: 'https://img.youtube.com/vi/STtoaFX7A-I/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/STtoaFX7A-I/maxresdefault.jpg'
   },
   {
     id: 'UOeqwEC-nxA',
     title: 'Palesa Dooms Profile',
-    image: 'https://img.youtube.com/vi/UOeqwEC-nxA/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/UOeqwEC-nxA/maxresdefault.jpg'
   },
   {
     id: 'QVZzW-RGj0g',
     title: 'Prof. Shingai Mutambirwa Profile',
-    image: 'https://img.youtube.com/vi/QVZzW-RGj0g/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/QVZzW-RGj0g/maxresdefault.jpg'
   },
   {
     id: 'gVh6u7s6yR4',
     title: 'Dr. Jerry Gule Profile',
-    image: 'https://img.youtube.com/vi/gVh6u7s6yR4/hqdefault.jpg'
+    image: 'https://img.youtube.com/vi/gVh6u7s6yR4/maxresdefault.jpg'
   }
 ];
 const eventStats = [{

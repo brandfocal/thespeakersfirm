@@ -203,10 +203,10 @@ export const ProfileAdditionalSections = ({ customVideos }: { customVideos?: Arr
                 >
                   <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src={`https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`}
+                      src={`https://img.youtube.com/vi/${clip.youtubeId}/maxresdefault.jpg`}
                       onError={(e) => {
                         e.currentTarget.onerror = null;
-                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/mqdefault.jpg`;
+                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`;
                       }}
                       alt={`${clip.label} clip`}
                       className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"

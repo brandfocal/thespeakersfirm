@@ -1624,7 +1624,11 @@ export const AboutTeamSection = () => {
                     ) : (
                       <div className="absolute inset-0 z-0">
                         <img 
-                          src={`https://img.youtube.com/vi/${VIDEOS[activeVideoIndex].id}/hqdefault.jpg`}
+                          src={`https://img.youtube.com/vi/${VIDEOS[activeVideoIndex].id}/maxresdefault.jpg`}
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src = `https://img.youtube.com/vi/${VIDEOS[activeVideoIndex].id}/hqdefault.jpg`;
+                          }}
                           alt={VIDEOS[activeVideoIndex].title}
                           className="w-full h-full object-cover brightness-95 transition-all duration-500"
                         />
@@ -1665,7 +1669,11 @@ export const AboutTeamSection = () => {
                           }`}
                         >
                           <img 
-                            src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`} 
+                            src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+                            onError={(e) => {
+                              e.currentTarget.onerror = null;
+                              e.currentTarget.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                            }}
                             alt={video.title} 
                             className="absolute inset-0 h-full w-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                           />

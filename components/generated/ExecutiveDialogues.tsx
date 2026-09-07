@@ -386,7 +386,11 @@ export function ExecutiveDialogues() {
                   className="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-900 flex items-center justify-center mb-6 cursor-pointer"
                 >
                   <img 
-                    src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`} 
+                    src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`} 
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+                    }}
                     alt={video.title} 
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" 
                   />
