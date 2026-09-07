@@ -106,30 +106,6 @@ export const AboutTeamSection = () => {
     }
   ];
 
-  const customGallery = [
-    {
-      id: "tt-gal-1",
-      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-3.jpg",
-      alt: "TT Mbha Keynote Address",
-      caption: "TT Mbha delivering entrepreneurship & real estate keynotes",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "tt-gal-2",
-      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-8.png",
-      alt: "TT Mbha Media & Television",
-      caption: "Television host and executive producer",
-      className: ""
-    },
-    {
-      id: "tt-gal-3",
-      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-10.jpg",
-      alt: "TT Mbha Community Leadership",
-      caption: "Amatyma Brotherhood Circle dialogues",
-      className: ""
-    }
-  ];
-
   return (
     <SpeakerProfileTemplate
       speakerName="Thato “TT” Mbha"
@@ -153,8 +129,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="thato-tt-mbha" 
-        customGallery={customGallery}
-        customIntroText="Property investment masterclasses, positive masculinity summits, and leadership keynotes led by Thato “TT” Mbha."
+        customGallery={[]}
         customVideos={customVideos}
       />
     </SpeakerProfileTemplate>
