@@ -110,30 +110,6 @@ export const AboutTeamSection = () => {
     }
   ];
 
-  const customGallery = [
-    {
-      id: "sibiya-gal-1",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm2.jpg",
-      alt: "Ntsoaki Sibiya Global Summits",
-      caption: "Global Summits & Enterprise Mentorship",
-      className: "sm:col-span-2 lg:col-span-2"
-    },
-    {
-      id: "sibiya-gal-2",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm6.jpg",
-      alt: "Ntsoaki Sibiya Masterclasses & Workshops",
-      caption: "Executive Facilitation & Masterclasses",
-      className: ""
-    },
-    {
-      id: "sibiya-gal-3",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm.jpg",
-      alt: "Ntsoaki Sibiya Keynote Presentation",
-      caption: "Keynote Addresses & Dialogue Moderation",
-      className: ""
-    }
-  ];
-
   return (
     <SpeakerProfileTemplate
       speakerName="Ntsoaki Sibiya"
@@ -157,8 +133,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="ntsoaki-sibiya" 
-        customGallery={customGallery}
-        customIntroText="High-impact enterprise mentorship masterclasses, conscious leadership keynotes, and executive panel discussions led by Ntsoaki Sibiya."
+        customGallery={[]}
         customVideos={customVideos}
       />
     </SpeakerProfileTemplate>
