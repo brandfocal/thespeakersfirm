@@ -84,6 +84,11 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "mbha-vid-1",
+      label: "TT Mbha - Real Estate, Media & Entrepreneurship",
+      youtubeId: "_uVqIYGAjEQ"
+    },
+    {
+      id: "mbha-vid-2",
       label: "TT Mbha on Entrepreneurship, Real Estate & Amatyma",
       youtubeId: "z7AlU47ocrc"
     }

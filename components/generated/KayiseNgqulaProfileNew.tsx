@@ -89,6 +89,11 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "kayise-vid-1",
+      label: "Kayise Ngqula - Broadcasting, Media Production & Entrepreneurship",
+      youtubeId: "GKwul25BeYM"
+    },
+    {
+      id: "kayise-vid-2",
       label: "Kayise Ngqula - Access Genie Interview on Healing & Purpose",
       youtubeId: "C84PrwHhchE"
     }

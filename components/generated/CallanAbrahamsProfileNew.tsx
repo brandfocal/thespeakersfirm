@@ -146,7 +146,12 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "callan-video-1",
-            label: "Experience Reel",
+            label: "Meet Callan Abrahams, officially part of The Speakers Firm",
+            youtubeId: "yuEmR7eAaHo"
+          },
+          {
+            id: "callan-video-2",
+            label: "Callan Abrahams - Experience Reel",
             youtubeId: "r-qgBn4ANuI"
           }
         ]}

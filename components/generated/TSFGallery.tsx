@@ -156,6 +156,26 @@ const galleryItems = [{
 }];
 const videos = [
   {
+    id: 'yuEmR7eAaHo',
+    title: 'Callan Abrahams Profile',
+    image: 'https://img.youtube.com/vi/yuEmR7eAaHo/hqdefault.jpg'
+  },
+  {
+    id: 'GKwul25BeYM',
+    title: 'Kayise Ngqula Profile',
+    image: 'https://img.youtube.com/vi/GKwul25BeYM/hqdefault.jpg'
+  },
+  {
+    id: '_uVqIYGAjEQ',
+    title: 'Thato "TT" Mbha Profile',
+    image: 'https://img.youtube.com/vi/_uVqIYGAjEQ/hqdefault.jpg'
+  },
+  {
+    id: '-vGv50Cq8Nw',
+    title: 'Dr. Billy Selekane Profile',
+    image: 'https://img.youtube.com/vi/-vGv50Cq8Nw/hqdefault.jpg'
+  },
+  {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela Profile',
     image: 'https://img.youtube.com/vi/SEeymv8o9OY/hqdefault.jpg'

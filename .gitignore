@@ -33,3 +33,6 @@ next-env.d.ts
 
 # Magicpath clones
 magicpath-project-*/
+
+# Scratch scripts
+/scratch/

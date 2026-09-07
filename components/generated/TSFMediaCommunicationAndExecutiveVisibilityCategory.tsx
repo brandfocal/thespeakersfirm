@@ -27,6 +27,18 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/mzamo-masito"
   },
   {
+    "id": "jessica-dube",
+    "name": "Jessica Dube",
+    "role": "Broadcast Producer, Executive MC, Moderator & Global Voice Artist",
+    "image": "/speaker_thumbnails/Jessica-Dube-The-Speakers-Firm.jpg",
+    "topics": [
+      "Strategic Executive Communication",
+      "Media Platform Mastery",
+      "Compelling Storytelling & Public Dialogue"
+    ],
+    "path": "/tracks/media-brand-reputation/jessica-dube"
+  },
+  {
     "id": "lorato-tshenkeng",
     "name": "Lorato Tshenkeng",
     "role": "CEO: Decode Communications, Reputation Risk & Stakeholder Management Expert",

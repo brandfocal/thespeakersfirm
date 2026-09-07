@@ -608,16 +608,17 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Broadcaster, Legal and Policy Professional, Moderator & Strategic Stakeholder-Engagement Specialist</span>
 }, {
-  id: 'hulisani-ravele',
-  name: 'Hulisani Ravele',
-  category: 'MCs',
-  image: '/speaker_thumbnails/Hulisani-Ravele-The-Speakers-Firm.jpg',
-  alt: 'Hulisani Ravele',
-  quote: 'Media personality and seasoned event hosting.',
-  youtubeId: 'qp0HIF3SfI4',
+  id: 'jessica-dube',
+  name: 'Jessica Dube',
+  category: ['MCs', 'Media'],
+  image: '/speaker_thumbnails/Jessica-Dube-The-Speakers-Firm.jpg',
+  alt: 'Jessica Dube',
+  quote: 'Conversations that resonate, connect, and move audiences with flair.',
+  youtubeId: 'VHrJM-9U_IM',
   topics: [],
-  tint: 'rgba(84, 133, 96, 0.22)',
-  bio: <span>Seasoned Broadcaster, Television Presenter, Moderator & Media Personality</span>
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Broadcast Producer, Executive MC, Moderator & Global Voice Artist</span>,
+  trackId: 'mc-and-facilitators'
 }, {
   id: 'penny-lebyane',
   name: 'Penny Lebyane',
@@ -2861,6 +2862,34 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
+  {
+    id: 'yuEmR7eAaHo',
+    title: 'Callan Abrahams',
+    subtitle: 'The Voice of Resilience & Leadership Strategist',
+    description: 'Callan Abrahams shares decisive insights on leveraging data strategy, machine learning, and applied data science to drive business value.',
+    thumbnail: 'https://img.youtube.com/vi/yuEmR7eAaHo/hqdefault.jpg'
+  },
+  {
+    id: 'GKwul25BeYM',
+    title: 'Kayise Ngqula',
+    subtitle: 'Media Executive, Broadcaster & Autism Advocate',
+    description: 'Kayise Ngqula’s work spans broadcasting, media production, and social impact advocacy, bringing authentic conversation and stage presence to every room.',
+    thumbnail: 'https://img.youtube.com/vi/GKwul25BeYM/hqdefault.jpg'
+  },
+  {
+    id: '_uVqIYGAjEQ',
+    title: 'Thato "TT" Mbha',
+    subtitle: 'Entrepreneur & Real Estate Visionary',
+    description: 'TT Mbha has built an exceptional career at the intersection of real estate, branding, and enterprise development, delivering high-impact insights on wealth creation and leadership.',
+    thumbnail: 'https://img.youtube.com/vi/_uVqIYGAjEQ/hqdefault.jpg'
+  },
+  {
+    id: '-vGv50Cq8Nw',
+    title: 'Dr. Billy Selekane',
+    subtitle: 'Keynote Speaker, Author & Organisational Culture Specialist',
+    description: 'Dr. Billy Selekane is an internationally acclaimed inspirational speaker and organizational culture expert, transforming leadership effectiveness and team performance.',
+    thumbnail: 'https://img.youtube.com/vi/-vGv50Cq8Nw/hqdefault.jpg'
+  },
   {
     id: 'SEeymv8o9OY',
     title: 'Pumela Salela',

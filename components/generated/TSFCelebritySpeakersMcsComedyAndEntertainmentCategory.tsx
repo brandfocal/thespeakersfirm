@@ -136,16 +136,16 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/nqaba-mabece"
   },
   {
-    "id": "hulisani-ravele",
-    "name": "Hulisani Ravele",
-    "role": "Seasoned Broadcaster, Television Presenter, Moderator & Media Personality",
-    "image": "/speaker_thumbnails/Hulisani-Ravele-The-Speakers-Firm.jpg",
+    "id": "jessica-dube",
+    "name": "Jessica Dube",
+    "role": "Broadcast Producer, Executive MC, Moderator & Global Voice Artist",
+    "image": "/speaker_thumbnails/Jessica-Dube-The-Speakers-Firm.jpg",
     "topics": [
-      "Premium Event Facilitation & Hosting",
-      "Strategic Audience Engagement",
-      "High-Energy Corporate Presentation"
+      "Executive Event Facilitation & Hosting",
+      "Conversation Architecture & Panel Moderation",
+      "Broadcast Media & Dynamic Presentation"
     ],
-    "path": "/tracks/mc-and-facilitators/hulisani-ravele"
+    "path": "/tracks/mc-and-facilitators/jessica-dube"
   },
   {
     "id": "penny-lebyane",

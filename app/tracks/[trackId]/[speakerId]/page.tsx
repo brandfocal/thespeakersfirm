@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, FileText, Globe } from "lucide-react";
 import { fetchAPI } from "@/lib/graphql";
 
@@ -94,7 +95,7 @@ import { AboutTeamSection as BongiweZwaneProfile } from "@/components/generated/
 import { AboutTeamSection as KgomotsoMonyaiProfile } from "@/components/generated/KgomotsoMonyaiProfileNew";
 import { AboutTeamSection as KayiseNgqulaProfile } from "@/components/generated/KayiseNgqulaProfileNew";
 import { AboutTeamSection as NqabaMabeceProfile } from "@/components/generated/NqabaMabeceProfileNew";
-import { AboutTeamSection as HulisaniRaveleProfile } from "@/components/generated/HulisaniRaveleProfileNew";
+import { AboutTeamSection as JessicaDubeProfile } from "@/components/generated/JessicaDubeProfileNew";
 import { AboutTeamSection as DrRichieAchukwuProfile } from "@/components/generated/DrRichieAchukwuProfileNew";
 import { AboutTeamSection as HappyMaKhumaloNgidiProfile } from "@/components/generated/HappyMaKhumaloNgidiProfileNew";
 import { AboutTeamSection as GogoDineoNdlanziProfile } from "@/components/generated/GogoDineoNdlanziProfileNew";
@@ -280,6 +281,14 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { trackId, speakerId } = await params;
+
+  if (speakerId === "hulisani-ravele" || speakerId.includes("hulisani")) {
+    return {
+      title: "Page Not Found | The Speakers Firm",
+      robots: { index: false, follow: false }
+    };
+  }
+
   const name = speakerId
     .split("-")
     .map((word) => {
@@ -301,6 +310,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SpeakerPage({ params }: PageProps) {
   const { trackId, speakerId } = await params;
+
+  if (speakerId === "hulisani-ravele" || speakerId.includes("hulisani")) {
+    notFound();
+  }
 
   if (speakerId === "test-speaker") {
     const data = await getWordPressSpeaker("test-speaker");
@@ -1073,8 +1086,8 @@ export default async function SpeakerPage({ params }: PageProps) {
     return <NqabaMabeceProfile />;
   }
 
-  if (speakerId === "hulisani-ravele") {
-    return <HulisaniRaveleProfile />;
+  if (speakerId === "jessica-dube") {
+    return <JessicaDubeProfile />;
   }
 
   if (speakerId === "dr-richie-achukwu" || speakerId === "richie-achukwu") {
