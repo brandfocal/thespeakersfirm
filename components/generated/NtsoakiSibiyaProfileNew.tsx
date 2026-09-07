@@ -80,7 +80,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Watch Video",
       url: "https://www.youtube.com/watch?v=byNfFY0zavA",
-      image: "https://img.youtube.com/vi/byNfFY0zavA/hqdefault.jpg"
+      image: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm.jpg"
     },
     {
       id: "sibiya-media-2",
@@ -89,7 +89,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Watch Keynote",
       url: "https://www.youtube.com/watch?v=AUk8zXwRgkg",
-      image: "https://img.youtube.com/vi/AUk8zXwRgkg/hqdefault.jpg"
+      image: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm4.jpg"
     },
     {
       id: "sibiya-media-3",
@@ -98,7 +98,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Watch Masterclass",
       url: "https://www.youtube.com/watch?v=ve6-4yQRwso",
-      image: "https://img.youtube.com/vi/ve6-4yQRwso/hqdefault.jpg"
+      image: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm3.jpg"
     }
   ];
 
@@ -113,23 +113,23 @@ export const AboutTeamSection = () => {
   const customGallery = [
     {
       id: "sibiya-gal-1",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm.jpg",
-      alt: "Ntsoaki Sibiya Keynote & Masterclass",
-      caption: "Workshops, Masterclasses & Keynote Addresses",
+      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm2.jpg",
+      alt: "Ntsoaki Sibiya Global Summits",
+      caption: "Global Summits & Enterprise Mentorship",
       className: "sm:col-span-2 lg:col-span-2"
     },
     {
       id: "sibiya-gal-2",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm2.jpg",
-      alt: "Start-Up Night Africa / Global Summits",
-      caption: "Global Summits & Enterprise Mentorship",
+      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm6.jpg",
+      alt: "Ntsoaki Sibiya Masterclasses & Workshops",
+      caption: "Executive Facilitation & Masterclasses",
       className: ""
     },
     {
       id: "sibiya-gal-3",
-      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm4.jpg",
-      alt: "Ntsoaki Sibiya Award Recognition",
-      caption: "Business Coach & Mentor of the Year",
+      src: "/speakers/Ntsoaki Sibiya/Ntsoaki-Sibiya-The-Speakers-Firm.jpg",
+      alt: "Ntsoaki Sibiya Keynote Presentation",
+      caption: "Keynote Addresses & Dialogue Moderation",
       className: ""
     }
   ];
