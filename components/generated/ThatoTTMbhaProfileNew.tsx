@@ -78,27 +78,18 @@ export const AboutTeamSection = () => {
       headline: "TT keeps it healthy as a dynamic entrepreneur",
       publication: "Vutivi Business News",
       date: "2023",
-      action: "Read Profile",
+      action: "Read Article",
       url: "https://vutivibusiness.co.za/business/mbhas-entrepreneurship-journey/",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpeg"
     },
     {
       id: "mbha-art-2",
-      headline: "Men’s conference to address the wellness of men, tackle issues that affect their lives",
-      publication: "IOL News",
-      date: "2022",
+      headline: "TT Mbha puts bana ba SEKOLO first: South African businessman to hand over five school libraries",
+      publication: "Daily Sun",
+      date: "28 Jul 2023",
       action: "Read Article",
-      url: "https://iol.co.za/the-star/news/2022-11-15-mens-conference-to-address-the-wellness-of-men-tackle-issues-that-affect-their-lives/",
+      url: "https://www.snl24.com/dailysun/celebs/south-african-businessman-to-hand-over-five-school-libraries-20230728/",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-5.jpg"
-    },
-    {
-      id: "mbha-art-3",
-      headline: "TT Mbha’s home makeover show to premiere on Mzansi Magic",
-      publication: "The Citizen",
-      date: "2023",
-      action: "Read Announcement",
-      url: "https://www.citizen.co.za/entertainment/tt-mbhas-home-makeover-show-to-premiere-on-mzansi-magic/",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-7.jpg"
     }
   ];
 
