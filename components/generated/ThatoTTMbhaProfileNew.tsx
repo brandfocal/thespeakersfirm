@@ -74,49 +74,31 @@ const SOCIAL_PROOF_LOGOS = [
 export const AboutTeamSection = () => {
   const customMedia = [
     {
-      id: "mbha-cover-1",
-      headline: "Succeed in 2024: Men Changing the Game – TT Mbha",
-      publication: "Successful Man Magazine",
-      date: "May 2024",
-      action: "View Cover Feature",
-      url: "https://www.ttmbha.com",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpg"
+      id: "mbha-art-1",
+      headline: "TT keeps it healthy as a dynamic entrepreneur",
+      publication: "Vutivi Business News",
+      date: "2023",
+      action: "Read Profile",
+      url: "https://vutivibusiness.co.za/business/mbhas-entrepreneurship-journey/",
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpeg"
     },
     {
-      id: "mbha-cover-2",
-      headline: "The Power of Self Belief – Life, Business & Raising Daughters",
-      publication: "The Journey Magazine",
-      date: "Cover Feature",
-      action: "View Cover Feature",
-      url: "https://www.ttmbha.com",
+      id: "mbha-art-2",
+      headline: "Men’s conference to address the wellness of men, tackle issues that affect their lives",
+      publication: "IOL News",
+      date: "2022",
+      action: "Read Article",
+      url: "https://iol.co.za/the-star/news/2022-11-15-mens-conference-to-address-the-wellness-of-men-tackle-issues-that-affect-their-lives/",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-5.jpg"
     },
     {
-      id: "mbha-cover-3",
-      headline: "TT Mbha on His Highest Calling: Fatherhood & Leadership",
-      publication: "Jet Club Magazine",
-      date: "January 2022",
-      action: "View Cover Feature",
-      url: "https://www.ttmbha.com",
+      id: "mbha-art-3",
+      headline: "TT Mbha’s home makeover show to premiere on Mzansi Magic",
+      publication: "The Citizen",
+      date: "2023",
+      action: "Read Announcement",
+      url: "https://www.citizen.co.za/entertainment/tt-mbhas-home-makeover-show-to-premiere-on-mzansi-magic/",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-7.jpg"
-    },
-    {
-      id: "mbha-cover-4",
-      headline: "(E)state of the Nation: Realtor Thato Mbha Is Selling Dreams",
-      publication: "Man Magazine",
-      date: "October 2018",
-      action: "View Feature",
-      url: "https://www.ttmbha.com",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-9.jpg"
-    },
-    {
-      id: "mbha-cover-5",
-      headline: "Raising Good Humans: TT Mbha on Education & Youth Leadership",
-      publication: "True Love Edu",
-      date: "Cover Feature",
-      action: "View Feature",
-      url: "https://www.ttmbha.com",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-6.jpg"
     }
   ];
 
