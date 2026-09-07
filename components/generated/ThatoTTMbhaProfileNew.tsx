@@ -6,78 +6,117 @@ import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./Pro
 
 const CREDENTIAL_BADGES = [
   {
-    id: "tt-bre",
-    label: "CEO of Black Real Estate",
-    subtitle: "Built one of South Africa's most influential property brands to enable access and mentorship."
+    id: "25-year-track-record",
+    label: "25-Year Track Record",
+    subtitle: "Award-winning social entrepreneur, public figure, keynote speaker, and television host."
   },
   {
-    id: "tt-amatyma",
-    label: "Founder of Amatyma Movement",
-    subtitle: "Drives men's wellness, mental health, and positive masculinity dialogues."
+    id: "mp-re-cm-sa",
+    label: "MP(RE) & CM(SA)",
+    subtitle: "Master Practitioner in Real Estate and Chartered Marketer South Africa."
   },
   {
-    id: "tt-media",
-    label: "Mzansi Cribs Host & Producer",
-    subtitle: "Celebrates aspirational living and renovates homes for deserving families through digital media."
+    id: "triple-qualifications",
+    label: "Triple Academic Credentials",
+    subtitle: "Postgraduate Diploma in Project Management, Diploma in Marketing Management & Diploma in Clothing Management."
+  },
+  {
+    id: "executive-producer",
+    label: "Executive Producer & Host",
+    subtitle: "Founder and broadcaster for TTMBHA TV, Mzansi Cribs Makeover, and Amatyma Broadcast Network."
   }
 ];
 
 const STRATEGIC_THEMES = [
   {
-    id: "property-wealth",
+    id: "turnkey-real-estate",
     number: "Theme 01",
-    title: "Real Estate & Generational Wealth.",
-    copy: "Demystifying property investment, unlocking ownership pathways, and driving real estate entrepreneurship."
+    title: "Turnkey Real Estate, Property Sales & Renovation.",
+    copy: "Unlocking pathways to residential and commercial property ownership, renovation, and turnkey development through Mzansi Cribs, Mzansi Cribs Makeover, and Mzansi Business Make-Over."
   },
   {
-    id: "male-wellness",
+    id: "financial-services",
     number: "Theme 02",
-    title: "Positive Masculinity & Wellness.",
-    copy: "Facilitating open dialogues on men's mental health, family accountability, and integrity-driven leadership."
+    title: "Financial Services & Inclusive Economic Empowerment.",
+    copy: "Providing tailored long-term and short-term financial guidance to make financial empowerment accessible for individuals, families, and businesses across Africa."
+  },
+  {
+    id: "amatyma-brotherhood",
+    number: "Theme 03",
+    title: "The Amatyma Brotherhood & Community Upliftment.",
+    copy: "Driving boy-child and girl-child wellness via the Amatyma Suit Drive, Amatyma Pad Drive, Father's Day Self-Care Summit, International Men's Day, and healing podcasts."
+  },
+  {
+    id: "africa-2-the-world",
+    number: "Theme 04",
+    title: "Africa 2 The World (A2TW) & Retail Brand Building.",
+    copy: "Scaling a proudly African lifestyle and essentials enterprise woven into everyday African households, embodying quality, comfort, and pride."
   }
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Thato “TT” Mbha is a celebrated entrepreneur, real estate leader, and media personality whose journey embodies vision, perseverance, and transformation. As the CEO of Black Real Estate, TT has built one of South Africa’s most influential property brands, redefining what black excellence looks like in a sector historically limited to a few. He discovered his passion for property at the age of sixteen, later co-founding Square Metre Holdings in 2004 and Completely Customized Marketing in 2006.",
-  "In 2014, TT partnered with Keller Williams Realty Worldwide, one of the world’s leading property firms, where he trained and operated as a Master Practitioner. This collaboration gave birth to Black Real Estate (Pty) Ltd, his proudly South African venture designed to unlock access, mentorship, and empowerment in the property sector. Through this platform, TT has inspired a new generation of real estate professionals and entrepreneurs committed to building wealth through ownership and innovation.",
-  "Beyond real estate, TT is the founder of Amatyma, a movement and suit-up premium experience dedicated to addressing the wellness of men, tackling issues that affect their lives, and promoting positive masculinity. He is also the host of 'Mzansi Cribs Makeover', leveraging media and digital storytelling to make property relatable and provide home renovations to deserving individuals. TT is recognized as a leading keynote speaker on leadership, purpose, and men’s empowerment.",
-  "Book Thato “TT” Mbha through The Speakers Firm, A Leading African Speakers Bureau, to bring dynamic entrepreneurship masterclasses, property investment keynotes, and men’s empowerment workshops to your next corporate or community event."
+  "Thato “TT” Mbha is a highly respected social entrepreneur, Master Practitioner in Real Estate MP(RE), and Chartered Marketer South Africa CM(SA) with an illustrious 25-year award-winning career track record. A multifaceted public figure, keynote speaker, television host, executive producer, and family man, TT has successfully graduated with a Diploma in Clothing Management, a Diploma in Marketing Management, and a Postgraduate Diploma in Project Management.",
+  "As the visionary behind Mzansi Cribs, TT oversees a turnkey real estate sales agency servicing the everyday residential and commercial buyer, seller, and developer. His enterprise footprint extends to full-scale construction and renovation through Mzansi Cribs Makeover (residential renovations) and Mzansi Business Make-Over (commercial client developments), as well as his subscription-based digital television channel TTMBHA TV (www.ttmbhatv.co.za).",
+  "Through TTMBHA Financial Services, TT leads a proudly African financial services provider with a distinct commitment to delivering exceptional guidance for short-term and long-term client needs. Rooted in the mission to make financial empowerment accessible to all, the firm equips individuals, families, and businesses with the knowledge, tools, and support needed to make informed decisions and secure their financial futures.",
+  "Deeply dedicated to driving community development across South Africa, TT established TTMBHA Community Drive NPC, focusing on education and social development. The flagship Amatyma Brotherhood Circle champions the wellness and upliftment of men and boys through signature community drives—including the Amatyma Suit Drive (boy child) and Amatyma Pad Drive (girl child)—and annual platforms such as the Amatyma Father’s Day Self-Care Summit, Amatyma Heritage Summit, and Amatyma International Men’s Day Celebration.",
+  "Anchored in the African philosophy 'Umuntu Ngumuntu Ngabantu' ('I am because we are'), TT also powers Africa 2 The World (A2TW), bringing everyday affordable essentials, clothing, and gear to households across Africa. Book Thato 'TT' Mbha through The Speakers Firm for high-impact masterclasses, keynote addresses, and corporate moderation on entrepreneurship, real estate, financial literacy, and community building."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
-  { id: "blackrealestate", name: "BLACK REAL ESTATE" },
-  { id: "amatyma", name: "AMATYMA" },
-  { id: "mzansicribs", name: "MZANSI CRIBS" }
+  { id: "mzansicribs", name: "MZANSI CRIBS" },
+  { id: "mzansibusiness", name: "MZANSI BUSINESS MAKEOVER" },
+  { id: "ttmbhafinancial", name: "TTMBHA FINANCIAL SERVICES" },
+  { id: "amatyma", name: "AMATYMA BROTHERHOOD" },
+  { id: "a2tw", name: "AFRICA 2 THE WORLD" },
+  { id: "ttmbhatv", name: "TTMBHA TV" }
 ];
 
 export const AboutTeamSection = () => {
   const customMedia = [
     {
-      id: "mbha-art-1",
-      headline: "TT keeps it healthy as a dynamic entrepreneur",
-      publication: "Vutivi Business News",
-      date: "2023",
-      action: "Read Profile",
-      url: "https://vutivibusiness.co.za/business/mbhas-entrepreneurship-journey/",
-      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpeg"
+      id: "mbha-cover-1",
+      headline: "Succeed in 2024: Men Changing the Game – TT Mbha",
+      publication: "Successful Man Magazine",
+      date: "May 2024",
+      action: "View Cover Feature",
+      url: "https://www.ttmbha.com",
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-4.jpg"
     },
     {
-      id: "mbha-art-2",
-      headline: "Men’s conference to address the wellness of men, tackle issues that affect their lives",
-      publication: "IOL News",
-      date: "2022",
-      action: "Read Article",
-      url: "https://iol.co.za/the-star/news/2022-11-15-mens-conference-to-address-the-wellness-of-men-tackle-issues-that-affect-their-lives/",
+      id: "mbha-cover-2",
+      headline: "The Power of Self Belief – Life, Business & Raising Daughters",
+      publication: "The Journey Magazine",
+      date: "Cover Feature",
+      action: "View Cover Feature",
+      url: "https://www.ttmbha.com",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-5.jpg"
     },
     {
-      id: "mbha-art-3",
-      headline: "TT Mbha’s home makeover show to premiere on Mzansi Magic",
-      publication: "The Citizen",
-      date: "2023",
-      action: "Read Announcement",
-      url: "https://www.citizen.co.za/entertainment/tt-mbhas-home-makeover-show-to-premiere-on-mzansi-magic/",
+      id: "mbha-cover-3",
+      headline: "TT Mbha on His Highest Calling: Fatherhood & Leadership",
+      publication: "Jet Club Magazine",
+      date: "January 2022",
+      action: "View Cover Feature",
+      url: "https://www.ttmbha.com",
       image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-7.jpg"
+    },
+    {
+      id: "mbha-cover-4",
+      headline: "(E)state of the Nation: Realtor Thato Mbha Is Selling Dreams",
+      publication: "Man Magazine",
+      date: "October 2018",
+      action: "View Feature",
+      url: "https://www.ttmbha.com",
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-9.jpg"
+    },
+    {
+      id: "mbha-cover-5",
+      headline: "Raising Good Humans: TT Mbha on Education & Youth Leadership",
+      publication: "True Love Edu",
+      date: "Cover Feature",
+      action: "View Feature",
+      url: "https://www.ttmbha.com",
+      image: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-6.jpg"
     }
   ];
 
@@ -94,16 +133,40 @@ export const AboutTeamSection = () => {
     }
   ];
 
+  const customGallery = [
+    {
+      id: "tt-gal-1",
+      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-3.jpg",
+      alt: "TT Mbha Keynote Address",
+      caption: "TT Mbha delivering entrepreneurship & real estate keynotes",
+      className: "sm:col-span-2 lg:col-span-2"
+    },
+    {
+      id: "tt-gal-2",
+      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-8.png",
+      alt: "TT Mbha Media & Television",
+      caption: "Television host and executive producer",
+      className: ""
+    },
+    {
+      id: "tt-gal-3",
+      src: "/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-10.jpg",
+      alt: "TT Mbha Community Leadership",
+      caption: "Amatyma Brotherhood Circle dialogues",
+      className: ""
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Thato “TT” Mbha"
       speakerTitle=""
-      speakerDesignation="Entrepreneur & Real Estate Visionary"
-      speakerRole="CEO of Black Real Estate & Founder of Amatyma"
+      speakerDesignation="Social Entrepreneur, Master Practitioner in Real Estate MP(RE) & Chartered Marketer CM(SA)"
+      speakerRole="Founder & CEO of Mzansi Cribs, TTMBHA Financial Services & Amatyma Community Drive NPC"
       speakerRef="TSF-TM-36"
       heroBackgroundImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-11.jpg"
       biographyImage="/speakers/Thato TT Mbha/TT-Mbha-The-Speakers-Firm-12.jpeg"
-      bioHook="“Redefining property ownership, positive masculinity, and purpose-driven leadership to inspire a new generation of wealth-builders.”"
+      bioHook="“Umuntu Ngumuntu Ngabantu: Empowering communities through real estate, financial accessibility, and purpose-driven brotherhood.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
       strategicThemes={STRATEGIC_THEMES}
@@ -117,7 +180,8 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="thato-tt-mbha" 
-        customIntroText="Property investment masterclasses, positive masculinity panels, and leadership keynotes led by Thato “TT” Mbha."
+        customGallery={customGallery}
+        customIntroText="Property investment masterclasses, positive masculinity summits, and leadership keynotes led by Thato “TT” Mbha."
         customVideos={customVideos}
       />
     </SpeakerProfileTemplate>

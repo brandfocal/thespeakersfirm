@@ -2879,8 +2879,8 @@ const SPEAKER_VIDEOS = [
   {
     id: '_uVqIYGAjEQ',
     title: 'Thato "TT" Mbha',
-    subtitle: 'Entrepreneur & Real Estate Visionary',
-    description: 'TT Mbha has built an exceptional career at the intersection of real estate, branding, and enterprise development, delivering high-impact insights on wealth creation and leadership.',
+    subtitle: 'Social Entrepreneur, MP(RE) & CM(SA)',
+    description: 'TT Mbha is an award-winning social entrepreneur, Master Practitioner in Real Estate MP(RE), and Chartered Marketer CM(SA) with a 25-year track record across real estate, financial empowerment, and media.',
     thumbnail: 'https://img.youtube.com/vi/_uVqIYGAjEQ/hqdefault.jpg'
   },
   {

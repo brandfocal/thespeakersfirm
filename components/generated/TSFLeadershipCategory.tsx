@@ -129,7 +129,7 @@ const speakers: Speaker[] = [{
 }, {
   id: 'thato-tt-mbha',
   name: 'Thato “TT” Mbha',
-  role: 'Entrepreneur & Real Estate Visionary',
+  role: 'Social Entrepreneur, MP(RE) & CM(SA)',
   image: '/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg',
   topics: ['Courageous Leadership & Decision Making'],
   path: '/tracks/leadership-governance-and-risk-intelligence/thato-tt-mbha'
