@@ -181,6 +181,19 @@ const speakers: Speaker[] = [
       "Founder Leadership Dynamics"
     ],
     "path": "/tracks/inspirational-keynote-speakers/ntsoaki-sibiya"
+  },
+  {
+    "id": "thato-tt-mbha",
+    "name": "Thato “TT” Mbha",
+    "role": "Social Entrepreneur, MP(RE) & CM(SA)",
+    "image": "/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg",
+    "topics": [
+      "Funding & Investment Strategy",
+      "Scaling Enterprises & Operations",
+      "Sustaining High-Growth Businesses",
+      "Founder Leadership Dynamics"
+    ],
+    "path": "/tracks/leadership-governance-and-risk-intelligence/thato-tt-mbha"
   }
 ];
 

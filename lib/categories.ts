@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -263,7 +263,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "entrepreneurship": [
     "rekgotsofetse-chikane", "lebo-gunguluza", "thokozani-nkosi", "anael-granoux",
     "joshua-maluleke", "bulelani-balabala", "eunice-cross", "proverb", "thuli-magubane",
-    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya"
+    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya", "thato-tt-mbha"
   ],
   "masculinity": [
     "martin-pelders", "thato-tt-mbha", "apostle-kabelo-moroke", "mbuyiselo-botha",

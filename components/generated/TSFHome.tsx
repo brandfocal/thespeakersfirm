@@ -632,6 +632,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   bio: <span>Award-Winning Mentorship Maven, Enterprise Strategist & Founder</span>,
   trackId: 'inspirational-keynote-speakers'
 }, {
+  id: 'thato-tt-mbha',
+  name: 'Thato “TT” Mbha',
+  category: ['Entrepreneurship', 'MCs', 'Leadership'],
+  image: '/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg',
+  alt: 'Thato “TT” Mbha',
+  quote: 'Umuntu Ngumuntu Ngabantu: Empowering communities through real estate, financial accessibility, and purpose-driven brotherhood.',
+  youtubeId: '_uVqIYGAjEQ',
+  topics: ['Scaling Enterprises & Operations', 'Premium Event Facilitation & Hosting'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Social Entrepreneur, Master Practitioner in Real Estate MP(RE) & Chartered Marketer CM(SA)</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
   id: 'penny-lebyane',
   name: 'Penny Lebyane',
   category: 'MCs',
@@ -2767,6 +2779,24 @@ export const FACULTY = [{
   spanClassName: 'col-span-12 md:col-span-7',
   wipeDelay: 0.15,
   entryDelay: 0.25
+}, {
+  id: 'thato-tt-mbha',
+  name: 'Thato “TT” Mbha',
+  designation: 'Social Entrepreneur & Broadcaster',
+  role: 'Social Entrepreneur, MP(RE), CM(SA) & Founder of Mzansi Cribs',
+  image: '/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg',
+  trackId: 'entrepreneurship-investment-and-business-growth',
+  tags: [{
+    id: 'social-entrepreneurship',
+    label: 'Social Entrepreneurship'
+  }, {
+    id: 'real-estate',
+    label: 'Real Estate & Financial Services'
+  }],
+  snippet: 'Award-winning social entrepreneur, real estate executive, and media broadcaster empowering communities across South Africa.',
+  spanClassName: 'col-span-12 md:col-span-5',
+  wipeDelay: 0.2,
+  entryDelay: 0.3
 }];
 const TESTIMONIAL_QUOTES = [{
   id: 'commanding-presence',

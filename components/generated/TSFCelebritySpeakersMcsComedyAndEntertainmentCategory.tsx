@@ -338,6 +338,19 @@ const speakers: Speaker[] = [
       "High-Energy Corporate Presentation"
     ],
     "path": "/tracks/mc-and-facilitators/liopelo-maphathe"
+  },
+  {
+    "id": "thato-tt-mbha",
+    "name": "Thato “TT” Mbha",
+    "role": "Social Entrepreneur, Television Host, Moderator & MC",
+    "image": "/speaker_thumbnails/TT-Mbha-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation",
+      "Brand Visibility & Credibility"
+    ],
+    "path": "/tracks/mc-and-facilitators/thato-tt-mbha"
   }
 ];
 
