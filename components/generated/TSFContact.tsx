@@ -29,8 +29,8 @@ type ContactTab = {
 const contactMethods = [{
   id: 'telephone',
   label: 'Telephone',
-  value: '+27 11 568 7055',
-  href: 'tel:+27115687055',
+  value: '+27(0) 11 482 7256/7257',
+  href: 'tel:+27114827256',
   icon: 'phone'
 }, {
   id: 'email',
