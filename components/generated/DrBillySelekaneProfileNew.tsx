@@ -11,11 +11,6 @@ const CREDENTIAL_BADGES = [
     subtitle: "Leading interventions in strategy, action learning, and cultural alignment globally."
   },
   {
-    id: "psasa-president",
-    label: "Former President of PSASA",
-    subtitle: "Past President of the Professional Speakers Association of Southern Africa."
-  },
-  {
     id: "expy-honoree",
     label: "CSP, SASHoF, EXPY Honoree",
     subtitle: "Internationally certified speaking professional and Speaker Hall of Fame member."
@@ -105,7 +100,7 @@ export const AboutTeamSection = () => {
       speakerName="Dr Billy Selekane"
       speakerTitle="Dr"
       speakerDesignation="Keynote Speaker, Author & Organisational Culture Specialist"
-      speakerRole="Executive Chairman of Billy Selekane International, past PSASA President, and coach."
+      speakerRole="Executive Chairman of Billy Selekane International and coach."
       speakerRef="TSF-BS-10"
       heroBackgroundImage="/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-10.jpg"
       biographyImage="/speakers/Billy Selekane/Dr-Billy-Selekane-The-Speakers-Firm-6.jpg"
