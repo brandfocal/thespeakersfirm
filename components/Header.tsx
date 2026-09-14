@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, Search, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import { FEATURED_SPEAKERS, WELCOME_SPEAKERS, FACULTY } from "./generated/TSFHome";
+import { ALL_SPEAKERS, searchSpeakers } from "@/lib/allSpeakers";
 
 
 const COLORS = {
@@ -60,67 +60,7 @@ const getThumbnailForSpeaker = (speakerId: string, originalImage: string): strin
   return `/speaker_thumbnails/${titleCased}-The-Speakers-Firm.jpg`;
 };
 
-const FACULTY_LIST = (() => {
-  const seen = new Set<string>();
-  const list: any[] = [];
-  
-  // 1. Process FEATURED_SPEAKERS
-  FEATURED_SPEAKERS.forEach(s => {
-    if (!seen.has(s.id)) {
-      seen.add(s.id);
-      const bioText = getTextFromNode(s.bio);
-      const trackId = s.trackId || getTrackIdForSpeaker(s.id);
-      list.push({
-        id: s.id,
-        name: s.name,
-        designation: bioText || s.quote || "",
-        image: getThumbnailForSpeaker(s.id, s.image),
-        trackId: trackId,
-        category: Array.isArray(s.category) ? s.category : (s.category ? [s.category] : []),
-        topics: s.topics || []
-      });
-    }
-  });
-
-  // 2. Process WELCOME_SPEAKERS
-  WELCOME_SPEAKERS.forEach(s => {
-    const urlParts = s.profileUrl ? s.profileUrl.split('/') : [];
-    const speakerId = urlParts.length > 0 ? urlParts[urlParts.length - 1] : s.id;
-    
-    if (!seen.has(speakerId)) {
-      seen.add(speakerId);
-      const trackId = urlParts.length > 2 ? urlParts[urlParts.length - 2] : getTrackIdForSpeaker(speakerId);
-      list.push({
-        id: speakerId,
-        name: s.name,
-        designation: s.role || "",
-        image: getThumbnailForSpeaker(speakerId, s.image),
-        trackId: trackId,
-        category: [],
-        topics: []
-      });
-    }
-  });
-
-  // 3. Process FACULTY
-  FACULTY.forEach(s => {
-    if (!seen.has(s.id)) {
-      seen.add(s.id);
-      const trackId = s.trackId || getTrackIdForSpeaker(s.id);
-      list.push({
-        id: s.id,
-        name: s.name,
-        designation: s.designation || s.role || "",
-        image: getThumbnailForSpeaker(s.id, s.image),
-        trackId: trackId,
-        category: s.tags ? s.tags.map((t: any) => t.label) : [],
-        topics: []
-      });
-    }
-  });
-
-  return list;
-})();
+const FACULTY_LIST = ALL_SPEAKERS;
 
 
 // We split categories into 11 main ones and 7 submenu ones
@@ -253,65 +193,7 @@ export function Header() {
 
   const filteredFaculty = React.useMemo(() => {
     if (inputValue.trim() === "") return [];
-    
-    const q = inputValue.toLowerCase();
-    
-    const scored = FACULTY_LIST.map(member => {
-      let score = 0;
-      const name = member.name.toLowerCase();
-      const designation = member.designation.toLowerCase();
-      
-      const nameMatch = name.includes(q);
-      const designationMatch = designation.includes(q);
-      
-      const categoryMatch = Array.isArray(member.category)
-        ? member.category.some((cat: string) => cat.toLowerCase().includes(q))
-        : member.category.toLowerCase().includes(q);
-        
-      const topicsMatch = Array.isArray(member.topics)
-        ? member.topics.some((topic: string) => topic.toLowerCase().includes(q))
-        : false;
-        
-      if (!nameMatch && !designationMatch && !categoryMatch && !topicsMatch) {
-        return null;
-      }
-      
-      // Relevance scoring
-      if (name === q) {
-        score += 25; // Exact name match
-      } else if (name.startsWith(q)) {
-        score += 15; // Name starts with query
-      } else if (nameMatch) {
-        score += 10; // Name contains query
-      }
-      
-      if (designation.includes(q)) {
-        score += 5; // Designation contains query
-      }
-      
-      if (categoryMatch) {
-        score += 3; // Category contains query
-      }
-      
-      if (topicsMatch) {
-        score += 1; // Topics contain query
-      }
-      
-      return { member, score };
-    }).filter((item): item is { member: typeof FACULTY_LIST[0]; score: number } => item !== null);
-    
-    const sorted = scored.sort((a, b) => b.score - a.score);
-    const seen = new Set<string>();
-    const uniqueMembers: typeof FACULTY_LIST = [];
-    
-    for (const item of sorted) {
-      if (!seen.has(item.member.id)) {
-        seen.add(item.member.id);
-        uniqueMembers.push(item.member);
-      }
-    }
-    
-    return uniqueMembers;
+    return searchSpeakers(inputValue, 20);
   }, [inputValue]);
 
   const handleSearchKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

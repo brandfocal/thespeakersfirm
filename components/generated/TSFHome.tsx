@@ -10,6 +10,7 @@ import { BeyondThePodium } from './BeyondThePodium';
 import { WhyChooseUs } from './WhyChooseUs';
 import { RecommendedSpeakers } from './RecommendedSpeakers';
 import { CATEGORIES_CONFIG, CATEGORY_SPEAKERS_MAP } from '@/lib/categories';
+import { ALL_SPEAKERS, searchSpeakers } from '@/lib/allSpeakers';
 const COLORS = {
   black: '#000000',
   red: '#e30e04',
@@ -4103,10 +4104,25 @@ export const TheSpeakersFirmHome = () => {
   }, [localSearch, router]);
 
   const normalizedFacultySearchQuery = localSearch.trim().toLowerCase();
-  const displayedFaculty = normalizedFacultySearchQuery.length === 0 ? FACULTY : FACULTY.filter(member => {
-    const haystack = `${member.name} ${member.designation} ${member.role} ${member.tags.map(tag => tag.label).join(' ')}`.toLowerCase();
-    return haystack.includes(normalizedFacultySearchQuery);
-  });
+  const displayedFaculty = React.useMemo(() => {
+    if (normalizedFacultySearchQuery.length === 0) {
+      return FACULTY;
+    }
+    const matched = searchSpeakers(normalizedFacultySearchQuery, 24);
+    return matched.map((s, idx) => ({
+      id: s.id,
+      name: s.name,
+      designation: s.designation || s.role || "Keynote Speaker",
+      role: s.role || s.designation || "Keynote Speaker & Executive Authority",
+      image: s.image,
+      trackId: s.trackId || "leadership-governance-and-risk-intelligence",
+      tags: (s.topics || []).map((t, i) => ({ id: `tag-${i}`, label: t })),
+      snippet: s.role || s.designation || "International Keynote Speaker and Corporate Authority.",
+      spanClassName: 'col-span-12 md:col-span-6 lg:col-span-4',
+      wipeDelay: 0,
+      entryDelay: (idx % 3) * 0.1
+    }));
+  }, [normalizedFacultySearchQuery]);
   
   const handleFacultySearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const val = event.target.value;
@@ -4133,62 +4149,58 @@ export const TheSpeakersFirmHome = () => {
     return "";
   };
 
-  const displayedFeaturedSpeakers = FEATURED_SPEAKERS.filter(speaker => {
-    // 1. Category Filter
-    if (activeSpeakerCategory !== 'All') {
-      const allowedSpeakers = CATEGORY_SPEAKERS_MAP[activeSpeakerCategory];
-      if (allowedSpeakers) {
-        if (!allowedSpeakers.includes(speaker.id)) {
-          return false;
-        }
-      } else {
-        // Fallback to legacy matching if not in mapped categories
-        const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
-        if (!catConfig) return false;
-        
-        const targetLabel = catConfig.buttonLabel.toLowerCase();
-        const speakerCategories = Array.isArray(speaker.category) ? speaker.category : [speaker.category];
-        
-        const categoryMatches = speakerCategories.some(cat => {
-          let normalized = cat.toLowerCase();
-          if (normalized === "mcs") normalized = "mc's";
-          else if (normalized === "geopolitics") normalized = "economics";
-          else if (normalized === "organisational agility" || normalized === "team-building" || normalized === "winning mindset") normalized = "leadership";
-          else if (normalized === "futurists" || normalized === "business transformation") normalized = "a.i.";
-          else if (normalized === "sustainability") normalized = "governance";
-          else if (normalized === "reputation" || normalized === "branding") normalized = "media";
-          else if (normalized === "sales") normalized = "entrepreneurship";
-          return normalized === targetLabel;
-        });
-        
-        if (!categoryMatches) return false;
-      }
-    }
-
-    // 2. Search Query Filter
+  const displayedFeaturedSpeakers = React.useMemo(() => {
+    // 1. Search Query Filter - search across all speakers when user types a query
     if (normalizedFacultySearchQuery !== '') {
-      const q = normalizedFacultySearchQuery;
-      
-      // Match Name
-      const nameMatch = speaker.name.toLowerCase().includes(q);
-      
-      // Match Quote
-      const quoteMatch = speaker.quote.toLowerCase().includes(q);
-      
-      // Match Category strings
-      const categoryStringMatch = Array.isArray(speaker.category)
-        ? speaker.category.some(cat => cat.toLowerCase().includes(q))
-        : speaker.category.toLowerCase().includes(q);
-
-      // Match Bio/Title text content using recursive extractor
-      const bioText = getTextFromNode(speaker.bio);
-      const bioMatch = bioText.toLowerCase().includes(q);
-
-      return nameMatch || quoteMatch || categoryStringMatch || bioMatch;
+      const matched = searchSpeakers(normalizedFacultySearchQuery, 24);
+      return matched.map(s => ({
+        id: s.id,
+        name: s.name,
+        category: s.category && s.category.length > 0 ? s.category[0] : 'Keynote',
+        image: s.image,
+        alt: s.name,
+        quote: s.role || s.designation || '',
+        youtubeId: 'qp0HIF3SfI4',
+        topics: s.topics || [],
+        tint: 'rgba(227, 14, 4, 0.22)',
+        bio: <span>{s.role || s.designation}</span>,
+        trackId: s.trackId
+      }));
     }
 
-    return true;
-  });
+    // 2. Default: filter FEATURED_SPEAKERS by category
+    return FEATURED_SPEAKERS.filter(speaker => {
+      if (activeSpeakerCategory !== 'All') {
+        const allowedSpeakers = CATEGORY_SPEAKERS_MAP[activeSpeakerCategory];
+        if (allowedSpeakers) {
+          if (!allowedSpeakers.includes(speaker.id)) {
+            return false;
+          }
+        } else {
+          const catConfig = CATEGORIES_CONFIG.find(c => c.id === activeSpeakerCategory);
+          if (!catConfig) return false;
+          
+          const targetLabel = catConfig.buttonLabel.toLowerCase();
+          const speakerCategories = Array.isArray(speaker.category) ? speaker.category : [speaker.category];
+          
+          const categoryMatches = speakerCategories.some(cat => {
+            let normalized = cat.toLowerCase();
+            if (normalized === "mcs") normalized = "mc's";
+            else if (normalized === "geopolitics") normalized = "economics";
+            else if (normalized === "organisational agility" || normalized === "team-building" || normalized === "winning mindset") normalized = "leadership";
+            else if (normalized === "futurists" || normalized === "business transformation") normalized = "a.i.";
+            else if (normalized === "sustainability") normalized = "governance";
+            else if (normalized === "reputation" || normalized === "branding") normalized = "media";
+            else if (normalized === "sales") normalized = "entrepreneurship";
+            return normalized === targetLabel;
+          });
+          
+          if (!categoryMatches) return false;
+        }
+      }
+      return true;
+    });
+  }, [activeSpeakerCategory, normalizedFacultySearchQuery]);
 
   const numRows = displayedFeaturedSpeakers.length <= 8 ? 1 : (displayedFeaturedSpeakers.length <= 16 ? 2 : 3);
   const row1Speakers: typeof FEATURED_SPEAKERS = [];

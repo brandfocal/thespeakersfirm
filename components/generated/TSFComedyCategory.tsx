@@ -182,7 +182,8 @@ export function TSFComedyCategory() {
   const filteredSpeakers = speakers.filter(speaker => {
     const matchesSearch = normalizedSearch.length === 0 || 
       speaker.name.toLowerCase().includes(normalizedSearch) || 
-      speaker.role.toLowerCase().includes(normalizedSearch);
+      speaker.role.toLowerCase().includes(normalizedSearch) ||
+      (speaker.topics && speaker.topics.some(t => t.toLowerCase().includes(normalizedSearch)));
     const matchesFilter = activeFilter === 'All' || speaker.topics.includes(activeFilter);
     return matchesSearch && matchesFilter;
   });
