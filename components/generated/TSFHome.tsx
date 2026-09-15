@@ -1203,7 +1203,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speaker_thumbnails/Thembisa-Fakude-The-Speakers-Firm.jpg',
   alt: 'Thembisa Fakude',
   quote: 'Decoding global relations and Africa-Middle East policy risks.',
-  youtubeId: 'qp0HIF3SfI4',
+  youtubeId: 'tHqmiJJdAh0',
   topics: [],
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>Political Analyst, Author & Middle East–Africa Relations Specialist</span>
@@ -1736,7 +1736,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speaker_thumbnails/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.jpg',
   alt: 'Gogo Dineo Ndlanzi',
   quote: 'African spiritual healing modalities offer critical, time-tested systems to restore collective wellness.',
-  youtubeId: '4xi6_idDthQ',
+  youtubeId: '7N7JPbBwd3M',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Traditional Healer, Spiritual Teacher, Cultural Practitioner, International Speaker & Change Agent</span>
@@ -2905,6 +2905,41 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
+  {
+    id: 'bFrK7oyTwZY',
+    title: 'Pam Yako',
+    subtitle: 'Leadership Coach, Transformation Strategist & SANParks Board Chairperson',
+    description: 'Pam Yako has built her work around developing leaders, guiding executive transformation, and steering institutional sustainability across public and private sectors.',
+    thumbnail: 'https://img.youtube.com/vi/bFrK7oyTwZY/maxresdefault.jpg'
+  },
+  {
+    id: '-tGPsAtMZFg',
+    title: 'Marie Sebueng',
+    subtitle: 'CEO, Entrepreneur, Thought Leader & Keynote Speaker',
+    description: 'Marie Sebueng shares decisive insights on leadership agility, organizational culture, people management, and the human edge in an AI-driven era.',
+    thumbnail: 'https://img.youtube.com/vi/-tGPsAtMZFg/maxresdefault.jpg'
+  },
+  {
+    id: '7N7JPbBwd3M',
+    title: 'Gogo Dineo Ndlanzi',
+    subtitle: 'African Spiritual Teacher, Sangoma & Master Storyteller',
+    description: 'Gogo Dineo Ndlanzi bridges African indigenous knowledge systems with modern consciousness, inspiring holistic leadership and transformative personal healing.',
+    thumbnail: 'https://img.youtube.com/vi/7N7JPbBwd3M/maxresdefault.jpg'
+  },
+  {
+    id: 'tHqmiJJdAh0',
+    title: 'Thembisa Fakude',
+    subtitle: 'Political Analyst, Author & Geopolitical Strategist',
+    description: 'Thembisa Fakude delivers sharp geopolitical intelligence, Middle East-Africa diplomatic analysis, and strategic foreign policy perspectives.',
+    thumbnail: 'https://img.youtube.com/vi/tHqmiJJdAh0/maxresdefault.jpg'
+  },
+  {
+    id: 'lYyDi61JWU4',
+    title: 'Zingisa Motloba',
+    subtitle: 'Strategy Consultant, Admitted Attorney & ESG Specialist',
+    description: 'Zingisa Motloba translates corporate governance, legal frameworks, and ESG imperatives into sustainable business performance and economic growth.',
+    thumbnail: 'https://img.youtube.com/vi/lYyDi61JWU4/maxresdefault.jpg'
+  },
   {
     id: 'yuEmR7eAaHo',
     title: 'Callan Abrahams',
@@ -5558,6 +5593,10 @@ export const TheSpeakersFirmHome = () => {
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
                     src={video.thumbnail} 
                     alt={video.title} 
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                    }}
                   />
                   <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/60" />
                   <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">

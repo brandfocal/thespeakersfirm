@@ -89,8 +89,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "dineo-vid-1",
-      label: "Gogo Dineo Ndlanzi - Indigenous Knowledge Systems",
-      youtubeId: "4xi6_idDthQ"
+      label: "The Speakers Firm proudly presents Gogo Dineo Ndlanzi",
+      youtubeId: "7N7JPbBwd3M"
     }
   ];
 

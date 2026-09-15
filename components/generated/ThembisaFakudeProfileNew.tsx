@@ -97,8 +97,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "thembisa-video-1",
-            label: "Experience Reel",
-            youtubeId: "LkGl2r-hR40"
+            label: "Introducing Thembisa Fakude, a respected Political Analyst",
+            youtubeId: "tHqmiJJdAh0"
           }
         ]}
       />
