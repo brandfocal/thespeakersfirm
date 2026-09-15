@@ -284,6 +284,7 @@ interface SpeakerAdditionalDataProps {
 export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntroText, customVideos }: SpeakerAdditionalDataProps) => {
   const [activeGalleryImage, setActiveGalleryImage] = React.useState<GalleryImage | null>(null);
   const [activeVideoId, setActiveVideoId] = React.useState<string | null>(null);
+  const [isVideoLoading, setIsVideoLoading] = React.useState(true);
   const closeLightbox = () => setActiveGalleryImage(null);
 
   React.useEffect(() => {
@@ -328,7 +329,10 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
           className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-4 md:p-12 cursor-pointer"
         >
           <button 
-            onClick={() => setActiveVideoId(null)}
+            onClick={() => {
+              setActiveVideoId(null);
+              setIsVideoLoading(true);
+            }}
             className="absolute top-6 right-6 text-white hover:text-[#e30e04] transition-colors p-2 z-[310]"
             aria-label="Close video player"
           >
@@ -338,12 +342,21 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
             className="relative w-full max-w-5xl aspect-video bg-[#000000] border border-[#333333] overflow-hidden cursor-default rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
+            {isVideoLoading && (
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-[#e30e04]" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-white/80">Loading video...</span>
+                </div>
+              </div>
+            )}
             <iframe 
-              src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${activeVideoId}?autoplay=1&mute=0&playsinline=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3`}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"
+              onLoad={() => setIsVideoLoading(false)}
             />
           </div>
         </div>
@@ -390,7 +403,10 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
               {videoClips.map(clip => (
                 <article 
                   key={clip.id} 
-                  onClick={() => setActiveVideoId(clip.youtubeId)}
+                  onClick={() => {
+                    setIsVideoLoading(true);
+                    setActiveVideoId(clip.youtubeId);
+                  }}
                   className="group relative flex flex-col cursor-pointer overflow-hidden rounded-[20px] border border-[#1E1E1E] bg-[#111111] hover:border-[#e30e04]/70 transition-colors"
                 >
                   <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">

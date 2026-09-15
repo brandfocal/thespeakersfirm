@@ -3995,8 +3995,23 @@ export const TheSpeakersFirmHome = () => {
   const [isSpeakerCarouselInteracting, setIsSpeakerCarouselInteracting] = React.useState(false);
   const [activeClipSpeakerId, setActiveClipSpeakerId] = React.useState<string | null>(null);
   const [activeClipIframeSrc, setActiveClipIframeSrc] = React.useState('');
+  const [isClipIframeLoading, setIsClipIframeLoading] = React.useState(true);
   const [activeInviteImage, setActiveInviteImage] = React.useState<string | null>(null);
   const [activeHomeVideoId, setActiveHomeVideoId] = React.useState<string | null>(null);
+  const [isHomeVideoLoading, setIsHomeVideoLoading] = React.useState(true);
+
+  const activeHomeVideo = activeHomeVideoId ? SPEAKER_VIDEOS.find(v => v.id === activeHomeVideoId) : null;
+
+  const prewarmYouTube = React.useCallback(() => {
+    if (typeof document === 'undefined') return;
+    if (!document.getElementById('yt-preconnect-nocookie')) {
+      const link = document.createElement('link');
+      link.id = 'yt-preconnect-nocookie';
+      link.rel = 'preconnect';
+      link.href = 'https://www.youtube-nocookie.com';
+      document.head.appendChild(link);
+    }
+  }, []);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -4285,11 +4300,13 @@ export const TheSpeakersFirmHome = () => {
     clipIframeRef.current?.setAttribute('src', '');
     setActiveClipIframeSrc('');
     setActiveClipSpeakerId(null);
+    setIsClipIframeLoading(true);
   }, []);
 
   const handleWatchClipOpen = (speakerId: string, youtubeId: string) => {
+    setIsClipIframeLoading(true);
     setActiveClipSpeakerId(speakerId);
-    setActiveClipIframeSrc(`https://www.youtube.com/embed/${youtubeId}?autoplay=1`);
+    setActiveClipIframeSrc(`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&mute=0&playsinline=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3`);
   };
 
   const handleHeroThumbnailClick = (slideIndex: number) => {
@@ -4891,7 +4908,30 @@ export const TheSpeakersFirmHome = () => {
                 <X aria-hidden="true" className="h-5 w-5" />
               </button>
               <div className="relative aspect-video w-full overflow-hidden rounded-[18px] bg-black sm:rounded-[24px]">
-                <iframe ref={clipIframeRef} src={activeClipIframeSrc} title={`${activeClipSpeaker.name} YouTube video clip`} className="h-full w-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                {isClipIframeLoading && (
+                  <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300">
+                    {activeClipSpeaker?.image && (
+                      <img 
+                        src={activeClipSpeaker.image} 
+                        alt="" 
+                        className="absolute inset-0 h-full w-full object-cover opacity-20 blur-sm" 
+                      />
+                    )}
+                    <div className="relative z-10 flex flex-col items-center gap-3">
+                      <div className="h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-[#e30e04]" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-white/80">Loading video...</span>
+                    </div>
+                  </div>
+                )}
+                <iframe 
+                  ref={clipIframeRef} 
+                  src={activeClipIframeSrc} 
+                  title={`${activeClipSpeaker.name} YouTube video clip`} 
+                  className="h-full w-full border-0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen 
+                  onLoad={() => setIsClipIframeLoading(false)}
+                />
               </div>
             </motion.div>
           </motion.div>}
@@ -5586,7 +5626,11 @@ export const TheSpeakersFirmHome = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className="group relative cursor-pointer" 
-                onClick={() => setActiveHomeVideoId(video.id)}
+                onMouseEnter={prewarmYouTube}
+                onClick={() => {
+                  setIsHomeVideoLoading(true);
+                  setActiveHomeVideoId(video.id);
+                }}
               >
                 <div className="relative aspect-video overflow-hidden rounded-[18px] border border-[#212121]">
                   <img 
@@ -5711,17 +5755,37 @@ export const TheSpeakersFirmHome = () => {
             >
               <button 
                 type="button" 
-                onClick={() => setActiveHomeVideoId(null)}
+                onClick={() => {
+                  setActiveHomeVideoId(null);
+                  setIsHomeVideoLoading(true);
+                }}
                 className="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/80 text-white hover:bg-[#e30e04] hover:border-[#e30e04] transition-colors"
+                aria-label="Close video player"
               >
                 <X className="h-5 w-5" />
               </button>
+              {isHomeVideoLoading && (
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300">
+                  {activeHomeVideo?.thumbnail && (
+                    <img 
+                      src={activeHomeVideo.thumbnail} 
+                      alt="" 
+                      className="absolute inset-0 h-full w-full object-cover opacity-25 blur-sm" 
+                    />
+                  )}
+                  <div className="relative z-10 flex flex-col items-center gap-3">
+                    <div className="h-10 w-10 animate-spin rounded-full border-2 border-white/20 border-t-[#e30e04]" />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-white/80">Loading video...</span>
+                  </div>
+                </div>
+              )}
               <iframe 
-                src={`https://www.youtube.com/embed/${activeHomeVideoId}?autoplay=1`}
+                src={`https://www.youtube-nocookie.com/embed/${activeHomeVideoId}?autoplay=1&mute=0&playsinline=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3`}
                 title="Speaker Video" 
                 className="h-full w-full border-0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen 
+                onLoad={() => setIsHomeVideoLoading(false)}
               />
             </motion.div>
           </motion.div>
