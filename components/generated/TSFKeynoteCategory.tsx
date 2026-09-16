@@ -14,6 +14,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'zingisa-motloba',
+  name: 'Zingisa Motloba',
+  role: 'Attorney, Infrastructure & Energy Advisor, ESG & Leadership Strategist',
+  image: '/speaker_thumbnails/Zingisa-Motloba-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Governance', 'Transformation'],
+  path: '/tracks/inspirational-keynote-speakers/zingisa-motloba'
+}, {
   id: 'palesa-dooms',
   name: 'Palesa Dooms',
   role: 'Speaker, Moderator, Television Presenter & Communication Coach',

@@ -213,6 +213,8 @@ import { AboutTeamSection as JabulileKhumaloProfile } from "@/components/generat
 import { AboutTeamSection as NtsoakiSibiyaProfile } from "@/components/generated/NtsoakiSibiyaProfileNew";
 import { AboutTeamSection as DrTumeloChakaProfile } from "@/components/generated/DrTumeloChakaProfileNew";
 import { AboutTeamSection as PalesaDoomsProfile } from "@/components/generated/PalesaDoomsProfileNew";
+import { AboutTeamSection as ZingisaMotlobaProfile } from "@/components/generated/ZingisaMotlobaProfileNew";
+
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -427,6 +429,10 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "palesa-dooms") {
     return <PalesaDoomsProfile />;
+  }
+
+  if (speakerId === "zingisa-motloba" || speakerId === "zingisa-nozuko-motloba") {
+    return <ZingisaMotlobaProfile />;
   }
 
   if (speakerId === "saray-khumalo") {
