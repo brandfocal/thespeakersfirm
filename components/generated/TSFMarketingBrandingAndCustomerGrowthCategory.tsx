@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-tumelo-chaka",
+    "name": "Dr Tumelo Chaka",
+    "role": "Consumer Behaviour Expert, CMO & Commercial Strategist",
+    "image": "/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg",
+    "topics": [
+      "Building Distinctive Brands",
+      "Consumer Authority & Positioning",
+      "Deepening Customer Relationships"
+    ],
+    "path": "/tracks/marketing-branding-and-customer-growth/dr-tumelo-chaka"
+  },
+  {
     "id": "alistair-mokoena",
     "name": "Dr Alistair Mokoena",
     "role": "The Architect of Digital Futures, Country Director: Google South Africa",

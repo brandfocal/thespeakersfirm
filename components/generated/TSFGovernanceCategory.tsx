@@ -15,6 +15,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'dr-tumelo-chaka',
+  name: 'Dr Tumelo Chaka',
+  role: 'Accomplished Board Member, Consumer Behaviour Expert & Commercial Strategist',
+  image: '/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Institutional Sustainability & Compliance', 'Executive Accountability'],
+  path: '/tracks/boards-governance-and-boardroom-influence/dr-tumelo-chaka'
+}, {
   id: 'sthembiso-phakathi',
   name: 'Sthembiso Phakathi',
   role: 'Leadership Strategist, Transformation Expert & Keynote Speaker',

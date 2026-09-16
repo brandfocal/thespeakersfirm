@@ -211,6 +211,8 @@ import { AboutTeamSection as PastorTebogoMoemaProfile } from "@/components/gener
 import { AboutTeamSection as PumelaSalelaProfile } from "@/components/generated/PumelaSalelaProfileNew";
 import { AboutTeamSection as JabulileKhumaloProfile } from "@/components/generated/JabulileKhumaloProfileNew";
 import { AboutTeamSection as NtsoakiSibiyaProfile } from "@/components/generated/NtsoakiSibiyaProfileNew";
+import { AboutTeamSection as DrTumeloChakaProfile } from "@/components/generated/DrTumeloChakaProfileNew";
+import { AboutTeamSection as PalesaDoomsProfile } from "@/components/generated/PalesaDoomsProfileNew";
 
 
 async function getWordPressSpeaker(slug: string) {
@@ -417,6 +419,14 @@ export default async function SpeakerPage({ params }: PageProps) {
         />
       </SpeakerProfileTemplate>
     );
+  }
+
+  if (speakerId === "dr-tumelo-chaka" || speakerId === "tumelo-chaka") {
+    return <DrTumeloChakaProfile />;
+  }
+
+  if (speakerId === "palesa-dooms") {
+    return <PalesaDoomsProfile />;
   }
 
   if (speakerId === "saray-khumalo") {

@@ -38,6 +38,7 @@ interface MediaItem {
   action: string;
   url: string;
   image: string;
+  caption?: string;
 }
 
 // 1. Clement Manyathela Additional Data
@@ -492,6 +493,9 @@ export const ProfileAdditionalMediaSections = ({ speakerId, customMedia }: Speak
                       <img src={item.image} alt={item.headline} className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105" />
                     </div>
                     <h3 className="max-w-md text-lg font-bold leading-tight tracking-[-0.04em] text-white sm:text-xl md:text-2xl"><span>{item.headline}</span></h3>
+                    {item.caption && (
+                      <p className="mt-3 text-sm leading-relaxed text-[#9A9A9A]"><span>{item.caption}</span></p>
+                    )}
                   </div>
                   <div className="mt-8 border-t border-[#1E1E1E] pt-5">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-[#9A9A9A] sm:text-xs"><span>{item.publication} · {item.date}</span></p>

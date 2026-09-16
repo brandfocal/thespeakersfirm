@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "palesa-dooms",
+    "name": "Palesa Dooms",
+    "role": "Master of Ceremonies, Moderator, Television Presenter & Communication Coach",
+    "image": "/speaker_thumbnails/Palesa-Dooms-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/mc-and-facilitators/palesa-dooms"
+  },
+  {
     "id": "clement-manyathela",
     "name": "Clement Manyathela",
     "role": "Award-Winning Broadcaster, Radio Talk-Show Host, Moderator & Public-Dialogue Facilitator",

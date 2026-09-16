@@ -15,6 +15,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'dr-tumelo-chaka',
+  name: 'Dr Tumelo Chaka',
+  role: 'Top 24 Leadership Voice of 2025, Consumer Behaviour Expert & Commercial Strategist',
+  image: '/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance', 'Strategy Execution & Alignment'],
+  path: '/tracks/leadership-strategy-and-executive-performance/dr-tumelo-chaka'
+}, {
   id: 'sthembiso-phakathi',
   name: 'Sthembiso Phakathi',
   role: 'Leadership Strategist, Transformation Expert & Keynote Speaker',

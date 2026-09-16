@@ -16,6 +16,17 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-tumelo-chaka",
+    "name": "Dr Tumelo Chaka",
+    "role": "PhD in Consumer Behaviour, Consumer Behaviour Expert & Commercial Strategist",
+    "image": "/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg",
+    "topics": [
+      "Applied Behavioural Science",
+      "Cognitive Decision-Making Frameworks"
+    ],
+    "path": "/tracks/neuroscience-psychology-and-human-behaviour/dr-tumelo-chaka"
+  },
+  {
     "id": "timothy-maurice-webster",
     "name": "Timothy Maurice Webster",
     "role": "Behavioural Psychology Author & Brand Influence Strategist",

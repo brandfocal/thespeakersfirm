@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-tumelo-chaka",
+    "name": "Dr Tumelo Chaka",
+    "role": "Consumer Behaviour Expert, Emerging Markets & Financial Inclusion Leader",
+    "image": "/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg",
+    "topics": [
+      "Financial Strategy & Investment",
+      "Macroeconomic Developments",
+      "Translating Economic Complexity"
+    ],
+    "path": "/tracks/economics-markets-and-the-global-economy/dr-tumelo-chaka"
+  },
+  {
     "id": "zizipho-nyanga",
     "name": "Zizipho Nyanga",
     "role": "Chartered Accountant, Banking Executive & SME Specialist",

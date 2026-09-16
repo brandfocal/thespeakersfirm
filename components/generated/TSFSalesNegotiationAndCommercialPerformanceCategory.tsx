@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-tumelo-chaka",
+    "name": "Dr Tumelo Chaka",
+    "role": "Consumer Behaviour Expert, Revenue Growth Leader & Commercial Strategist",
+    "image": "/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg",
+    "topics": [
+      "High-Performance Sales Strategy",
+      "Accelerating Revenue Growth",
+      "Effective Corporate Negotiation"
+    ],
+    "path": "/tracks/sales-negotiation-and-commercial-performance/dr-tumelo-chaka"
+  },
+  {
     "id": "nyimpini-mabunda",
     "name": "Nyimpini Mabunda",
     "role": "Boardroom Strategist, Chief Executive, Author & Global Leader",

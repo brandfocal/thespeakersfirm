@@ -14,6 +14,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'palesa-dooms',
+  name: 'Palesa Dooms',
+  role: 'Speaker, Moderator, Television Presenter & Communication Coach',
+  image: '/speaker_thumbnails/Palesa-Dooms-The-Speakers-Firm.jpg',
+  topics: ['Performance', 'Transformation', 'Leadership'],
+  path: '/tracks/inspirational-keynote-speakers/palesa-dooms'
+}, {
   id: 'saray-khumalo',
   name: 'Saray Khumalo',
   role: 'Mountaineer, Guinness World Record Holder, Author & Business Executive',
