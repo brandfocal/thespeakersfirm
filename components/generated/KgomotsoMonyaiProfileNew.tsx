@@ -99,7 +99,8 @@ export const AboutTeamSection = () => {
     {
       id: "kgomotso-vid-1",
       label: "Kgomotso Monyai - Broadcaster and Creative Reel",
-      youtubeId: "4oJj9GsyRkg"
+      youtubeId: "4oJj9GsyRkg",
+      thumbnail: "/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-video-thumbnail.jpg"
     }
   ];
 

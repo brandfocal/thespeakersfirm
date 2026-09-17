@@ -272,6 +272,7 @@ interface VideoClip {
   id: string;
   label: string;
   youtubeId: string;
+  thumbnail?: string;
 }
 
 interface SpeakerAdditionalDataProps {
@@ -412,10 +413,18 @@ export const ProfileAdditionalSections = ({ speakerId, customGallery, customIntr
                 >
                   <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src={`https://img.youtube.com/vi/${clip.youtubeId}/maxresdefault.jpg`}
+                      src={clip.thumbnail || `https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`}
                       onError={(e) => {
                         e.currentTarget.onerror = null;
-                        e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/hqdefault.jpg`;
+                        if (!clip.thumbnail) {
+                          e.currentTarget.src = `https://img.youtube.com/vi/${clip.youtubeId}/mqdefault.jpg`;
+                        }
+                      }}
+                      onLoad={(e) => {
+                        const img = e.currentTarget;
+                        if (!clip.thumbnail && img.naturalWidth === 120 && img.naturalHeight === 90) {
+                          img.src = `https://img.youtube.com/vi/${clip.youtubeId}/mqdefault.jpg`;
+                        }
                       }}
                       alt={`${clip.label} clip`}
                       className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-95 group-hover:scale-105 transition-all duration-500 z-0"
