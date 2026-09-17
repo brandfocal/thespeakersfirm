@@ -41,6 +41,7 @@ export function Footer() {
                 <Link 
                   key={`footer-${item.id}`} 
                   href={item.href} 
+                  prefetch={false}
                   className="text-[15px] font-bold uppercase tracking-[0.08em] transition-colors duration-300 hover:text-[#e30e04]"
                 >
                   {item.label}

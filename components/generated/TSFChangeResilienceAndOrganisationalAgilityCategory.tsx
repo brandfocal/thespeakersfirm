@@ -16,6 +16,17 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "pam-yako",
+    "name": "Pam Yako",
+    "role": "Managing Director, Zenande Leadership Consulting | Change & Organisational Resilience Coach",
+    "image": "/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg",
+    "topics": [
+      "Building Corporate Resilience",
+      "Sustaining Performance in Uncertainty"
+    ],
+    "path": "/tracks/change-resilience-and-organisational-agility/pam-yako"
+  },
+  {
     "id": "siphiwe-moyo",
     "name": "Siphiwe Moyo",
     "role": "Global Speaker, Author & Organisational Development Specialist",

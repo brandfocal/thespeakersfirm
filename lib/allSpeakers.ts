@@ -3965,6 +3965,53 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
     "path": "/tracks/leadership-governance-and-risk-intelligence/zolani-mkiva",
     "category": [],
     "topics": []
+  },
+  {
+    "id": "pam-yako",
+    "aliases": [
+      "pamela-yako"
+    ],
+    "name": "Pam Yako",
+    "role": "Managing Director, Zenande Leadership Consulting | Executive Coach, Board Member & Former DG",
+    "designation": "Managing Director, Zenande Leadership Consulting",
+    "image": "/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg",
+    "trackId": "leadership-strategy-and-executive-performance",
+    "path": "/tracks/leadership-strategy-and-executive-performance/pam-yako",
+    "category": [
+      "leadership-strategy-and-executive-performance",
+      "sustainability-esg-health-and-human-performance",
+      "boards-governance-and-boardroom-influence"
+    ],
+    "topics": [
+      "Courageous Leadership & Decision Making",
+      "Navigating Change Between Government & Business",
+      "Emotional Maturity, Enneagram & Whole-Person Leadership",
+      "Environmental Stewardship & Climate Strategy",
+      "Boardroom Governance & Institutional Sustainability"
+    ]
+  },
+  {
+    "id": "dr-tumelo-chaka",
+    "aliases": [
+      "tumelo-chaka"
+    ],
+    "name": "Dr Tumelo Chaka",
+    "role": "Top 24 Leadership Voice of 2025, Consumer Behaviour Expert & Commercial Strategist",
+    "designation": "Consumer Behaviour Expert, Commercial Strategist & Board Member",
+    "image": "/speaker_thumbnails/Dr-Tumelo-Chaka-The-Speakers-Firm.jpg",
+    "trackId": "leadership-strategy-and-executive-performance",
+    "path": "/tracks/leadership-strategy-and-executive-performance/dr-tumelo-chaka",
+    "category": [
+      "leadership-strategy-and-executive-performance",
+      "boards-governance-and-boardroom-influence",
+      "marketing-branding-and-customer-growth"
+    ],
+    "topics": [
+      "Courageous Leadership & Decision Making",
+      "Consumer Behaviour & Household Dynamics",
+      "Board Effectiveness & Dynamics",
+      "Commercialisation & Emerging Payments"
+    ]
   }
 ];
 

@@ -15,6 +15,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'pam-yako',
+  name: 'Pam Yako',
+  role: 'Managing Director, Zenande Leadership Consulting | Executive Coach & Former DG',
+  image: '/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg',
+  topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance', 'Strategy Execution & Alignment'],
+  path: '/tracks/leadership-strategy-and-executive-performance/pam-yako'
+}, {
   id: 'dr-tumelo-chaka',
   name: 'Dr Tumelo Chaka',
   role: 'Top 24 Leadership Voice of 2025, Consumer Behaviour Expert & Commercial Strategist',

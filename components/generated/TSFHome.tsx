@@ -3011,6 +3011,13 @@ const SPEAKER_VIDEOS = [
     thumbnail: 'https://img.youtube.com/vi/wIt-HmG5RwQ/maxresdefault.jpg'
   },
   {
+    id: 'bFrK7oyTwZY',
+    title: 'Pam Yako',
+    subtitle: 'Managing Director, Zenande Leadership Consulting',
+    description: 'Meet Pam Yako, executive coach, board member, and former Director-General guiding leaders through institutional change and environmental stewardship.',
+    thumbnail: 'https://img.youtube.com/vi/bFrK7oyTwZY/maxresdefault.jpg'
+  },
+  {
     id: 'YVgFd5ljYJI',
     title: 'Apostle Dr. Steven Thebe Molakeng',
     subtitle: 'Thought Leader, Pastor & Speaker',

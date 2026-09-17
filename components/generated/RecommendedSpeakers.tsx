@@ -23,6 +23,15 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
+    id: 'pam-yako',
+    name: 'Pam Yako',
+    bio: 'Managing Director of Zenande Leadership Consulting, certified coach and former Director-General guiding leaders through institutional change and environmental stewardship.',
+    quote: 'Moving between government and business to find what makes people and institutions actually work.',
+    image: '/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg',
+    trackId: 'leadership-strategy-and-executive-performance',
+    trackLabel: 'Leadership'
+  },
+  {
     id: 'dick-khoza',
     name: 'Bishop Dick Khoza',
     bio: 'Cultural commentator and compelling speaker on African spirituality, indigenous wisdom, identity, values and community leadership.',

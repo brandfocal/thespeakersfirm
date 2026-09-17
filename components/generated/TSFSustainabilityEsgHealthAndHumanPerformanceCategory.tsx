@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "pam-yako",
+    "name": "Pam Yako",
+    "role": "Managing Director, Zenande Leadership Consulting | Former DG & Climate Strategist",
+    "image": "/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg",
+    "topics": [
+      "Environmental, Social, and Governance (ESG)",
+      "Climate Resilience Strategy",
+      "Sustainable Institutional Performance"
+    ],
+    "path": "/tracks/sustainability-esg-health-and-human-performance/pam-yako"
+  },
+  {
     "id": "dr-mpho-phalatse-nxumalo",
     "name": "Dr. Mpho Phalatse-Nxumalo",
     "role": "Medical Doctor, Former Mayor of Johannesburg & Pastor",

@@ -206,6 +206,11 @@ const videos = [
     image: 'https://img.youtube.com/vi/wIt-HmG5RwQ/maxresdefault.jpg'
   },
   {
+    id: 'bFrK7oyTwZY',
+    title: 'Pam Yako Profile',
+    image: 'https://img.youtube.com/vi/bFrK7oyTwZY/maxresdefault.jpg'
+  },
+  {
     id: 'YVgFd5ljYJI',
     title: 'Apostle Dr. Steven Thebe Molakeng Profile',
     image: 'https://img.youtube.com/vi/YVgFd5ljYJI/maxresdefault.jpg'

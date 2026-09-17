@@ -15,6 +15,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'pam-yako',
+  name: 'Pam Yako',
+  role: 'South African Airways Board Member, Former SANParks & SA Tourism Chair',
+  image: '/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Institutional Sustainability & Compliance', 'Executive Accountability'],
+  path: '/tracks/boards-governance-and-boardroom-influence/pam-yako'
+}, {
   id: 'dr-tumelo-chaka',
   name: 'Dr Tumelo Chaka',
   role: 'Accomplished Board Member, Consumer Behaviour Expert & Commercial Strategist',
