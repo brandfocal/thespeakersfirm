@@ -115,7 +115,7 @@ const speakers: Speaker[] = [
     "id": "kgomotso-monyai",
     "name": "Kgomotso Monyai",
     "role": "Television Broadcaster, Panel Moderator & Event Host",
-    "image": "/speaker_thumbnails/Kgomotso-Monyai-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Kgomotso-Monyai-The-Speakers-Firm2.jpg",
     "topics": [
       "Premium Event Facilitation & Hosting",
       "Strategic Audience Engagement",

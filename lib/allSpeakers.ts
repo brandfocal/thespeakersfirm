@@ -1260,7 +1260,7 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
     "name": "Kgomotso Monyai",
     "role": "Television Broadcaster, Panel Moderator & Event Host",
     "designation": "Television Broadcaster, Panel Moderator & Event Host",
-    "image": "/speaker_thumbnails/Kgomotso-Monyai-The-Speakers-Firm.jpg",
+    "image": "/speaker_thumbnails/Kgomotso-Monyai-The-Speakers-Firm2.jpg",
     "trackId": "mc-and-facilitators",
     "path": "/tracks/mc-and-facilitators/kgomotso-monyai",
     "category": [
