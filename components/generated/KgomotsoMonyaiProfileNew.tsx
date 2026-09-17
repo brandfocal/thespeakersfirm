@@ -6,46 +6,62 @@ import { ProfileAdditionalSections, ProfileAdditionalMediaSections } from "./Pro
 
 const CREDENTIAL_BADGES = [
   {
-    id: "award-broadcaster",
-    label: "Award-winning Broadcaster",
-    subtitle: "Recognised for outstanding contributions in television and radio broadcasting."
+    id: "executive-producer",
+    label: "Executive Producer",
+    subtitle: "Executive Producer of 702 Weekend Breakfast with Gugs Mhlungu and Global Citizen's Voices of Change."
   },
   {
-    id: "show-producer",
-    label: "Show Producer @ 702",
-    subtitle: "Producer of the high-profile Aubrey Masango show on Primedia's 702."
+    id: "radio-broadcaster",
+    label: "Broadcaster & Producer @ 702 & 947",
+    subtitle: "Accomplished radio broadcaster, show producer, traffic reporter, and commercial voiceover artist."
   },
   {
-    id: "voice-artist",
-    label: "Multifaceted Voiceover Artist",
-    subtitle: "Sought-after voice for premium brands and narration projects."
+    id: "moderator-mc",
+    label: "Experienced Moderator & MC",
+    subtitle: "Facilitator of high-impact conversations, panel dialogues, and energetic stage events."
+  },
+  {
+    id: "wits-honours-writer",
+    label: "Published Writer & Performance Artist",
+    subtitle: "Honours in Theatre & Performance from Wits University; published in Contemporary South African Monologues and Scenes."
   }
 ];
 
 const STRATEGIC_THEMES = [
   {
-    id: "unconventional-storytelling",
+    id: "storytelling-engagement",
     number: "Theme 01",
-    title: "Unconventional Storytelling.",
-    copy: "Using creative and thought-provoking storytelling methods to connect deeply with contemporary audiences and reflect South African art."
+    title: "Storytelling, Depth & Meaningful Engagement.",
+    copy: "Guiding dialogue across diverse platforms and audiences, bringing a thoughtful, dynamic presence that allows for both depth and accessibility in every conversation."
   },
   {
-    id: "audience-engagement",
+    id: "civic-dialogue",
     number: "Theme 02",
-    title: "The Art of Audience Engagement.",
-    copy: "Practical frameworks for MCs and broadcasters to capture attention, elevate event dynamics, and leave a lasting brand footprint."
+    title: "Civic Spaces, Global Issues & Activism.",
+    copy: "Unpacking complex global challenges, civic dialogues, and social change through interactive podcasting and broadcast editorial leadership."
+  },
+  {
+    id: "contemporary-narrative",
+    number: "Theme 03",
+    title: "Contemporary Narrative, Performance & Literature.",
+    copy: "Contributing to the evolving landscape of South African storytelling through theatre, published anthologies, introspective Substack essays, and poetry."
   }
 ];
 
 const FULL_BIO_PARAGRAPHS = [
-  "Kgomotso Monyai is a Soweto-born creative and broadcaster whose radio journey began at VOWFM, before skyrocketing to Primedia broadcasting, where she is the producer of The Aubrey Masango show at 702 and a presenter/contributor at 947. She aims to contribute to South African Art with thought-provoking and unconventional storytelling.",
-  "She is an award-winning Broadcaster and producer. Multifaceted voiceover artist. MC and program director with a passion for hosting memorable events. Known for her ability to engage audiences and keep the energy high throughout any occasion."
+  "Kgomotso Monyai is a radio broadcaster and producer at 702 and 947, as well as a traffic reporter, voiceover artist, and an experienced moderator, MC, and facilitator of conversations. Her work is rooted in storytelling and meaningful engagement, with a strong ability to guide dialogue across a range of platforms and audiences. She holds an Honours degree in Theatre & Performance from Wits University, where her journey in media began at Voice of Wits before progressing into the commercial radio space.",
+  "Over the years, Kgomotso has produced and hosted a wide range of impactful content - spanning in-depth interviews with leading voices across industries to socially relevant conversations that speak directly to the lived experiences of everyday South Africans. Whether on stage or on air, she brings a thoughtful, dynamic presence that allows for both depth and accessibility in every conversation she leads.",
+  "A Soweto-born creative and published writer, Kgomotso’s work appears in Between the Pillar and the Post: A Multi-lingual Anthology of Contemporary South African Monologues and Scenes, contributing to the evolving landscape of South African storytelling. She also writes on Substack, where she reflects on themes of love, feminism, and memory with honesty and introspection.",
+  "Her voice extends into the podcasting space, where she previously hosted WOT, a platform dedicated to conversations with women navigating success and its many challenges. As a poet, she shares her work on platforms such as WordnSound, continuing to engage audiences through performance and written expression.",
+  "A critical thinker with a strong editorial voice, Kgomotso currently serves as the Executive Producer of 702 Weekend Breakfast with Gugs Mhlungu. She is also the Executive Producer of the Global Citizen podcast Voices of Change - an interactive platform that brings together activists, experts, and changemakers to unpack global issues and civic spaces, making them accessible and meaningful to a broad audience."
 ];
 
 const SOCIAL_PROOF_LOGOS = [
   { id: "702", name: "TALK RADIO 702" },
   { id: "947", name: "947" },
-  { id: "vowfm", name: "VOWFM" }
+  { id: "global-citizen", name: "GLOBAL CITIZEN" },
+  { id: "wits", name: "WITS UNIVERSITY" },
+  { id: "vowfm", name: "VOICE OF WITS" }
 ];
 
 export const AboutTeamSection = () => {
@@ -57,7 +73,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Listen to Audio",
       url: "https://iono.fm/e/1103955",
-      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-3.jpg"
+      image: "/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm.jpg"
     },
     {
       id: "kgomotso-art-2",
@@ -66,7 +82,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Story",
       url: "https://medium.com/@Momonyai/dear-jozi-11eefa7c344d",
-      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-4.jpg"
+      image: "/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm3.jpg"
     },
     {
       id: "kgomotso-art-3",
@@ -75,7 +91,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Listen to Audio",
       url: "https://iono.fm/e/1094779",
-      image: "/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-6.jpg"
+      image: "/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm2.jpg"
     }
   ];
 
@@ -91,12 +107,14 @@ export const AboutTeamSection = () => {
     <SpeakerProfileTemplate
       speakerName="Kgomotso Monyai"
       speakerTitle=""
-      speakerDesignation="Broadcaster, Producer & Creative Storyteller"
-      speakerRole="Award-winning broadcaster, Primedia producer, and dynamic voiceover artist."
+      speakerDesignation="Radio Broadcaster, Producer, Moderator, MC & Voiceover Artist"
+      speakerRole="Executive Producer of 702 Weekend Breakfast and Global Citizen's Voices of Change, broadcaster, and conversation facilitator."
       speakerRef="TSF-KM-03"
-      heroBackgroundImage="/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm-banner.jpg"
-      biographyImage="/speakers/Kgomotso Monyai/Kgomotso-Monyai-The-Speakers-Firm.jpg"
-      bioHook="“Storytelling should be unconventional, thought-provoking, and deeply connected to the heartbeat of the people.”"
+      heroBackgroundImage="/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm4.jpg"
+      heroMobileBackgroundImage="/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm-mobile.jpg"
+      heroImagePosition="object-top"
+      biographyImage="/speakers/Kgomotso%20Monyai/New%20folder%20(2)/Kgomotso-Monyai-The-Speakers-Firm5.jpg"
+      bioHook="“Whether on stage or on air, she brings a thoughtful, dynamic presence that allows for both depth and accessibility in every conversation she leads.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
       strategicThemes={STRATEGIC_THEMES}
@@ -117,3 +135,5 @@ export const AboutTeamSection = () => {
     </SpeakerProfileTemplate>
   );
 };
+
+export default AboutTeamSection;
