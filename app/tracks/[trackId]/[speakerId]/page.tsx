@@ -215,6 +215,7 @@ import { AboutTeamSection as DrTumeloChakaProfile } from "@/components/generated
 import { AboutTeamSection as PalesaDoomsProfile } from "@/components/generated/PalesaDoomsProfileNew";
 import { AboutTeamSection as ZingisaMotlobaProfile } from "@/components/generated/ZingisaMotlobaProfileNew";
 import { AboutTeamSection as PamYakoProfile } from "@/components/generated/PamYakoProfileNew";
+import { AboutTeamSection as RehemaIsaProfile } from "@/components/generated/RehemaIsaProfileNew";
 
 
 
@@ -878,6 +879,10 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "callan-abrahams") {
     return <CallanAbrahamsProfile />;
+  }
+
+  if (speakerId === "rehema-isa") {
+    return <RehemaIsaProfile />;
   }
 
   if (speakerId === "kgomotso-mamello-motshidi") {

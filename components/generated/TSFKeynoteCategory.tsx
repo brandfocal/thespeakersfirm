@@ -14,6 +14,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'rehema-isa',
+  name: 'Rehema Isa',
+  role: 'Executive Leadership Development Practitioner, Communication & Storytelling Coach, TEDx Organiser',
+  image: '/speaker_thumbnails/Rehema-Isa-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Transformation', 'Performance'],
+  path: '/tracks/inspirational-keynote-speakers/rehema-isa'
+}, {
   id: 'zingisa-motloba',
   name: 'Zingisa Motloba',
   role: 'Attorney, Infrastructure & Energy Advisor, ESG & Leadership Strategist',

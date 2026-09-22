@@ -1933,6 +1933,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Broadcaster, Actress, Master of Ceremonies & Communication Specialist</span>,
   trackId: 'mc-and-facilitators'
+}, {
+  id: 'rehema-isa',
+  name: 'Rehema Isa',
+  category: ['Keynote', 'Leadership'],
+  image: '/speakers/Rehema Isa/Rehema-Isa-The-Speakers-Firm.jpg',
+  alt: 'Rehema Isa',
+  quote: 'Connecting personal and organisational narratives to cultivate inclusive, high-performance leadership.',
+  youtubeId: 'Pb3cFtNDOnQ',
+  topics: ['Executive Leadership & Storytelling', 'Womanomics & Economic Inclusion'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Executive Leadership Development Practitioner, Storytelling Coach & TEDx Organiser</span>,
+  trackId: 'leadership-strategy-and-executive-performance'
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
@@ -2906,6 +2918,20 @@ const HERO_HEADLINE_LINES = [{
 
 const SPEAKER_VIDEOS = [
   {
+    id: '9akb2XDNHGg',
+    title: 'Pastor Barack Mbhobho',
+    subtitle: 'President of Youth Culture, Dynamic Creative & Keynote Speaker',
+    description: 'Pastor Barack Mbhobho is a dynamic creative and youth culture leader merging humour, authenticity, and arts to empower next-generation leadership and community connection.',
+    thumbnail: 'https://img.youtube.com/vi/9akb2XDNHGg/maxresdefault.jpg'
+  },
+  {
+    id: 'k19gXICHavY',
+    title: 'Leigh-Ann Paulick',
+    subtitle: 'Broadcaster, Presenter & Performance Coach',
+    description: 'With over 28 years in high-stakes broadcast journalism, Leigh-Ann Paulick equips leaders and teams with strategies for resilience, adaptability, and composure under pressure.',
+    thumbnail: 'https://img.youtube.com/vi/k19gXICHavY/maxresdefault.jpg'
+  },
+  {
     id: 'bFrK7oyTwZY',
     title: 'Pam Yako',
     subtitle: 'Leadership Coach, Transformation Strategist & SANParks Board Chairperson',
@@ -3009,13 +3035,6 @@ const SPEAKER_VIDEOS = [
     subtitle: 'The Brand Economist™',
     description: 'Meet Dr. Tumelo Chaka, sharing insights at the intersection of brand strategy, consumer culture, and commercial growth.',
     thumbnail: 'https://img.youtube.com/vi/wIt-HmG5RwQ/maxresdefault.jpg'
-  },
-  {
-    id: 'bFrK7oyTwZY',
-    title: 'Pam Yako',
-    subtitle: 'Managing Director, Zenande Leadership Consulting',
-    description: 'Meet Pam Yako, executive coach, board member, and former Director-General guiding leaders through institutional change and environmental stewardship.',
-    thumbnail: 'https://img.youtube.com/vi/bFrK7oyTwZY/maxresdefault.jpg'
   },
   {
     id: 'YVgFd5ljYJI',
