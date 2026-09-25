@@ -14,6 +14,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'simphiwe-gwana',
+  name: 'Simphiwe Gwana',
+  role: 'Executive, Facilitator, Broadcaster, Coach, Storyteller',
+  image: '/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Transformation', 'Performance', 'Governance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/simphiwe-gwana'
+}, {
   id: 'rehema-isa',
   name: 'Rehema Isa',
   role: 'Executive Leadership Development Practitioner, Communication & Storytelling Coach, TEDx Organiser',

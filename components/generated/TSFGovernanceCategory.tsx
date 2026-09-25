@@ -15,6 +15,13 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [{
+  id: 'simphiwe-gwana',
+  name: 'Simphiwe Gwana',
+  role: 'Executive, Facilitator, Broadcaster, Coach, Storyteller',
+  image: '/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg',
+  topics: ['Board Effectiveness & Dynamics', 'Ethical Corporate Stewardship', 'Executive Accountability', 'Institutional Sustainability & Compliance'],
+  path: '/tracks/leadership-governance-and-risk-intelligence/simphiwe-gwana'
+}, {
   id: 'pam-yako',
   name: 'Pam Yako',
   role: 'South African Airways Board Member, Former SANParks & SA Tourism Chair',

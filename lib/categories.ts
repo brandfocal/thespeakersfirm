@@ -201,7 +201,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mncane-mthunzi", "khanyisile-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
     "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
     "tebogo-mekgoe", "queen-ramotsehoa", "yolisa-kani", "anael-granoux", "lauren-davis",
-    "monde-ndlovu", "aubrey-masango-mc", "aubrey-masango", "molefe-pooe", "dr-jerry-gule"
+    "monde-ndlovu", "aubrey-masango-mc", "aubrey-masango", "molefe-pooe", "dr-jerry-gule", "simphiwe-gwana"
   ],
   "digital-identity-cybersecurity-and-data-sovereignty": [
     "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -221,10 +221,10 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
   ],
   "spirituality-heritage-and-identity": [
-    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza"
+    "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
   ],
   "economics-and-politics": [
     "khaya-sithole", "prince-mashele", "rekgotsofetse-chikane", "somadoda-fikeni", "sizwe-mpofu-walsh",

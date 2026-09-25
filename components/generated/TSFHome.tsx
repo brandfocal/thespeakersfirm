@@ -911,6 +911,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>The Voice of Resilience, Mental Health & Leadership Strategist</span>
 }, {
+  id: 'simphiwe-gwana',
+  name: 'Simphiwe Gwana',
+  category: ['Leadership', 'Governance', 'MCs', 'Keynote'],
+  image: '/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg',
+  alt: 'Simphiwe Gwana',
+  quote: 'Translating complex organisational realities into accessible, emotionally intelligent conversations.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Courageous Leadership & Decision Making', 'Driving Organisational Performance', 'From Strategy to Service'],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Executive, Facilitator, Broadcaster, Coach, Storyteller</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
   id: 'puleng-mokhoalibe',
   name: 'Dr. Puleng Mokhoalibe',
   category: ['Future of Work', 'A.I.', 'Business Transformation'],

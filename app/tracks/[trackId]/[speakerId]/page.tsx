@@ -216,6 +216,7 @@ import { AboutTeamSection as PalesaDoomsProfile } from "@/components/generated/P
 import { AboutTeamSection as ZingisaMotlobaProfile } from "@/components/generated/ZingisaMotlobaProfileNew";
 import { AboutTeamSection as PamYakoProfile } from "@/components/generated/PamYakoProfileNew";
 import { AboutTeamSection as RehemaIsaProfile } from "@/components/generated/RehemaIsaProfileNew";
+import { AboutTeamSection as SimphiweGwanaProfile } from "@/components/generated/SimphiweGwanaProfileNew";
 
 
 
@@ -1263,6 +1264,10 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "thabo-tbo-touch-molefe" || speakerId === "tbo-touch" || speakerId === "thabo-molefe") {
     return <ThaboTboTouchMolefeProfile />;
+  }
+
+  if (speakerId === "simphiwe-gwana") {
+    return <SimphiweGwanaProfile />;
   }
 
 

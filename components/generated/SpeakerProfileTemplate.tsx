@@ -202,9 +202,11 @@ export const SpeakerProfileTemplate = ({
                 <h2 className={`${KONTORA_FONT_CLASS} text-[20px] font-bold uppercase tracking-[0.05em] leading-[1.3] text-[#ffffff]/90 md:text-[28px]`}>
                   {speakerDesignation}
                 </h2>
-                <p className="text-[16px] leading-[1.6] text-white/70 md:text-[20px]">
-                  {speakerRole}
-                </p>
+                {speakerRole && (
+                  <p className="text-[16px] leading-[1.6] text-white/70 md:text-[20px]">
+                    {speakerRole}
+                  </p>
+                )}
                 <motion.div 
                   initial={{ opacity: 0, y: 16 }} 
                   whileInView={{ opacity: 1, y: 0 }} 

@@ -4012,6 +4012,29 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "Board Effectiveness & Dynamics",
       "Commercialisation & Emerging Payments"
     ]
+  },
+  {
+    "id": "simphiwe-gwana",
+    "aliases": [],
+    "name": "Simphiwe Gwana",
+    "role": "Executive, Facilitator, Broadcaster, Coach, Storyteller",
+    "designation": "Executive, Facilitator, Broadcaster, Coach, Storyteller",
+    "image": "/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg",
+    "trackId": "leadership-governance-and-risk-intelligence",
+    "path": "/tracks/leadership-governance-and-risk-intelligence/simphiwe-gwana",
+    "category": [
+      "leadership-governance-and-risk-intelligence",
+      "mc-and-facilitators",
+      "inspirational-keynote-speakers"
+    ],
+    "topics": [
+      "The People-Pleasing Trap",
+      "The Father Wound and the Search for Identity",
+      "It Runs in the Family, but It Stops with Me",
+      "Leading Change Without Losing the Human Being",
+      "From Strategy to Service",
+      "Burnout: When Expenditure Exceeds Replenishment"
+    ]
   }
 ];
 

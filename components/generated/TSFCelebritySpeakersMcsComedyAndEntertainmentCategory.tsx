@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "simphiwe-gwana",
+    "name": "Simphiwe Gwana",
+    "role": "Executive, Facilitator, Broadcaster, Coach, Storyteller",
+    "image": "/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/leadership-governance-and-risk-intelligence/simphiwe-gwana"
+  },
+  {
     "id": "palesa-dooms",
     "name": "Palesa Dooms",
     "role": "Master of Ceremonies, Moderator, Television Presenter & Communication Coach",

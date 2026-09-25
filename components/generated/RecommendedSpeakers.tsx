@@ -23,6 +23,15 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
+    id: 'simphiwe-gwana',
+    name: 'Simphiwe Gwana',
+    bio: 'Accomplished executive leader, strategic management specialist, governance practitioner, accredited facilitator and broadcaster.',
+    quote: 'Translating complex organisational realities into accessible, emotionally intelligent conversations.',
+    image: '/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
     id: 'pam-yako',
     name: 'Pam Yako',
     bio: 'Managing Director of Zenande Leadership Consulting, certified coach and former Director-General guiding leaders through institutional change and environmental stewardship.',
