@@ -2918,6 +2918,20 @@ const HERO_HEADLINE_LINES = [{
 
 const SPEAKER_VIDEOS = [
   {
+    id: 'f-Lwx1XRrm8',
+    title: 'Trudy Theledi',
+    subtitle: 'Award-Winning Entrepreneur, Business Leader & Broadcaster',
+    description: 'Trudy Theledi shares reflections on purpose, resilience, and intentional leadership, highlighting the core values that create meaningful impact in organisations and communities.',
+    thumbnail: 'https://img.youtube.com/vi/f-Lwx1XRrm8/maxresdefault.jpg'
+  },
+  {
+    id: 'pXlwYio9W_Y',
+    title: 'Hector Motivator',
+    subtitle: 'Broadcaster, Author, Motivational Speaker & Master of Ceremonies',
+    description: 'A powerhouse of energy and charisma, Hector Motivator brings an unmatched blend of humour, heart, and actionable insight to energise teams, drive engagement, and transform event experiences.',
+    thumbnail: 'https://img.youtube.com/vi/pXlwYio9W_Y/maxresdefault.jpg'
+  },
+  {
     id: '9akb2XDNHGg',
     title: 'Pastor Barack Mbhobho',
     subtitle: 'President of Youth Culture, Dynamic Creative & Keynote Speaker',
