@@ -111,8 +111,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "anael-video-1",
-            label: "Anael Granoux Keynote Presentation",
-            youtubeId: "Ez80SW7grXg"
+            label: "Anael Granoux - Strategy Advisor, Lecturer & Speaker",
+            youtubeId: "rpruawlB9lI"
           }
         ]}
       />

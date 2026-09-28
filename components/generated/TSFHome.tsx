@@ -1303,7 +1303,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speakers/Entrepreneurship/Molefe-Pooe-The-Speakers-Firm.jpg',
   alt: 'Molefe Pooe',
   quote: 'Coaching executive leadership through entrepreneurial growth.',
-  youtubeId: 'qp0HIF3SfI4',
+  youtubeId: 'buQllv53-do',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>Accomplished Corporate Executive, Entrepreneur, Author, and Certified Business Coach</span>
@@ -1395,7 +1395,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speakers/Branding/Sechaba-Motsielo-The-Speakers-Firm.jpg',
   alt: 'Sechaba Motsieloa',
   quote: 'Structuring brand sovereignty and strategic C-suite communications.',
-  youtubeId: 'qp0HIF3SfI4',
+  youtubeId: 'K49Dhc75DAA',
   topics: [],
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Former Chief Marketing Officer: McDonald’s South Africa, Brand Architect, Corporate Strategist, C-Suite Communicator</span>,
@@ -1462,7 +1462,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speakers/Entrepreneurship/Anael-Granoux-The-Speakers-Firm.jpg',
   alt: 'Anael Granoux',
   quote: 'Strategic advisory and business expansion in complex economies.',
-  youtubeId: 'qp0HIF3SfI4',
+  youtubeId: 'rpruawlB9lI',
   topics: [],
   tint: 'rgba(180, 127, 48, 0.22)',
   bio: <span>Strategy Advisor, Lecturer & Speaker</span>
@@ -3124,6 +3124,27 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Founder of I Can Leadership Institute Africa & Human Potential Strategist',
     description: 'Dr. David Molapo brings energy, wisdom and a distinctly African perspective to global platforms, inspiring leaders to unlock human potential.',
     thumbnail: 'https://img.youtube.com/vi/_aQG5xdGL34/maxresdefault.jpg'
+  },
+  {
+    id: 'rpruawlB9lI',
+    title: 'Anael Granoux',
+    subtitle: 'Strategy Advisor, Lecturer & Speaker',
+    description: 'With two decades of experience as an advisor, entrepreneur, lecturer, speaker and NED, Anael understands leadership from multiple perspectives.',
+    thumbnail: 'https://img.youtube.com/vi/rpruawlB9lI/maxresdefault.jpg'
+  },
+  {
+    id: 'K49Dhc75DAA',
+    title: 'Sechaba Motsieloa',
+    subtitle: 'Business Leader | Co-Founder of EmpowaMen',
+    description: 'Sechaba Motsieloa is a powerhouse in business leadership, strategy and transformation, bringing over two decades of executive experience to every room he enters.',
+    thumbnail: 'https://img.youtube.com/vi/K49Dhc75DAA/maxresdefault.jpg'
+  },
+  {
+    id: 'buQllv53-do',
+    title: 'Molefe Pooe',
+    subtitle: 'Global Keynote Speaker, Executive Coach & Bestselling Author',
+    description: 'Molefe Pooe is a seasoned corporate executive, entrepreneur, author and business coach whose journey reflects the power of experience turned into action.',
+    thumbnail: 'https://img.youtube.com/vi/buQllv53-do/maxresdefault.jpg'
   }
 ];
 

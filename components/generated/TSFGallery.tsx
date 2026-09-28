@@ -239,6 +239,21 @@ const videos = [
     id: 'gVh6u7s6yR4',
     title: 'Dr. Jerry Gule Profile',
     image: 'https://img.youtube.com/vi/gVh6u7s6yR4/maxresdefault.jpg'
+  },
+  {
+    id: 'rpruawlB9lI',
+    title: 'Anael Granoux Profile',
+    image: 'https://img.youtube.com/vi/rpruawlB9lI/maxresdefault.jpg'
+  },
+  {
+    id: 'K49Dhc75DAA',
+    title: 'Sechaba Motsieloa Profile',
+    image: 'https://img.youtube.com/vi/K49Dhc75DAA/maxresdefault.jpg'
+  },
+  {
+    id: 'buQllv53-do',
+    title: 'Molefe Pooe Profile',
+    image: 'https://img.youtube.com/vi/buQllv53-do/maxresdefault.jpg'
   }
 ];
 const eventStats = [{

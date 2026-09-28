@@ -108,8 +108,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "sechaba-video-1",
-            label: "Experience Reel",
-            youtubeId: "tySjryC3vOU"
+            label: "Sechaba Motsieloa - Business Leader | Co-Founder of EmpowaMen",
+            youtubeId: "K49Dhc75DAA"
           }
         ]}
       />
