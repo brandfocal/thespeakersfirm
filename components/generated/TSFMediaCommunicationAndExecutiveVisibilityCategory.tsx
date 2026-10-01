@@ -158,6 +158,18 @@ const speakers: Speaker[] = [
       "Authority, Clarity & Influence"
     ],
     "path": "/tracks/mc-and-facilitators/thapelo-mokoena"
+  },
+  {
+    "id": "leigh-ann-paulick",
+    "name": "Leigh-Ann Paulick",
+    "role": "Journalist, Broadcaster, Moderator, Speaker, Host",
+    "image": "/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg",
+    "topics": [
+      "Strategic Executive Communication",
+      "Authority, Clarity & Influence",
+      "Media Platform Mastery"
+    ],
+    "path": "/tracks/media-brand-reputation/leigh-ann-paulick"
   }
 ];
 

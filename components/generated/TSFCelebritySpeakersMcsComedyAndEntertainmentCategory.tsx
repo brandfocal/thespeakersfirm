@@ -375,6 +375,31 @@ const speakers: Speaker[] = [
       "Brand Visibility & Credibility"
     ],
     "path": "/tracks/mc-and-facilitators/thato-tt-mbha"
+  },
+  {
+    "id": "leigh-ann-paulick",
+    "name": "Leigh-Ann Paulick",
+    "role": "Journalist, Broadcaster, Moderator, Speaker, Host",
+    "image": "/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation",
+      "Brand Visibility & Credibility"
+    ],
+    "path": "/tracks/mc-and-facilitators/leigh-ann-paulick"
+  },
+  {
+    "id": "pako-matthews",
+    "name": "Pako Matthews",
+    "role": "Executive Leadership Coach, Speaker, Facilitator",
+    "image": "/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg",
+    "topics": [
+      "Premium Event Facilitation & Hosting",
+      "Strategic Audience Engagement",
+      "High-Energy Corporate Presentation"
+    ],
+    "path": "/tracks/mc-and-facilitators/pako-matthews"
   }
 ];
 

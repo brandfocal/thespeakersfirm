@@ -217,6 +217,8 @@ import { AboutTeamSection as ZingisaMotlobaProfile } from "@/components/generate
 import { AboutTeamSection as PamYakoProfile } from "@/components/generated/PamYakoProfileNew";
 import { AboutTeamSection as RehemaIsaProfile } from "@/components/generated/RehemaIsaProfileNew";
 import { AboutTeamSection as SimphiweGwanaProfile } from "@/components/generated/SimphiweGwanaProfileNew";
+import { AboutTeamSection as LeighAnnPaulickProfile } from "@/components/generated/LeighAnnPaulickProfileNew";
+import { AboutTeamSection as PakoMatthewsProfile } from "@/components/generated/PakoMatthewsProfileNew";
 
 
 
@@ -1268,6 +1270,14 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "simphiwe-gwana") {
     return <SimphiweGwanaProfile />;
+  }
+
+  if (speakerId === "leigh-ann-paulick" || speakerId === "leigh-ann" || speakerId === "leighann-paulick") {
+    return <LeighAnnPaulickProfile />;
+  }
+
+  if (speakerId === "pako-matthews" || speakerId === "pako") {
+    return <PakoMatthewsProfile />;
   }
 
 

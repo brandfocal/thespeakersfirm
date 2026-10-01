@@ -4035,6 +4035,56 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "From Strategy to Service",
       "Burnout: When Expenditure Exceeds Replenishment"
     ]
+  },
+  {
+    "id": "leigh-ann-paulick",
+    "aliases": [
+      "leigh-ann",
+      "leighann-paulick"
+    ],
+    "name": "Leigh-Ann Paulick",
+    "role": "Journalist, Broadcaster, Moderator, Speaker, Host",
+    "designation": "Journalist, Broadcaster, Moderator, Speaker, Host",
+    "image": "/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg",
+    "trackId": "media-brand-reputation",
+    "path": "/tracks/media-brand-reputation/leigh-ann-paulick",
+    "category": [
+      "inspirational-keynote-speakers",
+      "mc-and-facilitators",
+      "media-brand-reputation",
+      "neuroscience-peak-performance-mental-agility"
+    ],
+    "topics": [
+      "Built to Adapt & Future of Work",
+      "The Power of Experience & Reinvention",
+      "The Questions That Change Everything",
+      "Human Performance for a Longer Life",
+      "Executive Moderation & Live Broadcaster Composure"
+    ]
+  },
+  {
+    "id": "pako-matthews",
+    "aliases": [
+      "pako"
+    ],
+    "name": "Pako Matthews",
+    "role": "Executive Leadership Coach, Speaker, Facilitator",
+    "designation": "Executive Leadership Coach, Speaker, Facilitator",
+    "image": "/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg",
+    "trackId": "leadership-governance-and-risk-intelligence",
+    "path": "/tracks/leadership-governance-and-risk-intelligence/pako-matthews",
+    "category": [
+      "inspirational-keynote-speakers",
+      "mc-and-facilitators",
+      "neuroscience-peak-performance-mental-agility"
+    ],
+    "topics": [
+      "The Phoenix Project: Reinventing Yourself",
+      "The Invisible Leader: Hidden Habits",
+      "Leading Through Change & Disruption",
+      "Emotionally Intelligent Leadership & Psychological Safety",
+      "The Leader Within: Sustainable Performance"
+    ]
   }
 ];
 

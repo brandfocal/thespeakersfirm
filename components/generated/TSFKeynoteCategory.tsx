@@ -272,6 +272,20 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Bishop-Dick-Khoza-The-Speakers-Firm.jpg',
   topics: ['Heritage', 'Identity', 'Spirituality'],
   path: '/tracks/spirituality-heritage-and-identity/dick-khoza'
+}, {
+  id: 'leigh-ann-paulick',
+  name: 'Leigh-Ann Paulick',
+  role: 'Journalist, Broadcaster, Moderator, Speaker, Host',
+  image: '/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg',
+  topics: ['Performance', 'Transformation', 'Leadership'],
+  path: '/tracks/inspirational-keynote-speakers/leigh-ann-paulick'
+}, {
+  id: 'pako-matthews',
+  name: 'Pako Matthews',
+  role: 'Executive Leadership Coach, Speaker, Facilitator',
+  image: '/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Transformation', 'Resilience'],
+  path: '/tracks/inspirational-keynote-speakers/pako-matthews'
 }];
 
 const filterChips = [{

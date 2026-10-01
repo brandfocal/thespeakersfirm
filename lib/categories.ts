@@ -193,7 +193,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "media-brand-reputation": [
     "sylvester-chauke", "mandla-radebe", "sechaba-motsieloa", "milton-nkosi", "rams-mabote",
     "jj-tabane", "phathiswa-magopeni", "proverb", "lorato-tshenkeng", "mzamo-masito",
-    "muzi-kuzwayo", "thapelo-mokoena", "jessica-dube"
+    "muzi-kuzwayo", "thapelo-mokoena", "jessica-dube", "leigh-ann-paulick"
   ],
   "leadership-governance-and-risk-intelligence": [
     "stafford-masie", "themba-maseko", "lincoln-mali", "saray-khumalo", "somadoda-fikeni",
@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -221,7 +221,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
@@ -238,7 +238,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "happy-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
     "victor-ramathesele", "zamo-mbele", "khaya-dlanga", "billy-selekane", "siphiwe-moyo",
-    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis"
+    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis", "leigh-ann-paulick", "pako-matthews"
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",

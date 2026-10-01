@@ -192,6 +192,30 @@ const speakers: Speaker[] = [
       "Cognitive Decision-Making Frameworks"
     ],
     "path": "/tracks/future-of-work-talent-and-workforce-transformation/lauren-davis"
+  },
+  {
+    "id": "leigh-ann-paulick",
+    "name": "Leigh-Ann Paulick",
+    "role": "Journalist, Broadcaster, Moderator, Speaker, Host",
+    "image": "/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg",
+    "topics": [
+      "Applied Behavioural Science",
+      "Performance Psychology",
+      "Cognitive Decision-Making Frameworks"
+    ],
+    "path": "/tracks/neuroscience-peak-performance-mental-agility/leigh-ann-paulick"
+  },
+  {
+    "id": "pako-matthews",
+    "name": "Pako Matthews",
+    "role": "Executive Leadership Coach, Speaker, Facilitator",
+    "image": "/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg",
+    "topics": [
+      "Applied Behavioural Science",
+      "Performance Psychology",
+      "Leadership & Learning Agility"
+    ],
+    "path": "/tracks/neuroscience-peak-performance-mental-agility/pako-matthews"
   }
 ];
 

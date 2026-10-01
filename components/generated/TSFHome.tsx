@@ -1544,6 +1544,28 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(84, 133, 96, 0.22)',
   bio: <span>Clinical Psychologist, Workplace Mental Health Coach, Keynote Speaker</span>
 }, {
+  id: 'leigh-ann-paulick',
+  name: 'Leigh-Ann Paulick',
+  category: ['Neuroscience', 'Media', 'Keynote', 'MC'],
+  image: '/speaker_thumbnails/Leigh-Ann-Paulick-The-Speakers-Firm.jpg',
+  alt: 'Leigh-Ann Paulick',
+  quote: 'Making sense of the ideas shaping human performance, longevity, and adaptability.',
+  youtubeId: 'k19gXICHavY',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Journalist, Broadcaster, Moderator, Speaker & Host</span>
+}, {
+  id: 'pako-matthews',
+  name: 'Pako Matthews',
+  category: ['Neuroscience', 'Keynote', 'MC', 'Leadership'],
+  image: '/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg',
+  alt: 'Pako Matthews',
+  quote: 'Helping leaders navigate change with courage, clarity, and authenticity.',
+  youtubeId: 'KXXL3bkTE4M',
+  topics: [],
+  tint: 'rgba(72, 112, 166, 0.22)',
+  bio: <span>Executive Leadership Coach, Speaker & Facilitator</span>
+}, {
   id: 'queen-ramotsehoa',
   name: 'Queen Ramotsehoa',
   category: ['Leadership', 'Team-Building'],
