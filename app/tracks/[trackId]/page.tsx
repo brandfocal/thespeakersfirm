@@ -58,11 +58,37 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
+  const pageUrl = `https://thespeakersfirm.co.za/tracks/${trackId}`;
+  const title = `${trackName} Keynote Speakers | The Speakers Firm`;
+  const description = config?.description || `Browse world-class keynote speakers, executive performance trainers, and governance authorities specializing in ${trackName}.`;
+
   return {
-    title: `${trackName} Keynote Speakers | The Speakers Firm`,
-    description: config?.description || `Browse world-class keynote speakers, executive performance trainers, and governance authorities specializing in ${trackName}.`,
+    title,
+    description,
     alternates: {
-      canonical: `https://thespeakersfirm.co.za/tracks/${trackId}`,
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      siteName: "The Speakers Firm",
+      locale: "en_ZA",
+      type: "website",
+      images: [
+        {
+          url: "https://thespeakersfirm.co.za/favicon.png",
+          width: 1200,
+          height: 630,
+          alt: `${trackName} Keynote Speakers — The Speakers Firm`,
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://thespeakersfirm.co.za/favicon.png"]
     }
   };
 }

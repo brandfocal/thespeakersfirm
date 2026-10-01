@@ -284,6 +284,7 @@ async function getWordPressSpeaker(slug: string) {
 }
 
 import { Metadata } from "next";
+import { ALL_SPEAKERS_MAP } from "@/lib/allSpeakers";
 
 interface PageProps {
   params: Promise<{ trackId: string; speakerId: string }>;
@@ -299,7 +300,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const name = speakerId
+  // Look up speaker from the unified directory map
+  const speaker = 
+    ALL_SPEAKERS_MAP[speakerId] || 
+    ALL_SPEAKERS_MAP[speakerId.toLowerCase()] || 
+    ALL_SPEAKERS_MAP[speakerId.replace(/^dr-/, "")] || 
+    ALL_SPEAKERS_MAP[`dr-${speakerId}`];
+
+  const fallbackName = speakerId
     .split("-")
     .map((word) => {
       if (word === "dr" || word === "prof") {
@@ -309,11 +317,56 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     })
     .join(" ");
 
+  const speakerName = speaker?.name || fallbackName;
+  const speakerRole = speaker?.designation || speaker?.role;
+
+  // Resolve thumbnail image
+  let imagePath = speaker?.image;
+  if (!imagePath) {
+    const formattedSlug = fallbackName.replace(/\s+/g, "-");
+    imagePath = `/speaker_thumbnails/${formattedSlug}-The-Speakers-Firm.jpg`;
+  }
+
+  // Ensure absolute URL for social platform previews (WhatsApp, LinkedIn, Twitter/X, Facebook)
+  const baseDomain = "https://thespeakersfirm.co.za";
+  const absoluteImageUrl = imagePath.startsWith("http")
+    ? imagePath
+    : `${baseDomain}${imagePath.startsWith("/") ? "" : "/"}${imagePath}`;
+
+  const pageUrl = `${baseDomain}/tracks/${trackId}/${speakerId}`;
+  const title = `${speakerName} | The Speakers Firm Faculty Profile`;
+  const description = speakerRole
+    ? `${speakerName} — ${speakerRole}. Read the profile, keynote performance themes, and booking details with The Speakers Firm.`
+    : `Read the profile, biography, keynote performance themes, and booking details of ${speakerName}, a strategic voice and boardroom authority represented by The Speakers Firm.`;
+
   return {
-    title: `${name} | The Speakers Firm Faculty Profile`,
-    description: `Read the profile, biography, keynote performance themes, and booking details of ${name}, a strategic voice and boardroom authority represented by The Speakers Firm.`,
+    title,
+    description,
     alternates: {
-      canonical: `https://thespeakersfirm.co.za/tracks/${trackId}/${speakerId}`,
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      siteName: "The Speakers Firm",
+      locale: "en_ZA",
+      type: "profile",
+      images: [
+        {
+          url: absoluteImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${speakerName} — The Speakers Firm Faculty Profile`,
+          type: "image/jpeg"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [absoluteImageUrl]
     }
   };
 }

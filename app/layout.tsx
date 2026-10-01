@@ -7,11 +7,34 @@ import { BottomCategoryMenu } from "@/components/BottomCategoryMenu";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thespeakersfirm.co.za"),
   title: "The Speakers Firm | Our Voice, Driving Exponential Growth",
   description: "Our Voice, Driving Exponential Growth. Elite speakers, lectures, and corporate engagements.",
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "The Speakers Firm | Our Voice, Driving Exponential Growth",
+    description: "Elite partner in boardroom transformation. Curating strategic voices, keynotes, and leadership authorities to shift rooms and drive commercial momentum.",
+    url: "https://thespeakersfirm.co.za",
+    siteName: "The Speakers Firm",
+    locale: "en_ZA",
+    type: "website",
+    images: [
+      {
+        url: "https://thespeakersfirm.co.za/favicon.png",
+        width: 1200,
+        height: 630,
+        alt: "The Speakers Firm",
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Speakers Firm | Our Voice, Driving Exponential Growth",
+    description: "Elite partner in boardroom transformation. Curating strategic voices, keynotes, and leadership authorities.",
+    images: ["https://thespeakersfirm.co.za/favicon.png"]
+  }
 };
 
 export default function RootLayout({
