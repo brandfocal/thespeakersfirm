@@ -254,6 +254,11 @@ const videos = [
     id: 'buQllv53-do',
     title: 'Molefe Pooe Profile',
     image: 'https://img.youtube.com/vi/buQllv53-do/maxresdefault.jpg'
+  },
+  {
+    id: 'vs80XvPuODI',
+    title: 'Martin Pelders Profile',
+    image: 'https://img.youtube.com/vi/vs80XvPuODI/maxresdefault.jpg'
   }
 ];
 const eventStats = [{

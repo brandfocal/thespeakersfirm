@@ -1308,6 +1308,18 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>Accomplished Corporate Executive, Entrepreneur, Author, and Certified Business Coach</span>
 }, {
+  id: 'martin-pelders',
+  name: 'Martin Pelders',
+  category: ['Leadership', 'Organisational Agility', 'Culture'],
+  image: '/speaker_thumbnails/Martin-Pelders-The-Speakers-Firm.jpg',
+  alt: 'Martin Pelders',
+  quote: 'Creating environments where people feel safe to speak, challenge, and lead without fear.',
+  youtubeId: 'vs80XvPuODI',
+  topics: ['Psychological Safety', 'Courageous Leadership'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Acclaimed Author, Founder of MatrixMen & Psychological Safety Speaker</span>,
+  trackId: 'leadership-governance-and-risk-intelligence'
+}, {
   id: 'lorato-tshenkeng',
   name: 'Lorato Tshenkeng',
   category: ['Media', 'Reputation'],
@@ -2952,6 +2964,20 @@ const HERO_HEADLINE_LINES = [{
 
 const SPEAKER_VIDEOS = [
   {
+    id: 'buQllv53-do',
+    title: 'Molefe Pooe',
+    subtitle: 'Seasoned Corporate Executive',
+    description: 'Molefe Pooe is a seasoned corporate executive, entrepreneur, author and business coach whose journey reflects the power of experience turned into action.',
+    thumbnail: 'https://img.youtube.com/vi/buQllv53-do/maxresdefault.jpg'
+  },
+  {
+    id: 'vs80XvPuODI',
+    title: 'Martin Pelders',
+    subtitle: 'Focus on Psychological Safety',
+    description: 'Martin Pelders brings a powerful focus to creating environments where people feel safe to speak, be heard, challenge harmful behaviours and engage in difficult conversations without fear.',
+    thumbnail: 'https://img.youtube.com/vi/vs80XvPuODI/maxresdefault.jpg'
+  },
+  {
     id: 'f-Lwx1XRrm8',
     title: 'Trudy Theledi',
     subtitle: 'Award-Winning Entrepreneur, Business Leader & Broadcaster',
@@ -3160,13 +3186,6 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Business Leader | Co-Founder of EmpowaMen',
     description: 'Sechaba Motsieloa is a powerhouse in business leadership, strategy and transformation, bringing over two decades of executive experience to every room he enters.',
     thumbnail: 'https://img.youtube.com/vi/K49Dhc75DAA/maxresdefault.jpg'
-  },
-  {
-    id: 'buQllv53-do',
-    title: 'Molefe Pooe',
-    subtitle: 'Global Keynote Speaker, Executive Coach & Bestselling Author',
-    description: 'Molefe Pooe is a seasoned corporate executive, entrepreneur, author and business coach whose journey reflects the power of experience turned into action.',
-    thumbnail: 'https://img.youtube.com/vi/buQllv53-do/maxresdefault.jpg'
   }
 ];
 

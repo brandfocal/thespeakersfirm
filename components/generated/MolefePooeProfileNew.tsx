@@ -118,7 +118,7 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "molefe-video-1",
-            label: "Molefe Pooe - Global Keynote Speaker, Executive Coach & Bestselling Author",
+            label: "Molefe Pooe - Seasoned Corporate Executive, Entrepreneur, Author & Business Coach",
             youtubeId: "buQllv53-do"
           }
         ]}

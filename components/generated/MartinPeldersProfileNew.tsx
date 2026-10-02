@@ -94,8 +94,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "pelders-vid-1",
-      label: "Martin Pelders on Healing, Masculinity & Authentic Leadership",
-      youtubeId: "ujh29-e9EAE"
+      label: "Martin Pelders - Psychological Safety & Human-Centred Leadership",
+      youtubeId: "vs80XvPuODI"
     }
   ];
 
