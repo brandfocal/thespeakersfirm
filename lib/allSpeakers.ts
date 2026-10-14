@@ -4092,7 +4092,12 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "dr-zee",
       "zukisani-mxoli",
       "dr-zukisani-dr-zee-mxoli",
-      "dr-zukisani-zee-mxoli"
+      "dr-zukisani-zee-mxoli",
+      "dr zee",
+      "dr. zee",
+      "zukisani mxoli",
+      "dr zukisani",
+      "zee mxoli"
     ],
     "name": "Dr. Zukisani \"Dr. Zee\" Mxoli",
     "role": "International Public Speaker • Businessman • Moral Regeneration and Leadership Expert",
@@ -4111,6 +4116,127 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "Black Wealth & Investment Architecture",
       "Positive Masculinity & Family Resilience"
     ]
+  },
+  {
+    "id": "palesa-dooms",
+    "aliases": [
+      "palesa",
+      "dooms",
+      "palesa dooms"
+    ],
+    "name": "Palesa Dooms",
+    "role": "Founder of Unforgettable Speakers - School of Excellence, Television Presenter & Communications Coach",
+    "designation": "Speaker, Moderator, Master of Ceremonies, Television Presenter and Communications Coach",
+    "image": "/speaker_thumbnails/Palesa-Dooms-The-Speakers-Firm.jpg",
+    "trackId": "mc-and-facilitators",
+    "path": "/tracks/mc-and-facilitators/palesa-dooms",
+    "category": [
+      "mc-and-facilitators",
+      "inspirational-keynote-speakers"
+    ],
+    "topics": [
+      "Personal Positioning & Presence",
+      "Executive Communication",
+      "Storytelling, Ubuntu & Influence",
+      "From Employee to Employer"
+    ]
+  },
+  {
+    "id": "zingisa-motloba",
+    "aliases": [
+      "zingisa-nozuko-motloba",
+      "zingisa",
+      "motloba",
+      "zingisa motloba"
+    ],
+    "name": "Zingisa Motloba",
+    "role": "Pan-African strategist, senior energy & project finance attorney, and ESG governance advisor",
+    "designation": "Attorney, Infrastructure and Energy Advisor, ESG & Leadership Strategist",
+    "image": "/speaker_thumbnails/Zingisa-Motloba-The-Speakers-Firm.jpg",
+    "trackId": "inspirational-keynote-speakers",
+    "path": "/tracks/inspirational-keynote-speakers/zingisa-motloba",
+    "category": [
+      "inspirational-keynote-speakers",
+      "governance",
+      "sustainability"
+    ],
+    "topics": [
+      "Pan-African ESG & Infrastructure",
+      "Energy Transition & Regulation",
+      "Project Finance & M&A Governance",
+      "Creative Economy Leadership"
+    ]
+  },
+  {
+    "id": "rehema-isa",
+    "aliases": [
+      "rehema",
+      "isa",
+      "rehema isa"
+    ],
+    "name": "Rehema Isa",
+    "role": "Co-Founder & Director of Oya Solutions Group, Master Storyteller & TEDx Organiser",
+    "designation": "Executive Leadership Development Practitioner, Communication & Storytelling Coach",
+    "image": "/speaker_thumbnails/Rehema-Isa-The-Speakers-Firm.jpg",
+    "trackId": "inspirational-keynote-speakers",
+    "path": "/tracks/inspirational-keynote-speakers/rehema-isa",
+    "category": [
+      "inspirational-keynote-speakers",
+      "leadership-governance-and-risk-intelligence"
+    ],
+    "topics": [
+      "Authentic Storytelling",
+      "Womanomics & Economic Inclusion",
+      "Executive Communication",
+      "High-Performance Culture"
+    ]
+  },
+  {
+    "id": "ntandoyenkosi-kunene-radzuma",
+    "aliases": [
+      "ntandoyenkosi-kunene",
+      "ntandoyenkosi",
+      "kunene-radzuma",
+      "ntandoyenkosi kunene"
+    ],
+    "name": "Ntandoyenkosi Kunene-Radzuma",
+    "role": "Miss South Africa 2016, Programme Lead, Author & Speaker, Education Activist",
+    "designation": "Author, Education Activist & Leadership Speaker",
+    "image": "/speaker_thumbnails/Ntandoyenkosi-Kunene-Radzuma-The-Speakers-Firm.jpg",
+    "trackId": "future-of-work",
+    "path": "/tracks/future-of-work/ntandoyenkosi-kunene-radzuma",
+    "category": [
+      "future-of-work",
+      "education"
+    ],
+    "topics": [
+      "Education Activism",
+      "Youth Leadership & Empowerment",
+      "Culture & People Futures"
+    ]
+  },
+  {
+    "id": "zanele-luvuno",
+    "aliases": [
+      "zanele",
+      "luvuno",
+      "zanele luvuno"
+    ],
+    "name": "Zanele Luvuno",
+    "role": "Thought Leader, Transformation and Gender Equality Advocate",
+    "designation": "Transformation & Gender Equality Advocate",
+    "image": "/speaker_thumbnails/Zanele-Luvuno-The-Speakers-Firm.jpg",
+    "trackId": "gender",
+    "path": "/tracks/gender/zanele-luvuno",
+    "category": [
+      "gender",
+      "diversity"
+    ],
+    "topics": [
+      "Gender Equality",
+      "Women in Leadership",
+      "Institutional Transformation"
+    ]
   }
 ];
 
@@ -4125,50 +4251,83 @@ export const ALL_SPEAKERS_MAP: Record<string, UnifiedSpeaker> = (() => {
   return map;
 })();
 
-export function searchSpeakers(query: string, limit: number = 30): UnifiedSpeaker[] {
-  const q = query.trim().toLowerCase();
-  if (!q) return [];
+export function normalizeSearchText(str: string): string {
+  return (str || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
+export function searchSpeakers(query: string, limit: number = 30): UnifiedSpeaker[] {
+  const cleanQ = normalizeSearchText(query);
+  if (!cleanQ) return [];
+
+  const qTokens = cleanQ.split(' ').filter(Boolean);
   const scored: Array<{ speaker: UnifiedSpeaker; score: number }> = [];
 
   for (const speaker of ALL_SPEAKERS) {
     let score = 0;
-    const nameLower = speaker.name.toLowerCase();
-    const roleLower = speaker.role.toLowerCase();
-    const idLower = speaker.id.toLowerCase();
+    const normName = normalizeSearchText(speaker.name);
+    const normId = normalizeSearchText(speaker.id);
+    const normRole = normalizeSearchText(speaker.role || '');
+    const normDesignation = normalizeSearchText(speaker.designation || '');
+    const normAliases = (speaker.aliases || []).map(a => normalizeSearchText(a));
+    const normTopics = (speaker.topics || []).map(t => normalizeSearchText(t));
+    const normCategories = (speaker.category || []).map(c => normalizeSearchText(c));
 
-    // 1. Exact name or ID match
-    if (nameLower === q || idLower === q) {
-      score += 100;
-    } else if (nameLower.startsWith(q)) {
-      score += 60;
-    } else if (nameLower.includes(q)) {
-      score += 40;
+    // 1. Exact phrase matches on name or ID
+    if (normName === cleanQ || normId === cleanQ) {
+      score += 150;
+    } else if (normName.startsWith(cleanQ)) {
+      score += 90;
+    } else if (normName.includes(cleanQ)) {
+      score += 70;
     }
 
-    // 2. Alias match
-    for (const alias of speaker.aliases) {
-      const aLower = alias.toLowerCase();
-      if (aLower === q) {
-        score += 80;
-      } else if (aLower.includes(q)) {
-        score += 30;
+    // 2. Exact or substring match on aliases
+    for (const a of normAliases) {
+      if (a === cleanQ) {
+        score += 130;
+      } else if (a.startsWith(cleanQ)) {
+        score += 85;
+      } else if (a.includes(cleanQ)) {
+        score += 65;
       }
     }
 
-    // 3. Role / Designation match
-    if (roleLower.includes(q)) {
+    // 3. Multi-word token matching in Name + Aliases
+    const nameAndAliasesText = `${normName} ${normId} ${normAliases.join(' ')}`;
+    const allTokensInName = qTokens.length > 1 && qTokens.every(tok => nameAndAliasesText.includes(tok));
+    if (allTokensInName) {
+      score += 95;
+    }
+
+    // 4. Token matching across all fields (Role, Topics, Categories)
+    const fullText = `${nameAndAliasesText} ${normRole} ${normDesignation} ${normTopics.join(' ')} ${normCategories.join(' ')}`;
+    const allTokensInFullText = qTokens.every(tok => fullText.includes(tok));
+    if (allTokensInFullText && !allTokensInName) {
+      score += 50;
+    }
+
+    // 5. Individual token hits in name
+    let tokenMatchesInName = 0;
+    for (const tok of qTokens) {
+      if (nameAndAliasesText.includes(tok)) tokenMatchesInName++;
+    }
+    score += tokenMatchesInName * 15;
+
+    // 6. Role / Designation phrase match
+    if (normRole.includes(cleanQ) || normDesignation.includes(cleanQ)) {
+      score += 35;
+    }
+
+    // 7. Topics / Category match
+    if (normTopics.some(t => t.includes(cleanQ))) {
+      score += 25;
+    }
+    if (normCategories.some(c => c.includes(cleanQ))) {
       score += 20;
-    }
-
-    // 4. Topic match
-    if (speaker.topics && speaker.topics.some(t => t.toLowerCase().includes(q))) {
-      score += 15;
-    }
-
-    // 5. Category match
-    if (speaker.category && speaker.category.some(c => c.toLowerCase().includes(q))) {
-      score += 10;
     }
 
     if (score > 0) {
@@ -4176,6 +4335,17 @@ export function searchSpeakers(query: string, limit: number = 30): UnifiedSpeake
     }
   }
 
+  // De-duplicate by speaker id (keep the highest scoring entry)
+  const uniqueScored: Array<{ speaker: UnifiedSpeaker; score: number }> = [];
+  const seenIds = new Set<string>();
   scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, limit).map(item => item.speaker);
+
+  for (const item of scored) {
+    if (!seenIds.has(item.speaker.id)) {
+      seenIds.add(item.speaker.id);
+      uniqueScored.push(item);
+    }
+  }
+
+  return uniqueScored.slice(0, limit).map(item => item.speaker);
 }

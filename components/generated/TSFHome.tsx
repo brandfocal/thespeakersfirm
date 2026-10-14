@@ -2002,6 +2002,30 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>Executive Leadership Development Practitioner, Storytelling Coach & TEDx Organiser</span>,
   trackId: 'leadership-strategy-and-executive-performance'
+}, {
+  id: 'palesa-dooms',
+  name: 'Palesa Dooms',
+  category: ['MC\'s', 'Keynote'],
+  image: '/speaker_thumbnails/Palesa-Dooms-The-Speakers-Firm.jpg',
+  alt: 'Palesa Dooms',
+  quote: 'Being capable is important. Being able to communicate your capability is what helps others recognise it.',
+  youtubeId: 'UOeqwEC-nxA',
+  topics: ['Personal Positioning', 'Executive Communication', 'Ubuntu & Storytelling'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Speaker, Moderator, Master of Ceremonies & Communications Coach</span>,
+  trackId: 'mc-and-facilitators'
+}, {
+  id: 'zingisa-motloba',
+  name: 'Zingisa Motloba',
+  category: ['Keynote', 'Governance'],
+  image: '/speaker_thumbnails/Zingisa-Motloba-The-Speakers-Firm.jpg',
+  alt: 'Zingisa Motloba',
+  quote: 'Passionate about sustainability rooted in unlocking investment in economic infrastructure across African markets.',
+  youtubeId: 'qp0HIF3SfI4',
+  topics: ['Pan-African ESG & Infrastructure', 'Energy Transition', 'Creative Economy'],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>Attorney, Infrastructure & Energy Advisor, ESG & Leadership Strategist</span>,
+  trackId: 'inspirational-keynote-speakers'
 }];
 
 export const FEATURED_SPEAKERS = FEATURED_SPEAKERS_RAW.map(speaker => {
@@ -4291,6 +4315,7 @@ export const TheSpeakersFirmHome = () => {
       role: s.role || s.designation || "Keynote Speaker & Executive Authority",
       image: s.image,
       trackId: s.trackId || "leadership-governance-and-risk-intelligence",
+      path: s.path || `/tracks/${s.trackId || "leadership-governance-and-risk-intelligence"}/${s.id}`,
       tags: (s.topics || []).map((t, i) => ({ id: `tag-${i}`, label: t })),
       snippet: s.role || s.designation || "International Keynote Speaker and Corporate Authority.",
       spanClassName: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -4339,7 +4364,8 @@ export const TheSpeakersFirmHome = () => {
         topics: s.topics || [],
         tint: 'rgba(227, 14, 4, 0.22)',
         bio: <span>{s.role || s.designation}</span>,
-        trackId: s.trackId
+        trackId: s.trackId,
+        path: s.path || `/tracks/${s.trackId || 'inspirational-keynote-speakers'}/${s.id}`
       }));
     }
 
@@ -5432,7 +5458,7 @@ export const TheSpeakersFirmHome = () => {
             duration: prefersReducedMotion ? 0.35 : 0.6,
             ease: HEADING_EASE,
             delay: prefersReducedMotion ? 0 : order * 0.1
-          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} onClick={() => router.push(`/tracks/${member.trackId}/${member.id}`)} className={cn(member.spanClassName, 'bg-[#000000] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#000000] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
+          }} onMouseEnter={() => setHoveredId(member.id)} onMouseLeave={() => setHoveredId(null)} onClick={() => router.push((member as any).path || `/tracks/${member.trackId || 'leadership-governance-and-risk-intelligence'}/${member.id}`)} className={cn(member.spanClassName, 'bg-[#000000] rounded-[22px] overflow-hidden group cursor-pointer relative isolate flex flex-col border border-[#000000] transition-colors duration-[400ms] ease-out hover:border-[#e30e04]/70')}>
                 <div className="w-full h-[clamp(340px,92vw,440px)] md:h-[520px] overflow-hidden relative bg-[#000000]">
                   <motion.div className="absolute inset-0 bg-[#000000] z-10 origin-top" initial={{
                 scaleY: 1

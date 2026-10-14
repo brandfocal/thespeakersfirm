@@ -274,12 +274,17 @@ export function TSFEntrepreneurshipInvestmentAndBusinessGrowthCategory() {
   const [searchValue, setSearchValue] = useState('');
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const normalizedSearch = searchValue.trim().toLowerCase();
+  const cleanSearch = searchValue.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+  const searchTokens = cleanSearch ? cleanSearch.split(' ') : [];
   const filteredSpeakers = speakers.filter(speaker => {
-    const matchesSearch = normalizedSearch.length === 0 || 
-      speaker.name.toLowerCase().includes(normalizedSearch) || 
-      speaker.role.toLowerCase().includes(normalizedSearch) ||
-      (speaker.topics && speaker.topics.some(t => t.toLowerCase().includes(normalizedSearch)));
+    let matchesSearch = true;
+    if (searchTokens.length > 0) {
+      const cleanText = `${speaker.name} ${speaker.role} ${(speaker.topics || []).join(' ')} ${speaker.id || ''}`
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ');
+      matchesSearch = searchTokens.every(tok => cleanText.includes(tok));
+    }
     const matchesFilter = activeFilter === 'All' || speaker.topics.includes(activeFilter);
     return matchesSearch && matchesFilter;
   });

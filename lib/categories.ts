@@ -201,7 +201,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mncane-mthunzi", "khanyisile-chaba", "femi-adebanji", "siphiwe-moyo", "muzi-kuzwayo",
     "nyimpini-mabunda", "joy-machoene-kaapu", "vumile-msweli",
     "tebogo-mekgoe", "queen-ramotsehoa", "yolisa-kani", "anael-granoux", "lauren-davis",
-    "monde-ndlovu", "aubrey-masango-mc", "aubrey-masango", "molefe-pooe", "dr-jerry-gule", "simphiwe-gwana"
+    "monde-ndlovu", "aubrey-masango-mc", "aubrey-masango", "molefe-pooe", "dr-jerry-gule", "simphiwe-gwana", "rehema-isa"
   ],
   "digital-identity-cybersecurity-and-data-sovereignty": [
     "sipho-maseko", "john-sanei", "callan-abrahams", "kgomotso-mamello-motshidi",
@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "palesa-dooms"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -221,7 +221,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "dr-zukisani-mxoli", "dr-zee"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "dr-zukisani-mxoli", "dr-zee", "rehema-isa", "zingisa-motloba", "palesa-dooms"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
@@ -244,7 +244,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
     "phumzile-mlambo-ngcuka", "nene-molefi", "john-kani", "dr-john-kani", "dr-john-kani-ois-obe", "siphiwe-moyo",
     "eunice-cross", "lerato-sithole", "mazwe-majola", "maanda-tshifularo", "femi-adebanji",
-    "sthembiso-phakathi", "maureen-tong", "dr-maureen-tong", "david-molapo", "abner-mariri", "pumela-salela"
+    "sthembiso-phakathi", "maureen-tong", "dr-maureen-tong", "david-molapo", "abner-mariri", "pumela-salela", "zingisa-motloba"
   ],
   "gender": [
     "zanele-luvuno", "josina-machel", "pastor-tebogo-moema", "ndileka-mandela", "jabulile-khumalo"

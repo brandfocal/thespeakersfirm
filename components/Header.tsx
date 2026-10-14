@@ -498,7 +498,7 @@ export function Header() {
                     {filteredFaculty.map((member) => (
                       <Link
                         key={member.id}
-                        href={`/tracks/${member.trackId}/${member.id}`}
+                        href={member.path || `/tracks/${member.trackId || 'inspirational-keynote-speakers'}/${member.id}`}
                         onClick={() => {
                           setIsSearchExpanded(false);
                           setInputValue("");
@@ -613,7 +613,7 @@ export function Header() {
                       filteredFaculty.map((member) => (
                         <Link
                           key={`mobile-suggest-${member.id}`}
-                          href={`/tracks/${member.trackId}/${member.id}`}
+                          href={member.path || `/tracks/${member.trackId || 'inspirational-keynote-speakers'}/${member.id}`}
                           onClick={() => {
                             setIsMobileMenuOpen(false);
                             setInputValue("");
