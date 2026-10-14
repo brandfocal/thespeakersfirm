@@ -219,6 +219,7 @@ import { AboutTeamSection as RehemaIsaProfile } from "@/components/generated/Reh
 import { AboutTeamSection as SimphiweGwanaProfile } from "@/components/generated/SimphiweGwanaProfileNew";
 import { AboutTeamSection as LeighAnnPaulickProfile } from "@/components/generated/LeighAnnPaulickProfileNew";
 import { AboutTeamSection as PakoMatthewsProfile } from "@/components/generated/PakoMatthewsProfileNew";
+import { AboutTeamSection as DrZukisaniMxoliProfile } from "@/components/generated/DrZukisaniMxoliProfileNew";
 
 
 
@@ -1331,6 +1332,16 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "pako-matthews" || speakerId === "pako") {
     return <PakoMatthewsProfile />;
+  }
+
+  if (
+    speakerId === "dr-zukisani-mxoli" || 
+    speakerId === "zukisani-mxoli" || 
+    speakerId === "dr-zee" || 
+    speakerId === "dr-zukisani-dr-zee-mxoli" ||
+    speakerId === "dr-zukisani-zee-mxoli"
+  ) {
+    return <DrZukisaniMxoliProfile />;
   }
 
 

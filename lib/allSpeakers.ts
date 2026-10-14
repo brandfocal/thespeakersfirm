@@ -4085,6 +4085,32 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "Emotionally Intelligent Leadership & Psychological Safety",
       "The Leader Within: Sustainable Performance"
     ]
+  },
+  {
+    "id": "dr-zukisani-mxoli",
+    "aliases": [
+      "dr-zee",
+      "zukisani-mxoli",
+      "dr-zukisani-dr-zee-mxoli",
+      "dr-zukisani-zee-mxoli"
+    ],
+    "name": "Dr. Zukisani \"Dr. Zee\" Mxoli",
+    "role": "International Public Speaker • Businessman • Moral Regeneration and Leadership Expert",
+    "designation": "International Public Speaker • Businessman • Moral Regeneration and Leadership Expert",
+    "image": "/speaker_thumbnails/Dr-Zukisani-Mxoli-The-Speakers-Firm.jpg",
+    "trackId": "entrepreneurship",
+    "path": "/tracks/entrepreneurship/dr-zukisani-mxoli",
+    "category": [
+      "entrepreneurship",
+      "inspirational-keynote-speakers"
+    ],
+    "topics": [
+      "Moral Regeneration & Ethical Leadership",
+      "Venture Futures & Entrepreneurship",
+      "IMBIZO 7 Pillars & Community Transformation",
+      "Black Wealth & Investment Architecture",
+      "Positive Masculinity & Family Resilience"
+    ]
   }
 ];
 

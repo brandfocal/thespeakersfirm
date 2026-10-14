@@ -221,7 +221,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "inspirational-keynote-speakers": [
     "bonang-mohale", "billy-selekane", "abner-mariri", "david-molapo", "linda-yalezo", "veli-ndaba",
     "max-moyo", "siphiwe-moyo", "hector-motivator", "richie-achukwu", "saray-khumalo",
-    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews"
+    "miles-kubheka", "miles-kubheka-2", "gcina-mhlophe-becker", "theo-baloyi", "gaby-magomola", "sir-max", "tj-malamule", "dr-paulina-mamogobo", "felicia-mabuza-suttle", "jabulile-khumalo", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "dr-zukisani-mxoli", "dr-zee"
   ],
   "spirituality-heritage-and-identity": [
     "gogo-dineo-ndlanzi", "john-kani", "bishop-joshua-maponga", "joshua-maponga", "muzi-kuzwayo", "ndileka-mandela", "mbuso-khoza", "gcina-mhlophe-becker", "pitika-ntuli", "mongane-wally-serote", "zolani-mkiva", "dick-khoza", "simphiwe-gwana"
@@ -263,7 +263,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "entrepreneurship": [
     "rekgotsofetse-chikane", "lebo-gunguluza", "thokozani-nkosi", "anael-granoux",
     "joshua-maluleke", "bulelani-balabala", "eunice-cross", "proverb", "thuli-magubane",
-    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya", "thato-tt-mbha"
+    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya", "thato-tt-mbha", "dr-zukisani-mxoli", "dr-zee"
   ],
   "masculinity": [
     "martin-pelders", "thato-tt-mbha", "apostle-kabelo-moroke", "mbuyiselo-botha",

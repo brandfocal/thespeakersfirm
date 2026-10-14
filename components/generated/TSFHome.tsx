@@ -1578,6 +1578,17 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Executive Leadership Coach, Speaker & Facilitator</span>
 }, {
+  id: 'dr-zukisani-mxoli',
+  name: 'Dr. Zukisani "Dr. Zee" Mxoli',
+  category: ['Entrepreneurship', 'Keynote', 'Leadership'],
+  image: '/speaker_thumbnails/Dr-Zukisani-Mxoli-The-Speakers-Firm.jpg',
+  alt: 'Dr. Zukisani Mxoli',
+  quote: 'Equipping leaders and communities with moral stamina and sustainable wealth creation.',
+  youtubeId: 'ZEiOS3QWR0k',
+  topics: [],
+  tint: 'rgba(227, 14, 4, 0.22)',
+  bio: <span>International Public Speaker, Businessman & Moral Regeneration Expert</span>
+}, {
   id: 'queen-ramotsehoa',
   name: 'Queen Ramotsehoa',
   category: ['Leadership', 'Team-Building'],

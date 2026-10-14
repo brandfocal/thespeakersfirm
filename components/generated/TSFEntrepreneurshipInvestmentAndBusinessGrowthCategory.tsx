@@ -194,6 +194,19 @@ const speakers: Speaker[] = [
       "Founder Leadership Dynamics"
     ],
     "path": "/tracks/leadership-governance-and-risk-intelligence/thato-tt-mbha"
+  },
+  {
+    "id": "dr-zukisani-mxoli",
+    "name": "Dr. Zukisani \"Dr. Zee\" Mxoli",
+    "role": "International Public Speaker • Businessman • Moral Regeneration and Leadership Expert",
+    "image": "/speaker_thumbnails/Dr-Zukisani-Mxoli-The-Speakers-Firm.jpg",
+    "topics": [
+      "Funding & Investment Strategy",
+      "Sustaining High-Growth Businesses",
+      "Founder Leadership Dynamics",
+      "Scaling Enterprises & Operations"
+    ],
+    "path": "/tracks/entrepreneurship/dr-zukisani-mxoli"
   }
 ];
 

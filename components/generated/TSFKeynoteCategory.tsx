@@ -286,6 +286,13 @@ const speakers: Speaker[] = [{
   image: '/speaker_thumbnails/Pako-Matthews-The-Speakers-Firm.jpg',
   topics: ['Leadership', 'Transformation', 'Resilience'],
   path: '/tracks/inspirational-keynote-speakers/pako-matthews'
+}, {
+  id: 'dr-zukisani-mxoli',
+  name: 'Dr. Zukisani "Dr. Zee" Mxoli',
+  role: 'International Public Speaker • Businessman • Moral Regeneration and Leadership Expert',
+  image: '/speaker_thumbnails/Dr-Zukisani-Mxoli-The-Speakers-Firm.jpg',
+  topics: ['Leadership', 'Transformation', 'Legacy', 'Performance'],
+  path: '/tracks/inspirational-keynote-speakers/dr-zukisani-mxoli'
 }];
 
 const filterChips = [{
