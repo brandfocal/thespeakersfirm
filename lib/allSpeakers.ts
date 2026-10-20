@@ -4278,6 +4278,33 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
       "Women in Leadership",
       "Institutional Transformation"
     ]
+  },
+  {
+    "id": "dr-mpume-zenda",
+    "aliases": [
+      "mpume-zenda",
+      "dr-nompumelelo-zenda",
+      "dr-gynae",
+      "nompumelelo-zenda"
+    ],
+    "name": "Dr Mpume Zenda",
+    "role": "Highly Experienced OB-Gynae, Medical Sexologist & Author",
+    "designation": "OB-Gynae, Medical Sexologist & Founder of We See You",
+    "image": "/speaker_thumbnails/Dr-Mpume-Zenda-The-Speakers-Firm.jpg",
+    "trackId": "neuroscience-peak-performance-mental-agility",
+    "path": "/tracks/neuroscience-peak-performance-mental-agility/dr-mpume-zenda",
+    "category": [
+      "neuroscience-peak-performance-mental-agility",
+      "workplace-wellness",
+      "female-keynote-speakers"
+    ],
+    "topics": [
+      "The Cyclical Advantage in Leadership & Workplaces",
+      "Dismantling Taboos in Sexual & Reproductive Health",
+      "Intimacy, Connection & Well-Being",
+      "Intergenerational Health & Body Confidence",
+      "Women's Wellness, Hormonal Transitions & Longevity"
+    ]
   }
 ];
 

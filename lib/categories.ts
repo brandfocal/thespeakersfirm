@@ -238,7 +238,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "neuroscience-peak-performance-mental-agility": [
     "paul-nzimande", "happy-makhumalo-ngidi", "happy-ngidi", "timothy-maurice-webster", "gogo-dineo-ndlanzi",
     "victor-ramathesele", "zamo-mbele", "khaya-dlanga", "billy-selekane", "siphiwe-moyo",
-    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis", "leigh-ann-paulick", "pako-matthews"
+    "boniwe-dunster", "veli-ndaba", "doctor-khumalo", "neil-tovey", "richie-achukwu", "lauren-davis", "leigh-ann-paulick", "pako-matthews", "dr-mpume-zenda"
   ],
   "governance": [
     "thuli-madonsela-keynote", "bonang-mohale", "nyimpini-mabunda", "dudu-msomi", "buyani-zwane",
@@ -253,7 +253,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "mpho-phalatse-nxumalo", "criselda-kananda", "ndileka-mandela", "boniwe-dunster",
     "victor-ramathesele", "gugulethu-xaba", "sibulele-sibaca", "olwethu-leshabane",
     "mothomang-diaho", "zizipho-nyanga", "brenda-kubheka", "dr-brenda-kubheka", "lerato-makhetha", "shingai-mutambirwa",
-    "lauren-davis", "malebo-mashaba"
+    "lauren-davis", "malebo-mashaba", "dr-mpume-zenda"
   ],
   "financial-inclusion": [
     "ndumi-hadebe", "nkateko-khoza", "samke-mhlongo", "mlamuli-mbambo", "viwe-tini",
@@ -277,7 +277,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "ndileka-mandela", "azania-mosaka", "tryphosa-ramano", "gerry-rantseli-elsdon",
     "thuli-madonsela-keynote", "felicia-mabuza-suttle", "zukie-siyotula", "nene-molefi",
     "vumile-msweli", "linda-maqoma", "samke-mhlongo", "joy-machoene-kaapu", "delia-ndlovu",
-    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse", "gcina-mhlophe-becker", "jessica-dube", "ntsoaki-sibiya"
+    "mary-bomela", "nombasa-tsengwa", "zipho-sikhakhane", "yolisa-kani", "ofentse-pitse", "gcina-mhlophe-becker", "jessica-dube", "ntsoaki-sibiya", "dr-mpume-zenda"
   ],
   "futurists": [
     "mushambi-mutuma", "stafford-masie", "john-sanei", "tseliso-mohlomi", "puleng-mokhoalibe", "alistair-mokoena"

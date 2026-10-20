@@ -216,6 +216,17 @@ const speakers: Speaker[] = [
       "Leadership & Learning Agility"
     ],
     "path": "/tracks/neuroscience-peak-performance-mental-agility/pako-matthews"
+  },
+  {
+    "id": "dr-mpume-zenda",
+    "name": "Dr Mpume Zenda",
+    "role": "OB-Gynae, Medical Sexologist & Women's Health Authority",
+    "image": "/speaker_thumbnails/Dr-Mpume-Zenda-The-Speakers-Firm.jpg",
+    "topics": [
+      "Applied Behavioural Science",
+      "Performance Psychology"
+    ],
+    "path": "/tracks/neuroscience-peak-performance-mental-agility/dr-mpume-zenda"
   }
 ];
 
