@@ -352,6 +352,18 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/lala-tuku"
   },
   {
+    "id": "elma-akob",
+    "name": "Elma Akob",
+    "role": "Award-Winning Global MC, Keynote Speaker, Public Speaking Coach & PhD Candidate",
+    "image": "/speaker_thumbnails/Elma-Akob-The-Speakers-Firm.jpg",
+    "topics": [
+      "Global Event Moderation & Executive Facilitation",
+      "Corporate Sustainability & Strategic Communication",
+      "Pan-African Leadership, Gender & Inclusion Dynamics"
+    ],
+    "path": "/tracks/mc-and-facilitators/elma-akob"
+  },
+  {
     "id": "liopelo-maphathe",
     "name": "Liopelo Maphathe",
     "role": "Acclaimed Actress, TV Presenter & Philanthropist",

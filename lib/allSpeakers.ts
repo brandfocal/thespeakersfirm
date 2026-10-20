@@ -1367,6 +1367,25 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
     ]
   },
   {
+    "id": "elma-akob",
+    "aliases": [],
+    "name": "Elma Akob",
+    "role": "Award-Winning Global MC, Keynote Speaker, Public Speaking Coach & PhD Candidate",
+    "designation": "Award-Winning Global MC, Keynote Speaker, Public Speaking Coach & PhD Candidate",
+    "image": "/speaker_thumbnails/Elma-Akob-The-Speakers-Firm.jpg",
+    "trackId": "mc-and-facilitators",
+    "path": "/tracks/mc-and-facilitators/elma-akob",
+    "category": [
+      "mc-and-facilitators"
+    ],
+    "topics": [
+      "Global Event Moderation & Executive Facilitation",
+      "Corporate Sustainability & Strategic Communication",
+      "Pan-African Leadership, Gender & Inclusion Dynamics",
+      "Executive Voice, Presence & Public Speaking Mastery"
+    ]
+  },
+  {
     "id": "lauren-davis",
     "aliases": [],
     "name": "Lauren Davis",
