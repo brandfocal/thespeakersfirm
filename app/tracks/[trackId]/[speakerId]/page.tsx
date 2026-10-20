@@ -355,12 +355,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: pageUrl,
       siteName: "The Speakers Firm",
       locale: "en_ZA",
-      type: "profile",
+      type: "website",
       images: [
         {
           url: absoluteImageUrl,
-          width: 1200,
-          height: 630,
+          secureUrl: absoluteImageUrl,
+          width: 1000,
+          height: 1000,
           alt: `${speakerName} — The Speakers Firm Faculty Profile`,
           type: "image/jpeg"
         }
