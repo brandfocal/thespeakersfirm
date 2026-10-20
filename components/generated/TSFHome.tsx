@@ -3221,6 +3221,34 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Business Leader | Co-Founder of EmpowaMen',
     description: 'Sechaba Motsieloa is a powerhouse in business leadership, strategy and transformation, bringing over two decades of executive experience to every room he enters.',
     thumbnail: 'https://img.youtube.com/vi/K49Dhc75DAA/maxresdefault.jpg'
+  },
+  {
+    id: 'GXbjeJyRdOU',
+    title: 'Dr. Mpho Phalatse',
+    subtitle: 'Experience in Medicine, Public Health & Leadership',
+    description: 'Dr Mpho Phalatse brings together experience in medicine, public health, entrepreneurship and public leadership, offering audiences a powerful perspective on courageous leadership, purposeful decision making and meaningful impact.',
+    thumbnail: 'https://img.youtube.com/vi/GXbjeJyRdOU/maxresdefault.jpg'
+  },
+  {
+    id: 'sEv5l_aTND8',
+    title: 'Lala Tuku',
+    subtitle: 'Television, Acting, Directing & Producing',
+    description: 'Lala Tuku has built a career across television, acting, directing, producing, vocal coaching and entrepreneurship, mastering what it takes to connect with audiences both in front of the camera and behind it.',
+    thumbnail: 'https://img.youtube.com/vi/sEv5l_aTND8/maxresdefault.jpg'
+  },
+  {
+    id: 'ZZeAa9Gz3RA',
+    title: 'Viwe Tini',
+    subtitle: 'CEO of Vunani Securities & Chartered Accountant',
+    description: 'Viwe Tini is proof that brilliance cannot be confined to one space. As Chief Executive Officer of Vunani Securities, a qualified Chartered Accountant and a creative at heart, she embodies the power of embracing every dimension of who you are.',
+    thumbnail: 'https://img.youtube.com/vi/ZZeAa9Gz3RA/maxresdefault.jpg'
+  },
+  {
+    id: 'tFqDPNr70DA',
+    title: 'Lebo Gunguluza',
+    subtitle: 'Artificial Intelligence, Fintech & The Future of Business',
+    description: 'Lebo Gunguluza is helping shape conversations around Artificial Intelligence, Fintech and the future of business, challenging leaders to rethink possibilities and embrace the opportunities of a rapidly evolving digital world.',
+    thumbnail: 'https://img.youtube.com/vi/tFqDPNr70DA/maxresdefault.jpg'
   }
 ];
 
