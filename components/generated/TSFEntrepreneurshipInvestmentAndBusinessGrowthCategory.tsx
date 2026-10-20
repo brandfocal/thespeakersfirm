@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "koketso-sachane",
+    "name": "Koketso Sachane",
+    "role": "Broadcaster, Journalist, Storyteller & Conversation Maker",
+    "image": "/speaker_thumbnails/Koketso-Sachane-The-Speakers-Firm.jpg",
+    "topics": [
+      "Strategic Narrative & Cultural Entrepreneurship",
+      "Founder of House of Sachane",
+      "High-Impact Public Dialogue"
+    ],
+    "path": "/tracks/entrepreneurship/koketso-sachane"
+  },
+  {
     "id": "proverb",
     "name": "Tebogo “ProVerb” Thekisho",
     "role": "Media Personality, Author, Entrepreneur, Speaker & Master of Ceremonies",

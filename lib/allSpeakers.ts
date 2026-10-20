@@ -1349,6 +1349,28 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
     ]
   },
   {
+    "id": "koketso-sachane",
+    "aliases": [],
+    "name": "Koketso Sachane",
+    "role": "Broadcaster, Journalist, Storyteller & Conversation Maker",
+    "designation": "Broadcaster, Journalist, Storyteller & Founder of House of Sachane",
+    "image": "/speaker_thumbnails/Koketso-Sachane-The-Speakers-Firm.jpg",
+    "trackId": "mc-and-facilitators",
+    "path": "/tracks/mc-and-facilitators/koketso-sachane",
+    "category": [
+      "mc-and-facilitators",
+      "media-brand-reputation",
+      "entrepreneurship"
+    ],
+    "topics": [
+      "Who Shapes the South African Story?",
+      "Beyond the Headlines: The Conversations We Are Not Having",
+      "Can We Still Talk to One Another? Disagreement Without Division",
+      "Listening is a Leadership Act",
+      "The Stories We Leave Behind"
+    ]
+  },
+  {
     "id": "lala-tuku",
     "aliases": [],
     "name": "Lala Tuku",

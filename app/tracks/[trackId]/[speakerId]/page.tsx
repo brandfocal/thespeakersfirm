@@ -189,6 +189,7 @@ import { AboutTeamSection as MondeNdlovuProfile } from "@/components/generated/M
 import { AboutTeamSection as PaulinaMamogoboProfile } from "@/components/generated/PaulinaMamogoboProfileNew";
 import { AboutTeamSection as LalaTukuProfile } from "@/components/generated/LalaTukuProfileNew";
 import { AboutTeamSection as ElmaAkobProfile } from "@/components/generated/ElmaAkobProfileNew";
+import { AboutTeamSection as KoketsoSachaneProfile } from "@/components/generated/KoketsoSachaneProfileNew";
 import { AboutTeamSection as LiopeloMaphatheProfile } from "@/components/generated/LiopeloMaphatheProfileNew";
 import { AboutTeamSection as FeliciaMabuzaSuttleProfile } from "@/components/generated/FeliciaMabuzaSuttleProfileNew";
 import { AboutTeamSection as TebogoMekgoeProfile } from "@/components/generated/TebogoMekgoeProfileNew";
@@ -705,6 +706,10 @@ export default async function SpeakerPage({ params }: PageProps) {
 
   if (speakerId === "elma-akob") {
     return <ElmaAkobProfile />;
+  }
+
+  if (speakerId === "koketso-sachane") {
+    return <KoketsoSachaneProfile />;
   }
 
   if (speakerId === "liopelo-maphathe") {

@@ -193,7 +193,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "media-brand-reputation": [
     "sylvester-chauke", "mandla-radebe", "sechaba-motsieloa", "milton-nkosi", "rams-mabote",
     "jj-tabane", "phathiswa-magopeni", "proverb", "lorato-tshenkeng", "mzamo-masito",
-    "muzi-kuzwayo", "thapelo-mokoena", "jessica-dube", "leigh-ann-paulick"
+    "muzi-kuzwayo", "thapelo-mokoena", "jessica-dube", "leigh-ann-paulick", "koketso-sachane"
   ],
   "leadership-governance-and-risk-intelligence": [
     "stafford-masie", "themba-maseko", "lincoln-mali", "saray-khumalo", "somadoda-fikeni",
@@ -212,7 +212,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
     "nozipho-tshabalala", "cathy-mohlahlana", "clement-manyathela", "gerry-rantseli-elsdon",
     "azania-mosaka", "bongani-bingwa", "alishia-naidoo-vawda", "abigail-visagie", "leanne-manas",
     "ayanda-allie", "juliet-joseph", "thabo-mdluli", "faith-mangope",
-    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "elma-akob", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "palesa-dooms"
+    "mpho-sithole", "gaisang-moloabi", "trudy-theledi", "sipho-alphi-mkhwanazi", "proverb", "lala-tuku", "elma-akob", "koketso-sachane", "liopelo-maphathe", "bridget-masinga", "bridget-masinga-mc", "phemelo-motene", "sibusiso-molimi", "jessica-dube", "thato-tt-mbha", "simphiwe-gwana", "leigh-ann-paulick", "pako-matthews", "palesa-dooms"
   ],
   "comedy": [
     "mpho-popps", "mpho-popps-modikoane", "eugene-khoza", "ntosh-madlingozi", "ndumiso-lindi", 
@@ -263,7 +263,7 @@ export const CATEGORY_SPEAKERS_MAP: Record<string, string[]> = {
   "entrepreneurship": [
     "rekgotsofetse-chikane", "lebo-gunguluza", "thokozani-nkosi", "anael-granoux",
     "joshua-maluleke", "bulelani-balabala", "eunice-cross", "proverb", "thuli-magubane",
-    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya", "thato-tt-mbha", "dr-zukisani-mxoli", "dr-zee"
+    "thapelo-mokoena", "musa-sono", "trudy-theledi", "molefe-pooe", "miles-kubheka", "miles-kubheka-2", "theo-baloyi", "ntsoaki-sibiya", "thato-tt-mbha", "dr-zukisani-mxoli", "dr-zee", "koketso-sachane"
   ],
   "masculinity": [
     "martin-pelders", "thato-tt-mbha", "apostle-kabelo-moroke", "mbuyiselo-botha",

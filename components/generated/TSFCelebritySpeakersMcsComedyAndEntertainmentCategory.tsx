@@ -364,6 +364,18 @@ const speakers: Speaker[] = [
     "path": "/tracks/mc-and-facilitators/elma-akob"
   },
   {
+    "id": "koketso-sachane",
+    "name": "Koketso Sachane",
+    "role": "Broadcaster, Journalist, Storyteller & Conversation Maker",
+    "image": "/speaker_thumbnails/Koketso-Sachane-The-Speakers-Firm.jpg",
+    "topics": [
+      "Who Shapes the South African Story?",
+      "Beyond the Headlines: The Conversations We Are Not Having",
+      "Listening is a Leadership Act"
+    ],
+    "path": "/tracks/mc-and-facilitators/koketso-sachane"
+  },
+  {
     "id": "liopelo-maphathe",
     "name": "Liopelo Maphathe",
     "role": "Acclaimed Actress, TV Presenter & Philanthropist",

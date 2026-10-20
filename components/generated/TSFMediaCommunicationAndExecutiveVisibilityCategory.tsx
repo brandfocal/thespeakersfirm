@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "koketso-sachane",
+    "name": "Koketso Sachane",
+    "role": "Broadcaster, Journalist, Storyteller & Conversation Maker",
+    "image": "/speaker_thumbnails/Koketso-Sachane-The-Speakers-Firm.jpg",
+    "topics": [
+      "Authority, Clarity & Influence",
+      "Media Platform Mastery",
+      "Compelling Storytelling & Public Dialogue"
+    ],
+    "path": "/tracks/media-brand-reputation/koketso-sachane"
+  },
+  {
     "id": "mzamo-masito",
     "name": "Dr. Mzamo Masito",
     "role": "Africa Regional Lead, Canva | Founder, African Men Care",
