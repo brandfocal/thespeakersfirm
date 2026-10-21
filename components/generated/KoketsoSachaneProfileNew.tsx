@@ -111,6 +111,15 @@ export const AboutTeamSection = () => {
     }
   ];
 
+  const customVideos = [
+    {
+      id: "ks-vid-1",
+      label: "Koketso Sachane: Mastering the Art of Effortless Conversation",
+      youtubeId: "tgzEgzCRvKE",
+      thumbnail: "https://img.youtube.com/vi/tgzEgzCRvKE/maxresdefault.jpg"
+    }
+  ];
+
   return (
     <SpeakerProfileTemplate
       speakerName="Koketso Sachane"
@@ -136,7 +145,7 @@ export const AboutTeamSection = () => {
       <ProfileAdditionalSections 
         speakerId="koketso-sachane" 
         customIntroText="National current affairs dialogues, keynote addresses, and high-level panel moderations led by Koketso Sachane."
-        customVideos={[]}
+        customVideos={customVideos}
       />
     </SpeakerProfileTemplate>
   );

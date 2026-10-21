@@ -3249,6 +3249,13 @@ const SPEAKER_VIDEOS = [
     subtitle: 'Artificial Intelligence, Fintech & The Future of Business',
     description: 'Lebo Gunguluza is helping shape conversations around Artificial Intelligence, Fintech and the future of business, challenging leaders to rethink possibilities and embrace the opportunities of a rapidly evolving digital world.',
     thumbnail: 'https://img.youtube.com/vi/tFqDPNr70DA/maxresdefault.jpg'
+  },
+  {
+    id: 'tgzEgzCRvKE',
+    title: 'Koketso Sachane',
+    subtitle: 'Broadcaster, Journalist, Storyteller & Dialogue Facilitator',
+    description: 'Koketso Sachane has mastered the art of making conversations feel effortless, bringing seasoned journalistic curiosity, masterful moderation, and unforgettable dialogue facilitation to national discourse.',
+    thumbnail: 'https://img.youtube.com/vi/tgzEgzCRvKE/maxresdefault.jpg'
   }
 ];
 
