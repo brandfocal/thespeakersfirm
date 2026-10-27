@@ -5254,11 +5254,14 @@ export const TheSpeakersFirmHome = () => {
             </p>
           </div>
           <div className="relative w-full overflow-hidden rounded-[28px] border border-black/10 shadow-2xl bg-white">
-            <img 
-              src="/upcoming_events/Prof-Letlhokwa-George-Mpedi-Book-Launch-desktop.jpg" 
-              alt="Prof. Letlhokwa George Mpedi Book Launch" 
-              className="w-full h-auto block"
-            />
+            <picture>
+              <source media="(max-width: 767px)" srcSet="/roundtable/Nympini-Mabunda-book-launch-mobile.jpg" />
+              <img 
+                src="/roundtable/Nympini-Mabunda-book-launch.jpg" 
+                alt="Nyimpini Mabunda Book Launch & Roundtable Conversation" 
+                className="w-full h-auto block"
+              />
+            </picture>
           </div>
         </div>
       </section>
