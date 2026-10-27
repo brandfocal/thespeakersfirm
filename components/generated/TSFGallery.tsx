@@ -129,7 +129,74 @@ const bonangMohaleImages = [
   'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/08/DSC_4795.jpg'
 ];
 
+const nyimpiniMabundaImages = [
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5183.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_4990.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_4975.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5078.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5120.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5131.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5241.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5246.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5269.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5278.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5317.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5308.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5326.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5342.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5352.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5356.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5353.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5360.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5363.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5391.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5385.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5409.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5410.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5420.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5490.jpg'
+];
+
+const pamYakoImages = [
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3371.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3467.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3138.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3095.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3104.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3112.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3123.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3140.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3173.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3204.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3271.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3420_1.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3478.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3499.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3524.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3527.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3529.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3541.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3536.jpg',
+  'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3550.jpg'
+];
+
 const galleryItems = [{
+  id: 'nyimpini-mabunda-book-launch-2026',
+  title: 'Nyimpini Mabunda - Book Roundtable & Launch - 2026',
+  year: '2026',
+  category: 'Executive Roundtables',
+  image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_5183.jpg',
+  aspect: 'wide',
+  images: nyimpiniMabundaImages
+}, {
+  id: 'pam-yako-book-launch-2026',
+  title: 'Pam Yako - The Savanna Code Book Launch - 2026',
+  year: '2026',
+  category: 'Executive Roundtables',
+  image: 'https://cms.thespeakersfirm.co.za/wp-content/uploads/2026/10/DSC_3371.jpg',
+  aspect: 'wide',
+  images: pamYakoImages
+}, {
   id: 'lerato-sithole-aie-2026',
   title: 'Lerato Sithole - African Insurance Exchange - 2026',
   year: '2026',

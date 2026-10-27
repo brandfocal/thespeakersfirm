@@ -2162,6 +2162,8 @@ const FEATURED_SPEAKER_FILTERS = [
 ];
 
 const ROUNDTABLE_INVITES = [
+  { id: 'nyimpini-mabunda', src: '/roundtable/Nympini-Mabunda-book-launch-mobile.jpg', alt: 'Nyimpini Mabunda Book Roundtable Conversation' },
+  { id: 'pam-yako', src: '/roundtable/Pam-Yako-book-launch-mobile.jpg', alt: 'Pam Yako Book Launch Conversation' },
   { id: 'mohale', src: '/roundtable/mohale.jpg', alt: 'Prof. Bonang Mohale Roundtable Discussion' },
   { id: 'invite3', src: '/roundtable/invite3.jpg', alt: 'Executive Dialogue Session' },
   { id: 'lincoln', src: '/roundtable/lincoln.jpg', alt: 'Lincoln Roundtable Discussion' },
