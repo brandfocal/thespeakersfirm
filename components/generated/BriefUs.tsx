@@ -398,15 +398,15 @@ export function BriefUs() {
                           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <label className="flex flex-col gap-2">
                               <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Nature of Engagement*</span>
-                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
-                                <option value="" disabled>Select option...</option>
-                                <option value="Executive Boardroom Strategy">Executive Boardroom Strategy</option>
-                                <option value="Annual General Meeting">Annual General Meeting</option>
-                                <option value="Leadership Summit">Leadership Summit</option>
-                                <option value="Brand Campaign">Brand Campaign</option>
-                                <option value="Keynote Address">Keynote Address</option>
-                                <option value="Panel Facilitation">Panel Facilitation</option>
-                                <option value="Virtual Broadcast">Virtual Broadcast</option>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-[#0A0A0A] text-white outline-none focus:border-[#e30e04] transition-colors [color-scheme:dark]" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
+                                <option value="" disabled className="bg-[#121212] text-white">Select option...</option>
+                                <option value="Executive Boardroom Strategy" className="bg-[#121212] text-white">Executive Boardroom Strategy</option>
+                                <option value="Annual General Meeting" className="bg-[#121212] text-white">Annual General Meeting</option>
+                                <option value="Leadership Summit" className="bg-[#121212] text-white">Leadership Summit</option>
+                                <option value="Brand Campaign" className="bg-[#121212] text-white">Brand Campaign</option>
+                                <option value="Keynote Address" className="bg-[#121212] text-white">Keynote Address</option>
+                                <option value="Panel Facilitation" className="bg-[#121212] text-white">Panel Facilitation</option>
+                                <option value="Virtual Broadcast" className="bg-[#121212] text-white">Virtual Broadcast</option>
                               </select>
                             </label>
                             <label className="flex flex-col gap-2">
@@ -419,23 +419,23 @@ export function BriefUs() {
                             </label>
                             <label className="flex flex-col gap-2">
                               <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Estimated Audience Size*</span>
-                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
-                                <option value="" disabled>Select range...</option>
-                                <option value="Under 50 (Executive/Closed Door)">Under 50 (Executive/Closed Door)</option>
-                                <option value="50-200">50–200</option>
-                                <option value="200-500">200–500</option>
-                                <option value="500+ (Large Scale Summit)">500+ (Large Scale Summit)</option>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-[#0A0A0A] text-white outline-none focus:border-[#e30e04] transition-colors [color-scheme:dark]" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
+                                <option value="" disabled className="bg-[#121212] text-white">Select range...</option>
+                                <option value="Under 50 (Executive/Closed Door)" className="bg-[#121212] text-white">Under 50 (Executive/Closed Door)</option>
+                                <option value="50-200" className="bg-[#121212] text-white">50–200</option>
+                                <option value="200-500" className="bg-[#121212] text-white">200–500</option>
+                                <option value="500+ (Large Scale Summit)" className="bg-[#121212] text-white">500+ (Large Scale Summit)</option>
                               </select>
                             </label>
                             <label className="flex flex-col gap-2 sm:col-span-2">
                               <span className="text-[11px] font-bold uppercase tracking-wider text-[#AFB0B0]">Allocated Talent Budget*</span>
-                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-transparent outline-none focus:border-[#e30e04] transition-colors" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
-                                <option value="" disabled>Select range...</option>
-                                <option value="To be Determined">To be Determined</option>
-                                <option value="R20k–R40k">R20k–R40k</option>
-                                <option value="R40k–R80k">R40k–R80k</option>
-                                <option value="R80k–R150k">R80k–R150k</option>
-                                <option value="R150k+">R150k+</option>
+                              <select required className="border border-white/20 px-4 py-3 rounded-lg text-sm bg-[#0A0A0A] text-white outline-none focus:border-[#e30e04] transition-colors [color-scheme:dark]" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
+                                <option value="" disabled className="bg-[#121212] text-white">Select range...</option>
+                                <option value="To be Determined" className="bg-[#121212] text-white">To be Determined</option>
+                                <option value="R20k–R40k" className="bg-[#121212] text-white">R20k–R40k</option>
+                                <option value="R40k–R80k" className="bg-[#121212] text-white">R40k–R80k</option>
+                                <option value="R80k–R150k" className="bg-[#121212] text-white">R80k–R150k</option>
+                                <option value="R150k+" className="bg-[#121212] text-white">R150k+</option>
                               </select>
                             </label>
                           </div>

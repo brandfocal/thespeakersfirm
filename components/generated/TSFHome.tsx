@@ -4084,15 +4084,15 @@ const BriefBureauFormSection = () => {
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                           <label className="flex flex-col gap-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Nature of Engagement*</span>
-                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
-                              <option value="" disabled className="text-black bg-white">Select option...</option>
-                              <option value="Executive Boardroom Strategy" className="text-black bg-white">Executive Boardroom Strategy</option>
-                              <option value="Annual General Meeting" className="text-black bg-white">Annual General Meeting</option>
-                              <option value="Leadership Summit" className="text-black bg-white">Leadership Summit</option>
-                              <option value="Brand Campaign" className="text-black bg-white">Brand Campaign</option>
-                              <option value="Keynote Address" className="text-black bg-white">Keynote Address</option>
-                              <option value="Panel Facilitation" className="text-black bg-white">Panel Facilitation</option>
-                              <option value="Virtual Broadcast" className="text-black bg-white">Virtual Broadcast</option>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none [color-scheme:dark]" value={formData.format} onChange={e => handleFieldChange("format", e.target.value)}>
+                              <option value="" disabled className="bg-[#121212] text-white">Select option...</option>
+                              <option value="Executive Boardroom Strategy" className="bg-[#121212] text-white">Executive Boardroom Strategy</option>
+                              <option value="Annual General Meeting" className="bg-[#121212] text-white">Annual General Meeting</option>
+                              <option value="Leadership Summit" className="bg-[#121212] text-white">Leadership Summit</option>
+                              <option value="Brand Campaign" className="bg-[#121212] text-white">Brand Campaign</option>
+                              <option value="Keynote Address" className="bg-[#121212] text-white">Keynote Address</option>
+                              <option value="Panel Facilitation" className="bg-[#121212] text-white">Panel Facilitation</option>
+                              <option value="Virtual Broadcast" className="bg-[#121212] text-white">Virtual Broadcast</option>
                             </select>
                           </label>
                           <label className="flex flex-col gap-2">
@@ -4105,23 +4105,23 @@ const BriefBureauFormSection = () => {
                           </label>
                           <label className="flex flex-col gap-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Estimated Audience Size*</span>
-                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
-                              <option value="" disabled className="text-black bg-white">Select range...</option>
-                              <option value="Under 50 (Executive/Closed Door)" className="text-black bg-white">Under 50 (Executive/Closed Door)</option>
-                              <option value="50-200" className="text-black bg-white">50–200</option>
-                              <option value="200-500" className="text-black bg-white">200–500</option>
-                              <option value="500+ (Large Scale Summit)" className="text-black bg-white">500+ (Large Scale Summit)</option>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none [color-scheme:dark]" value={formData.audienceSize} onChange={e => handleFieldChange("audienceSize", e.target.value)}>
+                              <option value="" disabled className="bg-[#121212] text-white">Select range...</option>
+                              <option value="Under 50 (Executive/Closed Door)" className="bg-[#121212] text-white">Under 50 (Executive/Closed Door)</option>
+                              <option value="50-200" className="bg-[#121212] text-white">50–200</option>
+                              <option value="200-500" className="bg-[#121212] text-white">200–500</option>
+                              <option value="500+ (Large Scale Summit)" className="bg-[#121212] text-white">500+ (Large Scale Summit)</option>
                             </select>
                           </label>
                           <label className="flex flex-col gap-2 sm:col-span-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-white/70">Allocated Talent Budget*</span>
-                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
-                              <option value="" disabled className="text-black bg-white">Select range...</option>
-                              <option value="To be Determined" className="text-black bg-white">To be Determined</option>
-                              <option value="R20k–R40k" className="text-black bg-white">R20k–R40k</option>
-                              <option value="R40k–R80k" className="text-black bg-white">R40k–R80k</option>
-                              <option value="R80k–R150k" className="text-black bg-white">R80k–R150k</option>
-                              <option value="R150k+" className="text-black bg-white">R150k+</option>
+                            <select required className="border border-white/20 bg-white/10 px-4 py-3 rounded-lg text-sm text-white outline-none focus:border-white transition-colors animate-none [color-scheme:dark]" value={formData.budget} onChange={e => handleFieldChange("budget", e.target.value)}>
+                              <option value="" disabled className="bg-[#121212] text-white">Select range...</option>
+                              <option value="To be Determined" className="bg-[#121212] text-white">To be Determined</option>
+                              <option value="R20k–R40k" className="bg-[#121212] text-white">R20k–R40k</option>
+                              <option value="R40k–R80k" className="bg-[#121212] text-white">R40k–R80k</option>
+                              <option value="R80k–R150k" className="bg-[#121212] text-white">R80k–R150k</option>
+                              <option value="R150k+" className="bg-[#121212] text-white">R150k+</option>
                             </select>
                           </label>
                         </div>

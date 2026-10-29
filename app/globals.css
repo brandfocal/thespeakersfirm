@@ -44,6 +44,16 @@ input[type="radio"] {
   accent-color: #e30e04;
 }
 
+/* Ensure dark dropdown backgrounds across all browser select inputs */
+select {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
 /* Institutional Minimalist Base Utilities */
 .line-grid {
   background-size: 40px 40px;
