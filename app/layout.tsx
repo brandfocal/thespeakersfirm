@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  verification: {
+    google: "FuTTboLHcJO0MzpM586lH8WSVgaq60MHfPw6ybAf_I4",
+  },
   openGraph: {
     title: "The Speakers Firm | Our Voice, Driving Exponential Growth",
     description: "Elite partner in boardroom transformation. Curating strategic voices, keynotes, and leadership authorities to shift rooms and drive commercial momentum.",
@@ -80,6 +83,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5SCTG56" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());`,
+          }}
+        />
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="FuTTboLHcJO0MzpM586lH8WSVgaq60MHfPw6ybAf_I4" />
+
         <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />

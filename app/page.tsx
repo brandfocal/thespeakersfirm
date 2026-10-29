@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Speakers Firm | Elite Keynote Speakers & Executive Curation",
     description: "Elite partner in boardroom transformation. The Speakers Firm curates strategic voices, keynotes, and leadership authorities to shift rooms."
+  },
+  verification: {
+    google: "FuTTboLHcJO0MzpM586lH8WSVgaq60MHfPw6ybAf_I4",
   }
 };
 
