@@ -223,6 +223,16 @@ const galleryItems = [{
 }];
 const videos = [
   {
+    id: 'GutbcdNeYso',
+    title: 'Dr. Zukisani Mxoli Profile',
+    image: 'https://img.youtube.com/vi/GutbcdNeYso/maxresdefault.jpg'
+  },
+  {
+    id: '-4s1IhQwVVU',
+    title: 'Linda Yende Profile',
+    image: 'https://img.youtube.com/vi/-4s1IhQwVVU/maxresdefault.jpg'
+  },
+  {
     id: 'yuEmR7eAaHo',
     title: 'Callan Abrahams Profile',
     image: 'https://img.youtube.com/vi/yuEmR7eAaHo/maxresdefault.jpg'

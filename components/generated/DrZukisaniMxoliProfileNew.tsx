@@ -145,7 +145,7 @@ export const AboutTeamSection = () => {
     {
       id: "mxoli-vid-1",
       label: "Dr. Zukisani \"Dr. Zee\" Mxoli - Keynote Address & Leadership Insights",
-      youtubeId: "ZEiOS3QWR0k"
+      youtubeId: "GutbcdNeYso"
     }
   ];
 
@@ -219,7 +219,7 @@ export const AboutTeamSection = () => {
       {/* 3. Experience Reel (Video) Section */}
       <ProfileAdditionalSections 
         speakerId="dr-zukisani-mxoli" 
-        customIntroText="Watch Dr. Zukisani 'Dr. Zee' Mxoli deliver compelling leadership, business, and moral regeneration insights."
+        customIntroText="A commanding voice in leadership, business and personal transformation, Dr. Zukisani Mxoli challenges audiences to rise above limitations, embrace excellence and lead with purpose."
         customVideos={customVideos}
       />
 

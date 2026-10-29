@@ -1584,7 +1584,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speaker_thumbnails/Dr-Zukisani-Mxoli-The-Speakers-Firm.jpg',
   alt: 'Dr. Zukisani Mxoli',
   quote: 'Equipping leaders and communities with moral stamina and sustainable wealth creation.',
-  youtubeId: 'ZEiOS3QWR0k',
+  youtubeId: 'GutbcdNeYso',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>International Public Speaker, Businessman & Moral Regeneration Expert</span>
@@ -3000,6 +3000,20 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
+  {
+    id: 'GutbcdNeYso',
+    title: 'Dr. Zukisani Mxoli',
+    subtitle: 'Accomplished International Public Speaker & Businessman',
+    description: 'A commanding voice in leadership, business and personal transformation, Dr. Zukisani Mxoli is an accomplished international public speaker, businessman and leadership thought leader who challenges audiences to rise above limitations, embrace excellence and lead with purpose.',
+    thumbnail: 'https://img.youtube.com/vi/GutbcdNeYso/maxresdefault.jpg'
+  },
+  {
+    id: '-4s1IhQwVVU',
+    title: 'Linda Yende',
+    subtitle: 'Where Creativity Meets Charisma & Versatility Takes Centre Stage',
+    description: 'From radio to television, literature to music, and commanding the stage as a sought after MC, Linda is a multifaceted creative who knows how to turn every moment into an experience worth remembering.',
+    thumbnail: 'https://img.youtube.com/vi/-4s1IhQwVVU/maxresdefault.jpg'
+  },
   {
     id: 'buQllv53-do',
     title: 'Molefe Pooe',

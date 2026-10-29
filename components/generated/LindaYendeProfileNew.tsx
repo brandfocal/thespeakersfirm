@@ -84,8 +84,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "ly-vid-1",
-      label: "Linda Yende on Relationships, Youth & Personal Growth",
-      youtubeId: "2zAiLdQrqQQ"
+      label: "Linda Yende - Creativity, Charisma & Versatility",
+      youtubeId: "-4s1IhQwVVU"
     }
   ];
 
@@ -112,7 +112,7 @@ export const AboutTeamSection = () => {
     >
       <ProfileAdditionalSections 
         speakerId="linda-yende" 
-        customIntroText="Motivational talks, focus group facilitation, and youth empowerment seminars led by Linda Yende."
+        customIntroText="From radio to television, literature to music, and commanding the stage as a sought after MC, Linda is a multifaceted creative who knows how to turn every moment into an experience worth remembering."
         customVideos={customVideos}
       />
     </SpeakerProfileTemplate>
