@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { CheckCircle, AlertTriangle } from "lucide-react";
+import { getUtmParams } from "@/lib/utm";
 
 const SUB_HEADING_CLASS = "font-['Kontora',sans-serif] text-lg font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-xl md:text-2xl";
 
@@ -175,23 +176,13 @@ export const SpeakerBookingForm = ({ speakerName, speakerRef }: SpeakerBookingFo
           `Consent to secure processing: Yes`
         ].join(" | ");
 
-        // Build mock UTM parameters
-        let utm_source = "";
-        let utm_medium = "";
-        let utm_campaign = "";
-        let utm_term = "";
-        let utm_content = "";
-        let gclid = "";
-
-        if (typeof window !== "undefined") {
-          const params = new URLSearchParams(window.location.search);
-          utm_source = params.get("utm_source") || "";
-          utm_medium = params.get("utm_medium") || "";
-          utm_campaign = params.get("utm_campaign") || "";
-          utm_term = params.get("utm_term") || "";
-          utm_content = params.get("utm_content") || "";
-          gclid = params.get("gclid") || "";
-        }
+        const utm = getUtmParams();
+        const utm_source = utm.utm_source;
+        const utm_medium = utm.utm_medium;
+        const utm_campaign = utm.utm_campaign;
+        const utm_term = utm.utm_term;
+        const utm_content = utm.utm_content;
+        const gclid = utm.gclid;
 
         let recaptchaToken = "";
         const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;

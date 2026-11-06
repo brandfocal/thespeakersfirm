@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { getUtmParams } from '@/lib/utm';
 
 const C = {
   black: '#000000',
@@ -217,17 +218,25 @@ export function ExecutiveDialogues() {
     }
 
     try {
+      const utm = getUtmParams();
+
       const response = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          formId: 8,
+          formId: 18,
           recaptchaToken,
           values: {
             "17": formData.fullName,
             "14": formData.email,
             "15": formData.company,
-            "16": formData.designation
+            "16": formData.designation,
+            "18": utm.utm_source,
+            "19": utm.utm_medium,
+            "20": utm.utm_campaign,
+            "21": utm.utm_term,
+            "22": utm.utm_content,
+            "23": utm.gclid
           }
         })
       });

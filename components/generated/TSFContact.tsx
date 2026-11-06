@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { getUtmParams } from '@/lib/utm';
 
 type ContactField = {
   id: string;
@@ -292,20 +293,10 @@ export const TSFContact = () => {
     gclid: ''
   });
 
-  // Automatically parse UTM parameters from search URL on component mount
-  useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      setUtmParams({
-        utm_source: params.get('utm_source') || '',
-        utm_medium: params.get('utm_medium') || '',
-        utm_campaign: params.get('utm_campaign') || '',
-        utm_term: params.get('utm_term') || '',
-        utm_content: params.get('utm_content') || '',
-        gclid: params.get('gclid') || ''
-      });
-    }
-  });
+  // Automatically parse UTM parameters from search URL or session on component mount
+  useEffect(() => {
+    setUtmParams(getUtmParams());
+  }, []);
 
   useEffect(() => {
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -363,12 +354,12 @@ export const TSFContact = () => {
           "input_5": enquiryData.deadline,     // Deadline ID: 5
           "input_6": enquiryData.message,      // Request Details ID: 6
           // Include Campaign UTM fields silently
-          "input_18": utmParams.utm_source,
-          "input_19": utmParams.utm_medium,
-          "input_20": utmParams.utm_campaign,
-          "input_21": utmParams.utm_term,
-          "input_22": utmParams.utm_content,
-          "input_23": utmParams.gclid
+          "input_7": utmParams.utm_source,
+          "input_8": utmParams.utm_medium,
+          "input_9": utmParams.utm_campaign,
+          "input_10": utmParams.utm_term,
+          "input_11": utmParams.utm_content,
+          "input_12": utmParams.gclid
         };
       } else if (activeTab === 'partnerships') {
         formId = 6; // Strategic Partnerships form ID
@@ -379,12 +370,12 @@ export const TSFContact = () => {
           "input_7": enquiryData.timeline,     // Timeline ID: 7
           "input_6": enquiryData.message,      // Partnership Ambition ID: 6
           // Include Campaign UTM fields silently
-          "input_18": utmParams.utm_source,
-          "input_19": utmParams.utm_medium,
-          "input_20": utmParams.utm_campaign,
-          "input_21": utmParams.utm_term,
-          "input_22": utmParams.utm_content,
-          "input_23": utmParams.gclid
+          "input_10": utmParams.utm_source,
+          "input_11": utmParams.utm_medium,
+          "input_12": utmParams.utm_campaign,
+          "input_13": utmParams.utm_term,
+          "input_14": utmParams.utm_content,
+          "input_15": utmParams.gclid
         };
       } else {
         // General tab falls back to Form ID: 3 (Website Enquiry Form)
@@ -482,7 +473,13 @@ export const TSFContact = () => {
             "17": newsletterData.name,
             "14": newsletterData.email,
             "15": newsletterData.company,
-            "16": newsletterData.designation
+            "16": newsletterData.designation,
+            "18": utmParams.utm_source,
+            "19": utmParams.utm_medium,
+            "20": utmParams.utm_campaign,
+            "21": utmParams.utm_term,
+            "22": utmParams.utm_content,
+            "23": utmParams.gclid
           }
         })
       });

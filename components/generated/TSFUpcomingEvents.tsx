@@ -4,6 +4,7 @@ import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowDown, ArrowRight, CalendarDays, Mail, MapPin, Search } from 'lucide-react';
+import { getUtmParams } from '@/lib/utm';
 
 const events = [{
   id: 'roundtable-mohale',
@@ -193,6 +194,7 @@ export const TSFUpcomingEvents = () => {
     e.preventDefault();
     setNewsletterSubmitting(true);
     try {
+      const utm = getUtmParams();
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -202,7 +204,13 @@ export const TSFUpcomingEvents = () => {
             "17": newsletterData.name,
             "14": newsletterData.email,
             "15": newsletterData.company,
-            "16": newsletterData.designation
+            "16": newsletterData.designation,
+            "18": utm.utm_source,
+            "19": utm.utm_medium,
+            "20": utm.utm_campaign,
+            "21": utm.utm_term,
+            "22": utm.utm_content,
+            "23": utm.gclid
           }
         })
       });

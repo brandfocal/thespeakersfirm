@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, ChevronDown } from 'lucide-react';
 import { Header } from '@/components/Header';
+import { getUtmParams } from '@/lib/utm';
 
 const COLORS = {
   black: '#000000',
@@ -205,6 +206,8 @@ export function BriefUs() {
           }
         }
 
+        const utm = getUtmParams();
+
         const response = await fetch("/api/submit-form", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -223,7 +226,13 @@ export function BriefUs() {
               "10": formData.audienceSize,
               "11": formData.budget,
               "12": formData.expertise,
-              "13": formData.eventObjectives
+              "13": formData.eventObjectives,
+              "14": utm.utm_source,
+              "15": utm.utm_medium,
+              "16": utm.utm_campaign,
+              "17": utm.utm_term,
+              "18": utm.utm_content,
+              "19": utm.gclid
             }
           })
         });
