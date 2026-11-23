@@ -70,7 +70,7 @@ export const AboutTeamSection = () => {
       date: "2025",
       action: "Read Announcement",
       url: "https://media.iedfglobal.org/2025/08/19/iedf-appoints-mlamuli-mbambo-as-africa-head-of-financial-education-in-landmark-partnership-with-winning-the-money-game/",
-      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo-The-Speakers-Firm-5.jpg"
+      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo14.jpg"
     },
     {
       id: "mbambo-art-2",
@@ -79,7 +79,7 @@ export const AboutTeamSection = () => {
       date: "2021",
       action: "Read Profile",
       url: "https://200youngsouthafricans.co.za/mlamuli-mbambo-35-2021/",
-      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo-The-Speakers-Firm-6.jpg"
+      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo15.jpg"
     },
     {
       id: "mbambo-art-3",
@@ -88,7 +88,7 @@ export const AboutTeamSection = () => {
       date: "2024",
       action: "Read Column",
       url: "https://www.oldmutual.co.za/corporate/resource-hub/all-articles/a-walking-meeting-with-mlamuli-mbambo/",
-      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo-The-Speakers-Firm-10.jpg"
+      image: "/speakers/Mlamuli Mbambo/Mlamuli-Mbambo16.jpg"
     }
   ];
 
@@ -108,7 +108,7 @@ export const AboutTeamSection = () => {
       speakerRole="Africa Head of Financial Education for IEDF"
       speakerRef="TSF-MM-31"
       heroBackgroundImage="/speakers/Mlamuli Mbambo/Mlamuli-Mbambo-The-Speakers-Firm-11.jpg"
-      biographyImage="/speakers/Mlamuli Mbambo/Mlamuli-Mbambo-The-Speakers-Firm-2.jpg"
+      biographyImage="/speakers/Mlamuli Mbambo/Mlamuli-Mbambo13.jpg"
       bioHook="“The financial statistics for the average African are horrifying. Financial wellness must be a corporate priority.”"
       fullBiographyParagraphs={FULL_BIO_PARAGRAPHS}
       credentials={CREDENTIAL_BADGES}
