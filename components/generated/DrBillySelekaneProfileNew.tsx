@@ -87,11 +87,6 @@ export const AboutTeamSection = () => {
       id: "billy-vid-1",
       label: "Dr Billy Selekane - Inspirational Keynote & Organisation Culture Expert",
       youtubeId: "-vGv50Cq8Nw"
-    },
-    {
-      id: "billy-vid-2",
-      label: "Dr Billy Selekane - International Speaker Showcase",
-      youtubeId: "4bzTPS46M8I"
     }
   ];
 

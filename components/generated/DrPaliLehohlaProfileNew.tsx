@@ -95,8 +95,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "pali-video-1",
-            label: "Experience Reel",
-            youtubeId: "-HcMmGoYGHc"
+            label: "Dr. Pali Lehohla - Economist & Former Statistician-General of South Africa",
+            youtubeId: "STtoaFX7A-I"
           }
         ]}
       />

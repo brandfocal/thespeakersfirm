@@ -1578,17 +1578,6 @@ const FEATURED_SPEAKERS_RAW: Array<{
   tint: 'rgba(72, 112, 166, 0.22)',
   bio: <span>Executive Leadership Coach, Speaker & Facilitator</span>
 }, {
-  id: 'dr-nompumelelo-malatji-angoma',
-  name: 'Dr. Nompumelelo Malatji-Angoma',
-  category: ['Neuroscience', 'Wellness', 'Leadership'],
-  image: '/speaker_thumbnails/Dr-Nompumelelo-Malatji-Angoma-The-Speakers-Firm.jpg',
-  alt: 'Dr. Nompumelelo Malatji-Angoma',
-  quote: 'Building intentional boundaries, psychological resilience, and sustainable executive vitality.',
-  youtubeId: 'CG6uEwoTL1A',
-  topics: [],
-  tint: 'rgba(227, 14, 4, 0.22)',
-  bio: <span>HPCSA-Registered Psychologist, Executive Resilience Specialist & Corporate Consultant</span>
-}, {
   id: 'dr-zukisani-mxoli',
   name: 'Dr. Zukisani "Dr. Zee" Mxoli',
   category: ['Entrepreneurship', 'Keynote', 'Leadership'],
@@ -3011,13 +3000,6 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
-  {
-    id: 'CG6uEwoTL1A',
-    title: 'Dr. Nompumelelo Malatji-Angoma',
-    subtitle: 'Moments of Impact with Dr. Nompumelelo Malatji-Angoma',
-    description: 'An influential voice bridging clinical psychology, corporate human capital strategy and executive resilience, Dr. Nompumelelo Malatji-Angoma empowers leaders and organisations to conquer burnout, cultivate mental stamina and build high-trust workplace cultures.',
-    thumbnail: 'https://img.youtube.com/vi/CG6uEwoTL1A/maxresdefault.jpg'
-  },
   {
     id: 'GutbcdNeYso',
     title: 'Dr. Zukisani Mxoli',

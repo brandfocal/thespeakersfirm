@@ -127,8 +127,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "lebo-video-1",
-            label: "Experience Reel",
-            youtubeId: "VFHlBLA71QA"
+            label: "Lebo Gunguluza - Artificial Intelligence, Fintech & The Future of Business",
+            youtubeId: "tFqDPNr70DA"
           }
         ]}
       />

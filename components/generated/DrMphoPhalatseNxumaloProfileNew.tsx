@@ -90,8 +90,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "mpho-vid-1",
-      label: "Dr. Mpho Phalatse-Nxumalo in Action",
-      youtubeId: "BeDzjvgqvig"
+      label: "Dr. Mpho Phalatse - Experience in Medicine, Public Health & Leadership",
+      youtubeId: "GXbjeJyRdOU"
     }
   ];
 

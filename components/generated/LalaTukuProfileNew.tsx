@@ -84,8 +84,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "lt-vid-1",
-      label: "Lala Tuku on the Future of African Broadcasting & Content Production",
-      youtubeId: "9cDoOckCoeM"
+      label: "Lala Tuku - Television, Acting, Directing & Producing",
+      youtubeId: "sEv5l_aTND8"
     }
   ];
 

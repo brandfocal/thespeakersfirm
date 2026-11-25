@@ -83,8 +83,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "sm-vid-1",
-      label: "Dr. Steven Molakeng: Kingdom Wellness & Spiritual Health",
-      youtubeId: "34_15Ci9a9c"
+      label: "Apostle Dr. Steven Thebe Molakeng - Thought Leader, Pastor & Speaker",
+      youtubeId: "YVgFd5ljYJI"
     }
   ];
 

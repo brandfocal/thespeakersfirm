@@ -70,8 +70,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "prince-vid-1",
-      label: "Prince Mashele in Action",
-      youtubeId: "FmZykqcW844"
+      label: "Prince Mashele - Political Scientist, Author & Public Intellectual",
+      youtubeId: "XiRZfz001Og"
     }
   ];
 

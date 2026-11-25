@@ -83,18 +83,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "trudy-video-1",
-            label: "S3 Ep7 “The SA we Want. The SA we DESERVE”",
-            youtubeId: "AKTDJ0DsdZw"
-          },
-          {
-            id: "trudy-video-2",
-            label: "BUSINESS TODAY | Tips on investment choices - NBC",
-            youtubeId: "9AhWoB4SI34"
-          },
-          {
-            id: "trudy-video-3",
-            label: "GMN INTERVIEW | Entrepreneurs view on political polarisation",
-            youtubeId: "k75AX0GltIc"
+            label: "Trudy Theledi - Award-Winning Entrepreneur, Business Leader & Broadcaster",
+            youtubeId: "f-Lwx1XRrm8"
           }
         ]}
       />

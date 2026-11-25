@@ -90,8 +90,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "hector-vid-1",
-      label: "King David Studio Interview with Hector Motivator",
-      youtubeId: "2nl04MO49Zg"
+      label: "Hector Motivator - Broadcaster, Author, Motivational Speaker & Master of Ceremonies",
+      youtubeId: "pXlwYio9W_Y"
     }
   ];
 

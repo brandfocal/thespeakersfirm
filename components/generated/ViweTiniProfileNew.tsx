@@ -66,8 +66,8 @@ export const AboutTeamSection = () => {
   const customVideos = [
     {
       id: "tini-vid-1",
-      label: "Viwe Tini on Financial Leadership & Capital Markets",
-      youtubeId: "yg166m_l7qc"
+      label: "Viwe Tini - CEO of Vunani Securities & Chartered Accountant",
+      youtubeId: "ZZeAa9Gz3RA"
     }
   ];
 
