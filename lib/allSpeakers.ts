@@ -4159,6 +4159,36 @@ export const ALL_SPEAKERS: UnifiedSpeaker[] = [
     ]
   },
   {
+    "id": "dr-nompumelelo-malatji-angoma",
+    "aliases": [
+      "nompumelelo-malatji-angoma",
+      "dr-nompumelelo-malatji",
+      "nompumelelo-malatji",
+      "dr nompumelelo malatji-angoma",
+      "nompumelelo malatji angoma",
+      "dr nompumelelo",
+      "nompumelelo malatji"
+    ],
+    "name": "Dr Nompumelelo Malatji-Angoma",
+    "role": "HPCSA-Registered Psychologist • Executive Resilience Specialist • Corporate Human Capital Strategist",
+    "designation": "HPCSA-Registered Psychologist • Executive Resilience Specialist • Corporate Human Capital Strategist",
+    "image": "/speaker_thumbnails/Dr-Nompumelelo-Malatji-Angoma-The-Speakers-Firm.jpg",
+    "trackId": "neuroscience-psychology-and-human-behaviour",
+    "path": "/tracks/neuroscience-psychology-and-human-behaviour/dr-nompumelelo-malatji-angoma",
+    "category": [
+      "neuroscience-peak-performance-mental-agility",
+      "workplace-wellness",
+      "female-keynote-speakers"
+    ],
+    "topics": [
+      "Executive Resilience & Stress Boundaries",
+      "Burnout Prevention & Corporate Vitality",
+      "Psychometric Diagnostics & Talent Architecture",
+      "Organizational Design & Culture Transformation",
+      "Boardroom Governance & Human Capital Stewardship"
+    ]
+  },
+  {
     "id": "palesa-dooms",
     "aliases": [
       "palesa",

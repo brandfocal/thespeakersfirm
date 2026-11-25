@@ -223,6 +223,11 @@ const galleryItems = [{
 }];
 const videos = [
   {
+    id: 'CG6uEwoTL1A',
+    title: 'Dr. Nompumelelo Malatji-Angoma Profile',
+    image: 'https://img.youtube.com/vi/CG6uEwoTL1A/maxresdefault.jpg'
+  },
+  {
     id: 'GutbcdNeYso',
     title: 'Dr. Zukisani Mxoli Profile',
     image: 'https://img.youtube.com/vi/GutbcdNeYso/maxresdefault.jpg'

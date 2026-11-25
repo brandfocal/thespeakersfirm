@@ -16,6 +16,18 @@ type Speaker = {
 
 const speakers: Speaker[] = [
   {
+    "id": "dr-nompumelelo-malatji-angoma",
+    "name": "Dr Nompumelelo Malatji-Angoma",
+    "role": "HPCSA-Registered Psychologist, Executive Resilience Specialist & Corporate Human Capital Strategist",
+    "image": "/speaker_thumbnails/Dr-Nompumelelo-Malatji-Angoma-The-Speakers-Firm.jpg",
+    "topics": [
+      "Executive Resilience & Mental Health Boundaries",
+      "Burnout Prevention & Corporate Vitality",
+      "Psychometric Diagnostics & Talent Architecture"
+    ],
+    "path": "/tracks/neuroscience-psychology-and-human-behaviour/dr-nompumelelo-malatji-angoma"
+  },
+  {
     "id": "dr-tumelo-chaka",
     "name": "Dr Tumelo Chaka",
     "role": "PhD in Consumer Behaviour, Consumer Behaviour Expert & Commercial Strategist",
