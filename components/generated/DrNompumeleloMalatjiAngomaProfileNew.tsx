@@ -131,11 +131,6 @@ export const AboutTeamSection = () => {
       id: "malatji-vid-1",
       label: "Moments of Impact With Dr Nompumelelo Malatji-Angoma",
       youtubeId: "CG6uEwoTL1A"
-    },
-    {
-      id: "malatji-vid-2",
-      label: "SABC News: Impact of Crime Reports on Mental Health",
-      youtubeId: "4hjbiQ-KM3w"
     }
   ];
 
