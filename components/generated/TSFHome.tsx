@@ -706,7 +706,7 @@ const FEATURED_SPEAKERS_RAW: Array<{
   image: '/speakers/MCs/Nimrod-Nkosi-The-Speakers-Firm.jpg',
   alt: 'Nimrod Nkosi',
   quote: 'Professional acting and corporate master of ceremonies.',
-  youtubeId: 'qp0HIF3SfI4',
+  youtubeId: '5Fny_j0lJWs',
   topics: [],
   tint: 'rgba(227, 14, 4, 0.22)',
   bio: <span>Television Presenter, Actor, Master of Ceremonies & Event Host</span>
@@ -3000,6 +3000,13 @@ const HERO_HEADLINE_LINES = [{
 }];
 
 const SPEAKER_VIDEOS = [
+  {
+    id: '5Fny_j0lJWs',
+    title: 'Nimrod Nkosi',
+    subtitle: 'Television Presenter, Actor & Master of Ceremonies',
+    description: 'A household name and master of ceremonies with unmatched charisma, Nimrod Nkosi brings energy, professionalism, and authentic connection to every stage.',
+    thumbnail: 'https://img.youtube.com/vi/5Fny_j0lJWs/maxresdefault.jpg'
+  },
   {
     id: 'GutbcdNeYso',
     title: 'Dr. Zukisani Mxoli',

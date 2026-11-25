@@ -223,6 +223,11 @@ const galleryItems = [{
 }];
 const videos = [
   {
+    id: '5Fny_j0lJWs',
+    title: 'Nimrod Nkosi Profile',
+    image: 'https://img.youtube.com/vi/5Fny_j0lJWs/maxresdefault.jpg'
+  },
+  {
     id: 'GutbcdNeYso',
     title: 'Dr. Zukisani Mxoli Profile',
     image: 'https://img.youtube.com/vi/GutbcdNeYso/maxresdefault.jpg'

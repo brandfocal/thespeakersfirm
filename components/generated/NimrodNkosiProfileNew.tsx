@@ -124,8 +124,8 @@ export const AboutTeamSection = () => {
         customVideos={[
           {
             id: "nimrod-video-1",
-            label: "Nimrod Nkosi Presentation",
-            youtubeId: "5dfN4vslFlM"
+            label: "Charisma. Influence. Impact. Meet Nimrod Nkosi",
+            youtubeId: "5Fny_j0lJWs"
           }
         ]}
       />
