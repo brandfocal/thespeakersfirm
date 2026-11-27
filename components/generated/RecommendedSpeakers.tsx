@@ -7,7 +7,7 @@ interface RecommendedSpeaker {
   id: string;
   name: string;
   bio: string;
-  quote: string;
+  quote?: string;
   image: string;
   trackId: string;
   trackLabel: string;
@@ -23,103 +23,100 @@ const SECTION_TAG_STYLE = {
 
 const RECOMMENDED_SPEAKERS: RecommendedSpeaker[] = [
   {
-    id: 'simphiwe-gwana',
-    name: 'Simphiwe Gwana',
-    bio: 'Accomplished executive leader, strategic management specialist, governance practitioner, accredited facilitator and broadcaster.',
-    quote: 'Translating complex organisational realities into accessible, emotionally intelligent conversations.',
-    image: '/speaker_thumbnails/Simphiwe-Gwana-The-Speakers-Firm.jpg',
-    trackId: 'leadership-governance-and-risk-intelligence',
-    trackLabel: 'Leadership'
-  },
-  {
-    id: 'pam-yako',
-    name: 'Pam Yako',
-    bio: 'Managing Director of Zenande Leadership Consulting, certified coach and former Director-General guiding leaders through institutional change and environmental stewardship.',
-    quote: 'Moving between government and business to find what makes people and institutions actually work.',
-    image: '/speaker_thumbnails/Pam-Yako-The-Speakers-Firm.jpg',
-    trackId: 'leadership-strategy-and-executive-performance',
-    trackLabel: 'Leadership'
-  },
-  {
-    id: 'dick-khoza',
-    name: 'Bishop Dick Khoza',
-    bio: 'Cultural commentator and compelling speaker on African spirituality, indigenous wisdom, identity, values and community leadership.',
-    quote: '',
-    image: '/speaker_thumbnails/Bishop-Dick-Khoza-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'dr-john-kani',
-    name: 'Dr. John Kani',
-    bio: 'Theatre legend, playwright and cultural activist.',
-    quote: '',
-    image: '/speaker_thumbnails/Dr-John-Kani-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'mbuso-khoza',
-    name: 'Mbuso Khoza',
-    bio: 'Vocalist, cultural historian and custodian of African oral traditions.',
-    quote: '',
-    image: '/speaker_thumbnails/Mbuso-Khoza-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'gcina-mhlophe-becker',
-    name: 'Dr. Gcina Mhlophe',
-    bio: 'International storyteller, author and guardian of African folklore.',
-    quote: '',
-    image: '/speaker_thumbnails/Gcina-Mhlophe-Becker-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'gogo-dineo-ndlanzi',
-    name: 'Gogo Dineo Ndlanzi',
-    bio: 'Traditional healer, spiritual teacher and advocate for African indigenous knowledge.',
-    quote: '',
-    image: '/speaker_thumbnails/Gogo-Dineo-Ndlanzi-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'joshua-maponga',
-    name: 'Joshua Maponga',
-    bio: 'Author and speaker on African identity, spirituality, leadership and decolonisation.',
-    quote: '',
-    image: '/speaker_thumbnails/Joshua-Maponga-The-Speakers-Firm.jpg',
-    trackId: 'spirituality-heritage-and-identity',
-    trackLabel: 'Spirituality'
-  },
-  {
-    id: 'nene-molefi',
-    name: 'Nene Molefi',
-    bio: 'Thought leader on diversity, inclusion, culture, identity and organisational transformation.',
-    quote: '',
-    image: '/speaker_thumbnails/Nene-Molefi-The-Speakers-Firm.jpg',
-    trackId: 'diversity',
-    trackLabel: 'Diversity'
-  },
-  {
-    id: 'sello-maake-ka-ncube',
-    name: 'Sello Maake kaNcube',
-    bio: 'Veteran actor, director and advocate for African theatre.',
-    quote: '',
-    image: '/speaker_thumbnails/Sello-Maake-Ka-Ncube-The-Speakers-Firm.jpg',
-    trackId: 'leadership-governance-and-risk-intelligence',
-    trackLabel: 'Leadership'
-  },
-  {
     id: 'billy-selekane',
-    name: 'Billy Selekane',
-    bio: 'International keynote speaker, author and leadership authority whose work connects personal mastery, African values, purpose, transformation and human potential.',
-    quote: '',
+    name: 'Dr Billy Selekane',
+    bio: 'International keynote speaker, author and organisational culture specialist. Executive Chairman of Billy Selekane International, with expertise in strategy formulation and organisational effectiveness.',
     image: '/speaker_thumbnails/Dr-Billy-Selekane-The-Speakers-Firm.jpg',
     trackId: 'inspirational-keynote-speakers',
     trackLabel: 'Keynote'
+  },
+  {
+    id: 'alistair-mokoena',
+    name: 'Prof Alistair Mokoena',
+    bio: 'Executive Dean of the Johannesburg Business School at the University of Johannesburg, former Google Country Director for Southern Africa and Chartered Marketer.',
+    image: '/speaker_thumbnails/Dr-Alistair-Mokoena-The-Speakers-Firm.jpg',
+    trackId: 'future-of-work-talent-and-workforce-transformation',
+    trackLabel: 'Future of Work'
+  },
+  {
+    id: 'john-sanei',
+    name: 'John Sanei',
+    bio: 'Futures strategist, author, Singularity University expert and co-founder of the School of Modern Wisdom.',
+    image: '/speaker_thumbnails/John-Sanei-The-Speakers-Firm.jpg',
+    trackId: 'digital-identity-cybersecurity-and-data-sovereignty',
+    trackLabel: 'A.I. & Futures'
+  },
+  {
+    id: 'lincoln-mali',
+    name: 'Lincoln Mali',
+    bio: 'Fintech and banking executive, leadership writer and former chair of Diners Club South Africa. He has led Lesaka Technologies’ Southern African operations.',
+    image: '/speaker_thumbnails/Lincoln-Mali-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'siphiwe-moyo',
+    name: 'Siphiwe Moyo',
+    bio: 'International keynote speaker, author and organisational behaviour specialist. A former learning and development head at JSE-listed companies, he has taught at GIBS, Henley Business School Africa and Wits Business School.',
+    image: '/speaker_thumbnails/Siphiwe-Moyo-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'bonang-mohale',
+    name: 'Prof Bonang Mohale',
+    bio: 'Business leader and published author whose career includes chairing the Bidvest Group and serving as Professor of Practice at the Johannesburg Business School.',
+    image: '/speaker_thumbnails/Bonang-Mohale-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'abner-mariri',
+    name: 'Abner Mariri',
+    bio: 'Inspirational speaker, transformation adviser and co-founder of Empowa Investments. His work includes youth empowerment through the Joint Power Development Foundation.',
+    image: '/speaker_thumbnails/Abner-Mariri-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'timothy-maurice-webster',
+    name: 'Timothy Maurice Webster',
+    bio: 'Behavioural strategist, international keynote speaker and author of four books on brand leadership. His work applies insights from neuroscience and human behaviour to leadership and brand strategy.',
+    image: '/speaker_thumbnails/Timothy-Maurice-Webster-The-Speakers-Firm.jpg',
+    trackId: 'future-of-work-talent-and-workforce-transformation',
+    trackLabel: 'Neuroscience'
+  },
+  {
+    id: 'saray-khumalo',
+    name: 'Saray Khumalo',
+    bio: 'The first Black African woman to summit Mount Everest, an author and business executive, and founder of Summits With a Purpose.',
+    image: '/speaker_thumbnails/Saray-Khumalo-The-Speakers-Firm.jpg',
+    trackId: 'inspirational-keynote-speakers',
+    trackLabel: 'Keynote'
+  },
+  {
+    id: 'femi-adebanji',
+    name: 'Femi Adebanji',
+    bio: 'Business motivational speaker, leadership strategist and performance specialist. His career includes leading an investment consulting division at a South African insurer.',
+    image: '/speaker_thumbnails/Femi-Adebanji-The-Speakers-Firm.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'david-molapo',
+    name: 'Dr David Molapo',
+    bio: 'Leadership educator, management consultant and international motivational speaker. Founder of the I Can Leadership Institute Africa.',
+    image: '/speaker_thumbnails/Dr-David-Molapo-The-Speakers-Firm-2.jpg',
+    trackId: 'leadership-governance-and-risk-intelligence',
+    trackLabel: 'Leadership'
+  },
+  {
+    id: 'linda-ntuli',
+    name: 'Linda Ntuli',
+    bio: 'Electrical engineer turned management consultant, motivational speaker, author and facilitator, with experience in team-building and leadership development.',
+    image: '/speaker_thumbnails/Linda-Ntuli-The-Speakers-Firm.jpg',
+    trackId: 'mc-and-facilitators',
+    trackLabel: 'Facilitators'
   }
 ];
 
@@ -200,24 +197,30 @@ export const RecommendedSpeakers = () => {
         <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-6">
             <div className={SECTION_TAG_CLASS} style={SECTION_TAG_STYLE}>
-              <span>SEPTEMBER | HERITAGE MONTH</span>
+              <span>12 FEATURED VOICES FOR JANUARY 2027</span>
             </div>
             <h2 id="recommended-heading" className="mt-6 text-[clamp(2.5rem,5vw,3.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-white">
               <span>Book Influential African Voices.</span><br />
-              <span className="text-[#e30e04]">Shape the Future Through Heritage.</span>
+              <span className="text-[#e30e04]">Set the Direction for the Year Ahead.</span>
             </h2>
           </div>
-          <div className="lg:col-span-6 lg:mt-14">
+          <div className="lg:col-span-6 lg:mt-14 space-y-4">
             <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
-              Heritage Month is a strategic opportunity to honour Africa’s identity, preserve indigenous knowledge and harness culture as a catalyst for leadership, innovation and social cohesion. The Speakers Firm™ connects organisations with distinguished cultural leaders, historians, artists, storytellers and thought leaders, strategically matched to your audience and objectives. From corporate events and leadership dialogues to masterclasses and cultural forums, we curate voices that deepen understanding, inspire action and create lasting institutional value. This September, move beyond commemoration. Partner with The Speakers Firm™ to activate heritage, strengthen belonging and shape an inclusive African future.
+              January is a strategic opportunity to sharpen your priorities, bring teams together and build momentum for the year ahead. The Speakers Firm™ connects organisations with distinguished business leaders, strategists, facilitators and inspirational keynote speakers, selected for your audience and what you want the session to achieve.
             </p>
-            <p className="font-bold text-[#e30e04] tracking-widest mt-6 text-xs uppercase border-l-2 border-[#e30e04] pl-4">
-              BOOK THE RIGHT VOICE. HONOUR HERITAGE. INSPIRE PROGRESS.
+            <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
+              From executive strategy offsites and company-wide kickoffs to team-building workshops and sales conferences, we curate speakers who challenge assumptions, strengthen collaboration and help teams turn ambition into first-quarter commitments.
+            </p>
+            <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
+              This January, partner with The Speakers Firm™ to set a clear direction, align your people and give every team a strong start.
+            </p>
+            <p className="font-bold text-[#e30e04] tracking-widest pt-2 text-xs uppercase border-l-2 border-[#e30e04] pl-4">
+              BOOK THE RIGHT VOICE. ALIGN YOUR TEAM. START THE YEAR STRONG.
             </p>
           </div>
         </div>
 
-        {/* Navigation Arrows (Directly on top of the slider) */}
+        {/* Navigation Arrows */}
         <div className="flex justify-end mb-6 gap-3">
           <button 
             type="button" 
@@ -270,12 +273,12 @@ export const RecommendedSpeakers = () => {
                 </div>
 
                 {/* Info Area */}
-                <div className="p-6 md:p-8 flex flex-col justify-between min-h-[200px]">
+                <div className="p-6 md:p-8 flex flex-col justify-between min-h-[220px]">
                   <div>
                     <h3 className="text-lg font-bold text-white group-hover:text-[#e30e04] transition-colors duration-300">
                       {speaker.name}
                     </h3>
-                    <p className="mt-2 text-xs text-neutral-400 line-clamp-3 leading-relaxed">
+                    <p className="mt-2 text-xs text-neutral-400 line-clamp-4 leading-relaxed">
                       {speaker.bio}
                     </p>
                   </div>
@@ -293,9 +296,34 @@ export const RecommendedSpeakers = () => {
             </Link>
           ))}
         </div>
+
+        {/* Bottom Callout & Closing Briefing Section */}
+        <div className="mt-12 rounded-2xl border border-white/10 bg-[#0A0A0A] p-8 md:p-12 relative overflow-hidden">
+          <div className="max-w-4xl space-y-6">
+            <p className="text-sm md:text-base text-white/80 leading-relaxed font-light">
+              Make The Speakers Firm™ your first call for your January 2027 strategy session, team-building event or company kickoff. Send us your preferred date, audience and the outcome you want to achieve. Tell us which speaker you have in mind and we’ll check availability and fees. For a tailored shortlist, we’ll source additional voices from across Africa and globally, and recommend the speaker and format best suited to your brief.
+            </p>
+            <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <span className="font-bold text-[#e30e04] tracking-widest text-xs uppercase border-l-2 border-[#e30e04] pl-4">
+                BOOK THE RIGHT VOICE. ALIGN YOUR TEAM. START THE YEAR STRONG.
+              </span>
+              <motion.a 
+                href="/#brief-us" 
+                whileHover={{ scale: 1.02 }} 
+                whileTap={{ scale: 0.98 }} 
+                className="inline-flex shrink-0 items-center justify-center rounded-full border p-1"
+                style={{ borderColor: 'rgba(255, 255, 255, 0.18)' }}
+              >
+                <span className="flex flex-1 items-center justify-center gap-3 rounded-full bg-[#000000] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#e30e04] transition-colors border border-white/20">
+                  <span>Brief the Bureau</span>
+                  <ArrowRight size={16} />
+                </span>
+              </motion.a>
+            </div>
+          </div>
+        </div>
         
       </div>
     </section>
   );
 };
-
